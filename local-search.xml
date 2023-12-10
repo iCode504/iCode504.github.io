@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Scala 2安装教程（Windows版）</title>
+    <link href="/posts/13.html"/>
+    <url>/posts/13.html</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://scala-lang.org/">Scala官网</a>介绍：Scala是一门现代多范式编程语言，旨在以简洁、优雅和类型安全的方式表达常见的编程模式。它无缝衔接了面向对象语言和函数式语言的特性。</p><p>Scala是一种纯粹的面向对象语言，因为每个值都是一个对象。对象的类型和行为是通过类和特征来描述的。类可以通过子类化进行扩展，并使用灵活的基于mixin的组合机制作为多重继承的干净替代。</p><p>Scala 也是一种函数式语言，因为每个函数都是一个值。Scala 提供了定义匿名函数的轻量级语法，支持高阶函数，允许嵌套函数，并支持柯里化。Scala 的大小写类及其对模式匹配的内置支持提供了代数类型的功能，这在许多函数式语言中都有应用。单例对象为分组非类成员的函数提供了一种便捷的方式。</p><p>接下来就讲解一下Scala的下载与安装。</p><h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>请确保电脑本机安装了JDK，如果没有安装，请点击右侧链接查看JDK安装教程：<a href="http://www.icode504.com/posts/1.html">点我查看</a></p><p>安装完成后，按<kbd>Win</kbd>+<kbd>R</kbd>键，输入<code>cmd</code>，进入控制台，输入<code>java -version</code>，如果出现如下内容，就说明JDK已经安装成功了：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140629530.png"></p><h1 id="二、Scala安装包下载"><a href="#二、Scala安装包下载" class="headerlink" title="二、Scala安装包下载"></a>二、Scala安装包下载</h1><p>1. 点击右侧链接，进入下载页面：<a href="https://www.scala-lang.org/download/all.html">点我查看</a></p><p>2. 这里我选择的是<code>2.12.18</code>版本的，在下方找到版本号后点击进入：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231209211237501.png"></p><p>3. 进入下载页面后，向下找到各个版本的下载链接，我使用的是Windows操作系统，这里我就点击Windows系统版本的Scala进行下载：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231209211413991.png"></p><h1 id="三、安装Scala"><a href="#三、安装Scala" class="headerlink" title="三、安装Scala"></a>三、安装Scala</h1><p>1. 双击打开Scala安装包，会出现欢迎界面，然后点击<code>Next</code>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012103003352.png"></p><p>2. 勾选下面的协议，然后点击<code>Next</code>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012103048983.png"></p><p>3. 选择安装路径，推荐安装在除C盘外的其他路径，并且路径中只包含英文，这里我安装在了D盘：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012103459245.png"></p><p>4. 点击<code>Install</code>:</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012103526813.png"></p><p>5. 安装中，请耐心等待：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012103553892.png"></p><p>6. 点击Finish，Scala安装完成</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012103625099.png"></p><p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入命令提示行页面，输入<code>scala -version</code>，如果出现下图所示信息，说明Scala安装配置成功：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231012105320529.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Scala 2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>入门篇-其之九-流程控制之条件判断</title>
     <link href="/posts/12.html"/>
     <url>/posts/12.html</url>
