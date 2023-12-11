@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>MySQL安装、配置与卸载教程（Windows版）</title>
+    <link href="/posts/18.html"/>
+    <url>/posts/18.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p><p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p><p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程</p></blockquote><h1 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a>一、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a href="https://downloads.mysql.com/archives/installer/">点我查看</a></p><p>2. 按照下图所示操作选择相应的MySQL版本下载，这里我选择的Windows MySQL 8.0.30版本。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512212238023.png"></p><p>3. 下载中，请耐心等待。</p><h1 id="二、安装MySQL"><a href="#二、安装MySQL" class="headerlink" title="二、安装MySQL"></a>二、安装MySQL</h1><p>安装MySQL过程中，请保持网络畅通！！！</p><p>1. 双击打开安装包，安装器启动需要一些时间，请耐心等待</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512214407607.png"></p><p>2. 如果遇到这个窗口，点击Yes即可。如没遇到，请查看下一步。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512214714122.png"></p><p>3. 选择Custom，然后点击Next。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512215033908.png"></p><p>4. 按照下图所示操作，小白直接点击Next</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/00003.gif" alt="00003"></p><blockquote><p>（小白可以忽略下列内容，直接跳到第5步）</p><ul><li>如果你想修改MySQL的安装路径，如下图，可以点击下方Advanced Options</li></ul><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512215904874.png"></p><ul><li>按照下图所示，选择安装路径，为避免后续过程中出现问题，<strong>安装路径只包含英文字符的路径</strong>；下面的是MySQL数据存储路径，如果不懂这方面的内容，就不要修改这个路径。配置完成后后点击OK</li></ul><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512220426075.png"></p></blockquote><p>5. 点击Execute</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512220628921.png"></p><p>6. 安装中，请耐心等待</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512220740114.png"></p><p>7. 出现下图提示Complete以后，直接点击Next：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512220836314.png"></p><p>8. 点击Next</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512220905466.png"></p><p>9. 初次安装MySQL的小白请注意，下图的<strong>Port请务必配置成3306</strong>，完成后点击Next</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512221142216.png"></p><blockquote><p>注意：如果你的电脑安装了多个MySQL，需要修改端口号，要和3306端口号避开使用。安装一个MySQL请忽略此条。</p></blockquote><p>10. 点击Next</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512221223745.png"></p><p>11. 设置root账户密码，这里强烈建议<strong>将密码设置成你最熟悉的密码</strong>，否则后续回复密码比较麻烦。这里我设置成了<code>123456</code>。设置完成后点击Next。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512221639639.png"></p><p>12. 点击Next</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512221927024.png"></p><p>13. 点击Next</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512222002468.png"></p><p>14. 点击Execute，MySQL安装器就会为我们配置，配置过程中，请耐心等待。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512222105185.png"></p><p>15. 出现下图信息，说明MySQL配置成功，点击Finish。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512222243451.png"></p><p>16. 点击Next：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512222328898.png"></p><p>17. 点击Finish，完成MySQL的安装。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512222401129.png"></p><h1 id="三、配置MySQL"><a href="#三、配置MySQL" class="headerlink" title="三、配置MySQL"></a>三、配置MySQL</h1><p>1. 如果你是小白，打开文件夹，按照下图操作，找到MySQL的安装路径并复制这个路径。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/00005.gif"></p><p>2. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/97f2139c6a1110c34086eb54590f073f.png"></p><p>3. 点击高级系统设置</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/0c7e02c5692120d296587f2fbbbae7a2.png"></p><blockquote><p>Windows 10的高级系统设置在右侧：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/246da216c8fb0cda6499a0a3a02765eb.png" alt="Snipaste_2023-03-14_13-44-54"></p></blockquote><p>4. 点击环境变量</p><p><img src="https://img-blog.csdnimg.cn/img_convert/9b32c83db0d6df2c2f698e9d67d0edfd.png"></p><p>5. 找到下方系统变量，找到Path，双击进入：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512223639743.png"></p><p>6. 按照下图所示操作，粘贴前面复制的MySQL安装路径，然后一路点击确定即可。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512223912054.png"></p><p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入&#96;&#96;cmd&#96;，点击进入。</p><p>8. 在命令提示行中输入<code>mysql -u root -p</code>，然后点击回车，会提示你输入密码。这个密码是前面我们安装MySQL的时候设置的密码，直接输入点击回车即可。完成后出现下图界面表示MySQL安装成功！</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512224408436.png"></p><h1 id="四、卸载MySQL"><a href="#四、卸载MySQL" class="headerlink" title="四、卸载MySQL"></a>四、卸载MySQL</h1><blockquote><p>MySQL卸载过程会有一些繁琐，卸载过程请一定耐心！如果你按照前面的步骤成功安装MySQL并可以正常使用了，就直接忽略下面的内容。</p></blockquote><p>1. 停止MySQL的服务：按下图所示操作，进入服务页面。找到MySQL80服务。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/00006.gif"></p><p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入&#96;&#96;control&#96;，点击进入控制面板，在下方找到卸载程序。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512231019536.png"></p><p>3. 将带有MySQL的程序全部使用鼠标右键卸载。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512231355775.png"></p><p>4. 卸载中，请耐心等待。</p><p>5. 卸载界面不存在MySQL相关程序，说明MySQL卸载成功。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512231640785.png"></p><p>6. 清理残余文件：如果你是小白并且没有修改过MySQL路径，那么你可以去<code>C盘</code>的<code>Program Files</code>文件夹内看看是否存在MySQL的文件夹。如果存在，直接删除文件夹即可。</p><p>7. 清理注册表</p><ul><li>按<kbd>Win</kbd>和<kbd>S</kbd>键，输入<code>regedit</code>，打开注册表编辑器：</li></ul><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512232237529.png"></p><ul><li>依次删除下面和MySQL有关的目录。</li></ul><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\ApplicationMySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL服务目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL服务 目录删除<br></code></pre></td></tr></table></figure><p>8. 删除环境变量</p><ul><li>如何进入环境变量，请参考第三条配置MySQL的前5步。</li><li>选中MySQL环境变量，点击删除，然后一路点击确定即可。</li></ul><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230512233341214.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第三章 若依-JFlow其他节点的表单设计和流程检查</title>
     <link href="/posts/17.html"/>
     <url>/posts/17.html</url>
@@ -82,13 +109,13 @@
       
       <tag>Intellij IDEA</tag>
       
+      <tag>MySQL</tag>
+      
       <tag>Java</tag>
       
       <tag>若依</tag>
       
       <tag>JFlow</tag>
-      
-      <tag>MySQL</tag>
       
       <tag>开源</tag>
       
