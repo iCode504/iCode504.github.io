@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</title>
+    <link href="/posts/24.html"/>
+    <url>/posts/24.html</url>
+    
+    <content type="html"><![CDATA[<p>NDM是一款免费小巧的网络资源下载器。说白了就是和迅雷、IDM（Internet Download Manager）类似。和IDM相比，NDM占用空间非常小（安装空间就2M左右），并且支持Windows和MacOS操作系统。它可以对单个文件进行多线程下载（将单个文件切割成多份下载，大幅加快下载速度）。</p><p>多线程下载是NDM的一大优势，更多内容可以到官网页面了解：<a href="https://www.neatdownloadmanager.com/index.php/en/">点我进入官网</a>。</p><h1 id="一、下载NDM"><a href="#一、下载NDM" class="headerlink" title="一、下载NDM"></a>一、下载NDM</h1><p>1. 打开NDM官网：<a href="https://www.neatdownloadmanager.com/index.php/en/">点我查看</a></p><p>2. 根据自己的操作系统下载NDM，这里我下载的是Windows版的，点击左边的下载：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111318254.png"></p><h1 id="二、安装NDM"><a href="#二、安装NDM" class="headerlink" title="二、安装NDM"></a>二、安装NDM</h1><p>1. 双击打开安装包，选择安装路径，这里我安装了D盘：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111448526.png"></p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111637064.png"></p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111658143.png"></p><p>2. 根据自身情况是否创建桌面图标，完成后点击Next：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111828907.png"></p><p>3. 点击<code>Install</code>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111852068.png"></p><p>4. 安装中，请耐心等待。</p><p>5. 安装完成，点击<code>Finish</code>直接启动：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112031479.png"></p><p>6. NDM界面如下图所示</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112107266.png"></p><h1 id="三、配置NDM"><a href="#三、配置NDM" class="headerlink" title="三、配置NDM"></a>三、配置NDM</h1><p>接下来，我们对NDM做一些简单配置，点击右上角的小齿轮（Settings），打开NDM设置：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112157668.png"></p><p>最大连接数设置成32，让NDM在下载文件时拉满带宽，加快下载速度</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112309663.png"></p><p>文件下载位置建议改成除C盘外的位置（如果你的电脑只有C盘直接跳过）：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112529398.png"></p><p>完成后点击OK即可，对NDM的配置就完成了。</p><h1 id="四、给浏览器安装NDM插件"><a href="#四、给浏览器安装NDM插件" class="headerlink" title="四、给浏览器安装NDM插件"></a>四、给浏览器安装NDM插件</h1><p>接下来，我们给浏览器安装NDM插件，方便后续我们在浏览器下载内容是让NDM能嗅探到，直接调用NDM代替浏览器下载文件。</p><p>以下提供了三个浏览器安装插件的方式：Chrome浏览器、火狐浏览器、Edge浏览器。大家任选其一即可。</p><h2 id="4-1-Chorme浏览器"><a href="#4-1-Chorme浏览器" class="headerlink" title="4.1 Chorme浏览器"></a>4.1 Chorme浏览器</h2><p>1. 由于国内无法访问谷歌应用商店，因此正常方式无法获得NDM插件。这里我为大家分享了NDM插件，点击右侧链接下载插件：<a href="https://icode504.lanzouw.com/ikPCA1j6omkd">点我下载</a></p><p>2. 按照下图所示操作，打开扩展程序管理页面：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228113739950.png"></p><p>3. 打开右上角的<strong>开发者模式</strong>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228113846887.png"></p><p>4. 将刚才下载好的插件直接拖入到界面中，上方会有一个弹窗，点击<strong>添加扩展程序</strong>即可：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/231228001.gif"></p><p>5. 至此，NDM插件就已经安装完成了。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228114300605.png"></p><h2 id="4-2-火狐浏览器"><a href="#4-2-火狐浏览器" class="headerlink" title="4.2 火狐浏览器"></a>4.2 火狐浏览器</h2><p>1. 点击右上角，选择扩展与主题（或者直接按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>A</kbd>），搜索<code>NestDownloadManger</code>并回车</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115328017.png"></p><p>2. 搜索结果中，找到<code>NeatDownloadManger Extension</code>，点击进入：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115418650.png"></p><p>3. 添加到FireFox：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115540347.png"></p><p>4. 右上角会有一个小弹窗，点击<strong>添加</strong>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115610110.png"></p><p>5. 添加成功，点击<strong>好的</strong>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115653250.png"></p><h2 id="4-3-Edge浏览器"><a href="#4-3-Edge浏览器" class="headerlink" title="4.3 Edge浏览器"></a>4.3 Edge浏览器</h2><p>1. 打开Edge浏览器，点击右上角的三个小点，点击扩展：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150457486.png"></p><p>2. 选择倒数第二个，<strong>管理扩展</strong>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150538422.png"></p><p>3. 在扩展页面左侧选择<strong>获取Microsoft Edge扩展</strong>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150628199.png"></p><p>4. 在扩展商店搜索NeatDownloadManager，完成后按回车就能看到搜索结果，点击<strong>获取</strong>即可：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150918779.png"></p><p>5. 选择<strong>添加扩展</strong>：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228151039221.png"></p><p>6. 右上角出现如下弹窗信息就说明NDM插件添加成功：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228151125225.png"></p><h1 id="五、试一下NDM有多快"><a href="#五、试一下NDM有多快" class="headerlink" title="五、试一下NDM有多快"></a>五、试一下NDM有多快</h1><p>这里我找了一个大一点MySQL的安装包下载来演示：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228134507751.png"></p><p>使用NDM下载：速度直接拉满，我这台电脑使用NDM下载上述文件用时2分39秒，感兴趣的小伙伴可以观看：<a href="https://pan.baidu.com/s/1yRZk0dI6i6AqQXiuvrpoeQ?pwd=w4jk">NDM下载文件视频（未剪辑版）</a>。</p><p>如果使用浏览器本身下载：速度就差了一大截，下载速度维持在500KB~1.3M左右，下载用时19分22秒，感兴趣的小伙伴可以观看：<a href="https://pan.baidu.com/s/1tSky3oSyQ4Pq2nYJrctvJg?pwd=nxwn">浏览器下载文件视频（未剪辑版）</a>。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>MacOS</tag>
+      
+      <tag>Neat Download Manager</tag>
+      
+      <tag>NDM</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>入门篇-其之十一-流程控制之break和continue关键字</title>
     <link href="/posts/23.html"/>
     <url>/posts/23.html</url>
