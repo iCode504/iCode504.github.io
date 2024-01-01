@@ -18,63 +18,55 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="若依是一款开源的后端管理框架，JFlow是一款经典的纯国产的工作流引擎，若依-JFlow是前两者的完美结合。本文主要介绍了Ruoyi-JFlow框架代码的拉取、配置与启动">
+    <meta name="description" content="Windows环境下安装配置JDK 8教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一章 若依-JFlow配置与启动">
-<meta property="og:url" content="http://www.icode504.com/posts/15.html">
+<meta property="og:title" content="JDK 8安装配置教程（Windows版）">
+<meta property="og:url" content="http://www.icode504.com/posts/1.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="若依是一款开源的后端管理框架，JFlow是一款经典的纯国产的工作流引擎，若依-JFlow是前两者的完美结合。本文主要介绍了Ruoyi-JFlow框架代码的拉取、配置与启动">
+<meta property="og:description" content="Windows环境下安装配置JDK 8教程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201104451452.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201105147112.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201105456043.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201105802938.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110144811.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110329123.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110541430.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110738537.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111256799.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111742572.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111908315.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111954377.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112052134.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112138717.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112248515.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112320508.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201162802611.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201113749133.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201115235424.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201115432241.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201115332224.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201114408428.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150102280.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150335394.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201151105294.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201151340895.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150836073.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201141026025.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201141214554.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150919953.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150939145.png">
-<meta property="article:published_time" content="2023-12-11T01:08:05.000Z">
-<meta property="article:modified_time" content="2023-12-11T03:40:49.858Z">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101131122731.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101131317529.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101132604565.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101133458956.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101133536759.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101134018241.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314125453675.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314130028313.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101134722779.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101134758455.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314131058441.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314131446348.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/240101001.gif">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101140732789.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314132647334.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314132930503.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101141148295.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134919881.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101141636264.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101141809160.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140351859.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140519091.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314141144190.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140629530.png">
+<meta property="article:published_time" content="2023-12-06T01:36:00.000Z">
+<meta property="article:modified_time" content="2024-01-01T06:51:45.310Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Intellij IDEA">
+<meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="Maven">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="若依">
-<meta property="article:tag" content="JFlow">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201104451452.png">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101131122731.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>第一章 若依-JFlow配置与启动 - iCode504个人博客</title>
+  <title>JDK 8安装配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -240,7 +232,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">第一章 若依-JFlow配置与启动</span>
+            <span id="subtitle">JDK 8安装配置教程（Windows版）</span>
           
         </div>
 
@@ -251,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-11 09:08" pubdate>
-          2023年12月11日 09:08:05
+        <time datetime="2023-12-06 09:36" pubdate>
+          2023年12月6日 09:36:00
         </time>
       </span>
     
@@ -263,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          986 字
         
       </span>
     
@@ -310,12 +302,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第一章 若依-JFlow配置与启动</h1>
+            <h1 id="seo-header">JDK 8安装配置教程（Windows版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年12月11日 11:40:49
+                    本文最后更新于：2024年1月1日 14:51:45
                   
                 
               </p>
@@ -323,126 +315,82 @@
             
               <div class="markdown-body">
                 
-                <p>若依（Ruoyi）一款开源的后台管理admin框架，JFlow 是一款经典的纯国产全开源的工作流引擎，该版本是两者的完美结合。</p>
-<p>RuoYi是一个后台管理系统，基于经典技术组合（Spring Boot、Apache Shiro、MyBatis、Thymeleaf）主要目的让开发者注重专注业务，降低技术难度，从而节省人力成本，缩短项目周期，提高软件安全质量。</p>
-<p>JFlow是由济南驰骋团队负责研发，开发语言主要是Java，是一款开源软件，工作流引擎操作简单，概念通俗易懂，操作手册完善（计:14万字操作手册说明书），代码注释完整，案例丰富翔实，单元测试完整，符合国内多种场景的需要。</p>
-<p>以下是二者的官网：<a target="_blank" rel="noopener" href="https://ruoyi.vip/">若依官网</a>，<a target="_blank" rel="noopener" href="http://ccflow.org/">驰骋官网</a></p>
-<h1 id="一、安装准备"><a href="#一、安装准备" class="headerlink" title="一、安装准备"></a>一、安装准备</h1><p>需要安装如下软件：</p>
+                <blockquote>
+<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17是长期稳定支持的版本。</p>
+</blockquote>
+<p>接下来为大家讲解一下JDK 8如何安装与使用。</p>
+<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>以下两种方式二选一下载即可：</p>
+<h2 id="方式一：网盘下载"><a href="#方式一：网盘下载" class="headerlink" title="方式一：网盘下载"></a>方式一：网盘下载</h2><p>请选择任意一个链接，选择任意一个安装包下载即可：</p>
 <table>
 <thead>
 <tr>
-<th>软件名称</th>
-<th>安装教程</th>
+<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1FjQlCUulceJWOQP96qQvjQ?pwd=mclj">点击下载</a></th>
+<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1KOE3RotyK-yb9c71LBcTxg?pwd=jyjq">备用下载1</a></th>
+<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1HN3iuUmbHTrlEnBKLZVkEg?pwd=o54x">备用下载2</a></th>
 </tr>
 </thead>
-<tbody><tr>
-<td>Java</td>
-<td><a href="http://www.icode504.com/posts/1.html">点我查看</a></td>
-</tr>
-<tr>
-<td>MySQL</td>
-<td><a href="http://www.icode504.com/posts/18.html">点我查看</a></td>
-</tr>
-<tr>
-<td>Intellij IDEA</td>
-<td><a href="http://www.icode504.com/posts/10.html">点我查看</a></td>
-</tr>
-<tr>
-<td>Navicat</td>
-<td><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4bb2e2bfb449">点我查看</a></td>
-</tr>
-<tr>
-<td>Maven</td>
-<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_72248235/article/details/130589912?spm=1001.2014.3001.5501">点我查看</a></td>
-</tr>
-<tr>
-<td>Git</td>
-<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012124199/article/details/114004087">点我查看</a></td>
-</tr>
-</tbody></table>
-<h1 id="二、若依-JFlow代码下载"><a href="#二、若依-JFlow代码下载" class="headerlink" title="二、若依-JFlow代码下载"></a>二、若依-JFlow代码下载</h1><p>1. 找到一个合适文件夹，鼠标右键，点击<code>Git Bash Here</code>，此时会进入Git命令行窗口：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201104451452.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 复制下面的内容到Git命令行并回车：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone https://gitee.com/opencc/RuoYi-JFlow.git<br></code></pre></td></tr></table></figure>
-
+</table>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101131122731.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h2><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/archive/">点击进入</a></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101131317529.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 找到以Java SE Development Kit开头的下载列表，找到64位的版本版本下载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101132604565.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 按图所示点击下载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101133458956.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101133536759.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装JDK（这里我使用的版本是JDK-8）"><a href="#二、安装JDK（这里我使用的版本是JDK-8）" class="headerlink" title="二、安装JDK（这里我使用的版本是JDK 8）"></a>二、安装JDK（这里我使用的版本是JDK 8）</h1><p>1. 双击文件，开始安装：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101134018241.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 点击<strong>下一步</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314125453675.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 修改安装路径（如果你是新手小白，可以不执行这一步操作，直接跳转到第5步），点击<strong>更改</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314130028313.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在新建一个路径。为了避免后续出现问题，创建路径时，请不要JDK安装位置放在有中文字符的路径中。选择当前路径，点击确定：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101134722779.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击下一步：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101134758455.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 安装中，请耐心等待：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314131058441.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 安装过程中，出现了一个JRE安装（前面我们安装的JDK已经包含了JRE，可以选择不安装，如果不需要安装，出现下图窗口后直接点击右上角关闭即可，直接跳到第11步）。点击<strong>更改路径</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314131446348.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 新建一个路径，建议不要出现中文字符，然后选中此文件夹，点击确定：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/240101001.gif" srcset="/img/loading.gif" lazyload></p>
+<p>9. 点击下一步：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101140732789.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 安装中，安装完成以后此窗口会自动消失：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314132647334.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 点击关闭，JDK安装完成。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314132930503.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101141148295.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击高级系统设置：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>说明：如果你在gitee中添加了SSH KEY，也可以直接复制下面的内容到Git命令行中</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone git@gitee.com:opencc/RuoYi-JFlow.git<br></code></pre></td></tr></table></figure>
+<p>Windows 10的高级系统设置在右侧：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></p>
 </blockquote>
-<p>3. Git中如果出现如下提示及说明代码克隆完成：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201105147112.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、导入项目"><a href="#三、导入项目" class="headerlink" title="三、导入项目"></a>三、导入项目</h1><p>1. 使用Intellij IDEA打开这个文件夹：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201105456043.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开<code>Settings</code>，按照下图所示配置Maven</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201105802938.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 下载依赖需要一段时间，请耐心等待。</p>
-<p>4. 在左侧项目目录，选中<code>sql</code>文件，按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>，复制文件路径</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110144811.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 打开Navicat，如果你没有和本地MySQL连接的话，就点击左上角的连接，选择MySQL</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110329123.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 连接名自定义或者不填，用户名填写root，密码即root用户的密码，填写完成后点击确定</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110541430.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 鼠标右键点击新建数据库</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201110738537.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 数据库名称自定义，这里我命名为<code>ruoyi_jflow</code>，字符集选择<code>utf8mb4</code>即可，排序规则选择<code>utf8mb4_0900_ai_ci</code>即可，然后点击<strong>确定</strong>。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111256799.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 鼠标右键点击数据库，点击<strong>运行SQL文件</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111742572.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 按照下图所示导入SQL：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111908315.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201111954377.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112052134.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112138717.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 导入SQL中，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112248515.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 导入完成，点击关闭：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201112320508.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 刷新一下数据库，一共由242张表</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201162802611.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 双击打开IDEA项目中的<code>application-druid2.yml</code>文件</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201113749133.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 修改数据库配置</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201115235424.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 将<code>application-druid2.yml</code>文件改为<code>application-druid.yml</code></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201115432241.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201115332224.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 点击文件左上角<code>File -&gt; Project Stucture</code>，确保版本是JDK 8：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201114408428.png" srcset="/img/loading.gif" lazyload></p>
-<p>15. Redis配置：需要确保你在本地安装Redis，如果没有安装包，点击右侧链接下载：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/irWZP1ghutla">点我下载</a></p>
-<ul>
-<li><p>找一个你熟悉的位置，创建一个文件夹，命名为Redis</p>
-</li>
-<li><p>将下载的压缩包解压到这个文件夹中</p>
-</li>
-</ul>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150102280.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>在上方文件路径中输入<code>cmd</code>并回车，进入命令行</li>
-<li>在命令行中输入如下指令</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">redis-server --service-install redis.windows-service.conf<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150335394.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>此时按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>，打开任务管理器，点击服务，在下方找到Redis说明软件配置成功：</li>
-</ul>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201151105294.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 打开项目中<code>application.yml</code>，这里关于Redis的配置信息不用修改，因为上面我们已经成功启动了本地Redis服务了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201151340895.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、启动项目"><a href="#四、启动项目" class="headerlink" title="四、启动项目"></a>四、启动项目</h1><p>1. 项目启动：点击右上角Debug调试启动，如果出现下面内容，就说明后端项目启动成功</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150836073.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 在下方系统变量中，点击<strong>新建</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 配置安装路径，按照图示操作即可：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101141636264.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 双击Path进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 按照图示操作即可，然后一路点击确定。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101141809160.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>说明：如果后端项目起不来，报错信息是8089端口被占用（如下图）</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201141026025.png" srcset="/img/loading.gif" lazyload></p>
-<p>解决办法：打开项目中的<code>application.yml</code>，找到<code>server.port</code>，将端口号修改成你知道的即可，这里我改成8090：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201141214554.png" srcset="/img/loading.gif" lazyload></p>
-<p>重启一下项目即可。</p>
+<p>对于首次安装的新手小白，请继续往下看；如果是老手或者已经安装了其他版本的JDK，可以选择性往下看。</p>
 </blockquote>
-<p>2. 打开浏览器，在上方输入地址：<a target="_blank" rel="noopener" href="http://localhost:8089/ry-jflow/login">点我进入</a>，进入登录页面：</p>
-<p>账号名：admin，密码：admin123</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150919953.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 登录成功：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231201150939145.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、检查JDK是否安装成功"><a href="#四、检查JDK是否安装成功" class="headerlink" title="四、检查JDK是否安装成功"></a>四、检查JDK是否安装成功</h1><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140351859.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 输入<code>javac</code>和<code>java</code>，会出现下图内容：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140519091.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314141144190.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 输入<code>java -version</code>，出现下图信息表示JDK安装成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140629530.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -461,15 +409,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/" class="category-chain-item">工作流框架</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/JFlow/" class="category-chain-item">JFlow</a>
-  
-  
-
   
 
       </span>
@@ -483,21 +424,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Intellij-IDEA/" class="print-no-link">#Intellij IDEA</a>
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
         <a href="/tags/Java/" class="print-no-link">#Java</a>
-      
-        <a href="/tags/Maven/" class="print-no-link">#Maven</a>
-      
-        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
-      
-        <a href="/tags/%E8%8B%A5%E4%BE%9D/" class="print-no-link">#若依</a>
-      
-        <a href="/tags/JFlow/" class="print-no-link">#JFlow</a>
-      
-        <a href="/tags/%E5%BC%80%E6%BA%90/" class="print-no-link">#开源</a>
-      
-        <a href="/tags/Git/" class="print-no-link">#Git</a>
       
     </div>
   
@@ -509,8 +438,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第一章 若依-JFlow配置与启动</div>
-      <div>http://www.icode504.com/posts/15.html</div>
+      <div>JDK 8安装配置教程（Windows版）</div>
+      <div>http://www.icode504.com/posts/1.html</div>
     </div>
     <div class="license-meta">
       
@@ -522,7 +451,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月11日</div>
+          <div>2023年12月6日</div>
         </div>
       
       
@@ -554,21 +483,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/16.html" title="第二章 若依-JFlow流程模型与单节点表单设计">
+                      <a href="/posts/2.html" title="入门篇-其之一-第一个程序">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第二章 若依-JFlow流程模型与单节点表单设计</span>
+                        <span class="hidden-mobile">入门篇-其之一-第一个程序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/posts/14.html" title="Intellij IDEA安装Scala插件并运行Scala程序">
-                        <span class="hidden-mobile">Intellij IDEA安装Scala插件并运行Scala程序</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
