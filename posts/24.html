@@ -1,0 +1,1005 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/blog-logo-tab.png">
+  <link rel="icon" href="/img/blog-logo-tab.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="iCode504">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="NDM（Neat Download Manger）是一款免费小巧的网络资源下载器。它支持Windows和MacOS，和浏览器相比，它的优势是下载文件速度非常快，是一款好用的下载神器。本文主要讲述了NDM的安装、配置和浏览器插件配置，并对同一个文件下载，NDM下载文件的时间和浏览器自身下载文件的时间做出对比。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）">
+<meta property="og:url" content="https://www.icode504.com/posts/24.html">
+<meta property="og:site_name" content="iCode504个人博客">
+<meta property="og:description" content="NDM（Neat Download Manger）是一款免费小巧的网络资源下载器。它支持Windows和MacOS，和浏览器相比，它的优势是下载文件速度非常快，是一款好用的下载神器。本文主要讲述了NDM的安装、配置和浏览器插件配置，并对同一个文件下载，NDM下载文件的时间和浏览器自身下载文件的时间做出对比。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8NDM%EF%BC%88Neat%20Download%20Manager%EF%BC%89%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%92%8CMacOS%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
+<meta property="article:published_time" content="2023-12-28T07:26:50.000Z">
+<meta property="article:modified_time" content="2024-02-03T08:43:33.687Z">
+<meta property="article:author" content="iCode504">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="MacOS">
+<meta property="article:tag" content="Neat Download Manager">
+<meta property="article:tag" content="NDM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8NDM%EF%BC%88Neat%20Download%20Manager%EF%BC%89%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%92%8CMacOS%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS） - iCode504个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>iCode504个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）-封面.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-12-28 15:26" pubdate>
+          2023年12月28日 15:26:50
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年2月3日 16:43:33
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>NDM是一款免费小巧的网络资源下载器。说白了就是和迅雷、IDM（Internet Download Manager）类似。和IDM相比，NDM占用空间非常小（安装空间就2M左右），并且支持Windows和MacOS操作系统。它可以对单个文件进行多线程下载（将单个文件切割成多份下载，大幅加快下载速度）。</p>
+<p>多线程下载是NDM的一大优势，更多内容可以到官网页面了解：<a target="_blank" rel="noopener" href="https://www.neatdownloadmanager.com/index.php/en/">点我进入官网</a>。</p>
+<h1 id="一、下载NDM"><a href="#一、下载NDM" class="headerlink" title="一、下载NDM"></a>一、下载NDM</h1><p>1. 打开NDM官网：<a target="_blank" rel="noopener" href="https://www.neatdownloadmanager.com/index.php/en/">点我查看</a></p>
+<p>2. 根据自己的操作系统下载NDM，这里我下载的是Windows版的，点击左边的下载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111318254.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装NDM"><a href="#二、安装NDM" class="headerlink" title="二、安装NDM"></a>二、安装NDM</h1><p>1. 双击打开安装包，选择安装路径，这里我安装了D盘：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111448526.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111637064.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111658143.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 根据自身情况是否创建桌面图标，完成后点击Next：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111828907.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击<code>Install</code>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111852068.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 安装中，请耐心等待。</p>
+<p>5. 安装完成，点击<code>Finish</code>直接启动：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112031479.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. NDM界面如下图所示</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112107266.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置NDM"><a href="#三、配置NDM" class="headerlink" title="三、配置NDM"></a>三、配置NDM</h1><p>接下来，我们对NDM做一些简单配置，点击右上角的小齿轮（Settings），打开NDM设置：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112157668.png" srcset="/img/loading.gif" lazyload></p>
+<p>最大连接数设置成32，让NDM在下载文件时拉满带宽，加快下载速度</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112309663.png" srcset="/img/loading.gif" lazyload></p>
+<p>文件下载位置建议改成除C盘外的位置（如果你的电脑只有C盘直接跳过）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112529398.png" srcset="/img/loading.gif" lazyload></p>
+<p>完成后点击OK即可，对NDM的配置就完成了。</p>
+<h1 id="四、给浏览器安装NDM插件"><a href="#四、给浏览器安装NDM插件" class="headerlink" title="四、给浏览器安装NDM插件"></a>四、给浏览器安装NDM插件</h1><p>接下来，我们给浏览器安装NDM插件，方便后续我们在浏览器下载内容是让NDM能嗅探到，直接调用NDM代替浏览器下载文件。</p>
+<p>以下提供了三个浏览器安装插件的方式：Chrome浏览器、火狐浏览器、Edge浏览器。大家任选其一即可。</p>
+<h2 id="4-1-Chorme浏览器"><a href="#4-1-Chorme浏览器" class="headerlink" title="4.1 Chorme浏览器"></a>4.1 Chorme浏览器</h2><p>1. 由于国内无法访问谷歌应用商店，因此正常方式无法获得NDM插件。这里我为大家分享了NDM插件，点击右侧链接下载插件：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/ikPCA1j6omkd">点我下载</a></p>
+<p>2. 按照下图所示操作，打开扩展程序管理页面：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228113739950.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开右上角的<strong>开发者模式</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228113846887.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 将刚才下载好的插件直接拖入到界面中，上方会有一个弹窗，点击<strong>添加扩展程序</strong>即可：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/231228001.gif" srcset="/img/loading.gif" lazyload></p>
+<p>5. 至此，NDM插件就已经安装完成了。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228114300605.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="4-2-火狐浏览器"><a href="#4-2-火狐浏览器" class="headerlink" title="4.2 火狐浏览器"></a>4.2 火狐浏览器</h2><p>1. 点击右上角，选择扩展与主题（或者直接按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>A</kbd>），搜索<code>NestDownloadManger</code>并回车</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115328017.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 搜索结果中，找到<code>NeatDownloadManger Extension</code>，点击进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115418650.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 添加到FireFox：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115540347.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 右上角会有一个小弹窗，点击<strong>添加</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115610110.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 添加成功，点击<strong>好的</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115653250.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="4-3-Edge浏览器"><a href="#4-3-Edge浏览器" class="headerlink" title="4.3 Edge浏览器"></a>4.3 Edge浏览器</h2><p>1. 打开Edge浏览器，点击右上角的三个小点，点击扩展：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150457486.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 选择倒数第二个，<strong>管理扩展</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150538422.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在扩展页面左侧选择<strong>获取Microsoft Edge扩展</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150628199.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在扩展商店搜索NeatDownloadManager，完成后按回车就能看到搜索结果，点击<strong>获取</strong>即可：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150918779.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 选择<strong>添加扩展</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228151039221.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 右上角出现如下弹窗信息就说明NDM插件添加成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228151125225.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、试一下NDM有多快"><a href="#五、试一下NDM有多快" class="headerlink" title="五、试一下NDM有多快"></a>五、试一下NDM有多快</h1><p>这里我找了一个大一点MySQL的安装包下载来演示：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228134507751.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用NDM下载：速度直接拉满，我这台电脑使用NDM下载上述文件用时2分39秒，感兴趣的小伙伴可以观看：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yRZk0dI6i6AqQXiuvrpoeQ?pwd=w4jk">NDM下载文件视频（未剪辑版）</a>。</p>
+<p>如果使用浏览器本身下载：速度就差了一大截，下载速度维持在500KB~1.3M左右，下载用时19分22秒，感兴趣的小伙伴可以观看：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1tSky3oSyQ4Pq2nYJrctvJg?pwd=nxwn">浏览器下载文件视频（未剪辑版）</a>。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/MacOS/" class="print-no-link">#MacOS</a>
+      
+        <a href="/tags/Neat-Download-Manager/" class="print-no-link">#Neat Download Manager</a>
+      
+        <a href="/tags/NDM/" class="print-no-link">#NDM</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</div>
+      <div>https://www.icode504.com/posts/24.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年12月28日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/23.html" title="入门篇-其之十一-流程控制之break和continue关键字">
+                        <span class="hidden-mobile">入门篇-其之十一-流程控制之break和continue关键字</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
+        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+        aria-expanded="true"
+      >
+        软件安装
+        <span class="list-group-count">(19)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/10.html" title="Intellij IDEA安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/13.html" title="Scala 2安装教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Scala 2安装教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/18.html" title="MySQL安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MySQL安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/19.html" title="Maven安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Maven安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/20.html" title="Gradle安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MinGW安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">VMware Workstation安装+彻底卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/10.7.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://hexo.fluid-dev.com/docs/guide/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      吉ICP备2023009024号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
