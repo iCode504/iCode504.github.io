@@ -1,0 +1,73 @@
+.container-fluid {
+    background-color: #8A1A10;
+}
+
+main {
+    background-color: #8A1A10;
+}
+
+.toc-header span {
+    color: yellow;
+}
+
+.tocbot-link {
+    color: yellow;
+}
+
+.category-post {
+    color: yellow;
+}
+
+.category-item {
+    color: yellow;
+}
+
+.license-box {
+    background-color: #8A1A10;
+}
+
+.license-box .license-title div:nth-child(2) {
+    color: yellow;
+}
+
+.license-box .license-meta .license-meta-item div:nth-child(1) {
+    color: yellow;
+}
+
+.license-box .license-meta .license-meta-item div:nth-child(1) {
+    color: yellow;
+}
+
+.license-box .license-title div:nth-child(1) {
+    color: yellow;
+}
+
+.license-box .license-meta .license-meta-item div:nth-child(2) {
+    color: yellow;
+}
+
+.navbar .dropdown-collapse,
+.top-nav-collapse,
+.navbar-col-show {
+    background-color: #8A1A10;
+}
+
+.footer-content {
+    color: yellow;
+}
+
+.beian span a {
+    color: yellow;
+}
+
+.footer-content a span {
+    color: yellow;
+}
+
+.footer-inner {
+    background-color: #8A1A10;
+}
+
+.category-item .collapsed .list-group-item .category-item-action .col-10 .col-md-11 .col-xm-11 {
+    color: #3c4858;
+}

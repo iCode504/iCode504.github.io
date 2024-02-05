@@ -18,27 +18,41 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程介绍Windows下安装配置Gradle的方法，包括下载、安装、配置环境变量等步骤。">
+    <meta name="description" content="本文介绍了在Windows系统上安装配置WSL的详细步骤，让用户能够轻松在Windows平台上运行Linux Ubantu环境。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle安装与配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/20.html">
+<meta property="og:title" content="Winodws Subsystem for Linux（WSL）安装教程">
+<meta property="og:url" content="https://www.icode504.com/posts/42.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程介绍Windows下安装配置Gradle的方法，包括下载、安装、配置环境变量等步骤。">
+<meta property="og:description" content="本文介绍了在Windows系统上安装配置WSL的详细步骤，让用户能够轻松在Windows平台上运行Linux Ubantu环境。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Gradle%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2023-12-11T03:55:00.000Z">
-<meta property="article:modified_time" content="2024-02-03T08:43:33.680Z">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202135450995.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142340458.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142540342.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142612124.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142905182.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143659607.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143750193.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143847804.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143923385.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144259062.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144643586.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145311680.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145530346.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143332649.png">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143404859.png">
+<meta property="article:published_time" content="2024-02-05T02:18:53.000Z">
+<meta property="article:modified_time" content="2024-02-05T03:52:10.065Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Gradle">
+<meta property="article:tag" content="WSL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Gradle%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202135450995.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Gradle安装与配置教程（Windows版） - iCode504个人博客</title>
+  <title>Winodws Subsystem for Linux（WSL）安装教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +217,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Gradle安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/wallpaper.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Gradle安装与配置教程（Windows版）</span>
+            <span id="subtitle">Winodws Subsystem for Linux（WSL）安装教程</span>
           
         </div>
 
@@ -220,8 +234,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-11 11:55" pubdate>
-          2023年12月11日 11:55:00
+        <time datetime="2024-02-05 10:18" pubdate>
+          2024年2月5日 10:18:53
         </time>
       </span>
     
@@ -232,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          1.4k 字
         
       </span>
     
@@ -292,12 +306,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Gradle安装与配置教程（Windows版）</h1>
+            <h1 id="seo-header">Winodws Subsystem for Linux（WSL）安装教程</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月3日 16:43:33
+                    本文最后更新于：2024年2月5日 11:52:10
                   
                 
               </p>
@@ -305,88 +319,54 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请查看<a href="http://www.icode504.com/posts/1.html">JDK安装教程</a>。</p>
-<p>2. 如果电脑上已经安装JDK，按<code>Win + R</code>键，输入<code>cmd</code>，然后点击<code>确定</code></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502204142586.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 输入<code>java -version</code>，点击<code>回车</code>，查看JDK安装信息，如果有下面提示信息，说明JDK安装成功</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502204421939.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、Gradle下载"><a href="#二、Gradle下载" class="headerlink" title="二、Gradle下载"></a>二、Gradle下载</h1><p>1. 打开官网下载界面：<a target="_blank" rel="noopener" href="https://gradle.org/releases/">https://gradle.org/releases/</a></p>
-<blockquote>
-<p>如果你使用的SpringBoot项目，建议使用6.8及以上的版本</p>
-</blockquote>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502205326073.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 这里我选择8.0.2版本下载。点击<code>complete</code>下载</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502205503786.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Gradle配置环境变量"><a href="#三、Gradle配置环境变量" class="headerlink" title="三、Gradle配置环境变量"></a>三、Gradle配置环境变量</h1><p>1. 将下载的压缩包进行解压，<strong>建议解压目录只包含英文路径</strong>，这里我解压到了E盘</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502210254031.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 双击打开<code>gradle-8.0.2</code>目录，复制路径</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502210539866.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在左侧<code>鼠标右键</code>点击此电脑，点击<code>属性</code></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502210816983.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<code>高级系统设置</code></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502210924502.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击<code>环境变量</code></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502211011177.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在下方系统变量点击<code>新建</code>。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502211128115.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 如下图，变量名输入<code>GRADLE_HOME</code>，变量值是前面复制的路径粘贴即可，完成后点击<code>确定</code>。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502211311867.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 在系统变量中<code>双击打开Path</code>。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502211541532.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 在右上角点击新建，输入<code>%GRADLE_HOME%\bin</code>，完成后对一路点击确定。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502211824581.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 验证Gradle是否安装成功：按<code>Win + R</code>键，输入cmd打开命令提示行，在提示行中输入<code>gradle -v</code>，如果有下面的提示Gradle环境变量配置成功。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502212143948.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、配置下载源"><a href="#四、配置下载源" class="headerlink" title="四、配置下载源"></a>四、配置下载源</h1><p>由于Gradle自带Maven下载源是国外的，在后续下载依赖的过程中会比较慢。这里我们需要将下载源换成国内镜像。</p>
-<p>1. 需要保证能看到文件的后缀名：在文件夹上方点击<code>查看</code>，在右侧勾选<code>文件扩展名</code>。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502213529133.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开Gradle目录，进入init.d文件夹，会发现里面有一个<code>readme.txt</code>文件，打开后会有如下信息</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502212534100.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">You can <span class="hljs-built_in">add</span> .gradle (e.g. test.gradle) init scripts <span class="hljs-built_in">to</span> this <span class="hljs-built_in">directory</span>. Each <span class="hljs-literal">one</span> is executed <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">start</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> build.<br></code></pre></td></tr></table></figure>
+                <p>WSL，全称Windows Subsystem for Linux，中文翻译过来是Windows环境下的Linux子系统。可以在Windows电脑上运行Linux环境，不需要单独安装VMWare等虚拟机软件，使用WSL的目的是为同时使用Windows和Linux操作系统的开发人员提供高效体验。</p>
+<p>你可以使用WSL安装并运行各种Linux的发行版，例如：Ubantu、Debian、Kali等，并且在提供命令行工具（Bash）运行Linux命令。</p>
+<p>官网提供了更多关于WSL的介绍，感兴趣的小伙伴可以点击右侧链接查看：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/about">点我查看</a></p>
+<p>接下来就讲一下WSL的安装与使用：</p>
+<h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并点击<strong>确定</strong>，进入命令行窗口。在命令行中输入<code>winver</code>查看操作系统版本，请确保操作系统是<strong>Windows 10</strong>和<strong>Windows 11</strong>，并且版本在<strong>2004版本以后</strong>，这里我的操作系统是22H2版本，符合安装要求：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202135450995.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 电脑从来没有安装过WSL（也就是说你之前从没听说过有这个东西）</p>
+<p>3. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>control</code>并回车，右上角查看类别改成<strong>小图标</strong>，点击<strong>程序与功能</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142340458.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 选择<strong>启动或关闭Windows功能</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142540342.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 勾选<strong>适用于Linux的Windows子系统</strong>，完成后点击<strong>确定</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142612124.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装WSL"><a href="#二、安装WSL" class="headerlink" title="二、安装WSL"></a>二、安装WSL</h1><p>1. 打开Windows应用商店（Microsoft Store）。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142905182.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在上方搜索框中输入你想要的Linux发行版，这里我安装的是Ubantu 长期支持版（LTS）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143659607.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 进入详情页后，点击<strong>安装</strong>，请耐心等待：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143750193.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 下载完成，点击<strong>打开</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143847804.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. Ubantu正在安装，请耐心等待（期间不要关闭这个窗口）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143923385.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 等待了1~3分钟以后，此时Ubantu系统要我们自己输入用户名（英文名称要符合Unix的命名规则，命名规则可以自行百度）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144259062.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 进入输入密码界面，注意密码默认是不显示在控制台的，一共需要输入两次（如果你记不住密码，建议将密码设置成123456）。输入完毕后，你就可以在Windows上正常使用Linux啦！</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144643586.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、修改WSL主题风格（可选）"><a href="#四、修改WSL主题风格（可选）" class="headerlink" title="四、修改WSL主题风格（可选）"></a>四、修改WSL主题风格（可选）</h1><div class="note note-success">
+            <p>感兴趣的小伙伴按照下面内容自己动手修改。</p>
+          </div>
 
-<p>简单翻译一下就是需要在init.d目录下配置一个初始文件，我们需要新建一个<code>init.gradle</code>文件</p>
-<p>3. 鼠标右键新建并打开init.txt文件，将下面的内容粘贴到文件中，然后点击<code>保存</code></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs groovy">allprojects &#123;<br>    repositories &#123; <br>        mavenLocal() <br>        maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&quot;https://maven.aliyun.com/repository/public&quot;</span> &#125; <br>        maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&quot;https://nexus.bsdn.org/content/groups/public/&quot;</span> &#125; <br>        mavenCentral()<br>    &#125;<br>    buildscript &#123;<br>        repositories &#123; <br>            maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&#x27;https://maven.aliyun.com/repository/public&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&#x27;https://nexus.bsdn.org/content/groups/public/&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;M2&quot;</span> ; url <span class="hljs-string">&#x27;https://plugins.gradle.org/m2/&#x27;</span> &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>1. <kbd>Ctrl</kbd>和鼠标滚轮可以调整窗口和字体大小。</p>
+<p>2. <strong>鼠标右键</strong>点击WSL上方白色部分，点击<strong>属性</strong>，可以修改界面风格：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145311680.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在字体窗口自行调整字体类型和大小，这里我选择的是Consolas字体（Windows自带，挺好看的），大小20号：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145530346.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、卸载WSL（可选）"><a href="#五、卸载WSL（可选）" class="headerlink" title="五、卸载WSL（可选）"></a>五、卸载WSL（可选）</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
 
-<p>4. 将文件命名为<code>init.gradle</code>，对下面弹窗提示点击确定。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502213047150.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502213101741.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、IDEA创建Gradle项目"><a href="#五、IDEA创建Gradle项目" class="headerlink" title="五、IDEA创建Gradle项目"></a>五、IDEA创建Gradle项目</h1><p>1. 新建Gradle项目或模块：</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502214558267.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 创建完成后，按<code>Ctrl + Alt + S</code>打开设置，找到Gradle并按下图设置</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502233947436.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 使用JUnit4进行测试：在IDEA左侧目录打开<code>build.gradle</code>文件，在<code>dependencies</code>中添加一条依赖：</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502234132500.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy">dependencies &#123;<br>	testImplementation <span class="hljs-string">&#x27;junit:junit:4.12&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>1. 按<kbd>Win</kbd>键，找到Ubantu，鼠标右键点击<strong>卸载</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143332649.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 点击<strong>卸载</strong>，过一会以后应用列表Ubantu的图标就会消失，卸载完成：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143404859.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、安装WSL可能会出现的问题"><a href="#六、安装WSL可能会出现的问题" class="headerlink" title="六、安装WSL可能会出现的问题"></a>六、安装WSL可能会出现的问题</h1><p>如果在微软商店安装Ubantu并打开的时候报错：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">Installing, <span class="hljs-keyword">this</span> may take a few minutes…<br>WslRegisterDistribution failed with error: <span class="hljs-number">0x8007019e</span><br>The Windows Subsystem <span class="hljs-keyword">for</span> Linux optional component <span class="hljs-keyword">is</span> not enabled. Please enable it and <span class="hljs-keyword">try</span> again.<br>See https:<span class="hljs-comment">//aka.ms/wslinstall for details.</span><br>Press any key to <span class="hljs-keyword">continue</span>…<br></code></pre></td></tr></table></figure>
 
-<p>4. 在src目录下，创建<code>test\java</code>目录</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502234439914.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230502234512693.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 创建一个测试类MyTest01</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@className</span> MyTest01</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@time</span> 2023/5/2 23:45</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span> TODO</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTest01</span> &#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello, world&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>6. 点击运行，即可看到控制台输出内容：</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503000018947.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="六、Eclipse创建Gradle项目"><a href="#六、Eclipse创建Gradle项目" class="headerlink" title="六、Eclipse创建Gradle项目"></a>六、Eclipse创建Gradle项目</h1><p>1. 在Eclipse上方打开<code>Windows --&gt; Preferences</code>，按照下图所示配置。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503001217049.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 重启Eclipse，新建一个Gradle项目</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503001422253.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503001512591.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入到欢迎页后，取消勾选，点击下一步。</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503001638406.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 自定义项目名称，然后点击下一步：</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503001843790.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击完成</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503002819037.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在左侧目录打开<code>lib --&gt; build.gradle</code>文件，导入如下依赖：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy">dependencies &#123;<br>	testImplementation <span class="hljs-string">&#x27;junit:junit:4.12&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>7. 在<code>src\test\java</code>目录下创建一个Java文件</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504;<br><br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTest02</span> &#123;<br>	<br>	<span class="hljs-meta">@Test</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testName</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>		System.out.println(<span class="hljs-string">&quot;Hello, world&quot;</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>8. 双击方法名，鼠标右键点击运行，即可看到控制台输出</p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503003314114.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230503003356473.png" srcset="/img/loading.gif" lazyload></p>
+<p>可以参考这篇文章，之前我也遇到过，就是按照博主的方案解决了：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_17576885/article/details/126707239">https://blog.csdn.net/qq_17576885/article/details/126707239</a></p>
 
                 
               </div>
@@ -422,7 +402,7 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Gradle/" class="print-no-link">#Gradle</a>
+        <a href="/tags/WSL/" class="print-no-link">#WSL</a>
       
     </div>
   
@@ -434,8 +414,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Gradle安装与配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/20.html</div>
+      <div>Winodws Subsystem for Linux（WSL）安装教程</div>
+      <div>https://www.icode504.com/posts/42.html</div>
     </div>
     <div class="license-meta">
       
@@ -447,7 +427,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月11日</div>
+          <div>2024年2月5日</div>
         </div>
       
       
@@ -479,18 +459,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/21.html" title="第四章 若依-JFlow设置用户并测试流程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第四章 若依-JFlow设置用户并测试流程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/19.html" title="Maven安装与配置教程（Windows版）">
-                        <span class="hidden-mobile">Maven安装与配置教程（Windows版）</span>
+                      <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）">
+                        <span class="hidden-mobile">VMware Workstation安装+彻底卸载教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -589,7 +563,7 @@
       
         <a href="/posts/20.html" title="Gradle安装与配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Gradle安装与配置教程（Windows版）</span>
         </a>
       
@@ -715,7 +689,7 @@
       
         <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Winodws Subsystem for Linux（WSL）安装教程</span>
         </a>
       
