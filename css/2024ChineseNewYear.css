@@ -58,16 +58,12 @@ main {
 
 .beian span a {
     color: yellow;
-}
+} 
 
-.footer-content a span {
+.footer-content a span { 
     color: yellow;
 }
-
+          
 .footer-inner {
     background-color: #8A1A10;
-}
-
-.category-item .collapsed .list-group-item .category-item-action .col-10 .col-md-11 .col-xm-11 {
-    color: #3c4858;
 }

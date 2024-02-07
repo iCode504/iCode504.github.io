@@ -18,37 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C&#x2F;C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C&#x2F;C++编程。">
+    <meta name="description" content="这篇教程提供Live Server插件的简明安装、使用与卸载指南，帮助用户编写代码并且在浏览器上实时显示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS Code配置MinGW并编写运行C&#x2F;C++代码（适用于Windows）">
-<meta property="og:url" content="https://www.icode504.com/posts/40.html">
+<meta property="og:title" content="Live Server插件安装、使用与卸载教程">
+<meta property="og:url" content="https://www.icode504.com/posts/44.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C&#x2F;C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C&#x2F;C++编程。">
+<meta property="og:description" content="这篇教程提供Live Server插件的简明安装、使用与卸载指南，帮助用户编写代码并且在浏览器上实时显示">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203202836440.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203203122206.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203203324194.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203203432028.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203204408841.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203204538939.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203210122970.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203210217881.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203211336203.png">
-<meta property="article:published_time" content="2024-02-04T01:34:32.000Z">
-<meta property="article:modified_time" content="2024-02-04T14:51:47.081Z">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Live%20Server%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E3%80%81%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B.png">
+<meta property="article:published_time" content="2024-02-06T03:00:22.000Z">
+<meta property="article:modified_time" content="2024-02-07T14:00:45.312Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="VS Code">
-<meta property="article:tag" content="C">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="MinGW">
+<meta property="article:tag" content="Live Server">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203202836440.png">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Live%20Server%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E3%80%81%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>VS Code配置MinGW并编写运行C/C++代码（适用于Windows） - iCode504个人博客</title>
+  <title>Live Server插件安装、使用与卸载教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/wallpaper.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Live Server插件安装、使用与卸载教程.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
+            <span id="subtitle">Live Server插件安装、使用与卸载教程</span>
           
         </div>
 
@@ -230,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-04 09:34" pubdate>
-          2024年2月4日 09:34:32
+        <time datetime="2024-02-06 11:00" pubdate>
+          2024年2月6日 11:00:22
         </time>
       </span>
     
@@ -242,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          739 字
+          446 字
         
       </span>
     
@@ -302,12 +292,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</h1>
+            <h1 id="seo-header">Live Server插件安装、使用与卸载教程</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月4日 22:51:47
+                    本文最后更新于：2024年2月7日 22:00:45
                   
                 
               </p>
@@ -315,35 +305,28 @@
             
               <div class="markdown-body">
                 
-                <p>请确保电脑本机已经安装了VS Code和MinGW，没有安装的小伙伴按照下方链接给出的教程进行安装：</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a href="https://www.icode504.com/posts/39.html">MinGW安装配置教程（Windows版）</a></th>
-<th align="center"><a href="https://www.icode504.com/posts/38.html">Visual Studio Code安装配置教程（Windows版）</a></th>
-</tr>
-</thead>
-</table>
-<p>1. 找一个你熟悉的位置写代码，建议文件路径只包含英文字符。这里我在F盘的Code文件夹下创建了一个C-Project文件夹：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203202836440.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开VS Code，点击左上角文件 –&gt; 打开文件夹。打开上一步我们创建的C-Project空文件夹：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203203122206.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203203324194.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击左上角的插件商店：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203203432028.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在上方搜索框中输入C，下载前三个微软官方提供的插件：C&#x2F;C++、C&#x2F;C++ Themes、C++ Extension Pack：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203204408841.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 上方弹出一个颜色主题，这里我选择的是第一个：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203204538939.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 安装完成，我们点击上方的项目写代码。这里我创建一个C语言文件：<code>swap.c</code>，代码如下所示：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">// 两数交换</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> x = <span class="hljs-number">5</span>, y = <span class="hljs-number">10</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;两个数未交换之前的值, x = %d, y = %d\n&quot;</span>, x, y);<br><br>    <span class="hljs-comment">// 额外定义一个变量，实现两数的交换</span><br>    <span class="hljs-type">int</span> temp = x;<br>    x = y;<br>    y = temp;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;交换后两个数的值, x = %d, y = %d\n&quot;</span>, x, y);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="一、下载安装Live-Server插件"><a href="#一、下载安装Live-Server插件" class="headerlink" title="一、下载安装Live Server插件"></a>一、下载安装Live Server插件</h1><p>1. 打开VS Code左侧插件商店，搜索Live Server并<strong>安装</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240206101011065.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 安装完成后，点击插件右下角的小齿轮，点击<strong>扩展设置</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240206104022501.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 找到<strong>Custom Browser</strong>，在这里可以选择你要使用的浏览器。这里我选择的是chrome（需要保证电脑本地已经安装了浏览器）：</p>
+<ul>
+<li>null是系统默认的浏览器。</li>
+<li>带PrivateMode是以隐私保护模式打开浏览器。</li>
+</ul>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240206104446439.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、Live-Server使用演示"><a href="#二、Live-Server使用演示" class="headerlink" title="二、Live Server使用演示"></a>二、Live Server使用演示</h1><p>1. 在VS Code中创建一个HTML文件：<code>page01.html</code>，代码如下图所示（浏览器页面中无内容），<strong>鼠标右键点击Open with Live Server</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240206101705146.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 此时我在body标签内写内容，可以在右侧浏览器页面中实时显示：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/240206001.gif" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、卸载Live-Server插件（可选）"><a href="#三、卸载Live-Server插件（可选）" class="headerlink" title="三、卸载Live Server插件（可选）"></a>三、卸载Live Server插件（可选）</h1><div class="note note-danger">
+            <p>这一部分会将插件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
 
-<p>6. 按<kbd>Ctrl</kbd>和<kbd>F5</kbd>键，以非调试状态运行程序。在上方调试器选择**C++ (GDB&#x2F;LLDB)**：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203210122970.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 选择<strong>C&#x2F;C++: gcc.exe 生成和调试活动文件</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203210217881.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 此时左上角生成了一个<code>.vscode</code>文件夹，里面包含配置文件，此时点击终端，就可以看到C语言代码的输出结果：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240203211336203.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 打开左侧VS Code左侧插件商店，找到已经安装的Live Server，点击齿轮，然后点击卸载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240206100359816.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 点击<strong>需要重新加载</strong>。至此，Live Server卸载成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240206100553238.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -367,7 +350,7 @@
   
     <span>></span>
     
-  <a href="/categories/VS-Code/C-C/" class="category-chain-item">C/C++</a>
+  <a href="/categories/VS-Code/Live-Server/" class="category-chain-item">Live Server</a>
   
   
 
@@ -386,11 +369,7 @@
       
         <a href="/tags/VS-Code/" class="print-no-link">#VS Code</a>
       
-        <a href="/tags/C/" class="print-no-link">#C</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-        <a href="/tags/MinGW/" class="print-no-link">#MinGW</a>
+        <a href="/tags/Live-Server/" class="print-no-link">#Live Server</a>
       
     </div>
   
@@ -402,8 +381,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</div>
-      <div>https://www.icode504.com/posts/40.html</div>
+      <div>Live Server插件安装、使用与卸载教程</div>
+      <div>https://www.icode504.com/posts/44.html</div>
     </div>
     <div class="license-meta">
       
@@ -415,7 +394,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月4日</div>
+          <div>2024年2月6日</div>
         </div>
       
       
@@ -447,9 +426,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）">
+                      <a href="/posts/2391573034.html" title="第一个Vue程序">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VMware Workstation安装+彻底卸载教程（Windows版）</span>
+                        <span class="hidden-mobile">第一个Vue程序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -457,8 +436,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）">
-                        <span class="hidden-mobile">MinGW安装配置教程（Windows版）</span>
+                      <a href="/posts/925751481.html" title="浏览器下载安装Vue开发者工具插件">
+                        <span class="hidden-mobile">浏览器下载安装Vue开发者工具插件</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -517,17 +496,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="C/C++"
         id="heading-915d356c4d213cec76d72f1cc1ec13f5" role="tab" data-toggle="collapse" href="#collapse-915d356c4d213cec76d72f1cc1ec13f5"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         C/C++
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
+      <div class="category-collapse collapse " id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
            role="tabpanel" aria-labelledby="heading-915d356c4d213cec76d72f1cc1ec13f5">
         
         
@@ -539,7 +518,7 @@
       
         <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
         </a>
       
@@ -591,17 +570,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Live Server"
         id="heading-559288b39de7c35a401a93a24425dff9" role="tab" data-toggle="collapse" href="#collapse-559288b39de7c35a401a93a24425dff9"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Live Server
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-559288b39de7c35a401a93a24425dff9"
+      <div class="category-collapse collapse show" id="collapse-559288b39de7c35a401a93a24425dff9"
            role="tabpanel" aria-labelledby="heading-559288b39de7c35a401a93a24425dff9">
         
         
@@ -613,7 +592,7 @@
       
         <a href="/posts/44.html" title="Live Server插件安装、使用与卸载教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Live Server插件安装、使用与卸载教程</span>
         </a>
       
