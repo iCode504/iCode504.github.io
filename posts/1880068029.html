@@ -18,27 +18,24 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+    <meta name="description" content="本文是加密内容，需要输入密码方可访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PostgreSQL安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/35.html">
+<meta property="og:title" content="MVVM模型">
+<meta property="og:url" content="https://www.icode504.com/posts/1880068029.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+<meta property="og:description" content="本文是加密内容，需要输入密码方可访问">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/PostgreSQL%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B.png">
-<meta property="article:published_time" content="2024-01-30T08:25:54.000Z">
-<meta property="article:modified_time" content="2024-02-03T08:43:33.686Z">
+<meta property="article:published_time" content="2024-02-11T07:59:19.000Z">
+<meta property="article:modified_time" content="2024-02-11T08:00:39.139Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="PostgreSQL">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/PostgreSQL%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>PostgreSQL安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>MVVM模型 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +200,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/postgresql-banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/wallpaper.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">MVVM模型</span>
           
         </div>
 
@@ -220,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-30 16:25" pubdate>
-          2024年1月30日 16:25:54
+        <time datetime="2024-02-11 15:59" pubdate>
+          2024年2月11日 15:59:19
         </time>
       </span>
     
@@ -232,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          5.8k 字
         
       </span>
     
@@ -292,94 +289,33 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">PostgreSQL安装、配置与卸载教程（Windows版）</h1>
+            <h1 id="seo-header">MVVM模型</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月3日 16:43:33
+                    本文最后更新于：2024年2月11日 16:00:39
                   
                 
               </p>
             
             
-              <div class="markdown-body">
-                
-                <p>PostgreSQL是基于<a target="_blank" rel="noopener" href="https://dsf.berkeley.edu/postgres.html">POSTGRES 4.2</a>版本的对象-关系型数据库，由加州大学伯克利分校计算机系研发。POSTGRES开创了许多先进理念，这些概念后来才在一些数据库系统中出现（他们的<a target="_blank" rel="noopener" href="https://www.postgresql.org/">官网</a>标题宣传的是世界上最先进的开源关系型数据库）。</p>
-<p>PostgreSQL是原伯克利代码的后代，它是开源的，支持大部分SQL标准并提供很多现代化特性：复杂查询、外键、触发器、更新视图等。</p>
-<p>此外，用户能以多种方式扩展PostgreSQL，例如可以添加新数据类型、新函数、新操作符等。由于自由的许可，PostgreSQL可以被任何人使用、修改、发布。</p>
-<p>以下是Windows环境下PostgreSQL的安装、配置与卸载教程：</p>
-<h1 id="一、下载PostgreSQL"><a href="#一、下载PostgreSQL" class="headerlink" title="一、下载PostgreSQL"></a>一、下载PostgreSQL</h1><p>1. 进入官网下载链接：<a target="_blank" rel="noopener" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">点我进入</a>（网页加载可能比较慢，请耐心等待）</p>
-<p>2. 根据自己的操作系统下载，这里我选择Windows版15.4版本：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911144620813.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装PostgreSQL"><a href="#二、安装PostgreSQL" class="headerlink" title="二、安装PostgreSQL"></a>二、安装PostgreSQL</h1><p>1. 双击打开安装包，进入欢迎界面，点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911144921054.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择安装路径，建议安装路径是全英文的（小白安装可以不用修改此路径），完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240105161313262.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择组件：这里安装器为我们默认勾选了四个组件，简单解释一下这些组件的作用。</p>
-<table>
-<thead>
-<tr>
-<th>组件名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PostgreSQL Server</td>
-<td>PostgreSQL数据库服务器（首次安装必须勾选）</td>
-</tr>
-<tr>
-<td>pgAdmin 4</td>
-<td>pgAdmin 4是PostgreSQL图形管理界面，用来管理PostgreSQL数据库和服务器，可以在内部编写SQL语句</td>
-</tr>
-<tr>
-<td>Stack Builder</td>
-<td>Stack Builder通过下载安装工具、驱动和应用，可以补充PostgreSQL未安装的内容。</td>
-</tr>
-<tr>
-<td>Command Line Tools</td>
-<td>PostgreSQL的命令行工具，如果需要使用pgAdmin 4，需要安装命令行工具</td>
-</tr>
-</tbody></table>
-<p>如果你是新手小白，按照系统默认勾选即可，然后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911145322812.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 选择数据存储路径：第3步如果选择了安装路径，那么这一步就按照系统默认安装位置即可（不用修改），点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240105163356163.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 为超级管理员设置密码。注意：如果你记不住密码，就将密码设置成123456即可，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911145851183.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. PostgreSQL默认端口是<strong>5432</strong>，保持默认即可，不用修改。点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150036442.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 地区按照系统默认选择<strong>Default Locale</strong>，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150143566.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 对前面安装选项进行确认，如果没有问题点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240105164020363.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 点击<strong>Next</strong>，开始安装：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150301037.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 安装中，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150326605.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 安装完毕，点击<strong>Finish</strong>。Postgres安装完成：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130105919293.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、卸载PostgreSQL"><a href="#三、卸载PostgreSQL" class="headerlink" title="三、卸载PostgreSQL"></a>三、卸载PostgreSQL</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
+              
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="55870b52fa2c074eb67a5b09a473607f44120d149f3b28be4d7909a040a9cc0e">4630436162ade97ba2718b7d0c4b3b63fc30d55ecb68b37695ab43c60fa0914f1658cb98c020de7b5386e12cf71520479660a0390ddd478d6547f4c024f8371b8785eef895622036eeb20fa45f588dff7a6d15d932f8c6e2d45126ade179efcefb063c0eebde682c1264e4f0a1e5c4d3b4531687783722eee34b6c4264983bc4a4680b725819a919eee868fa44e413cf6e2956979cb466734b49814a6f61da20c0a8d73f2e140143326436e41f10082fd9f343b8b19de4ea07fecb62ec3c62fca02a7d55ddecdea1e89f2ee22967a3082cb118f88f788a12b953ae87c95e2144b679371933b239c65cb68df81147aea5052a3ad0c778a99cd6783cd5ddb662f26c86fa18ee0faab4570559b32add65db25ca556992ba1938237a068ed789c632bc4346de2920c250acb47bb9f75d522e7a581f5b45eca061c5676a1d1641d30fca2df5d70dbc014632c4d9028c114c876df94e1f26673fc3d788bffabf344a32f2c3dff30db439dcca478819076e7077e174749fdf597d30fa29b1d8781befd063dee8b52ee943d11cec6c14d3d65f0de15eee501ea21141e669974272aafcbda9b5ecec01b859fd8424e82786a4d2ef4dd3afbda93b25bbfb3769d8507524c3b192597dcae1de780b635d77aeed100a7c3a5ca8f9f68d9fcebb508c6ee53369c8acee27b9f690e361a6eefdbd05a0b2300308935d089d6ef2b17f511a650a8c44b0f3c7b8595de6a6111e182bda17e7022834764854e5f3b7bc4167983b93453b1e5bc9a0857205e3070a63b94062b2fb308e367dad8c214ebc754017eda02e74bd4099b62967d7fdb37df213e8bef88f11c1c31dbc93ad4e18bb1a0b31a162a5b901f91d34fef00bc1ed8304b8e2fb91c86e0c3ba4592a6bbde1ed0f1c3e33d2a3a8ddc707e90274a44e4c896d4e7d710e12dbf7756c1c5237379902308ea3fafd534d9cbcd72b5d4eac74751c5491d70cffb25fc079b481d0244514782a490ff6474228c4b62c1f84fd9568d5c3b41beaf1eeae4beeac5e52e0968772d17af0e36607c8e6aa162a63faaf0639f1bd30787a17973d5bf45ba374db2fe6f54ff389973fc575f5de54e3e3c36c29f0284022a35e338c956e20e87c6e28332cc4225fbd7f84a0f3ea43c9a4f290ca0af0f2c7e5cc0a9937ba55d3a511de54bd6ae4592baf871234bb38e64cfb8ccb49a95bb7db5f83ee6e7114de41277cdd092b6cb52ee666f2d5c42398aa5aaf783fc3feeada8165eebe52ef7e86e80183ad9f39de3ae444df11c339fb973ceeded5bae9e457ea46764c7cefaeb1561cc10d6b41cbc3438a5f8c0714dee4b1b071a22d5eb233d6cfdea0e3ba75353de3dbacfc4f3f8f34c4ece33313884858b454fdbe10cf11a986a9d6ad489ffadfb02a9e5f16e6db85587d782acafb2ae8c15435671fe346eea10f34fbbe13bfc499c1b8fb8c4f864c9093658503f4f8e560134dea4fdd872f237b69304645a036c2b04ac94fe20fe844eff772018b6098ece81aa54e41d8584200a715047336320769598a32be06b7e1f210bbcf70b422a837b3251d91d0e3cedafa34cb9640f3f58eaea20f49a86c5893b7acb563378e4308eaacdbbbbac476ccc7a8c82f132e44215720edd415a57dc3fb76a6e8c3bdc3d8bae26cb5d3414192bde88a284df19bf95a168b2ce213dbcb9222047cd6c3a76681c18a6f0b7168e9e102d8db4823b1c138e8dd2f0a01fa920113437d2ac860b3ae26e43669807d8e74f76fe6ed3aea745be120c034dc7aa537f127a7b01fe2d34390d1cbf1dfb5f3ac502597f2e54b3930770adeb548345a9d71cfd0a4f2df2f40fb7e3471db1a8c7b60bf41ebbf4b5642accff34d85d1fb3b017765b6c3155e4270c584f9560346218aea71e56a17288545d27ea7013d778b88071ad55529f444434783bafe6b3ed6930eb46b55536ef4fa53742d291877b2cb6a0f5b0e2e77246c49478a413f6d448e2352776881dcf38a327b0dbabb0b5b9feb98cad816bbcbca836ed78a514b50bed39bfefa4f85219ce6da5b0ca13d1b55537ee847bae2dc8e1f2d30e49835dc830460980bd53b87ef4e4c73becc253121d2d65f5d11959e3b4c7ee6a0490061804ae776ab3f98b7aae6952746f06b8d8297f3b731a2b0bd1e7df77a0d69630b56d96f6c6c5f4f346d4f52e21c889425be6c8616017971b76b211f67ae948d1393189964cf79500ab8bb12668ddd76f292e9a0e81b8ad5a3c312be13cbe86168d460806c2cf4a5d10716ac9a48f310a3366a6e18d5f7f50c2ff893e317ccc1eb98a17a8598aeb86e551f6ce486e9d53227158dd33ac7b508b7c69d51a4e306b7f4c09e494fedd5f48eef697e976bdeed3c794a808f484b13a9d33ca0a86f31ef2997486abe3944314b49e84c39456f1eb655d22f83057a6c4a951f2aaea979a303ba3294da27c910a9348c9028ce3218f28fc3e725a2ba24bfcf3cb054fb5473a770051b6df7428b6d4d48283d7a05b78d41944758a8199249a61708247f2816823717a936c70c118cee550f3e749ad34fad91ce57ecd1fb64ece516f0bd79a45785c55c01a4160fd948c9739d754e9334598a8d91e9bdb94b396ba035be3eec53fef2fa98dc2ee92d71806720b4a76a150cf52357fab4d737e433604b8e96c2670b683839c49b37f792c36fd3b2a7a93c4eb9131f50b2888412c72055b7edf7f9c3d84421e0ddc558cdb294ead85c172954134f90a232ca9b9ed566d1b50bf6271d9c91a139f6a01b0ce5cba863ae2acaf0953c529adb2d987f3abf8e38b49098a4832c958de3840fc7ff992b13ce813afa08ec5188461259b4985d2a67eb2f54bdb88ba0444e87a7c9f45882cf3ff4ad18e0d8ced06a8aeb09dafd2cd815190c890d4aca46028bd5c51bc0ac506687eff0552af76131bd171d5dc8fc3672d18a92ea52f3aec0c4275c3e322312ca09a5f99ce9f2222ea4b876fd2ead18a54771d41b79ea4f573ca38b830784ab4a14e5d36ce273f8d5987328c08840758ee571334e30b7c1e99a8537594c4e9c7e39eb8002ced6dfce03161abfaf1f9df8976a9381de07f4686ebec53f95e9a0e6b5268f08552953d704a334547989421326ae3781afac1c7e70ea4368bed83e4f2bead21cdd8dcfa831177efe72ce8fd6cf38736adc2a2964a217eabb279455759558006fcbcfa57b242d980703f3720b069833ade103dce0c697f2cb7399f5b5280472a2c2131f6ea0936dc1f298fae03d0c4dfad237f1d664ae51707f4a1918a95baba5ac5d17ee849209cdcccf78f6cf8373208394e2c8220d9852423e5aff30affadcdd69dd8f4c9262751d0280d68c9be3a0abedcbbde4e2dce5226f5682c63f2a4d6d35e720da00b25d4de7ae12c158b54fcd76bc4cb37a7926fbb369cc61bf29928ebba4322690f47efef048463cec83db7865132e3f746c2b668258bc35a97a98eb4237f820eca02565bf8baa6847b0c23e045262cf20781f40c0b8b00504997b93ceb7526c155f3d3112a41a174da49dffc4bda04a9613aa957f330eeccc871a068d3b8c620c2af9d1a170a95b7763064cb04b244aef7e9badc1957ce581a7b673b2869b0645c64cfaff70ada3fe80e92c207fac238a40e87b17cf7c1657b29065488d28edad311774b66a02ae4bac315606d20f4dce481eeba31fac298dcc0101f5b27942793bb1c2d0ac579a6ed83ba35af068d8cce5b266c51ab7796d96700326dc86044f83dee73d88c2d3f07e5524d8f8cc104c0b6ef62de6e6f45b4c92dcd9a1bb7a20848688949b41409bc3be3ba28b12f1f8beb6606429601c75f9e2756b6c66685eb1c740d0422fd0efb064d8d44f4a6e41a3672ab95b13f9719242c9ff8b5954e21d9674169f0c48820d99c2290b98b40df0f81c36f0dcb92c16030b9cbc76c3f24684f94309ad9346585b36a2f375469b33649fbff76d88d74ca6c8976e7850565f068a8dd352341b7bab9cb8d1eed0cd158fbb745e7056c720b4d0548e54fb1d273a147eb11e80c366c342b5982ac4a983467b3cfbe09006dc829b4a6ca53b23c5fb2d47421956e996834504f3fa3ad4aee2e3ed3db3654f7abf100254ad7669</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+              
 
-<blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴可以接着往下看！</p>
-</blockquote>
-<p>1. 打开Geek Uninstaller，找到PostgreSQL 15，鼠标右键，点击<strong>卸载</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130101637247.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 此时卸载模式，默认选择第一个<strong>Entire Application</strong>（完全卸载），点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130101833493.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 卸载中，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130101938418.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 此时弹出一个卸载成功的小窗口，点击OK：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130102132979.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在Geek Uninstaller中清理注册表等卸载残留，点击<strong>完成</strong>，卸载残留清理完毕。至此，Postgres卸载完成。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130102238678.png" srcset="/img/loading.gif" lazyload></p>
-
-                
-              </div>
+              
             
             <hr/>
             <div>
@@ -395,8 +331,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  <a href="/categories/Vue/" class="category-chain-item">Vue</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Vue/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="category-chain-item">Vue基础知识</a>
+  
+  
+
   
 
       </span>
@@ -410,9 +353,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/PostgreSQL/" class="print-no-link">#PostgreSQL</a>
-      
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Vue/" class="print-no-link">#Vue</a>
       
     </div>
   
@@ -424,8 +365,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PostgreSQL安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/35.html</div>
+      <div>MVVM模型</div>
+      <div>https://www.icode504.com/posts/1880068029.html</div>
     </div>
     <div class="license-meta">
       
@@ -437,7 +378,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月30日</div>
+          <div>2024年2月11日</div>
         </div>
       
       
@@ -469,18 +410,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）">
-                        <span class="hidden-mobile">Groovy安装、配置与卸载教程（Windows版）</span>
+                      <a href="/posts/2118452631.html" title="el和data的两种写法">
+                        <span class="hidden-mobile">el和data的两种写法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -513,17 +448,44 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
-        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Vue"
+        id="heading-2d8ec58babcec05d3fe8f712968de749" role="tab" data-toggle="collapse" href="#collapse-2d8ec58babcec05d3fe8f712968de749"
         aria-expanded="true"
       >
-        软件安装
-        <span class="list-group-count">(20)</span>
+        Vue
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
-           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
+      <div class="category-collapse collapse show" id="collapse-2d8ec58babcec05d3fe8f712968de749"
+           role="tabpanel" aria-labelledby="heading-2d8ec58babcec05d3fe8f712968de749">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Vue基础知识"
+        id="heading-12c92183940d775533db76cc5e1fed29" role="tab" data-toggle="collapse" href="#collapse-12c92183940d775533db76cc5e1fed29"
+        aria-expanded="true"
+      >
+        Vue基础知识
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-12c92183940d775533db76cc5e1fed29"
+           role="tabpanel" aria-labelledby="heading-12c92183940d775533db76cc5e1fed29">
         
         
           
@@ -532,186 +494,83 @@
     
       
       
-        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
+        <a href="/posts/2391573034.html" title="第一个Vue程序"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
+          <span class="category-post">第一个Vue程序</span>
         </a>
       
     
       
       
-        <a href="/posts/10.html" title="Intellij IDEA安装配置教程（Windows版）"
+        <a href="/posts/910428078.html" title="Vue模板语法与数据绑定"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Intellij IDEA安装配置教程（Windows版）</span>
+          <span class="category-post">Vue模板语法与数据绑定</span>
         </a>
       
     
       
       
-        <a href="/posts/13.html" title="Scala 2安装教程（Windows版）"
+        <a href="/posts/2118452631.html" title="el和data的两种写法"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Scala 2安装教程（Windows版）</span>
+          <span class="category-post">el和data的两种写法</span>
         </a>
       
     
       
       
-        <a href="/posts/18.html" title="MySQL安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">MySQL安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/19.html" title="Maven安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Maven安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/20.html" title="Gradle安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
+        <a href="/posts/1880068029.html" title="MVVM模型"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">MinGW安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">VMware Workstation安装+彻底卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Winodws Subsystem for Linux（WSL）安装教程</span>
+          <span class="category-post">MVVM模型</span>
         </a>
       
     
   </div>
 
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Vue开发者工具"
+        id="heading-fa4f1a4fc0e4af587ec7c5b522dc8160" role="tab" data-toggle="collapse" href="#collapse-fa4f1a4fc0e4af587ec7c5b522dc8160"
+        aria-expanded="false"
+      >
+        Vue开发者工具
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-fa4f1a4fc0e4af587ec7c5b522dc8160"
+           role="tabpanel" aria-labelledby="heading-fa4f1a4fc0e4af587ec7c5b522dc8160">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/925751481.html" title="浏览器下载安装Vue开发者工具插件"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">浏览器下载安装Vue开发者工具插件</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
@@ -901,6 +760,23 @@
     });
   });
 </script>
+
+
+  
+  <script defer>
+    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
+      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
+        var hbePrefix = document.querySelector('hbe-prefix');
+        hbePrefix.parentElement.classList.add('markdown-body');
+        Fluid.utils.retry(function() {
+          if (Fluid.boot && Fluid.boot.refresh) {
+            Fluid.boot.refresh();
+            return true;
+          }
+        }, 100, 10);
+      })
+    }
+  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
