@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+    <meta name="description" content="本文提供了关于如何在Intellij IDEA&#x2F;DataGrip中配置MySQL的详细教程。通过此教程，读者将了解如何安装MySQL插件、配置数据库并测试连接。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PostgreSQL安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/35.html">
+<meta property="og:title" content="Intellij IDEA&#x2F;DataGrip配置MySQL8.0教程">
+<meta property="og:url" content="https://www.icode504.com/posts/45.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+<meta property="og:description" content="本文提供了关于如何在Intellij IDEA&#x2F;DataGrip中配置MySQL的详细教程。通过此教程，读者将了解如何安装MySQL插件、配置数据库并测试连接。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/PostgreSQL%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B.png">
-<meta property="article:published_time" content="2024-01-30T08:25:54.000Z">
-<meta property="article:modified_time" content="2024-02-03T08:43:33.686Z">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Intellij%20IDEA-DataGrip%E9%85%8D%E7%BD%AEMySQL%E6%95%99%E7%A8%8B.png">
+<meta property="article:published_time" content="2024-02-20T07:19:24.000Z">
+<meta property="article:modified_time" content="2024-02-20T13:38:58.009Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="PostgreSQL">
+<meta property="article:tag" content="Intellij IDEA">
+<meta property="article:tag" content="DataGrip">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/PostgreSQL%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B.png">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Intellij%20IDEA-DataGrip%E9%85%8D%E7%BD%AEMySQL%E6%95%99%E7%A8%8B.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>PostgreSQL安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>Intellij IDEA/DataGrip配置MySQL8.0教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/postgresql-banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Intellij IDEA-DataGrip配置MySQL教程.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
           
         </div>
 
@@ -220,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-30 16:25" pubdate>
-          2024年1月30日 16:25:54
+        <time datetime="2024-02-20 15:19" pubdate>
+          2024年2月20日 15:19:24
         </time>
       </span>
     
@@ -232,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          650 字
         
       </span>
     
@@ -292,12 +293,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">PostgreSQL安装、配置与卸载教程（Windows版）</h1>
+            <h1 id="seo-header">Intellij IDEA/DataGrip配置MySQL8.0教程</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月3日 16:43:33
+                    本文最后更新于：2024年2月20日 21:38:58
                   
                 
               </p>
@@ -305,78 +306,58 @@
             
               <div class="markdown-body">
                 
-                <p>PostgreSQL是基于<a target="_blank" rel="noopener" href="https://dsf.berkeley.edu/postgres.html">POSTGRES 4.2</a>版本的对象-关系型数据库，由加州大学伯克利分校计算机系研发。POSTGRES开创了许多先进理念，这些概念后来才在一些数据库系统中出现（他们的<a target="_blank" rel="noopener" href="https://www.postgresql.org/">官网</a>标题宣传的是世界上最先进的开源关系型数据库）。</p>
-<p>PostgreSQL是原伯克利代码的后代，它是开源的，支持大部分SQL标准并提供很多现代化特性：复杂查询、外键、触发器、更新视图等。</p>
-<p>此外，用户能以多种方式扩展PostgreSQL，例如可以添加新数据类型、新函数、新操作符等。由于自由的许可，PostgreSQL可以被任何人使用、修改、发布。</p>
-<p>以下是Windows环境下PostgreSQL的安装、配置与卸载教程：</p>
-<h1 id="一、下载PostgreSQL"><a href="#一、下载PostgreSQL" class="headerlink" title="一、下载PostgreSQL"></a>一、下载PostgreSQL</h1><p>1. 进入官网下载链接：<a target="_blank" rel="noopener" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">点我进入</a>（网页加载可能比较慢，请耐心等待）</p>
-<p>2. 根据自己的操作系统下载，这里我选择Windows版15.4版本：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911144620813.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装PostgreSQL"><a href="#二、安装PostgreSQL" class="headerlink" title="二、安装PostgreSQL"></a>二、安装PostgreSQL</h1><p>1. 双击打开安装包，进入欢迎界面，点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911144921054.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择安装路径，建议安装路径是全英文的（小白安装可以不用修改此路径），完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240105161313262.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择组件：这里安装器为我们默认勾选了四个组件，简单解释一下这些组件的作用。</p>
+                <p>请确保电脑本机已经安装MySQL和Intellij IDEA&#x2F;DataGrip，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p>
 <table>
 <thead>
 <tr>
-<th>组件名称</th>
-<th>说明</th>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+<th align="center">Linux</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>PostgreSQL Server</td>
-<td>PostgreSQL数据库服务器（首次安装必须勾选）</td>
+<td align="center">MySQL 8.0</td>
+<td align="center"><a href="https://www.icode504.com/posts/18.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
 </tr>
 <tr>
-<td>pgAdmin 4</td>
-<td>pgAdmin 4是PostgreSQL图形管理界面，用来管理PostgreSQL数据库和服务器，可以在内部编写SQL语句</td>
+<td align="center">Intellij IDEA</td>
+<td align="center"><a href="https://www.icode504.com/posts/10.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
 </tr>
 <tr>
-<td>Stack Builder</td>
-<td>Stack Builder通过下载安装工具、驱动和应用，可以补充PostgreSQL未安装的内容。</td>
-</tr>
-<tr>
-<td>Command Line Tools</td>
-<td>PostgreSQL的命令行工具，如果需要使用pgAdmin 4，需要安装命令行工具</td>
+<td align="center">DataGrip</td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
 </tr>
 </tbody></table>
-<p>如果你是新手小白，按照系统默认勾选即可，然后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911145322812.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 选择数据存储路径：第3步如果选择了安装路径，那么这一步就按照系统默认安装位置即可（不用修改），点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240105163356163.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 为超级管理员设置密码。注意：如果你记不住密码，就将密码设置成123456即可，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911145851183.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. PostgreSQL默认端口是<strong>5432</strong>，保持默认即可，不用修改。点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150036442.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 地区按照系统默认选择<strong>Default Locale</strong>，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150143566.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 对前面安装选项进行确认，如果没有问题点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240105164020363.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 点击<strong>Next</strong>，开始安装：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150301037.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 安装中，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230911150326605.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 安装完毕，点击<strong>Finish</strong>。Postgres安装完成：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130105919293.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、卸载PostgreSQL"><a href="#三、卸载PostgreSQL" class="headerlink" title="三、卸载PostgreSQL"></a>三、卸载PostgreSQL</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
-
+<p>检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 打开Intellij IDEA，按照下图所示操作，数据源选择<strong>MySQL</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143236662.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在Driver处，点击<strong>MySQL</strong>，点击<strong>Go to Driver</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143412262.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在Driver Files处，点击<strong>加号</strong>，选择<strong>Proviced Dirver</strong>，数据库驱动选择MySQL官网最新稳定版本：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143707207.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 由于我的电脑中已经下载最新版本的MySQL数据库驱动（JDBC），直接点击右侧的<code>Switch to ver. xxxx</code>即可：</p>
 <blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴可以接着往下看！</p>
+<p>如果你没有数据库驱动，此时右侧应该是<code>Download ver. xxxx</code>，直接点击下载即可。</p>
 </blockquote>
-<p>1. 打开Geek Uninstaller，找到PostgreSQL 15，鼠标右键，点击<strong>卸载</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130101637247.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 此时卸载模式，默认选择第一个<strong>Entire Application</strong>（完全卸载），点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130101833493.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 卸载中，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130101938418.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 此时弹出一个卸载成功的小窗口，点击OK：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130102132979.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在Geek Uninstaller中清理注册表等卸载残留，点击<strong>完成</strong>，卸载残留清理完毕。至此，Postgres卸载完成。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240130102238678.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220144109011.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 此时数据库驱动切换成功，我们再点击左上角的<strong>Data Sources</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220144741605.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按照下图操作，根据自己的实际情况添加数据库配置信息：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145242313.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 填写完成后，点击右下角的<strong>Test Connection</strong>测试一下数据库连接，出现下图所示的连接就说明MySQL连接成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145404194.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 此时再次输入以下密码，直接点击<strong>OK</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145705718.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 连接成功，接下来你就可以在console中写SQL语句了：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145832765.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -395,8 +376,32 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  <a href="/categories/Intellij-IDEA/" class="category-chain-item">Intellij IDEA</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Intellij-IDEA/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/DataGrip/" class="category-chain-item">DataGrip</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/DataGrip/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
   
 
       </span>
@@ -410,9 +415,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Intellij-IDEA/" class="print-no-link">#Intellij IDEA</a>
       
-        <a href="/tags/PostgreSQL/" class="print-no-link">#PostgreSQL</a>
+        <a href="/tags/DataGrip/" class="print-no-link">#DataGrip</a>
+      
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
       
     </div>
   
@@ -424,8 +431,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PostgreSQL安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/35.html</div>
+      <div>Intellij IDEA/DataGrip配置MySQL8.0教程</div>
+      <div>https://www.icode504.com/posts/45.html</div>
     </div>
     <div class="license-meta">
       
@@ -437,7 +444,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月30日</div>
+          <div>2024年2月20日</div>
         </div>
       
       
@@ -469,9 +476,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程">
+                      <a href="/posts/1145483940.html" title="事件处理">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
+                        <span class="hidden-mobile">事件处理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -479,8 +486,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）">
-                        <span class="hidden-mobile">Groovy安装、配置与卸载教程（Windows版）</span>
+                      <a href="/posts/2506480934.html" title="Vue的数据代理">
+                        <span class="hidden-mobile">Vue的数据代理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -513,17 +520,44 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
-        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Intellij IDEA"
+        id="heading-85c0a6888d99dd0941fad3b2264ee859" role="tab" data-toggle="collapse" href="#collapse-85c0a6888d99dd0941fad3b2264ee859"
         aria-expanded="true"
       >
-        软件安装
-        <span class="list-group-count">(20)</span>
+        Intellij IDEA
+        <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
-           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
+      <div class="category-collapse collapse show" id="collapse-85c0a6888d99dd0941fad3b2264ee859"
+           role="tabpanel" aria-labelledby="heading-85c0a6888d99dd0941fad3b2264ee859">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="MySQL"
+        id="heading-62a004b95946bb97541afa471dcca73a" role="tab" data-toggle="collapse" href="#collapse-62a004b95946bb97541afa471dcca73a"
+        aria-expanded="true"
+      >
+        MySQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-62a004b95946bb97541afa471dcca73a"
+           role="tabpanel" aria-labelledby="heading-62a004b95946bb97541afa471dcca73a">
         
         
           
@@ -532,186 +566,198 @@
     
       
       
-        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/10.html" title="Intellij IDEA安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Intellij IDEA安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/13.html" title="Scala 2安装教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Scala 2安装教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/18.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/19.html" title="Maven安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Maven安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/20.html" title="Gradle安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
+        <a href="/posts/45.html" title="Intellij IDEA/DataGrip配置MySQL8.0教程"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">MinGW安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">VMware Workstation安装+彻底卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Winodws Subsystem for Linux（WSL）安装教程</span>
+          <span class="category-post">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
         </a>
       
     
   </div>
 
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgresSQL"
+        id="heading-b4406ba0a7129b97e3f9d2512d231773" role="tab" data-toggle="collapse" href="#collapse-b4406ba0a7129b97e3f9d2512d231773"
+        aria-expanded="false"
+      >
+        PostgresSQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-b4406ba0a7129b97e3f9d2512d231773"
+           role="tabpanel" aria-labelledby="heading-b4406ba0a7129b97e3f9d2512d231773">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Scala"
+        id="heading-3012dcff1477e1feaab81764587c9bbd" role="tab" data-toggle="collapse" href="#collapse-3012dcff1477e1feaab81764587c9bbd"
+        aria-expanded="false"
+      >
+        Scala
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3012dcff1477e1feaab81764587c9bbd"
+           role="tabpanel" aria-labelledby="heading-3012dcff1477e1feaab81764587c9bbd">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/14.html" title="Intellij IDEA安装Scala插件并运行Scala程序"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA安装Scala插件并运行Scala程序</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="DataGrip"
+        id="heading-9b454287aaa34344680bb85e164ad045" role="tab" data-toggle="collapse" href="#collapse-9b454287aaa34344680bb85e164ad045"
+        aria-expanded="true"
+      >
+        DataGrip
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-9b454287aaa34344680bb85e164ad045"
+           role="tabpanel" aria-labelledby="heading-9b454287aaa34344680bb85e164ad045">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="MySQL"
+        id="heading-62a004b95946bb97541afa471dcca73a" role="tab" data-toggle="collapse" href="#collapse-62a004b95946bb97541afa471dcca73a"
+        aria-expanded="true"
+      >
+        MySQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-62a004b95946bb97541afa471dcca73a"
+           role="tabpanel" aria-labelledby="heading-62a004b95946bb97541afa471dcca73a">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/45.html" title="Intellij IDEA/DataGrip配置MySQL8.0教程"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgresSQL"
+        id="heading-b4406ba0a7129b97e3f9d2512d231773" role="tab" data-toggle="collapse" href="#collapse-b4406ba0a7129b97e3f9d2512d231773"
+        aria-expanded="false"
+      >
+        PostgresSQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-b4406ba0a7129b97e3f9d2512d231773"
+           role="tabpanel" aria-labelledby="heading-b4406ba0a7129b97e3f9d2512d231773">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
