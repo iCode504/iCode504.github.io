@@ -18,29 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文使用Watt Tookit（原Steam++）解决了Github在国内访问速度卡顿甚至无反应的问题，通过NDM和镜像网站实现Github大文件高速下载。">
+    <meta name="description" content="本文介绍了如何在Eclipse集成开发环境中配置MySQL 8.0数据库。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）">
-<meta property="og:url" content="https://www.icode504.com/posts/25.html">
+<meta property="og:title" content="Eclipse配置MySQL 8.0教程">
+<meta property="og:url" content="https://www.icode504.com/posts/46.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文使用Watt Tookit（原Steam++）解决了Github在国内访问速度卡顿甚至无反应的问题，通过NDM和镜像网站实现Github大文件高速下载。">
+<meta property="og:description" content="本文介绍了如何在Eclipse集成开发环境中配置MySQL 8.0数据库。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/%E8%AE%BF%E9%97%AEGithub%E5%8D%A1%E9%A1%BF%E7%94%9A%E8%87%B3%E8%BF%9B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%92%8CMacOS%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
-<meta property="article:published_time" content="2023-12-29T06:13:02.000Z">
-<meta property="article:modified_time" content="2024-02-03T08:43:33.698Z">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Eclipse%E9%85%8D%E7%BD%AEMySQL%208.0%E6%95%99%E7%A8%8B.png">
+<meta property="article:published_time" content="2024-02-21T03:08:49.000Z">
+<meta property="article:modified_time" content="2024-02-21T03:16:09.615Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Neat Download Manager">
-<meta property="article:tag" content="NDM">
-<meta property="article:tag" content="Watt tookit">
-<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Eclipse">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/%E8%AE%BF%E9%97%AEGithub%E5%8D%A1%E9%A1%BF%E7%94%9A%E8%87%B3%E8%BF%9B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%92%8CMacOS%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Eclipse%E9%85%8D%E7%BD%AEMySQL%208.0%E6%95%99%E7%A8%8B.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS） - iCode504个人博客</title>
+  <title>Eclipse配置MySQL 8.0教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）-封面.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Eclipse配置MySQL 8.0教程.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
+            <span id="subtitle">Eclipse配置MySQL 8.0教程</span>
           
         </div>
 
@@ -222,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-29 14:13" pubdate>
-          2023年12月29日 14:13:02
+        <time datetime="2024-02-21 11:08" pubdate>
+          2024年2月21日 11:08:49
         </time>
       </span>
     
@@ -294,12 +292,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</h1>
+            <h1 id="seo-header">Eclipse配置MySQL 8.0教程</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月3日 16:43:33
+                    本文最后更新于：2024年2月21日 11:16:09
                   
                 
               </p>
@@ -307,69 +305,73 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>Github是全球知名的开源宝库，但是对国内用户并不友好。当我们在浏览器中输入<code>www.github.com</code>时，如果你赶的时间点比较好可能会进去，但是大多数情况下浏览器不会对你的请求做出任何响应，就像下图这样：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229085526297.png" srcset="/img/loading.gif" lazyload></p>
-<p>那么，有什么办法解决这个问题呢？</p>
-<h1 id="二、访问Github——Watt-Tookit（原Steam-）"><a href="#二、访问Github——Watt-Tookit（原Steam-）" class="headerlink" title="二、访问Github——Watt Tookit（原Steam++）"></a>二、访问Github——Watt Tookit（原Steam++）</h1><p>官网介绍：Watt Tookit是一个开源的跨平台的多功能Stream工具箱，它可以管理你Steam游戏库存，监控Steam游戏下载进度实现自动定时关机等功能。本文要介绍的是它的网络加速功能，它内部添加了Github网络加速功能。</p>
-<p>原作者在B站有账号，感兴趣的小伙伴可以关注支持一下：<a target="_blank" rel="noopener" href="https://space.bilibili.com/3546572635768935">点我传送到B站</a></p>
-<p>接下来我们就来安装一下Watt Tookit：</p>
-<p>1. 点击右侧链接进入官网：<a target="_blank" rel="noopener" href="https://steampp.net/">点我进入官网</a></p>
-<p>2. 根据自己的操作系统下载，这里我使用的是Windows版本，点击下载按钮：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229091457093.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 此时会弹出一个GNU通用公共许可证协议，点击右下角<strong>接受并下载</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229091615168.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 官方给了我们多个下载渠道，大家任选一种方式下载即可，这里我给大家标注了下载的优先级：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229092847673.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 我选择的是蓝奏云下载，访问密码：1234，进入后直接下载exe安装包：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093049336.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 双击打开安装包，点击自定义安装，选择安装位置，这里我安装在了D盘：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093303865.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093315287.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093436756.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093446834.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 点击<strong>立即安装</strong>，软件开始安装：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093527419.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093535180.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 安装完成，点击<strong>立即体验</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093625530.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 打开后，点击左侧第二个图标<strong>网站加速</strong>，向下翻找到Github并勾选，</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229093925945.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 此时在浏览器再次访问<a target="_blank" rel="noopener" href="https://www.github.com/">Github</a>，就可以正常显示页面了。虽然访问速度还是慢，但是总比响应超时啥也不显示的强：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229101555911.png" srcset="/img/loading.gif" lazyload></p>
-<p>此时我们使用<code>git clone</code>命令拉取仓库代码，或者是使用<code>git push</code>命令将代码推送到我们的Github仓库就不会因为网络问题而无法进行操作的问题了。</p>
-<h1 id="三、下载Github中的内容"><a href="#三、下载Github中的内容" class="headerlink" title="三、下载Github中的内容"></a>三、下载Github中的内容</h1><p>Github有很多优秀的开源作品可以下载，如果是大文件使用浏览器，等到猴年马月都下载不完（下载速度真的是太慢了），以下是使用NDM和Github加速网站下载Github的内容的实现步骤。</p>
-<p>这里我想下载Google家的Noto Serif全语言字体包（<a target="_blank" rel="noopener" href="https://github.com/notofonts/noto-cjk/releases">点我查看源网站</a>），文件大小600M左右，如果正常使用浏览器下载非常慢，接下来我们就使用NDM+Github加速网站解决上述问题。</p>
-<blockquote>
-<p>本文后续内容使用NDM（Neat Download Manager）下载文件，如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
-</blockquote>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229102536561.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 首先，我们对要下载的文件，鼠标右键<strong>复制链接</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229102717918.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 以下是我整理的Github镜像网站，大家任选一个链接进入即可，这里我选择第一个网站进入：</p>
+                <p>请确保电脑本机已经安装MySQL和Eclipse，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p>
 <table>
 <thead>
 <tr>
-<th>网站名称</th>
-<th>链接</th>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+<th align="center">Linux</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Github文件加速</td>
-<td><a target="_blank" rel="noopener" href="https://gh.api.99988866.xyz/">https://gh.api.99988866.xyz/</a></td>
+<td align="center">MySQL 8.0</td>
+<td align="center"><a href="https://www.icode504.com/posts/18.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
 </tr>
 <tr>
-<td>Github加速下载</td>
-<td><a target="_blank" rel="noopener" href="https://github.ur1.fun/">https://github.ur1.fun/</a></td>
-</tr>
-<tr>
-<td>加速你的Github</td>
-<td><a target="_blank" rel="noopener" href="https://github.zhlh6.cn/">https://github.zhlh6.cn/</a></td>
+<td align="center">Eclipse</td>
+<td align="center"><a href="https://www.icode504.com/posts/30.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
 </tr>
 </tbody></table>
-<p>5. 将上面复制的链接粘贴到输入框中，点击下载即可</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229103230888.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 使用NDM，下载速度直接原地起飞：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231229103620649.png" srcset="/img/loading.gif" lazyload></p>
+<p>检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="一、下载MySQL数据库驱动"><a href="#一、下载MySQL数据库驱动" class="headerlink" title="一、下载MySQL数据库驱动"></a>一、下载MySQL数据库驱动</h1><p>1. 点击右侧链接进入MySQL数据库驱动下载页面：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/c-j/">点我查看</a></p>
+<p>2. 前面我们检查了MySQL是8.0.xx版本，数据库驱动建议选择8版本、操作系统我选择的是平台独立（Platform Independent）。选择完成后，点击下方ZIP压缩包下载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221084519626.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 将下载好的压缩包解压到一个你熟悉的位置，这里我解压到了D盘：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221084705705.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221084851937.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、Eclipse配置MySQL"><a href="#二、Eclipse配置MySQL" class="headerlink" title="二、Eclipse配置MySQL"></a>二、Eclipse配置MySQL</h1><p>1. 打开Eclipse，在上方菜单栏选择Window –&gt; Show View –&gt; Other：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131100443322.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 双击打开<strong>Data Management</strong>，选择<strong>Data Source Explorer</strong>，完成后点击<strong>Open</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131100530658.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时会弹出一个Data Source Explorer窗口，鼠标右键选中第一个<strong>Database Connections</strong>，点击<strong>New</strong>新建一个连接：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131102657948.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 连接类型<strong>选择MySQL并选中</strong>，Name和Description自定义，完成后点击<strong>Next</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220154033412.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击右上角<strong>加号</strong>修改数据库驱动和连接信息：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131103041407.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 选中数据库驱动模板<strong>MySQL JDBC Driver</strong>，此时上方弹出一个错误信息：在本地系统中无法找到<code>mysql-connector-java-5.1.0-bin.jar</code>，这说明我们需要将Eclipse原有的数据库驱动改成前面我们下载安装的MySQL的JDBC：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221083249950.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 选择<strong>JAR List</strong>，点击右侧的<strong>Clear All</strong>，清空驱动文件（下图列出来的JAR包本地不存在）</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221083702299.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 点击<strong>Add JAR&#x2F;Zip</strong>，找到前面我们下载的MySQL JDBC的位置，选中<code>postgresql-42.6.0.jar</code>文件，点击<strong>打开</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131104057823.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 找到MySQL数据库驱动包解压位置，并选中文件夹中的JAR包<code>mysql-connector-j-xxx.jar</code>（这里xxx指的是版本号）。选择完成后，点击右下角<strong>打开</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221085426164.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 此时数据库驱动JAR包添加成功，并且上方报错信息也消失了：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221085711987.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 点击上方的<strong>Properties</strong>，按照下图所给的提示填写好配置信息，完成后点击<strong>OK</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221090247443.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 记不住密码的小伙伴，请将下图的<strong>Save password</strong>勾选上（记住密码），上述内容填写完成后，点击<strong>Test Connection</strong>测试连接：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221101736075.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 连接成功，点击<strong>OK</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221101905828.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 点击<strong>Finish</strong>，MySQL安装配置完成，此时我们可以看到名为<code>mysql</code>的数据库：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221102428971.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 如果想连接其他数据库，鼠标右键点击MySQL，选择最后一个<strong>Properties</strong>，修改数据库属性：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221102727558.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 将下图中两处数据库名称修改即可，完成后点击<strong>Apply and Close</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221103016323.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 此时会有一个弹窗提示说数据库配置信息发生变动，是否重新连接，点击<strong>Yes</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221103111141.png" srcset="/img/loading.gif" lazyload></p>
+<p>18. 数据库切换成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221103230805.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -388,8 +390,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  <a href="/categories/Eclipse/" class="category-chain-item">Eclipse</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Eclipse/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
   
 
       </span>
@@ -403,13 +412,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Neat-Download-Manager/" class="print-no-link">#Neat Download Manager</a>
+        <a href="/tags/Eclipse/" class="print-no-link">#Eclipse</a>
       
-        <a href="/tags/NDM/" class="print-no-link">#NDM</a>
-      
-        <a href="/tags/Watt-tookit/" class="print-no-link">#Watt tookit</a>
-      
-        <a href="/tags/Github/" class="print-no-link">#Github</a>
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
       
     </div>
   
@@ -421,8 +426,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</div>
-      <div>https://www.icode504.com/posts/25.html</div>
+      <div>Eclipse配置MySQL 8.0教程</div>
+      <div>https://www.icode504.com/posts/46.html</div>
     </div>
     <div class="license-meta">
       
@@ -434,7 +439,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月29日</div>
+          <div>2024年2月21日</div>
         </div>
       
       
@@ -466,9 +471,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）">
+                      <a href="/posts/47.html" title="Electerm安装、配置与卸载教程（Windows版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JDK 17安装配置教程（Windows版）</span>
+                        <span class="hidden-mobile">Electerm安装、配置与卸载教程（Windows版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -476,8 +481,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）">
-                        <span class="hidden-mobile">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
+                      <a href="/posts/1145483940.html" title="事件处理">
+                        <span class="hidden-mobile">事件处理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -510,17 +515,44 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
-        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Eclipse"
+        id="heading-32f7222026696f30787889194dee83e5" role="tab" data-toggle="collapse" href="#collapse-32f7222026696f30787889194dee83e5"
         aria-expanded="true"
       >
-        软件安装
-        <span class="list-group-count">(21)</span>
+        Eclipse
+        <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
-           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
+      <div class="category-collapse collapse show" id="collapse-32f7222026696f30787889194dee83e5"
+           role="tabpanel" aria-labelledby="heading-32f7222026696f30787889194dee83e5">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="MySQL"
+        id="heading-62a004b95946bb97541afa471dcca73a" role="tab" data-toggle="collapse" href="#collapse-62a004b95946bb97541afa471dcca73a"
+        aria-expanded="true"
+      >
+        MySQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-62a004b95946bb97541afa471dcca73a"
+           role="tabpanel" aria-labelledby="heading-62a004b95946bb97541afa471dcca73a">
         
         
           
@@ -529,195 +561,56 @@
     
       
       
-        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/10.html" title="Intellij IDEA安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Intellij IDEA安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/13.html" title="Scala 2安装教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Scala 2安装教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/18.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/19.html" title="Maven安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Maven安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/20.html" title="Gradle安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）"
+        <a href="/posts/46.html" title="Eclipse配置MySQL 8.0教程"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">MinGW安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">VMware Workstation安装+彻底卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Winodws Subsystem for Linux（WSL）安装教程</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/47.html" title="Electerm安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Electerm安装、配置与卸载教程（Windows版）</span>
+          <span class="category-post">Eclipse配置MySQL 8.0教程</span>
         </a>
       
     
   </div>
 
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgreSQL"
+        id="heading-399bd1ee587245ecac6f39beaa99886f" role="tab" data-toggle="collapse" href="#collapse-399bd1ee587245ecac6f39beaa99886f"
+        aria-expanded="false"
+      >
+        PostgreSQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-399bd1ee587245ecac6f39beaa99886f"
+           role="tabpanel" aria-labelledby="heading-399bd1ee587245ecac6f39beaa99886f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/37.html" title="Eclipse配置PostgreSQL教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Eclipse配置PostgreSQL教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
