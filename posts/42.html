@@ -88,14 +88,13 @@
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
-<link rel="stylesheet" href="/css/2024ChineseNewYear.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -217,7 +216,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/wallpaper.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -242,13 +241,6 @@
   </div>
 
   <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          1.4k 字
-        
-      </span>
     
 
     
@@ -286,209 +278,7 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">Winodws Subsystem for Linux（WSL）安装教程</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2024年2月20日 11:40:23
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <p>WSL，全称Windows Subsystem for Linux，中文翻译过来是Windows环境下的Linux子系统。可以在Windows电脑上运行Linux环境，不需要单独安装VMWare等虚拟机软件，使用WSL的目的是为同时使用Windows和Linux操作系统的开发人员提供高效体验。</p>
-<p>你可以使用WSL安装并运行各种Linux的发行版，例如：Ubantu、Debian、Kali等，并且在提供命令行工具（Bash）运行Linux命令。</p>
-<p>官网提供了更多关于WSL的介绍，感兴趣的小伙伴可以点击右侧链接查看：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/about">点我查看</a></p>
-<p>接下来就讲一下WSL的安装与使用：</p>
-<h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并点击<strong>确定</strong>，进入命令行窗口。在命令行中输入<code>winver</code>查看操作系统版本，请确保操作系统是<strong>Windows 10</strong>和<strong>Windows 11</strong>，并且版本在<strong>2004版本以后</strong>，这里我的操作系统是22H2版本，符合安装要求：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202135450995.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 电脑从来没有安装过WSL（也就是说你之前从没听说过有这个东西）</p>
-<p>3. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>control</code>并回车，右上角查看类别改成<strong>小图标</strong>，点击<strong>程序与功能</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142340458.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择<strong>启动或关闭Windows功能</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142540342.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 勾选<strong>适用于Linux的Windows子系统</strong>，完成后点击<strong>确定</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142612124.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装WSL"><a href="#二、安装WSL" class="headerlink" title="二、安装WSL"></a>二、安装WSL</h1><p>1. 打开Windows应用商店（Microsoft Store）。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142905182.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在上方搜索框中输入你想要的Linux发行版，这里我安装的是Ubantu 长期支持版（LTS）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143659607.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入详情页后，点击<strong>安装</strong>，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143750193.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 下载完成，点击<strong>打开</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143847804.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. Ubantu正在安装，请耐心等待（期间不要关闭这个窗口）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143923385.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 等待了1~3分钟以后，此时Ubantu系统要我们自己输入用户名（英文名称要符合Unix的命名规则，命名规则可以自行百度）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144259062.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 进入输入密码界面，注意密码默认是不显示在控制台的，一共需要输入两次（如果你记不住密码，建议将密码设置成123456）。输入完毕后，你就可以在Windows上正常使用Linux啦！</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144643586.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、修改WSL主题风格（可选）"><a href="#四、修改WSL主题风格（可选）" class="headerlink" title="四、修改WSL主题风格（可选）"></a>四、修改WSL主题风格（可选）</h1><div class="note note-success">
-            <p>感兴趣的小伙伴按照下面内容自己动手修改。</p>
-          </div>
-
-<p>1. <kbd>Ctrl</kbd>和鼠标滚轮可以调整窗口和字体大小。</p>
-<p>2. <strong>鼠标右键</strong>点击WSL上方白色部分，点击<strong>属性</strong>，可以修改界面风格：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145311680.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在字体窗口自行调整字体类型和大小，这里我选择的是Consolas字体（Windows自带，挺好看的），大小20号：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145530346.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、卸载WSL（可选）"><a href="#五、卸载WSL（可选）" class="headerlink" title="五、卸载WSL（可选）"></a>五、卸载WSL（可选）</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
-
-<p>1. 按<kbd>Win</kbd>键，找到Ubantu，鼠标右键点击<strong>卸载</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143332649.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 点击<strong>卸载</strong>，过一会以后应用列表Ubantu的图标就会消失，卸载完成：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143404859.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="六、安装WSL可能会出现的问题"><a href="#六、安装WSL可能会出现的问题" class="headerlink" title="六、安装WSL可能会出现的问题"></a>六、安装WSL可能会出现的问题</h1><p>如果在微软商店安装Ubantu并打开的时候报错：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">Installing, <span class="hljs-keyword">this</span> may take a few minutes…<br>WslRegisterDistribution failed with error: <span class="hljs-number">0x8007019e</span><br>The Windows Subsystem <span class="hljs-keyword">for</span> Linux optional component <span class="hljs-keyword">is</span> not enabled. Please enable it and <span class="hljs-keyword">try</span> again.<br>See https:<span class="hljs-comment">//aka.ms/wslinstall for details.</span><br>Press any key to <span class="hljs-keyword">continue</span>…<br></code></pre></td></tr></table></figure>
-
-<p>可以参考这篇文章，之前我也遇到过，就是按照博主的方案解决了：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_17576885/article/details/126707239">https://blog.csdn.net/qq_17576885/article/details/126707239</a></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
-      
-        <a href="/tags/WSL/" class="print-no-link">#WSL</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>Winodws Subsystem for Linux（WSL）安装教程</div>
-      <div>https://www.icode504.com/posts/42.html</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>iCode504</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年2月5日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/posts/43.html" title="VS Code查看Git提交记录">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VS Code查看Git提交记录</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）">
-                        <span class="hidden-mobile">VMware Workstation安装+彻底卸载教程（Windows版）</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar category-bar" style="margin-left: -1rem">
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
     
 
 
@@ -508,7 +298,7 @@
         aria-expanded="true"
       >
         软件安装
-        <span class="list-group-count">(21)</span>
+        <span class="list-group-count">(22)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -516,6 +306,7 @@
            role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
         
         
+          
           
   <div class="category-post-list">
     
@@ -711,11 +502,252 @@
     
   </div>
 
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Python"
+        id="heading-a7f5f35426b927411fc9231b56382173" role="tab" data-toggle="collapse" href="#collapse-a7f5f35426b927411fc9231b56382173"
+        aria-expanded="false"
+      >
+        Python
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a7f5f35426b927411fc9231b56382173"
+           role="tabpanel" aria-labelledby="heading-a7f5f35426b927411fc9231b56382173">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/49.html" title="Python安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
   
 </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Winodws Subsystem for Linux（WSL）安装教程</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年2月20日 11:40:23
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>WSL，全称Windows Subsystem for Linux，中文翻译过来是Windows环境下的Linux子系统。可以在Windows电脑上运行Linux环境，不需要单独安装VMWare等虚拟机软件，使用WSL的目的是为同时使用Windows和Linux操作系统的开发人员提供高效体验。</p>
+<p>你可以使用WSL安装并运行各种Linux的发行版，例如：Ubantu、Debian、Kali等，并且在提供命令行工具（Bash）运行Linux命令。</p>
+<p>官网提供了更多关于WSL的介绍，感兴趣的小伙伴可以点击右侧链接查看：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/about">点我查看</a></p>
+<p>接下来就讲一下WSL的安装与使用：</p>
+<h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并点击<strong>确定</strong>，进入命令行窗口。在命令行中输入<code>winver</code>查看操作系统版本，请确保操作系统是<strong>Windows 10</strong>和<strong>Windows 11</strong>，并且版本在<strong>2004版本以后</strong>，这里我的操作系统是22H2版本，符合安装要求：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202135450995.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 电脑从来没有安装过WSL（也就是说你之前从没听说过有这个东西）</p>
+<p>3. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>control</code>并回车，右上角查看类别改成<strong>小图标</strong>，点击<strong>程序与功能</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142340458.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 选择<strong>启动或关闭Windows功能</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142540342.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 勾选<strong>适用于Linux的Windows子系统</strong>，完成后点击<strong>确定</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142612124.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装WSL"><a href="#二、安装WSL" class="headerlink" title="二、安装WSL"></a>二、安装WSL</h1><p>1. 打开Windows应用商店（Microsoft Store）。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202142905182.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在上方搜索框中输入你想要的Linux发行版，这里我安装的是Ubantu 长期支持版（LTS）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143659607.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 进入详情页后，点击<strong>安装</strong>，请耐心等待：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143750193.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 下载完成，点击<strong>打开</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143847804.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. Ubantu正在安装，请耐心等待（期间不要关闭这个窗口）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143923385.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 等待了1~3分钟以后，此时Ubantu系统要我们自己输入用户名（英文名称要符合Unix的命名规则，命名规则可以自行百度）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144259062.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 进入输入密码界面，注意密码默认是不显示在控制台的，一共需要输入两次（如果你记不住密码，建议将密码设置成123456）。输入完毕后，你就可以在Windows上正常使用Linux啦！</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202144643586.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、修改WSL主题风格（可选）"><a href="#四、修改WSL主题风格（可选）" class="headerlink" title="四、修改WSL主题风格（可选）"></a>四、修改WSL主题风格（可选）</h1><div class="note note-success">
+            <p>感兴趣的小伙伴按照下面内容自己动手修改。</p>
+          </div>
+
+<p>1. <kbd>Ctrl</kbd>和鼠标滚轮可以调整窗口和字体大小。</p>
+<p>2. <strong>鼠标右键</strong>点击WSL上方白色部分，点击<strong>属性</strong>，可以修改界面风格：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145311680.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在字体窗口自行调整字体类型和大小，这里我选择的是Consolas字体（Windows自带，挺好看的），大小20号：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202145530346.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、卸载WSL（可选）"><a href="#五、卸载WSL（可选）" class="headerlink" title="五、卸载WSL（可选）"></a>五、卸载WSL（可选）</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
+
+<p>1. 按<kbd>Win</kbd>键，找到Ubantu，鼠标右键点击<strong>卸载</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143332649.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 点击<strong>卸载</strong>，过一会以后应用列表Ubantu的图标就会消失，卸载完成：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240202143404859.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、安装WSL可能会出现的问题"><a href="#六、安装WSL可能会出现的问题" class="headerlink" title="六、安装WSL可能会出现的问题"></a>六、安装WSL可能会出现的问题</h1><p>如果在微软商店安装Ubantu并打开的时候报错：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">Installing, <span class="hljs-keyword">this</span> may take a few minutes…<br>WslRegisterDistribution failed with error: <span class="hljs-number">0x8007019e</span><br>The Windows Subsystem <span class="hljs-keyword">for</span> Linux optional component <span class="hljs-keyword">is</span> not enabled. Please enable it and <span class="hljs-keyword">try</span> again.<br>See https:<span class="hljs-comment">//aka.ms/wslinstall for details.</span><br>Press any key to <span class="hljs-keyword">continue</span>…<br></code></pre></td></tr></table></figure>
+
+<p>可以参考这篇文章，之前我也遇到过，就是按照博主的方案解决了：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_17576885/article/details/126707239">https://blog.csdn.net/qq_17576885/article/details/126707239</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/WSL/" class="print-no-link">#WSL</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Winodws Subsystem for Linux（WSL）安装教程</div>
+      <div>https://www.icode504.com/posts/42.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年2月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/43.html" title="VS Code查看Git提交记录">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">VS Code查看Git提交记录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）">
+                        <span class="hidden-mobile">VMware Workstation安装+彻底卸载教程（Windows版）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
 
 
   </aside>

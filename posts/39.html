@@ -76,14 +76,13 @@
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
-<link rel="stylesheet" href="/css/2024ChineseNewYear.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -231,13 +230,6 @@
 
   <div class="mt-1">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          1.1k 字
-        
-      </span>
-    
 
     
 
@@ -274,211 +266,7 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">MinGW安装配置教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2024年2月3日 16:43:33
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <p>MinGW，全称为Minimalist GNU for Windows，是一个可自由使用和发布的Windows特定头文件和使用GNU工具集导入库的集合。它允许在GNU&#x2F;Linux和Windows平台生成本地的Windows程序而不需要第三方C运行时（C Runtime）库。使用MinGW开发的程序不需要额外的第三方DLL支持就可以在Windows下运行。</p>
-<p>以下是MinGW在Windows环境下的安装和配置教程：</p>
-<h1 id="一、下载MinGW-w64"><a href="#一、下载MinGW-w64" class="headerlink" title="一、下载MinGW-w64"></a>一、下载MinGW-w64</h1><p>1. 打开MinGW-w64官网下载页面（托管到了SourceForge上）：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">点我查看</a></p>
-<p>2. 向下找，找到最新版本的MinGW，选择seh下载：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240201104452235.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>说明（第2、3、4、5点总结的可能不太严谨，如果您在这方面有很深入的了解，可以评论区或者私信告诉我）：</p>
-<p>1. <font color="FF0000">不要</font>安装上面的<code>MinGW-W64-install.exe</code>，这个是联网安装的，服务器在国外，在国内安装因为网络原因大概率会失败。</p>
-<p>2. x86_64简单而言是64位的操作系统（绝大部分电脑都是64位的），i686属于32位操作系统</p>
-<p>3. posix（全称Portable Operating System Interface of UNIX，翻译过来就是UNIX可移植操作系统接口），是<a target="_blank" rel="noopener" href="http://www.ieee.com/">IEEE</a>为要在各种UNIX操作系统上运行的软件而定义的一系列API标准总称。</p>
-<p>4. win32是由Windows操作系统的API，主要也是应用在Windows操作系统上。</p>
-<p>5. seh（Structured Exception Handling）是Windows操作系统中默认的异常处理机制，sjlj（Signal Set JMP）是Unix及类Unix系统中的一种轻量级异常处理机制。</p>
-</blockquote>
-<h1 id="二、安装配置MinGW-w64"><a href="#二、安装配置MinGW-w64" class="headerlink" title="二、安装配置MinGW-w64"></a>二、安装配置MinGW-w64</h1><p>1. 将下载的7z压缩包（推荐使用<a target="_blank" rel="noopener" href="https://www.bandisoft.com/bandizip/">Bandzip</a>、<a target="_blank" rel="noopener" href="https://7-zip.org/">7-zip</a>等解压工具）解压到一个你熟悉的地方（建议是英文路径），这里我解压到了D盘：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131155552319.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131155721190.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 为MinGW配置环境变量：找到MinGW的安装路径，出现bin、etc、include等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131160221163.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th align="center"><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td align="center"><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>5. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在下方系统变量中，点击<strong>新建</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 配置安装路径，按照图示操作即可：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162334741.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 双击Path进入：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162546989.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 检查Mingw环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，进入控制台，输入<code>gcc -v</code>和<code>g++ -v</code>，出现版本信息说明环境变量配置成功！</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162902042.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162938776.png" srcset="/img/loading.gif" lazyload></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-        <a href="/tags/MinGW/" class="print-no-link">#MinGW</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>MinGW安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/39.html</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>iCode504</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年2月1日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）">
-                        <span class="hidden-mobile">Visual Studio Code安装配置教程（Windows版）</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar category-bar" style="margin-left: -1rem">
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
     
 
 
@@ -498,7 +286,7 @@
         aria-expanded="true"
       >
         软件安装
-        <span class="list-group-count">(21)</span>
+        <span class="list-group-count">(22)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -506,6 +294,7 @@
            role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
         
         
+          
           
   <div class="category-post-list">
     
@@ -701,11 +490,254 @@
     
   </div>
 
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Python"
+        id="heading-a7f5f35426b927411fc9231b56382173" role="tab" data-toggle="collapse" href="#collapse-a7f5f35426b927411fc9231b56382173"
+        aria-expanded="false"
+      >
+        Python
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a7f5f35426b927411fc9231b56382173"
+           role="tabpanel" aria-labelledby="heading-a7f5f35426b927411fc9231b56382173">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/49.html" title="Python安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
   
 </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">MinGW安装配置教程（Windows版）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年2月3日 16:43:33
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>MinGW，全称为Minimalist GNU for Windows，是一个可自由使用和发布的Windows特定头文件和使用GNU工具集导入库的集合。它允许在GNU&#x2F;Linux和Windows平台生成本地的Windows程序而不需要第三方C运行时（C Runtime）库。使用MinGW开发的程序不需要额外的第三方DLL支持就可以在Windows下运行。</p>
+<p>以下是MinGW在Windows环境下的安装和配置教程：</p>
+<h1 id="一、下载MinGW-w64"><a href="#一、下载MinGW-w64" class="headerlink" title="一、下载MinGW-w64"></a>一、下载MinGW-w64</h1><p>1. 打开MinGW-w64官网下载页面（托管到了SourceForge上）：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">点我查看</a></p>
+<p>2. 向下找，找到最新版本的MinGW，选择seh下载：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240201104452235.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>说明（第2、3、4、5点总结的可能不太严谨，如果您在这方面有很深入的了解，可以评论区或者私信告诉我）：</p>
+<p>1. <font color="FF0000">不要</font>安装上面的<code>MinGW-W64-install.exe</code>，这个是联网安装的，服务器在国外，在国内安装因为网络原因大概率会失败。</p>
+<p>2. x86_64简单而言是64位的操作系统（绝大部分电脑都是64位的），i686属于32位操作系统</p>
+<p>3. posix（全称Portable Operating System Interface of UNIX，翻译过来就是UNIX可移植操作系统接口），是<a target="_blank" rel="noopener" href="http://www.ieee.com/">IEEE</a>为要在各种UNIX操作系统上运行的软件而定义的一系列API标准总称。</p>
+<p>4. win32是由Windows操作系统的API，主要也是应用在Windows操作系统上。</p>
+<p>5. seh（Structured Exception Handling）是Windows操作系统中默认的异常处理机制，sjlj（Signal Set JMP）是Unix及类Unix系统中的一种轻量级异常处理机制。</p>
+</blockquote>
+<h1 id="二、安装配置MinGW-w64"><a href="#二、安装配置MinGW-w64" class="headerlink" title="二、安装配置MinGW-w64"></a>二、安装配置MinGW-w64</h1><p>1. 将下载的7z压缩包（推荐使用<a target="_blank" rel="noopener" href="https://www.bandisoft.com/bandizip/">Bandzip</a>、<a target="_blank" rel="noopener" href="https://7-zip.org/">7-zip</a>等解压工具）解压到一个你熟悉的地方（建议是英文路径），这里我解压到了D盘：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131155552319.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131155721190.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 为MinGW配置环境变量：找到MinGW的安装路径，出现bin、etc、include等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131160221163.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击<strong>高级系统设置</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows 11</th>
+<th align="center"><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>Windows 10</strong></td>
+<td align="center"><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+</tbody></table>
+<p>5. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 在下方系统变量中，点击<strong>新建</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 配置安装路径，按照图示操作即可：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162334741.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 双击Path进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 按照图示操作即可，然后一路点击确定。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162546989.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 检查Mingw环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，进入控制台，输入<code>gcc -v</code>和<code>g++ -v</code>，出现版本信息说明环境变量配置成功！</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162902042.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131162938776.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/C/" class="print-no-link">#C</a>
+      
+        <a href="/tags/C/" class="print-no-link">#C++</a>
+      
+        <a href="/tags/MinGW/" class="print-no-link">#MinGW</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>MinGW安装配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/39.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年2月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）">
+                        <span class="hidden-mobile">Visual Studio Code安装配置教程（Windows版）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
 
 
   </aside>

@@ -75,14 +75,13 @@
 
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
-<link rel="stylesheet" href="/css/2024ChineseNewYear.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -230,13 +229,6 @@
 
   <div class="mt-1">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          650 字
-        
-      </span>
-    
 
     
 
@@ -273,239 +265,7 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">Intellij IDEA/DataGrip配置MySQL8.0教程</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2024年2月20日 21:38:58
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <p>请确保电脑本机已经安装MySQL和Intellij IDEA&#x2F;DataGrip，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">Windows</th>
-<th align="center">macOS</th>
-<th align="center">Linux</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">MySQL 8.0</td>
-<td align="center"><a href="https://www.icode504.com/posts/18.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center">敬请期待</td>
-</tr>
-<tr>
-<td align="center">Intellij IDEA</td>
-<td align="center"><a href="https://www.icode504.com/posts/10.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center">敬请期待</td>
-</tr>
-<tr>
-<td align="center">DataGrip</td>
-<td align="center">敬请期待</td>
-<td align="center">敬请期待</td>
-<td align="center">敬请期待</td>
-</tr>
-</tbody></table>
-<p>检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
-<p>1. 打开Intellij IDEA，按照下图所示操作，数据源选择<strong>MySQL</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143236662.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在Driver处，点击<strong>MySQL</strong>，点击<strong>Go to Driver</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143412262.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在Driver Files处，点击<strong>加号</strong>，选择<strong>Proviced Dirver</strong>，数据库驱动选择MySQL官网最新稳定版本：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143707207.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 由于我的电脑中已经下载最新版本的MySQL数据库驱动（JDBC），直接点击右侧的<code>Switch to ver. xxxx</code>即可：</p>
-<blockquote>
-<p>如果你没有数据库驱动，此时右侧应该是<code>Download ver. xxxx</code>，直接点击下载即可。</p>
-</blockquote>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220144109011.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 此时数据库驱动切换成功，我们再点击左上角的<strong>Data Sources</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220144741605.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按照下图操作，根据自己的实际情况添加数据库配置信息：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145242313.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 填写完成后，点击右下角的<strong>Test Connection</strong>测试一下数据库连接，出现下图所示的连接就说明MySQL连接成功：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145404194.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 此时再次输入以下密码，直接点击<strong>OK</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145705718.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 连接成功，接下来你就可以在console中写SQL语句了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145832765.png" srcset="/img/loading.gif" lazyload></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Intellij-IDEA/" class="category-chain-item">Intellij IDEA</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Intellij-IDEA/MySQL/" class="category-chain-item">MySQL</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/DataGrip/" class="category-chain-item">DataGrip</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/DataGrip/MySQL/" class="category-chain-item">MySQL</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
-      
-        <a href="/tags/Intellij-IDEA/" class="print-no-link">#Intellij IDEA</a>
-      
-        <a href="/tags/DataGrip/" class="print-no-link">#DataGrip</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>Intellij IDEA/DataGrip配置MySQL8.0教程</div>
-      <div>https://www.icode504.com/posts/45.html</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>iCode504</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年2月20日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/posts/1145483940.html" title="事件处理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">事件处理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/posts/2506480934.html" title="Vue的数据代理">
-                        <span class="hidden-mobile">Vue的数据代理</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar category-bar" style="margin-left: -1rem">
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
     
 
 
@@ -763,6 +523,238 @@
     </div>
   
 </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Intellij IDEA/DataGrip配置MySQL8.0教程</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年2月20日 21:38:58
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>请确保电脑本机已经安装MySQL和Intellij IDEA&#x2F;DataGrip，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+<th align="center">Linux</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MySQL 8.0</td>
+<td align="center"><a href="https://www.icode504.com/posts/18.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
+</tr>
+<tr>
+<td align="center">Intellij IDEA</td>
+<td align="center"><a href="https://www.icode504.com/posts/10.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
+</tr>
+<tr>
+<td align="center">DataGrip</td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
+<td align="center">敬请期待</td>
+</tr>
+</tbody></table>
+<p>检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 打开Intellij IDEA，按照下图所示操作，数据源选择<strong>MySQL</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143236662.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在Driver处，点击<strong>MySQL</strong>，点击<strong>Go to Driver</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143412262.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在Driver Files处，点击<strong>加号</strong>，选择<strong>Proviced Dirver</strong>，数据库驱动选择MySQL官网最新稳定版本：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220143707207.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 由于我的电脑中已经下载最新版本的MySQL数据库驱动（JDBC），直接点击右侧的<code>Switch to ver. xxxx</code>即可：</p>
+<blockquote>
+<p>如果你没有数据库驱动，此时右侧应该是<code>Download ver. xxxx</code>，直接点击下载即可。</p>
+</blockquote>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220144109011.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 此时数据库驱动切换成功，我们再点击左上角的<strong>Data Sources</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220144741605.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按照下图操作，根据自己的实际情况添加数据库配置信息：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145242313.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 填写完成后，点击右下角的<strong>Test Connection</strong>测试一下数据库连接，出现下图所示的连接就说明MySQL连接成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145404194.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 此时再次输入以下密码，直接点击<strong>OK</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145705718.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 连接成功，接下来你就可以在console中写SQL语句了：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220145832765.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Intellij-IDEA/" class="category-chain-item">Intellij IDEA</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Intellij-IDEA/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/DataGrip/" class="category-chain-item">DataGrip</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/DataGrip/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+      
+        <a href="/tags/Intellij-IDEA/" class="print-no-link">#Intellij IDEA</a>
+      
+        <a href="/tags/DataGrip/" class="print-no-link">#DataGrip</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Intellij IDEA/DataGrip配置MySQL8.0教程</div>
+      <div>https://www.icode504.com/posts/45.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年2月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1145483940.html" title="事件处理">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">事件处理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/2506480934.html" title="Vue的数据代理">
+                        <span class="hidden-mobile">Vue的数据代理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
 
 
   </aside>
