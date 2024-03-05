@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Linux%20CentOS%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.png">
 <meta property="article:published_time" content="2024-02-21T06:39:56.000Z">
-<meta property="article:modified_time" content="2024-02-22T01:52:27.503Z">
+<meta property="article:modified_time" content="2024-03-02T04:29:39.293Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="CentOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
         aria-expanded="true"
       >
         系统安装
-        <span class="list-group-count">(1)</span>
+        <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -337,6 +337,80 @@
       </div>
     </div>
   
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Debian"
+        id="heading-6fe8b98c53e8d099686936732785d471" role="tab" data-toggle="collapse" href="#collapse-6fe8b98c53e8d099686936732785d471"
+        aria-expanded="false"
+      >
+        Debian
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-6fe8b98c53e8d099686936732785d471"
+           role="tabpanel" aria-labelledby="heading-6fe8b98c53e8d099686936732785d471">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/52.html" title="Linux Debian安装教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Linux Debian安装教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Ubuntu"
+        id="heading-3d945423f8e9496c429a5d8c65b4604f" role="tab" data-toggle="collapse" href="#collapse-3d945423f8e9496c429a5d8c65b4604f"
+        aria-expanded="false"
+      >
+        Ubuntu
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3d945423f8e9496c429a5d8c65b4604f"
+           role="tabpanel" aria-labelledby="heading-3d945423f8e9496c429a5d8c65b4604f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/51.html" title="Linux Ubuntu安装配置教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Linux Ubuntu安装配置教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
@@ -358,7 +432,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月22日 09:52:27
+                    本文最后更新于：2024年3月2日 12:29:39
                   
                 
               </p>
@@ -434,7 +508,20 @@
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213155803316.png" srcset="/img/loading.gif" lazyload></p>
 <p>19. 镜像配置成功，点击<strong>确定</strong>：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213155857614.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、安装CentOS操作系统"><a href="#四、安装CentOS操作系统" class="headerlink" title="四、安装CentOS操作系统"></a>四、安装CentOS操作系统</h1><p>1. 开启刚刚创建好的虚拟机：</p>
+<h1 id="四、开启虚拟化"><a href="#四、开启虚拟化" class="headerlink" title="四、开启虚拟化"></a>四、开启虚拟化</h1><p>1. 开启刚刚创建好的虚拟机，此时VMware会弹出一个错误信息：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221214629072.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227113330696.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 此时按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Esc</kbd>，打开任务管理器，找到性能，虚拟化并未开启：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227113646198.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 重新启动电脑，具体进入BIOS可以根据自身电脑品牌型号进入。这里我的电脑使用的是华硕，开机过程中一直按<kbd>F2</kbd>键即可进入BIOS，再点击右下角<strong>Advanced Mode</strong>，进入高级模式：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227133747848.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 按照下图所示操作，点击<strong>高级</strong>，将<strong>Intel Virtualization Technology</strong>配置项开启：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227134148071.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 按<kbd>F10</kbd>键保存上述配置并重启：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227134402192.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Esc</kbd>，打开任务管理器，左上角找到<strong>性能</strong>，发现虚拟化成功开启：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227114535913.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、安装CentOS操作系统"><a href="#五、安装CentOS操作系统" class="headerlink" title="五、安装CentOS操作系统"></a>五、安装CentOS操作系统</h1><p>1. 开启刚刚创建好的虚拟机：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213154149205.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 进入安装界面，选择<strong>Install CentOS 7</strong>并按回车键：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213162009857.png" srcset="/img/loading.gif" lazyload></p>
@@ -466,7 +553,7 @@
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213170559674.png" srcset="/img/loading.gif" lazyload></p>
 <p>16. CentOS登录成功：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213170629407.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、使用SSH工具（Electerm）远程连接CentOS"><a href="#五、使用SSH工具（Electerm）远程连接CentOS" class="headerlink" title="五、使用SSH工具（Electerm）远程连接CentOS"></a>五、使用SSH工具（Electerm）远程连接CentOS</h1><p>1. 在CentOS命令行中查看防火墙状态，在命令行中输入如下命令：</p>
+<h1 id="六、使用SSH工具（Electerm）远程连接CentOS"><a href="#六、使用SSH工具（Electerm）远程连接CentOS" class="headerlink" title="六、使用SSH工具（Electerm）远程连接CentOS"></a>六、使用SSH工具（Electerm）远程连接CentOS</h1><p>1. 在CentOS命令行中查看防火墙状态，在命令行中输入如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl status firewalld<br></code></pre></td></tr></table></figure>
 
 <p>防火墙正常运行：</p>
