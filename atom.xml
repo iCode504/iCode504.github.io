@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-03-22T12:22:39.015Z</updated>
+  <updated>2024-04-07T11:54:12.292Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tomcat安装配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/64.html"/>
+    <id>https://www.icode504.com/posts/64.html</id>
+    <published>2024-04-07T09:07:48.000Z</published>
+    <updated>2024-04-07T11:54:12.292Z</updated>
+    
+    
+    <summary type="html">本文介绍了Tomcat下载与安装，配置环境变量和启动，添加了Tomcat启动过程中乱码的解决方案。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="Tomcat" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/Tomcat/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Tomcat" scheme="https://www.icode504.com/tags/Tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue</title>
+    <link href="https://www.icode504.com/posts/63.html"/>
+    <id>https://www.icode504.com/posts/63.html</id>
+    <published>2024-04-01T02:24:52.000Z</published>
+    <updated>2024-04-01T12:56:21.216Z</updated>
+    
+    
+    <summary type="html">本文描述了使用VS Code编写Vue3代码时提示如下错误信息[vue/no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue，并给出解决方案</summary>
+    
+    
+    
+    <category term="Vue" scheme="https://www.icode504.com/categories/Vue/"/>
+    
+    <category term="Vue Bug" scheme="https://www.icode504.com/categories/Vue/Vue-Bug/"/>
+    
+    
+    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
+    
+    <category term="Vue Bug" scheme="https://www.icode504.com/tags/Vue-Bug/"/>
+    
+  </entry>
   
   <entry>
     <title>EasyExcel的列操作</title>
@@ -405,48 +453,6 @@
     
     
     <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算属性</title>
-    <link href="https://www.icode504.com/posts/4090310118.html"/>
-    <id>https://www.icode504.com/posts/4090310118.html</id>
-    <published>2024-02-23T03:33:03.000Z</published>
-    <updated>2024-02-26T00:07:18.138Z</updated>
-    
-    
-    <summary type="html">本文是加密内容，需要输入密码方可访问</summary>
-    
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/categories/Vue/"/>
-    
-    <category term="Vue基础知识" scheme="https://www.icode504.com/categories/Vue/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux CentOS安装教程</title>
-    <link href="https://www.icode504.com/posts/48.html"/>
-    <id>https://www.icode504.com/posts/48.html</id>
-    <published>2024-02-21T06:39:56.000Z</published>
-    <updated>2024-03-02T04:29:39.293Z</updated>
-    
-    
-    <summary type="html">本文提供了在VMware Workstation上安装和配置CentOS虚拟机的详细步骤，指导用户完成从下载镜像到系统初始化等各个环节，帮助用户快速搭建CentOS环境。</summary>
-    
-    
-    
-    <category term="系统安装" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="CentOS" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/CentOS/"/>
-    
-    
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
     
   </entry>
   

@@ -1,0 +1,1194 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/blog-logo-tab.png">
+  <link rel="icon" href="/img/blog-logo-tab.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="iCode504">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="本文介绍了Tomcat下载与安装，配置环境变量和启动，添加了Tomcat启动过程中乱码的解决方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomcat安装配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/64.html">
+<meta property="og:site_name" content="iCode504个人博客">
+<meta property="og:description" content="本文介绍了Tomcat下载与安装，配置环境变量和启动，添加了Tomcat启动过程中乱码的解决方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Tomcat%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta property="article:published_time" content="2024-04-07T09:07:48.000Z">
+<meta property="article:modified_time" content="2024-04-07T11:54:12.292Z">
+<meta property="article:author" content="iCode504">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Tomcat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Tomcat%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Tomcat安装配置教程（Windows版） - iCode504个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="iCode504个人博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>iCode504个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Tomcat安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">Tomcat安装配置教程（Windows版）</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-07 17:07" pubdate>
+          2024年4月7日 17:07:48
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
+        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+        aria-expanded="true"
+      >
+        软件安装
+        <span class="list-group-count">(27)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/10.html" title="Intellij IDEA安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/13.html" title="Scala 2安装教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Scala 2安装教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/18.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/19.html" title="Maven安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Maven安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/20.html" title="Gradle安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows和MacOS）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MinGW安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">VMware Workstation安装+彻底卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Winodws Subsystem for Linux（WSL）安装教程</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/47.html" title="Electerm安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Electerm安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/49.html" title="Python3安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python3安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/50.html" title="Pycharm的安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Pycharm的安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
+        id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
+        aria-expanded="false"
+      >
+        Linux
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+           role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/55.html" title="JDK 8安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 8安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/56.html" title="Maven安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Maven安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/57.html" title="Gradle安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Gradle安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
+        id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
+        aria-expanded="true"
+      >
+        Windows
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+           role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
+        id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
+        aria-expanded="false"
+      >
+        Java/JDK
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
+           role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Tomcat"
+        id="heading-8f72e28063c30c7468fb6af4653f4f9c" role="tab" data-toggle="collapse" href="#collapse-8f72e28063c30c7468fb6af4653f4f9c"
+        aria-expanded="true"
+      >
+        Tomcat
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-8f72e28063c30c7468fb6af4653f4f9c"
+           role="tabpanel" aria-labelledby="heading-8f72e28063c30c7468fb6af4653f4f9c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/64.html" title="Tomcat安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Tomcat安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Tomcat安装配置教程（Windows版）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年4月7日 19:54:12
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>Apache Tomcat（以下简称Tomcat）是一个开源的、轻量级的、容器式的Java Servlet容器。它是由Apache软件基金会开发的，用于托管Java Servlets和JavaServer Pages（JSP）的Web应用程序。Tomcat提供了一个环境，使开发者能够运行Java代码，以便构建动态的Web应用程序。作为一个Servlet容器，Tomcat可以在服务器上运行Java Servlets和JSP页面，通过处理HTTP请求和响应来动态生成网页内容。它是Java企业版（Java EE）规范的一个实现，并且易于安装和配置，因此被广泛用于Java Web应用程序的开发和部署。Tomcat还具有良好的可扩展性和灵活性，可以与其他Java框架和工具集成，以满足不同的需求。</p>
+<p>以下是Tomcat的下载、安装与配置教程：</p>
+<h1 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请查看JDK安装教程：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/626465440">点我查看</a></p>
+<p>2. 如果电脑上已经安装JDK，按<kbd>Win</kbd> 和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击<strong>确定</strong>：</p>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230508205645141.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 输入<code>java -version</code>，按一下<code>回车</code>，查看JDK安装信息，如果有下面提示信息，说明JDK安装成功</p>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/v2-3fca64e63e8d136f76373193158d9089_720w.webp" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>4. 推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
+<h1 id="二、下载并安装Tomcat"><a href="#二、下载并安装Tomcat" class="headerlink" title="二、下载并安装Tomcat"></a>二、下载并安装Tomcat</h1><p>1. 点击右侧链接进入Tomcat官网下载页面：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/tomcat/">点我查看</a></p>
+<p>2. 这里我下载的是Tomcat 8版本，点击<code>tomcat-8</code>文件夹：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328171551789.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 这里我选择的是8.5.100版本的Tomcat：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328171745250.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击第一个文件夹<code>bin</code>进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328171822840.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 按照下图所示下载安装包：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328172006970.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 将下载好的Tomcat安装包解压，建议解压在C盘以外的位置，路径只包含英文字符，这里我解压到了D盘：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328173336823.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 至此，Tomcat安装完成。</p>
+<h1 id="三、配置环境变量"><a href="#三、配置环境变量" class="headerlink" title="三、配置环境变量"></a>三、配置环境变量</h1><p>1. 找到Tomcat的解压位置，出现bin、conf、lib等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328173701038.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击高级系统设置：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows 11</th>
+<th><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>Windows 10</strong></td>
+<td><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+</tbody></table>
+<p>4. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 在下方系统变量中，点击<strong>新建</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 配置安装路径，按照图示操作即可：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174002545.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 双击<strong>Path</strong>进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 按照图示操作即可，然后一路点击确定。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174131191.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、启动Tomcat"><a href="#四、启动Tomcat" class="headerlink" title="四、启动Tomcat"></a>四、启动Tomcat</h1><p>1. 找到Tomcat安装路径，然后点击进入<code>bin</code>文件夹，然后双击<code>startup.bat</code>文件启动Tomcat：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240407160936012.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 出现最后一行提示说明Tomcat启动成功：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174458119.png" srcset="/img/loading.gif" lazyload alt="image-20240328174458119"></p>
+<p>3. 如需关闭Tomcat，只需要将当前窗口关闭即可。</p>
+<h1 id="五、Tomcat启动过程中乱码问题解决（可选）"><a href="#五、Tomcat启动过程中乱码问题解决（可选）" class="headerlink" title="五、Tomcat启动过程中乱码问题解决（可选）"></a>五、Tomcat启动过程中乱码问题解决（可选）</h1><p>在上一部分内容中，Tomcat启动窗口的中文内容出现了乱码现象，其本身原因是因为控制台默认的编码集是<code>GBK</code>，而Tomcat日志配置文件中设置的编码集是<code>UTF-8</code>，二者编码集并不一致从而导致了上述现象。当然这不影响我们正常使用Tomcat，要想解决二者编码集不一致的问题，要么将Tomcat日志编码集修改成和系统中编码集保持一致，要么系统的编码集和Tomcat的编码集保持一致。这里我使用的是第一种方案（第二种方案需要改系统的注册表，比较麻烦不说，很有可能一改就翻车）：</p>
+<p>1. 打开Tomcat安装路径，点击<code>conf</code>文件夹进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174800314.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 鼠标右键点击<code>logging.properties</code>，打开方式选择记事本打开：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328175337169.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328175414633.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 按<kbd>Ctrl</kbd>和<kbd>H</kbd>键，进入替换页面，替换内容填写<strong>UTF-8</strong>，替换为填写<strong>GBK</strong>，然后点击<strong>全部替换</strong>。完成后关闭替换窗口：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240407160507929.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存文件。此时再按照第四部分内容启动Tomcat，此时输出的中文内容就不会出现乱码现象了：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240407160813956.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h1><ul>
+<li>解决Tomcat中文乱码问题——windows平台：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2181734">https://cloud.tencent.com/developer/article/2181734</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/Tomcat/" class="category-chain-item">Tomcat</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/Tomcat/" class="print-no-link">#Tomcat</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Tomcat安装配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/64.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/63.html" title="VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue">
+                        <span class="hidden-mobile">VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/10.7.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://hexo.fluid-dev.com/docs/guide/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      吉ICP备2023009024号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
