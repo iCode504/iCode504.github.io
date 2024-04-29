@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Linux%20Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.png">
 <meta property="article:published_time" content="2024-02-27T03:01:31.000Z">
-<meta property="article:modified_time" content="2024-03-02T04:29:39.295Z">
+<meta property="article:modified_time" content="2024-04-29T14:26:53.274Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
@@ -433,7 +433,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月2日 12:29:39
+                    本文最后更新于：2024年4月29日 22:26:53
                   
                 
               </p>
@@ -527,12 +527,12 @@
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240227114535913.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="五、安装Ubuntu操作系统"><a href="#五、安装Ubuntu操作系统" class="headerlink" title="五、安装Ubuntu操作系统"></a>五、安装Ubuntu操作系统</h1><p>1. 开启刚刚创建好的虚拟机：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221214629072.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 进入安装界面，选择第一个<strong>Try or Install Ubuntu Server</strong>，然后按一下回车&#x2F;：</p>
+<p>2. 进入安装界面，选择第一个<strong>Try or Install Ubuntu Server</strong>，然后按一下回车：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221220105109.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 此时会加载Ubuntu的安装界面，请耐心等待。</p>
 <p>4. 加载完成后 ，进入Ubuntu安装界面，安装语言选择<strong>English</strong>，完成后按一下回车：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221220404108.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 此时弹出安装器可更新提示，下方选项选择第二个<strong>Continue  without updating</strong>（不更新，继续安装），完成后按一下回车：</p>
+<p>5. （无下图内容可以跳转到下一步）此时弹出安装器可更新提示，下方选项选择第二个<strong>Continue  without updating</strong>（不更新，继续安装），完成后按一下回车：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221220520438.png" srcset="/img/loading.gif" lazyload></p>
 <p>6. 键盘布局按照系统默认使用英文（美国）布局即可，选择<strong>Done</strong>，按一下回车：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221221207754.png" srcset="/img/loading.gif" lazyload></p>
@@ -558,8 +558,8 @@
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222085916366.png" srcset="/img/loading.gif" lazyload></p>
 <p>15. 是否升级到Ubuntu Pro，这里我们选择<strong>Skip for now</strong>（不升级），完成后选择<strong>Continue</strong>，按一下回车：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221223617619.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 这里我们不需要安装OpenSSH（后续安装）。选择<strong>Done</strong>，按一下回车：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221223905717.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 这里我们将光标移动到Install OpenSSH server，按空格键勾选安装OpenSSH。然后选择<strong>Done</strong>，按一下回车：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240410155303916.png" srcset="/img/loading.gif" lazyload></p>
 <p>17. 上述组件不需要安装，选择Done，按一下回车：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221224049360.png" srcset="/img/loading.gif" lazyload></p>
 <p>18. 安装完成，选择第二个<strong>Cancel Update And Reboot</strong>（取消更新并重启）：</p>
@@ -579,65 +579,61 @@
 
 <p>此时Ubuntu会提醒我们输入密码，完成后按一下回车，此时成功切换到root用户：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222093247305.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="七、使用SSH工具（Electerm）远程连接Ubuntu"><a href="#七、使用SSH工具（Electerm）远程连接Ubuntu" class="headerlink" title="七、使用SSH工具（Electerm）远程连接Ubuntu"></a>七、使用SSH工具（Electerm）远程连接Ubuntu</h1><p>1. 安装远程SSH工具：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install -y openssh-server<br></code></pre></td></tr></table></figure>
-
-<p>OpenSSH已经是最新版本：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222100044844.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 开启SSH服务：</p>
+<h1 id="七、使用SSH工具（Electerm）远程连接Ubuntu"><a href="#七、使用SSH工具（Electerm）远程连接Ubuntu" class="headerlink" title="七、使用SSH工具（Electerm）远程连接Ubuntu"></a>七、使用SSH工具（Electerm）远程连接Ubuntu</h1><p>请保证当前宿主机（电脑本机）处于联网状态：</p>
+<p>1. 开启SSH服务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">service ssh start<br></code></pre></td></tr></table></figure>
 
-<p>3. 检查SSH服务是否开启，执行如下命令：</p>
+<p>2. 检查SSH服务是否开启，执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status sshd<br></code></pre></td></tr></table></figure>
 
 <p>下图状态说明SSH服务已经成功开启：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240223163734033.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 由于<code>root</code>用户默认是不能使用SSH的方式登录，因此我们需要更改一下对配置文件<code>/etc/ssh/sshd_config</code>进行修改。执行如下命令：</p>
+<p>3. 由于<code>root</code>用户默认是不能使用SSH的方式登录，因此我们需要更改一下对配置文件<code>/etc/ssh/sshd_config</code>进行修改。执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/ssh/sshd_config<br></code></pre></td></tr></table></figure>
 
-<p>5. 此时会进入<code>sshd_config</code>配置文件中，我们依次执行如下命令：</p>
+<p>4. 此时会进入<code>sshd_config</code>配置文件中，我们依次执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">:<span class="hljs-built_in">set</span> nu<br>/PermitRootLogin<br></code></pre></td></tr></table></figure>
 
 <p>此时我们在33行可以看到如下信息<code>PermitRootLogin prohibit-password</code>，这段配置的含义是使用SSH方式登录root用户是禁止的，因此我们需要对这段代码进行修改：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240223164810399.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按<kbd>i</kbd>键进入编辑模式，需要对32-34行代码修改成下图所示的效果：</p>
+<p>5. 按<kbd>i</kbd>键进入编辑模式，需要对32-34行代码修改成下图所示的效果：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240223165235024.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 完成编辑后，先按一下<kbd>Esc</kbd>键，再输入<code>:wq</code>保存并退出编辑。</p>
-<p>8. 重启SSH服务，执行如下命令：</p>
+<p>6. 完成编辑后，先按一下<kbd>Esc</kbd>键，再输入<code>:wq</code>保存并退出编辑。</p>
+<p>7. 重启SSH服务，执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl restart sshd<br></code></pre></td></tr></table></figure>
 
-<p>9. 在Ubuntu命令行中查看防火墙状态，在命令行中输入如下命令：</p>
+<p>8. 在Ubuntu命令行中查看防火墙状态，在命令行中输入如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo ufw status<br></code></pre></td></tr></table></figure>
 
 <p>此时会提示输入密码（这里我已经输入过了）后即可查看防火墙状态是<code>inactive</code>（未开启）：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222092256776.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 为了保障系统安全，我们需要开启防火墙，只开放特定的端口。输入如下命令开启防火墙：</p>
+<p>9. 为了保障系统安全，我们需要开启防火墙，只开放特定的端口。输入如下命令开启防火墙：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo ufw <span class="hljs-built_in">enable</span><br></code></pre></td></tr></table></figure>
 
 <p>再次查看防火墙状态，此时防火墙已经开启：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo ufw status<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222092440839.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. SSH默认是22号端口，此时我们需要开启22号端口。执行如下命令：</p>
+<p>10. SSH默认是22号端口，此时我们需要开启22号端口。执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo ufw allow 22/tcp<br></code></pre></td></tr></table></figure>
 
 <p>执行成功，规则已添加：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222093510263.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 输入如下命令，查看Ubuntu的IP地址：</p>
+<p>11. 输入如下命令，查看Ubuntu的IP地址：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip addr<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222094049603.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 打开Electerm，点击左侧的书签：</p>
+<p>12. 打开Electerm，点击左侧的书签：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213171858078.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 按照下图操作填写连接信息：</p>
+<p>13. 按照下图操作填写连接信息：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240222094417131.png" srcset="/img/loading.gif" lazyload></p>
-<p>15. 向下找，点击<strong>测试连接</strong>：</p>
+<p>14. 向下找，点击<strong>测试连接</strong>：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221134731866.png" srcset="/img/loading.gif" lazyload></p>
 <p>等待一段时间后，如果上方出现一个<code>connection is ok</code>，说明前面填写内容没有问题：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221134841255.png" srcset="/img/loading.gif" lazyload></p>
 <p>如果出现的时<code>connection is failed</code>，说明填写的内容有问题，需要更改后再次测试连接。</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221135000261.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 测试连接成功后，点击<strong>保存并连接</strong>后，此时我们就可以在Electerm中登录root用户并执行命令了：</p>
+<p>15. 测试连接成功后，点击<strong>保存并连接</strong>后，此时我们就可以在Electerm中登录root用户并执行命令了：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221135129497.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240223170311453.png" srcset="/img/loading.gif" lazyload></p>
 

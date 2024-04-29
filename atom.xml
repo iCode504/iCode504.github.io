@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-04-07T11:54:12.292Z</updated>
+  <updated>2024-04-29T15:39:36.256Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -17,11 +17,84 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL 8.0安装、配置与卸载教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/68.html"/>
+    <id>https://www.icode504.com/posts/68.html</id>
+    <published>2024-04-29T15:39:36.000Z</published>
+    <updated>2024-04-29T15:39:36.256Z</updated>
+    
+    
+    <summary type="html">本教程提供MySQL在macOS上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    
+    <category term="MySQL" scheme="https://www.icode504.com/tags/MySQL/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Studio安装配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/66.html"/>
+    <id>https://www.icode504.com/posts/66.html</id>
+    <published>2024-04-16T09:23:25.000Z</published>
+    <updated>2024-04-29T14:26:53.291Z</updated>
+    
+    
+    <summary type="html">本文将指导您在Windows操作系统上安装、配置和卸载Visual Studio，并在IDE上运行一个简单的C++程序。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Visual Studio" scheme="https://www.icode504.com/tags/Visual-Studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Intellij IDEA启动Java程序或项目报错【java: Compilation failed: internal java compiler error】的解决办法</title>
+    <link href="https://www.icode504.com/posts/65.html"/>
+    <id>https://www.icode504.com/posts/65.html</id>
+    <published>2024-04-16T07:29:13.000Z</published>
+    <updated>2024-04-29T14:26:53.262Z</updated>
+    
+    
+    <summary type="html">解决IDEA运行Java程序时出现的错误信息java: Compilication failed: internal java compiler error</summary>
+    
+    
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/categories/Intellij-IDEA/"/>
+    
+    <category term="Bug" scheme="https://www.icode504.com/categories/Intellij-IDEA/Bug/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/Intellij-IDEA/Bug/Java/"/>
+    
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Tomcat安装配置教程（Windows版）</title>
     <link href="https://www.icode504.com/posts/64.html"/>
     <id>https://www.icode504.com/posts/64.html</id>
     <published>2024-04-07T09:07:48.000Z</published>
-    <updated>2024-04-07T11:54:12.292Z</updated>
+    <updated>2024-04-29T14:26:53.286Z</updated>
     
     
     <summary type="html">本文介绍了Tomcat下载与安装，配置环境变量和启动，添加了Tomcat启动过程中乱码的解决方案。</summary>
@@ -32,7 +105,7 @@
     
     <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
     
-    <category term="Tomcat" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/Tomcat/"/>
+    <category term="服务器&amp;虚拟机" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
@@ -335,7 +408,7 @@
     <link href="https://www.icode504.com/posts/51.html"/>
     <id>https://www.icode504.com/posts/51.html</id>
     <published>2024-02-27T03:01:31.000Z</published>
-    <updated>2024-03-02T04:29:39.295Z</updated>
+    <updated>2024-04-29T14:26:53.274Z</updated>
     
     
     <summary type="html">本教程详细介绍Linux Ubuntu的安装配置步骤，包括虚拟机创建、系统安装、网络配置、用户权限设置等关键内容，帮助用户快速搭建稳定、高效的Ubuntu系统环境。</summary>
@@ -356,7 +429,7 @@
     <link href="https://www.icode504.com/posts/50.html"/>
     <id>https://www.icode504.com/posts/50.html</id>
     <published>2024-02-27T02:39:00.000Z</published>
-    <updated>2024-03-02T04:29:39.298Z</updated>
+    <updated>2024-04-29T14:26:53.282Z</updated>
     
     
     <summary type="html">本教程详细介绍了在Windows操作系统下，如何安装、配置和卸载PyCharm这款强大的Python集成开发环境。涵盖了安装步骤、配置选项及卸载流程，帮助用户轻松管理PyCharm。</summary>
@@ -364,6 +437,10 @@
     
     
     <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
     
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
@@ -377,7 +454,7 @@
     <link href="https://www.icode504.com/posts/49.html"/>
     <id>https://www.icode504.com/posts/49.html</id>
     <published>2024-02-26T13:17:27.000Z</published>
-    <updated>2024-03-16T04:46:58.036Z</updated>
+    <updated>2024-04-29T14:26:53.284Z</updated>
     
     
     <summary type="html">本文提供了在Windows操作系统上安装、配置和卸载Python的详细步骤。该教程适合初学者和需要重新安装或更新Python的用户，帮助他们轻松完成Python环境的搭建。</summary>
@@ -386,73 +463,16 @@
     
     <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Python" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
     
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Python" scheme="https://www.icode504.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>条件渲染</title>
-    <link href="https://www.icode504.com/posts/1122375733.html"/>
-    <id>https://www.icode504.com/posts/1122375733.html</id>
-    <published>2024-02-23T08:19:40.000Z</published>
-    <updated>2024-02-26T00:07:18.132Z</updated>
-    
-    
-    <summary type="html">本文是加密内容，需要输入密码方可访问</summary>
-    
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/categories/Vue/"/>
-    
-    <category term="Vue基础知识" scheme="https://www.icode504.com/categories/Vue/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绑定样式</title>
-    <link href="https://www.icode504.com/posts/990138900.html"/>
-    <id>https://www.icode504.com/posts/990138900.html</id>
-    <published>2024-02-23T06:21:56.000Z</published>
-    <updated>2024-02-26T00:07:18.137Z</updated>
-    
-    
-    <summary type="html">本文是加密内容，需要输入密码方可访问</summary>
-    
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/categories/Vue/"/>
-    
-    <category term="Vue基础知识" scheme="https://www.icode504.com/categories/Vue/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>监视属性（侦听属性）</title>
-    <link href="https://www.icode504.com/posts/1161866624.html"/>
-    <id>https://www.icode504.com/posts/1161866624.html</id>
-    <published>2024-02-23T05:48:50.000Z</published>
-    <updated>2024-02-26T00:07:18.135Z</updated>
-    
-    
-    <summary type="html">本文是加密内容，需要输入密码方可访问</summary>
-    
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/categories/Vue/"/>
-    
-    <category term="Vue基础知识" scheme="https://www.icode504.com/categories/Vue/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
     
   </entry>
   
