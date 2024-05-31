@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/EasyExcel%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.png">
 <meta property="article:published_time" content="2024-03-20T01:55:12.000Z">
-<meta property="article:modified_time" content="2024-03-22T12:22:39.016Z">
+<meta property="article:modified_time" content="2024-05-28T15:05:13.368Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="EasyExcel">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
         aria-expanded="true"
       >
         文档操作
-        <span class="list-group-count">(4)</span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -311,7 +311,7 @@
         aria-expanded="true"
       >
         EasyExcel
-        <span class="list-group-count">(4)</span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -338,7 +338,7 @@
         aria-expanded="true"
       >
         使用EasyExcel将数据写入到Excel文件
-        <span class="list-group-count">(4)</span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -386,6 +386,15 @@
         </a>
       
     
+      
+      
+        <a href="/posts/73.html" title="EasyExcel工作表操作"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">EasyExcel工作表操作</span>
+        </a>
+      
+    
   </div>
 
         
@@ -417,7 +426,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月22日 20:22:39
+                    本文最后更新于：2024年5月28日 23:05:13
                   
                 
               </p>
@@ -450,7 +459,7 @@
 	id2[在上述基础上继续调用静态方法sheet，配置工作表信息]
 	id3[在上述基础上继续调用静态方法doWrite，配置数据并输出到Excel文件中]
 	id1:::someclass --&gt; id2:::someclass --&gt; id3:::someclass
-	classDef someclass fill:#66ccff, stroke-width: 2px, stroke: #000
+	classDef someclass fill:#66ccff, stroke-width: 2px, stroke: #000, backgroundColor: #66ccff
 </code></pre>
 
 <p>按照上述步骤，我们将上述工具类中提供的列表数据写入到Excel文件中。</p>
@@ -470,7 +479,7 @@
 
 <p>同样可以正常输出文件，并且数据成功写到Excel文件中。</p>
 <p>以上述代码为例，<code>doWrite</code>方法之所以能编写Lambda表达式是因为其参数类型是<code>Supplier&lt;Collection&lt;?&gt;&gt;</code>，Supplier接口头部由<code>@FunctionalInterface</code>修饰，是一个函数式接口，这类接口要求当前接口中有且只能有一个抽象方法，这种方式最大的好处将匿名内部类对象写成Lambda表达式。</p>
-<h2 id="方式三：try-catch-resources写法（适用于JDK-7及以上的版本）"><a href="#方式三：try-catch-resources写法（适用于JDK-7及以上的版本）" class="headerlink" title="方式三：try-catch-resources写法（适用于JDK 7及以上的版本）"></a>方式三：try-catch-resources写法（适用于JDK 7及以上的版本）</h2><p>JDK 7起支持try-catch-resources写法，我们可以将EasyExcel中的逻辑写到try-catch-resources中，步骤如下：</p>
+<h2 id="方式三：try-with-resources写法（适用于JDK-7及以上的版本）"><a href="#方式三：try-with-resources写法（适用于JDK-7及以上的版本）" class="headerlink" title="方式三：try-with-resources写法（适用于JDK 7及以上的版本）"></a>方式三：try-with-resources写法（适用于JDK 7及以上的版本）</h2><p>JDK 7起支持try-with-resources写法，我们可以将EasyExcel中的逻辑写到try-with-resources中，步骤如下：</p>
 <pre><code class=" mermaid">flowchart TD
 	id1[在try的小括号中创建一个ExcelWriter对象，即调用EasyExcel类静态方法write，在方法内配置参数]
 	id2[在try块中调用EasyExcel类的静态方法writeSheet并配置参数，创建WriteSheet对象]
@@ -486,19 +495,19 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br>    <span class="hljs-comment">// try-catch-resources写法</span><br>    <span class="hljs-keyword">try</span> (<span class="hljs-type">ExcelWriter</span> <span class="hljs-variable">excelWriter</span> <span class="hljs-operator">=</span> EasyExcel.write(filePath, Employee.class).build()) &#123;<br>        <span class="hljs-type">WriteSheet</span> <span class="hljs-variable">writeSheet</span> <span class="hljs-operator">=</span> EasyExcel.writerSheet(<span class="hljs-string">&quot;模板&quot;</span>).build();<br>        excelWriter.write(EmployeeUtils.getDataList(), writeSheet);<br>    &#125;<br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="探究：使用try-catch-finally替换的方式是否可行"><a href="#探究：使用try-catch-finally替换的方式是否可行" class="headerlink" title="探究：使用try-catch-finally替换的方式是否可行"></a>探究：使用try-catch-finally替换的方式是否可行</h2><p>既然能使用try-catch-resources写法，那么普通的try-catch和在方法上抛出throws是否能达到同样的效果呢？</p>
+<h2 id="探究：使用try-catch-finally替换的方式是否可行"><a href="#探究：使用try-catch-finally替换的方式是否可行" class="headerlink" title="探究：使用try-catch-finally替换的方式是否可行"></a>探究：使用try-catch-finally替换的方式是否可行</h2><p>既然能使用try-with-resources写法，那么普通的try-catch和在方法上抛出throws是否能达到同样的效果呢？</p>
 <p>只使用try-catch数据无法写入文件中，示例代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br>    <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-type">ExcelWriter</span> <span class="hljs-variable">excelWriter</span> <span class="hljs-operator">=</span> EasyExcel.write(filePath, Employee.class).build();<br>        <span class="hljs-type">WriteSheet</span> <span class="hljs-variable">writeSheet</span> <span class="hljs-operator">=</span> EasyExcel.writerSheet(<span class="hljs-string">&quot;模板&quot;</span>).build();<br>        excelWriter.write(EmployeeUtils.getDataList(), writeSheet);<br>    &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>        e.printStackTrace();<br>    &#125;<br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>此时我们运行这个程序，发现它的确是在<code>resources</code>目录下确实生成了一个Excel文件，但是我们打开后发现这个Excel文件中并没有实际的数据写入。为什么会产生上述原因？</p>
 <p>这里我们就要详细谈一下try-catch-finally和try-with-resources的区别了：</p>
-<p>从表象上看，二者的区别相差不大，都可以处理异常，只不过try-with-resources更加简洁。二者的主要区别在于文件资源管理类的处理方式不同：</p>
+<p>表面上看，二者的区别相差不大，都可以处理异常，只不过try-with-resources更加简洁。二者的主要区别在于文件资源管理类的处理方式不同：</p>
 <p>对于普通的try-catch-finally，我们在try块中写可能抛出异常的代码，在catch块中捕获并处理这些异常，无论try块是否由异常，最终都会走finally块的代码。以文件资源处理类FileInputStream为例，读取一个文件以后，无论是否抛出异常，最终都需要在finally块中关闭，示例代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">FileInputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br><span class="hljs-keyword">try</span> &#123;<br>    inputStream = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(<span class="hljs-string">&quot;demo.txt&quot;</span>);<br>    <span class="hljs-type">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>];<br>    <span class="hljs-keyword">while</span> (inputStream.read() != -<span class="hljs-number">1</span>) &#123;<br>        System.out.println(<span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(buffer, <span class="hljs-number">0</span>, buffer.length));<br>    &#125;<br>&#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>    e.printStackTrace();<br>&#125; <span class="hljs-keyword">finally</span> &#123;<br>    <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-keyword">if</span> (inputStream != <span class="hljs-literal">null</span>) &#123;<br>            inputStream.close();<br>        &#125;<br>    &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>        e.printStackTrace();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>虽然这样可以正常处理一个文件内容读入，但是在finally块中又嵌套了一个try-catch，里面又嵌套了一个if，代码就显得十分臃肿！</p>
-<p>为了解决上述问题，JDK 7引入了try-with-resources语法糖，用于<strong>实现了AutoCloseable和Closeable接口的文件资源类自动关闭流的操作</strong>。这样做的好处就是我们不需要再手动写finally块。</p>
-<p>使用try-catch-resources时，文件资源在try块的小括号内声明并初始化，无论try块中是否发生异常，在try块执行结束后自动关闭流。如果这个资源类中实现了AutoCloseable和Closeable接口，在关闭资源流时会自动调用重写的<code>close</code>方法。</p>
+<p>为了解决上述问题，JDK 7引入了try-with-resources语法糖，用于<strong>实现了AutoCloseable和Closeable接口的文件资源类自动关闭流的操作</strong>。这样做的好处就是我们不需要再手动写finally块关闭资源。</p>
+<p>使用try-with-resources时，文件资源在try块的小括号内声明并初始化，无论try块中是否发生异常，在try块执行结束后自动关闭流。如果这个资源类中实现了AutoCloseable和Closeable接口，在关闭资源流时会自动调用重写的<code>close</code>方法。</p>
 <p>接下来我们就来自定义一个类PigInputStream，实现Closeable接口，任意定义几个方法并重写原接口中的<code>close</code>方法： </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504.service;<br><br><span class="hljs-keyword">import</span> java.io.Closeable;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 自定义一个实现Closeable接口的类</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-03-19</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PigInputStream</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Closeable</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">PigInputStream</span><span class="hljs-params">()</span> &#123;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">eat</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;猪猪吃饭&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">treat</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;猪猪的产后护理&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;猪猪以每小时80迈的速度向大树撞去&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">close</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>        System.out.println(<span class="hljs-string">&quot;执行关闭操作&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -513,7 +522,7 @@
 <p>上面说了这么多try-catch-finally和try-with-resources的区别，那么我们接着将目光转到EasyExcel第三种方式：为什么使用普通的try-catch无法将数据写入到Excel文件。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br>    <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-type">ExcelWriter</span> <span class="hljs-variable">excelWriter</span> <span class="hljs-operator">=</span> EasyExcel.write(filePath, Employee.class).build();<br>        <span class="hljs-type">WriteSheet</span> <span class="hljs-variable">writeSheet</span> <span class="hljs-operator">=</span> EasyExcel.writerSheet(<span class="hljs-string">&quot;模板&quot;</span>).build();<br>        excelWriter.write(EmployeeUtils.getDataList(), writeSheet);<br>    &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>        e.printStackTrace();<br>    &#125;<br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>其实问题出在try块中第三行代码<code>excelWriter.write(EmployeeUtils.getDataList(), writeSheet);</code>中，<kbd>Ctrl</kbd>+<kbd>鼠标左键</kbd>点击<code>write</code>方法可以发现返回类型是ExcelWriter：</p>
+<p>其实问题出在try块中真正将数据写入到Excel文件的代码<code>excelWriter.write(EmployeeUtils.getDataList(), writeSheet);</code>中，<kbd>Ctrl</kbd>+<kbd>鼠标左键</kbd>点击<code>write</code>方法可以发现返回类型是ExcelWriter：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240319155448858.png" srcset="/img/loading.gif" lazyload></p>
 <p><kbd>Ctrl</kbd>+<kbd>鼠标左键</kbd>点击ExcelWriter，我们发现这个类本身实现了Closeable接口：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240319155625130.png" srcset="/img/loading.gif" lazyload></p>
