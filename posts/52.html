@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Linux%20Debian%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.png">
 <meta property="article:published_time" content="2024-02-28T01:43:59.000Z">
-<meta property="article:modified_time" content="2024-06-10T15:01:11.686Z">
+<meta property="article:modified_time" content="2024-06-10T15:04:46.851Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Debian">
 <meta name="twitter:card" content="summary_large_image">
@@ -433,7 +433,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年6月10日 23:01:11
+                    本文最后更新于：2024年6月10日 23:04:46
                   
                 
               </p>
@@ -624,7 +624,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/ssh/sshd_config<br></code></pre></td></tr></table></figure>
 
 <p>5. 此时会进入<code>sshd_config</code>配置文件中，我们依次执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">:<span class="hljs-built_in">set</span> nu<br>/PermitRoot<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">:<span class="hljs-built_in">set</span> nu<br>/PermitRootLogin<br></code></pre></td></tr></table></figure>
 
 <p>此时我们在33行可以看到如下信息<code>PermitRootLogin prohibit-password</code>，这段配置的含义是使用SSH方式登录root用户是禁止的，因此我们需要对这段代码进行修改：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240223164810399.png" srcset="/img/loading.gif" lazyload></p>
