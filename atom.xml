@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-06-11T23:50:40.803Z</updated>
+  <updated>2024-06-12T00:33:33.787Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.icode504.com/posts/74.html"/>
     <id>https://www.icode504.com/posts/74.html</id>
     <published>2024-06-11T23:36:52.000Z</published>
-    <updated>2024-06-11T23:50:40.803Z</updated>
+    <updated>2024-06-12T00:33:33.787Z</updated>
     
     
     <summary type="html">这篇教程旨在为 Linux 用户提供 Node.js的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。</summary>
