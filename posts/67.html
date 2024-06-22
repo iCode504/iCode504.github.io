@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Node.js%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E5%92%8C%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
 <meta property="article:published_time" content="2024-04-28T01:08:59.000Z">
-<meta property="article:modified_time" content="2024-04-30T15:31:10.828Z">
+<meta property="article:modified_time" content="2024-06-19T15:31:35.091Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Node.js">
@@ -1248,7 +1248,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年4月30日 23:31:10
+                    本文最后更新于：2024年6月19日 23:31:35
                   
                 
               </p>
@@ -1258,13 +1258,26 @@
                 
                 <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，使 JavaScript 能够在服务器端运行，它提供了一个事件驱动的非阻塞 I&#x2F;O 模型，使得构建高效、可扩展的网络应用变得更加容易。而 npm（Node Package Manager）是 Node.js 的包管理工具，用于安装、分享、管理 JavaScript 代码包，使开发者能够轻松地将自己的代码与他人的代码集成，并且享受到社区共享的各种功能模块。Node.js 和 npm 的结合使得 JavaScript 开发者能够在服务器端和客户端都使用同一种语言，极大地提高了开发效率和跨平台能力。</p>
 <p>以下是Windows环境下Node.js的安装教程：</p>
-<h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，打开命令行，输入如下命令查看当前操作系统信息：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">systeminfo<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240428082844373.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、下载Node-js"><a href="#二、下载Node-js" class="headerlink" title="二、下载Node.js"></a>二、下载Node.js</h1><p>1. 点击右侧链接下载Node.js：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download">点我查看</a></p>
-<p>2. 这里我使用的是Windows，x64架构，版本建议选择带<strong>LTS</strong>（Long Term Support，长期支持）版本：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240426110447534.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>推荐安装如下软件（不强制要求）：</p>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装教程</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NDM（Neat Download Manager）</td>
+<td><a href="https://www.icode504.com/posts/24.html">点我查看</a></td>
+<td>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。</td>
+</tr>
+</tbody></table>
+<h1 id="二、下载Node-js"><a href="#二、下载Node-js" class="headerlink" title="二、下载Node.js"></a>二、下载Node.js</h1><p>1. 点击右侧链接下载Node.js：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">点我查看</a></p>
+<p>2. 下载页面中有Node.js过去的各个发行版本，这里我选择的是最新的16版本的Node.js，如下图，点击进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240619232411366.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. Windows 64位操作系统的小伙伴推荐下载msi方式的安装包下载（如下图）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240619232609935.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="三、安装Node-js"><a href="#三、安装Node-js" class="headerlink" title="三、安装Node.js"></a>三、安装Node.js</h1><p>1. 双击打开安装包，进入安装界面，点击<strong>Next</strong>：</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240426110553409.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. <strong>勾选</strong>用户许可协议，点击<strong>Next</strong>：</p>

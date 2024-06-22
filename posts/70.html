@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Docker%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Linux%20CentOS%E7%89%88%EF%BC%89.png">
 <meta property="article:published_time" content="2024-05-27T05:51:51.000Z">
-<meta property="article:modified_time" content="2024-05-28T15:05:13.367Z">
+<meta property="article:modified_time" content="2024-06-19T15:37:15.951Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="Linux">
@@ -1248,7 +1248,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年5月28日 23:05:13
+                    本文最后更新于：2024年6月19日 23:37:15
                   
                 
               </p>
@@ -1280,7 +1280,20 @@
 
 <p>4. 等待一段时间后，下方如下提示信息就说明Docker安装成功！</p>
 <p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240527112307239.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Docker的简单使用"><a href="#三、Docker的简单使用" class="headerlink" title="三、Docker的简单使用"></a>三、Docker的简单使用</h1><p>1. 使用<code>systemctl</code>命令启动Docker：</p>
+<h1 id="三、配置镜像源"><a href="#三、配置镜像源" class="headerlink" title="三、配置镜像源"></a>三、配置镜像源</h1><p>后续使用Docker时，需要拉取（下载）镜像，但是Docker默认的镜像源并不在国内，且访问速度堪忧，因此，我们需要将镜像源换成国内的，这里我使用的是阿里云的镜像源。</p>
+<p>1. 创建一个文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /etc/docker<br></code></pre></td></tr></table></figure>
+
+<p>2. 使用vim命令创建一个JSON配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/docker/daemon.json<br></code></pre></td></tr></table></figure>
+
+<p>3. 按<kbd>I</kbd>键进入编辑模式，此时左下角会有一个INSERT提示。</p>
+<p>4. 复制下方的代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、Docker的简单使用"><a href="#四、Docker的简单使用" class="headerlink" title="四、Docker的简单使用"></a>四、Docker的简单使用</h1><p>1. 使用<code>systemctl</code>命令启动Docker：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl start docker<br></code></pre></td></tr></table></figure>
 
 <p>2. 运行<code>hello-world</code>镜像，执行如下命令：</p>
@@ -1297,7 +1310,7 @@
 <p>5. （可选）如果想停止Docker，可以执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl stop docker<br></code></pre></td></tr></table></figure>
 
-<h1 id="四、卸载Docker（可选）"><a href="#四、卸载Docker（可选）" class="headerlink" title="四、卸载Docker（可选）"></a>四、卸载Docker（可选）</h1><div class="note note-danger">
+<h1 id="五、卸载Docker（可选）"><a href="#五、卸载Docker（可选）" class="headerlink" title="五、卸载Docker（可选）"></a>五、卸载Docker（可选）</h1><div class="note note-danger">
             <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
           </div>
 
