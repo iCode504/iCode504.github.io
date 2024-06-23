@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-06-23T03:25:53.101Z</updated>
+  <updated>2024-06-23T06:43:07.765Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Docker安装和配置教程（使用余Linux Ubuntu和Debian）</title>
+    <title>Docker安装和配置教程（使用于Linux Ubuntu和Debian）</title>
     <link href="https://www.icode504.com/posts/75.html"/>
     <id>https://www.icode504.com/posts/75.html</id>
     <published>2024-06-22T07:53:12.000Z</published>
-    <updated>2024-06-23T03:25:53.101Z</updated>
+    <updated>2024-06-23T06:43:07.765Z</updated>
     
     
     <summary type="html">本教程详细介绍了在Linux Ubuntu系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。</summary>
@@ -116,11 +116,11 @@
     
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
+    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
+    
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
     
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
-    
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
     
     <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
     
