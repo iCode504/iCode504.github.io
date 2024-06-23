@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-06-12T00:33:33.787Z</updated>
+  <updated>2024-06-23T03:25:53.101Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker安装和配置教程（使用余Linux Ubuntu和Debian）</title>
+    <link href="https://www.icode504.com/posts/75.html"/>
+    <id>https://www.icode504.com/posts/75.html</id>
+    <published>2024-06-22T07:53:12.000Z</published>
+    <updated>2024-06-23T03:25:53.101Z</updated>
+    
+    
+    <summary type="html">本教程详细介绍了在Linux Ubuntu系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
+    
+    <category term="docker" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/docker/"/>
+    
+    
+    <category term="Docker" scheme="https://www.icode504.com/tags/Docker/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
+    
+    <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
+    
+    <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
+    
+  </entry>
   
   <entry>
     <title>Node.js安装、配置教程（Linux通用版）</title>
@@ -87,13 +116,13 @@
     
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
-    <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
-    
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
     
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
+    
+    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
+    
+    <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
     
   </entry>
   
@@ -131,7 +160,7 @@
     <link href="https://www.icode504.com/posts/70.html"/>
     <id>https://www.icode504.com/posts/70.html</id>
     <published>2024-05-27T05:51:51.000Z</published>
-    <updated>2024-06-19T15:37:15.951Z</updated>
+    <updated>2024-06-23T03:23:04.015Z</updated>
     
     
     <summary type="html">本教程详细介绍了在Linux CentOS系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。</summary>
@@ -480,29 +509,6 @@
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
     <category term="Maven" scheme="https://www.icode504.com/tags/Maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JDK 8安装配置教程（Linux通用版）</title>
-    <link href="https://www.icode504.com/posts/55.html"/>
-    <id>https://www.icode504.com/posts/55.html</id>
-    <published>2024-03-05T13:56:21.000Z</published>
-    <updated>2024-03-05T14:57:41.653Z</updated>
-    
-    
-    <summary type="html">Linux（适用于CentOS、Ubuntu、Debian等主流版本）环境下安装与配置JDK 8教程</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
     
   </entry>
   
