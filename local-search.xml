@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Windows通过命令行关闭某个端口</title>
+    <link href="/posts/76.html"/>
+    <url>/posts/76.html</url>
+    
+    <content type="html"><![CDATA[<p>按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，按回车键进入命令行界面。</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240629111918689.png"></p><p>如果你想关闭某个端口号，需要先查找这个端口号对应的PID，执行如下命令：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">netstat <span class="hljs-literal">-ano</span>|findstr 端口号<br></code></pre></td></tr></table></figure><p>这里我要关闭的是9068号端口，执行后得到两个结果，最右侧的一列就是进程的PID，这里我需要关闭PID是17952对应的进程：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240629112229955.png"></p><p>执行如下命令即可关闭PID对应的进程：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">taskkill /PID PID号 /F<br></code></pre></td></tr></table></figure><p>执行效果如下图，此时PID为17952对应的进程就关闭了：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240629112537455.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>常用操作</category>
+      
+      <category>Windows</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>常用操作</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Docker安装和配置教程（使用于Linux Ubuntu和Debian）</title>
     <link href="/posts/75.html"/>
     <url>/posts/75.html</url>
