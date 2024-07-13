@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-06-29T03:31:56.437Z</updated>
+  <updated>2024-07-13T12:24:59.039Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库管理软件DBeaver安装、配置和卸载教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/77.html"/>
+    <id>https://www.icode504.com/posts/77.html</id>
+    <published>2024-07-13T11:46:30.000Z</published>
+    <updated>2024-07-13T12:24:59.039Z</updated>
+    
+    
+    <summary type="html">本文介绍了数据库管理软件DBeaver在Windows系统上的安装、配置和卸载步骤。详细说明了下载DBeaver安装包，进行安装配置数据库连接的过程，以及如何卸载DBeaver，帮助用户轻松管理和使用数据库。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="DBeaver" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/DBeaver/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="DBeaver" scheme="https://www.icode504.com/tags/DBeaver/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>雨云服务器+Hexo搭建个人博客网站教程</title>
+    <link href="https://www.icode504.com/posts/iCode504.html"/>
+    <id>https://www.icode504.com/posts/iCode504.html</id>
+    <published>2024-07-13T10:00:03.651Z</published>
+    <updated>2024-07-13T09:54:04.963Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、准备工作&quot;&gt;&lt;a href=&quot;#一、准备工作&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="雨云" scheme="https://www.icode504.com/tags/%E9%9B%A8%E4%BA%91/"/>
+    
+    <category term="个人网站" scheme="https://www.icode504.com/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="Hexo" scheme="https://www.icode504.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows通过命令行关闭某个端口</title>
@@ -139,11 +191,11 @@
     
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
     
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
+    
+    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
     
     <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
     
@@ -463,52 +515,6 @@
     
     
     <category term="RSS" scheme="https://www.icode504.com/tags/RSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EasyExcel介绍与依赖导入</title>
-    <link href="https://www.icode504.com/posts/58.html"/>
-    <id>https://www.icode504.com/posts/58.html</id>
-    <published>2024-03-18T03:44:56.000Z</published>
-    <updated>2024-03-20T14:36:24.554Z</updated>
-    
-    
-    <summary type="html">本文简要介绍了EasyExcel的优势，并创建了Maven/Gradle项目，并导入相关的依赖</summary>
-    
-    
-    
-    <category term="文档操作" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
-    
-    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
-    
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gradle安装配置教程（Linux通用版）</title>
-    <link href="https://www.icode504.com/posts/57.html"/>
-    <id>https://www.icode504.com/posts/57.html</id>
-    <published>2024-03-10T14:42:40.000Z</published>
-    <updated>2024-03-10T14:48:08.104Z</updated>
-    
-    
-    <summary type="html">本文详细介绍了在Linux系统上安装和配置Gradle的步骤。通过本教程，用户可以轻松掌握Gradle在Linux端的安装配置方法，完成下载源的配置，为后续的项目构建和管理提供便利。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
-    
-    <category term="Gradle" scheme="https://www.icode504.com/tags/Gradle/"/>
     
   </entry>
   
