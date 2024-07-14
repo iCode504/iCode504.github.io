@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-07-13T12:24:59.039Z</updated>
+  <updated>2024-07-14T06:30:11.984Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JDK 8安装配置教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/78.html"/>
+    <id>https://www.icode504.com/posts/78.html</id>
+    <published>2024-07-14T06:28:10.000Z</published>
+    <updated>2024-07-14T06:30:11.984Z</updated>
+    
+    
+    <summary type="html">macOS环境下安装JDK 8教程</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java/JDK" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库管理软件DBeaver安装、配置和卸载教程（Windows版）</title>
@@ -164,11 +191,11 @@
     
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
     
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
+    
+    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
     
     <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
     
@@ -488,29 +515,6 @@
     
     
     <category term="RSS" scheme="https://www.icode504.com/tags/RSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EasyExcel介绍与依赖导入</title>
-    <link href="https://www.icode504.com/posts/58.html"/>
-    <id>https://www.icode504.com/posts/58.html</id>
-    <published>2024-03-18T03:44:56.000Z</published>
-    <updated>2024-03-20T14:36:24.554Z</updated>
-    
-    
-    <summary type="html">本文简要介绍了EasyExcel的优势，并创建了Maven/Gradle项目，并导入相关的依赖</summary>
-    
-    
-    
-    <category term="文档操作" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
-    
-    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
-    
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
     
   </entry>
   
