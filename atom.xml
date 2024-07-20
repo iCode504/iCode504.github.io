@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-07-20T06:04:43.235Z</updated>
+  <updated>2024-07-20T13:11:07.787Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库管理软件DBeaver安装、配置和卸载教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/81.html"/>
+    <id>https://www.icode504.com/posts/81.html</id>
+    <published>2024-07-20T13:11:07.000Z</published>
+    <updated>2024-07-20T13:11:07.787Z</updated>
+    
+    
+    <summary type="html">本文介绍了数据库管理软件DBeaver在macOS系统上的安装、配置和卸载步骤。详细说明了下载DBeaver安装包，进行安装配置数据库连接的过程，以及如何卸载DBeaver，帮助用户轻松管理和使用数据库。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="DBeaver" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/DBeaver/"/>
+    
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+    <category term="DBeaver" scheme="https://www.icode504.com/tags/DBeaver/"/>
+    
+  </entry>
   
   <entry>
     <title>访问Github卡顿甚至进不去的解决办法（适用于macOS）</title>
@@ -493,29 +518,6 @@
     
     
     <summary type="html">本文主要通过@ExcelIgnore注解和EasyExcel自带的两种方法实现只导出特定的列；通过@ExcelProperty中的index属性实现隔列输出效果。</summary>
-    
-    
-    
-    <category term="文档操作" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
-    
-    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
-    
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EasyExcel的表头操作</title>
-    <link href="https://www.icode504.com/posts/61.html"/>
-    <id>https://www.icode504.com/posts/61.html</id>
-    <published>2024-03-21T07:29:49.000Z</published>
-    <updated>2024-03-22T12:22:39.016Z</updated>
-    
-    
-    <summary type="html">本文使用EasyExcel代码实现了无表头数据的Excel文件导出和复杂表头的输出。</summary>
     
     
     
