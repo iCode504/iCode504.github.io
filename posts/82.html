@@ -18,45 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux（适用于CentOS、Ubuntu、Debian等主流版本）环境下安装与配置JDK 8教程">
+    <meta name="description" content="本文介绍了在 macOS 系统上安装 Homebrew 的详细步骤。内容包括在终端使用简单命令进行安装，配置路径以确保正确使用，以及如何通过 Homebrew 安装和管理各种软件包。教程简单易懂，适合新手用户快速上手。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 8安装配置教程（Linux通用版）">
-<meta property="og:url" content="https://www.icode504.com/posts/55.html">
+<meta property="og:title" content="软件包管理器Homwbrew安装教程（适用于macOS系统）">
+<meta property="og:url" content="https://www.icode504.com/posts/82.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Linux（适用于CentOS、Ubuntu、Debian等主流版本）环境下安装与配置JDK 8教程">
+<meta property="og:description" content="本文介绍了在 macOS 系统上安装 Homebrew 的详细步骤。内容包括在终端使用简单命令进行安装，配置路径以确保正确使用，以及如何通过 Homebrew 安装和管理各种软件包。教程简单易懂，适合新手用户快速上手。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224090038508.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171106909.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171230465.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171648598.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171904465.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172241466.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172411350.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101133536759.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172925751.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173324597.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173503187.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/24010224004.gif">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173926690.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224175030125.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224175326821.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225120311514.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225120919666.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225120949167.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225121013682.png">
-<meta property="article:published_time" content="2024-03-05T13:56:21.000Z">
-<meta property="article:modified_time" content="2024-03-05T14:57:41.653Z">
+<meta property="og:image" content="https://source.icode504.com/images/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Homwbrew%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EmacOS%E7%B3%BB%E7%BB%9F%EF%BC%89.png">
+<meta property="article:published_time" content="2024-07-21T13:26:03.000Z">
+<meta property="article:modified_time" content="2024-07-21T13:31:02.645Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Homebrew">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224090038508.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Homwbrew%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EmacOS%E7%B3%BB%E7%BB%9F%EF%BC%89.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 8安装配置教程（Linux通用版） - iCode504个人博客</title>
+  <title>软件包管理器Homwbrew安装教程（适用于macOS系统） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -221,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/软件包管理器Homwbrew安装、配置教程（适用于macOS系统）.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 8安装配置教程（Linux通用版）</span>
+            <span id="subtitle">软件包管理器Homwbrew安装教程（适用于macOS系统）</span>
           
         </div>
 
@@ -238,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-05 21:56" pubdate>
-          2024年3月5日 21:56:21
+        <time datetime="2024-07-21 21:26" pubdate>
+          2024年7月21日 21:26:03
         </time>
       </span>
     
@@ -324,17 +306,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Linux
         <span class="list-group-count">(7)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -347,7 +329,7 @@
       
         <a href="/posts/55.html" title="JDK 8安装配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 8安装配置教程（Linux通用版）</span>
         </a>
       
@@ -1217,17 +1199,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(7)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -1404,17 +1386,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件包管理工具"
         id="heading-adb66ae224793ec6faf3dd45b0d03d25" role="tab" data-toggle="collapse" href="#collapse-adb66ae224793ec6faf3dd45b0d03d25"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         软件包管理工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
+      <div class="category-collapse collapse show" id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
            role="tabpanel" aria-labelledby="heading-adb66ae224793ec6faf3dd45b0d03d25">
         
         
@@ -1426,7 +1408,7 @@
       
         <a href="/posts/82.html" title="软件包管理器Homwbrew安装教程（适用于macOS系统）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">软件包管理器Homwbrew安装教程（适用于macOS系统）</span>
         </a>
       
@@ -1494,12 +1476,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 8安装配置教程（Linux通用版）</h1>
+            <h1 id="seo-header">软件包管理器Homwbrew安装教程（适用于macOS系统）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月5日 22:57:41
+                    本文最后更新于：2024年7月21日 21:31:02
                   
                 
               </p>
@@ -1507,102 +1489,36 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-</blockquote>
-<p>接下来为大家讲解一下Linux环境下JDK 8如何安装与配置。</p>
-<p>有需要在虚拟机安装Linux系统的小伙伴，请点击下方任意一个链接查看安装配置教程：</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">CentOS</th>
-<th align="center">Ubuntu</th>
-<th align="center">Debian</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">安装教程</td>
-<td align="center"><a href="https://www.icode504.com/posts/48.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/51.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/52.html">点我查看</a></td>
-</tr>
-</tbody></table>
-<h1 id="一、安装前检查（Linux端）"><a href="#一、安装前检查（Linux端）" class="headerlink" title="一、安装前检查（Linux端）"></a>一、安装前检查（Linux端）</h1><p>执行如下命令，查看当前系统的指令集：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -m<br></code></pre></td></tr></table></figure>
+                <p>Homebrew 是一个面向 macOS 和 Linux 的包管理系统，可以轻松地安装、更新和管理软件包。它通过简单的命令行接口，让用户可以快速获取并安装各种开源软件和工具，而不需要复杂的配置过程。Homebrew 的核心理念是让用户能够轻松地管理软件环境，并保持系统的整洁和高效。它的主要优点是使用方便、社区活跃以及广泛的包支持，使其成为开发者和技术爱好者的理想选择。</p>
+<p>以下是 macOS 环境下 Homebrew 的安装教程。本文参考自此文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111014448">点我查看原文章</a></p>
+<h1 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h1><p>1. 执行如下命令同意许可协议：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo xcodebuild -license<br></code></pre></td></tr></table></figure>
 
-<p>我的电脑是<code>x86_64</code>系统：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224090038508.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、下载JDK（Windows端）"><a href="#二、下载JDK（Windows端）" class="headerlink" title="二、下载JDK（Windows端）"></a>二、下载JDK（Windows端）</h1><p>提供了两种下载方式：百度网盘下载和官网下载。以下两种方式二选一<strong>下载到本地</strong>即可：</p>
-<h2 id="方式一：百度网盘下载（推荐）"><a href="#方式一：百度网盘下载（推荐）" class="headerlink" title="方式一：百度网盘下载（推荐）"></a>方式一：百度网盘下载（推荐）</h2><p>点击下方任意一个链接（百度网盘）进入下载页面：</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/12sU6r_YTYpkXF28IiiTayw?pwd=1024">点击下载</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/14zMAuIRLSpHU-PHrGw672Q?pwd=1024">备用下载1</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1XqxmHf5fRXl0ovz5zK-xbw?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171106909.png" srcset="/img/loading.gif" lazyload></p>
-<p>根据上面检查的指令集，进入相应的文件夹：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171230465.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171648598.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h2><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/archive/">点击进入</a></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224171904465.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 找到以Java SE Development Kit开头的下载列表，找到64位的版本版本下载：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172241466.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 按图所示点击下载：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172411350.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101133536759.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、安装并配置JDK"><a href="#三、安装并配置JDK" class="headerlink" title="三、安装并配置JDK"></a>三、安装并配置JDK</h1><p>1. 将前面下载好的JDK安装包使用SFTP工具（这里我使用的是Eleterm）由Windows端传输到Linux端（请先确保Windows本身已经通过SSH方式连接到Linux）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172925751.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在左侧Windows端找到下载好的安装包：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173324597.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在右侧Linux端设置安装包存放路径，这里我将安装包存放在<code>/opt</code>下：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173503187.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示操作，将JDK安装包传到Linux端的<code>/opt</code>目录下：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/24010224004.gif" srcset="/img/loading.gif" lazyload></p>
-<p>5. 等待一段时间后，此时Linux端的<code>/opt</code>目录下已经存放了刚才我们传输的文件：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173926690.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 此时我们切换回命令行，执行如下命令切换到<code>/opt</code>目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt<br></code></pre></td></tr></table></figure>
+<p>需要输入密码（默认不在命令行显示）</p>
+<p>查看许可协议后，输入<code>agree</code>，按一下回车<kbd>Return</kbd>：</p>
+<p><img src="https://source.icode504.com/images/image-20240721001448428.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 安装Homebrew，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>7. 解压刚刚传入过来的压缩包，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf jdk-8u331-linux-x64.tar.gz<br></code></pre></td></tr></table></figure>
+<p>3. 进入安装界面，输入<strong>1</strong>，通过清华大学下载Homebrew：</p>
+<p><img src="https://source.icode504.com/images/image-20240721001800397.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 初次安装的小伙伴输入本机密码（默认不在命令行显示）：</p>
+<p><img src="https://source.icode504.com/images/image-20240721001856160.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 此时会有一个检测本机是否安装Homebrew，这里输入<strong>Y</strong>，按一下回车<kbd>Return</kbd>：</p>
+<p><img src="https://source.icode504.com/images/image-20240721002054581.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 等待一段时间后，出现下面的提示后，按一下回车键<kbd>Return</kbd>：</p>
+<p><img src="https://source.icode504.com/images/image-20240721002253336.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20240721002415491.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 等待一段时间后，Homebrew安装完成，接下来我们需要配置国内软件下载源，这里输入<strong>5</strong>，使用阿里国内镜像源下载软件包，并按一下回车<kbd>Return</kbd>：</p>
+<p><img src="https://source.icode504.com/images/image-20240721002617846.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 配置中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20240721002728440.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 出现下面的提示后，说明Homebrew安装配置成功，重启终端：</p>
+<p><img src="https://source.icode504.com/images/image-20240721002838422.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、卸载Homebrew（可选）"><a href="#二、卸载Homebrew（可选）" class="headerlink" title="二、卸载Homebrew（可选）"></a>二、卸载Homebrew（可选）</h1><p>卸载Homebrew十分简单，只需要执行如下命令即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
 
-<blockquote>
-<p>  小技巧：在命令行中输入文件名时，我们可以只写文件的前一部分，然后按一下<kbd>Tab</kbd>键补齐文件名。</p>
-</blockquote>
-<p>8. 等待一段时间后，解压完成，执行如下命令，进入解压后的文件夹名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224175030125.png" srcset="/img/loading.gif" lazyload></p>
-<p>使用<code>cd</code>命令进入解压后的文件夹：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> jdk1.8.0_331<br></code></pre></td></tr></table></figure>
-
-<p>9. 输入如下命令，查看并复制当前文件路径：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">pwd</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224175326821.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 复制如下代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">JAVA_HOME</span>  <br>JAVA_HOME=/opt/jdk1.8.0_331<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME <br></code></pre></td></tr></table></figure>
-
-<p>11. 在<code>/etc/profile.d</code>目录下创建<code>java_env.sh</code>文件，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/java_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>12. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第十步的代码，效果如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225120311514.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 将光标移动到第二行，将<code>JAVA_HOME</code>对应的值替换成第9步复制的路径。完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
-<p>14. 执行如下命令，让环境变量配置生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile.d/java_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>15. 执行<code>java</code>、<code>javac</code>命令，可以看到如下内容：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225120919666.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225120949167.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 输入<code>java -version</code>，出现下图信息表示JDK安装成功：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225121013682.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1626,8 +1542,15 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/" class="category-chain-item">macOS</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="category-chain-item">软件包管理工具</a>
+  
+  
+
   
 
   
@@ -1643,9 +1566,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/Homebrew/" class="print-no-link">#Homebrew</a>
       
     </div>
   
@@ -1657,8 +1580,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 8安装配置教程（Linux通用版）</div>
-      <div>https://www.icode504.com/posts/55.html</div>
+      <div>软件包管理器Homwbrew安装教程（适用于macOS系统）</div>
+      <div>https://www.icode504.com/posts/82.html</div>
     </div>
     <div class="license-meta">
       
@@ -1670,7 +1593,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月5日</div>
+          <div>2024年7月21日</div>
         </div>
       
       
@@ -1702,18 +1625,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/56.html" title="Maven安装配置教程（Linux通用版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Maven安装配置教程（Linux通用版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/54.html" title="VS Code开启多个标签页">
-                        <span class="hidden-mobile">VS Code开启多个标签页</span>
+                      <a href="/posts/81.html" title="数据库管理软件DBeaver安装、配置和卸载教程（macOS版）">
+                        <span class="hidden-mobile">数据库管理软件DBeaver安装、配置和卸载教程（macOS版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

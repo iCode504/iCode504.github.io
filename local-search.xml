@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>软件包管理器Homwbrew安装教程（适用于macOS系统）</title>
+    <link href="/posts/82.html"/>
+    <url>/posts/82.html</url>
+    
+    <content type="html"><![CDATA[<p>Homebrew 是一个面向 macOS 和 Linux 的包管理系统，可以轻松地安装、更新和管理软件包。它通过简单的命令行接口，让用户可以快速获取并安装各种开源软件和工具，而不需要复杂的配置过程。Homebrew 的核心理念是让用户能够轻松地管理软件环境，并保持系统的整洁和高效。它的主要优点是使用方便、社区活跃以及广泛的包支持，使其成为开发者和技术爱好者的理想选择。</p><p>以下是 macOS 环境下 Homebrew 的安装教程。本文参考自此文章：<a href="https://zhuanlan.zhihu.com/p/111014448">点我查看原文章</a></p><h1 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h1><p>1. 执行如下命令同意许可协议：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo xcodebuild -license<br></code></pre></td></tr></table></figure><p>需要输入密码（默认不在命令行显示）</p><p>查看许可协议后，输入<code>agree</code>，按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721001448428.png"></p><p>2. 安装Homebrew，执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure><p>3. 进入安装界面，输入<strong>1</strong>，通过清华大学下载Homebrew：</p><p><img src="https://source.icode504.com/images/image-20240721001800397.png"></p><p>4. 初次安装的小伙伴输入本机密码（默认不在命令行显示）：</p><p><img src="https://source.icode504.com/images/image-20240721001856160.png"></p><p>5. 此时会有一个检测本机是否安装Homebrew，这里输入<strong>Y</strong>，按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002054581.png"></p><p>6. 等待一段时间后，出现下面的提示后，按一下回车键<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002253336.png"></p><p>7. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240721002415491.png"></p><p>8. 等待一段时间后，Homebrew安装完成，接下来我们需要配置国内软件下载源，这里输入<strong>5</strong>，使用阿里国内镜像源下载软件包，并按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002617846.png"></p><p>9. 配置中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240721002728440.png"></p><p>10. 出现下面的提示后，说明Homebrew安装配置成功，重启终端：</p><p><img src="https://source.icode504.com/images/image-20240721002838422.png"></p><h1 id="二、卸载Homebrew（可选）"><a href="#二、卸载Homebrew（可选）" class="headerlink" title="二、卸载Homebrew（可选）"></a>二、卸载Homebrew（可选）</h1><p>卸载Homebrew十分简单，只需要执行如下命令即可：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>软件包管理工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+      <tag>Homebrew</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数据库管理软件DBeaver安装、配置和卸载教程（macOS版）</title>
     <link href="/posts/81.html"/>
     <url>/posts/81.html</url>
