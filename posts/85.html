@@ -18,27 +18,45 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文详细介绍了在Linux系统上安装和配置Gradle的步骤。通过本教程，用户可以轻松掌握Gradle在Linux端的安装配置方法，完成下载源的配置，为后续的项目构建和管理提供便利。">
+    <meta name="description" content="本教程详细介绍了在Windows系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle安装配置教程（Linux通用版）">
-<meta property="og:url" content="https://www.icode504.com/posts/57.html">
+<meta property="og:title" content="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）">
+<meta property="og:url" content="https://www.icode504.com/posts/85.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文详细介绍了在Linux系统上安装和配置Gradle的步骤。通过本教程，用户可以轻松掌握Gradle在Linux端的安装配置方法，完成下载源的配置，为后续的项目构建和管理提供便利。">
+<meta property="og:description" content="本教程详细介绍了在Windows系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Gradle%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-03-10T14:42:40.000Z">
-<meta property="article:modified_time" content="2024-03-10T14:48:10.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-42448e12a41218868a6c13ecb9bb4fac.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-b59501b9a12f6cd374df34e6bbea4d73.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-5d61a9e5c54b2371c1de5f9bd7371741.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-0338ea215e228ffe2f1f75d4f53756b0.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-cdb3280e85900997f87c56463a7321fa.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-366228e45dde0f2d6242215118aad761.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-19b9e279c735690243cb0c280afa633e.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-41e953de613efc4a40ceb7f40bf5c63e.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-aea53fb429cfdcd78af24fe463d79aa1.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-c9ca4f23e1de2fbae1604ab9d3e397d5.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-5f52a47a8b58ea3606d615f8dbd4737c.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-2e1872a9dac580830efd657e8e03d8cb.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-e69cbbaec6fcf640e0fca44ae8e6d89b.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-ce17051a4ad9fa5e8e7760faea13b289.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-1a599a7929a7e9d3ef67b9493ee14e36.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-e8074c380dab1832a162f5f92945eb4e.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-1500d9efcb12ecffcfc0436750c6f07f.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-7e0bc4c21357f1e25531850670e992fb.png">
+<meta property="article:published_time" content="2024-07-26T06:12:20.611Z">
+<meta property="article:modified_time" content="2024-07-26T07:28:20.997Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Gradle">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Redis">
+<meta property="article:tag" content="TinyRDM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Gradle%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-42448e12a41218868a6c13ecb9bb4fac.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Gradle安装配置教程（Linux通用版） - iCode504个人博客</title>
+  <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +221,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Gradle安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Gradle安装配置教程（Linux通用版）</span>
+            <span id="subtitle">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
           
         </div>
 
@@ -220,8 +238,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-10 22:42" pubdate>
-          2024年3月10日 22:42:40
+        <time datetime="2024-07-26 14:12" pubdate>
+          2024年7月26日 14:12:20
         </time>
       </span>
     
@@ -302,7 +320,7 @@
       
         <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
         </a>
       
@@ -315,17 +333,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Linux
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -356,7 +374,7 @@
       
         <a href="/posts/57.html" title="Gradle安装配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Gradle安装配置教程（Linux通用版）</span>
         </a>
       
@@ -1578,6 +1596,80 @@
       </div>
     </div>
   
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
+        id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
+        aria-expanded="true"
+      >
+        Windows
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+           role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="TinyRDM"
+        id="heading-b41f882cc104befc6772bd90c79882dc" role="tab" data-toggle="collapse" href="#collapse-b41f882cc104befc6772bd90c79882dc"
+        aria-expanded="true"
+      >
+        TinyRDM
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-b41f882cc104befc6772bd90c79882dc"
+           role="tabpanel" aria-labelledby="heading-b41f882cc104befc6772bd90c79882dc">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
 </div>
 
 
@@ -1590,12 +1682,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Gradle安装配置教程（Linux通用版）</h1>
+            <h1 id="seo-header">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月10日 22:48:10
+                    本文最后更新于：2024年7月26日 15:28:20
                   
                 
               </p>
@@ -1603,140 +1695,54 @@
             
               <div class="markdown-body">
                 
-                <p>有需要安装Linux系统的小伙伴，可以点击下面任意一个链接查看安装教程：</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">CentOS</th>
-<th align="center">Ubuntu</th>
-<th align="center">Debian</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">安装教程</td>
-<td align="center"><a href="https://www.icode504.com/posts/48.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/51.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/52.html">点我查看</a></td>
-</tr>
-</tbody></table>
-<h1 id="一、安装前检查（Linux端）"><a href="#一、安装前检查（Linux端）" class="headerlink" title="一、安装前检查（Linux端）"></a>一、安装前检查（Linux端）</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请查看JDK安装教程：<a href="https://www.icode504.com/posts/55.html">点我查看</a></p>
-<p>2. 已经安装JDK的小伙伴，请在命令行执行如下命令，如果出现下图的版本信息，就说明JDK环境变量配置成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -version<br></code></pre></td></tr></table></figure>
+                <p>TinyRDM是一款轻量级的Redis数据库管理工具，提供了用户友好的图形界面，便于开发者和数据库管理员进行Redis数据库的连接、管理和监控。它支持多种Redis命令操作，提供丰富的可视化功能，直观地展示数据结构和存储信息。TinyRDM简洁高效，适合日常的Redis管理工作。</p>
+<p>以下是Windows环境下安装Tiny RDM教程：</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请确保Linux操作系统上安装了Redis，需要安装的小伙伴点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/83.html">点我查看</a></p>
+<p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>进入命令行界面，执行如下命令查看当前操作系统信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">systeminfo<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240225121013682.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 检查Ubuntu发行版本信息，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br></code></pre></td></tr></table></figure>
+<p>这里我的电脑是Windows操作系统，使用的是x64指令集：</p>
+<p><img src="https://source.icode504.com/images/image-42448e12a41218868a6c13ecb9bb4fac.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、下载RDM"><a href="#二、下载RDM" class="headerlink" title="二、下载RDM"></a>二、下载RDM</h1><p>1. 打开Tiny RDM官网：<a href="%5Bhttps://%5D(https://redis.tinycraft.cc/zh/)">点我查看</a></p>
+<p>2. 鼠标移到<strong>下载安装</strong>按钮，根据前面我们查看的电脑指令集，x64的小伙伴点击第一个链接下载，arm64的小伙伴按照下图蓝色框找到arm64安装包下载：</p>
+<p><img src="https://source.icode504.com/images/image-b59501b9a12f6cd374df34e6bbea4d73.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装Tiny-RDM"><a href="#三、安装Tiny-RDM" class="headerlink" title="三、安装Tiny RDM"></a>三、安装Tiny RDM</h1><p>1. 双击下载好的安装包，进入欢迎页面，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-5d61a9e5c54b2371c1de5f9bd7371741.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 选择安装位置，这里我安装在了D盘，完成后点击下方的<strong>Install</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-0338ea215e228ffe2f1f75d4f53756b0.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-cdb3280e85900997f87c56463a7321fa.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-366228e45dde0f2d6242215118aad761.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-19b9e279c735690243cb0c280afa633e.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 安装完成，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-41e953de613efc4a40ceb7f40bf5c63e.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击Finish，Tiny RDM安装完成：</p>
+<p><img src="https://source.icode504.com/images/image-aea53fb429cfdcd78af24fe463d79aa1.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、使用Tiny-RDM远程连接Redis"><a href="#四、使用Tiny-RDM远程连接Redis" class="headerlink" title="四、使用Tiny RDM远程连接Redis"></a>四、使用Tiny RDM远程连接Redis</h1><p>1. 在桌面上打开Tiny RDM，点击左下角的加号，新建一个Redis连接：</p>
+<p><img src="https://source.icode504.com/images/image-c9ca4f23e1de2fbae1604ab9d3e397d5.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示操作，配置Redis的连接配置，完成后点击左下角的<strong>测试连接</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-5f52a47a8b58ea3606d615f8dbd4737c.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 如果下方弹出提示“成功连接到Redis服务器”就说明前面的Redis配置没有问题，此时我们点击右下角的确认就可以使用Redis了：</p>
+<p><img src="https://source.icode504.com/images/image-2e1872a9dac580830efd657e8e03d8cb.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 双击左侧的Redis连接，再点击控制台，我们就可以正常使用Redis命令了：</p>
+<p><img src="https://source.icode504.com/images/image-e69cbbaec6fcf640e0fca44ae8e6d89b.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-ce17051a4ad9fa5e8e7760faea13b289.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、卸载Tiny-RDM"><a href="#五、卸载Tiny-RDM" class="headerlink" title="五、卸载Tiny RDM"></a>五、卸载Tiny RDM</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
 
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310222707920.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、下载Gradle安装包（Windows端）"><a href="#二、下载Gradle安装包（Windows端）" class="headerlink" title="二、下载Gradle安装包（Windows端）"></a>二、下载Gradle安装包（Windows端）</h1><p>1. 点击右侧链接打开官网页面：<a target="_blank" rel="noopener" href="https://gradle.org/releases/">https://gradle.org/releases/</a></p>
 <blockquote>
-<p>  如果你使用的SpringBoot项目，建议使用6.8及以上的版本。</p>
+<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
+<p>已经安装的小伙伴可以接着往下看！</p>
 </blockquote>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240307110337332.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 这里我选择8.0.2版本下载。点击<strong>complete</strong>下载：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240307110441377.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、安装并配置Gradle环境变量"><a href="#三、安装并配置Gradle环境变量" class="headerlink" title="三、安装并配置Gradle环境变量"></a>三、安装并配置Gradle环境变量</h1><p>1. 将前面下载好的Gradle安装包使用SFTP工具（这里我使用的是Eleterm）由Windows端传输到Linux端（请先确保Windows本身已经通过SSH方式连接到Linux）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224172925751.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在左侧Windows端找到下载好的安装包：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310214142976.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在右侧Linux端设置安装包存放路径，这里我将安装包存放在<code>/opt</code>下：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240224173503187.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示操作，将Maven安装包传到Linux端的<code>/opt</code>目录下：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/24010310001.gif" srcset="/img/loading.gif" lazyload></p>
-<p>5. 等待一段时间后，此时Linux端的<code>/opt</code>目录下已经存放了刚才我们传输的文件：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310214339373.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 此时我们切换回命令行，执行如下命令切换到<code>/opt</code>目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt<br></code></pre></td></tr></table></figure>
-
-<p>7. 在Linux端下载安装unzip（解压缩工具）：</p>
-<ul>
-<li>Ubuntu&#x2F;Debian</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt -y install unzip<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>CentOS</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum -y install unzip<br></code></pre></td></tr></table></figure>
-
-<p>7. 解压刚刚传输过来的安装包，执行如下命令：</p>
-<blockquote>
-<p>  小技巧：在命令行中输入文件名时，我们可以只写文件的前一部分，然后按一下<kbd>Tab</kbd>键补齐文件名。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">unzip gradle-8.0.2-all.zip<br></code></pre></td></tr></table></figure>
-
-<p>8. 等待一段时间后，解压完成，执行如下命令，进入解压后的文件夹名称：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310214538214.png" srcset="/img/loading.gif" lazyload></p>
-<p>使用<code>cd</code>命令进入解压后的文件夹：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> gradle-8.0.2<br></code></pre></td></tr></table></figure>
-
-<p>9. 安装vim编辑器，根据自己的操作系统执行如下命令来安装：</p>
-<ul>
-<li>CentOS</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum -y install vim<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>Ubuntu&#x2F;Debian</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt -y install vim<br></code></pre></td></tr></table></figure>
-
-<p>10. 在<code>/etc/profile.d</code>目录下创建<code>gradle_env.sh</code>文件，执行如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim /etc/profile.d/gradle_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>11. 复制如下代码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">GRADLE_HOME</span>  <br>GRADLE_HOME=<br>PATH=$PATH:$GRADLE_HOME/bin<br>export PATH GRADLE_HOME<br></code></pre></td></tr></table></figure>
-
-<p>12. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第十步的代码，效果如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310220804783.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
-<p>14. 输入如下命令，查看当前文件路径，选中这个路径并复制：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">pwd</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310220307085.png" srcset="/img/loading.gif" lazyload></p>
-<p>15. 再次打开<code>gradle_env.sh</code>文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/gradle_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>16. 将光标移动到第2行，按<kbd>i</kbd>进入编辑模式，将<code>GRADLE_HOME</code>对应的值替换成第14步复制的路径，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴，最终效果如下图：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310220723840.png" srcset="/img/loading.gif" lazyload></p>
-<p>17. 完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
-<p>18. 执行如下命令，让环境变量配置生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile.d/gradle_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>19. 执行如下命令可以查看Gradle版本，如果出现如下提示信息，说明Gradle环境变量配置成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gradle -v<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310221119015.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、配置Gradle下载源"><a href="#四、配置Gradle下载源" class="headerlink" title="四、配置Gradle下载源"></a>四、配置Gradle下载源</h1><p>由于Gradle自带Maven下载源是国外的，在后续下载依赖的过程中会比较慢。这里我们需要将下载源换成国内镜像。</p>
-<p>1. 找一个你熟悉的位置存放Gradle依赖，这里我创建一个目录专门存放Gradle依赖：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /home/gradle/repository<br></code></pre></td></tr></table></figure>
-
-<p>2. 进入Gradle安装目录，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/gradle-8.0.2<br></code></pre></td></tr></table></figure>
-
-<p>3. 执行如下命令，查看当前目录下的所有文件和文件夹：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
-
-<p>4. 执行如下命令，查看当前目录下的所有文件和文件夹：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310221640106.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 进入<code>init.d</code>文件夹，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> init.d/<br></code></pre></td></tr></table></figure>
-
-<p>6. 执行<code>ls</code>命令，我们发现这个目录下有一个<code>readme.txt</code>文件。执行<code>cat readme.txt</code>命令可以查看文件内容：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310221945889.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">You can add .gradle (e.g. test.gradle) init scripts to this directory. Each one is executed at the start of the build.<br></code></pre></td></tr></table></figure>
-
-<p>简单翻译一下就是在<code>init.d</code>目录下创建一个初始化文件，这里我们需要新建一个<code>init.gradle</code>文件。</p>
-<p>3. 新建一个<code>init.gradle</code>文件，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim init.gradle<br></code></pre></td></tr></table></figure>
-
-<p>4. 复制如下代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">allprojects &#123;<br>    repositories &#123; <br>        mavenLocal() <br>        maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&quot;https://maven.aliyun.com/repository/public&quot;</span> &#125; <br>        maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&quot;https://nexus.bsdn.org/content/groups/public/&quot;</span> &#125; <br>        mavenCentral()<br>    &#125;<br>    buildscript &#123;<br>        repositories &#123; <br>            maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&#x27;https://maven.aliyun.com/repository/public&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&#x27;https://nexus.bsdn.org/content/groups/public/&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;M2&quot;</span> ; url <span class="hljs-string">&#x27;https://plugins.gradle.org/m2/&#x27;</span> &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>5. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第十步的代码，效果如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240310222300304.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。至此，Gradle下载源配置完成。</p>
+<p>1. 打开Geek Uninstaller，找到Tiny RDM，鼠标右键点击卸载：</p>
+<p><img src="https://source.icode504.com/images/image-1a599a7929a7e9d3ef67b9493ee14e36.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 卸载完成，点击<strong>Close</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-e8074c380dab1832a162f5f92945eb4e.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时Geek会我们检测出安装残留，我们只需要点击<strong>完成</strong>即可，清除卸载残留：</p>
+<p><img src="https://source.icode504.com/images/image-1500d9efcb12ecffcfc0436750c6f07f.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 清理完毕，关闭Geek即可：</p>
+<p><img src="https://source.icode504.com/images/image-7e0bc4c21357f1e25531850670e992fb.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1758,12 +1764,25 @@
   <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
   
   
-    <span>></span>
+
+      </span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Windows/" class="category-chain-item">Windows</a>
   
   
 
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/TinyRDM/" class="category-chain-item">TinyRDM</a>
+  
   
 
       </span>
@@ -1777,9 +1796,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Gradle/" class="print-no-link">#Gradle</a>
+        <a href="/tags/Redis/" class="print-no-link">#Redis</a>
+      
+        <a href="/tags/TinyRDM/" class="print-no-link">#TinyRDM</a>
       
     </div>
   
@@ -1791,8 +1812,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Gradle安装配置教程（Linux通用版）</div>
-      <div>https://www.icode504.com/posts/57.html</div>
+      <div>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</div>
+      <div>https://www.icode504.com/posts/85.html</div>
     </div>
     <div class="license-meta">
       
@@ -1804,7 +1825,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月10日</div>
+          <div>2024年7月26日</div>
         </div>
       
       
@@ -1836,18 +1857,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/58.html" title="EasyExcel介绍与依赖导入">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">EasyExcel介绍与依赖导入</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/56.html" title="Maven安装配置教程（Linux通用版）">
-                        <span class="hidden-mobile">Maven安装配置教程（Linux通用版）</span>
+                      <a href="/posts/83.html" title="Redis安装教程（Linux版）">
+                        <span class="hidden-mobile">Redis安装教程（Linux版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
