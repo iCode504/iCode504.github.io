@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-07-25T15:02:32.000Z</updated>
+  <updated>2024-07-26T07:28:20.997Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</title>
+    <link href="https://www.icode504.com/posts/84.html"/>
+    <id>https://www.icode504.com/posts/84.html</id>
+    <published>2024-07-26T06:12:20.611Z</published>
+    <updated>2024-07-26T07:28:20.997Z</updated>
+    
+    
+    <summary type="html">本教程详细介绍了在Windows系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/Windows/"/>
+    
+    <category term="TinyRDM" scheme="https://www.icode504.com/categories/TinyRDM/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+    <category term="TinyRDM" scheme="https://www.icode504.com/tags/TinyRDM/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis安装教程（Linux版）</title>
@@ -514,31 +541,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Visual Studio" scheme="https://www.icode504.com/tags/Visual-Studio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intellij IDEA启动Java程序或项目报错【java: Compilation failed: internal java compiler error】的解决办法</title>
-    <link href="https://www.icode504.com/posts/65.html"/>
-    <id>https://www.icode504.com/posts/65.html</id>
-    <published>2024-04-16T07:29:13.000Z</published>
-    <updated>2024-04-29T14:26:54.000Z</updated>
-    
-    
-    <summary type="html">解决IDEA运行Java程序时出现的错误信息java: Compilication failed: internal java compiler error</summary>
-    
-    
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/categories/Intellij-IDEA/"/>
-    
-    <category term="Bug" scheme="https://www.icode504.com/categories/Intellij-IDEA/Bug/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/Intellij-IDEA/Bug/Java/"/>
-    
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
     
   </entry>
   
