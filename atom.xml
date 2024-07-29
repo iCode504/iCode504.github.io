@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-07-29T15:36:56.242Z</updated>
+  <updated>2024-07-29T15:41:52.974Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -18,20 +18,32 @@
   
   <entry>
     <title>Redis的key（键）相关操作</title>
-    <link href="https://www.icode504.com/posts/3220600697.html"/>
-    <id>https://www.icode504.com/posts/3220600697.html</id>
-    <published>2024-07-29T15:35:44.113Z</published>
-    <updated>2024-07-29T15:36:56.242Z</updated>
+    <link href="https://www.icode504.com/posts/86.html"/>
+    <id>https://www.icode504.com/posts/86.html</id>
+    <published>2024-07-29T15:46:15.813Z</published>
+    <updated>2024-07-29T15:41:52.974Z</updated>
     
     
     <summary type="html">Redis的key的相关操作</summary>
     
     
     
-    <category term="[数据库, 非关系型数据库(NoSQL), Redis, Redis使用篇]" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL-Redis-Redis%E4%BD%BF%E7%94%A8%E7%AF%87/"/>
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库(NoSQL)" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/"/>
+    
+    <category term="Redis使用篇" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/Redis%E4%BD%BF%E7%94%A8%E7%AF%87/"/>
     
     
     <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库(NoSQL)" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/"/>
+    
+    <category term="Redis使用篇" scheme="https://www.icode504.com/tags/Redis%E4%BD%BF%E7%94%A8%E7%AF%87/"/>
     
   </entry>
   

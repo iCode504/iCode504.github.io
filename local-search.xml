@@ -5,15 +5,21 @@
   
   <entry>
     <title>Redis的key（键）相关操作</title>
-    <link href="/posts/3220600697.html"/>
-    <url>/posts/3220600697.html</url>
+    <link href="/posts/86.html"/>
+    <url>/posts/86.html</url>
     
     <content type="html"><![CDATA[<p>需要安装Redis的小伙伴点击右侧链接查看安装教程：<a href="%5Bhttps://%5D(https://www.icode504.com/posts/83.html)">点我查看</a></p><p>本文使用TinyRDM远程连接Redis，需要安装的小伙伴点击右侧链接查看安装教程：<a href="%5Bhttps://%5D(https://www.icode504.com/posts/85.html)">点我查看</a></p><p>以下是Redis键（以下称作 key）的相关操作：</p><p>1. 添加一个key：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-b788c6b1211981fa4908a7286b3f93fb.png"></p><p>本文中涉及到的value默认都是Redis字符串（String）类型。</p><p>2. 获取key对应的value：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-f1e5415d917fa4d114583692923f974e.png"></p><p>3. 查看当前库所有的 key名称：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEYS *<br></code></pre></td></tr></table></figure><p>这里我的库中有 3 个 key：k1、k2、k3：</p><p><img src="https://source.icode504.com/images/image-ffd4c285af89882da0374d2e6eec6c14.png"></p><p>4. 判断某个 key 是否存在：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EXISTS key<br></code></pre></td></tr></table></figure><p>如果 key 存在，那么返回 1，不存在则返回 0：</p><p><img src="https://source.icode504.com/images/image-5602cf9de396706af8b6833254c22f24.png"></p><p>5. 查看当前 key 的类型：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TYPE key<br></code></pre></td></tr></table></figure><p>这里我们查看一下键 k1 的类型，它是 string（字符串）类型：</p><p><img src="https://source.icode504.com/images/image-93453d8afe5c7c3d278819ef938d7cb0.png"></p><p>6. 删除指定的 key：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEL key<br></code></pre></td></tr></table></figure><p>删除成功返回 1，失败返回 0：</p><p><img src="https://source.icode504.com/images/image-e3c13ff500eb3662e6d2dae08557b629.png"></p><p>7. 非阻塞删除：仅仅将当前 key 在 keyspace 元数据中删除，真正删除操作会在后续的异步中操作。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">UNLINK key<br></code></pre></td></tr></table></figure><p>如果删除成功，返回结果是 1，失败则返回 0：</p><p><img src="https://source.icode504.com/images/image-72c1dbc529ff96ee3abce9ad163e077d.png"></p><p>DEL 命令在删除 key 对应的数据的时候，默认是阻塞的，如果不彻底将数据删除，后续的操作将无法执行。在一些高并发系统中，这样的删除方式可能会影响到程序的正常运行。而 UNLINK 命令做到数据在“表面上”删除，真正的数据删除在后续的异步中操作。</p><p>UNLINK 命令类似于 Windows 中的普通删除，如果我们想删除一个大文件，直接按<kbd>Delete</kbd>键会将其快速将文件放入到回收站，后续想删除直接鼠标右键点击清空回收站就真正执行删除数据操作；而 DEL 命令则类似选中这个文件直接按<kbd>Shift</kbd><kbd>Delete</kbd>键不通过回收站直接彻底删除文件。</p><p>8. 查看当前 key 过期时间（单位：秒）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TTL key<br></code></pre></td></tr></table></figure><p>-1 表示当前 key 永不过期，-2 表示当前 key 已过期：</p><p><img src="https://source.icode504.com/images/image-34761b6bb584859d47f974b7dfba7feb.png"></p><p>9. 为给定的 key 设置过期时间（单位：秒）：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">EXPIRE key seconds</span><br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-18ff0e12cfa2ad0aa2f6d324ccee0ca5.png"></p><p>10. 将当前数据库的 key 移动到指定的数据库 db 当中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MOVE key dbindex [0-15]<br></code></pre></td></tr></table></figure><p>如果目标库中已经存在key，那么执行上述命令的结果是0；不存在的时候，返回结果是1。</p><p>11. 切换数据库[0-15]，默认使用的索引值为 0 数据库（这里我称之为db0，索引值为5的数据库称之为db5，以此类推）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SELECT dbindex<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-707da910a57527cf478dc8de5e5eb6d8.png"></p><p>Redis 默认有 16 个数据库，编号范围是[0, 15]，在 Redis 配置文件 redis.conf 中有相应配置可以作证上述说法：</p><p><img src="https://source.icode504.com/images/image-20240724213929763.png"></p><p>配置数据库的数量，默认的数据库是索引为 0 的数据库（db0），你可以通过<code>select &lt;dbid&gt;</code>命令切换到另一个数据库，数据库 id（dbid）范围是 0 到 databases - 1（在配置文件中 databases 对应的值是 16），即可切换的数据库范围在[0, 15]这个区间内。</p><p>12. 查看当前数据库 key 的数量：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DBSIZE<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-bad2a23ae450b082a5eb5d5d16b051ac.png"></p><ol start="13"><li>清空当前库：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHDB<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-73843f8f9abb8bd22c5efd728cd368d3.png"></p><p>14. 清空全部库：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHALL<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-7fac8545aeb2cd3e504ad7c699caf5b8.png"></p>]]></content>
     
     
     <categories>
       
-      <category>[数据库, 非关系型数据库(NoSQL), Redis, Redis使用篇]</category>
+      <category>数据库</category>
+      
+      <category>非关系型数据库(NoSQL)</category>
+      
+      <category>Redis</category>
+      
+      <category>Redis使用篇</category>
       
     </categories>
     
@@ -21,6 +27,12 @@
     <tags>
       
       <tag>Redis</tag>
+      
+      <tag>数据库</tag>
+      
+      <tag>非关系型数据库(NoSQL)</tag>
+      
+      <tag>Redis使用篇</tag>
       
     </tags>
     
