@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-07-26T12:19:56.068Z</updated>
+  <updated>2024-07-29T15:36:56.242Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis的key（键）相关操作</title>
+    <link href="https://www.icode504.com/posts/3220600697.html"/>
+    <id>https://www.icode504.com/posts/3220600697.html</id>
+    <published>2024-07-29T15:35:44.113Z</published>
+    <updated>2024-07-29T15:36:56.242Z</updated>
+    
+    
+    <summary type="html">Redis的key的相关操作</summary>
+    
+    
+    
+    <category term="[数据库, 非关系型数据库(NoSQL), Redis, Redis使用篇]" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL-Redis-Redis%E4%BD%BF%E7%94%A8%E7%AF%87/"/>
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</title>
@@ -516,31 +535,6 @@
     <category term="Node.js" scheme="https://www.icode504.com/tags/Node-js/"/>
     
     <category term="npm" scheme="https://www.icode504.com/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Visual Studio安装配置教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/66.html"/>
-    <id>https://www.icode504.com/posts/66.html</id>
-    <published>2024-04-16T09:23:25.000Z</published>
-    <updated>2024-05-25T15:07:42.000Z</updated>
-    
-    
-    <summary type="html">本文将指导您在Windows操作系统上安装、配置和卸载Visual Studio，并在IDE上运行一个简单的C++程序。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Visual Studio" scheme="https://www.icode504.com/tags/Visual-Studio/"/>
     
   </entry>
   
