@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-07-29T15:41:52.974Z</updated>
+  <updated>2024-08-02T06:55:41.627Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis数据类型之字符串类型String</title>
+    <link href="https://www.icode504.com/posts/87.html"/>
+    <id>https://www.icode504.com/posts/87.html</id>
+    <published>2024-08-02T06:56:04.465Z</published>
+    <updated>2024-08-02T06:55:41.627Z</updated>
+    
+    
+    <summary type="html">Redis字符串类型介绍及其常用的命令</summary>
+    
+    
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis的key（键）相关操作</title>
@@ -520,33 +537,6 @@
     <category term="MySQL" scheme="https://www.icode504.com/tags/MySQL/"/>
     
     <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js安装、配置和卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/67.html"/>
-    <id>https://www.icode504.com/posts/67.html</id>
-    <published>2024-04-28T01:08:59.000Z</published>
-    <updated>2024-06-19T15:31:36.000Z</updated>
-    
-    
-    <summary type="html">这篇教程旨在为 Windows 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="前端框架工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Node.js" scheme="https://www.icode504.com/tags/Node-js/"/>
-    
-    <category term="npm" scheme="https://www.icode504.com/tags/npm/"/>
     
   </entry>
   

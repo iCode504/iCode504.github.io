@@ -18,21 +18,18 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis的key的相关操作">
+    <meta name="description" content="Redis字符串类型介绍及其常用的命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis的key（键）相关操作">
-<meta property="og:url" content="https://www.icode504.com/posts/86.html">
+<meta property="og:title" content="Redis数据类型之字符串类型String">
+<meta property="og:url" content="https://www.icode504.com/posts/87.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis的key的相关操作">
+<meta property="og:description" content="Redis字符串类型介绍及其常用的命令">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-08-01T08:04:07.910Z">
-<meta property="article:modified_time" content="2024-07-29T15:41:52.974Z">
+<meta property="article:published_time" content="2024-08-02T06:56:04.465Z">
+<meta property="article:modified_time" content="2024-08-02T06:55:41.627Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
-<meta property="article:tag" content="数据库">
-<meta property="article:tag" content="非关系型数据库(NoSQL)">
-<meta property="article:tag" content="Redis使用篇">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
   
@@ -40,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis的key（键）相关操作 - iCode504个人博客</title>
+  <title>Redis数据类型之字符串类型String - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis的key（键）相关操作</span>
+            <span id="subtitle">Redis数据类型之字符串类型String</span>
           
         </div>
 
@@ -222,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-01 16:04" pubdate>
-          2024年8月1日 16:04:07
+        <time datetime="2024-08-02 14:56" pubdate>
+          2024年8月2日 14:56:04
         </time>
       </span>
     
@@ -277,136 +274,6 @@
 <div class="category-list">
   
   
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
-        id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
-        aria-expanded="true"
-      >
-        数据库
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-68051bf4aa2743b030984b694628ee9c"
-           role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库(NoSQL)"
-        id="heading-98626918f5d7d8bdf00825804cb0b170" role="tab" data-toggle="collapse" href="#collapse-98626918f5d7d8bdf00825804cb0b170"
-        aria-expanded="true"
-      >
-        非关系型数据库(NoSQL)
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-98626918f5d7d8bdf00825804cb0b170"
-           role="tabpanel" aria-labelledby="heading-98626918f5d7d8bdf00825804cb0b170">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis"
-        id="heading-e111446745a1825b862f8727ae63bce4" role="tab" data-toggle="collapse" href="#collapse-e111446745a1825b862f8727ae63bce4"
-        aria-expanded="true"
-      >
-        Redis
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-e111446745a1825b862f8727ae63bce4"
-           role="tabpanel" aria-labelledby="heading-e111446745a1825b862f8727ae63bce4">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis使用篇"
-        id="heading-576a41131f5adcd5d239d7567c6392e4" role="tab" data-toggle="collapse" href="#collapse-576a41131f5adcd5d239d7567c6392e4"
-        aria-expanded="true"
-      >
-        Redis使用篇
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-576a41131f5adcd5d239d7567c6392e4"
-           role="tabpanel" aria-labelledby="heading-576a41131f5adcd5d239d7567c6392e4">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/86.html" title="Redis的key（键）相关操作"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">Redis的key（键）相关操作</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
 </div>
 
 
@@ -419,12 +286,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis的key（键）相关操作</h1>
+            <h1 id="seo-header">Redis数据类型之字符串类型String</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年7月29日 23:41:52
+                    本文最后更新于：2024年8月2日 14:55:41
                   
                 
               </p>
@@ -432,79 +299,133 @@
             
               <div class="markdown-body">
                 
-                <p>需要安装Redis的小伙伴点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/83.html">点我查看</a></p>
-<p>本文使用TinyRDM远程连接Redis，需要安装的小伙伴点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/85.html">点我查看</a></p>
-<p>以下是Redis键（以下称作 key）的相关操作：</p>
-<p>1. 添加一个key：</p>
+                <h1 id="一、Redis字符串类型介绍"><a href="#一、Redis字符串类型介绍" class="headerlink" title="一、Redis字符串类型介绍"></a>一、Redis字符串类型介绍</h1><p>Redis字符串类型官网介绍（英文）</p>
+<p><img src="https://source.icode504.com/images/image-20240724223009996.png" srcset="/img/loading.gif" lazyload></p>
+<p>Redis的字符串（string）存储字节序列，包含文本、序列化对象和二进制数组。字符串类型是Redis的key对应的值中最简单的类型。字符串类型通常用于缓存，但是它们也可以实现计数和位运算等功能。</p>
+<p>Redis字符串类型特性：<strong>单个键（key）对应单个值（value）</strong>。</p>
+<p><img src="https://source.icode504.com/images/image-f1474adb7a4a9785602de95d07b7154f.png" srcset="/img/loading.gif" lazyload></p>
+<p>默认情况下，一个字符串类型的值（value）最大可以存储<strong>512MB</strong>数据。</p>
+<p><img src="https://source.icode504.com/images/image-20240724223651330.png" srcset="/img/loading.gif" lazyload></p>
+<p>应用场景：</p>
+<p>1. 视频&#x2F;文章点赞功能；</p>
+<p>2. 统计视频播放量、文章阅读量等。</p>
+<h1 id="二、Redis字符串常用命令"><a href="#二、Redis字符串常用命令" class="headerlink" title="二、Redis字符串常用命令"></a>二、Redis字符串常用命令</h1><p>1. 添加和修改Key：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-b788c6b1211981fa4908a7286b3f93fb.png" srcset="/img/loading.gif" lazyload></p>
-<p>本文中涉及到的value默认都是Redis字符串（String）类型。</p>
-<p>2. 获取key对应的value：</p>
+<p><img src="https://source.icode504.com/images/image-2a901b0690611a7031359aae33788a63.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果对应的value存在空格等特殊符号，需要使用双引号：</p>
+<p><img src="https://source.icode504.com/images/image-77fbf8e4d87a87b69d254175fecc9b3c.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>为当前的key设置过期时间（单位：秒）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value EX seconds<br></code></pre></td></tr></table></figure>
+
+<p>其中ex（expire）值的是当前的key-value存在过期时间，seconds就是我们自定义的过期时间（秒）：</p>
+<p><img src="https://source.icode504.com/images/image-02b57f88cac1a9974ae8fad0599f60a1.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>为当前的key设置过期时间（单位：毫秒）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value PX milliseconds<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-705784c2a1f19ec632ec1db11eeaf33e.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>当前key如果不存在时，创建key，否则不创建，相当于后续学习的SETNX命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value NX<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-3e89873a762343855f4b2036fa932fc7.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>当前key如果存在时，对当前的value进行覆盖：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value XX<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-41cf5e3aae6b4e89b75a712179e30ed9.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 获取当前key对应的value：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-f1e5415d917fa4d114583692923f974e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 查看当前库所有的 key名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEYS *<br></code></pre></td></tr></table></figure>
+<p>这里我们顺便验证一下上述set命令是否由修改key的功能（数据覆盖）：</p>
+<p><img src="https://source.icode504.com/images/image-28cea7af55609ec0792a4ebe2d608691.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 批量设置多个key-value：</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss">MSET <span class="hljs-built_in">key</span> value [<span class="hljs-built_in">key</span> value ...]<br></code></pre></td></tr></table></figure>
 
-<p>这里我的库中有 3 个 key：k1、k2、k3：</p>
-<p><img src="https://source.icode504.com/images/image-ffd4c285af89882da0374d2e6eec6c14.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 判断某个 key 是否存在：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EXISTS key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-e2536ace26340d57f76adef48331f83b.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 批量获取多个key对应的value：</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss">MGET <span class="hljs-built_in">key</span> [<span class="hljs-built_in">key</span> ...]<br></code></pre></td></tr></table></figure>
 
-<p>如果 key 存在，那么返回 1，不存在则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-5602cf9de396706af8b6833254c22f24.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 查看当前 key 的类型：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TYPE key<br></code></pre></td></tr></table></figure>
+<p>获取前面设置的key对应的value：</p>
+<p><img src="https://source.icode504.com/images/image-9b58a9f114c3e1a30846ffff8cd8af5c.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 批量设置一个或多个key-value对，<strong>当前仅当所有给定的key都不存在</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MSETNX key value [key value ...]<br></code></pre></td></tr></table></figure>
 
-<p>这里我们查看一下键 k1 的类型，它是 string（字符串）类型：</p>
-<p><img src="https://source.icode504.com/images/image-93453d8afe5c7c3d278819ef938d7cb0.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 删除指定的 key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEL key<br></code></pre></td></tr></table></figure>
+<p>执行成功返回1，如果命令中的key已经存在，则执行失败，返回结果是0：</p>
+<p><img src="https://source.icode504.com/images/image-fb8b56760bf93b030a66d9c43b3b823f.png" srcset="/img/loading.gif" lazyload></p>
+<p>MSETNX具有原子性，所给的key-value要么执行成功，如果有一个key已经存在，那么这个命令就不会执行成功。</p>
+<p>6. 获取指定区间范围内的值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GETRANGE key start end<br></code></pre></td></tr></table></figure>
 
-<p>删除成功返回 1，失败返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-e3c13ff500eb3662e6d2dae08557b629.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 非阻塞删除：仅仅将当前 key 在 keyspace 元数据中删除，真正删除操作会在后续的异步中操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">UNLINK key<br></code></pre></td></tr></table></figure>
+<p>假设key对应的value默认的长度是<code>value.length</code>。和Java的字符串类似，Redis字符串索引值的默认范围是$[0,value.length)$，由于这个范围是从左到右计算出的范围，这里我将其称之为正向索引范围。</p>
+<p>Redis对于value的索引值范围也可以从当前字符串最末尾的字符索引值是-1，前一个字符索引值为-2，以此类推。我们也可以得出Redis字符串索引值范围是$[-value.length, -1]$，由于这个范围是从右到左计算出的范围，这里我将其称之为逆向索引值范围。</p>
+<p>假设当前有一个key，对应的value是iCode504，下图就是对正向索引值范围和逆向索引值范围的分析：</p>
+<p><img src="https://source.icode504.com/images/image-1076b561c2fa8becf4dd98d60323243f.png" srcset="/img/loading.gif" lazyload></p>
+<p>我们在使用上述GETRANGE命令时，start和end的值范围就是$[0, value.length)$或者$[-value.length, -1]$，两个范围的值可以混用。例如：value的开始位置0，末尾是-1，如果想通过GETRANGE获取整个字符串，那么执行命令就是<code>GETRANGE 0 -1</code>。</p>
+<p>以下是GETRANGE命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-dcf603c77dbe6061d0dba8512660118f.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 将当前key对应的value某个偏移量覆盖新值（overwriteValue），</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">SETRANGE key <span class="hljs-built_in">offset</span> value<br></code></pre></td></tr></table></figure>
 
-<p>如果删除成功，返回结果是 1，失败则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-72c1dbc529ff96ee3abce9ad163e077d.png" srcset="/img/loading.gif" lazyload></p>
-<p>DEL 命令在删除 key 对应的数据的时候，默认是阻塞的，如果不彻底将数据删除，后续的操作将无法执行。在一些高并发系统中，这样的删除方式可能会影响到程序的正常运行。而 UNLINK 命令做到数据在“表面上”删除，真正的数据删除在后续的异步中操作。</p>
-<p>UNLINK 命令类似于 Windows 中的普通删除，如果我们想删除一个大文件，直接按<kbd>Delete</kbd>键会将其快速将文件放入到回收站，后续想删除直接鼠标右键点击清空回收站就真正执行删除数据操作；而 DEL 命令则类似选中这个文件直接按<kbd>Shift</kbd><kbd>Delete</kbd>键不通过回收站直接彻底删除文件。</p>
-<p>8. 查看当前 key 过期时间（单位：秒）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TTL key<br></code></pre></td></tr></table></figure>
+<p>其中offset是偏移量，它本质上就是一个索引值，这个命令是将当前offset及之后覆盖新值value，覆盖区间：$[offset, offset + value.length)$</p>
+<p>以下是SETRANGE实现数据覆盖的原理图：</p>
+<p><img src="https://source.icode504.com/images/image-9ad4794848618a4e0784890300a8d998.png" srcset="/img/loading.gif" lazyload></p>
+<p>以下是SETRANGE命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-7e6e141d7031ea51939d41eb4f442f6c.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 数值加减操作：必须保证key对应的value是数字才可以进行加减操作。</p>
+<p>下面命令的返回值都是数值增加&#x2F;减少的结果：</p>
+<p>递增数值，每次自增1：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">INCR key<br></code></pre></td></tr></table></figure>
 
-<p>-1 表示当前 key 永不过期，-2 表示当前 key 已过期：</p>
-<p><img src="https://source.icode504.com/images/image-34761b6bb584859d47f974b7dfba7feb.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 为给定的 key 设置过期时间（单位：秒）：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">EXPIRE key seconds</span><br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-e6c32a793ccd237c80cd561489f6b26a.png" srcset="/img/loading.gif" lazyload></p>
+<p>增加指定的整数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">INCRBY key increment<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-18ff0e12cfa2ad0aa2f6d324ccee0ca5.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 将当前数据库的 key 移动到指定的数据库 db 当中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MOVE key dbindex [0-15]<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-575a722e1c570676e93783735291f1cb.png" srcset="/img/loading.gif" lazyload></p>
+<p>递减数值，每次自减1：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DECR key<br></code></pre></td></tr></table></figure>
 
-<p>如果目标库中已经存在key，那么执行上述命令的结果是0；不存在的时候，返回结果是1。</p>
-<p>11. 切换数据库[0-15]，默认使用的索引值为 0 数据库（这里我称之为db0，索引值为5的数据库称之为db5，以此类推）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SELECT dbindex<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-fe3517bfd85889618543507b47d496c8.png" srcset="/img/loading.gif" lazyload></p>
+<p>减少指定的整数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DECR key decrement<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-707da910a57527cf478dc8de5e5eb6d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>Redis 默认有 16 个数据库，编号范围是[0, 15]，在 Redis 配置文件 redis.conf 中有相应配置可以作证上述说法：</p>
-<p><img src="https://source.icode504.com/images/image-20240724213929763.png" srcset="/img/loading.gif" lazyload></p>
-<p>配置数据库的数量，默认的数据库是索引为 0 的数据库（db0），你可以通过<code>select &lt;dbid&gt;</code>命令切换到另一个数据库，数据库 id（dbid）范围是 0 到 databases - 1（在配置文件中 databases 对应的值是 16），即可切换的数据库范围在[0, 15]这个区间内。</p>
-<p>12. 查看当前数据库 key 的数量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DBSIZE<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-b27415726001c043d5860c790317574a.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 获取字符串长度：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">STRLEN key<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-bad2a23ae450b082a5eb5d5d16b051ac.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-3aa4ff5e2541e511d9cb20648b5c6e4c.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 内容追加（在字符串末尾添加内容）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">APPEND key value<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-32754c3500385b5f25a6238f2f9468b9.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 当前key不存在时，创建key；存在则不执行上述操作（该命令可用于分布式锁）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SETNX key value<br></code></pre></td></tr></table></figure>
+
+<p>如果执行成功，返回结果是1；如果失败，返回结果是0</p>
+<p><img src="https://source.icode504.com/images/image-4dae23cd2ea1dd158f9773bc134dd903.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 为当前key设置过期时间（单位：秒，该命令可用于分布式锁）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SETEX key seconds value<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-a5d91ddff5c5b28557b761e191b798e9.png" srcset="/img/loading.gif" lazyload></p>
 <ol start="13">
-<li>清空当前库：</li>
+<li>GETSET命令：先执行GET命令并返回当前key对应的value，然后对key<strong>立即执行</strong>GET操作：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHDB<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GETSET key value<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-73843f8f9abb8bd22c5efd728cd368d3.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 清空全部库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHALL<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-7fac8545aeb2cd3e504ad7c699caf5b8.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-94033a91a726b3d72b0526a089dbb90b.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、Redis字符串命令的注意事项"><a href="#三、Redis字符串命令的注意事项" class="headerlink" title="三、Redis字符串命令的注意事项"></a>三、Redis字符串命令的注意事项</h1><p>大多数字符串命令的时间复杂度是$O(1)$，这也就意味着执行这些命令效率非常高。需要注意的是，如下几个命令的时间复杂度是$O(n)$：</p>
+<ul>
+<li>SUBSTR</li>
+<li>GETRANGE</li>
+<li>SETRANGE</li>
+</ul>
+<p>这几个随机访问的字符串命令在处理超大字符串的时候可能会出现性能问题。</p>
 
                 
               </div>
@@ -513,59 +434,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="category-chain-item">非关系型数据库(NoSQL)</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/" class="category-chain-item">Redis</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/Redis%E4%BD%BF%E7%94%A8%E7%AF%87/" class="category-chain-item">Redis使用篇</a>
-  
-  
-
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
         <a href="/tags/Redis/" class="print-no-link">#Redis</a>
-      
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="print-no-link">#数据库</a>
-      
-        <a href="/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="print-no-link">#非关系型数据库(NoSQL)</a>
-      
-        <a href="/tags/Redis%E4%BD%BF%E7%94%A8%E7%AF%87/" class="print-no-link">#Redis使用篇</a>
       
     </div>
   
@@ -577,8 +450,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis的key（键）相关操作</div>
-      <div>https://www.icode504.com/posts/86.html</div>
+      <div>Redis数据类型之字符串类型String</div>
+      <div>https://www.icode504.com/posts/87.html</div>
     </div>
     <div class="license-meta">
       
@@ -590,7 +463,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月1日</div>
+          <div>2024年8月2日</div>
         </div>
       
       
@@ -622,18 +495,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/87.html" title="Redis数据类型之字符串类型String">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis数据类型之字符串类型String</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）">
-                        <span class="hidden-mobile">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
+                      <a href="/posts/86.html" title="Redis的key（键）相关操作">
+                        <span class="hidden-mobile">Redis的key（键）相关操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
