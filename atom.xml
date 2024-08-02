@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-02T07:23:02.573Z</updated>
+  <updated>2024-08-02T07:23:33.410Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -21,12 +21,14 @@
     <link href="https://www.icode504.com/posts/87.html"/>
     <id>https://www.icode504.com/posts/87.html</id>
     <published>2024-08-02T06:56:04.465Z</published>
-    <updated>2024-08-02T07:23:02.573Z</updated>
+    <updated>2024-08-02T07:23:33.410Z</updated>
     
     
     <summary type="html">Redis字符串类型介绍及其常用的命令</summary>
     
     
+    
+    <category term="[数据库, 非关系型数据库, Redis, 数据类型]" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93-%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-Redis-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
     
     <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
