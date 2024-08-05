@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-04T02:49:53.975Z</updated>
+  <updated>2024-08-05T14:02:01.208Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis学习前言</title>
+    <link href="https://www.icode504.com/posts/90.html"/>
+    <id>https://www.icode504.com/posts/90.html</id>
+    <published>2024-08-04T15:07:35.793Z</published>
+    <updated>2024-08-05T14:02:01.208Z</updated>
+    
+    
+    <summary type="html">本文主要包含如下内容：Redis简单介绍和具体的学习大纲，里面列举了Redis相关文章的链接</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库NoSQL" scheme="https://www.icode504.com/categories/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93NoSQL/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Ubuntu桌面版安装配置教程</title>
@@ -518,31 +541,6 @@
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
     <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git安装配置教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/69.html"/>
-    <id>https://www.icode504.com/posts/69.html</id>
-    <published>2024-05-09T09:22:54.000Z</published>
-    <updated>2024-05-25T15:07:42.000Z</updated>
-    
-    
-    <summary type="html">Windows环境下安装版本控制工具Git</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="版本控制工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
     
   </entry>
   
