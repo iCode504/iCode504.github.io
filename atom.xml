@@ -148,20 +148,12 @@
     <link href="https://www.icode504.com/posts/83.html"/>
     <id>https://www.icode504.com/posts/83.html</id>
     <published>2024-07-25T14:54:21.000Z</published>
-    <updated>2024-07-25T15:02:32.000Z</updated>
+    <updated>2024-08-05T14:38:45.305Z</updated>
     
     
     <summary type="html">本教程详细介绍了在Linux系统上安装Redis的步骤，包括两种方式：Docker方式安装并启动Redis、源码方式安装、配置并启动Redis，帮助用户快速部署和运行Redis实例。</summary>
     
     
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
-    
-    <category term="数据库" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库(NoSQL)" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/"/>
     
     
     <category term="Docker" scheme="https://www.icode504.com/tags/Docker/"/>
