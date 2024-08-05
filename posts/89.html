@@ -18,16 +18,16 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文主要包含如下内容：Redis简单介绍和具体的学习大纲，里面列举了Redis相关文章的链接">
+    <meta name="description" content="Redis哈希类型介绍及其常用的命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis学习前言">
-<meta property="og:url" content="https://www.icode504.com/posts/90.html">
+<meta property="og:title" content="Redis数据类型之哈希类型Hash">
+<meta property="og:url" content="https://www.icode504.com/posts/89.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文主要包含如下内容：Redis简单介绍和具体的学习大纲，里面列举了Redis相关文章的链接">
+<meta property="og:description" content="Redis哈希类型介绍及其常用的命令">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-08-04T15:07:35.793Z">
-<meta property="article:modified_time" content="2024-08-05T14:02:01.208Z">
+<meta property="article:published_time" content="2024-07-30T22:34:32.871Z">
+<meta property="article:modified_time" content="2024-08-05T14:40:07.526Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis学习前言 - iCode504个人博客</title>
+  <title>Redis数据类型之哈希类型Hash - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis学习前言</span>
+            <span id="subtitle">Redis数据类型之哈希类型Hash</span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-04 23:07" pubdate>
-          2024年8月4日
+        <time datetime="2024-07-31 06:34" pubdate>
+          2024年7月31日
         </time>
       </span>
     
@@ -301,7 +301,7 @@
       
         <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis数据类型之哈希类型Hash</span>
         </a>
       
@@ -314,17 +314,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库(NoSQL)"
         id="heading-98626918f5d7d8bdf00825804cb0b170" role="tab" data-toggle="collapse" href="#collapse-98626918f5d7d8bdf00825804cb0b170"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         非关系型数据库(NoSQL)
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-98626918f5d7d8bdf00825804cb0b170"
+      <div class="category-collapse collapse " id="collapse-98626918f5d7d8bdf00825804cb0b170"
            role="tabpanel" aria-labelledby="heading-98626918f5d7d8bdf00825804cb0b170">
         
         
@@ -341,17 +341,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis"
         id="heading-e111446745a1825b862f8727ae63bce4" role="tab" data-toggle="collapse" href="#collapse-e111446745a1825b862f8727ae63bce4"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Redis
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-e111446745a1825b862f8727ae63bce4"
+      <div class="category-collapse collapse " id="collapse-e111446745a1825b862f8727ae63bce4"
            role="tabpanel" aria-labelledby="heading-e111446745a1825b862f8727ae63bce4">
         
         
@@ -364,7 +364,7 @@
       
         <a href="/posts/90.html" title="Redis学习前言"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Redis学习前言</span>
         </a>
       
@@ -431,6 +431,117 @@
       </div>
     </div>
   
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库"
+        id="heading-d6f2b17f5685f6601ca814dd47f144d8" role="tab" data-toggle="collapse" href="#collapse-d6f2b17f5685f6601ca814dd47f144d8"
+        aria-expanded="true"
+      >
+        非关系型数据库
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-d6f2b17f5685f6601ca814dd47f144d8"
+           role="tabpanel" aria-labelledby="heading-d6f2b17f5685f6601ca814dd47f144d8">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Redis数据类型之哈希类型Hash</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis"
+        id="heading-e111446745a1825b862f8727ae63bce4" role="tab" data-toggle="collapse" href="#collapse-e111446745a1825b862f8727ae63bce4"
+        aria-expanded="true"
+      >
+        Redis
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-e111446745a1825b862f8727ae63bce4"
+           role="tabpanel" aria-labelledby="heading-e111446745a1825b862f8727ae63bce4">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Redis数据类型之哈希类型Hash</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据类型"
+        id="heading-185f7bf647514a447138bf1e3ad11775" role="tab" data-toggle="collapse" href="#collapse-185f7bf647514a447138bf1e3ad11775"
+        aria-expanded="true"
+      >
+        数据类型
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-185f7bf647514a447138bf1e3ad11775"
+           role="tabpanel" aria-labelledby="heading-185f7bf647514a447138bf1e3ad11775">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Redis数据类型之哈希类型Hash</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
 </div>
 
 
@@ -443,7 +554,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis学习前言</h1>
+            <h1 id="seo-header">Redis数据类型之哈希类型Hash</h1>
             
               <p class="note note-info">
                 
@@ -456,125 +567,86 @@
             
               <div class="markdown-body">
                 
-                <p>Redis是一种开源的内存数据库，具有高性能、丰富的数据结构和简单易用的特点。它不仅支持键值对存储，还提供了列表、集合、有序集合和哈希等多种数据类型，使得处理复杂数据更加灵活高效。Redis常用于缓存、会话管理、实时分析、消息队列等场景，因其极快的读写速度和高可用性，成为许多互联网企业的首选。通过学习Redis，您将能够掌握如何优化系统性能，设计高效的数据存储方案，并应对大规模、高并发的应用需求。</p>
-<p>以下是我个人整理的Redis学习笔记，希望能帮到你：</p>
-<h1 id="第一部分-Redis基础知识"><a href="#第一部分-Redis基础知识" class="headerlink" title="第一部分 Redis基础知识"></a>第一部分 Redis基础知识</h1><h2 id="Redis-单机版"><a href="#Redis-单机版" class="headerlink" title="Redis 单机版"></a>Redis 单机版</h2><h3 id="一、Redis入门知识"><a href="#一、Redis入门知识" class="headerlink" title="一、Redis入门知识"></a>一、Redis入门知识</h3><table>
-<thead>
-<tr>
-<th>教程名称</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Redis相关内容介绍</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis安装教程（Linux版）</td>
-<td><a href="https://www.icode504.com/posts/83.html">点我查看</a></td>
-</tr>
-<tr>
-<td>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</td>
-<td><a href="https://www.icode504.com/posts/85.html">点我查看</a></td>
-</tr>
-<tr>
-<td>Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</td>
-<td>敬请期待</td>
-</tr>
-</tbody></table>
-<h3 id="二、Redis数据类型"><a href="#二、Redis数据类型" class="headerlink" title="二、Redis数据类型"></a>二、Redis数据类型</h3><table>
-<thead>
-<tr>
-<th>教程名称</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Redis数据类型简介</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis的key（键）相关操作</td>
-<td><a href="https://www.icode504.com/posts/86.html">点我查看</a></td>
-</tr>
-<tr>
-<td>Redis数据类型之字符串String</td>
-<td><a href="https://www.icode504.com/posts/87.html">点我查看</a></td>
-</tr>
-<tr>
-<td>Redis数据类型之哈希Hash</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之列表List</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之集合Set</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之有序集合Sorted Set（ZSet）</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之位图Bitmap</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之基数统计HyperLogLog</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之地理空间Geospatial</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之流Stream</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis数据类型之位域BitField</td>
-<td>敬请期待</td>
-</tr>
-</tbody></table>
-<h3 id="三、Redis持久化机制"><a href="#三、Redis持久化机制" class="headerlink" title="三、Redis持久化机制"></a>三、Redis持久化机制</h3><table>
-<thead>
-<tr>
-<th>教程名称</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Redis持久化机制之RDB（Redis Database）</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis持久化机制之AOF（Append Only File）</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis混合持久化（RDB + AOF）</td>
-<td>敬请期待</td>
-</tr>
-<tr>
-<td>Redis纯缓存模式</td>
-<td>敬请期待</td>
-</tr>
-</tbody></table>
-<h3 id="四、Redis事务"><a href="#四、Redis事务" class="headerlink" title="四、Redis事务"></a>四、Redis事务</h3><p>撰写中，敬请期待</p>
-<h3 id="五、Redis管道"><a href="#五、Redis管道" class="headerlink" title="五、Redis管道"></a>五、Redis管道</h3><p>撰写中，敬请期待</p>
-<h3 id="六、Redis发布和订阅（了解即可）"><a href="#六、Redis发布和订阅（了解即可）" class="headerlink" title="六、Redis发布和订阅（了解即可）"></a>六、Redis发布和订阅（了解即可）</h3><p>撰写中，敬请期待</p>
-<h2 id="Redis-集群版"><a href="#Redis-集群版" class="headerlink" title="Redis 集群版"></a>Redis 集群版</h2><h3 id="七、Redis主从模式（replication）"><a href="#七、Redis主从模式（replication）" class="headerlink" title="七、Redis主从模式（replication）"></a>七、Redis主从模式（replication）</h3><p>撰写中，敬请期待</p>
-<h3 id="八、Redis哨兵模式（sentinel）"><a href="#八、Redis哨兵模式（sentinel）" class="headerlink" title="八、Redis哨兵模式（sentinel）"></a>八、Redis哨兵模式（sentinel）</h3><p>撰写中，敬请期待</p>
-<h3 id="九、Redis集群模式（cluster）"><a href="#九、Redis集群模式（cluster）" class="headerlink" title="九、Redis集群模式（cluster）"></a>九、Redis集群模式（cluster）</h3><p>撰写中，敬请期待</p>
-<h3 id="十、SpringBoot集成Redis"><a href="#十、SpringBoot集成Redis" class="headerlink" title="十、SpringBoot集成Redis"></a>十、SpringBoot集成Redis</h3><p>撰写中，敬请期待</p>
-<h1 id="第二部分-Redis-进阶篇"><a href="#第二部分-Redis-进阶篇" class="headerlink" title="第二部分 Redis 进阶篇"></a>第二部分 Redis 进阶篇</h1><p>撰写中，敬请期待</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>链接中的知识点主要参考如下内容：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://redis.io/docs/latest/">Redis官方文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13R4y1v7sP">【尚硅谷-周阳老师】Redis实战课程+面试题</a></li>
+                <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="https://www.icode504.com/posts/90.html">点我查看</a></p>
+<h1 id="一、Redis哈希类型介绍"><a href="#一、Redis哈希类型介绍" class="headerlink" title="一、Redis哈希类型介绍"></a>一、Redis哈希类型介绍</h1><p>Redis的哈希（Hash）类型记录的是多个属性（field）及其对应的值（value）的集合，它本身仍然是键值对（key-value），但是value变为由多个field-value组成的结构，类似Java中的<code>Map&lt;String, Map&lt;String, Object&gt;&gt;</code>，下图是Redis哈希类型存储结构示意图：</p>
+<p><img src="https://source.icode504.com/images/image-eecffbe113d8b40c145632b548403706.png" srcset="/img/loading.gif" lazyload></p>
+<p>应用场景：早期购物车的应用。</p>
+<ul>
+<li>新增商品使用HSET命令；</li>
+<li>添加当前商品数量使用HINCRBY命令；</li>
+<li>获取商品总数HLEN命令；</li>
+<li>全部选择使用HGETALL命令；</li>
+</ul>
+<h1 id="二、Redis哈希类型常用命令"><a href="#二、Redis哈希类型常用命令" class="headerlink" title="二、Redis哈希类型常用命令"></a>二、Redis哈希类型常用命令</h1><p>1. 添加和修改key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HSET key field value [field value ...]<br></code></pre></td></tr></table></figure>
+
+<p>该命令默认返回的是添加&#x2F;修改field的个数：</p>
+<p><img src="https://source.icode504.com/images/image-cc58e26839d6f986cc6de8ef3b4eb1fb.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如果当前key中属性field不存在则创建，存在则不创建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HSETNX key field value [field value ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-1cfb6a17bfe021a8169bb20c0f9f722e.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-1cfb6a17bfe021a8169bb20c0f9f722e.png"></p>
+<p>3. 获取当前的key中属性field对应的value</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGET key field<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-b8e6af5ed05803707bcf49d4621d8c85.png" srcset="/img/loading.gif" lazyload></p>
+<p><del>4. 添加和修改key（该命令已经在Redis 4.0.0以后已过时，推荐使用前面的HSET命令）</del></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HMSET key field value [field value ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-8bfc512527b09d0918cd470b5605ed05.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-8bfc512527b09d0918cd470b5605ed05.png"></p>
+<p>5. 批量获取key中多个属性field对应的value</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGET key field [field ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-7ddfdc27260741f8f4514de943117f13.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-7ddfdc27260741f8f4514de943117f13.png"></p>
+<p>6. 获取当前key所有属性field对应的value：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGETALL key<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-5675c5babff9315db80d476f5307c056.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-5675c5babff9315db80d476f5307c056.png"></p>
+<p>7. 删除某一个key中的一个或多个属性field：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HDEL key field [field ...]<br></code></pre></td></tr></table></figure>
+
+<p>该命令默认返回的是删除数量：</p>
+<p><img src="https://source.icode504.com/images/image-76ca30147ab2b6e4e39aba0c99aa445b.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-76ca30147ab2b6e4e39aba0c99aa445b.png"></p>
+<p>8. 获取当前key所拥有的属性field的数量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HLEN key<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-1f7f715bde5db10cb704763671d05863.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-1f7f715bde5db10cb704763671d05863.png"></p>
+<p>9. 判断当前key中里面是否存在某个属性field：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HEXISTS key field<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-9d7ca9906140236a1bcf9aa7455b0db3.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-9d7ca9906140236a1bcf9aa7455b0db3.png"></p>
+<p>10. 获取当前key所有属性field名称：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HKEYS key<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-1f4de46415af27494e4111960adb5677.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-1f4de46415af27494e4111960adb5677.png"></p>
+<ol start="11">
+<li>获取当前key所有属性对应的值value：</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HVALS key<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-02a60584eb3b472d2c55be2de7969c36.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-02a60584eb3b472d2c55be2de7969c36.png"></p>
+<p>12. 将当前key中某个属性field对应的<strong>整数值</strong>进行增加操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HINCRBY key field increment<br></code></pre></td></tr></table></figure>
+
+<p>该命令默认返回的是增加后的结果：</p>
+<p><img src="https://source.icode504.com/images/image-4d6c76c473713f84c87341b8be05a548.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-4d6c76c473713f84c87341b8be05a548.png"></p>
+<p>使用HINCRBY也可以执行减少操作，将increment对应的值改成负数即可：</p>
+<p><img src="https://source.icode504.com/images/image-4e4661b57cad5ec06992439634323bbf.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-4e4661b57cad5ec06992439634323bbf.png"></p>
+<p>如果key不存在，那么则执行创建操作；如果key存在，而field不存在，此时会创建一个field，并对field的值由0设置为对应的值：</p>
+<p><img src="https://source.icode504.com/images/image-4988ba12daa7df5cad133c4681d52855.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-4988ba12daa7df5cad133c4681d52855.png"></p>
+<p>13. 将当前key中某个属性field对应的小数值进行增加操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HINCRBYFLOAT key field increment<br></code></pre></td></tr></table></figure>
+
+<p>HINCRBYFLOAT命令的特性基本上和HINCRBY命令相同：</p>
+<p><img src="https://source.icode504.com/images/image-52b730c8cc642cf39681fd9a7a751c89.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-52b730c8cc642cf39681fd9a7a751c89.png"></p>
+<h1 id="三、使用Redis哈希类型的注意事项"><a href="#三、使用Redis哈希类型的注意事项" class="headerlink" title="三、使用Redis哈希类型的注意事项"></a>三、使用Redis哈希类型的注意事项</h1><p>1. 大部分的Redis哈希类型的命令的时间复杂度是$O(1)$，少部分命令，例如：</p>
+<ul>
+<li>HKEYS</li>
+<li>HVALS</li>
+<li>HGETALL</li>
+</ul>
+<p>这些命令的时间复杂度是$O(n)$，因为它们需要遍历当前key中所有的fields。</p>
+<p>2. 哈希类型理论上可以存储$2^{32}-1$个键值对，但是实际上，这个存储上限取决于你的Redis实际在内存中占用的空间大小。</p>
 
                 
               </div>
@@ -596,19 +668,35 @@
   <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
   
-    <span>></span>
+
+      </span>
     
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="category-chain-item">非关系型数据库(NoSQL)</a>
   
-  
-    <span>></span>
     
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/" class="category-chain-item">Redis</a>
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">非关系型数据库</a>
   
   
 
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Redis/" class="category-chain-item">Redis</a>
+  
   
 
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="category-chain-item">数据类型</a>
+  
   
 
       </span>
@@ -634,8 +722,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis学习前言</div>
-      <div>https://www.icode504.com/posts/90.html</div>
+      <div>Redis数据类型之哈希类型Hash</div>
+      <div>https://www.icode504.com/posts/89.html</div>
     </div>
     <div class="license-meta">
       
@@ -647,7 +735,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月4日</div>
+          <div>2024年7月31日</div>
         </div>
       
       
@@ -679,9 +767,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/86.html" title="Redis的key（键）相关操作">
+                      <a href="/posts/88.html" title="Linux Ubuntu桌面版安装配置教程">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis的key（键）相关操作</span>
+                        <span class="hidden-mobile">Linux Ubuntu桌面版安装配置教程</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -689,8 +777,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/88.html" title="Linux Ubuntu桌面版安装配置教程">
-                        <span class="hidden-mobile">Linux Ubuntu桌面版安装配置教程</span>
+                      <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）">
+                        <span class="hidden-mobile">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
