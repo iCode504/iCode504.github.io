@@ -18,21 +18,18 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis的key的相关操作">
+    <meta name="description" content="Redis列表类型介绍及其常用的命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis的key（键）相关操作">
-<meta property="og:url" content="https://www.icode504.com/posts/86.html">
+<meta property="og:title" content="Redis数据类型之列表List">
+<meta property="og:url" content="https://www.icode504.com/posts/91.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis的key的相关操作">
+<meta property="og:description" content="Redis列表类型介绍及其常用的命令">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-08-05T14:33:12.796Z">
-<meta property="article:modified_time" content="2024-08-05T14:36:32.698Z">
+<meta property="article:published_time" content="2024-08-05T14:42:55.850Z">
+<meta property="article:modified_time" content="2024-08-06T15:50:14.903Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
-<meta property="article:tag" content="数据库">
-<meta property="article:tag" content="非关系型数据库(NoSQL)">
-<meta property="article:tag" content="Redis使用篇">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
   
@@ -40,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis的key（键）相关操作 - iCode504个人博客</title>
+  <title>Redis数据类型之列表List - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis的key（键）相关操作</span>
+            <span id="subtitle">Redis数据类型之列表List</span>
           
         </div>
 
@@ -222,7 +219,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-05 22:33" pubdate>
+        <time datetime="2024-08-05 22:42" pubdate>
           2024年8月5日
         </time>
       </span>
@@ -277,163 +274,6 @@
 <div class="category-list">
   
   
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
-        id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
-        aria-expanded="true"
-      >
-        数据库
-        <span class="list-group-count">(4)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-68051bf4aa2743b030984b694628ee9c"
-           role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库(NoSQL)"
-        id="heading-98626918f5d7d8bdf00825804cb0b170" role="tab" data-toggle="collapse" href="#collapse-98626918f5d7d8bdf00825804cb0b170"
-        aria-expanded="true"
-      >
-        非关系型数据库(NoSQL)
-        <span class="list-group-count">(4)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-98626918f5d7d8bdf00825804cb0b170"
-           role="tabpanel" aria-labelledby="heading-98626918f5d7d8bdf00825804cb0b170">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis"
-        id="heading-e111446745a1825b862f8727ae63bce4" role="tab" data-toggle="collapse" href="#collapse-e111446745a1825b862f8727ae63bce4"
-        aria-expanded="true"
-      >
-        Redis
-        <span class="list-group-count">(4)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-e111446745a1825b862f8727ae63bce4"
-           role="tabpanel" aria-labelledby="heading-e111446745a1825b862f8727ae63bce4">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/90.html" title="Redis学习前言"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis学习前言</span>
-        </a>
-      
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis数据类型"
-        id="heading-b46e9b96e2623b25ebc2fe54130770db" role="tab" data-toggle="collapse" href="#collapse-b46e9b96e2623b25ebc2fe54130770db"
-        aria-expanded="true"
-      >
-        Redis数据类型
-        <span class="list-group-count">(3)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-b46e9b96e2623b25ebc2fe54130770db"
-           role="tabpanel" aria-labelledby="heading-b46e9b96e2623b25ebc2fe54130770db">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之哈希类型Hash</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/86.html" title="Redis的key（键）相关操作"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">Redis的key（键）相关操作</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/87.html" title="Redis数据类型之字符串类型String"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之字符串类型String</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
 </div>
 
 
@@ -446,12 +286,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis的key（键）相关操作</h1>
+            <h1 id="seo-header">Redis数据类型之列表List</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年8月5日
+                    本文最后更新于：2024年8月6日
                   
                 
               </p>
@@ -459,78 +299,140 @@
             
               <div class="markdown-body">
                 
-                <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="https://www.icode504.com/posts/90.html">点我查看</a></p>
-<p>以下是Redis键（以下称作 key）的相关操作：</p>
-<p>1. 添加一个key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure>
+                <h1 id="一、Redis列表类型介绍"><a href="#一、Redis列表类型介绍" class="headerlink" title="一、Redis列表类型介绍"></a>一、Redis列表类型介绍</h1><p>在正式讲解Redis列表时，我们需要对“列表”这一概念做一个详细说明：</p>
+<p>列表是一种可以存储多个数据的结构，</p>
+<p>在内存中，列表的存储主要有两种方式：一种是通过数组实现的列表（例如：Java中的ArrayList），另一种是通过链表实现的列表（例如：Java中的LinkedList），两种方式各有优缺点：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">数组</td>
+<td>数组元素在内存中是连续存储的，存储结构简单，访问速度块</td>
+<td>1. 数组大小需要在创建过程中指定，不能动态调整2. 插入和删除操作效率较低3. 需要连续的内存空间</td>
+</tr>
+<tr>
+<td align="left">链表</td>
+<td>1. 可以动态调整链表大小，内存利用率较高2. 插入和删除操作较为灵活3. 元素可以分布在内存的任何位置，不需要连续的内存空间</td>
+<td>1. 访问元素较慢，查找元素需要从头遍历2. 由于链表元素在内存中分布不连续，访问速度较慢3. 每个元素需要额外的指针存储前一个或后一个节点，内存开销增加</td>
+</tr>
+</tbody></table>
+<p>首先，Redis列表（List）符合其本身和列表的基本特征：<strong>一个键（key）对应多个值（value）</strong>。</p>
+<p>其次，Redis的列表是通过链表实现的，这也就意味着Redis添加元素效率非常高，并且Redis添加元素的主要方式是向列表的头部或者尾部添加元素。</p>
+<p><img src="https://source.icode504.com/images/image-dee1d9ebc857aa35e7046d18c748fd49.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-dee1d9ebc857aa35e7046d18c748fd49.png"></p>
+<p>由于Redis列表本身是一个链表，它的缺点在于访问某个元素并没有这么快。因此，Redis列表适合于存储较少的数据。如果需要存储大量数据，并且需要快速访问，可以使用Sorted Set（ZSet）解决这一问题。</p>
+<p>应用场景：</p>
+<p>1. 记录用户在社交网络最新发送的内容，例如：微信公众号文章推送</p>
+<p><img src="https://source.icode504.com/images/image-860a4d6465ac5d1b341439d9ec951286.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-860a4d6465ac5d1b341439d9ec951286.png"></p>
+<p>2. 进程间通信，使用生产者-消费者模式。生产者将数据存放到列表，消费者取出数据并执行相应的处理操作。</p>
+<h1 id="二、Redis列表类型常用命令"><a href="#二、Redis列表类型常用命令" class="headerlink" title="二、Redis列表类型常用命令"></a>二、Redis列表类型常用命令</h1><p>1. （列表头部）从左向右依次将元素存入列表中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LPUSH key element [element ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-b788c6b1211981fa4908a7286b3f93fb.png" srcset="/img/loading.gif" lazyload></p>
-<p>本文中涉及到的value默认都是Redis字符串（String）类型。</p>
-<p>2. 获取key对应的value：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure>
+<p>假设向当前列表list的左侧添加三个元素e1、e2和e3，这个存储过程如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-a35b6eb0fc7026cfd25013d78ceb4faf.gif" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-a35b6eb0fc7026cfd25013d78ceb4faf.gif"></p>
+<p>LPUSH命令执行成功默认返回数据存入到列表后<strong>列表中元素的总数量</strong>，以下是LPUSH命令的使用演示：</p>
+<p><img src="https://source.icode504.com/images/image-50cef88b5f7e2183dc19eb0d93a3b5c0.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-50cef88b5f7e2183dc19eb0d93a3b5c0.png"></p>
+<p>2. （列表尾部）从右向左依次将元素存入到列表中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">RPUSH key element [element ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-f1e5415d917fa4d114583692923f974e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 查看当前库所有的 key名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEYS *<br></code></pre></td></tr></table></figure>
+<p>假设向当前列表list的右侧添加两个元素e1、e2，这个存储过程如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-9626c0ebf4462a432aacd7aeee9682d6.gif" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-9626c0ebf4462a432aacd7aeee9682d6.gif"></p>
+<p>LPUSH命令执行成功默认返回数据存入到列表后<strong>列表中元素的总数量</strong>，以下是RPUSH命令的使用演示：</p>
+<p><img src="https://source.icode504.com/images/image-69487ad9edddd6b78f2838e18f2c544f.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-69487ad9edddd6b78f2838e18f2c544f.png"></p>
+<p>3. 从左向右获取列表指定范围的元素：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LRANGE key start stop<br></code></pre></td></tr></table></figure>
 
-<p>这里我的库中有 3 个 key：k1、k2、k3：</p>
-<p><img src="https://source.icode504.com/images/image-ffd4c285af89882da0374d2e6eec6c14.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 判断某个 key 是否存在：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EXISTS key<br></code></pre></td></tr></table></figure>
+<p>和字符串类型类似，Redis列表中每一个元素也有索引。假设当前Redis列表长度是 <code>list.length</code>：</p>
+<p>从左到右计算出的索引值范围是$[0, list.length)$，索引最大值是 <code>list.length - 1</code>；</p>
+<p>Redis也可以从右向左计算索引，默认最右侧的索引值为-1，到最左侧索引值为$-list.length$，右侧可以得出的索引值范围是$[-list.length, -1]$。</p>
+<p>假设当前key对应的列表中有8个元素，以下是对索引值范围的分析图：</p>
+<p><img src="https://source.icode504.com/images/image-d36d5732618fa3d5ab40efb380a2ef56.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-d36d5732618fa3d5ab40efb380a2ef56.png"></p>
+<p>我们在使用LRANGE命令时，start和stop可使用索引范围是$[0, list.length)$或者$[-list.length, -1]$，两个范围内的值可以混用。例如：start位置是0，stop表示列表最末尾的元素就可以使用-1表示，使用LRANGE获取整个列表的内容的执行命令是 <code>LRNAGE key 0 -1</code>。</p>
+<p>以下是LRANGE命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-56e3c8bde907a04c30e5dec120bb42cb.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-56e3c8bde907a04c30e5dec120bb42cb.png"></p>
+<p>4. 获取当前列表长度：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LLEN key<br></code></pre></td></tr></table></figure>
 
-<p>如果 key 存在，那么返回 1，不存在则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-5602cf9de396706af8b6833254c22f24.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 查看当前 key 的类型：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TYPE key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-fe9b5c56c0c14f22e647694a7a89d065.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-fe9b5c56c0c14f22e647694a7a89d065.png"></p>
+<p>5. 从左侧弹出一个元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LPOP key<br></code></pre></td></tr></table></figure>
 
-<p>这里我们查看一下键 k1 的类型，它是 string（字符串）类型：</p>
-<p><img src="https://source.icode504.com/images/image-93453d8afe5c7c3d278819ef938d7cb0.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 删除指定的 key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEL key<br></code></pre></td></tr></table></figure>
+<p>默认返回的就是当前弹出元素的值：</p>
+<p><img src="https://source.icode504.com/images/image-d4547a38d967cd4b46cfc8d0630027ab.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-d4547a38d967cd4b46cfc8d0630027ab.png"></p>
+<p>以下是LPOP执行过程动画（橘黄色为弹出的元素）：</p>
+<p><img src="https://source.icode504.com/images/image-fcdc521797a181d63ff094466518d079.gif" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-fcdc521797a181d63ff094466518d079.gif"></p>
+<p>6. 从右侧弹出一个元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">RPOP key<br></code></pre></td></tr></table></figure>
 
-<p>删除成功返回 1，失败返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-e3c13ff500eb3662e6d2dae08557b629.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 非阻塞删除：仅仅将当前 key 在 keyspace 元数据中删除，真正删除操作会在后续的异步中操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">UNLINK key<br></code></pre></td></tr></table></figure>
+<p>默认返回就是当前弹出元素的值：</p>
+<p><img src="https://source.icode504.com/images/image-a3c407d2ef19e089ef78d402c9983d6c.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-a3c407d2ef19e089ef78d402c9983d6c.png"></p>
+<p>以下是RPOP执行过程动画（橘黄色为弹出的元素）：</p>
+<p><img src="https://source.icode504.com/images/image-a7c7fa7fc514a92f8fe21720c7142a29.gif" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-a7c7fa7fc514a92f8fe21720c7142a29.gif"></p>
+<p>7. 根据索引值获取列表指定元素（默认从0开始）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LINDEX key index<br></code></pre></td></tr></table></figure>
 
-<p>如果删除成功，返回结果是 1，失败则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-72c1dbc529ff96ee3abce9ad163e077d.png" srcset="/img/loading.gif" lazyload></p>
-<p>DEL 命令在删除 key 对应的数据的时候，默认是阻塞的，如果不彻底将数据删除，后续的操作将无法执行。在一些高并发系统中，这样的删除方式可能会影响到程序的正常运行。而 UNLINK 命令做到数据在“表面上”删除，真正的数据删除在后续的异步中操作。</p>
-<p>UNLINK 命令类似于 Windows 中的普通删除，如果我们想删除一个大文件，直接按<kbd>Delete</kbd>键会将其快速将文件放入到回收站，后续想删除直接鼠标右键点击清空回收站就真正执行删除数据操作；而 DEL 命令则类似选中这个文件直接按<kbd>Shift</kbd><kbd>Delete</kbd>键不通过回收站直接彻底删除文件。</p>
-<p>8. 查看当前 key 过期时间（单位：秒）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TTL key<br></code></pre></td></tr></table></figure>
+<p>这里的index就是列表的索引值，它的范围和我们在前面探讨列表的索引值范围一样。假设列表的长度是$list.length$，那么从左到右索引范围：$[0, list.length-1)$，从右向左计算得出的范围是$[-list.length, -1]$。</p>
+<p>以下是LINDEX命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-c5334e33690a30e593e821e89be1e10d.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-c5334e33690a30e593e821e89be1e10d.png"></p>
+<p>8. 删除列表中count个值为element的元素：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LREM key count element<br></code></pre></td></tr></table></figure>
 
-<p>-1 表示当前 key 永不过期，-2 表示当前 key 已过期：</p>
-<p><img src="https://source.icode504.com/images/image-34761b6bb584859d47f974b7dfba7feb.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 为给定的 key 设置过期时间（单位：秒）：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">EXPIRE key seconds</span><br></code></pre></td></tr></table></figure>
+<p>这里count分成如下几种情况：</p>
+<ul>
+<li>count &gt; 0：从头到尾删除count个值为element的元素；</li>
+<li>count &#x3D; 0：删除列表中所有值为element的元素；</li>
+<li>count &lt; 0：从尾到头删除countge值尾element的元素；</li>
+</ul>
+<p>如果当前的key不存在则视为空列表，此时执行LREM命令返回结果是0。</p>
+<p>以下是LREM命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-dde6f824f880f0e50dd9dc4cf6ccf96e.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-dde6f824f880f0e50dd9dc4cf6ccf96e.png"></p>
+<p><img src="https://source.icode504.com/images/image-f1c6b2edc69b754087cdabf0f79a0cce.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-f1c6b2edc69b754087cdabf0f79a0cce.png"></p>
+<p><img src="https://source.icode504.com/images/image-c5e68afb7b5a57d6b7b3434fb0dfef94.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-c5e68afb7b5a57d6b7b3434fb0dfef94.png"></p>
+<p>9. 截取指定范围的值后，再赋值给当前的key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LTRIM key start stop<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-18ff0e12cfa2ad0aa2f6d324ccee0ca5.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 将当前数据库的 key 移动到指定的数据库 db 当中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MOVE key dbindex [0-15]<br></code></pre></td></tr></table></figure>
+<p>这里start和stop的索引值范围和前面讨论的范围相同，需要保证start和stop在索引值范围内。</p>
+<p>如果stop的值比当前列表长度大，那么在执行LTRIM操作时，得到的结果仍然是当前列表的尾部位置，即$[start, list.length)$。</p>
+<p>以下是LTRIM命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-28b914dc89df14be0e62e39ec6b6c6fa.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-28b914dc89df14be0e62e39ec6b6c6fa.png"></p>
+<p>10. 当前列表右侧弹出一个元素，于此同时从另一个列表的左侧存入值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">RPOPLPUSH <span class="hljs-built_in">source</span> destination<br></code></pre></td></tr></table></figure>
 
-<p>如果目标库中已经存在key，那么执行上述命令的结果是0；不存在的时候，返回结果是1。</p>
-<p>11. 切换数据库[0-15]，默认使用的索引值为 0 数据库（这里我称之为db0，索引值为5的数据库称之为db5，以此类推）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SELECT dbindex<br></code></pre></td></tr></table></figure>
+<p>假设source列表中有如下元素：e1、e2、e3；destination列表有如下元素：e4、e5。</p>
+<p>执行RPOPLPUSH后，source列表尾部元素e3弹出，然后马上在destination列表头部存入，此时得到的结果是：</p>
+<ul>
+<li>source列表：e1、e2；</li>
+<li>destination列表：e3、e4、e5；</li>
+</ul>
+<p>以下是RPOPLPUSH命令演示：</p>
+<p><img src="https://source.icode504.com/images/image-de65c3bb6010a89d80803ed932b4be3f.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-de65c3bb6010a89d80803ed932b4be3f.png"></p>
+<p>下图演示了RPOPLPUSH命令如何将e3从source列表存入到destination列表中：</p>
+<p><img src="https://source.icode504.com/images/image-1603cfd51fd1e418ed09bcc42452d6f2.gif" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-1603cfd51fd1e418ed09bcc42452d6f2.gif"></p>
+<p>11. 为当前列表指定位置设置新值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LSET key index element<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-707da910a57527cf478dc8de5e5eb6d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>Redis 默认有 16 个数据库，编号范围是[0, 15]，在 Redis 配置文件 redis.conf 中有相应配置可以作证上述说法：</p>
-<p><img src="https://source.icode504.com/images/image-20240724213929763.png" srcset="/img/loading.gif" lazyload></p>
-<p>配置数据库的数量，默认的数据库是索引为 0 的数据库（db0），你可以通过<code>select &lt;dbid&gt;</code>命令切换到另一个数据库，数据库 id（dbid）范围是 0 到 databases - 1（在配置文件中 databases 对应的值是 16），即可切换的数据库范围在[0, 15]这个区间内。</p>
-<p>12. 查看当前数据库 key 的数量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DBSIZE<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-3151d7637d8b62b1e951fa6cba3265f1.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-3151d7637d8b62b1e951fa6cba3265f1.png"></p>
+<p>12. 在列表某个已有值的前后再添加具体值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">LINSERT key &lt;BEFORE | AFTER&gt; pivot element<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-bad2a23ae450b082a5eb5d5d16b051ac.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="13">
-<li>清空当前库：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHDB<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-73843f8f9abb8bd22c5efd728cd368d3.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 清空全部库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHALL<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-7fac8545aeb2cd3e504ad7c699caf5b8.png" srcset="/img/loading.gif" lazyload></p>
+<p>返回结果是当前列表的长度。</p>
+<p>如果当前key对应的是空列表，那么此命令不会执行任何操作。</p>
+<p>如果key存在，但是列表中不存在pivot的值，此时系统会提示错误信息。</p>
+<p>以下是LINSERT命令的使用：</p>
+<p><img src="https://source.icode504.com/images/image-92635ed22ef934d8e3f79be5de07b5a6.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-92635ed22ef934d8e3f79be5de07b5a6.png"></p>
+<h1 id="三、Redis列表类型的注意事项"><a href="#三、Redis列表类型的注意事项" class="headerlink" title="三、Redis列表类型的注意事项"></a>三、Redis列表类型的注意事项</h1><p>1. 访问列表的头部和尾部的时间复杂度是$O(1)$，这也就意味着访问这两个位置的效率非常高。然而，在列表内部需要操作元素的命令时间复杂度一般是$O(n)$，例如：</p>
+<ul>
+<li>LINDEX</li>
+<li>LINSERT</li>
+<li>LSET</li>
+</ul>
+<p>2. Redis列表最多可以存储$2^{32}-1$个元素：</p>
+<p><img src="https://source.icode504.com/images/image-5a647975941707823d4f5eb60fcdc12b.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-5a647975941707823d4f5eb60fcdc12b.png"></p>
+<p>3. 如果列表为空，Redis会自动删除对应的key；如果执行添加操作时，如果key不存在，此时Redis会创建一个列表并向里面添加元素。</p>
 
                 
               </div>
@@ -539,59 +441,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="category-chain-item">非关系型数据库(NoSQL)</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/" class="category-chain-item">Redis</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="category-chain-item">Redis数据类型</a>
-  
-  
-
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
         <a href="/tags/Redis/" class="print-no-link">#Redis</a>
-      
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="print-no-link">#数据库</a>
-      
-        <a href="/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="print-no-link">#非关系型数据库(NoSQL)</a>
-      
-        <a href="/tags/Redis%E4%BD%BF%E7%94%A8%E7%AF%87/" class="print-no-link">#Redis使用篇</a>
       
     </div>
   
@@ -603,8 +457,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis的key（键）相关操作</div>
-      <div>https://www.icode504.com/posts/86.html</div>
+      <div>Redis数据类型之列表List</div>
+      <div>https://www.icode504.com/posts/91.html</div>
     </div>
     <div class="license-meta">
       
@@ -648,9 +502,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/91.html" title="Redis数据类型之列表List">
+                      <a href="/posts/87.html" title="Redis数据类型之字符串类型String">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis数据类型之列表List</span>
+                        <span class="hidden-mobile">Redis数据类型之字符串类型String</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -658,8 +512,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/90.html" title="Redis学习前言">
-                        <span class="hidden-mobile">Redis学习前言</span>
+                      <a href="/posts/86.html" title="Redis的key（键）相关操作">
+                        <span class="hidden-mobile">Redis的key（键）相关操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -42,6 +42,23 @@
   </entry>
   
   <entry>
+    <title>Redis数据类型之列表List</title>
+    <link href="https://www.icode504.com/posts/91.html"/>
+    <id>https://www.icode504.com/posts/91.html</id>
+    <published>2024-08-05T14:42:55.850Z</published>
+    <updated>2024-08-06T15:50:14.903Z</updated>
+    
+    
+    <summary type="html">Redis列表类型介绍及其常用的命令</summary>
+    
+    
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Redis的key（键）相关操作</title>
     <link href="https://www.icode504.com/posts/86.html"/>
     <id>https://www.icode504.com/posts/86.html</id>
@@ -502,35 +519,6 @@
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
     
     <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>qBittorrent安装教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/71.html"/>
-    <id>https://www.icode504.com/posts/71.html</id>
-    <published>2024-05-29T10:42:02.000Z</published>
-    <updated>2024-05-31T14:29:36.000Z</updated>
-    
-    
-    <summary type="html">BT种子和磁力链接下载工具qBittorrent安装教程，并提供相应的演示。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="常用工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="qBittorrent" scheme="https://www.icode504.com/tags/qBittorrent/"/>
-    
-    <category term="磁力" scheme="https://www.icode504.com/tags/%E7%A3%81%E5%8A%9B/"/>
-    
-    <category term="BT种子" scheme="https://www.icode504.com/tags/BT%E7%A7%8D%E5%AD%90/"/>
     
   </entry>
   
