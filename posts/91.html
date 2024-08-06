@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
 <meta property="article:published_time" content="2024-08-05T14:42:55.850Z">
-<meta property="article:modified_time" content="2024-08-06T15:50:14.903Z">
+<meta property="article:modified_time" content="2024-08-06T15:53:38.169Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
@@ -479,12 +479,12 @@
 <tbody><tr>
 <td align="left">数组</td>
 <td>数组元素在内存中是连续存储的，存储结构简单，访问速度块</td>
-<td>1. 数组大小需要在创建过程中指定，不能动态调整2. 插入和删除操作效率较低3. 需要连续的内存空间</td>
+<td>1. 数组大小需要在创建过程中指定，不能动态调整<br>2. 插入和删除操作效率较低<br>3. 需要连续的内存空间</td>
 </tr>
 <tr>
 <td align="left">链表</td>
-<td>1. 可以动态调整链表大小，内存利用率较高2. 插入和删除操作较为灵活3. 元素可以分布在内存的任何位置，不需要连续的内存空间</td>
-<td>1. 访问元素较慢，查找元素需要从头遍历2. 由于链表元素在内存中分布不连续，访问速度较慢3. 每个元素需要额外的指针存储前一个或后一个节点，内存开销增加</td>
+<td>1. 可以动态调整链表大小，内存利用率较高<br>2. 插入和删除操作较为灵活<br>3. 元素可以分布在内存的任何位置，不需要连续的内存空间</td>
+<td>1. 访问元素较慢，查找元素需要从头遍历<br>2. 由于链表元素在内存中分布不连续，访问速度较慢<br>3. 每个元素需要额外的指针存储前一个或后一个节点，内存开销增加</td>
 </tr>
 </tbody></table>
 <p>首先，Redis列表（List）符合其本身和列表的基本特征：<strong>一个键（key）对应多个值（value）</strong>。</p>
