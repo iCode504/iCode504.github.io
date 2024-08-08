@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
 <meta property="article:published_time" content="2024-08-06T00:37:51.939Z">
-<meta property="article:modified_time" content="2024-08-08T03:57:14.116Z">
+<meta property="article:modified_time" content="2024-08-08T05:41:49.463Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
@@ -521,7 +521,7 @@
 
 <p>如果不指定count，默认只弹出一个成员；指定count可以弹出多个成员：</p>
 <p><img src="https://source.icode504.com/images/image-5a3391a5b8a7dc2203ade48b472e168e.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-5a3391a5b8a7dc2203ade48b472e168e.png"></p>
-<h2 id="二、多个集合操作命令"><a href="#二、多个集合操作命令" class="headerlink" title="二、多个集合操作命令"></a>二、多个集合操作命令</h2><p>1. 将当前集合中已经存在某个成员赋值给另一个集合：</p>
+<h2 id="2-2-多个集合操作命令"><a href="#2-2-多个集合操作命令" class="headerlink" title="2.2 多个集合操作命令"></a>2.2 多个集合操作命令</h2><p>1. 将当前集合中已经存在某个成员赋值给另一个集合：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SMOVE <span class="hljs-built_in">source</span> destination member<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://source.icode504.com/images/image-c26af97efba88bf7e2a595852cb865ee.png" srcset="/img/loading.gif" lazyload></p>
@@ -537,7 +537,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SINTER key [key ...]<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://source.icode504.com/images/image-eb6fe0b6d739b14db810df5e96d35505.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-eb6fe0b6d739b14db810df5e96d35505.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs #"><br>1\. Redis集合最大可以存储$2^&#123;32&#125;-1$个元素。<br><br>![https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png](https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png)<br><br>2\. 大多数和集合相关的命令在执行过程中效率较高。然而，如果集合中几十万几百万的数据时，需要谨慎使用SMEMBERS命令，因为命令在执行过程中的时间复杂度是$O(n)$。为了解决上述问题，可以使用SSCAN命令（后续会讲到）获取到集合中所有成员。<br></code></pre></td></tr></table></figure>
+<h1 id="三、Redis集合类型的使用事项"><a href="#三、Redis集合类型的使用事项" class="headerlink" title="三、Redis集合类型的使用事项"></a>三、Redis集合类型的使用事项</h1><p>1. Redis集合最大可以存储$2^{32}-1$个元素。</p>
+<p><img src="https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png"></p>
+<p>2. 大多数和集合相关的命令在执行过程中效率较高。然而，如果集合中几十万几百万的数据时，需要谨慎使用SMEMBERS命令，因为命令在执行过程中的时间复杂度是$O(n)$。为了解决上述问题，可以使用SSCAN命令（后续会讲到）获取到集合中所有成员。</p>
 
                 
               </div>
