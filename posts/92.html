@@ -18,21 +18,18 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis的key的相关操作">
+    <meta name="description" content="Redis集合类型介绍及其常用的命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis的key（键）相关操作">
-<meta property="og:url" content="https://www.icode504.com/posts/86.html">
+<meta property="og:title" content="Redis数据类型之无序集合类型Set">
+<meta property="og:url" content="https://www.icode504.com/posts/92.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis的key的相关操作">
+<meta property="og:description" content="Redis集合类型介绍及其常用的命令">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-08-05T14:33:12.796Z">
-<meta property="article:modified_time" content="2024-08-05T14:36:32.698Z">
+<meta property="article:published_time" content="2024-08-06T00:37:51.939Z">
+<meta property="article:modified_time" content="2024-08-08T03:57:14.116Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
-<meta property="article:tag" content="数据库">
-<meta property="article:tag" content="非关系型数据库(NoSQL)">
-<meta property="article:tag" content="Redis使用篇">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
   
@@ -40,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis的key（键）相关操作 - iCode504个人博客</title>
+  <title>Redis数据类型之无序集合类型Set - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis的key（键）相关操作</span>
+            <span id="subtitle">Redis数据类型之无序集合类型Set</span>
           
         </div>
 
@@ -222,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-05 22:33" pubdate>
-          2024年8月5日
+        <time datetime="2024-08-06 08:37" pubdate>
+          2024年8月6日
         </time>
       </span>
     
@@ -402,7 +399,7 @@
       
         <a href="/posts/86.html" title="Redis的key（键）相关操作"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Redis的key（键）相关操作</span>
         </a>
       
@@ -420,7 +417,7 @@
       
         <a href="/posts/92.html" title="Redis数据类型之无序集合类型Set"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis数据类型之无序集合类型Set</span>
         </a>
       
@@ -464,12 +461,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis的key（键）相关操作</h1>
+            <h1 id="seo-header">Redis数据类型之无序集合类型Set</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年8月5日
+                    本文最后更新于：2024年8月8日
                   
                 
               </p>
@@ -478,77 +475,69 @@
               <div class="markdown-body">
                 
                 <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="https://www.icode504.com/posts/90.html">点我查看</a></p>
-<p>以下是Redis键（以下称作 key）的相关操作：</p>
-<p>1. 添加一个key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure>
+<h1 id="一、Redis集合类型介绍"><a href="#一、Redis集合类型介绍" class="headerlink" title="一、Redis集合类型介绍"></a>一、Redis集合类型介绍</h1><p><strong>Redis集合（Set）中的成员是唯一且无序的</strong>，成员（Member）是Redis集合的组成单位，多个成员组成了集合。Redis集合类型在以下场景中使用效率较高：</p>
+<ul>
+<li>记录当前用户访问网站页面时的IP地址；</li>
+<li>社交APP中推荐可能认识的人；</li>
+<li>查看微信朋友圈点赞的朋友；</li>
+</ul>
+<h1 id="二、Redis集合类型常用命令"><a href="#二、Redis集合类型常用命令" class="headerlink" title="二、Redis集合类型常用命令"></a>二、Redis集合类型常用命令</h1><h2 id="2-1-单个集合操作"><a href="#2-1-单个集合操作" class="headerlink" title="2.1 单个集合操作"></a>2.1 单个集合操作</h2><p>1. 添加一个或多个成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SADD key member [member ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-b788c6b1211981fa4908a7286b3f93fb.png" srcset="/img/loading.gif" lazyload></p>
-<p>本文中涉及到的value默认都是Redis字符串（String）类型。</p>
-<p>2. 获取key对应的value：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure>
+<p>返回结果是成功添加到当前集合成员的个数：</p>
+<p><img src="https://source.icode504.com/images/image-7cef9761aa2b9fc3670a4f27f0c2d53e.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-7cef9761aa2b9fc3670a4f27f0c2d53e.png"></p>
+<p>2. 遍历集合中所有的成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SMEMBERS key<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-f1e5415d917fa4d114583692923f974e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 查看当前库所有的 key名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEYS *<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-a9b70a94d0b56a40dce689e0f2b67755.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-a9b70a94d0b56a40dce689e0f2b67755.png"></p>
+<p>3. 判断当前成员是否在集合中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SISMEMBER key member<br></code></pre></td></tr></table></figure>
 
-<p>这里我的库中有 3 个 key：k1、k2、k3：</p>
-<p><img src="https://source.icode504.com/images/image-ffd4c285af89882da0374d2e6eec6c14.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 判断某个 key 是否存在：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EXISTS key<br></code></pre></td></tr></table></figure>
+<p>如果当前集合中存在该成员，返回结果是1；如果不存在，返回结果是0：</p>
+<p><img src="https://source.icode504.com/images/image-325cf1a904c2c15f701c28584e6ee82b.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-325cf1a904c2c15f701c28584e6ee82b.png"></p>
+<p>4. 删除一个或多个成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SREM key member [member ...]<br></code></pre></td></tr></table></figure>
 
-<p>如果 key 存在，那么返回 1，不存在则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-5602cf9de396706af8b6833254c22f24.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 查看当前 key 的类型：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TYPE key<br></code></pre></td></tr></table></figure>
+<p>默认返回的是成功删除的成员数量：</p>
+<p><img src="https://source.icode504.com/images/image-cce5054ee9a745b0a403f4d8d6215dcd.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-cce5054ee9a745b0a403f4d8d6215dcd.png"></p>
+<p>5. 获取集合中成员数量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SCARD key<br></code></pre></td></tr></table></figure>
 
-<p>这里我们查看一下键 k1 的类型，它是 string（字符串）类型：</p>
-<p><img src="https://source.icode504.com/images/image-93453d8afe5c7c3d278819ef938d7cb0.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 删除指定的 key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEL key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-fa2c920cae97b9df5c2dab47cb3f0661.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-fa2c920cae97b9df5c2dab47cb3f0661.png"></p>
+<p>6. 从集合中随机展现1个或多个成员作为展示（<strong>不执行删除操作</strong>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SRANDMEMBER key [count]<br></code></pre></td></tr></table></figure>
 
-<p>删除成功返回 1，失败返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-e3c13ff500eb3662e6d2dae08557b629.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 非阻塞删除：仅仅将当前 key 在 keyspace 元数据中删除，真正删除操作会在后续的异步中操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">UNLINK key<br></code></pre></td></tr></table></figure>
+<p>count可以分成如下情况（假设集合的长度是<code>set.length</code>并且$set.length \geq 1$）</p>
+<ul>
+<li>如果count没有值，那么随机展示一个成员；</li>
+<li>如果count在$[1, set.length)$中，那么展示count个成员；</li>
+<li>如果$count\geq set.length$，那么展示当前集合所有的成员；</li>
+<li>如果$count&lt;0$，此时随机展示|count|个元素，展示过程中，可能出现成员重复的情况：</li>
+</ul>
+<p>以下是SRANDMEMBER的使用演示：</p>
+<p><img src="https://source.icode504.com/images/image-f25c93d5fa489c4acab46e42c375084f.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-f25c93d5fa489c4acab46e42c375084f.png"></p>
+<p>7. 从集合中随机弹出一个或多个成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SPOP key [count]<br></code></pre></td></tr></table></figure>
 
-<p>如果删除成功，返回结果是 1，失败则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-72c1dbc529ff96ee3abce9ad163e077d.png" srcset="/img/loading.gif" lazyload></p>
-<p>DEL 命令在删除 key 对应的数据的时候，默认是阻塞的，如果不彻底将数据删除，后续的操作将无法执行。在一些高并发系统中，这样的删除方式可能会影响到程序的正常运行。而 UNLINK 命令做到数据在“表面上”删除，真正的数据删除在后续的异步中操作。</p>
-<p>UNLINK 命令类似于 Windows 中的普通删除，如果我们想删除一个大文件，直接按<kbd>Delete</kbd>键会将其快速将文件放入到回收站，后续想删除直接鼠标右键点击清空回收站就真正执行删除数据操作；而 DEL 命令则类似选中这个文件直接按<kbd>Shift</kbd><kbd>Delete</kbd>键不通过回收站直接彻底删除文件。</p>
-<p>8. 查看当前 key 过期时间（单位：秒）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TTL key<br></code></pre></td></tr></table></figure>
+<p>如果不指定count，默认只弹出一个成员；指定count可以弹出多个成员：</p>
+<p><img src="https://source.icode504.com/images/image-5a3391a5b8a7dc2203ade48b472e168e.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-5a3391a5b8a7dc2203ade48b472e168e.png"></p>
+<h2 id="二、多个集合操作命令"><a href="#二、多个集合操作命令" class="headerlink" title="二、多个集合操作命令"></a>二、多个集合操作命令</h2><p>1. 将当前集合中已经存在某个成员赋值给另一个集合：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SMOVE <span class="hljs-built_in">source</span> destination member<br></code></pre></td></tr></table></figure>
 
-<p>-1 表示当前 key 永不过期，-2 表示当前 key 已过期：</p>
-<p><img src="https://source.icode504.com/images/image-34761b6bb584859d47f974b7dfba7feb.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 为给定的 key 设置过期时间（单位：秒）：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">EXPIRE key seconds</span><br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-c26af97efba88bf7e2a595852cb865ee.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 集合的差集运算（$A-B$）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SDIFF key [key ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-18ff0e12cfa2ad0aa2f6d324ccee0ca5.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 将当前数据库的 key 移动到指定的数据库 db 当中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MOVE key dbindex [0-15]<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-acef2a21c121fcd6954763c73553768c.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-acef2a21c121fcd6954763c73553768c.png"></p>
+<p>3. 集合的并集运算（$A\cup B$）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SUNION key [key ...]<br></code></pre></td></tr></table></figure>
 
-<p>如果目标库中已经存在key，那么执行上述命令的结果是0；不存在的时候，返回结果是1。</p>
-<p>11. 切换数据库[0-15]，默认使用的索引值为 0 数据库（这里我称之为db0，索引值为5的数据库称之为db5，以此类推）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SELECT dbindex<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-e8c9847b0aae57d8d4fec7d52492bf36.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-e8c9847b0aae57d8d4fec7d52492bf36.png"></p>
+<p>4. 集合的交集运算（$A \cap B$）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SINTER key [key ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-707da910a57527cf478dc8de5e5eb6d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>Redis 默认有 16 个数据库，编号范围是[0, 15]，在 Redis 配置文件 redis.conf 中有相应配置可以作证上述说法：</p>
-<p><img src="https://source.icode504.com/images/image-20240724213929763.png" srcset="/img/loading.gif" lazyload></p>
-<p>配置数据库的数量，默认的数据库是索引为 0 的数据库（db0），你可以通过<code>select &lt;dbid&gt;</code>命令切换到另一个数据库，数据库 id（dbid）范围是 0 到 databases - 1（在配置文件中 databases 对应的值是 16），即可切换的数据库范围在[0, 15]这个区间内。</p>
-<p>12. 查看当前数据库 key 的数量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DBSIZE<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-bad2a23ae450b082a5eb5d5d16b051ac.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="13">
-<li>清空当前库：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHDB<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-73843f8f9abb8bd22c5efd728cd368d3.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 清空全部库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHALL<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-7fac8545aeb2cd3e504ad7c699caf5b8.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-eb6fe0b6d739b14db810df5e96d35505.png" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-eb6fe0b6d739b14db810df5e96d35505.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs #"><br>1\. Redis集合最大可以存储$2^&#123;32&#125;-1$个元素。<br><br>![https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png](https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png)<br><br>2\. 大多数和集合相关的命令在执行过程中效率较高。然而，如果集合中几十万几百万的数据时，需要谨慎使用SMEMBERS命令，因为命令在执行过程中的时间复杂度是$O(n)$。为了解决上述问题，可以使用SSCAN命令（后续会讲到）获取到集合中所有成员。<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -605,12 +594,6 @@
       
         <a href="/tags/Redis/" class="print-no-link">#Redis</a>
       
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="print-no-link">#数据库</a>
-      
-        <a href="/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="print-no-link">#非关系型数据库(NoSQL)</a>
-      
-        <a href="/tags/Redis%E4%BD%BF%E7%94%A8%E7%AF%87/" class="print-no-link">#Redis使用篇</a>
-      
     </div>
   
 </div>
@@ -621,8 +604,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis的key（键）相关操作</div>
-      <div>https://www.icode504.com/posts/86.html</div>
+      <div>Redis数据类型之无序集合类型Set</div>
+      <div>https://www.icode504.com/posts/92.html</div>
     </div>
     <div class="license-meta">
       
@@ -634,7 +617,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月5日</div>
+          <div>2024年8月6日</div>
         </div>
       
       
@@ -666,9 +649,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/91.html" title="Redis数据类型之列表List">
+                      <a href="/posts/87.html" title="Redis数据类型之字符串类型String">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis数据类型之列表List</span>
+                        <span class="hidden-mobile">Redis数据类型之字符串类型String</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -676,8 +659,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/90.html" title="Redis学习前言">
-                        <span class="hidden-mobile">Redis学习前言</span>
+                      <a href="/posts/91.html" title="Redis数据类型之列表List">
+                        <span class="hidden-mobile">Redis数据类型之列表List</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
