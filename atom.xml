@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-06T07:52:21.903Z</updated>
+  <updated>2024-08-08T07:44:19.622Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux CentOS Stream 9安装教程</title>
+    <link href="https://www.icode504.com/posts/94.html"/>
+    <id>https://www.icode504.com/posts/94.html</id>
+    <published>2024-08-08T06:26:10.983Z</published>
+    <updated>2024-08-08T07:44:19.622Z</updated>
+    
+    
+    <summary type="html">本文提供了在VMware Workstation上安装和配置CentOS虚拟机的详细步骤，指导用户完成从下载镜像到系统初始化等各个环节，帮助用户快速搭建CentOS环境。</summary>
+    
+    
+    
+    <category term="系统安装" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="CentOS" scheme="https://www.icode504.com/categories/CentOS/"/>
+    
+    
+    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
+    
+    <category term="CentOS Stream" scheme="https://www.icode504.com/tags/CentOS-Stream/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis数据类型之字符串类型String</title>
@@ -506,29 +529,6 @@
     <category term="Node.js" scheme="https://www.icode504.com/tags/Node-js/"/>
     
     <category term="npm" scheme="https://www.icode504.com/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EasyExcel工作表操作</title>
-    <link href="https://www.icode504.com/posts/73.html"/>
-    <id>https://www.icode504.com/posts/73.html</id>
-    <published>2024-05-31T12:31:11.000Z</published>
-    <updated>2024-07-14T15:15:40.000Z</updated>
-    
-    
-    <summary type="html">Excel文件也称作工作簿（Workbook），一个工作簿中可以包含多张工作表（Worksheet），本文使用EasyExcel来操作一张或多张工作表。</summary>
-    
-    
-    
-    <category term="文档操作" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
-    
-    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
-    
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
     
   </entry>
   
