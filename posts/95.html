@@ -18,46 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装JDK 21教程">
+    <meta name="description" content="本教程介绍了在Windows上安装Lua的步骤，包括从官网下载安装包、解压并配置环境变量。完成后，可在命令提示符中通过输入&#96;lua&#96;来验证安装是否成功。并在VS Code、Intellij IDEA演示了如何配置Lua并运行。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 21安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/27.html">
+<meta property="og:title" content="Lua安装配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/95.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装JDK 21教程">
+<meta property="og:description" content="本教程介绍了在Windows上安装Lua的步骤，包括从官网下载安装包、解压并配置环境变量。完成后，可在命令提示符中通过输入&#96;lua&#96;来验证安装是否成功。并在VS Code、Intellij IDEA演示了如何配置Lua并运行。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231231234124976.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000342542.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000606080.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000829197.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000948438.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101001012592.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101001101762.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101001823379.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002218161.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002302057.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002611204.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002655185.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002812677.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003131968.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003211769.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003254767.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003343061.png">
-<meta property="article:published_time" content="2024-01-02T06:24:28.000Z">
-<meta property="article:modified_time" content="2024-04-29T14:26:54.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/Lua%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta property="article:published_time" content="2024-08-12T07:07:12.131Z">
+<meta property="article:modified_time" content="2024-08-13T15:11:13.137Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Lua">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231231234124976.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/Lua%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 21安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>Lua安装配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/Lua安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 21安装配置教程（Windows版）</span>
+            <span id="subtitle">Lua安装配置教程（Windows版）</span>
           
         </div>
 
@@ -239,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-02 14:24" pubdate>
-          2024年1月2日
+        <time datetime="2024-08-12 15:07" pubdate>
+          2024年8月12日
         </time>
       </span>
     
@@ -984,17 +965,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -1024,7 +1005,7 @@
       
         <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 21安装配置教程（Windows版）</span>
         </a>
       
@@ -1048,17 +1029,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Lua"
         id="heading-0ae9478a1db9d1e2c48efa49eac1c7c6" role="tab" data-toggle="collapse" href="#collapse-0ae9478a1db9d1e2c48efa49eac1c7c6"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Lua
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-0ae9478a1db9d1e2c48efa49eac1c7c6"
+      <div class="category-collapse collapse show" id="collapse-0ae9478a1db9d1e2c48efa49eac1c7c6"
            role="tabpanel" aria-labelledby="heading-0ae9478a1db9d1e2c48efa49eac1c7c6">
         
         
@@ -1070,7 +1051,7 @@
       
         <a href="/posts/95.html" title="Lua安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Lua安装配置教程（Windows版）</span>
         </a>
       
@@ -1600,12 +1581,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 21安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">Lua安装配置教程（Windows版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年4月29日
+                    本文最后更新于：2024年8月13日
                   
                 
               </p>
@@ -1613,60 +1594,119 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
-</blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-<p>接下来为大家讲解一下JDK 21如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html">点我查看</a></p>
-<p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是21.0.1版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231231234124976.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000342542.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000606080.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000829197.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101000948438.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装中，请耐心等待：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101001012592.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 安装完成，点击<strong>关闭</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101001101762.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p>
-</blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101001823379.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
+                <p>Lua是一种轻量级、嵌入式的编程语言，最初在巴西开发。它的设计目标是简单易用，特别适合嵌入到其他软件中，作为脚本语言使用。Lua语法简洁，执行速度快，广泛应用于游戏开发、配置管理、数据处理等场景。因为它小巧且灵活，所以特别适合需要高效、易于集成的项目。</p>
+<p>以下是Windows环境下Lua安装和配置教程：</p>
+<h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 推荐安装如下软件：</p>
 <table>
 <thead>
 <tr>
-<th align="center">Windows 11</th>
+<th>软件名称</th>
+<th>安装教程</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NDM（Neat Download Manager）</td>
+<td><a href="https://www.icode504.com/posts/24.html">点我查看</a></td>
+<td>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度。</td>
+</tr>
+</tbody></table>
+<p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>进入命令行界面，执行如下命令查看当前操作系统信息：</p>
+<p>这里我的电脑是Windows操作系统，使用的是x64指令集：</p>
+<p><img src="https://source.icode504.com/images/image-42448e12a41218868a6c13ecb9bb4fac.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、下载Lua"><a href="#二、下载Lua" class="headerlink" title="二、下载Lua"></a>二、下载Lua</h1><p>1. 点击右侧链接进入Lua官网下载页：<a target="_blank" rel="noopener" href="https://luabinaries.sourceforge.net/download.html">点我查看</a></p>
+<p>2. 这里我下载的是5.4.2版本的安装包，如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-61659c1a5b1556130b377625c9fb639c.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装Lua并配置环境变量"><a href="#三、安装Lua并配置环境变量" class="headerlink" title="三、安装Lua并配置环境变量"></a>三、安装Lua并配置环境变量</h1><p>1. 将下载好的安装包解压到你熟悉的位置，推荐解压到C盘外，且路径是英文路径，这里我解压到了D盘：</p>
+<p><img src="https://source.icode504.com/images/image-54b05d14bbb77e1d398394f7a8884f76.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 为了方便演示，除了lua54.dll以外，这里我将其他文件名中包含54的全部改掉，效果如下图：</p>
+<p><img src="https://source.icode504.com/images/image-3c32bd19c78b76de3688c98351d732ed.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 选中上方路径，鼠标右键点击复制：</p>
+<p><img src="https://source.icode504.com/images/image-755ca9150bcb8f2b4c7c7ee127211d81.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击<strong>高级系统设置</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>Windows 11</th>
 <th><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
+<td><strong>Windows 10</strong></td>
 <td><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
 </tr>
 </tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002218161.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量，点击<strong>新建</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002302057.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置系统变量，按照图示操作即可：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002611204.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002655185.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 在下方系统变量中，找到<strong>Path</strong>，双击进入：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
 <p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101002812677.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003131968.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 21安装成功了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003211769.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003254767.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101003343061.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-a3a9a29b004c9309979ed48d201ac6f8.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314140351859.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 在命令行输入如下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">lua <span class="hljs-literal">-v</span><br></code></pre></td></tr></table></figure>
+
+<p>出现如下提示就说明上述环境变量配置生效：</p>
+<p><img src="https://source.icode504.com/images/image-7afd42b33f620107f00daa61fc0aa99e.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、VS-Code编写并运行Lua"><a href="#四、VS-Code编写并运行Lua" class="headerlink" title="四、VS Code编写并运行Lua"></a>四、VS Code编写并运行Lua</h1><p>需要安装VS Code的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/38.html">点我查看</a></p>
+<p>1. 打开VS Code，在左侧找到插件商店，依次安装如下三个插件：Lua、Lua Debug、Code Runner</p>
+<p><img src="https://source.icode504.com/images/image-f8397fedb6746ca655dde38f5e1dc75f.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-74f66d8a6a870f94da3e0a8863ebdf6c.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-c27df1a3798c01a6207f51d84e447d02.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 安装完成，找到Code Runner，点击齿轮图标，选择<strong>扩展设置</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-a25e5f8ea2e6a1fb46a1aa46e7053a7f.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 进入扩展设置页面，点击下方任意一个<strong>在settings.json中编辑</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-15abf67fb4f714111f4368a76ae32f97.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在<code>&quot;code-runner.executorMap&quot;</code>中找到Lua，把Lua安装目录和执行文件名粘贴到此处，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/image-7636c3f81ea2cc566f49aa9194e26aa7.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存配置文件！</p>
+<p>6. 找一个你经常写代码的位置，这里我选择在E盘编写Lua代码：</p>
+<p><img src="https://source.icode504.com/images/image-1d6b4f7c59783d513524fbc0a483a88b.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 在左侧新建一个Lua文件（文件后缀名为.lua）：</p>
+<p><img src="https://source.icode504.com/images/image-07aa672a4f079ca899924e026ece869a.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 编写一段测试代码：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;你好，我是iCode504，程序猿一枚，请多指教！&quot;</span>)<br><br><span class="hljs-keyword">if</span> <span class="hljs-number">1</span> == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-literal">true</span>)<br><span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-literal">false</span>)<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+
+<p>9. 编写完成后，按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存，点击右上角的运行按钮，在下方控制台就可以看到运行结果了：</p>
+<p><img src="https://source.icode504.com/images/image-62340d09e6530af321b2ec7de2f884a5.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、Intellij-IDEA编写并运行Lua"><a href="#五、Intellij-IDEA编写并运行Lua" class="headerlink" title="五、Intellij IDEA编写并运行Lua"></a>五、Intellij IDEA编写并运行Lua</h1><p>需要安装VS Code的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/10.html">点我查看</a></p>
+<p>1. 按<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>键，在设置中找到插件商店：</p>
+<p><img src="https://source.icode504.com/images/image-c30d6f78c336925683957aa257eafdb4.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在搜索框中搜索EmmyLua，第一个就是我们要安装的插件，点击<strong>Install</strong>安装插件：</p>
+<p><img src="https://source.icode504.com/images/image-1e7d5a1a6165cc2599157ab0cd0eadc7.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装完成，点击<strong>Restart IDE</strong>，重启IDEA。</p>
+<p>4. 按照下图操作创建项目：</p>
+<p><img src="https://source.icode504.com/images/image-3fe20ba6fb9a6131302eb1d6fc1688b3.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 在新建项目页面的左侧选中Lua项目，然后点击右下角<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-e60051229e4914b1fab153694061d6e9.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 自定义项目名称和项目的存储位置，完成后点击<strong>Finish</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-b02dcd74af9a16c0e532030f1a8b212e.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 在左侧项目目录中找到src文件夹，鼠标右键选择<strong>New</strong>，然后选择<strong>New Lua File</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-6e8d3d9e19f06f67d8f995c8d16aa7a9.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 自定义Lua文件，这里我命名为<code>MyFirstLuaProgram</code>，完成后按一下回车<kbd>Enter</kbd>：</p>
+<p><img src="https://source.icode504.com/images/image-04a52472d3dcc614f20260190232c341.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 这里我写了一段测试代码：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;你好，我是iCode504，程序猿一枚，请多指教！&quot;</span>)<br><br><span class="hljs-keyword">if</span> <span class="hljs-number">1</span> == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-literal">true</span>)<br><span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-literal">false</span>)<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+
+<p>10. 运行Lua文件：鼠标右键点击<code>Run MyFirstLuaProgram</code>（或者按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F10</kbd>）</p>
+<p><img src="https://source.icode504.com/images/image-5acc71c2767fdd023775ca97b7790d17.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 此时控制台会出现报错信息，这是因为我们还没有配置Lua执行文件：</p>
+<p><img src="https://source.icode504.com/images/image-8491104970c478e077eff482892084f0.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 找到右上角的运行配置，选择<strong>Edit Configurations</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-d9878de3de654c4b47f61d80b6394f5a.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 进入运行配置页面，找到Program，点击右侧的文件夹：</p>
+<p><img src="https://source.icode504.com/images/image-f4bd395e170210b981d58f62ffd0bc46.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 找到Lua的安装位置并选中<code>lua.exe</code>，完成后点击<strong>OK</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-bca143b8c339a34aea6408556cc8e346.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 点击OK，完成配置：</p>
+<p><img src="https://source.icode504.com/images/image-05eb5836fb0af80446840b8dd8a397bc.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 再次运行这个文件，此时我们就可以看到输出结果了：</p>
+<p><img src="https://source.icode504.com/images/image-af6f125a895349c73d842e0777bb4395.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h1><p>1. VS Code配置Lua环境：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44697754/article/details/133103543">https://blog.csdn.net/qq_44697754/article/details/133103543</a></p>
+<p>2. 使用IDEA编写lua脚本并运行：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53253335/article/details/137603361">https://blog.csdn.net/qq_53253335/article/details/137603361</a></p>
 
                 
               </div>
@@ -1700,7 +1740,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Lua/" class="category-chain-item">Lua</a>
   
   
 
@@ -1723,7 +1763,7 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/Lua/" class="print-no-link">#Lua</a>
       
     </div>
   
@@ -1735,8 +1775,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 21安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/27.html</div>
+      <div>Lua安装配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/95.html</div>
     </div>
     <div class="license-meta">
       
@@ -1748,7 +1788,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月2日</div>
+          <div>2024年8月12日</div>
         </div>
       
       
@@ -1780,18 +1820,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JDK 11安装配置教程（Windows版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）">
-                        <span class="hidden-mobile">JDK 17安装配置教程（Windows版）</span>
+                      <a href="/posts/94.html" title="Linux CentOS Stream 9安装教程">
+                        <span class="hidden-mobile">Linux CentOS Stream 9安装教程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

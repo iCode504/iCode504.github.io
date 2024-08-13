@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-08T07:44:19.622Z</updated>
+  <updated>2024-08-13T15:11:13.137Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lua安装配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/95.html"/>
+    <id>https://www.icode504.com/posts/95.html</id>
+    <published>2024-08-12T07:07:12.131Z</published>
+    <updated>2024-08-13T15:11:13.137Z</updated>
+    
+    
+    <summary type="html">本教程介绍了在Windows上安装Lua的步骤，包括从官网下载安装包、解压并配置环境变量。完成后，可在命令提示符中通过输入`lua`来验证安装是否成功。并在VS Code、Intellij IDEA演示了如何配置Lua并运行。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Lua" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Lua/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Lua" scheme="https://www.icode504.com/tags/Lua/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux CentOS Stream 9安装教程</title>
@@ -502,27 +529,6 @@
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
     
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js安装、配置教程（Linux通用版）</title>
-    <link href="https://www.icode504.com/posts/74.html"/>
-    <id>https://www.icode504.com/posts/74.html</id>
-    <published>2024-06-11T23:36:52.000Z</published>
-    <updated>2024-08-09T05:43:21.768Z</updated>
-    
-    
-    <summary type="html">这篇教程旨在为 Linux 用户提供 Node.js的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。</summary>
-    
-    
-    
-    
-    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
-    
-    <category term="Node.js" scheme="https://www.icode504.com/tags/Node-js/"/>
-    
-    <category term="npm" scheme="https://www.icode504.com/tags/npm/"/>
     
   </entry>
   
