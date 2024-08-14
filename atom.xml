@@ -30,9 +30,9 @@
     
     <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
-    <category term="macOS" scheme="https://www.icode504.com/categories/macOS/"/>
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
     
-    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
     
     <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
