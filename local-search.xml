@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Visual Studio Code安装配置教程（macOS版）</title>
+    <link href="/posts/97.html"/>
+    <url>/posts/97.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h1><table><thead><tr><th>软件名称</th><th>安装教程</th><th>说明</th></tr></thead><tbody><tr><td>NDM（Neat Download Manager）</td><td><a href="https://www.icode504.com/posts/24.html">点我查看</a></td><td>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度。</td></tr></tbody></table><h1 id="二、下载Visual-Studio-Code（VS-Code）"><a href="#二、下载Visual-Studio-Code（VS-Code）" class="headerlink" title="二、下载Visual Studio Code（VS Code）"></a>二、下载Visual Studio Code（VS Code）</h1><p>1. 打开官网下载地址：<a href="https://code.visualstudio.com/Download">点我查看</a></p><p>2. 根据自己的操作系统，选择下载安装包。这里我使用的是macOS，只需要点击第一个即可：</p><p><img src="https://source.icode504.com/images/image-25df0f629c8a766d25cee7b39c312595.png"></p><p>3. 如果浏览器没有下载，就点击页面中的这个链接下载（浏览器已下载的请忽略这条）：</p><p><img src="https://source.icode504.com/images/image-a323a0e7ad89cb03e55b167162afd809.png"></p><h1 id="三、安装Visual-Studio-Code（VS-Code）"><a href="#三、安装Visual-Studio-Code（VS-Code）" class="headerlink" title="三、安装Visual Studio Code（VS Code）"></a>三、安装Visual Studio Code（VS Code）</h1><p>1. 双击打开安装包，此时会将安装包自动解压到当前安装目录：</p><p><img src="https://source.icode504.com/images/image-9703209f59d6b7eab88e8230ad8f6da1.png"></p><p>2. 将安装程序移动到应用程序中：</p><p><img src="https://source.icode504.com/images/image-52472d528155bec64aa9aab4c8c36fad.gif"></p><p>3. 在启动栏找到VS Code并打开：</p><p><img src="https://source.icode504.com/images/image-e1d2a65c8ea75c17a98d4e8ba03cede9.png"></p><h1 id="四、Visual-Studio-Code（VS-Code）的简单配置"><a href="#四、Visual-Studio-Code（VS-Code）的简单配置" class="headerlink" title="四、Visual Studio Code（VS Code）的简单配置"></a>四、Visual Studio Code（VS Code）的简单配置</h1><h2 id="3-1-页面汉化（可选）"><a href="#3-1-页面汉化（可选）" class="headerlink" title="3.1 页面汉化（可选）"></a>3.1 页面汉化（可选）</h2><p>VS Code默认是英文界面，对于一些英文不太好的小伙伴可能不太友好，好在官方为我们提供了VS Code的汉化包。</p><p>1. 在左侧菜单找到插件商店：</p><p><img src="https://source.icode504.com/images/image-8db8004ea105ba41de9be3e7c7165a04.png"></p><p>2. 在搜索框中搜索<code>Chinese Simplified</code>，搜索结果第一个就是我们要安装插件，点击<strong>Install</strong>安装插件：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131170733135.png"></p><p>3. 安装完成后，右下角会弹出一个窗口提示，点击<code>Change Language and Restart</code>，重新加载：</p><p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131170831058.png"></p><p>4. 汉化成功！页面如下图所示：</p><p><img src="https://source.icode504.com/images/image-09e7d5fd36a440cead40287328cf8a9f.png"></p><h2 id="3-2-开启文件自动保存（可选）"><a href="#3-2-开启文件自动保存（可选）" class="headerlink" title="3.2 开启文件自动保存（可选）"></a>3.2 开启文件自动保存（可选）</h2><p>在VS Code中写代码，默认是需要按<kbd>⌘</kbd>+<kbd>S</kbd>键保存文件。但是如果出现意外状况（例如电脑突然断电），你编写的代码如果没保存，绝对能搞炸你的心态。因此，我们需要开启文件自动保存功能。</p><p>1. 点击左下角的齿轮（或者按快捷键<kbd>⌘</kbd>和<kbd>,</kbd>），进入设置：</p><p><img src="https://source.icode504.com/images/image-5e4e805e711f55df96f117fb6439a96e.png"></p><p>2. 在上方搜索框中输入<code>auto save</code>，常用设置中改为<code>afterDelay</code>：</p><p><img src="https://source.icode504.com/images/image-a4d562736ecc94f7ce97aff10e9a8cec.png"></p><p>3. 左侧菜单选择<strong>文件</strong>，将保存方式更改成<strong>afterDelay</strong>，保存时间间隔自定义（以毫秒为单位）：</p><p><img src="https://source.icode504.com/images/image-fc8288ff3d9bbaf9455d6f6dae3e872e.png"></p><h2 id="3-3-主题风格配置（可选）"><a href="#3-3-主题风格配置（可选）" class="headerlink" title="3.3 主题风格配置（可选）"></a>3.3 主题风格配置（可选）</h2><p>VS Code支持多种主题风格配置。例如：暗黑风格、纯白风格等等。</p><blockquote><p>说明：如果系统自带的风格都不符合，可以到插件商店自行下载其他风格的主题。</p></blockquote><p>1. 点击左下角的齿轮，选择主题：</p><p><img src="https://source.icode504.com/images/image-a8358af60ea73f89451f0da1b930bc3c.png"></p><p>2. 此时浏览器上方会弹出系统自带的颜色主题。2024是龙年，也是我的本命年，这里我选个红色，图个喜庆！</p><p><img src="https://source.icode504.com/images/image-5fedf3568adfc2705308ad5497846200.png"></p><p>3. 修改后的颜色风格如下图所示：</p><p><img src="https://source.icode504.com/images/image-c5cdc0b3625a070d71d19cfaed4be7f8.png"></p><h1 id="五、卸载Visual-Studio-Code（VS-Code）（可选）"><a href="#五、卸载Visual-Studio-Code（VS-Code）（可选）" class="headerlink" title="五、卸载Visual Studio Code（VS Code）（可选）"></a>五、卸载Visual Studio Code（VS Code）（可选）</h1><p>打开访达，点击左侧的应用程序，将Visual Studio Code安装程序移动到废纸篓即可完成卸载：</p><p><img src="https://source.icode504.com/images/image-b11c13868c1330ab7036b476181ead79.gif"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>集成开发环境</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+      <tag>Visual Studio Code</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Maven安装和配置教程（macOS版）</title>
     <link href="/posts/96.html"/>
     <url>/posts/96.html</url>

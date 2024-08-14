@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-14T08:04:48.145Z</updated>
+  <updated>2024-08-14T08:57:08.523Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio Code安装配置教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/97.html"/>
+    <id>https://www.icode504.com/posts/97.html</id>
+    <published>2024-08-14T08:16:12.295Z</published>
+    <updated>2024-08-14T08:57:08.523Z</updated>
+    
+    
+    <summary type="html">macOS环境下安装Visual Studio Code并对其做简单的配置</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/macOS/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven安装和配置教程（macOS版）</title>
@@ -502,29 +527,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="DBeaver" scheme="https://www.icode504.com/tags/DBeaver/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows通过命令行关闭某个端口</title>
-    <link href="https://www.icode504.com/posts/76.html"/>
-    <id>https://www.icode504.com/posts/76.html</id>
-    <published>2024-06-29T03:31:56.000Z</published>
-    <updated>2024-06-29T03:31:58.000Z</updated>
-    
-    
-    <summary type="html">Windows通过命令行关闭某个端口</summary>
-    
-    
-    
-    <category term="常用操作" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Windows/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="常用操作" scheme="https://www.icode504.com/tags/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
