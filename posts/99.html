@@ -18,29 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="NDM（Neat Download Manger）是一款免费小巧的网络资源下载器。它支持Windows和MacOS，和浏览器相比，它的优势是下载文件速度非常快，是一款好用的下载神器。本文主要讲述了NDM的安装、配置和浏览器插件配置，并对同一个文件下载，NDM下载文件的时间和浏览器自身下载文件的时间做出对比。">
+    <meta name="description" content="本文简要介绍了在macOS操作系统上安装Electerm的步骤。通过该教程，用户可以轻松下载、安装并配置Electerm，确保后续在macOS平台上享受强大的终端功能和文件管理能力。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）">
-<meta property="og:url" content="https://www.icode504.com/posts/24.html">
+<meta property="og:title" content="Electerm安装、配置与卸载教程（macOS版）">
+<meta property="og:url" content="https://www.icode504.com/posts/99.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="NDM（Neat Download Manger）是一款免费小巧的网络资源下载器。它支持Windows和MacOS，和浏览器相比，它的优势是下载文件速度非常快，是一款好用的下载神器。本文主要讲述了NDM的安装、配置和浏览器插件配置，并对同一个文件下载，NDM下载文件的时间和浏览器自身下载文件的时间做出对比。">
+<meta property="og:description" content="本文简要介绍了在macOS操作系统上安装Electerm的步骤。通过该教程，用户可以轻松下载、安装并配置Electerm，确保后续在macOS平台上享受强大的终端功能和文件管理能力。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8NDM%EF%BC%88Neat%20Download%20Manager%EF%BC%89%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%92%8CMacOS%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
-<meta property="article:published_time" content="2023-12-28T07:26:50.000Z">
-<meta property="article:modified_time" content="2024-06-23T03:22:56.000Z">
+<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Electerm%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta property="article:published_time" content="2024-08-15T01:07:18.024Z">
+<meta property="article:modified_time" content="2024-08-15T02:35:34.514Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Electerm">
 <meta property="article:tag" content="macOS">
-<meta property="article:tag" content="Neat Download Manager">
-<meta property="article:tag" content="NDM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8NDM%EF%BC%88Neat%20Download%20Manager%EF%BC%89%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%92%8CMacOS%EF%BC%89-%E5%B0%81%E9%9D%A2.png">
+<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Electerm%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS） - iCode504个人博客</title>
+  <title>Electerm安装、配置与卸载教程（macOS版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）-封面.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Electerm安装、配置与卸载教程（Windows版）.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
+            <span id="subtitle">Electerm安装、配置与卸载教程（macOS版）</span>
           
         </div>
 
@@ -222,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-28 15:26" pubdate>
-          2023年12月28日
+        <time datetime="2024-08-15 09:07" pubdate>
+          2024年8月15日
         </time>
       </span>
     
@@ -604,17 +602,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(30)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -705,17 +703,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
         id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         常用工具
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
            role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
         
         
@@ -727,7 +725,7 @@
       
         <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
         </a>
       
@@ -1457,17 +1455,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
         id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         常用工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
            role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
         
         
@@ -1479,7 +1477,7 @@
       
         <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
         </a>
       
@@ -1540,17 +1538,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务器&amp;虚拟机"
         id="heading-7ec8cc6b4757baf09bb338cb829a21d5" role="tab" data-toggle="collapse" href="#collapse-7ec8cc6b4757baf09bb338cb829a21d5"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         服务器&amp;虚拟机
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7ec8cc6b4757baf09bb338cb829a21d5"
+      <div class="category-collapse collapse show" id="collapse-7ec8cc6b4757baf09bb338cb829a21d5"
            role="tabpanel" aria-labelledby="heading-7ec8cc6b4757baf09bb338cb829a21d5">
         
         
@@ -1562,7 +1560,7 @@
       
         <a href="/posts/99.html" title="Electerm安装、配置与卸载教程（macOS版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Electerm安装、配置与卸载教程（macOS版）</span>
         </a>
       
@@ -1781,12 +1779,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</h1>
+            <h1 id="seo-header">Electerm安装、配置与卸载教程（macOS版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年6月23日
+                    本文最后更新于：2024年8月15日
                   
                 
               </p>
@@ -1794,77 +1792,62 @@
             
               <div class="markdown-body">
                 
-                <p>Neat Download Manager（以下简称 NDM）是一款免费小巧的网络资源下载器。说白了就是和迅雷、IDM（Internet Download Manager）类似。和 IDM 相比，NDM 占用空间非常小（安装空间就 2M 左右），并且支持 Windows 和 MacOS 操作系统。它可以对单个文件进行多线程下载（将单个文件切割成多份下载，大幅加快下载速度）。</p>
-<p>多线程下载是 NDM 的一大优势，更多内容可以到官网页面了解：<a target="_blank" rel="noopener" href="https://www.neatdownloadmanager.com/index.php/en/">点我进入官网</a>。</p>
-<p>以下是 Windows 和 macOS 环境下安装 NDM 教程：</p>
-<h1 id="一、下载-NDM"><a href="#一、下载-NDM" class="headerlink" title="一、下载 NDM"></a>一、下载 NDM</h1><p>1. 打开 NDM 官网：<a target="_blank" rel="noopener" href="https://www.neatdownloadmanager.com/index.php/en/">点我查看</a></p>
-<p>2. 根据自己的操作系统下载 NDM，这里我下载的是 Windows 版的，点击左边的下载（macOS 点击右侧链接下载）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111318254.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装-NDM（Windows）"><a href="#二、安装-NDM（Windows）" class="headerlink" title="二、安装 NDM（Windows）"></a>二、安装 NDM（Windows）</h1><p>1. 双击打开安装包，选择安装路径，这里我安装了 D 盘：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111448526.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111637064.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111658143.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 根据自身情况是否创建桌面图标，完成后点击 Next：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111828907.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<code>Install</code>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228111852068.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 安装中，请耐心等待。</p>
-<p>5. 安装完成，点击<code>Finish</code>直接启动：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112031479.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. NDM 界面如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112107266.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、安装-NDM（macOS）"><a href="#三、安装-NDM（macOS）" class="headerlink" title="三、安装 NDM（macOS）"></a>三、安装 NDM（macOS）</h1><p>1. 双击打开下载好的安装包，将 NDM 拖入到 Applications 中，完成安装：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240417140248009.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在应用程序中双击打开 NDM：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240417140743668.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 此时会弹出一个提示，点击<strong>打开</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240417140835641.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. NDM 界面如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240417140941812.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、配置-NDM"><a href="#四、配置-NDM" class="headerlink" title="四、配置 NDM"></a>四、配置 NDM</h1><p>接下来，我们对 NDM 做一些简单配置，点击右上角的小齿轮（Settings），打开 NDM 设置：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112157668.png" srcset="/img/loading.gif" lazyload></p>
-<p>最大连接数设置成 32，让 NDM 在下载文件时拉满带宽，加快下载速度</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112309663.png" srcset="/img/loading.gif" lazyload></p>
-<p>文件下载位置建议改成除 C 盘外你熟悉的位置（如果你的电脑只有 C 盘直接跳过）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228112529398.png" srcset="/img/loading.gif" lazyload></p>
-<p>完成后点击 OK 即可，对 NDM 的配置就完成了。</p>
-<h1 id="五、给浏览器安装-NDM-插件"><a href="#五、给浏览器安装-NDM-插件" class="headerlink" title="五、给浏览器安装 NDM 插件"></a>五、给浏览器安装 NDM 插件</h1><p>接下来，我们给浏览器安装 NDM 插件，方便后续我们在浏览器下载内容是让 NDM 能嗅探到，直接调用 NDM 代替浏览器下载文件。</p>
-<p>以下提供了三个浏览器安装插件的方式：Chrome 浏览器、火狐浏览器、Edge 浏览器。大家任选其一即可。</p>
-<h2 id="5-1-Chorme-浏览器"><a href="#5-1-Chorme-浏览器" class="headerlink" title="5.1 Chorme 浏览器"></a>5.1 Chorme 浏览器</h2><p>1. 由于国内无法访问谷歌应用商店，因此正常方式无法获得 NDM 插件。这里我为大家分享了 NDM 插件，点击右侧链接下载插件：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/ikPCA1j6omkd">点我下载</a></p>
-<p>2. 按照下图所示操作，打开扩展程序管理页面：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228113739950.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 打开右上角的<strong>开发者模式</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228113846887.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 将刚才下载好的插件直接拖入到界面中，上方会有一个弹窗，点击<strong>添加扩展程序</strong>即可：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/231228001.gif" srcset="/img/loading.gif" lazyload></p>
-<p>5. 至此，NDM 插件就已经安装完成了。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228114300605.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="5-2-火狐浏览器"><a href="#5-2-火狐浏览器" class="headerlink" title="5.2 火狐浏览器"></a>5.2 火狐浏览器</h2><p>1. 点击右上角，选择扩展与主题（或者直接按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>A</kbd>），搜索<code>NeatDownloadManger</code>并按回车键搜索：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115328017.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 搜索结果中，找到<code>NeatDownloadManger Extension</code>，点击进入：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115418650.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 添加到 FireFox：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115540347.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 右上角会有一个小弹窗，点击<strong>添加</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115610110.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 添加成功，点击<strong>好的</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228115653250.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="5-3-Edge-浏览器"><a href="#5-3-Edge-浏览器" class="headerlink" title="5.3 Edge 浏览器"></a>5.3 Edge 浏览器</h2><p>1. 打开 Edge 浏览器，点击右上角的三个小点，点击扩展：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150457486.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择倒数第二个，<strong>管理扩展</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150538422.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在扩展页面左侧选择<strong>获取 Microsoft Edge 扩展</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150628199.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在扩展商店搜索 NeatDownloadManager，完成后按回车就能看到搜索结果，点击<strong>获取</strong>即可：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228150918779.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 选择<strong>添加扩展</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228151039221.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 右上角出现如下弹窗信息就说明 NDM 插件添加成功：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228151125225.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="六、试一下-NDM-有多快"><a href="#六、试一下-NDM-有多快" class="headerlink" title="六、试一下 NDM 有多快"></a>六、试一下 NDM 有多快</h1><p>以下是演示内容。这里我找了一个大一点 MySQL 的安装包（约 1.3G）下载来演示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20231228134507751.png" srcset="/img/loading.gif" lazyload></p>
-<p>使用 NDM 下载：速度直接拉满，我这台电脑使用 NDM 下载上述文件用时 2 分 39 秒，感兴趣的小伙伴可以观看：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yRZk0dI6i6AqQXiuvrpoeQ?pwd=w4jk">NDM 下载文件视频（未剪辑版）</a>。</p>
-<p>如果使用浏览器本身下载：速度就差了一大截，下载速度维持在 500KB~1.3M 左右，下载用时 19 分 22 秒，感兴趣的小伙伴可以观看：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1tSky3oSyQ4Pq2nYJrctvJg?pwd=nxwn">浏览器下载文件视频（未剪辑版）</a>。</p>
+                <p>Electerm 是一款开源免费的终端模拟器，集终端模拟器、文件管理器、SSH 远程连接、SFTP 客户端等功能于一体。它可以在 Windows、macOS 和 Linux 操作系统上运行，为用户提供一个功能丰富、易于使用的终端环境。</p>
+<p>通过 Electerm，用户可以在同一窗口中运行多个 SSH 会话，轻松管理远程服务器，并使用各种 Shell 命令。它还支持多种认证方式，包括密码、密钥、双因素认证等，以满足不同用户的需求，使得使用 SSH 会话更加高效方便。</p>
+<p>在文件传输方面，Electerm 支持 SFTP 功能，可以方便地传输文件和管理网络连接。它还支持多语言，包括英语、中文等。</p>
+<p>接下来介绍一下 macOS 环境下的 Electerm 的安装和简单配置。</p>
+<h1 id="一、下载-Electerm"><a href="#一、下载-Electerm" class="headerlink" title="一、下载 Electerm"></a>一、下载 Electerm</h1><blockquote>
+<p>本文后续内容使用 NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器 NDM（Neat Download Manager）安装配置教程（适用于 Windows 和 MacOS）</a></p>
+<p>已经安装的小伙伴请直接往下看。</p>
+</blockquote>
+<p>1. 打开 Electerm 官网：<a target="_blank" rel="noopener" href="https://electerm.html5beta.com/index-zh_cn.html">点我查看</a></p>
+<p>2. 在下方页面，找到 macOS 相关的安装包，我们按照下图所示操作到Sourceforge中下载：</p>
+<p><img src="https://source.icode504.com/images/image-e7597fe27b6df12699520c7622a37380.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装-Electerm"><a href="#二、安装-Electerm" class="headerlink" title="二、安装 Electerm"></a>二、安装 Electerm</h1><p>1. 打开下载好的安装包，将安装包拖入到应用程序中即可完成安装：</p>
+<p><img src="https://source.icode504.com/images/image-48458ace6275c4ab0977884451b68a7f.gif" srcset="/img/loading.gif" lazyload alt="https://source.icode504.com/images/image-48458ace6275c4ab0977884451b68a7f.gif"></p>
+<p>2. 安装完成后，在控制台找到Electerm，双击打开：</p>
+<p><img src="https://source.icode504.com/images/image-a1062be1ee06af09c1dd3901096cd993.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、Electerm-的简单配置"><a href="#三、Electerm-的简单配置" class="headerlink" title="三、Electerm 的简单配置"></a>三、Electerm 的简单配置</h1><blockquote>
+<p>说明：以下包含“可选”的标题中可以自行修改，并不影响实际使用。</p>
+</blockquote>
+<h2 id="3-1-更换主题风格（可选）"><a href="#3-1-更换主题风格（可选）" class="headerlink" title="3.1 更换主题风格（可选）"></a>3.1 更换主题风格（可选）</h2><p>在桌面打开 Electerm，默认是黑色界面：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213105358335.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果你不喜欢这个纯黑界面，可以在左侧找到<strong>设置</strong>（小齿轮）对主题进行更改：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213105514644.png" srcset="/img/loading.gif" lazyload></p>
+<p>在设置中，找到 UI 主题（内置了多个主题，也可以自定义主题，这里我选用的是 Github 主题），在下方搜索框中输入 Github，其中第二个搜索结果就是我们想要的：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213110343282.png" srcset="/img/loading.gif" lazyload></p>
+<p>选择 Github 主题，此时最右侧会出现一个对号图标，点击这个图标就是应用这个主题：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213110645152.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击左上角的关闭图标，此时我们发现界面变成了白色风格：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213110745168.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213111646109.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-2-设置背景图片（可选）"><a href="#3-2-设置背景图片（可选）" class="headerlink" title="3.2 设置背景图片（可选）"></a>3.2 设置背景图片（可选）</h2><p>界面上有一个 Electerm 的大 logo，其实这是一张背景图片。软件本身支持修改背景图片。</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213111722825.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击左侧菜单，打开<strong>设置</strong>（小齿轮）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213111908999.png" srcset="/img/loading.gif" lazyload></p>
+<p>在设置下方，找到<strong>终端</strong>，右侧有<strong>终端背景图片</strong>设置：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213112130980.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果你不需要背景图片，就点击以下输入框，此时会弹出一个列表框，选择无背景图片即可：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213112256558.png" srcset="/img/loading.gif" lazyload></p>
+<p>需要更换背景图片的小伙伴，建议是保存在本地的电脑壁纸（虽然 Electerm 支持在线图片链接，但是没有网了以后图片也不会显示）。点击右侧<strong>选择文件</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213114042874.png" srcset="/img/loading.gif" lazyload></p>
+<p>在本地选择一张壁纸（壁纸建议是简约风，否则花里胡哨可能会影响使用体验）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213114529925.png" srcset="/img/loading.gif" lazyload></p>
+<p>图片设置好以后，我们可以在下方设置图片的透明度和模糊度：</p>
+<ul>
+<li>透明度（Opacity），值在 0~1 之间，数值越小，图片的透明度越低。</li>
+<li>模糊度（Blur），数值越大，图片越模糊。</li>
+</ul>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213115310321.png" srcset="/img/loading.gif" lazyload></p>
+<p>修改后界面效果如下：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213115750587.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-3-关闭检查更新"><a href="#3-3-关闭检查更新" class="headerlink" title="3.3 关闭检查更新"></a>3.3 关闭检查更新</h2><p>Electerm 更新软件默认会从 Github 下载，但是 Github 对国内用户并不友好（因为网络原因经常访问失败）。如果你不想使用新版本的 Electerm，建议关闭检查更新这一项。</p>
+<p>点击右侧的<strong>设置</strong>（小齿轮）：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213111908999.png" srcset="/img/loading.gif" lazyload></p>
+<p>在设置中的 Common，在下方设置中关闭<strong>检查应用程序启动时的更新</strong>：</p>
+<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240213120341726.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、卸载-Electerm（可选）"><a href="#四、卸载-Electerm（可选）" class="headerlink" title="四、卸载 Electerm（可选）"></a>四、卸载 Electerm（可选）</h1><p>打开Finder，在左侧选择应用程序，找到Electerm拖入到废纸篓即可完成卸载：</p>
+<p><img src="https://source.icode504.com/images/image-fb53c515d742c104654573b4528c694d.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1888,12 +1871,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/" class="category-chain-item">macOS</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" class="category-chain-item">常用工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="category-chain-item">服务器&amp;虚拟机</a>
   
   
 
@@ -1912,13 +1895,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Electerm/" class="print-no-link">#Electerm</a>
       
         <a href="/tags/macOS/" class="print-no-link">#macOS</a>
-      
-        <a href="/tags/Neat-Download-Manager/" class="print-no-link">#Neat Download Manager</a>
-      
-        <a href="/tags/NDM/" class="print-no-link">#NDM</a>
       
     </div>
   
@@ -1930,8 +1909,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</div>
-      <div>https://www.icode504.com/posts/24.html</div>
+      <div>Electerm安装、配置与卸载教程（macOS版）</div>
+      <div>https://www.icode504.com/posts/99.html</div>
     </div>
     <div class="license-meta">
       
@@ -1943,7 +1922,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月28日</div>
+          <div>2024年8月15日</div>
         </div>
       
       
@@ -1975,18 +1954,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">访问Github卡顿甚至进不去的解决办法（适用于Windows）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/23.html" title="入门篇-其之十一-流程控制之break和continue关键字">
-                        <span class="hidden-mobile">入门篇-其之十一-流程控制之break和continue关键字</span>
+                      <a href="/posts/97.html" title="Visual Studio Code安装配置教程（macOS版）">
+                        <span class="hidden-mobile">Visual Studio Code安装配置教程（macOS版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
