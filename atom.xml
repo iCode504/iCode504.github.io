@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-15T06:31:28.201Z</updated>
+  <updated>2024-08-16T01:43:19.631Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>若依+Apifox实现接口测试（解决访问接口401问题）</title>
+    <link href="https://www.icode504.com/posts/101.html"/>
+    <id>https://www.icode504.com/posts/101.html</id>
+    <published>2024-08-15T06:38:21.370Z</published>
+    <updated>2024-08-16T01:43:19.631Z</updated>
+    
+    
+    <summary type="html">解决若依启动后，使用Apifox访问接口返回401的问题：</summary>
+    
+    
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="若依" scheme="https://www.icode504.com/tags/%E8%8B%A5%E4%BE%9D/"/>
+    
+    <category term="Apifox" scheme="https://www.icode504.com/tags/Apifox/"/>
+    
+  </entry>
   
   <entry>
     <title>若依关闭登录页面的验证码</title>
@@ -504,31 +525,6 @@
     <category term="Watt tookit" scheme="https://www.icode504.com/tags/Watt-tookit/"/>
     
     <category term="Github" scheme="https://www.icode504.com/tags/Github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intellij IDEA安装配置教程（macOS版）</title>
-    <link href="https://www.icode504.com/posts/79.html"/>
-    <id>https://www.icode504.com/posts/79.html</id>
-    <published>2024-07-14T13:51:01.000Z</published>
-    <updated>2024-07-14T14:04:38.000Z</updated>
-    
-    
-    <summary type="html">Intellij IDEA安装与配置教程（macOS版）探讨了程序员在工作中需要掌握的工具Intellij IDEA，包括下载安装、JDK环境配置、创建Java项目、在IDEA运行第一个程序等。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
-    
-    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
     
   </entry>
   
