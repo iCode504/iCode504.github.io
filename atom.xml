@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-16T01:43:19.631Z</updated>
+  <updated>2024-08-16T01:51:07.839Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -21,12 +21,18 @@
     <link href="https://www.icode504.com/posts/101.html"/>
     <id>https://www.icode504.com/posts/101.html</id>
     <published>2024-08-15T06:38:21.370Z</published>
-    <updated>2024-08-16T01:43:19.631Z</updated>
+    <updated>2024-08-16T01:51:07.839Z</updated>
     
     
     <summary type="html">解决若依启动后，使用Apifox访问接口返回401的问题：</summary>
     
     
+    
+    <category term="开源框架" scheme="https://www.icode504.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="若依" scheme="https://www.icode504.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/%E8%8B%A5%E4%BE%9D/"/>
+    
+    <category term="常见问题" scheme="https://www.icode504.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/%E8%8B%A5%E4%BE%9D/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
     
     
     <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
