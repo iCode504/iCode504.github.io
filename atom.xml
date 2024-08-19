@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-16T01:51:07.839Z</updated>
+  <updated>2024-08-19T15:56:16.507Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis数据类型之有序集合类型Sorted Set（Zset）</title>
+    <link href="https://www.icode504.com/posts/93.html"/>
+    <id>https://www.icode504.com/posts/93.html</id>
+    <published>2024-08-19T09:51:57.022Z</published>
+    <updated>2024-08-19T15:56:16.507Z</updated>
+    
+    
+    <summary type="html">Redis有序集合类型介绍和常用的命令</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库(NoSQL)" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/"/>
+    
+    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>若依+Apifox实现接口测试（解决访问接口401问题）</title>
@@ -502,35 +527,6 @@
     <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
     
     <category term="DBeaver" scheme="https://www.icode504.com/tags/DBeaver/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>访问Github卡顿甚至进不去的解决办法（适用于macOS）</title>
-    <link href="https://www.icode504.com/posts/80.html"/>
-    <id>https://www.icode504.com/posts/80.html</id>
-    <published>2024-07-20T02:13:02.000Z</published>
-    <updated>2024-07-20T06:04:44.000Z</updated>
-    
-    
-    <summary type="html">本文使用Watt Tookit（原Steam++）解决了Github在国内访问速度卡顿甚至无反应的问题，通过NDM和镜像网站实现Github大文件高速下载。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
-    
-    <category term="常用工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Neat Download Manager" scheme="https://www.icode504.com/tags/Neat-Download-Manager/"/>
-    
-    <category term="NDM" scheme="https://www.icode504.com/tags/NDM/"/>
-    
-    <category term="Watt tookit" scheme="https://www.icode504.com/tags/Watt-tookit/"/>
-    
-    <category term="Github" scheme="https://www.icode504.com/tags/Github/"/>
     
   </entry>
   
