@@ -25,14 +25,14 @@
 <meta property="og:site_name" content="iCode504个人博客">
 <meta property="og:description" content="本文介绍了如何在Eclipse集成开发环境中配置MySQL 8.0数据库。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Eclipse%E9%85%8D%E7%BD%AEMySQL%208.0%E6%95%99%E7%A8%8B.png">
+<meta property="og:image" content="https://source.icode504.com/images/Eclipse%E9%85%8D%E7%BD%AEMySQL%208.0%E6%95%99%E7%A8%8B.png">
 <meta property="article:published_time" content="2024-02-21T03:08:49.000Z">
-<meta property="article:modified_time" content="2024-05-25T15:07:42.000Z">
+<meta property="article:modified_time" content="2024-08-23T01:26:40.000Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Eclipse">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Eclipse%E9%85%8D%E7%BD%AEMySQL%208.0%E6%95%99%E7%A8%8B.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/Eclipse%E9%85%8D%E7%BD%AEMySQL%208.0%E6%95%99%E7%A8%8B.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -203,7 +203,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Eclipse配置MySQL 8.0教程.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/Eclipse配置MySQL 8.0教程.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -397,7 +397,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年5月25日
+                    本文最后更新于：2024年8月23日
                   
                 
               </p>
@@ -431,52 +431,52 @@
 <ul>
 <li>Windows检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</li>
 </ul>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
 <ul>
 <li>macOS检查MySQL安装版本：如果你是按照上面的链接一步一步安装的MySQL。在安装完成后，重新打开终端，在终端中输入<code>mysql --version</code>，即可查看当前MySQL版本信息。</li>
 </ul>
 <h1 id="一、下载MySQL数据库驱动"><a href="#一、下载MySQL数据库驱动" class="headerlink" title="一、下载MySQL数据库驱动"></a>一、下载MySQL数据库驱动</h1><p>1. 点击右侧链接进入MySQL数据库驱动下载页面：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/c-j/">点我查看</a></p>
 <p>2. 前面我们检查了MySQL是8.0.xx版本，数据库驱动建议选择8版本、操作系统我选择的是平台独立（Platform Independent）。选择完成后，点击下方ZIP压缩包下载：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221084519626.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221084519626.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 将下载好的压缩包解压到一个你熟悉的位置，这里我解压到了D盘：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221084705705.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221084851937.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221084705705.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221084851937.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="二、Eclipse配置MySQL"><a href="#二、Eclipse配置MySQL" class="headerlink" title="二、Eclipse配置MySQL"></a>二、Eclipse配置MySQL</h1><p>1. 打开Eclipse，在上方菜单栏选择Window –&gt; Show View –&gt; Other：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131100443322.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240131100443322.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 双击打开<strong>Data Management</strong>，选择<strong>Data Source Explorer</strong>，完成后点击<strong>Open</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131100530658.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240131100530658.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 此时会弹出一个Data Source Explorer窗口，鼠标右键选中第一个<strong>Database Connections</strong>，点击<strong>New</strong>新建一个连接：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131102657948.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240131102657948.png" srcset="/img/loading.gif" lazyload></p>
 <p>4. 连接类型<strong>选择MySQL并选中</strong>，Name和Description自定义，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240220154033412.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240220154033412.png" srcset="/img/loading.gif" lazyload></p>
 <p>5. 点击右上角<strong>加号</strong>修改数据库驱动和连接信息：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131103041407.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240131103041407.png" srcset="/img/loading.gif" lazyload></p>
 <p>6. 选中数据库驱动模板<strong>MySQL JDBC Driver</strong>，此时上方弹出一个错误信息：在本地系统中无法找到<code>mysql-connector-java-5.1.0-bin.jar</code>，这说明我们需要将Eclipse原有的数据库驱动改成前面我们下载安装的MySQL的JDBC：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221083249950.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221083249950.png" srcset="/img/loading.gif" lazyload></p>
 <p>7. 选择<strong>JAR List</strong>，点击右侧的<strong>Clear All</strong>，清空驱动文件（下图列出来的JAR包本地不存在）</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221083702299.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221083702299.png" srcset="/img/loading.gif" lazyload></p>
 <p>8. 点击<strong>Add JAR&#x2F;Zip</strong>，找到前面我们下载的MySQL JDBC的位置，选中<code>postgresql-42.6.0.jar</code>文件，点击<strong>打开</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240131104057823.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240131104057823.png" srcset="/img/loading.gif" lazyload></p>
 <p>9. 找到MySQL数据库驱动包解压位置，并选中文件夹中的JAR包<code>mysql-connector-j-xxx.jar</code>（这里xxx指的是版本号）。选择完成后，点击右下角<strong>打开</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221085426164.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221085426164.png" srcset="/img/loading.gif" lazyload></p>
 <p>10. 此时数据库驱动JAR包添加成功，并且上方报错信息也消失了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221085711987.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221085711987.png" srcset="/img/loading.gif" lazyload></p>
 <p>11. 点击上方的<strong>Properties</strong>，按照下图所给的提示填写好配置信息，完成后点击<strong>OK</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221090247443.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221090247443.png" srcset="/img/loading.gif" lazyload></p>
 <p>12. 记不住密码的小伙伴，请将下图的<strong>Save password</strong>勾选上（记住密码），上述内容填写完成后，点击<strong>Test Connection</strong>测试连接：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221101736075.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221101736075.png" srcset="/img/loading.gif" lazyload></p>
 <p>13. 连接成功，点击<strong>OK</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221101905828.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221101905828.png" srcset="/img/loading.gif" lazyload></p>
 <p>14. 点击<strong>Finish</strong>，MySQL安装配置完成，此时我们可以看到名为<code>mysql</code>的数据库：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221102428971.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221102428971.png" srcset="/img/loading.gif" lazyload></p>
 <p>15. 如果想连接其他数据库，鼠标右键点击MySQL，选择最后一个<strong>Properties</strong>，修改数据库属性：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221102727558.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221102727558.png" srcset="/img/loading.gif" lazyload></p>
 <p>16. 将下图中两处数据库名称修改即可，完成后点击<strong>Apply and Close</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221103016323.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221103016323.png" srcset="/img/loading.gif" lazyload></p>
 <p>17. 此时会有一个弹窗提示说数据库配置信息发生变动，是否重新连接，点击<strong>Yes</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221103111141.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221103111141.png" srcset="/img/loading.gif" lazyload></p>
 <p>18. 数据库切换成功：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240221103230805.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240221103230805.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>

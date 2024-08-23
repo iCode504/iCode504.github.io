@@ -25,13 +25,13 @@
 <meta property="og:site_name" content="iCode504个人博客">
 <meta property="og:description" content="使用Java输出英文语句和中文内容。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/3183310-20230724060009174-242599956.png">
+<meta property="og:image" content="https://source.icode504.com/images/3183310-20230724060009174-242599956.png">
 <meta property="article:published_time" content="2023-12-06T02:56:51.000Z">
-<meta property="article:modified_time" content="2024-02-03T08:43:34.000Z">
+<meta property="article:modified_time" content="2024-08-23T01:26:40.000Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/3183310-20230724060009174-242599956.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/3183310-20230724060009174-242599956.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -436,7 +436,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年2月3日
+                    本文最后更新于：2024年8月23日
                   
                 
               </p>
@@ -494,45 +494,45 @@
 
 <p>我们完全可以按照上述的步骤来操作。</p>
 <p>首先，新建一个Java源文件，这里我将其重命名为<code>Huanghelou.java</code>，操作如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/778e99d52ead3ffc1494aa5fa2c84815.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/778e99d52ead3ffc1494aa5fa2c84815.gif" srcset="/img/loading.gif" lazyload></p>
 <p>通过记事本打开这个Java源文件，先编写出这个代码的大体框架：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/56e5b8362fb48d1b44cd8360f1e97bd4.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/56e5b8362fb48d1b44cd8360f1e97bd4.png" srcset="/img/loading.gif" lazyload></p>
 <p>因为我们要输出4行诗句。因此要在Java的<code>main()</code>方法中编写4行输出语句，效果如下图：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/03903e6f6ea03f111fa5656a6d5f8c6a.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/03903e6f6ea03f111fa5656a6d5f8c6a.png" srcset="/img/loading.gif" lazyload></p>
 <p>编写完Java代码以后，点击在左上角<code>文件</code>，然后点击<code>另存为</code>，下方选择<code>所有文件</code>，编码格式选择<code>UTF-8</code>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/217121fea13549089730a5d1b0c1813d.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/217121fea13549089730a5d1b0c1813d.png" srcset="/img/loading.gif" lazyload></p>
 <p>此时会弹出一个窗口，点击是即可。完成后关闭记事本窗口。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/70c8a6fd14dabd9b31c5cba522b44576.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/70c8a6fd14dabd9b31c5cba522b44576.png" srcset="/img/loading.gif" lazyload></p>
 <p>此时按照上述步骤，我们需要对<code>Huanghelou.java</code>这个文件进行编译。</p>
 <p>点击上方文件路径，输入<code>cmd</code>，打开命令行窗口，操作如下图所示：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/f99a239f91a8142935e4dfb0a61d87ba.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/f99a239f91a8142935e4dfb0a61d87ba.gif" srcset="/img/loading.gif" lazyload></p>
 <p>执行编译命令：<code>javac Huanghelou.java</code>，执行此命令以后，命令行会提示以下错误信息：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/9577d2565ee1e910fe91e7e8f810343f.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/9577d2565ee1e910fe91e7e8f810343f.png" srcset="/img/loading.gif" lazyload></p>
 <p>这里解释一下出现编码GBK的不可映射字符的问题：由于我们之前编写的Java源文件在保存时的编码格式是<code>UTF-8</code>（如下图所示）</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/b5c4dffc411309bbe750302144d0dc51.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/b5c4dffc411309bbe750302144d0dc51.png" srcset="/img/loading.gif" lazyload></p>
 <p>而命令行所支持的编码格式是<code>GBK</code>，这就造成了Java源文件的编码格式和命令行的不匹配，从而产生上述问题了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/2b5ee9519680233b40ed4fe186c16759.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/2b5ee9519680233b40ed4fe186c16759.png" srcset="/img/loading.gif" lazyload></p>
 <p>解决办法：只需要在编译时，告诉Java编译器我们需要将这个Java源文件编译成<code>UTF-8</code>的即可，命令格式如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javac -encoding UTF-8 文件名.java<br></code></pre></td></tr></table></figure>
 
 <p>以这个文件为例，我们就使用<code>UTF-8</code>的编码格式进行编译：<code>javac -encoding UTF-8 Huanghelou.java</code>，执行此命令以后，就不会提示上述错误信息了。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/b9682af7a3aa2b7d0d6d30a0a9628d49.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/b9682af7a3aa2b7d0d6d30a0a9628d49.gif" srcset="/img/loading.gif" lazyload></p>
 <p>这时我们再运行这个Java程序：<code>java Huanghelou</code>，就能看到前面我们在前面的输出了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/baa82be9da0988e31e49e8bee62d0a40.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/baa82be9da0988e31e49e8bee62d0a40.gif" srcset="/img/loading.gif" lazyload></p>
 <h1 id="三、注意点-常见问题"><a href="#三、注意点-常见问题" class="headerlink" title="三、注意点&amp;常见问题"></a>三、注意点&amp;常见问题</h1><p>在编写第一个程序的时候，我们需要注意的问题：</p>
 <p>1. <code>class</code>后面的名称要和文件名保持一致，这里我已经提及3遍了，就是希望能引起小白的重视：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/8780e6a2bb87b9992c5495d90e52c543.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/8780e6a2bb87b9992c5495d90e52c543.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 除了<code>System.out.println(&quot;&quot;);</code>语句的双引号中的内容自定，代码中其他地方都要使用英文符号。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/b85d43444c690d261a46bfa707a67ea2.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/b85d43444c690d261a46bfa707a67ea2.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 输出语句后面的分号不要忘记（这也是许多小白在写代码最容易忽略的地方）</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/cd65434a9f37cc29e29c8a387e331cef.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/cd65434a9f37cc29e29c8a387e331cef.png" srcset="/img/loading.gif" lazyload></p>
 <p>4. 大括号、中括号、小括号一定要配对出现。写代码的时候不要忘记！</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/1aecf19e933a23c4a3a7a36834f4793d.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/1aecf19e933a23c4a3a7a36834f4793d.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="四、小练习"><a href="#四、小练习" class="headerlink" title="四、小练习"></a>四、小练习</h1><p>使用Java程序输出三句话，文件名为<code>Baiyexing.java</code>，内容如下：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">《白夜行》的作者是日本作家东野圭吾<br>这是一部很棒的悬疑小说<br>你知道白夜吗？明明是夜晚却有太阳，照得夜晚像白昼一样明亮，就是说一直这么犹豫不前的话，人生就毁了。<br></code></pre></td></tr></table></figure>
 
 <p>输出效果如下：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/8141a3e5fa2b0379996c49b254eb613e.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/8141a3e5fa2b0379996c49b254eb613e.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>

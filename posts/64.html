@@ -25,14 +25,14 @@
 <meta property="og:site_name" content="iCode504个人博客">
 <meta property="og:description" content="本文介绍了Tomcat下载与安装，配置环境变量和启动，添加了Tomcat启动过程中乱码的解决方案。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Tomcat%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta property="og:image" content="https://source.icode504.com/images/Tomcat%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
 <meta property="article:published_time" content="2024-04-07T09:07:48.000Z">
-<meta property="article:modified_time" content="2024-05-25T15:07:42.000Z">
+<meta property="article:modified_time" content="2024-08-23T01:26:40.000Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Tomcat">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/Tomcat%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/Tomcat%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -203,7 +203,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://icode504.oss-cn-beijing.aliyuncs.com/Tomcat安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/Tomcat安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -1775,7 +1775,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年5月25日
+                    本文最后更新于：2024年8月23日
                   
                 
               </p>
@@ -1793,58 +1793,58 @@
 <p>4. 推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
 <h1 id="二、下载并安装Tomcat"><a href="#二、下载并安装Tomcat" class="headerlink" title="二、下载并安装Tomcat"></a>二、下载并安装Tomcat</h1><p>1. 点击右侧链接进入Tomcat官网下载页面：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/tomcat/">点我查看</a></p>
 <p>2. 这里我下载的是Tomcat 8版本，点击<code>tomcat-8</code>文件夹：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328171551789.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328171551789.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 这里我选择的是8.5.100版本的Tomcat：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328171745250.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328171745250.png" srcset="/img/loading.gif" lazyload></p>
 <p>4. 点击第一个文件夹<code>bin</code>进入：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328171822840.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328171822840.png" srcset="/img/loading.gif" lazyload></p>
 <p>5. 按照下图所示下载安装包：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328172006970.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328172006970.png" srcset="/img/loading.gif" lazyload></p>
 <p>6. 将下载好的Tomcat安装包解压，建议解压在C盘以外的位置，路径只包含英文字符，这里我解压到了D盘：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328173336823.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328173336823.png" srcset="/img/loading.gif" lazyload></p>
 <p>7. 至此，Tomcat安装完成。</p>
 <h1 id="三、配置环境变量"><a href="#三、配置环境变量" class="headerlink" title="三、配置环境变量"></a>三、配置环境变量</h1><p>1. 找到Tomcat的解压位置，出现bin、conf、lib等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328173701038.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328173701038.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 点击<strong>高级系统设置</strong>：</p>
 <table>
 <thead>
 <tr>
 <th align="center">Windows 11</th>
-<th><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
 </tr>
 </tbody></table>
 <p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
 <p>5. 在下方系统变量中，点击<strong>新建</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
 <p>6. 新建环境变量，变量名填写<strong>CATALINA_HOME</strong>，将前面复制的路径粘贴到变量值。按照图示操作即可：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240416134746024.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240416134746024.png" srcset="/img/loading.gif" lazyload></p>
 <p>7. 双击<strong>Path</strong>进入：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
 <p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174131191.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328174131191.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="四、启动Tomcat"><a href="#四、启动Tomcat" class="headerlink" title="四、启动Tomcat"></a>四、启动Tomcat</h1><p>1. 找到Tomcat安装路径，然后点击进入<code>bin</code>文件夹，然后双击<code>startup.bat</code>文件启动Tomcat：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240407160936012.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240407160936012.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 出现最后一行提示说明Tomcat启动成功：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174458119.png" srcset="/img/loading.gif" lazyload alt="image-20240328174458119"></p>
+<p><img src="https://source.icode504.com/images/image-20240328174458119.png" srcset="/img/loading.gif" lazyload alt="image-20240328174458119"></p>
 <p>3. 如需关闭Tomcat，只需要将当前窗口关闭即可。</p>
 <h1 id="五、Tomcat启动过程中乱码问题解决（可选）"><a href="#五、Tomcat启动过程中乱码问题解决（可选）" class="headerlink" title="五、Tomcat启动过程中乱码问题解决（可选）"></a>五、Tomcat启动过程中乱码问题解决（可选）</h1><p>在上一部分内容中，Tomcat启动窗口的中文内容出现了乱码现象，其本身原因是因为控制台默认的编码集是<code>GBK</code>，而Tomcat日志配置文件中设置的编码集是<code>UTF-8</code>，二者编码集并不一致从而导致了上述现象。当然这不影响我们正常使用Tomcat，要想解决二者编码集不一致的问题，要么将Tomcat日志编码集修改成和系统中编码集保持一致，要么系统的编码集和Tomcat的编码集保持一致。这里我使用的是第一种方案（第二种方案需要改系统的注册表，比较麻烦不说，很有可能一改就翻车）：</p>
 <p>1. 打开Tomcat安装路径，点击<code>conf</code>文件夹进入：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328174800314.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328174800314.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 鼠标右键点击<code>logging.properties</code>，打开方式选择记事本打开：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328175337169.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240328175414633.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328175337169.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240328175414633.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 按<kbd>Ctrl</kbd>和<kbd>H</kbd>键，进入替换页面，替换内容填写<strong>UTF-8</strong>，替换为填写<strong>GBK</strong>，然后点击<strong>全部替换</strong>。完成后关闭替换窗口：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240407160507929.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240407160507929.png" srcset="/img/loading.gif" lazyload></p>
 <p>4. 按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存文件。此时再按照第四部分内容重新启动Tomcat，此时输出的中文内容就不会出现乱码现象了：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240407160813956.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240407160813956.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h1><ul>
 <li>解决Tomcat中文乱码问题——windows平台：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2181734">https://cloud.tencent.com/developer/article/2181734</a></li>
 </ul>

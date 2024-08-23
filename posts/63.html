@@ -25,18 +25,18 @@
 <meta property="og:site_name" content="iCode504个人博客">
 <meta property="og:description" content="本文描述了使用VS Code编写Vue3代码时提示如下错误信息[vue&#x2F;no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue，并给出解决方案">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401100744537.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101233136.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101417022.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101539176.png">
-<meta property="og:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101939631.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401100744537.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101233136.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101417022.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101539176.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101939631.png">
 <meta property="article:published_time" content="2024-04-01T02:24:52.000Z">
-<meta property="article:modified_time" content="2024-04-01T12:56:22.000Z">
+<meta property="article:modified_time" content="2024-08-23T01:26:40.000Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Vue">
 <meta property="article:tag" content="Vue Bug">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401100744537.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-20240401100744537.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -596,7 +596,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年4月1日
+                    本文最后更新于：2024年8月23日
                   
                 
               </p>
@@ -611,16 +611,16 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;!-- 直接在template标签中写代码 --&gt;<br>  &lt;h1&gt;员工信息&lt;/h1&gt;<br>  &lt;h2&gt;姓名: &#123;&#123;employeeName&#125;&#125;&lt;/h2&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure>
 
 <p>但是，VS Code会对当前代码进行语法检查，会出现如下报错提示，虽然不影响正常使用，但是这样挂着报错信息也不太好看（属于强迫症了哈哈哈）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401100744537.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240401100744537.png" srcset="/img/loading.gif" lazyload></p>
 <p>出现上述问题的主要原因是VS Code中安装的插件Vetur中对<code>&lt;template&gt;</code>标签检查的问题。</p>
 <h1 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h1><p>1. 点击左侧插件商店（或者按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd>）：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101233136.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240401101233136.png" srcset="/img/loading.gif" lazyload></p>
 <p>2. 找到Vetur插件，点击<strong>设置</strong>（小齿轮），然后点击<strong>扩展设置</strong>：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101417022.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240401101417022.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 在当前设置中一直向下翻到最后，找到<strong>Vetur &gt; Validation: Template</strong>，然后<strong>取消勾选</strong><code>Validate vue-html in &lt;template&gt; using eslint-plugin-vue</code>，如下图：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101539176.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240401101539176.png" srcset="/img/loading.gif" lazyload></p>
 <p>4. 此时在<code>&lt;template&gt;</code>标签中就不会出现语法检查提示错误现象了，正常启动项目也不会出现错误信息：</p>
-<p><img src="https://icode504.oss-cn-beijing.aliyuncs.com/image-20240401101939631.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240401101939631.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
