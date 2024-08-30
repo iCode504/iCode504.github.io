@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-24T08:01:54.019Z</updated>
+  <updated>2024-08-30T07:38:55.818Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis数据类型之基数统计HyperLogLog</title>
+    <link href="https://www.icode504.com/posts/106.html"/>
+    <id>https://www.icode504.com/posts/106.html</id>
+    <published>2024-08-29T08:24:18.522Z</published>
+    <updated>2024-08-30T07:38:55.818Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：&lt;a href=&quot;https://www.icode504.com/posts/90.html&quot;&gt;点我查看&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis数据类型之位图Bitmap</title>
@@ -496,33 +520,6 @@
     
     
     <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</title>
-    <link href="https://www.icode504.com/posts/85.html"/>
-    <id>https://www.icode504.com/posts/85.html</id>
-    <published>2024-07-26T06:12:20.611Z</published>
-    <updated>2024-07-26T12:19:56.068Z</updated>
-    
-    
-    <summary type="html">本教程详细介绍了在Windows系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="TinyRDM" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/TinyRDM/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
-    
-    <category term="TinyRDM" scheme="https://www.icode504.com/tags/TinyRDM/"/>
     
   </entry>
   

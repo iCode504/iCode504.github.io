@@ -18,16 +18,16 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis位图类型介绍和相关命令">
+    <meta name="description" content="想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：点我查看 一、Redis 基数统计类型（HyperLogLog）介绍Redis HyperLogLog是一种概率型数据结构，用于统计当前集合的近似基数，它以完美的准确性换取了高效的空间利用率。  这里说的基数指的是集合中不重复元素数量。  统计集合中唯一数据项的数量通常和内存使用量成正比。也就是说，查询的唯一数据项的数量越多，消耗">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis数据类型之位图Bitmap">
-<meta property="og:url" content="https://www.icode504.com/posts/103.html">
+<meta property="og:title" content="Redis数据类型之基数统计HyperLogLog">
+<meta property="og:url" content="https://www.icode504.com/posts/106.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis位图类型介绍和相关命令">
+<meta property="og:description" content="想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：点我查看 一、Redis 基数统计类型（HyperLogLog）介绍Redis HyperLogLog是一种概率型数据结构，用于统计当前集合的近似基数，它以完美的准确性换取了高效的空间利用率。  这里说的基数指的是集合中不重复元素数量。  统计集合中唯一数据项的数量通常和内存使用量成正比。也就是说，查询的唯一数据项的数量越多，消耗">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-08-24T06:53:14.040Z">
-<meta property="article:modified_time" content="2024-08-24T08:01:54.019Z">
+<meta property="article:published_time" content="2024-08-29T08:24:18.522Z">
+<meta property="article:modified_time" content="2024-08-30T07:38:55.818Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis数据类型之位图Bitmap - iCode504个人博客</title>
+  <title>Redis数据类型之基数统计HyperLogLog - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis数据类型之位图Bitmap</span>
+            <span id="subtitle">Redis数据类型之基数统计HyperLogLog</span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-24 14:53" pubdate>
-          2024年8月24日
+        <time datetime="2024-08-29 16:24" pubdate>
+          2024年8月29日
         </time>
       </span>
     
@@ -274,199 +274,6 @@
 <div class="category-list">
   
   
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
-        id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
-        aria-expanded="true"
-      >
-        数据库
-        <span class="list-group-count">(8)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-68051bf4aa2743b030984b694628ee9c"
-           role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库(NoSQL)"
-        id="heading-98626918f5d7d8bdf00825804cb0b170" role="tab" data-toggle="collapse" href="#collapse-98626918f5d7d8bdf00825804cb0b170"
-        aria-expanded="true"
-      >
-        非关系型数据库(NoSQL)
-        <span class="list-group-count">(8)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-98626918f5d7d8bdf00825804cb0b170"
-           role="tabpanel" aria-labelledby="heading-98626918f5d7d8bdf00825804cb0b170">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis"
-        id="heading-e111446745a1825b862f8727ae63bce4" role="tab" data-toggle="collapse" href="#collapse-e111446745a1825b862f8727ae63bce4"
-        aria-expanded="true"
-      >
-        Redis
-        <span class="list-group-count">(8)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-e111446745a1825b862f8727ae63bce4"
-           role="tabpanel" aria-labelledby="heading-e111446745a1825b862f8727ae63bce4">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/90.html" title="Redis学习前言"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis学习前言</span>
-        </a>
-      
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis数据类型"
-        id="heading-b46e9b96e2623b25ebc2fe54130770db" role="tab" data-toggle="collapse" href="#collapse-b46e9b96e2623b25ebc2fe54130770db"
-        aria-expanded="true"
-      >
-        Redis数据类型
-        <span class="list-group-count">(7)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-b46e9b96e2623b25ebc2fe54130770db"
-           role="tabpanel" aria-labelledby="heading-b46e9b96e2623b25ebc2fe54130770db">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之哈希类型Hash</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/91.html" title="Redis数据类型之列表List"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之列表List</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/92.html" title="Redis数据类型之无序集合类型Set"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之无序集合类型Set</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/93.html" title="Redis数据类型之有序集合类型Sorted Set（Zset）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之有序集合类型Sorted Set（Zset）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/87.html" title="Redis数据类型之字符串类型String"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis数据类型之字符串类型String</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/86.html" title="Redis的key（键）相关操作"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Redis的key（键）相关操作</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/103.html" title="Redis数据类型之位图Bitmap"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">Redis数据类型之位图Bitmap</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
 </div>
 
 
@@ -479,12 +286,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis数据类型之位图Bitmap</h1>
+            <h1 id="seo-header">Redis数据类型之基数统计HyperLogLog</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年8月24日
+                    本文最后更新于：2024年8月30日
                   
                 
               </p>
@@ -493,92 +300,48 @@
               <div class="markdown-body">
                 
                 <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="https://www.icode504.com/posts/90.html">点我查看</a></p>
-<h1 id="一、Redis位图（Bitmap）介绍"><a href="#一、Redis位图（Bitmap）介绍" class="headerlink" title="一、Redis位图（Bitmap）介绍"></a>一、Redis位图（Bitmap）介绍</h1><p>在正式讲解位图的概念之前，我们先来简单介绍一下位图中“位”是什么。</p>
-<p>位（Bit，也称作比特）是计算机存储数据的最小单位，由二进制的0或1组成。</p>
-<p>字节是一个由8个“位”的组合，一个字节可以表示256种不同的值（从00000000到11111111）。一个字节通常表示一个字符，例如：字母、数字、符号等。在ASCII编码中，每个字符通常使用1个字节表示。</p>
-<p>“位”和字节之间的换算关系：</p>
-<p>$$<br>1byte &#x3D; 8bit<br>$$</p>
-<p>Redis位图（Bitmap）是一种基于字符串（String）数据类型的操作方式，实际上是用二进制位（bit）来存储和操作数据。虽然位图在底层存储上只是普通的字符串，但我们可以将其视为超大的二进制数组：</p>
-<p><img src="https://source.icode504.com/images/image-dabcb2bf7093754cec3ea51080c79403.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>为什么说位图本质上是字符串，我们可以使用Redis命令证明：</p>
-<p><img src="https://source.icode504.com/images/image-e4611aa6ea531f79dba0cbd5902d9b40.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="一、Redis-基数统计类型（HyperLogLog）介绍"><a href="#一、Redis-基数统计类型（HyperLogLog）介绍" class="headerlink" title="一、Redis 基数统计类型（HyperLogLog）介绍"></a>一、Redis 基数统计类型（HyperLogLog）介绍</h1><p>Redis HyperLogLog是一种概率型数据结构，用于统计当前集合的近似基数，它以完美的准确性换取了高效的空间利用率。</p>
+<blockquote>
+<p>这里说的基数指的是集合中不重复元素数量。</p>
+</blockquote>
+<p>统计集合中唯一数据项的数量通常和内存使用量成正比。也就是说，查询的唯一数据项的数量越多，消耗的内存也越多。一种简单暴力的方法就是我们记住都存储了那些元素，以避免多次计数，但是很显然，这并不是一个现实的选择。</p>
+<p>有一种可以通过内存换取精度的算法，这个算法会返回一个带有标准误差的统计基数。Redis在使用HyperLogLog统计数据的情况下，标准误差小于1%。使用这个算法的好处在于，你不需要考虑统计数据所消耗内存的问题，所消耗的内存量是恒定的，最多也不超过12KB。如果你的数据很小，所需要的内存量也要比12KB小很多。</p>
+<p>HyperLogLog最多使用<strong>12KB</strong>的内存空间，标准误差是**0.81%**。</p>
+<p>从技术层面而言，HyperLogLog是一种不同的数据结构，但实际上编码仍然是字符串（String）：</p>
+<p><img src="https://source.icode504.com/images/image-b377ad022070b3d4538e10c50b6b9eca.png" srcset="/img/loading.gif" lazyload></p>
 <p>应用场景：</p>
 <ul>
-<li>签到打卡：假设一个月有31天，你可以为每个用户分配31个bit（位），1代表当天签到，0代表没有签到。</li>
+<li>统计网站、文章等UV；</li>
 </ul>
-<p><img src="https://source.icode504.com/images/image-654615f1d1ef95c5dee6401f62465325.png" srcset="/img/loading.gif" lazyload alt="统计签到记录"></p>
+<blockquote>
+<p>UV，英文全称Unique Visitor，独立访客，一般理解为客户端IP，需要去重。</p>
+<p>例如：某个IP今天访问了50次网站<a target="_blank" rel="noopener" href="http://www.icode504.com,那么该网站在最终统计uv时,该ip的访问次数是1次./">www.icode504.com，那么该网站在最终统计UV时，该IP的访问次数是1次。</a></p>
+</blockquote>
 <ul>
-<li>在线状态记录：使用位图可以用来记录每个用户的在线状态。假设一个网站有100万用户，可以使用位图来记录他们是否在线（在线就将对应的位设置为1，不在线将对应的位设置0），作为网站管理员，我们可以统计当前在线人数。</li>
+<li>统计用户搜索网站关键词数量；</li>
+<li>统计用户每天搜索不同词条的次数；</li>
+<li>……</li>
 </ul>
-<p><img src="https://source.icode504.com/images/image-dc481ad91bf8c7384dfb4c568af0318a.png" srcset="/img/loading.gif" lazyload alt="统计在线观看人数"></p>
+<h1 id="二、Redis-基数统计类型（HyperLogLog）常用命令"><a href="#二、Redis-基数统计类型（HyperLogLog）常用命令" class="headerlink" title="二、Redis 基数统计类型（HyperLogLog）常用命令"></a>二、Redis 基数统计类型（HyperLogLog）常用命令</h1><p>1. 添加指定一个或多个元素：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFADD key [element [element ...]]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-61b2bab03b649a7e0f345eaefb04491b.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 统计当前HyperLogLog的基数估算值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFCOUNT key [key ...]<br></code></pre></td></tr></table></figure>
+
+<p>PFCOUNT统计基数时，如果数据量较大时会存在最大0.81%误差。</p>
 <ul>
-<li>活动参与统计：可以使用位图记录用户是否参与过活动（例如：投票、抽奖等）。通过位图，可以快速判断某个用户是否参与。</li>
+<li>如果参数只有一个key，那么统计的是当前集合的近似基数，如果key不存在，那么返回结果是0。</li>
 </ul>
-<p><img src="https://source.icode504.com/images/image-f76c9d0eb67c5785fe2c5ea9422e4b4f.png" srcset="/img/loading.gif" lazyload alt="抽奖活动统计"></p>
-<h1 id="二、Redis位图（Bitmap）相关命令"><a href="#二、Redis位图（Bitmap）相关命令" class="headerlink" title="二、Redis位图（Bitmap）相关命令"></a>二、Redis位图（Bitmap）相关命令</h1><p>1. 给指定的key第offset位赋值为value：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SETBIT key offset value<br></code></pre></td></tr></table></figure>
-
-<p>其中value对应的值只能是二进制的0和1。</p>
-<p>该命令默认的返回值也是0和1。</p>
-<p><img src="https://source.icode504.com/images/image-1f163e603ad120d199d31d2dc82f1c4a.png" srcset="/img/loading.gif" lazyload></p>
-<p>这里解释一下为什么使用SETBIT命令时，返回0或1。这里我已上图中<code>SETBIT myBitmap 3 1</code>为例：</p>
-<p>当我们在执行<code>SETBIT myBitmap 3 1</code>命令时，Redis会检查<code>myBitmap</code>的第3位（即offset &#x3D; 3的位置）对应的值。如果符合以下任意一种情况，Redis会将该位置的默认值设置为0：</p>
+<p><img src="https://source.icode504.com/images/image-0732657f8c6dd7bb566bbc49b81ac4b3.png" srcset="/img/loading.gif" lazyload></p>
 <ul>
-<li>当前位之前从未设置过值；</li>
-<li>对应的key不存在；</li>
+<li>如果参数有多个key，此时这些HyperLogLog先进行并集运算，再存储到一个临时的HyperLogLog，统计好数量以后，返回最终统计的近似基数：</li>
 </ul>
-<p>显然，在初次执行上述命令时，Redis中还不存在名为<code>myBitmap</code>的key，此时该位置的值默认是0。在执行SETBIT以后，Redis会将该位置的值设置为1，并返回执行SETBIT之前该位置对应的值（即0）.</p>
-<p>下面的动画演示这一过程：</p>
-<p><img src="https://source.icode504.com/images/image-f48f6c43eb534829f1fc7a4148c88d76.gif" srcset="/img/loading.gif" lazyload></p>
-<p>2. 获取当前key第offset位的值：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GETBIT key offset<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-60427d59d0d06e71a91fcc8f1840510d.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 将多个HyperLogLog合并为一个HyperLogLog（并集运算）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFMERGE destkey sourcekey ...<br></code></pre></td></tr></table></figure>
 
-<p>如果当前offset位置已经设置过值，使用GETBIT命令就可以获取到值（0或1）。如果当前位置没有设置过值，使用GETBIT命令得到的值是0。</p>
-<p><img src="https://source.icode504.com/images/image-fde3a531193ba741599e34af0e399607.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 获取当前key在某个offset区间中值为1的数量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">BITCOUNT key [start end [BYTE | BIT]]<br></code></pre></td></tr></table></figure>
-
-<p>以下是命令各个参数的相关说明：</p>
-<ul>
-<li><code>start</code>（可选）：统计的起始位置，可以是负数表示从末尾开始计算。</li>
-<li><code>end</code>（可选）：统计的结束位置，同样可以是负数。</li>
-<li><code>BYTE</code>（可选）：如果指定，<code>start</code>和<code>end</code>参数以字节为单位（默认）。</li>
-<li><code>BIT</code>（可选）：如果指定，<code>start</code>和 <code>end</code>参数以位为单位。</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-5fe547630f342c88caa49f422b575949.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 对不同的二进制存储数据进行位运算（AND&#x2F;OR&#x2F;NOT&#x2F;XOR）并存储到destkey中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">BITOP &lt;AND | OR | NOT | XOR&gt; destkey key [key ...]<br></code></pre></td></tr></table></figure>
-
-<p>AND是与运算，OR是或运算、NOT是非运算，XOR是异或运算，具体的计算方法详见这篇文章：<a href="https://www.icode504.com/posts/7.html#%E5%9B%9B%E3%80%81%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E4%BA%86%E8%A7%A3%E5%8D%B3%E5%8F%AF%EF%BC%89">点我查看</a></p>
-<p>其中NOT运算比较特殊，因为它只能和一个key进行“非运算”操作。</p>
-<p>一直ASCII码表中存储如下几个字符相关信息：</p>
-<table>
-<thead>
-<tr>
-<th align="center">字符</th>
-<th>二进制表示</th>
-<th align="center">十进制表示</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">a</td>
-<td>01100001</td>
-<td align="center">97</td>
-</tr>
-<tr>
-<td align="center">b</td>
-<td>01100010</td>
-<td align="center">98</td>
-</tr>
-</tbody></table>
-<p><img src="https://source.icode504.com/images/image-ea7b3ac5ee1f3a59ed48eb6537c01fcb.png" srcset="/img/loading.gif" lazyload></p>
-<p>以下是二进制运算过程：</p>
-<p><img src="https://source.icode504.com/images/image-34bdab71e94c6dafcd6e9c2ab3470bc7.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 获取位图在内存中的存储大小：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">STRLEN key<br></code></pre></td></tr></table></figure>
-
-<p>前面我们提到过，位图本质上是一个字符串，1个字符存储大小是1个字节，1个字节&#x3D;8位：</p>
-<p><img src="https://source.icode504.com/images/image-34bfe8d676b2f1d97a92308998b90087.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-c31916fcd8d7887e294e9af22016c49b.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -586,48 +349,6 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/" class="category-chain-item">非关系型数据库(NoSQL)</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/" class="category-chain-item">Redis</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="category-chain-item">Redis数据类型</a>
-  
-  
-
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
     <div class="post-meta">
@@ -645,8 +366,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis数据类型之位图Bitmap</div>
-      <div>https://www.icode504.com/posts/103.html</div>
+      <div>Redis数据类型之基数统计HyperLogLog</div>
+      <div>https://www.icode504.com/posts/106.html</div>
     </div>
     <div class="license-meta">
       
@@ -658,7 +379,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月24日</div>
+          <div>2024年8月29日</div>
         </div>
       
       
@@ -690,18 +411,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/106.html" title="Redis数据类型之基数统计HyperLogLog">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis数据类型之基数统计HyperLogLog</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/105.html" title="DBeaver加快依赖下载速度">
-                        <span class="hidden-mobile">DBeaver加快依赖下载速度</span>
+                      <a href="/posts/103.html" title="Redis数据类型之位图Bitmap">
+                        <span class="hidden-mobile">Redis数据类型之位图Bitmap</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
