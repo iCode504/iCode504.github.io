@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-08-30T08:00:51.228Z</updated>
+  <updated>2024-09-05T09:31:11.598Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SDKMAN!安装教程</title>
+    <link href="https://www.icode504.com/posts/108.html"/>
+    <id>https://www.icode504.com/posts/108.html</id>
+    <published>2024-09-04T13:32:40.682Z</published>
+    <updated>2024-09-05T09:31:11.598Z</updated>
+    
+    
+    <summary type="html">SDKMAN! 是一个用于管理开发人员工具的多平台命令行工具，支持版本切换和安装。它简化了JVM、Gradle、Maven等SDK的安装和更新，适用于Linux、macOS和Windows子系统。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="软件包管理工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="软件包管理工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="SDKMAN!" scheme="https://www.icode504.com/tags/SDKMAN/"/>
+    
+    <category term="软件包管理工具" scheme="https://www.icode504.com/tags/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis数据类型之基数统计HyperLogLog</title>
@@ -496,31 +525,6 @@
     
     
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis数据类型之哈希类型Hash</title>
-    <link href="https://www.icode504.com/posts/89.html"/>
-    <id>https://www.icode504.com/posts/89.html</id>
-    <published>2024-07-30T22:34:32.871Z</published>
-    <updated>2024-08-05T14:40:07.526Z</updated>
-    
-    
-    <summary type="html">Redis哈希类型介绍及其常用的命令</summary>
-    
-    
-    
-    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库(NoSQL)" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/"/>
-    
-    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/"/>
-    
-    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93-NoSQL/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
     
   </entry>
   
