@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-10-11T08:11:31.798Z</updated>
+  <updated>2024-10-11T09:01:49.211Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.icode504.com/posts/112.html"/>
     <id>https://www.icode504.com/posts/112.html</id>
     <published>2024-10-11T08:11:31.616Z</published>
-    <updated>2024-10-11T08:11:31.798Z</updated>
+    <updated>2024-10-11T09:01:49.211Z</updated>
     
     
     <summary type="html">Debian虚拟机修改静态IP</summary>
@@ -30,9 +30,9 @@
     
     <category term="常用操作" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
     
-    <category term="Windows" scheme="https://www.icode504.com/categories/Windows/"/>
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Windows/"/>
     
-    <category term="Debian" scheme="https://www.icode504.com/categories/Debian/"/>
+    <category term="Debian" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Windows/Debian/"/>
     
     
     <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
