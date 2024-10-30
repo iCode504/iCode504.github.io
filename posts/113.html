@@ -18,26 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Debian虚拟机修改静态IP">
+    <meta name="description" content="本文通过Github拉取Dockerhub中的镜像，然后再推送到阿里云镜像仓库，从而解决无法拉取镜像的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Debian修改静态IP">
-<meta property="og:url" content="https://www.icode504.com/posts/112.html">
+<meta property="og:title" content="通过Github拉取Docker hub中的镜像">
+<meta property="og:url" content="https://www.icode504.com/posts/113.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Debian虚拟机修改静态IP">
+<meta property="og:description" content="本文通过Github拉取Dockerhub中的镜像，然后再推送到阿里云镜像仓库，从而解决无法拉取镜像的问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/Linux%20Debian%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.png">
-<meta property="article:published_time" content="2024-10-11T08:11:31.616Z">
-<meta property="article:modified_time" content="2024-10-11T09:01:49.211Z">
+<meta property="og:image" content="https://source.icode504.com/images/296081f3bec4c0188ea1ae44fc8ac842.png">
+<meta property="article:published_time" content="2024-10-30T00:38:18.936Z">
+<meta property="article:modified_time" content="2024-10-30T03:48:01.447Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Debian">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Docker hub">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/Linux%20Debian%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/296081f3bec4c0188ea1ae44fc8ac842.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Debian修改静态IP - iCode504个人博客</title>
+  <title>通过Github拉取Docker hub中的镜像 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/Linux Debian安装配置教程.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/296081f3bec4c0188ea1ae44fc8ac842.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Debian修改静态IP</span>
+            <span id="subtitle">通过Github拉取Docker hub中的镜像</span>
           
         </div>
 
@@ -219,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-11 16:11" pubdate>
-          2024年10月11日
+        <time datetime="2024-10-30 08:38" pubdate>
+          2024年10月30日
         </time>
       </span>
     
@@ -279,80 +281,44 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用操作"
-        id="heading-848811116493f74a03d428bd2884bcda" role="tab" data-toggle="collapse" href="#collapse-848811116493f74a03d428bd2884bcda"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Docker"
+        id="heading-c5fd214cdd0d2b3b4272e73b022ba5c2" role="tab" data-toggle="collapse" href="#collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
         aria-expanded="true"
       >
-        常用操作
-        <span class="list-group-count">(2)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-848811116493f74a03d428bd2884bcda"
-           role="tabpanel" aria-labelledby="heading-848811116493f74a03d428bd2884bcda">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
-        id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
-      >
-        Windows
-        <span class="list-group-count">(2)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
-           role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/76.html" title="Windows通过命令行关闭某个端口"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Windows通过命令行关闭某个端口</span>
-        </a>
-      
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Debian"
-        id="heading-6fe8b98c53e8d099686936732785d471" role="tab" data-toggle="collapse" href="#collapse-6fe8b98c53e8d099686936732785d471"
-        aria-expanded="true"
-      >
-        Debian
+        Docker
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-6fe8b98c53e8d099686936732785d471"
-           role="tabpanel" aria-labelledby="heading-6fe8b98c53e8d099686936732785d471">
+      <div class="category-collapse collapse show" id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
+           role="tabpanel" aria-labelledby="heading-c5fd214cdd0d2b3b4272e73b022ba5c2">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="镜像拉取"
+        id="heading-f76f965364ed9c3a8cefc9f270bca76c" role="tab" data-toggle="collapse" href="#collapse-f76f965364ed9c3a8cefc9f270bca76c"
+        aria-expanded="true"
+      >
+        镜像拉取
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-f76f965364ed9c3a8cefc9f270bca76c"
+           role="tabpanel" aria-labelledby="heading-f76f965364ed9c3a8cefc9f270bca76c">
         
         
           
@@ -361,19 +327,15 @@
     
       
       
-        <a href="/posts/112.html" title="Debian修改静态IP"
+        <a href="/posts/113.html" title="通过Github拉取Docker hub中的镜像"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">Debian修改静态IP</span>
+          <span class="category-post">通过Github拉取Docker hub中的镜像</span>
         </a>
       
     
   </div>
 
-        
-      </div>
-    </div>
-  
         
       </div>
     </div>
@@ -394,12 +356,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Debian修改静态IP</h1>
+            <h1 id="seo-header">通过Github拉取Docker hub中的镜像</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年10月11日
+                    本文最后更新于：2024年10月30日
                   
                 
               </p>
@@ -407,50 +369,192 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>需要在VMware安装Debian虚拟机的小伙伴，点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/52.html">点我查看</a></p>
-<p>使用云服务器的小伙伴不需要看下面的配置哦(ᕑᗢᓫ∗)˒</p>
-<h1 id="二、VMware相关操作"><a href="#二、VMware相关操作" class="headerlink" title="二、VMware相关操作"></a>二、VMware相关操作</h1><p>1. （虚拟机处于关机状态）在未开启Debian虚拟机之前，按照下图所示打开虚拟机的网络设置：</p>
-<p><img src="https://source.icode504.com/images/30f37dbd371b7ac93ce756d1b7424f60.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 点击右下角的<strong>更改设置</strong>：</p>
-<p><img src="https://source.icode504.com/images/a7cb64c3b9c6396a8370e31f03a45e51.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入编辑模式后，上方的虚拟网络选中VMnet8（NAT模式）：</p>
-<p><img src="https://source.icode504.com/images/020ceab236d61c0341c80ade96ebdf49.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示修改子网IP，修改的数值范围在<strong>0~255</strong>之间，我修改后的子网IP为192.168.40.0：</p>
-<p><img src="https://source.icode504.com/images/5fe139fec7dde3d798a240acbb2ff10a.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击右下角的<strong>DHCP设置</strong>：</p>
-<p><img src="https://source.icode504.com/images/b28c1b878fca3e76e9038f66cc3d28be.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按照下图操作修改网段，完成后一路点击确定，虚拟网络配置完成。</p>
-<p><img src="https://source.icode504.com/images/2475fa8817e27d03b932c28866ba886a.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Debian修改静态IP"><a href="#三、Debian修改静态IP" class="headerlink" title="三、Debian修改静态IP"></a>三、Debian修改静态IP</h1><p>1. 开启Debian虚拟机，执行如下命令查看当前虚拟机的IP地址：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip addr<br></code></pre></td></tr></table></figure>
+                <p>本文参考自技术爬爬虾关于Dockerhub镜像拉取的解决方案，以下是原作者的B站视频页和Github仓库，喜欢的话请支持一下原作者！</p>
+<table>
+<thead>
+<tr>
+<th align="center">Bilibili原视频</th>
+<th>Bilibili账号</th>
+<th align="center">Github</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zn4y19743">点我查看</a></td>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/316183842">点我查看</a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/tech-shrimp/docker_image_pusher">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>我们在使用<code>docker pull</code>命令时，即使配置了registry-mirrors，也经常出现无法连接或者链接超时的问题：</p>
+<p><img src="https://source.icode504.com/images/f7b30615d6fce620f3aba7a04b004bce.png" srcset="/img/loading.gif" lazyload></p>
+<p>要想解决这一问题，我们需要通过Github从Dockerhub拉取镜像，然后再将镜像数据推送到阿里云镜像仓库，由于阿里云镜像仓库位于国内，从阿里云镜像仓库拉取个人镜像速度非常快，以下是相关教程：</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>在正式开始之前，我们需要执行如下操作：</p>
+<p>1. 开启对Github和Dockerhub的访问。请根据自己电脑操作系统查看对应教程：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="./25.html">点我查看</a></td>
+<td align="center"><a href="./80.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>开启加速后，可以点击下面两个网站：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Github</th>
+<th align="center">Dockerhub</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/">点我查看</a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://hub.docker.com/">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>2. 登录并注册阿里云、Github，以下是这两个网站的入口和相关说明：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">网站入口</th>
+<th align="left">说明</th>
+<th align="center">参考图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">阿里云</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://account.aliyun.com/login/login.htm">点我查看</a></td>
+<td align="left">可以使用支付宝、淘宝等阿里系软件注册&#x2F;扫码登录。为了更好使用阿里云，推荐小伙伴进行实名认证。</td>
+<td align="center"><img src="https://source.icode504.com/images/6ce5025fbd4650632288964f36b12b73.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+<tr>
+<td align="center">Github</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/login">点我查看</a></td>
+<td align="left">可以使用QQ邮箱、网易邮箱、谷歌邮箱等注册</td>
+<td align="center"><img src="https://source.icode504.com/images/82227d6e957764e2348dd302aa1e26ce.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+</tbody></table>
+<p>3. 这里我使用Electerm连接到服务器，需要安装的小伙伴，请根据自己电脑操作系统查看对应教程：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="./47.html">点我查看</a></td>
+<td align="center"><a href="./99.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<h1 id="二、阿里云相关操作"><a href="#二、阿里云相关操作" class="headerlink" title="二、阿里云相关操作"></a>二、阿里云相关操作</h1><p>1. 点击右侧链接进入容器镜像服务（个人版）控制台界面：<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instance/dashboard">点我查看</a></p>
+<p>2. 按照下面的步骤创建命名空间：</p>
+<p><img src="https://source.icode504.com/images/d7ac782770a2ce84ee920bcdafcb6965.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/3c7b51dbf6ce0bf9ceef4a35c7d2e930.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 按照下图所示操作，绑定Github账号：</p>
+<p><img src="https://source.icode504.com/images/d35c5341ed2de9ca8f88161c6b785202.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/add540bd6debced1033fd773fc9c33b6.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/a1484225053e42bfa518416b0b1f04b4.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 设置访问阿里云镜像仓库密码，请按照下图所示操作：</p>
+<p><img src="https://source.icode504.com/images/399182feeb418a2e3a938b7a8fd2990d.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/993166426d5e117ae7e33338b3f56700.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、Github相关操作"><a href="#三、Github相关操作" class="headerlink" title="三、Github相关操作"></a>三、Github相关操作</h1><p>1. 点击进入Docker镜像推送仓库：<a target="_blank" rel="noopener" href="https://github.com/tech-shrimp/docker_image_pusher">点我查看</a></p>
+<p>2. 按照下图所示操作将项目Fork到自己的仓库：</p>
+<p><img src="https://source.icode504.com/images/9450729456cb2bfbe1a0112953fc132f.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/10df083aad94b630d2673a9bbce8b3c7.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时项目成功Fork到我们自己的仓库中，点击<strong>Settings</strong>：</p>
+<p><img src="https://source.icode504.com/images/6d8847e3586ed13c0c62248995f62a75.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 配置环境变量。按照下图所示操作，进入配置环境变量界面：</p>
+<p><img src="https://source.icode504.com/images/be83a9ba3bea2ce3ba505c01bcac4fdc.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 请按照下图所示操作将4个Name-Secret对存储到Github：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">在阿里云如何找到Secret</th>
+<th align="center">Github效果图</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ALIYUN_NAME_SPACE</td>
+<td align="center"><img src="https://source.icode504.com/images/ec23060555f9d896f0dc2a6e90964d5f.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><img src="https://source.icode504.com/images/2c20eb57f3c8ebd22526367885caa542.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+<tr>
+<td align="center">ALIYUN_REGISTRY_USER</td>
+<td align="center"><img src="https://source.icode504.com/images/7cb2cdd2ce10b886926793ccfe81ea51.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><img src="https://source.icode504.com/images/9a3d44fcf971ff6740535ac2cc0b074e.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+<tr>
+<td align="center">ALIYUN_REGISTRY_PASSWORD</td>
+<td align="center"><img src="https://source.icode504.com/images/e2b9a94dbf8270aae261e12d34458a5f.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><img src="https://source.icode504.com/images/9fdc34a284da1f14814b922e8262eb8f.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+<tr>
+<td align="center">ALIYUN_REGISTRY</td>
+<td align="center">registry.cn-hangzhou.aliyuncs.com</td>
+<td align="center"><img src="https://source.icode504.com/images/6b5dae7b2f12bad1eb9767952a1b7871.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+</tbody></table>
+<p>至此，阿里云和Github的配置完成！接下来，我们就试着拉取一个镜像。</p>
+<h1 id="三、将Dockerhub中的镜像通过Github推送到阿里云镜像仓库"><a href="#三、将Dockerhub中的镜像通过Github推送到阿里云镜像仓库" class="headerlink" title="三、将Dockerhub中的镜像通过Github推送到阿里云镜像仓库"></a>三、将Dockerhub中的镜像通过Github推送到阿里云镜像仓库</h1><blockquote>
+<p>说明：这里我拉取的是Redis相关镜像，其他镜像也可以参考下面的步骤：</p>
+</blockquote>
+<p>1. 进入前面我们Fork的项目，点击上方的<strong>Actions</strong>，然后点击**I understand my workflows, go ahead and enable them.**同意协议：</p>
+<p><img src="https://source.icode504.com/images/b1a21df53443800df3fdddf7e5929906.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示操作，进入到image.txt文件中：</p>
+<p><img src="https://source.icode504.com/images/b8c99bda80915730630bbac3db55b76c.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/603aa5dc43800cceab7c564e4d652b24.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击右上角的小铅笔，进入编辑模式：</p>
+<p><img src="https://source.icode504.com/images/c8528fa76bb0b5002bd8d897bbc44fed.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 将文件中的内容全部清空，后续替换为我们自己的镜像名和版本：</p>
+<p><img src="https://source.icode504.com/images/42e5c52016915c983ed960e3f3e74aba.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 打开Dockerhub官网：<a target="_blank" rel="noopener" href="https://hub.docker.com/">点我查看</a></p>
+<blockquote>
+<p>说明：由于国内网络原因，Dockerhub加载较慢，请耐心等待！</p>
+</blockquote>
+<p>6. 在上方搜索框中搜索Redis，按一下回车，第一个就是Redis官方镜像：</p>
+<p><img src="https://source.icode504.com/images/a4aa22cf2e0ffc94ba61a13fb940a619.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 点击Tags即可查看所有镜像：</p>
+<p><img src="https://source.icode504.com/images/5a60858df4b1d017c87862a2845387a7.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 这里我想拉取7.4.1、7.4、7.2.6三个版本的镜像：直接复制镜像名和版本号即可（前面的<code>docker pull</code>不要复制）：</p>
+<p><img src="https://source.icode504.com/images/ac71b13a8da1878b5758a5a9c63665a3.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/a74db4aea877bf3ba178651ab8d910aa.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/88856df36515399b0d631081d33c6cbc.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 将前面复制的镜像名和版本号依次粘贴到images.txt中，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/9da31bc037cca6a6fb27922b586cb5cf.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 如果没有什么问题，点击右上角的<strong>Commit changes</strong>提交代码：</p>
+<p><img src="https://source.icode504.com/images/8d25655bd9601a3f9861536282d2aaa4.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 此时会弹出一个窗口，点击<strong>Commit changes</strong>：</p>
+<p><img src="https://source.icode504.com/images/bfc634e07bec4ad1fee067bce0229c1f.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 点击上方的Actions，即可查看镜像拉取和推送到阿里云的过程，如果出现绿色的对号，就说明镜像已经成功推送到阿里云镜像仓库：</p>
+<blockquote>
+<p>如果项目构建失败，可能是如下原因：</p>
+<ul>
+<li>镜像或者版本号错误</li>
+<li>前面配置的Name-Secret配置不正确</li>
+</ul>
+</blockquote>
+<p><img src="https://source.icode504.com/images/e66242153624c7e3127bcd20955cbcf1.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 点击进入阿里云容器镜像服务控制台：<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instance/repositories">点我查看</a>。此时我们可以看到Dockerhub镜像通过Github成功推送到了阿里云镜像仓库，点击进入：</p>
+<p><img src="https://source.icode504.com/images/d2f283e0fac7ed0b9e82071e4b3257f3.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 接下来我们就可以按照阿里云给出的步骤一步一步拉取镜像了：</p>
+<p><img src="https://source.icode504.com/images/76aab6b2fc030dfbabf1af6b7708e70a.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 使用Electerm连接到Linux服务器，登录到阿里云镜像仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker login --username=阿里云用户名 registry.cn-hangzhou.aliyuncs.com<br></code></pre></td></tr></table></figure>
 
-<p>这里我的虚拟机IP地址是192.168.40.5，接下来我将这个IP修改为静态IP，192.168.40.100：</p>
-<p><img src="https://source.icode504.com/images/6b5a474d812bedc220d46e12d2bd045e.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. Debian关于网络IP的配置在<code>/etc/network/interfaces</code>文件中，使用Vim编辑这个文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/network/interfaces<br></code></pre></td></tr></table></figure>
+<p>效果图如下，需要输入密码（不在控制台显示），登录成功如下图所示：</p>
+<p><img src="https://source.icode504.com/images/e0a9df9c76ae5a3bb237997727a8876c.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 从镜像仓库中拉取镜像：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull registry.cn-hangzhou.aliyuncs.com/icode504-docker-repo/redis:[镜像版本号]<br></code></pre></td></tr></table></figure>
 
-<p>3. 输入<code>:set nu</code>可以查看行号，此时我们看到未修改之前为动态IP：</p>
-<p><img src="https://source.icode504.com/images/c2a15482c33771fd577823fc2bdb34ac.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按<kbd>I</kbd>键进入编辑模式，将最后两行代码注掉，效果图如下：</p>
-<p><img src="https://source.icode504.com/images/1fdb92edb1735377e9f8d6eaf864b158.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 另起一行，输入如下内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">auto ens33<br>iface ens33 inet static    <span class="hljs-comment"># 修改为静态ip</span><br>address 192.168.40.100     <span class="hljs-comment"># 其中40要和前面自定义的要保持一致，100可以设置其他数字（0~255之间）</span><br>netmask 255.255.255.0<br>gateway 192.168.40.2       <span class="hljs-comment"># 其中40要和前面自定义的要保持一致</span><br></code></pre></td></tr></table></figure>
-
-<p>修改后的效果如下图：</p>
-<p><img src="https://source.icode504.com/images/18d2853a81e652f845b66fea032effad.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按<kbd>Esc</kbd>键退出编辑模式，输入<code>:wq</code>保存并退出。</p>
-<p>7. 执行如下命令重新启动网络服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sysmctl restart networking<br></code></pre></td></tr></table></figure>
-
-<p>8. 执行如下命令重新启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">reboot<br></code></pre></td></tr></table></figure>
-
-<p>9. 再次执行<code>ip addr</code>命令，发现IP已经变为192.168.40.100：</p>
-<p><img src="https://source.icode504.com/images/0e1f4c2e2b46f3741147273a970ea6c0.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 此时我们ping一下百度也有响应，至此，Debian成功修改为静态IP并且可以访问外网：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping www.baidu.com<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/dc1fead36b500490bd96dd65104a6b65.png" srcset="/img/loading.gif" lazyload></p>
+<p>其中镜像版本号获取方式如下图：</p>
+<p><img src="https://source.icode504.com/images/b20498cf87bbec016cb6a4738b9ef87c.png" srcset="/img/loading.gif" lazyload></p>
+<p>效果图如下，拉取镜像走的是国内的网络，速度非常快且可靠！</p>
+<p><img src="https://source.icode504.com/images/82567e834c3c2b0044c3fbd0ac07905e.gif" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -469,20 +573,13 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="category-chain-item">常用操作</a>
+  <a href="/categories/Docker/" class="category-chain-item">Docker</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/Docker/%E9%95%9C%E5%83%8F%E6%8B%89%E5%8F%96/" class="category-chain-item">镜像拉取</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Windows/Debian/" class="category-chain-item">Debian</a>
-  
-  
-
   
 
   
@@ -498,7 +595,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Debian/" class="print-no-link">#Debian</a>
+        <a href="/tags/Docker/" class="print-no-link">#Docker</a>
+      
+        <a href="/tags/Github/" class="print-no-link">#Github</a>
+      
+        <a href="/tags/Docker-hub/" class="print-no-link">#Docker hub</a>
       
     </div>
   
@@ -510,8 +611,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Debian修改静态IP</div>
-      <div>https://www.icode504.com/posts/112.html</div>
+      <div>通过Github拉取Docker hub中的镜像</div>
+      <div>https://www.icode504.com/posts/113.html</div>
     </div>
     <div class="license-meta">
       
@@ -523,7 +624,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月11日</div>
+          <div>2024年10月30日</div>
         </div>
       
       
@@ -555,18 +656,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/113.html" title="通过Github拉取Docker hub中的镜像">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">通过Github拉取Docker hub中的镜像</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/111.html" title="Consul安装配置教程（Windows版）">
-                        <span class="hidden-mobile">Consul安装配置教程（Windows版）</span>
+                      <a href="/posts/112.html" title="Debian修改静态IP">
+                        <span class="hidden-mobile">Debian修改静态IP</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

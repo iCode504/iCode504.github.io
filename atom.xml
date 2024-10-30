@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2024-10-11T09:01:49.211Z</updated>
+  <updated>2024-10-30T03:48:01.447Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过Github拉取Docker hub中的镜像</title>
+    <link href="https://www.icode504.com/posts/113.html"/>
+    <id>https://www.icode504.com/posts/113.html</id>
+    <published>2024-10-30T00:38:18.936Z</published>
+    <updated>2024-10-30T03:48:01.447Z</updated>
+    
+    
+    <summary type="html">本文通过Github拉取Dockerhub中的镜像，然后再推送到阿里云镜像仓库，从而解决无法拉取镜像的问题</summary>
+    
+    
+    
+    <category term="Docker" scheme="https://www.icode504.com/categories/Docker/"/>
+    
+    <category term="镜像拉取" scheme="https://www.icode504.com/categories/Docker/%E9%95%9C%E5%83%8F%E6%8B%89%E5%8F%96/"/>
+    
+    
+    <category term="Docker" scheme="https://www.icode504.com/tags/Docker/"/>
+    
+    <category term="Github" scheme="https://www.icode504.com/tags/Github/"/>
+    
+    <category term="Docker hub" scheme="https://www.icode504.com/tags/Docker-hub/"/>
+    
+  </entry>
   
   <entry>
     <title>Debian修改静态IP</title>
@@ -508,29 +533,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Lua" scheme="https://www.icode504.com/tags/Lua/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux CentOS Stream 9安装教程</title>
-    <link href="https://www.icode504.com/posts/94.html"/>
-    <id>https://www.icode504.com/posts/94.html</id>
-    <published>2024-08-08T06:26:10.983Z</published>
-    <updated>2024-08-23T02:27:20.011Z</updated>
-    
-    
-    <summary type="html">本文提供了在VMware Workstation上安装和配置CentOS虚拟机的详细步骤，指导用户完成从下载镜像到系统初始化等各个环节，帮助用户快速搭建CentOS环境。</summary>
-    
-    
-    
-    <category term="系统安装" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="CentOS" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/CentOS/"/>
-    
-    
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
-    <category term="CentOS Stream" scheme="https://www.icode504.com/tags/CentOS-Stream/"/>
     
   </entry>
   
