@@ -18,29 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍如何在Windows系统上安装和配置MinGW的教程。它提供了详细的步骤和注意事项，帮助用户顺利完成MinGW的安装和配置">
+    <meta name="description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MinGW安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/39.html">
+<meta property="og:title" content="MySQL 5.7安装、配置与卸载教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/114.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="介绍如何在Windows系统上安装和配置MinGW的教程。它提供了详细的步骤和注意事项，帮助用户顺利完成MinGW的安装和配置">
+<meta property="og:description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/MinGW%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
-<meta property="article:published_time" content="2024-02-01T03:05:33.000Z">
-<meta property="article:modified_time" content="2024-08-23T01:26:40.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/Windows%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E5%8D%B8%E8%BD%BDMySQL%E6%95%99%E7%A8%8B.png">
+<meta property="article:published_time" content="2024-11-04T07:11:18.110Z">
+<meta property="article:modified_time" content="2024-11-05T01:57:12.814Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="C">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="MinGW">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/MinGW%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/Windows%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E5%8D%B8%E8%BD%BDMySQL%E6%95%99%E7%A8%8B.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>MinGW安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>MySQL 5.7安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/MinGW安装配置教程（Windows版）.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/Windows%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E5%8D%B8%E8%BD%BDMySQL%E6%95%99%E7%A8%8B.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">MinGW安装配置教程（Windows版）</span>
+            <span id="subtitle">MySQL 5.7安装、配置与卸载教程（Windows版）</span>
           
         </div>
 
@@ -222,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-01 11:05" pubdate>
-          2024年2月1日
+        <time datetime="2024-11-04 15:11" pubdate>
+          2024年11月4日
         </time>
       </span>
     
@@ -865,17 +863,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
         id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-68051bf4aa2743b030984b694628ee9c"
+      <div class="category-collapse collapse show" id="collapse-68051bf4aa2743b030984b694628ee9c"
            role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
         
         
@@ -905,7 +903,7 @@
       
         <a href="/posts/114.html" title="MySQL 5.7安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">MySQL 5.7安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -1049,17 +1047,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -1076,17 +1074,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="C/C++"
         id="heading-915d356c4d213cec76d72f1cc1ec13f5" role="tab" data-toggle="collapse" href="#collapse-915d356c4d213cec76d72f1cc1ec13f5"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         C/C++
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
+      <div class="category-collapse collapse " id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
            role="tabpanel" aria-labelledby="heading-915d356c4d213cec76d72f1cc1ec13f5">
         
         
@@ -1098,7 +1096,7 @@
       
         <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">MinGW安装配置教程（Windows版）</span>
         </a>
       
@@ -1932,12 +1930,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MinGW安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">MySQL 5.7安装、配置与卸载教程（Windows版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年8月23日
+                    本文最后更新于：2024年11月5日
                   
                 
               </p>
@@ -1945,52 +1943,127 @@
             
               <div class="markdown-body">
                 
-                <p>MinGW，全称为Minimalist GNU for Windows，是一个可自由使用和发布的Windows特定头文件和使用GNU工具集导入库的集合。它允许在GNU&#x2F;Linux和Windows平台生成本地的Windows程序而不需要第三方C运行时（C Runtime）库。使用MinGW开发的程序不需要额外的第三方DLL支持就可以在Windows下运行。</p>
-<p>以下是MinGW在Windows环境下的安装和配置教程：</p>
-<h1 id="一、下载MinGW-w64"><a href="#一、下载MinGW-w64" class="headerlink" title="一、下载MinGW-w64"></a>一、下载MinGW-w64</h1><p>1. 打开MinGW-w64官网下载页面（托管到了SourceForge上）：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">点我查看</a></p>
-<p>2. 向下找，找到最新版本的MinGW，选择seh下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240201104452235.png" srcset="/img/loading.gif" lazyload></p>
+                <p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p>
+<p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p>
+<p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程：</p>
+<h1 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a>一、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/installer/">点我查看</a></p>
+<p>2. 按照下图所示操作选择相应的MySQL版本下载，这里我选择的Windows MySQL 5.7.43版本。</p>
+<p><img src="https://source.icode504.com/images/f87a608c553b65e905edd9499e4bb9d5.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 下载中，请耐心等待。</p>
+<h1 id="二、安装并配置MySQL"><a href="#二、安装并配置MySQL" class="headerlink" title="二、安装并配置MySQL"></a>二、安装并配置MySQL</h1><p>安装MySQL过程中，<strong>请保持网络畅通</strong>！！！</p>
+<p>1. 双击打开下载好的安装器，启动需要一些时间，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/ea36438253e80bc563e8594f74521445.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如果有如下提示更新窗口，选择No不更新：</p>
+<p><img src="https://source.icode504.com/images/9bd090875adb9482462c514b23530757.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装类型选择<strong>Custom</strong>，然后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220111156356.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 按照下图所示操作，选择安装<code>MySQL Server 5.7.43 - X64</code>，完成后直接点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/a6190afba6d6e8ad9f971d1f96cad7b8.gif" srcset="/img/loading.gif" lazyload></p>
+<details>
+<summary>点我查看如何修改路径（小白可以忽略下列内容，直接跳到第5步）<summary>
+
+<ul>
+<li>如果您想修改MySQL的安装路径，如下图，可以点击下方<strong>Advanced Options</strong>：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20240220111320444.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>按照下图所示，选择安装路径，为避免后续过程中出现问题，<strong>安装路径建议只包含英文字符</strong>；下面的是MySQL数据存储路径，如果不懂这方面的内容，建议不要修改这个路径。配置完成后后点击<strong>OK</strong>：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20240220111711714.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>安装路径和存储路径配置完成后，会弹出一个弹窗，点击<strong>OK</strong>即可：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/26872ea77b79c17ba9720d218b7246d9.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>此时点击<strong>Next</strong>：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/92bcec1f0b0d294af0fd22ef3a524910.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>选择<strong>Yes</strong>继续安装：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/752b4f28f4034415a7b637d879a05598.png" srcset="/img/loading.gif" lazyload></p>
+</details>
+
+<p>5. 点击<strong>Execute</strong>：</p>
+<p><img src="https://source.icode504.com/images/396a7c1c327b276a10d3e97e65392bac.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/7c02e7df4977727df874aa8bba76deda.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 出现下图提示<strong>Complete</strong>以后，MySQL安装完成。直接点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/4115e922b7dfe0869df389e5ed9ebf6e.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 接下来开始配置MySQL，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/0928d235c34af697576778f8d27ba4db.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 初次安装MySQL的小白请注意，下图的<strong>Port请务必配置成3306</strong>，完成后点击<strong>Next</strong>：</p>
 <blockquote>
-<p>说明（第2、3、4、5点总结的可能不太严谨，如果您在这方面有很深入的了解，可以评论区或者私信告诉我）：</p>
-<p>1. <font color="FF0000">不要</font>安装上面的<code>MinGW-W64-install.exe</code>，这个是联网安装的，服务器在国外，在国内安装因为网络原因大概率会失败。</p>
-<p>2. x86_64简单而言是64位的操作系统（绝大部分电脑都是64位的），i686属于32位操作系统</p>
-<p>3. posix（全称Portable Operating System Interface of UNIX，翻译过来就是UNIX可移植操作系统接口），是<a target="_blank" rel="noopener" href="http://www.ieee.com/">IEEE</a>为要在各种UNIX操作系统上运行的软件而定义的一系列API标准总称。</p>
-<p>4. win32是由Windows操作系统的API，主要也是应用在Windows操作系统上。</p>
-<p>5. seh（Structured Exception Handling）是Windows操作系统中默认的异常处理机制，sjlj（Signal Set JMP）是Unix及类Unix系统中的一种轻量级异常处理机制。</p>
+<p>注意：如果您的电脑上已经安装了其他版本的MySQL，并且已经占用了3306端口，您需要将端口号修改为其他值。</p>
 </blockquote>
-<h1 id="二、安装配置MinGW-w64"><a href="#二、安装配置MinGW-w64" class="headerlink" title="二、安装配置MinGW-w64"></a>二、安装配置MinGW-w64</h1><p>1. 将下载的7z压缩包（推荐使用<a target="_blank" rel="noopener" href="https://www.bandisoft.com/bandizip/">Bandzip</a>、<a target="_blank" rel="noopener" href="https://7-zip.org/">7-zip</a>等解压工具）解压到一个你熟悉的地方（建议是英文路径），这里我解压到了D盘：</p>
-<p><img src="https://source.icode504.com/images/image-20240131155552319.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131155721190.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 为MinGW配置环境变量：找到MinGW的安装路径，出现bin、etc、include等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131160221163.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://source.icode504.com/images/175539c8d47f5a74f88d39c26dd44731.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 设置root账户密码，这里强烈建议<strong>将密码设置成你最熟悉的密码</strong>，否则后续恢复密码比较麻烦。这里我设置成了<code>123456</code>。设置完成后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/fa7a1ad26250ddd0612602925ac36ff1.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 在Windows中开启服务，直接点击<strong>Next</strong>即可：</p>
+<p><img src="https://source.icode504.com/images/948e88c0fcf258d870c1fbfaeecc3026.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 服务器文件权限按照默认配置<strong>选择第一个</strong>即可，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/fa7fd399d00606ce36f3ebb4e9cf3fa0.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 点击<strong>Execute</strong>，MySQL安装器就会为我们配置上述内容。配置过程中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/c77227fad2d1b7a6bb43b40f67016294.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 出现下图信息，说明MySQL配置成功，点击<strong>Finish</strong>完成配置：</p>
+<p><img src="https://source.icode504.com/images/e0f7643d31dd59ebe6752b51a8484229.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/cb9301f85542d4fb7bf6b4a31e7d7917.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 点击<strong>Finish</strong>，MySQL配置完成。</p>
+<p><img src="https://source.icode504.com/images/59868e65757851c80d0a79a96fa471e0.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置MySQL环境变量"><a href="#三、配置MySQL环境变量" class="headerlink" title="三、配置MySQL环境变量"></a>三、配置MySQL环境变量</h1><p>1. 初次安装MySQL的小白，找到前面安装的MySQL路径的bin目录，按照下图操作复制路径：</p>
+<blockquote>
+<p>（此条内容小白请忽略）安装在其他位置的小伙伴找到MySQL的安装路径，进入bin文件夹后复制文件路径。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/00005.gif" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
 <p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<strong>高级系统设置</strong>：</p>
+<p>3. 点击<strong>高级系统设置</strong>：</p>
 <table>
 <thead>
 <tr>
 <th align="center">Windows 11</th>
-<th align="center"><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center"><strong>Windows 10</strong></td>
-<td align="center"><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
 </tr>
 </tbody></table>
-<p>5. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在下方系统变量中，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 配置安装路径，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240131162334741.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240131162546989.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 检查Mingw环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，进入控制台，输入<code>gcc -v</code>和<code>g++ -v</code>，出现版本信息说明环境变量配置成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240131162902042.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131162938776.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://source.icode504.com/images/9b32c83db0d6df2c2f698e9d67d0edfd.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 在下方系统变量找到Path，双击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20230512223639743.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按照下图所示操作，粘贴前面复制的MySQL安装路径，然后一路点击确定即可。</p>
+<p><img src="https://source.icode504.com/images/3e7273345232c91e2f87e0f4c9b3dd53.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击进入，在命令提示行中输入<code>mysql -u root -p</code>，按回车后会提示让你输入密码。这个密码是前面我们安装MySQL的时候设置的密码，输入完成后按回车即可。完成后出现下图界面表示MySQL安装成功！</p>
+<blockquote>
+<p>说明：由于我的电脑上安装了两个MySQL，其中MySQL 5.7使用的端口号是13306，因此在执行命令时需要添加<code>-P 13306</code>选项。如果您的电脑中只安装了一个MySQL，并且使用MySQL默认端口号3306，默认不需要写上述端口号配置项，继续执行<code>mysql -u root -p</code>即可</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/f641b8555a3a1ca9fc349546467cab9c.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、卸载MySQL（可选）"><a href="#四、卸载MySQL（可选）" class="headerlink" title="四、卸载MySQL（可选）"></a>四、卸载MySQL（可选）</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p><p>以下两种卸载方式任选其一即可。</p>
+          </div>
+
+<blockquote>
+<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="./31.html">点我查看</a></p>
+<p>已经安装的小伙伴可以接着往下看！</p>
+</blockquote>
+<p>1. <strong>鼠标右键</strong>点击下方任务栏的Windows图标，选择<strong>计算机管理</strong>：</p>
+<p><img src="https://source.icode504.com/images/1d6f0f58a6eb948f5c653f82820886de.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示操作，停止MySQL57对应的服务：</p>
+<p><img src="https://source.icode504.com/images/403f6ef2d08d66a4628f7ac32ccddb1e.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开Geek Installer，在程序列表中找到MySQL相关的内容，鼠标右键，依次点击卸载：</p>
+<p><img src="https://source.icode504.com/images/abd574849eaf97f643736d832b92597a.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 卸载完成后，Geek Installer会检测卸载残留，如果数据不重要的话，直接清理即可。</p>
+<p><img src="https://source.icode504.com/images/f25121cc3e8eac7f1b6ce87219f4d668.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>regedit</code>，进入注册表编辑器：</p>
+<p><img src="https://source.icode504.com/images/fb1ab9987de7fc28173ed4072df2364c.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 依次删除下面和MySQL 5.7有关注册表：</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL57服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL服务目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL服务 目录删除<br></code></pre></td></tr></table></figure>
+
+<p>8. 完成后重启电脑，MySQL 5.7卸载完成！</p>
 
                 
               </div>
@@ -2019,15 +2092,8 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C-C/" class="category-chain-item">C/C++</a>
-  
-  
-
   
 
   
@@ -2047,11 +2113,7 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/C/" class="print-no-link">#C</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-        <a href="/tags/MinGW/" class="print-no-link">#MinGW</a>
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
       
     </div>
   
@@ -2063,8 +2125,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MinGW安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/39.html</div>
+      <div>MySQL 5.7安装、配置与卸载教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/114.html</div>
     </div>
     <div class="license-meta">
       
@@ -2076,7 +2138,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月1日</div>
+          <div>2024年11月4日</div>
         </div>
       
       
@@ -2108,18 +2170,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）">
-                        <span class="hidden-mobile">Visual Studio Code安装配置教程（Windows版）</span>
+                      <a href="/posts/113.html" title="通过Github拉取Docker hub中的镜像">
+                        <span class="hidden-mobile">通过Github拉取Docker hub中的镜像</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
