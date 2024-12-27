@@ -20,7 +20,7 @@
   
     <meta name="description" content="本教程详细介绍了在Linux系统上安装Redis的步骤，包括两种方式：Docker方式安装并启动Redis、源码方式安装、配置并启动Redis，帮助用户快速部署和运行Redis实例。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis安装教程（Linux版）">
+<meta property="og:title" content="Redis单机版安装教程（Linux版）">
 <meta property="og:url" content="https://www.icode504.com/posts/83.html">
 <meta property="og:site_name" content="iCode504个人博客">
 <meta property="og:description" content="本教程详细介绍了在Linux系统上安装Redis的步骤，包括两种方式：Docker方式安装并启动Redis、源码方式安装、配置并启动Redis，帮助用户快速部署和运行Redis实例。">
@@ -39,7 +39,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis安装教程（Linux版） - iCode504个人博客</title>
+  <title>Redis单机版安装教程（Linux版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +210,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis安装教程（Linux版）</span>
+            <span id="subtitle">Redis单机版安装教程（Linux版）</span>
           
         </div>
 
@@ -486,10 +486,10 @@
     
       
       
-        <a href="/posts/83.html" title="Redis安装教程（Linux版）"
+        <a href="/posts/83.html" title="Redis单机版安装教程（Linux版）"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">Redis安装教程（Linux版）</span>
+          <span class="category-post">Redis单机版安装教程（Linux版）</span>
         </a>
       
     
@@ -1931,7 +1931,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis安装教程（Linux版）</h1>
+            <h1 id="seo-header">Redis单机版安装教程（Linux版）</h1>
             
               <p class="note note-info">
                 
@@ -1944,7 +1944,7 @@
             
               <div class="markdown-body">
                 
-                <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="https://www.icode504.com/posts/90.html">点我查看</a></p>
+                <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p>
 <p>Redis是一种开源的、内存中的键值存储数据库，通常用作缓存、消息代理和持久化存储。它支持丰富的数据结构，如字符串、哈希、列表、集合和有序集合等，能够高效地执行各种操作。Redis具有极高的性能，常被用于需要快速数据读写的场景，同时提供持久化选项，可以将数据定期保存到磁盘上，以确保数据的持久性。其丰富的功能和灵活性使其在分布式系统和实时应用中非常受欢迎。</p>
 <p>以下是Redis的安装教程，两种方式任选其一：</p>
 <h1 id="方式一：源码安装"><a href="#方式一：源码安装" class="headerlink" title="方式一：源码安装"></a>方式一：源码安装</h1><h2 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h2><p>1. 请根据自己的操作系统，安装以下软件，如果里面的软件你已经安装可以直接跳过：</p>
@@ -1959,20 +1959,20 @@
 </thead>
 <tbody><tr>
 <td>解决Github国内无法访问问题</td>
-<td align="center"><a href="https://www.icode504.com/posts/25.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/80.html">点我查看</a></td>
+<td align="center"><a href="./25.html">点我查看</a></td>
+<td align="center"><a href="./80.html">点我查看</a></td>
 <td>本文需要下载的软件在Github上，目前国内访问Github访问速度较慢，推荐大家看一下本文教程，可以模仿文中的方式下载安装包</td>
 </tr>
 <tr>
 <td>Neat Download Manager</td>
-<td align="center"><a href="https://www.icode504.com/posts/24.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/24.html">点我查看</a></td>
+<td align="center"><a href="./24.html">点我查看</a></td>
+<td align="center"><a href="./24.html">点我查看</a></td>
 <td>本文所需要的软件下载源在国外，使用此软件可以加快下载速度。</td>
 </tr>
 <tr>
 <td>Electerm</td>
-<td align="center"><a href="https://www.icode504.com/posts/47.html">点我查看</a></td>
-<td align="center">敬请期待</td>
+<td align="center"><a href="./47.html">点我查看</a></td>
+<td align="center"><a href="./99.html">点我查看</a></td>
 <td>一款比较好用的通过SSH远程连接Linux的工具，支持Windows&#x2F;macOS以SFTP的方式传输文件</td>
 </tr>
 </tbody></table>
@@ -2075,8 +2075,8 @@
 <p>按<kbd>i</kbd>进入编辑模式（左下角会有INSERT提示），将第903号注释去掉，为了方便记忆，我将密码设置为123456，修改完成后按一下<kbd>Esc</kbd>键退出编辑模式：</p>
 <p><img src="https://source.icode504.com/images/image-20240725115705245.png" srcset="/img/loading.gif" lazyload></p>
 <p>11. 上述配置完成后，输入<kbd>:wq</kbd>命令保存并退出。</p>
-<h2 id="四、启动Redis"><a href="#四、启动Redis" class="headerlink" title="四、启动Redis"></a>四、启动Redis</h2><p>1. （当前位置：Redis安装目录<code>/usr/lobal/bin</code>）启动Redis服务端（后台启动）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-server redis-config/redis.com<br></code></pre></td></tr></table></figure>
+<h2 id="四、启动Redis"><a href="#四、启动Redis" class="headerlink" title="四、启动Redis"></a>四、启动Redis</h2><p>1. （当前位置：Redis安装目录<code>/usr/local/bin</code>）启动Redis服务端（后台启动）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-server redis-config/redis.conf<br></code></pre></td></tr></table></figure>
 
 <p>此时命令行没有提示说明Redis启动成功，那么我们如何验证Redis是否在后台正常运行呢？使用如下命令即可查看Redis服务端是否正常运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -ef |grep redis|grep -v grep<br></code></pre></td></tr></table></figure>
@@ -2124,8 +2124,8 @@
 </thead>
 <tbody><tr>
 <td>Docker安装教程</td>
-<td align="center"><a href="https://www.icode504.com/posts/94.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/75.html">点我查看</a></td>
+<td align="center"><a href="./94.html">点我查看</a></td>
+<td align="center"><a href="./75.html">点我查看</a></td>
 </tr>
 </tbody></table>
 <p>这里我使用的是Redis 6.0.10版本。</p>
@@ -2241,7 +2241,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis安装教程（Linux版）</div>
+      <div>Redis单机版安装教程（Linux版）</div>
       <div>https://www.icode504.com/posts/83.html</div>
     </div>
     <div class="license-meta">
