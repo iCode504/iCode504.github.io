@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88Linux%E7%89%88%EF%BC%89.png">
 <meta property="article:published_time" content="2024-07-25T14:54:21.000Z">
-<meta property="article:modified_time" content="2024-08-15T01:05:20.352Z">
+<meta property="article:modified_time" content="2024-12-27T05:33:45.715Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="Linux">
@@ -1936,7 +1936,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年8月15日
+                    本文最后更新于：2024年12月27日
                   
                 
               </p>
@@ -1947,63 +1947,7 @@
                 <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="https://www.icode504.com/posts/90.html">点我查看</a></p>
 <p>Redis是一种开源的、内存中的键值存储数据库，通常用作缓存、消息代理和持久化存储。它支持丰富的数据结构，如字符串、哈希、列表、集合和有序集合等，能够高效地执行各种操作。Redis具有极高的性能，常被用于需要快速数据读写的场景，同时提供持久化选项，可以将数据定期保存到磁盘上，以确保数据的持久性。其丰富的功能和灵活性使其在分布式系统和实时应用中非常受欢迎。</p>
 <p>以下是Redis的安装教程，两种方式任选其一：</p>
-<h1 id="方式一：Docker方式安装并启动Redis"><a href="#方式一：Docker方式安装并启动Redis" class="headerlink" title="方式一：Docker方式安装并启动Redis"></a>方式一：Docker方式安装并启动Redis</h1><p>请确保电脑上已经安装了Docker，需要安装Docker的小伙伴根据自己的操作系统去安装Docker：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center">CentOS</th>
-<th align="center">Ubuntu&#x2F;Debian</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Docker安装教程</td>
-<td align="center"><a href="https://www.icode504.com/posts/94.html">点我查看</a></td>
-<td align="center"><a href="https://www.icode504.com/posts/75.html">点我查看</a></td>
-</tr>
-</tbody></table>
-<p>这里我使用的是Redis 6.0.10版本。</p>
-<p>1. 拉取Redis镜像：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull redis:6.0.10<br></code></pre></td></tr></table></figure>
-
-<p>2. 创建一个文件目录，用来存储redis配置文件，这里我创建了<code>/opt/redis/conf</code>目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /opt/redis/conf<br></code></pre></td></tr></table></figure>
-
-<p>3. 下载Redis配置文件到上面的目录中，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -P /opt/redis/conf/ https://source.icode504.com/data/conf/redis/redis.conf<br></code></pre></td></tr></table></figure>
-
-<p>这个配置文件中一共修改了4个地方：</p>
-<ul>
-<li>将第259行的修改为可以后台运行<code>daemonize yes</code>；</li>
-<li>第94行的保护模式<code>protect-mode</code>的值改为了no；</li>
-<li>将第75行默认只能本机访问的<code>bind 127.0.0.1 -::1</code>注释掉，改成所有IP都可以访问Redis；</li>
-<li>第903行访问Redis需要输入密码，默认是123456</li>
-</ul>
-<p>4. 根据第1步拉取的镜像创建Redis容器：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -p 6379:6379 -d\<br> 		--privileged=<span class="hljs-literal">true</span>\<br> 		-v /opt/redis/conf/redis.conf:/etc/redis/redis.conf\<br> 		-v /opt/redis/data:/data\<br> 		--name redis\<br> 		redis:6.0.10<br></code></pre></td></tr></table></figure>
-
-<p>5. 查看所有容器的运行情况：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps -a<br></code></pre></td></tr></table></figure>
-
-<p>此时我们发现redis正常运行：</p>
-<p><img src="https://source.icode504.com/images/image-20240725213246978.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 进入到容器（<code>/bin/bash</code>命令行方式），执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it redis /bin/bash<br></code></pre></td></tr></table></figure>
-
-<p>7. 此时我们进入了Redis容器的内部，接下来我们来既可以使用客户端：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli<br></code></pre></td></tr></table></figure>
-
-<p>此时左侧提示变为<code>127.0.0.1:6379</code>：</p>
-<p><img src="https://source.icode504.com/images/image-20240725222722661.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 执行如下命令，如果返回结果是PONG，就说明我们的Redis可以正常使用了：</p>
-<p><img src="https://source.icode504.com/images/image-20240725173708679.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 退出Redis客户端，执行如下任意一个命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br>quit<br></code></pre></td></tr></table></figure>
-
-<p>10. 退出当前Docker容器，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="方式二：源码安装"><a href="#方式二：源码安装" class="headerlink" title="方式二：源码安装"></a>方式二：源码安装</h1><h2 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h2><p>1. 请根据自己的操作系统，安装以下软件，如果里面的软件你已经安装可以直接跳过：</p>
+<h1 id="方式一：源码安装"><a href="#方式一：源码安装" class="headerlink" title="方式一：源码安装"></a>方式一：源码安装</h1><h2 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h2><p>1. 请根据自己的操作系统，安装以下软件，如果里面的软件你已经安装可以直接跳过：</p>
 <table>
 <thead>
 <tr>
@@ -2166,6 +2110,67 @@
 
 <p>2. 删除<code>/usr/lobal/bin</code>目录下的所有和redis相关的文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf /usr/lobal/bin/redis-*<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="方式二：Docker方式安装并启动Redis"><a href="#方式二：Docker方式安装并启动Redis" class="headerlink" title="方式二：Docker方式安装并启动Redis"></a>方式二：Docker方式安装并启动Redis</h1><p>请确保电脑上已经安装了Docker，需要安装Docker的小伙伴根据自己的操作系统去安装Docker：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">CentOS</th>
+<th align="center">Ubuntu&#x2F;Debian</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Docker安装教程</td>
+<td align="center"><a href="https://www.icode504.com/posts/94.html">点我查看</a></td>
+<td align="center"><a href="https://www.icode504.com/posts/75.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>这里我使用的是Redis 6.0.10版本。</p>
+<p>1. 拉取Redis镜像：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull redis:6.0.10<br></code></pre></td></tr></table></figure>
+
+<p>2. 创建一个文件目录，用来存储redis配置文件，这里我创建了<code>/opt/redis/conf</code>目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /opt/redis/conf<br></code></pre></td></tr></table></figure>
+
+<p>3. 下载Redis配置文件到上面的目录中，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -P /opt/redis/conf/ https://source.icode504.com/data/conf/redis/redis.conf<br></code></pre></td></tr></table></figure>
+
+<p>这个配置文件中一共修改了4个地方：</p>
+<ul>
+<li>将第259行的修改为可以后台运行<code>daemonize yes</code>；</li>
+<li>第94行的保护模式<code>protect-mode</code>的值改为了no；</li>
+<li>将第75行默认只能本机访问的<code>bind 127.0.0.1 -::1</code>注释掉，改成所有IP都可以访问Redis；</li>
+<li>第903行访问Redis需要输入密码，默认是123456</li>
+</ul>
+<p>4. 根据第1步拉取的镜像创建Redis容器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -p 6379:6379 -d\<br> 		--privileged=<span class="hljs-literal">true</span>\<br> 		-v /opt/redis/conf/redis.conf:/etc/redis/redis.conf\<br> 		-v /opt/redis/data:/data\<br> 		--name redis\<br> 		redis:6.0.10<br></code></pre></td></tr></table></figure>
+
+<p>5. 查看所有容器的运行情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps -a<br></code></pre></td></tr></table></figure>
+
+<p>此时我们发现redis正常运行：</p>
+<p><img src="https://source.icode504.com/images/image-20240725213246978.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 进入到容器（<code>/bin/bash</code>命令行方式），执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it redis /bin/bash<br></code></pre></td></tr></table></figure>
+
+<p>7. 此时我们进入了Redis容器的内部，接下来我们来既可以使用客户端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli<br></code></pre></td></tr></table></figure>
+
+<p>此时左侧提示变为<code>127.0.0.1:6379</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20240725222722661.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 执行如下命令，如果返回结果是PONG，就说明我们的Redis可以正常使用了：</p>
+<p><img src="https://source.icode504.com/images/image-20240725173708679.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 退出Redis客户端，执行如下任意一个命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br>quit<br></code></pre></td></tr></table></figure>
+
+<p>10. 退出当前Docker容器，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure>
+
+
+
 
                 
               </div>
