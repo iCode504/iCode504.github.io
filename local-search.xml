@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>入门篇-其之一-第一个程序</title>
+    <link href="/posts/2.html"/>
+    <url>/posts/2.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>注意：</p><ol><li>本文中包含实际操作，需要安装JDK。如果需要安装JDK，请按照这篇文章的步骤进行安装：<a href="./1.html">点我查看JDK安装教程</a></li><li>小白可以多看几遍这篇文章，多敲几次代码。</li></ol></blockquote><h1 id="一、第一个程序"><a href="#一、第一个程序" class="headerlink" title="一、第一个程序"></a>一、第一个程序</h1><p>前面我们已经安装了JDK，接下来就是写一个属于自己的Java程序了。</p><p>用什么写自己的Java程序呢？有人说用IDEA、Eclipse等集成开发工具。其实，作为小白，我们在最初阶段其实没有必要安装这些繁重的工具，使用记事本写代码就可以。</p><h2 id="1-1-准备操作"><a href="#1-1-准备操作" class="headerlink" title="1.1 准备操作"></a>1.1 准备操作</h2><p>创建一个文件夹，保证自己以后学习过程中的代码都存放到这个文件夹中，养成好习惯。为了避免后续出现问题，文件路径中尽量不要包含中文字符。这里我新建的文件夹名是<code>MyWorkspace</code>，如下图：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711213200514.png"></p><p>打开<code>MyWorkspace</code>文件夹，今天是我们第一次敲代码，就在这个文件夹中创建一个<code>day01</code>文件夹，如下图所示：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711213716922.png"></p><p>打开<code>day01</code>文件夹，点击上方的<code>查看</code>，勾选<code>文件扩展名</code>：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711213901017.png"></p><h2 id="1-2-编写我的第一个Java程序"><a href="#1-2-编写我的第一个Java程序" class="headerlink" title="1.2 编写我的第一个Java程序"></a>1.2 编写我的第一个Java程序</h2><p>做完以上的准备工作以后，我们就可以写自己的Java程序了！</p><p>在文件夹空白处，鼠标右键点击新建，<strong>新建文本文档</strong>：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711214256942.png"></p><p>此时新建完成以后，我们选中这个文件，鼠标右键点击重命名，将文件名修改成<code>MyFirstProgram.java</code>。我们此时需要留意下这个文件名<code>MyFirstProgram</code>，后续它有大用处！</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711214530788.png"></p><p>出现这个弹窗时，点击“是”即可。</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711214608048.png"></p><p>鼠标右键点击这个文件，打开方式选择记事本：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711214844597.png"></p><p>请按照下面代码内容，一个一个字母符号敲进记事本中（不要图方便直接复制代码，实际操作才能看出自己的问题）：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyFirstProgram</span> &#123;<br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>                System.out.println(<span class="hljs-string">&quot;This is my first Java program!&quot;</span>);<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>效果图如下：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711215450746.png"></p><p>点击左上角文件，然后点击保存（或者按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存）。到这一步，我们的代码就已经写好了。</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230711215630094.png"></p><p>点击上面的路径，输入<code>cmd</code>，进入命令行：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/003.gif"></p><p>编译这个java源程序：</p><ul><li>编译命令格式：<code>javac 文件名.java</code>。</li><li>如果我想编译这个<code>MyFirstProgram.java</code>文件，就需要执行的命令是：<code>javac MyFirstProgram.java</code></li></ul><p>操作步骤如下图所示，上述命令执行完成后，此时文件夹中有一个<code>MyFirstProgram.class</code>文件，这个是Java编译器执行编译命令以后生成的二进制字节码文件（直接使用记事本打开是乱码文件）：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/004.gif"></p><p>编译命令完成后，就需要运行这个这个Java程序了。运行命令的格式是：<code>java 文件名</code>。注意，这里不能加<code>.java</code></p><p>以<code>MyFirstProgram.java</code>文件为例，运行命令是：<code>java MyFirstProgram</code>。此时命令行就会输出在源文件中编写的内容：</p><p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/005.gif"></p><h1 id="二、编写第二个Java程序"><a href="#二、编写第二个Java程序" class="headerlink" title="二、编写第二个Java程序"></a>二、编写第二个Java程序</h1><p>看到这里，有小伙伴会问：我想输出中文可以吗？输出多行内容可不可以？</p><p>我的答案是：<strong>当然可以</strong>！结合上述问题，给大家再举个例子：比如我想通过Java程序输出唐代诗人崔颢的《黄鹤楼》</p><center><font face="楷体">昔人已乘黄鹤去，此地空余黄鹤楼。<br/>黄鹤一去不复返，白云千载空悠悠。<br/>晴川历历汉阳树，芳草萋萋鹦鹉洲。<br/>日暮乡关何处是？烟波江上使人愁。</font></center><p>我们完全可以按照上述的步骤来操作。</p><p>首先，新建一个Java源文件，这里我将其重命名为<code>Huanghelou.java</code>，操作如下图所示：</p><p><img src="https://source.icode504.com/images/778e99d52ead3ffc1494aa5fa2c84815.gif"></p><p>通过记事本打开这个Java源文件，先编写出这个代码的大体框架：</p><p><img src="https://source.icode504.com/images/56e5b8362fb48d1b44cd8360f1e97bd4.png"></p><p>因为我们要输出4行诗句。因此要在Java的<code>main()</code>方法中编写4行输出语句，效果如下图：</p><p><img src="https://source.icode504.com/images/03903e6f6ea03f111fa5656a6d5f8c6a.png"></p><p>编写完Java代码以后，点击在左上角<code>文件</code>，然后点击<code>另存为</code>，下方选择<code>所有文件</code>，编码格式选择<code>UTF-8</code>：</p><p><img src="https://source.icode504.com/images/217121fea13549089730a5d1b0c1813d.png"></p><p>此时会弹出一个窗口，点击是即可。完成后关闭记事本窗口。</p><p><img src="https://source.icode504.com/images/70c8a6fd14dabd9b31c5cba522b44576.png"></p><p>此时按照上述步骤，我们需要对<code>Huanghelou.java</code>这个文件进行编译。</p><p>点击上方文件路径，输入<code>cmd</code>，打开命令行窗口，操作如下图所示：</p><p><img src="https://source.icode504.com/images/f99a239f91a8142935e4dfb0a61d87ba.gif"></p><p>执行编译命令：<code>javac Huanghelou.java</code>，执行此命令以后，命令行会提示以下错误信息：</p><p><img src="https://source.icode504.com/images/9577d2565ee1e910fe91e7e8f810343f.png"></p><p>这里解释一下出现编码GBK的不可映射字符的问题：由于我们之前编写的Java源文件在保存时的编码格式是<code>UTF-8</code>（如下图所示）</p><p><img src="https://source.icode504.com/images/b5c4dffc411309bbe750302144d0dc51.png"></p><p>而命令行所支持的编码格式是<code>GBK</code>，这就造成了Java源文件的编码格式和命令行的不匹配，从而产生上述问题了：</p><p><img src="https://source.icode504.com/images/2b5ee9519680233b40ed4fe186c16759.png"></p><p>解决办法：只需要在编译时，告诉Java编译器我们需要将这个Java源文件编译成<code>UTF-8</code>的即可，命令格式如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javac -encoding UTF-8 文件名.java<br></code></pre></td></tr></table></figure><p>以这个文件为例，我们就使用<code>UTF-8</code>的编码格式进行编译：<code>javac -encoding UTF-8 Huanghelou.java</code>，执行此命令以后，就不会提示上述错误信息了。</p><p><img src="https://source.icode504.com/images/b9682af7a3aa2b7d0d6d30a0a9628d49.gif"></p><p>这时我们再运行这个Java程序：<code>java Huanghelou</code>，就能看到前面我们在前面的输出了：</p><p><img src="https://source.icode504.com/images/baa82be9da0988e31e49e8bee62d0a40.gif"></p><h1 id="三、注意点-常见问题"><a href="#三、注意点-常见问题" class="headerlink" title="三、注意点&amp;常见问题"></a>三、注意点&amp;常见问题</h1><p>在编写第一个程序的时候，我们需要注意的问题：</p><p>1. <code>class</code>后面的名称要和文件名保持一致，这里我已经提及3遍了，就是希望能引起小白的重视：</p><p><img src="https://source.icode504.com/images/8780e6a2bb87b9992c5495d90e52c543.png"></p><p>2. 除了<code>System.out.println(&quot;&quot;);</code>语句的双引号中的内容自定，代码中其他地方都要使用英文符号。</p><p><img src="https://source.icode504.com/images/b85d43444c690d261a46bfa707a67ea2.png"></p><p>3. 输出语句后面的分号不要忘记（这也是许多小白在写代码最容易忽略的地方）</p><p><img src="https://source.icode504.com/images/cd65434a9f37cc29e29c8a387e331cef.png"></p><p>4. 大括号、中括号、小括号一定要配对出现。写代码的时候不要忘记！</p><p><img src="https://source.icode504.com/images/1aecf19e933a23c4a3a7a36834f4793d.png"></p><h1 id="四、小练习"><a href="#四、小练习" class="headerlink" title="四、小练习"></a>四、小练习</h1><p>使用Java程序输出三句话，文件名为<code>Baiyexing.java</code>，内容如下：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">《白夜行》的作者是日本作家东野圭吾<br>这是一部很棒的悬疑小说<br>你知道白夜吗？明明是夜晚却有太阳，照得夜晚像白昼一样明亮，就是说一直这么犹豫不前的话，人生就毁了。<br></code></pre></td></tr></table></figure><p>输出效果如下：</p><p><img src="https://source.icode504.com/images/8141a3e5fa2b0379996c49b254eb613e.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>编程语言</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>JDK 8安装配置教程（Windows版）</title>
     <link href="/posts/1.html"/>
     <url>/posts/1.html</url>
@@ -1348,9 +1377,9 @@
       
       <tag>CentOS</tag>
       
-      <tag>Git</tag>
-      
       <tag>Ubuntu</tag>
+      
+      <tag>Git</tag>
       
     </tags>
     
