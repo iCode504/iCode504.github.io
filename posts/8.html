@@ -42,8 +42,8 @@
 <meta property="og:image" content="https://source.icode504.com/images/image-20231021154150053.png">
 <meta property="og:image" content="https://source.icode504.com/images/image-20231021162911742.png">
 <meta property="og:image" content="https://source.icode504.com/images/image-20231021162952984.png">
-<meta property="article:published_time" content="2025-04-06T14:00:07.383Z">
-<meta property="article:modified_time" content="2025-04-06T14:00:07.387Z">
+<meta property="article:published_time" content="2025-04-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-06T14:02:30.389Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -235,7 +235,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-06 22:00" pubdate>
+        <time datetime="2025-04-06 00:00" pubdate>
           2025年4月6日
         </time>
       </span>
@@ -386,6 +386,15 @@
     
       
       
+        <a href="/posts/8.html" title="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
+        </a>
+      
+    
+      
+      
         <a href="/posts/4.html" title="入门篇-其之三-基本数据类型及其转换"
            class="list-group-item list-group-item-action
            ">
@@ -417,15 +426,6 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">入门篇-其之六-Java运算符（中）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/8.html" title="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
         </a>
       
     
@@ -478,9 +478,9 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 方法调用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-23 22:05</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StackFrameDemo1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;main开始执行&quot;</span>);<br>        method1();<br>        System.out.println(<span class="hljs-string">&quot;main执行完成&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;method1开始执行&quot;</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> method2();<br>        System.out.println(<span class="hljs-string">&quot;result = &quot;</span> + result);<br>        System.out.println(<span class="hljs-string">&quot;method1执行结束&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">method2</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">var1</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">var2</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br>        <span class="hljs-keyword">return</span> var1 + var2;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>运行结果：</p>
-<p><img src="https://source.icode504.com/images/image-20231023221121858.png" srcset="/img/loading.gif" lazyload alt="image-20231023221121858"></p>
+<p><img src="https://source.icode504.com/images/image-20231023221121858.png" srcset="/img/loading.gif" lazyload></p>
 <p>由代码我们可以看出，<code>main</code>方法最先执行一个输出，然后进入<code>method1</code>执行第一个输出，再完整执行<code>method2</code>。<code>method2</code>执行完成以后，再执行<code>method1</code>，最后执行<code>main</code>方法，由于这段代码中只涉及一个主线程，并且最先完整执行方法的是<code>method2</code>，因此<code>method2</code>对应的栈帧就是当前栈帧，<code>main</code>方法最后执行完毕，因此<code>main</code>方法对应的栈帧在<code>method2</code>和<code>method1</code>之下。以下是这段代码对应的栈帧概念图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023222236855.png" srcset="/img/loading.gif" lazyload alt="image-20231023222236855"></p>
+<p><img src="https://source.icode504.com/images/image-20231023222236855.png" srcset="/img/loading.gif" lazyload></p>
 <p>在每一个栈帧中存储了方法的局部变量表、操作数栈、动态链接和方法返回地址等信息</p>
 <h2 id="1-1-局部变量表"><a href="#1-1-局部变量表" class="headerlink" title="1.1 局部变量表"></a>1.1 局部变量表</h2><p>局部变量表（Local variable Table）是一组<strong>变量值</strong>的存储空间，用于存放方法参数和方法内部定义的局部变量。</p>
 <p>局部变量表的容量是以变量槽（Variable Slot）为最小单位，每个变量槽能存储基本数据类型和引用数据类型的数据。为了尽可能节省栈帧消耗的内存空间，局部变量表中的变量槽是可以重用的。</p>
@@ -496,7 +496,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javap -verbose IncrementAndDecrementOperators2.class<br></code></pre></td></tr></table></figure>
 
 <p>此时就会打开所有的字节码文件，我们只需要关注<code>main</code>方法内的执行过程即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231017063620627.png" srcset="/img/loading.gif" lazyload alt="image-20231017063620627"></p>
+<p><img src="https://source.icode504.com/images/image-20231017063620627.png" srcset="/img/loading.gif" lazyload></p>
 <p>首先来解释一下这四行代码的含义：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">0</span>: iconst_2<br><span class="hljs-number">1</span>: istore_1<br><span class="hljs-number">2</span>: iconst_2<br><span class="hljs-number">3</span>: istore_2<br></code></pre></td></tr></table></figure>
 
@@ -505,10 +505,10 @@
 <li><code>istore_1</code>中的<code>store</code>代表的是存储，<code>istore_1</code>的含义是将操作数栈中的数值2出栈，存入到局部变量表1的位置。同理，<code>i_store2</code>表示将操作数栈中的数值2出栈，存储到局部变量表2的位置。</li>
 </ul>
 <p>以下是前面四行代码存储过程图（存储过程全部流程图点击此链接下载：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/ijDp41cn4p0b">点我下载</a>）：</p>
-<p><img src="https://source.icode504.com/images/image-20231023180543810.png" srcset="/img/loading.gif" lazyload alt="image-20231023180543810"></p>
-<p><img src="https://source.icode504.com/images/image-20231023180636090.png" srcset="/img/loading.gif" lazyload alt="image-20231023180636090"></p>
-<p><img src="https://source.icode504.com/images/image-20231023180949754.png" srcset="/img/loading.gif" lazyload alt="image-20231023180949754"></p>
-<p><img src="https://source.icode504.com/images/image-20231023181650491.png" srcset="/img/loading.gif" lazyload alt="image-20231023181650491"></p>
+<p><img src="https://source.icode504.com/images/image-20231023180543810.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023180636090.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023180949754.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023181650491.png" srcset="/img/loading.gif" lazyload></p>
 <p>此时我们继续观察4-8行代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">4</span>: iload_1<br><span class="hljs-number">5</span>: iinc			<span class="hljs-number">1</span>, <span class="hljs-number">1</span><br><span class="hljs-number">8</span>: istore_3<br></code></pre></td></tr></table></figure>
 
@@ -518,21 +518,21 @@
 <li><code>istore_3</code>将操作数栈中的数移动到局部变量表的3号位置。</li>
 </ul>
 <p>以下是这三行代码的示意图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023182309249.png" srcset="/img/loading.gif" lazyload alt="image-20231023182309249"></p>
-<p><img src="https://source.icode504.com/images/image-20231023182828787.png" srcset="/img/loading.gif" lazyload alt="image-20231023182828787"></p>
-<p><img src="https://source.icode504.com/images/image-20231023183808061.png" srcset="/img/loading.gif" lazyload alt="image-20231023183808061"></p>
+<p><img src="https://source.icode504.com/images/image-20231023182309249.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023182828787.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023183808061.png" srcset="/img/loading.gif" lazyload></p>
 <p>9-12行的字节码的作用原理和4-8行的作用原理基本相同：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">9</span>: iinc			<span class="hljs-number">2</span>, <span class="hljs-number">1</span><br><span class="hljs-number">12</span>: iload_2<br><span class="hljs-number">13</span>: istore		<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
 
 <p><code>istore 4</code>的作用是将操作数栈中的值存储到局部变量表4号位置。</p>
 <p>以下是这三行代码的示意图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023183842487.png" srcset="/img/loading.gif" lazyload alt="image-20231023183842487"></p>
-<p><img src="https://source.icode504.com/images/image-20231023184139208.png" srcset="/img/loading.gif" lazyload alt="image-20231023184139208"></p>
-<p><img src="https://source.icode504.com/images/image-20231023184445793.png" srcset="/img/loading.gif" lazyload alt="image-20231023184445793"></p>
+<p><img src="https://source.icode504.com/images/image-20231023183842487.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023184139208.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231023184445793.png" srcset="/img/loading.gif" lazyload></p>
 <p>接下来15-30行是和系统输出有关的。其中第30行<code>iload_3</code>在局部变量表中（这个值为2）值移动到操作数栈顶供系统输出，事实上<code>iload_3</code>的值正好对应源代码中变量<code>result1</code>的值。也就是说，<code>result1</code>输出结果就是<code>iload_3</code>的数值2。</p>
-<p><img src="https://source.icode504.com/images/image-20231021153508365.png" srcset="/img/loading.gif" lazyload alt="image-20231021153508365"></p>
+<p><img src="https://source.icode504.com/images/image-20231021153508365.png" srcset="/img/loading.gif" lazyload></p>
 <p>同理，<code>iload 4</code>就是第二个要输出的值，在局部变量表中第4个位置存储的值正好是3，而输出的变量名是<code>result2</code>，因此<code>result2</code>的输出结果是3。</p>
-<p><img src="https://source.icode504.com/images/image-20231021154150053.png" srcset="/img/loading.gif" lazyload alt="image-20231021154150053"></p>
+<p><img src="https://source.icode504.com/images/image-20231021154150053.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="三、i-和-i性能分析"><a href="#三、i-和-i性能分析" class="headerlink" title="三、i++和++i性能分析"></a>三、<code>i++</code>和<code>++i</code>性能分析</h1><p><code>i++</code>和<code>++i</code>主要用在普通<code>for</code>循环上，那么我们就将二者用在<code>for</code>循环上，循环相同的次数，从字节码的角度进行分析。</p>
 <p>以下是使用<code>i++</code>和<code>++i</code>的两个<code>for</code>循环文件：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * i++在for循环的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-21 16:14:33</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoopTest1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -540,8 +540,8 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * ++i在for循环的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-21 16:15:17</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoopTest2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; ++i) &#123;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>执行编译命令以后，我们来查看两个文件的字节码：</p>
-<p><img src="https://source.icode504.com/images/image-20231021162911742.png" srcset="/img/loading.gif" lazyload alt="image-20231021162911742"></p>
-<p><img src="https://source.icode504.com/images/image-20231021162952984.png" srcset="/img/loading.gif" lazyload alt="image-20231021162952984"></p>
+<p><img src="https://source.icode504.com/images/image-20231021162911742.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231021162952984.png" srcset="/img/loading.gif" lazyload></p>
 <p>仔细观察这两个字节码文件内容，我们发现在两个文件<code>main</code>方法的字节码内容完全相同。由此可见，两种方式执行<code>for</code>循环的效率是相同的。</p>
 
                 
@@ -647,12 +647,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/posts/3.html" title="入门篇-其之二-Java基础知识">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">入门篇-其之二-Java基础知识</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/7.html" title="入门篇-其之六-Java运算符（中）">
-                        <span class="hidden-mobile">入门篇-其之六-Java运算符（中）</span>
+                      <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）">
+                        <span class="hidden-mobile">JDK 8安装配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
