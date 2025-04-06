@@ -42,29 +42,6 @@
   </entry>
   
   <entry>
-    <title>入门篇-其之八-常用类的简单使用</title>
-    <link href="https://www.icode504.com/posts/10.html"/>
-    <id>https://www.icode504.com/posts/10.html</id>
-    <published>2025-04-06T14:06:52.132Z</published>
-    <updated>2025-04-06T14:06:52.132Z</updated>
-    
-    
-    <summary type="html">本文一共讲解了三个常用类：控制台输入类Scanner类的使用、数学类Math常用方法的使用以及随机数类Random的定义与使用。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>入门篇-其之七-Java运算符（下）</title>
     <link href="https://www.icode504.com/posts/9.html"/>
     <id>https://www.icode504.com/posts/9.html</id>
@@ -218,6 +195,29 @@
 &lt;p&gt;前言：众所周知，&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;的区别是：&lt;code&gt;i++&lt;/code&gt;先将&lt;code&gt;i&lt;/code&gt;的值赋值给变量，再将&lt;code&gt;i&lt;/code&gt;的值自增1；而&lt;code&gt;++i&lt;/code</summary>
         
       
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>入门篇-其之八-常用类的简单使用</title>
+    <link href="https://www.icode504.com/posts/10.html"/>
+    <id>https://www.icode504.com/posts/10.html</id>
+    <published>2025-04-05T16:00:00.000Z</published>
+    <updated>2025-04-06T14:25:17.818Z</updated>
+    
+    
+    <summary type="html">本文一共讲解了三个常用类：控制台输入类Scanner类的使用、数学类Math常用方法的使用以及随机数类Random的定义与使用。</summary>
     
     
     
