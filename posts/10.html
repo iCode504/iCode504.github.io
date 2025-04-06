@@ -1,0 +1,1227 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/blog-logo-tab.png">
+  <link rel="icon" href="/img/blog-logo-tab.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="iCode504">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="本文一共讲解了三个常用类：控制台输入类Scanner类的使用、数学类Math常用方法的使用以及随机数类Random的定义与使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="入门篇-其之八-常用类的简单使用">
+<meta property="og:url" content="https://www.icode504.com/posts/10.html">
+<meta property="og:site_name" content="iCode504个人博客">
+<meta property="og:description" content="本文一共讲解了三个常用类：控制台输入类Scanner类的使用、数学类Math常用方法的使用以及随机数类Random的定义与使用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://source.icode504.com/images/watermelon-5857431_640.jpg">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231031141401505.png">
+<meta property="og:image" content="https://source.icode504.com/images/23103001.gif">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231031152342510.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231031182425433.png">
+<meta property="og:image" content="https://source.icode504.com/images/23103002.gif">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231031183335294.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231031184018449.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231031184031326.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231102070010918.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231102071223060.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231102073800307.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231104105718121.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231104105840264.png">
+<meta property="og:image" content="https://source.icode504.com/images/231104005.gif">
+<meta property="og:image" content="https://source.icode504.com/images/231104002.gif">
+<meta property="og:image" content="https://source.icode504.com/images/231104003.gif">
+<meta property="article:published_time" content="2025-04-06T14:06:52.132Z">
+<meta property="article:modified_time" content="2025-04-06T14:06:52.132Z">
+<meta property="article:author" content="iCode504">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://source.icode504.com/images/watermelon-5857431_640.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>入门篇-其之八-常用类的简单使用 - iCode504个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="iCode504个人博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>iCode504个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">入门篇-其之八-常用类的简单使用</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-04-06 22:06" pubdate>
+          2025年4月6日
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="后端"
+        id="heading-e778d61ae403fbb16e643ebfd764d320" role="tab" data-toggle="collapse" href="#collapse-e778d61ae403fbb16e643ebfd764d320"
+        aria-expanded="true"
+      >
+        后端
+        <span class="list-group-count">(9)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-e778d61ae403fbb16e643ebfd764d320"
+           role="tabpanel" aria-labelledby="heading-e778d61ae403fbb16e643ebfd764d320">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
+        id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+        aria-expanded="true"
+      >
+        编程语言
+        <span class="list-group-count">(9)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+           role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
+        id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
+        aria-expanded="true"
+      >
+        Java
+        <span class="list-group-count">(9)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
+           role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/2.html" title="入门篇-其之一-第一个程序"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之一-第一个程序</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/3.html" title="入门篇-其之二-Java基础知识"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之二-Java基础知识</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/8.html" title="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/4.html" title="入门篇-其之三-基本数据类型及其转换"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之三-基本数据类型及其转换</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/5.html" title="入门篇-其之四-字符串String的简单使用"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之四-字符串String的简单使用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/6.html" title="入门篇-其之五-Java运算符（上）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之五-Java运算符（上）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/7.html" title="入门篇-其之六-Java运算符（中）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之六-Java运算符（中）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/9.html" title="入门篇-其之七-Java运算符（下）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">入门篇-其之七-Java运算符（下）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/10.html" title="入门篇-其之八-常用类的简单使用"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">入门篇-其之八-常用类的简单使用</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">入门篇-其之八-常用类的简单使用</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>本文中使用到的工具是Intellij IDEA和JDK 8，需要安装两款工具的请查看这两篇教程：<a href="http://www.icode504.com/posts/1.html">点我查看安装JDK8&#x2F;11&#x2F;17教程</a>、<a href="http://www.icode504.com/posts/10.html">点我查看安装Intellij IDEA教程</a>。</p>
+</blockquote>
+<h1 id="一、控制台输入类Scanner"><a href="#一、控制台输入类Scanner" class="headerlink" title="一、控制台输入类Scanner"></a>一、控制台输入类Scanner</h1><p>假设今天我想在瓜摊买一个西瓜（西瓜的重量是10斤），西瓜两块钱一斤，此时使用Java程序代码如下：</p>
+<p><img src="https://source.icode504.com/images/watermelon-5857431_640.jpg" srcset="/img/loading.gif" lazyload alt="图片来源于网络，侵删"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 计算西瓜的价格</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-31</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyWatermelonDemo1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">price</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;      <span class="hljs-comment">// 西瓜的单价</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">weight</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;    <span class="hljs-comment">// 西瓜的重量（公斤）</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">totalPrice</span> <span class="hljs-operator">=</span> price * weight;    <span class="hljs-comment">// 购买价格</span><br>        System.out.println(<span class="hljs-string">&quot;西瓜的价格是: &quot;</span> + totalPrice + <span class="hljs-string">&quot;元&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231031141401505.png" srcset="/img/loading.gif" lazyload></p>
+<p>然而现实生活中西瓜的单价和重量是变化的，我们需要手动输入单价和重量，再将输入的内容进行计算。如果在Java代码中实现这一功能，就需要使用到控制台输入类<code>Scanner</code>。</p>
+<p>要想执行输入操作，需要创建一个<code>Scanner</code>类型的对象，<code>Scanner</code>类位于<code>java.util</code>包中（包的概念后续会讲到），需要我们在类的上方手动导入。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br></code></pre></td></tr></table></figure>
+
+<p>导入完成后，我们就可以在<code>main</code>方法中创建<code>Scanner</code>类型的对象了，在<code>Scanner</code>的构造器中还需要传入一个参数<code>System.in</code>表示从控制台输入，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br></code></pre></td></tr></table></figure>
+
+<p>此时我们就完成了<code>scanner</code>对象的创建，此时我们就可以调用<code>Scanner</code>类中的方法了，由于我们定义的是<code>int</code>类型的变量，此时我们就可以使用<code>Scanner</code>类中的<code>nextInt()</code>方法实现输入功能，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">price</span> <span class="hljs-operator">=</span> scanner.nextInt();<br></code></pre></td></tr></table></figure>
+
+<p>在控制台输入的内容就会赋值给当前变量并且可以参与后续的运算。</p>
+<p>以下是解决上述方案的完整代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;       <span class="hljs-comment">// 要想使用Scanner类，就必须要在类的上方导入</span><br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 使用Scanner类实现手动输入，然后计算结果</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-31</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyWatermelonDemo2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        System.out.println(<span class="hljs-string">&quot;请输入西瓜的单价: &quot;</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">price</span> <span class="hljs-operator">=</span> scanner.nextInt();<br>        System.out.println(<span class="hljs-string">&quot;请输入西瓜的重量(按斤计算): &quot;</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">weight</span> <span class="hljs-operator">=</span> scanner.nextInt();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">totalPrice</span> <span class="hljs-operator">=</span> price * weight;<br>        System.out.println(<span class="hljs-string">&quot;西瓜的单价是&quot;</span> + price + <span class="hljs-string">&quot;元, 重量是&quot;</span> + weight + <span class="hljs-string">&quot;斤, 价格是&quot;</span> + totalPrice + <span class="hljs-string">&quot;元&quot;</span>);<br>    &#125;<br>&#125;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/23103001.gif" srcset="/img/loading.gif" lazyload></p>
+<p>除了<code>boolean</code>和<code>char</code>类型以外，其他七种数据类型都可以调用<code>nextXxx()</code>方法，使用方式和上述过程完全相同：</p>
+<table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>调用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>byte</code></td>
+<td><code>nextByte()</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td><code>nextShort()</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>nextInt()</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td><code>nextLong()</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>nextFloat()</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>nextDouble()</code></td>
+</tr>
+</tbody></table>
+<p>除了能输入数字以外，<code>Scanner</code>类还提供了字符串输入的方法：<code>next()</code>和<code>nextLine()</code>。这两个方法都能在控制台输入字符串，二者的区别是：</p>
+<ul>
+<li><code>next()</code>方法读取字符串，直到遇到空格、制表符<kbd>Tab</kbd>和回车<kbd>Enter</kbd>为止，如果这三个符号后面还存在其他字符，<code>next()</code>方法都会省略。</li>
+<li><code>nextLine()</code>方法读取字符串，直到遇到回车<kbd>Enter</kbd>为止。即使当前行存在空格，也能正常输出。</li>
+</ul>
+<p>以下是两种方法的使用案例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * next()方法和nextLine()方法的区别</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-31</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyWatermelonDemo3</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        System.out.println(<span class="hljs-string">&quot;请使用nextLine()方法输入内容，按回车键结束: &quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">strValue1</span> <span class="hljs-operator">=</span> scanner.nextLine();<br>        System.out.println(<span class="hljs-string">&quot;使用nextLine()输出结果是: &quot;</span> + strValue1);<br><br>        System.out.println(<span class="hljs-string">&quot;请使用next()方法输入内容，按回车键结束: &quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">strValue2</span> <span class="hljs-operator">=</span> scanner.next();<br>        System.out.println(<span class="hljs-string">&quot;使用next()输出结果是: &quot;</span> + strValue2);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231031152342510.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、数学类Math"><a href="#二、数学类Math" class="headerlink" title="二、数学类Math"></a>二、数学类Math</h1><p>在初高中我们学习的一些数学函数在Java中同样使用。这些数学函数都在<code>Math</code>类中。</p>
+<h2 id="2-1-绝对值、两数的最小值和最大值"><a href="#2-1-绝对值、两数的最小值和最大值" class="headerlink" title="2.1 绝对值、两数的最小值和最大值"></a>2.1 绝对值、两数的最小值和最大值</h2><p>绝对值的概念：正数的绝对值是其本身，0的绝对值是0，负数的绝对值是其相反数。在<code>Math</code>类中，我们可以调用静态方法<code>Math.abs(number)</code>来获取<code>number</code>的绝对值，其中<code>number</code>的类型只能是<code>int</code>、<code>long</code>、<code>float</code>、<code>double</code>中的一种。</p>
+<p>两数的最小值可以调用<code>Math.min(number1, number2)</code>，如果<code>number1 &gt; number2</code>，那么得到的结果是<code>number2</code>，反之，得到的结果是<code>number1</code>。</p>
+<p>两数的最大值可以调用<code>Math.max(number1, number2)</code>，如果<code>number1 &gt; number2</code>，那么得到的结果是<code>number1</code>，反之，得到的结果是<code>number2</code>。</p>
+<p>其中<code>number1</code>和<code>number2</code>需要保证是<code>int</code>、<code>long</code>、<code>float</code>、<code>double</code>中的一种。</p>
+<p>以下是示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 绝对值abs()、两数最小值min()、两数最大值max()的应用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-31</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MathDemo1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 取绝对值</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue1</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> Math.abs(intValue1);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">doubleValue1</span> <span class="hljs-operator">=</span> -<span class="hljs-number">2.45</span>;<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> Math.abs(doubleValue1);<br>        <span class="hljs-type">float</span> <span class="hljs-variable">floatValue1</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.0f</span>;<br>        <span class="hljs-type">float</span> <span class="hljs-variable">result3</span> <span class="hljs-operator">=</span> Math.abs(floatValue1);<br><br>        System.out.println(<span class="hljs-string">&quot;----------取绝对值----------&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br>        System.out.println(<span class="hljs-string">&quot;result3 = &quot;</span> + result3);<br><br>        <span class="hljs-comment">// 两数取最小值、最大值</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue2</span> <span class="hljs-operator">=</span> <span class="hljs-number">30</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue3</span> <span class="hljs-operator">=</span> <span class="hljs-number">40</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result4</span> <span class="hljs-operator">=</span> Math.min(intValue2, intValue3);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result5</span> <span class="hljs-operator">=</span> Math.max(intValue2, intValue3);<br>        System.out.println(<span class="hljs-string">&quot;----------取最小值、最大值----------&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;result4 = &quot;</span> + result4);<br>        System.out.println(<span class="hljs-string">&quot;result5 = &quot;</span> + result5);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231031182425433.png" srcset="/img/loading.gif" lazyload></p>
+<p>那么<code>Math.abs()</code>、<code>Math.min()</code>、<code>Math.max()</code>为什么只支持<code>int</code>、<code>long</code>、<code>float</code>、<code>double</code>四种类型。我们使用<kbd>Ctrl</kbd>和鼠标左键点击<code>abs()</code>方法进入源码：</p>
+<p><img src="https://source.icode504.com/images/23103002.gif" srcset="/img/loading.gif" lazyload></p>
+<p>此时按<kbd>Alt</kbd>和<kbd>7</kbd>键，会列举出当前类所有的方法，此时我们在列表中直接输入<code>abs</code>搜索，发现只有四个结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231031183335294.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时我们依次点击进入查看源码，发现它们支持的数据类型只有<code>int</code>、<code>long</code>、<code>float</code>和<code>double</code>。以<code>int</code>类型的<code>abs(int)</code>方法为例，我们发现方法内部就是一个三元运算符组成的表达式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">abs</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    <span class="hljs-keyword">return</span> (a &lt; <span class="hljs-number">0</span>) ? -a : a;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如果<code>a &lt; 0</code>，那么得到的结果就是其相反数<code>-a</code>，反之，0和正数得到的绝对值就是其本身。<code>long</code>、<code>float</code>和<code>double</code>的<code>abs()</code>方法亦同理。</p>
+<p>此时我们可以按照上述的方式找到<code>min</code>和<code>max</code>方法，发现二者也是仅支持<code>int</code>、<code>long</code>、<code>float</code>和<code>double</code>，方法列表如下：</p>
+<p><img src="https://source.icode504.com/images/image-20231031184018449.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231031184031326.png" srcset="/img/loading.gif" lazyload></p>
+<p>以<code>min(int, int)</code>方法为例，此时我们点击查看源码，发现这个方法体中也用到了三元表达式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">min</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> &#123;<br>    <span class="hljs-keyword">return</span> (a &lt;= b) ? a : b;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如果<code>a</code>小于等于<code>b</code>，那么最小值就是<code>a</code>，反之为<code>b</code>。</p>
+<p>而浮点类型的<code>min(double, double)</code>方法源码则在此基础上做了进一步判断：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">double</span> <span class="hljs-title function_">min</span><span class="hljs-params">(<span class="hljs-type">double</span> a, <span class="hljs-type">double</span> b)</span> &#123;<br>    <span class="hljs-keyword">if</span> (a != a)<br>        <span class="hljs-keyword">return</span> a;   <span class="hljs-comment">// a is NaN</span><br>    <span class="hljs-keyword">if</span> ((a == <span class="hljs-number">0.0d</span>) &amp;&amp;<br>        (b == <span class="hljs-number">0.0d</span>) &amp;&amp;<br>        (Double.doubleToRawLongBits(b) == negativeZeroDoubleBits)) &#123;<br>        <span class="hljs-comment">// Raw conversion ok since NaN can&#x27;t map to -0.0.</span><br>        <span class="hljs-keyword">return</span> b;<br>    &#125;<br>    <span class="hljs-keyword">return</span> (a &lt;= b) ? a : b;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如果参数<code>a</code>的值是NaN（NaN是一个特殊的浮点类型的数值，表示无效或者无意义的数值结果，例如：0.0 &#x2F; 0.0得到的结果没有意义，其结果就是NaN），由于NaN是无意义的结果，因此两个NaN的值比较结果就是<code>false</code>。源码中的第一个<code>if</code>判断就是针对NaN结果的判断，如果<code>a</code>的确是NaN，那么比较的结果没有意义，返回的结果也就是变量<code>a</code>本身的值NaN。</p>
+<p>第二个比较主要是针对<code>a</code>的值是0.0，<code>b</code>的值是-0.0的情况，0.0在默认情况下无论前面加上正负号都是0.0，第三个条件中<code>Double.doubleToRawLongBits()</code>方法是将当前按浮点数转换成64位的<code>long</code>类型数，<code>negativeZeroDoubleBits</code>就是上述方法默认的-0.0转换成<code>long</code>类型的数字，如果此时<code>Double.doubleToRawLongBits(b)</code>得到的结果和<code>negativeZeroDoubleBits</code>的值完全相同，那么得到的结果是<code>b</code>的值-0.0。</p>
+<p>如果上述两个条件都不符合，那么就使用三元运算符进行比较，如果<code>a</code>小于等于<code>b</code>，返回值是<code>a</code>，反之为<code>b</code>。</p>
+<h2 id="2-2-数学常量-pi-和-e"><a href="#2-2-数学常量-pi-和-e" class="headerlink" title="2.2 数学常量$\pi$和$e$"></a>2.2 数学常量$\pi$和$e$</h2><p>数学常量是指在数学领域中经常使用的，具有特定数值的量。在中学阶段，我们接触到的两个常量是圆周率$\pi$（3.1415926…）和自然对数$e$（2.7182818…）。这两个常量在Java的<code>Math</code>类有存储，我们只需要调用<code>Math.PI</code>即可获取$\pi$值，调用<code>Math.E</code>即可获取$e$值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 数学常量：圆周率和自然对数</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-02</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MathDemo2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;圆周率的值是: &quot;</span> + Math.PI);<br>        System.out.println(<span class="hljs-string">&quot;自然对数的值是: &quot;</span> + Math.E);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231102070010918.png" srcset="/img/loading.gif" lazyload></p>
+<p>从运行结果中我们可以发现，<code>Math.PI</code>和<code>Math.E</code>只输出了小数点后的一部分，这是因为在<code>Math</code>类中关于<code>PI</code>和<code>E</code>使用的是<code>double</code>类型，由于<code>double</code>的精度只有15位，因此输出结果保留了小数点后15位。</p>
+<p><img src="https://source.icode504.com/images/image-20231102071223060.png" srcset="/img/loading.gif" lazyload alt="E和PI的源码"></p>
+<h2 id="2-3-三角函数"><a href="#2-3-三角函数" class="headerlink" title="2.3 三角函数"></a>2.3 三角函数</h2><p>在<code>Math</code>类中定义了很多和三角函数相关方法，所有的三角函数得到的结果都是<code>double</code>类型，这里选择了3个具有代表性的三角函数：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>sin(a)</code></td>
+<td>正弦函数</td>
+</tr>
+<tr>
+<td><code>cos(a)</code></td>
+<td>余弦函数</td>
+</tr>
+<tr>
+<td><code>tan(a)</code></td>
+<td>正切函数</td>
+</tr>
+</tbody></table>
+<p>和数学上的使用基本上一样，我们只需要确定<code>a</code>的值即可。例如：$sin(\frac{\pi}{6})&#x3D;0.5,cos(\frac{\pi}{3}&#x3D;0.5),tan(\frac{\pi}{4})&#x3D;1$，此时我们可以使用程序来检验一下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 三角函数的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-02</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MathDemo3</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 弧度使用Math.PI来表示</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">sinResult</span> <span class="hljs-operator">=</span> Math.sin(Math.PI / <span class="hljs-number">6</span>);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">cosResult</span> <span class="hljs-operator">=</span> Math.cos(Math.PI / <span class="hljs-number">3</span>);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">tanResult</span> <span class="hljs-operator">=</span> Math.tan(Math.PI / <span class="hljs-number">4</span>);<br><br>        System.out.println(<span class="hljs-string">&quot;sinResult = &quot;</span> + sinResult);<br>        System.out.println(<span class="hljs-string">&quot;cosResult = &quot;</span> + cosResult);<br>        System.out.println(<span class="hljs-string">&quot;tanResult = &quot;</span> + tanResult);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231102073800307.png" srcset="/img/loading.gif" lazyload></p>
+<p>但是从运行结果中我们可以发现得到的结果和预期的值相差“一点点”，出现上述情况的原因主要有两点：首先，计算机本身处理浮点类型的数值就不准确。另外，<code>Math.PI</code>的值是小数点的后15位，做不到十分精确。因此得到的结果和期望值存在误差。</p>
+<h2 id="2-4-指数函数和对数函数"><a href="#2-4-指数函数和对数函数" class="headerlink" title="2.4 指数函数和对数函数"></a>2.4 指数函数和对数函数</h2><p><code>Math</code>类中定义了如下常用的指数函数和对数函数：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>sprt(a)</code></td>
+<td>求a的平方根</td>
+</tr>
+<tr>
+<td><code>pow(a, b)</code></td>
+<td>求a的b次方，即$a^b$</td>
+</tr>
+<tr>
+<td><code>exp(a)</code></td>
+<td>求自然对数$e$的a次方，即$e^a$</td>
+</tr>
+<tr>
+<td><code>log(a)</code></td>
+<td>求以自然对数$e$为底，a的对数，即$ln(a)$</td>
+</tr>
+<tr>
+<td><code>log10(a)</code></td>
+<td>求以10为底，a的对数，即$log_{10}a$</td>
+</tr>
+</tbody></table>
+<p>以下是这些数学函数在代码中的应用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 指数函数、对数函数的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-03</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MathDemo4</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">number1</span> <span class="hljs-operator">=</span> <span class="hljs-number">49</span>;<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> Math.sqrt(number1);    <span class="hljs-comment">// 求number1的平方根</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">number2</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">number3</span> <span class="hljs-operator">=</span> <span class="hljs-number">4</span>;<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> Math.pow(number2, number3);    <span class="hljs-comment">// 求number2的number3次方</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result3</span> <span class="hljs-operator">=</span> Math.exp(<span class="hljs-number">3</span>);       <span class="hljs-comment">// 求e的3次方</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result4</span> <span class="hljs-operator">=</span> Math.log(<span class="hljs-number">2</span> * Math.E);      <span class="hljs-comment">// 求以e为底，2e的对数</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result5</span> <span class="hljs-operator">=</span> Math.log10(<span class="hljs-number">100</span>);       <span class="hljs-comment">// 求以10为底，100的对数</span><br><br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br>        System.out.println(<span class="hljs-string">&quot;result3 = &quot;</span> + result3);<br>        System.out.println(<span class="hljs-string">&quot;result4 = &quot;</span> + result4);<br>        System.out.println(<span class="hljs-string">&quot;result5 = &quot;</span> + result5);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231104105718121.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="2-5-数字的舍入操作"><a href="#2-5-数字的舍入操作" class="headerlink" title="2.5 数字的舍入操作"></a>2.5 数字的舍入操作</h2><p>在进行数学运算时，我们可能需要对小数进行舍入操作（例如：四舍五入），<code>Math</code>类为我们提供了以下四种关于小数舍入的方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>返回类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ceil(x)</code></td>
+<td><code>double</code></td>
+<td>获取大于或等于当前数值的最小整数</td>
+</tr>
+<tr>
+<td><code>floor(x)</code></td>
+<td><code>double</code></td>
+<td>获取小于或等于当前数值最大整数</td>
+</tr>
+<tr>
+<td><code>rint(x)</code></td>
+<td><code>double</code></td>
+<td>获取当前数值最接近的整数，如果有两个相同接近的整数，取偶数</td>
+</tr>
+<tr>
+<td><code>round(x)</code></td>
+<td><code>double</code></td>
+<td>四舍五入，舍入数字以第一位小数为基准</td>
+</tr>
+</tbody></table>
+<p>以下是这些数学函数在代码中的应用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 舍入函数的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-03</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MathDemo5</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">double</span> <span class="hljs-variable">number1</span> <span class="hljs-operator">=</span> <span class="hljs-number">2.46</span>;<br>        <span class="hljs-type">double</span> <span class="hljs-variable">number2</span> <span class="hljs-operator">=</span> -<span class="hljs-number">2.34</span>;<br><br>        <span class="hljs-comment">// 获取大于或等于当前数值的最小整数</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> Math.ceil(number1);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> Math.ceil(number2);<br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br><br>        System.out.println(<span class="hljs-string">&quot;--------------------&quot;</span>);<br>        <span class="hljs-comment">// 获取小于或等于当前数值最大整数</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result3</span> <span class="hljs-operator">=</span> Math.floor(number1);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result4</span> <span class="hljs-operator">=</span> Math.floor(number2);<br>        System.out.println(<span class="hljs-string">&quot;result3 = &quot;</span> + result3);<br>        System.out.println(<span class="hljs-string">&quot;result4 = &quot;</span> + result4);<br><br>        System.out.println(<span class="hljs-string">&quot;--------------------&quot;</span>);<br>        <span class="hljs-comment">// 获取当前数值最接近的整数，如果有两个相同接近的整数，取偶数</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result5</span> <span class="hljs-operator">=</span> Math.rint(number1);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result6</span> <span class="hljs-operator">=</span> Math.rint(number2);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result7</span> <span class="hljs-operator">=</span> Math.rint(<span class="hljs-number">5.5</span>);<br>        System.out.println(<span class="hljs-string">&quot;result5 = &quot;</span> + result5);<br>        System.out.println(<span class="hljs-string">&quot;result6 = &quot;</span> + result6);<br>        System.out.println(<span class="hljs-string">&quot;result7 = &quot;</span> + result7);<br><br>        System.out.println(<span class="hljs-string">&quot;--------------------&quot;</span>);<br>        <span class="hljs-comment">// 四舍五入，舍入数字以第一位小数为基准</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result8</span> <span class="hljs-operator">=</span> Math.floor(number1);<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result9</span> <span class="hljs-operator">=</span> Math.floor(number2);<br>        System.out.println(<span class="hljs-string">&quot;result7 = &quot;</span> + result8);<br>        System.out.println(<span class="hljs-string">&quot;result8 = &quot;</span> + result9);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231104105840264.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="2-6-随机数"><a href="#2-6-随机数" class="headerlink" title="2.6 随机数"></a>2.6 随机数</h2><p><code>Math</code>类中为我们提供了一个获取随机数的方法<code>random()</code>，它默认在$[0,1)$范围内生成小数。我们可以利用这个范围，生成任意范围的数字。</p>
+<p>例如：利用<code>Math.random()</code>所给的范围，生成$[15, 60]$之间的随机数。</p>
+<blockquote>
+<p>首先，整数范围$[15, 60]$可以等价写成$[15, 61)$。</p>
+<p>再获取范围差：$61 - 15 &#x3D; 46$，</p>
+<p>利用不等式的性质，将原有的$[0, 1)$乘以46得到$[0, 46)$，再将现有的范围再加上15，即可获得目标范围：$[15, 61)$</p>
+<p>总结：从$[0,1)$转换到$[15,61)$先乘以46，再加15即可。</p>
+</blockquote>
+<p>以下上述案例在Java代码中的实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Math.random()生成随机数</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-03</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MathDemo6</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 每次生成的随机数值都不相同</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> Math.random();<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> Math.random();<br>        <span class="hljs-type">double</span> <span class="hljs-variable">result3</span> <span class="hljs-operator">=</span> Math.random();<br><br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br>        System.out.println(<span class="hljs-string">&quot;result3 = &quot;</span> + result3);<br>        System.out.println(<span class="hljs-string">&quot;--------------------&quot;</span>);<br><br>        <span class="hljs-comment">// 由于生成的是[15,60]之间的整数，需要将计算结果强制转换int类型</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">randomNumber1</span> <span class="hljs-operator">=</span> (<span class="hljs-type">int</span>) (Math.random() * <span class="hljs-number">46</span> + <span class="hljs-number">15</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">randomNumber2</span> <span class="hljs-operator">=</span> (<span class="hljs-type">int</span>) (Math.random() * <span class="hljs-number">46</span> + <span class="hljs-number">15</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">randomNumber3</span> <span class="hljs-operator">=</span> (<span class="hljs-type">int</span>) (Math.random() * <span class="hljs-number">46</span> + <span class="hljs-number">15</span>);<br><br>        System.out.println(<span class="hljs-string">&quot;randomNumber1 = &quot;</span> + randomNumber1);<br>        System.out.println(<span class="hljs-string">&quot;randomNumber2 = &quot;</span> + randomNumber2);<br>        System.out.println(<span class="hljs-string">&quot;randomNumber3 = &quot;</span> + randomNumber3);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>每次得到的结果都不相同：</p>
+<p><img src="https://source.icode504.com/images/231104005.gif" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、随机数类Random"><a href="#三、随机数类Random" class="headerlink" title="三、随机数类Random"></a>三、随机数类Random</h1><p>前面我们学过<code>Math.random()</code>方法来生成随机数，但是这个方法存在一个局限是它默认生成的范围是$[0,1)$之间的浮点数值，如果需要更大范围的随机数需要进行一定的计算并且需要进行强制类型转换，可能会导致代码可读性变低。</p>
+<p>而接下来要提到的<code>Random</code>类可以避免强制类型转换的问题，并且包含<code>Math.random()</code>方法所不包含的一些特性。</p>
+<h2 id="3-1-随机数相关的概念"><a href="#3-1-随机数相关的概念" class="headerlink" title="3.1 随机数相关的概念"></a>3.1 随机数相关的概念</h2><p>伪随机数：伪随机数是计算机利用特定的算法计算出来的$[0,1)$均匀分布的随机序列。虽然伪随机数并不是真正的随机数，但是它们具有类似随机数的统计特征：均匀性和独立性。在计算伪随机数时，如果使用的初始值（也称作随机数种子）不变，那么生成伪随机数的序列也不会改变。伪随机数可以使用程序大量生成。</p>
+<p>随机数种子：随机数种子是在<strong>伪随机数生成器中用于生成伪随机数的初始数值</strong>，随机数种子一般是数字。在伪随机数生成器中，给定相同的种子值，将会生成相同的伪随机数的序列。</p>
+<h2 id="3-2-随机数类Random的使用"><a href="#3-2-随机数类Random的使用" class="headerlink" title="3.2 随机数类Random的使用"></a>3.2 随机数类Random的使用</h2><p>和前面讲过的<code>Scanner</code>类一样，<code>Random</code>类也在<code>java.util</code>包中。创建随机数的方法如下：</p>
+<p>1. 在类的上方导入<code>Random</code>类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Random;<br></code></pre></td></tr></table></figure>
+
+<p>2. 创建一个<code>Random</code>对象：有两种方式：一种是给定随机数，另外一种就是不给随机数：</p>
+<table>
+<thead>
+<tr>
+<th>构造方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Random(long)</code></td>
+<td>传入一个<code>long</code>类型的随机数种子，后续生成一个固定的随机数序列</td>
+</tr>
+<tr>
+<td><code>Random()</code></td>
+<td>如果构造方法中没有随机数，计算机会给定一个随机数种子。当然，后续生成的随机数列就不是固定的</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Random</span> <span class="hljs-variable">random1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>(<span class="hljs-number">20</span>);		<span class="hljs-comment">// 给定一个随机数种子20，后续会生成一个固定的随机数数列</span><br><span class="hljs-type">Random</span> <span class="hljs-variable">random2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>();			<span class="hljs-comment">// 不直接给定随机数种子，让计算机自己分配一个种子，生成一个不固定的随机数数列</span><br></code></pre></td></tr></table></figure>
+
+<p>3. 根据要生成的随机数类型，调用随机数方法，支持整数类型（<code>int</code>和<code>long</code>）、浮点型（<code>float</code>和<code>double</code>）和布尔类型（<code>boolean</code>）。方法列表如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nextInt()</code></td>
+<td>生成<code>int</code>范围内的随机数</td>
+</tr>
+<tr>
+<td><code>nextInt(int)</code></td>
+<td>生成1到<code>int</code>最大值范围内（不包含<code>int</code>最大值）的随机数</td>
+</tr>
+<tr>
+<td><code>nextLong()</code></td>
+<td>生成<code>long</code>范围内的随机数</td>
+</tr>
+<tr>
+<td><code>nextFloat()</code></td>
+<td>生成<code>float</code>范围内的随机数</td>
+</tr>
+<tr>
+<td><code>nextDouble()</code></td>
+<td>生成<code>double</code>范围内的随机数</td>
+</tr>
+<tr>
+<td><code>nextBoolean()</code></td>
+<td>随机生成<code>true</code>或<code>false</code></td>
+</tr>
+</tbody></table>
+<p>以下是上述方法的使用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Random;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 随机数的应用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-04</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RandomDemo1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 不使用随机数种子</span><br>        <span class="hljs-type">Random</span> <span class="hljs-variable">random1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> random1.nextInt();            <span class="hljs-comment">// 生成int范围内的随机整数</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> random1.nextInt(<span class="hljs-number">60</span>);      <span class="hljs-comment">// 生成1到60范围内的随机整数</span><br>        <span class="hljs-type">long</span> <span class="hljs-variable">result3</span> <span class="hljs-operator">=</span> random1.nextLong();          <span class="hljs-comment">// 生成long范围内的随机整数</span><br>        <span class="hljs-type">float</span> <span class="hljs-variable">result4</span> <span class="hljs-operator">=</span> random1.nextFloat();        <span class="hljs-comment">// 生成float范围内的随机整数</span><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result5</span> <span class="hljs-operator">=</span> random1.nextDouble();      <span class="hljs-comment">// 生成double范围内的随机整数</span><br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">result6</span> <span class="hljs-operator">=</span> random1.nextBoolean();    <span class="hljs-comment">// 生成true或false</span><br><br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br>        System.out.println(<span class="hljs-string">&quot;result3 = &quot;</span> + result3);<br>        System.out.println(<span class="hljs-string">&quot;result4 = &quot;</span> + result4);<br>        System.out.println(<span class="hljs-string">&quot;result5 = &quot;</span> + result5);<br>        System.out.println(<span class="hljs-string">&quot;result6 = &quot;</span> + result6);<br><br>        System.out.println(<span class="hljs-string">&quot;--------------------&quot;</span>);<br>        <span class="hljs-comment">// 使用随机数种子生成固定序列</span><br>        <span class="hljs-type">Random</span> <span class="hljs-variable">random2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>(<span class="hljs-number">20</span>);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">randomValue</span> <span class="hljs-operator">=</span> random2.nextInt();<br>            System.out.println(<span class="hljs-string">&quot;randomValue&quot;</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot; = &quot;</span> + randomValue);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src="https://source.icode504.com/images/231104002.gif" srcset="/img/loading.gif" lazyload></p>
+<p>我们也可以使用<code>Random</code>解决上述生成随机数问题：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Random;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 使用Random类生成[15, 60]范围内的整数</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-11-04</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RandomDemo2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Random</span> <span class="hljs-variable">random</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>();   <span class="hljs-comment">// 不设置随机种子</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> random.nextInt(<span class="hljs-number">46</span>) + <span class="hljs-number">15</span>;<br>        System.out.println(<span class="hljs-string">&quot;result = &quot;</span> + result);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>多运行几次程序，我们发现生成的随机数确实在$[15,60]$范围内：</p>
+<p><img src="https://source.icode504.com/images/231104003.gif" srcset="/img/loading.gif" lazyload></p>
+<p>以上是使用<code>Random</code>类生成随机数，相对于<code>Math.random()</code>而言，生成随机数可以省去强制类型转换，相对方便了一些。</p>
+<p><code>Random</code>类是一个方便实用的工具类，它提供了各种方法来获取不同类型和范围的随机数，适用于各种模拟、游戏、密码学等方面应用。通过使用<code>Random</code>类，开发人员可以轻松地生成具有良好随机性和不可预测性的伪随机数，从而提高应用程序的灵活性和效率。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" class="category-chain-item">Java</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>入门篇-其之八-常用类的简单使用</div>
+      <div>https://www.icode504.com/posts/10.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年4月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/9.html" title="入门篇-其之七-Java运算符（下）">
+                        <span class="hidden-mobile">入门篇-其之七-Java运算符（下）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/10.7.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://hexo.fluid-dev.com/docs/guide/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      吉ICP备2023009024号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
