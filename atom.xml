@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-06T14:06:52.132Z</updated>
+  <updated>2025-04-06T14:10:16.183Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>入门篇-其之九-流程控制之条件判断</title>
+    <link href="https://www.icode504.com/posts/11.html"/>
+    <id>https://www.icode504.com/posts/11.html</id>
+    <published>2025-04-06T14:10:16.183Z</published>
+    <updated>2025-04-06T14:10:16.183Z</updated>
+    
+    
+    <summary type="html">选择结构是程序的三大基本结构之一，选择结构根据条件结果执行不同内容。Java中选择结构由以下几种：if语句、if-else语句、if-else if语句和switch语句，本文对它们的用法进行一一讲解</summary>
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>入门篇-其之八-常用类的简单使用</title>
