@@ -18,55 +18,68 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装配置JDK 8教程。">
+    <meta name="description" content="本文探讨了程序员在工作中需要掌握的工具Intellij IDEA，包括下载安装、JDK环境配置、创建Java项目、在IDEA运行第一个程序等。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 8安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/1.html">
+<meta property="og:title" content="Intellij IDEA 2021.1.3安装配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/14.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装配置JDK 8教程。">
+<meta property="og:description" content="本文探讨了程序员在工作中需要掌握的工具Intellij IDEA，包括下载安装、JDK环境配置、创建Java项目、在IDEA运行第一个程序等。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101131122731.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101131317529.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101132604565.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101133458956.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240714131003147.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101134018241.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314125453675.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314130028313.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101134722779.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101134758455.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314131058441.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314131446348.png">
-<meta property="og:image" content="https://source.icode504.com/images/240101001.gif">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101140732789.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314132647334.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314132930503.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101141148295.png">
-<meta property="og:image" content="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101010932039.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101011132186.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314134716166.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314134919881.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101141636264.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314135756989.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101141809160.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314140351859.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314140519091.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314141144190.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314140629530.png">
-<meta property="article:published_time" content="2025-03-20T02:00:55.984Z">
-<meta property="article:modified_time" content="2025-03-20T02:00:56.020Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026105758909.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026105832218.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026110358738.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026110530587.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026110644963.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026110747122.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026110933779.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026111926666.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026112118222.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026112159702.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026112731774.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026114146154.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026114256575.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026114443579.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026114823255.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026115032492.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026140417316.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026140651185.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026140910036.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026141507224.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026141624170.png">
+<meta property="og:image" content="https://source.icode504.com/images/v2-64aba410fcb514b6ab24c746db122258_r.jpg">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026143448569.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026144016011.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026144525573.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026145517713.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026145749784.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026150115883.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026153407784.png">
+<meta property="og:image" content="https://source.icode504.com/images/23102601.gif">
+<meta property="og:image" content="https://source.icode504.com/images/23102602.gif">
+<meta property="og:image" content="https://source.icode504.com/images/23102603.gif">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026155551840.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026155744103.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026160055833.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026160524459.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026160856389.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231026160939651.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231019145304952.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231019145326571.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231019145557554.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231019145621728.png">
+<meta property="article:published_time" content="2025-04-06T14:17:51.193Z">
+<meta property="article:modified_time" content="2025-04-06T14:17:51.193Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
 <meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Intellij IDEA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20240101131122731.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-20231026105758909.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 8安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>Intellij IDEA 2021.1.3安装配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -237,7 +250,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 8安装配置教程（Windows版）</span>
+            <span id="subtitle">Intellij IDEA 2021.1.3安装配置教程（Windows版）</span>
           
         </div>
 
@@ -248,8 +261,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-20 10:00" pubdate>
-          2025年3月20日
+        <time datetime="2025-04-06 22:17" pubdate>
+          2025年4月6日
         </time>
       </span>
     
@@ -361,17 +374,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -388,17 +401,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -410,7 +423,7 @@
       
         <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 8安装配置教程（Windows版）</span>
         </a>
       
@@ -429,17 +442,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="集成开发环境"
         id="heading-bf3f16ac0114b2b7279f4887db8a2933" role="tab" data-toggle="collapse" href="#collapse-bf3f16ac0114b2b7279f4887db8a2933"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         集成开发环境
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
+      <div class="category-collapse collapse show" id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
            role="tabpanel" aria-labelledby="heading-bf3f16ac0114b2b7279f4887db8a2933">
         
         
@@ -451,7 +464,7 @@
       
         <a href="/posts/14.html" title="Intellij IDEA 2021.1.3安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Intellij IDEA 2021.1.3安装配置教程（Windows版）</span>
         </a>
       
@@ -482,102 +495,109 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 8安装配置教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年3月20日
-                  
-                
-              </p>
+            <h1 id="seo-header">Intellij IDEA 2021.1.3安装配置教程（Windows版）</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-</blockquote>
-<p>接下来为大家讲解一下JDK 8如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>以下两种方式二选一下载即可：</p>
-<h2 id="方式一：网盘下载"><a href="#方式一：网盘下载" class="headerlink" title="方式一：网盘下载"></a>方式一：网盘下载</h2><p>请选择任意一个链接，选择任意一个安装包下载即可：</p>
-<table>
-<thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1FjQlCUulceJWOQP96qQvjQ?pwd=mclj">点击下载</a></th>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1K4gR2k152JWimdxEADvp2g?pwd=1024">备用下载1</a></th>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-KFO-_GQOsF2M-PVzKt24w?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://source.icode504.com/images/image-20240101131122731.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h2><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/archive/">点击进入</a></p>
-<p><img src="https://source.icode504.com/images/image-20240101131317529.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 找到以Java SE Development Kit开头的下载列表，找到64位的版本版本下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240101132604565.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 按图所示点击下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240101133458956.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240714131003147.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK（这里我使用的版本是JDK-8）"><a href="#二、安装JDK（这里我使用的版本是JDK-8）" class="headerlink" title="二、安装JDK（这里我使用的版本是JDK 8）"></a>二、安装JDK（这里我使用的版本是JDK 8）</h1><p>1. 双击文件，开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20240101134018241.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 点击<strong>下一步</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314125453675.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 修改安装路径（如果你是新手小白，可以不执行这一步操作，直接跳转到第5步），点击<strong>更改</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314130028313.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在新建一个路径。为了避免后续出现问题，创建路径时，请不要JDK安装位置放在有中文字符的路径中。选择当前路径，点击确定：</p>
-<p><img src="https://source.icode504.com/images/image-20240101134722779.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击下一步：</p>
-<p><img src="https://source.icode504.com/images/image-20240101134758455.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230314131058441.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 安装过程中，出现了一个JRE安装（前面我们安装的JDK已经包含了JRE，可以选择不安装，如果不需要安装，出现下图窗口后直接点击右上角关闭即可，直接跳到第11步）。点击<strong>更改路径</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314131446348.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 新建一个路径，建议不要出现中文字符，然后选中此文件夹，点击确定：</p>
-<p><img src="https://source.icode504.com/images/240101001.gif" srcset="/img/loading.gif" lazyload></p>
-<p>9. 点击下一步：</p>
-<p><img src="https://source.icode504.com/images/image-20240101140732789.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 安装中，安装完成以后此窗口会自动消失：</p>
-<p><img src="https://source.icode504.com/images/image-20230314132647334.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 点击关闭，JDK安装完成。</p>
-<p><img src="https://source.icode504.com/images/image-20230314132930503.png" srcset="/img/loading.gif" lazyload></p>
+                <p>Intellij IDEA（以下简称 IDEA）是Java语言的集成开发环境，在业界公认为是一款优秀的 Java 开发工具。分为 Community 社区版（免费）和 Untimate 终极版（付费）。</p>
+<p>IDEA是一款智能编译器。它可以进行智能代码补全、提供问题工具窗口、代码上下文检查操作、实时模板、项目级别代码重构、重复代码检测等功能。</p>
+<p>IDEA终极版为现代应用程序和Java相关微服务开发框架提供了一流的支持。IDEA 对 SpringBoot、Jakata EE、JPA 等框架提供一流的支持。</p>
+<p>其内部支持很多的内置工具，例如：调试器、数据库工具、终端、反编译器、WEB开发、版本控制（Git）、导航和搜索功能等。</p>
+<p>接下来就为大家介绍一下 Windows 版的 Intellij IDEA 如何安装和使用。</p>
+<h1 id="一、安装-Intellij-IDEA"><a href="#一、安装-Intellij-IDEA" class="headerlink" title="一、安装 Intellij IDEA"></a>一、安装 Intellij IDEA</h1><p>1. 进入IDEA的官方下载页面，<a target="_blank" rel="noopener" href="https://www.jetbrains.com.cn/idea/download/other.html">点我查看</a>。向下找，找到2021.1.3版本（事实上，要下载的版本和最新版本使用Java编写代码的差异并不大）</p>
+<p><img src="https://source.icode504.com/images/image-20231026105758909.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如下图：Windows选择2021.1.3版本的安装包进行下载</p>
+<p><img src="https://source.icode504.com/images/image-20231026105832218.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 双击打开安装包</p>
+<p><img src="https://source.icode504.com/images/image-20231026110358738.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 出现IDEA安装界面后，点击Next：</p>
+<p><img src="https://source.icode504.com/images/image-20231026110530587.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 选择安装路径，建议安装在除C盘外的其他位置，这里我安装在了D盘，完成后点击Next：</p>
+<p><img src="https://source.icode504.com/images/image-20231026110644963.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231026110747122.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231026110933779.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 如果前面选择安装路径的页面仍没有变换，请耐心等待一小会（或者多点几次Next）。出现下面页面以后，按照如图所示勾选即可：</p>
+<p><img src="https://source.icode504.com/images/image-20231026111926666.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 点击<code>Install</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026112118222.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20231026112159702.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 点击<code>Finish</code>。至此，IDEA安装完成。</p>
+<p><img src="https://source.icode504.com/images/image-20231026112731774.png" srcset="/img/loading.gif" lazyload></p>
+<p>10.  双击桌面上的IDEA图标，打开IDEA，会弹出一个协议，按照下图所示勾选，然后点击<code>Continue</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026114146154.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 出现数据分享窗口后，选择<code>Don&#39;t Send</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026114256575.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 进入激活页面，我们下载的是IDEA Ultimate版，正常是需要按月或者按年支付费用的。此处我们先按照下图进行30天的免费试用：</p>
+<p><img src="https://source.icode504.com/images/image-20231026114443579.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手或者已经安装了其他版本的JDK，可以选择性往下看。</p>
+<p>如需正版，请点击右侧链接到官网购买（需要注册账号）：<a target="_blank" rel="noopener" href="https://www.jetbrains.com.cn/idea/buy/?section=personal&billing=yearly">点我进入</a></p>
 </blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101141148295.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击高级系统设置：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量中，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置安装路径，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240101141636264.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240101141809160.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、检查JDK是否安装成功"><a href="#四、检查JDK是否安装成功" class="headerlink" title="四、检查JDK是否安装成功"></a>四、检查JDK是否安装成功</h1><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140351859.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 输入<code>javac</code>和<code>java</code>，会出现下图内容：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140519091.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20230314141144190.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 输入<code>java -version</code>，出现下图信息表示JDK安装成功：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140629530.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 出现下方这个页面以后，就说明我们30天使用申请成功，此时点击<code>Continue</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026114823255.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 进入IDEA欢迎界面以后，点击Plugins进入插件下载页面：</p>
+<p><img src="https://source.icode504.com/images/image-20231026115032492.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 点击右上角小齿轮，点击<code>Manage Plugin Repositories</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026140417316.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 点击左上角的加号，复制下方链接并粘贴到输入框中，然后点击OK：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//plugins.zhile.io</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20231026140651185.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 此时在插件下载页面中搜索<code>IDE Eval Reset</code>，然后点击<code>Install</code>：</p>
+<blockquote>
+<p><code>IDE Eval Reset</code>插件的作用是无限延长IDEA的试用期。正常IDEA给我们的试用是30天，使用这款插件以后，只要快到了需要激活IDEA的时间，他就会自动延长一个月的试用期。从理论上来讲，安装这款插件以后，理论上就可以实现永久使用。</p>
+<p>这款插件仅限于在IDEA 2021.2.2以下的版本使用，往后的版本中不适用。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20231026140910036.png" srcset="/img/loading.gif" lazyload></p>
+<p>18. 出现此弹框时，点击<code>Accept</code>，此时IDEA会安装此插件：</p>
+<p><img src="https://source.icode504.com/images/image-20231026141507224.png" srcset="/img/loading.gif" lazyload></p>
+<p>19. 至此，IDEA安装和简单的配置已经完成了。此插件具体使用详见下一部分内容。</p>
+<p><img src="https://source.icode504.com/images/image-20231026141624170.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、使用Intellij-IDEA编写并运行Java程序"><a href="#二、使用Intellij-IDEA编写并运行Java程序" class="headerlink" title="二、使用Intellij IDEA编写并运行Java程序"></a>二、使用Intellij IDEA编写并运行Java程序</h1><p>1. 请确保本地已经安装了JDK，如果没有安装的，查看此文章一步一步安装即可：<a href="http://www.icode504.com/posts/1.html">点我查看</a>。</p>
+<p>2. 输入<code>java -version</code>命令表示电脑上已经成功安装并配置了JDK：</p>
+<p><img src="https://source.icode504.com/images/v2-64aba410fcb514b6ab24c746db122258_r.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>3. 创建项目：点击左侧<code>Projects</code>，然后点击<code>New Project</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026143448569.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. IDEA会自动为我们检测本机是否安装JDK，下图表示已经成功安装了JDK，确认无误后点击<code>Next</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026144016011.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 直接点击<code>Next</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026144525573.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 填写项目名称，建议是英文名称，项目存储路径建议是英文路径并且自己后续可以找到的位置，完成后点击<code>Finish</code>。</p>
+<p><img src="https://source.icode504.com/images/image-20231026145517713.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 进入IDEA主界面以后，会弹出一个每日小提示窗口，按照下图所示操作将其永久关闭：</p>
+<p><img src="https://source.icode504.com/images/image-20231026145749784.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 在左侧文件夹中，鼠标右键点击<code>src</code>蓝色文件夹，选择第一个<code>New</code>，再选择<code>Java Class</code>，创建一个Java文件：</p>
+<p><img src="https://source.icode504.com/images/image-20231026150115883.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 文件的命名必须符合Java类的命名规范：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/654107809">点我进入，查找标识符部分，查看标识符命名规范</a></p>
+<p><img src="https://source.icode504.com/images/image-20231026153407784.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 输入<code>psvm</code>或者<code>main</code>，然后直接回车就可以生成<code>main</code>方法：</p>
+<p><img src="https://source.icode504.com/images/23102601.gif" srcset="/img/loading.gif" lazyload alt="23102601"></p>
+<p><img src="https://source.icode504.com/images/23102602.gif" srcset="/img/loading.gif" lazyload alt="23102602"></p>
+<p>11. 在<code>main</code>方法里输入<code>sout</code>然后点击回车，就会生成一个换行输出的语句：</p>
+<p><img src="https://source.icode504.com/images/23102603.gif" srcset="/img/loading.gif" lazyload alt="23102603"></p>
+<p>12. 此时我们可以在程序中写点内容进行输出，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/image-20231026155551840.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 运行Java程序：这里的运行就直接包括了编译和运行</p>
+<p>方式一：鼠标右键，点击<code>Run MyFirstProgram</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026155744103.png" srcset="/img/loading.gif" lazyload></p>
+<p>方式二：使用快捷键，这里我使用的快捷键是<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F10</kbd>，具体的快捷键详见自己鼠标右键后<code>Run xxx</code>后面对应的快捷键执行即可</p>
+<p>运行结果如下：</p>
+<p><img src="https://source.icode504.com/images/image-20231026160055833.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. IDE Eval Reset插件的无限期使用：点击上方<code>Help</code>，然后点击最下面的<code>Eval Reset</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231026160524459.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 按照下图所示进行勾选，然后点击Reset，此时IDEA会自动重启。</p>
+<p><img src="https://source.icode504.com/images/image-20231026160856389.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 点击Yes，就会重启，此时IDEA的试用期就会延长。</p>
+<p><img src="https://source.icode504.com/images/image-20231026160939651.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、Intellij-IDEA的卸载（可选）"><a href="#三、Intellij-IDEA的卸载（可选）" class="headerlink" title="三、Intellij IDEA的卸载（可选）"></a>三、Intellij IDEA的卸载（可选）</h1><p>1. 找到IDEA的安装目录，双击<code>Uninstall.exe</code>开始卸载：</p>
+<p><img src="https://source.icode504.com/images/image-20231019145304952.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 将下面两个框进行勾选。然后点击<code>Uninstall</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20231019145326571.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 卸载中，请耐心等待</p>
+<p><img src="https://source.icode504.com/images/image-20231019145557554.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 卸载完成，点击<code>Close</code></p>
+<p><img src="https://source.icode504.com/images/image-20231019145621728.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -606,15 +626,8 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="category-chain-item">集成开发环境</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
-  
-  
-
   
 
   
@@ -632,9 +645,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
-      
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/Intellij-IDEA/" class="print-no-link">#Intellij IDEA</a>
       
     </div>
   
@@ -646,8 +659,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 8安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/1.html</div>
+      <div>Intellij IDEA 2021.1.3安装配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/14.html</div>
     </div>
     <div class="license-meta">
       
@@ -659,7 +672,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月20日</div>
+          <div>2025年4月6日</div>
         </div>
       
       
@@ -691,18 +704,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/8.html" title="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/2.html" title="入门篇-其之一-第一个程序">
-                        <span class="hidden-mobile">入门篇-其之一-第一个程序</span>
+                      <a href="/posts/13.html" title="入门篇-其之十一-流程控制之break和continue关键字">
+                        <span class="hidden-mobile">入门篇-其之十一-流程控制之break和continue关键字</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
