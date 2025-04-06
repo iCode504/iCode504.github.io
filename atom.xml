@@ -42,29 +42,6 @@
   </entry>
   
   <entry>
-    <title>入门篇-其之十一-流程控制之break和continue关键字</title>
-    <link href="https://www.icode504.com/posts/13.html"/>
-    <id>https://www.icode504.com/posts/13.html</id>
-    <published>2025-04-06T14:13:45.046Z</published>
-    <updated>2025-04-06T14:13:45.050Z</updated>
-    
-    
-    <summary type="html">本文主要是在循环结构的基础上进一步讲解了嵌套循环、break和continue关键字，并通过三个案例加深对上述知识点的理解。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>入门篇-其之十-流程控制之循环结构</title>
     <link href="https://www.icode504.com/posts/12.html"/>
     <id>https://www.icode504.com/posts/12.html</id>
@@ -287,6 +264,29 @@
 &lt;p&gt;前言：众所周知，&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;的区别是：&lt;code&gt;i++&lt;/code&gt;先将&lt;code&gt;i&lt;/code&gt;的值赋值给变量，再将&lt;code&gt;i&lt;/code&gt;的值自增1；而&lt;code&gt;++i&lt;/code</summary>
         
       
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>入门篇-其之十一-流程控制之break和continue关键字</title>
+    <link href="https://www.icode504.com/posts/13.html"/>
+    <id>https://www.icode504.com/posts/13.html</id>
+    <published>2025-04-05T16:00:00.000Z</published>
+    <updated>2025-04-06T14:21:03.335Z</updated>
+    
+    
+    <summary type="html">本文主要是在循环结构的基础上进一步讲解了嵌套循环、break和continue关键字，并通过三个案例加深对上述知识点的理解。</summary>
     
     
     
