@@ -4,39 +4,6 @@
   
   
   <entry>
-    <title>第一章 若依-JFlow配置与启动</title>
-    <link href="/posts/16.html"/>
-    <url>/posts/16.html</url>
-    
-    <content type="html"><![CDATA[<p>若依（Ruoyi）一款开源的后台管理admin框架，JFlow 是一款经典的纯国产全开源的工作流引擎，该版本是两者的完美结合。</p><p>RuoYi是一个后台管理系统，基于经典技术组合（Spring Boot、Apache Shiro、MyBatis、Thymeleaf）主要目的让开发者注重专注业务，降低技术难度，从而节省人力成本，缩短项目周期，提高软件安全质量。</p><p>JFlow是由济南驰骋团队负责研发，开发语言主要是Java，是一款开源软件，工作流引擎操作简单，概念通俗易懂，操作手册完善（计:14万字操作手册说明书），代码注释完整，案例丰富翔实，单元测试完整，符合国内多种场景的需要。</p><p>以下是二者的官网：<a href="https://ruoyi.vip/">若依官网</a>，<a href="http://ccflow.org/">驰骋官网</a></p><h1 id="一、安装准备"><a href="#一、安装准备" class="headerlink" title="一、安装准备"></a>一、安装准备</h1><p>需要安装如下软件：</p><table><thead><tr><th>软件名称</th><th>安装教程</th></tr></thead><tbody><tr><td>Java</td><td><a href="http://www.icode504.com/posts/1.html">点我查看</a></td></tr><tr><td>MySQL</td><td><a href="http://www.icode504.com/posts/18.html">点我查看</a></td></tr><tr><td>Intellij IDEA</td><td><a href="http://www.icode504.com/posts/10.html">点我查看</a></td></tr><tr><td>Navicat</td><td><a href="https://www.jianshu.com/p/4bb2e2bfb449">点我查看</a></td></tr><tr><td>Maven</td><td><a href="https://blog.csdn.net/m0_72248235/article/details/130589912?spm=1001.2014.3001.5501">点我查看</a></td></tr><tr><td>Git</td><td><a href="https://blog.csdn.net/u012124199/article/details/114004087">点我查看</a></td></tr></tbody></table><h1 id="二、若依-JFlow代码下载"><a href="#二、若依-JFlow代码下载" class="headerlink" title="二、若依-JFlow代码下载"></a>二、若依-JFlow代码下载</h1><p>1. 找到一个合适文件夹，鼠标右键，点击<code>Git Bash Here</code>，此时会进入Git命令行窗口：</p><p><img src="https://source.icode504.com/images/image-20231201104451452.png"></p><p>2. 复制下面的内容到Git命令行并回车：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone https://gitee.com/opencc/RuoYi-JFlow.git<br></code></pre></td></tr></table></figure><blockquote><p>说明：如果你在gitee中添加了SSH KEY，也可以直接复制下面的内容到Git命令行中</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone git@gitee.com:opencc/RuoYi-JFlow.git<br></code></pre></td></tr></table></figure></blockquote><p>3. Git中如果出现如下提示及说明代码克隆完成：</p><p><img src="https://source.icode504.com/images/image-20231201105147112.png"></p><h1 id="三、导入项目"><a href="#三、导入项目" class="headerlink" title="三、导入项目"></a>三、导入项目</h1><p>1. 使用Intellij IDEA打开这个文件夹：</p><p><img src="https://source.icode504.com/images/image-20231201105456043.png"></p><p>2. 打开<code>Settings</code>，按照下图所示配置Maven</p><p><img src="https://source.icode504.com/images/image-20231201105802938.png"></p><p>3. 下载依赖需要一段时间，请耐心等待。</p><p>4. 在左侧项目目录，选中<code>sql</code>文件，按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>，复制文件路径</p><p><img src="https://source.icode504.com/images/image-20231201110144811.png"></p><p>5. 打开Navicat，如果你没有和本地MySQL连接的话，就点击左上角的连接，选择MySQL</p><p><img src="https://source.icode504.com/images/image-20231201110329123.png"></p><p>6. 连接名自定义或者不填，用户名填写root，密码即root用户的密码，填写完成后点击确定</p><p><img src="https://source.icode504.com/images/image-20231201110541430.png"></p><p>7. 鼠标右键点击新建数据库</p><p><img src="https://source.icode504.com/images/image-20231201110738537.png"></p><p>8. 数据库名称自定义，这里我命名为<code>ruoyi_jflow</code>，字符集选择<code>utf8mb4</code>即可，排序规则选择<code>utf8mb4_0900_ai_ci</code>即可，然后点击<strong>确定</strong>。</p><p><img src="https://source.icode504.com/images/image-20231201111256799.png"></p><p>9. 鼠标右键点击数据库，点击<strong>运行SQL文件</strong>：</p><p><img src="https://source.icode504.com/images/image-20231201111742572.png"></p><p>10. 按照下图所示导入SQL：</p><p><img src="https://source.icode504.com/images/image-20231201111908315.png"></p><p><img src="https://source.icode504.com/images/image-20231201111954377.png"></p><p><img src="https://source.icode504.com/images/image-20231201112052134.png"></p><p><img src="https://source.icode504.com/images/image-20231201112138717.png"></p><p>11. 导入SQL中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20231201112248515.png"></p><p>12. 导入完成，点击关闭：</p><p><img src="https://source.icode504.com/images/image-20231201112320508.png"></p><p>13. 刷新一下数据库，一共由242张表</p><p><img src="https://source.icode504.com/images/image-20231201162802611.png"></p><p>12. 双击打开IDEA项目中的<code>application-druid2.yml</code>文件</p><p><img src="https://source.icode504.com/images/image-20231201113749133.png"></p><p>13. 修改数据库配置</p><p><img src="https://source.icode504.com/images/image-20231201115235424.png"></p><p>14. 将<code>application-druid2.yml</code>文件改为<code>application-druid.yml</code></p><p><img src="https://source.icode504.com/images/image-20231201115432241.png"></p><p><img src="https://source.icode504.com/images/image-20231201115332224.png"></p><p>14. 点击文件左上角<code>File -&gt; Project Stucture</code>，确保版本是JDK 8：</p><p><img src="https://source.icode504.com/images/image-20231201114408428.png"></p><p>15. Redis配置：需要确保你在本地安装Redis，如果没有安装包，点击右侧链接下载：<a href="https://icode504.lanzouw.com/irWZP1ghutla">点我下载</a></p><ul><li><p>找一个你熟悉的位置，创建一个文件夹，命名为Redis</p></li><li><p>将下载的压缩包解压到这个文件夹中</p></li></ul><p><img src="https://source.icode504.com/images/image-20231201150102280.png"></p><ul><li>在上方文件路径中输入<code>cmd</code>并回车，进入命令行</li><li>在命令行中输入如下指令</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">redis-server --service-install redis.windows-service.conf<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-20231201150335394.png"></p><ul><li>此时按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>，打开任务管理器，点击服务，在下方找到Redis说明软件配置成功：</li></ul><p><img src="https://source.icode504.com/images/image-20231201151105294.png"></p><p>16. 打开项目中<code>application.yml</code>，这里关于Redis的配置信息不用修改，因为上面我们已经成功启动了本地Redis服务了：</p><p><img src="https://source.icode504.com/images/image-20231201151340895.png"></p><h1 id="四、启动项目"><a href="#四、启动项目" class="headerlink" title="四、启动项目"></a>四、启动项目</h1><p>1. 项目启动：点击右上角Debug调试启动，如果出现下面内容，就说明后端项目启动成功</p><p><img src="https://source.icode504.com/images/image-20231201150836073.png"></p><blockquote><p>说明：如果后端项目起不来，报错信息是8089端口被占用（如下图）</p><p><img src="https://source.icode504.com/images/image-20231201141026025.png"></p><p>解决办法：打开项目中的<code>application.yml</code>，找到<code>server.port</code>，将端口号修改成你知道的即可，这里我改成8090：</p><p><img src="https://source.icode504.com/images/image-20231201141214554.png"></p><p>重启一下项目即可。</p></blockquote><p>2. 打开浏览器，在上方输入地址：<a href="http://localhost:8089/ry-jflow/login">点我进入</a>，进入登录页面：</p><p>账号名：admin，密码：admin123</p><p><img src="https://source.icode504.com/images/image-20231201150919953.png"></p><p>3. 登录成功：</p><p><img src="https://source.icode504.com/images/image-20231201150939145.png"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Java</tag>
-      
-      <tag>Intellij IDEA</tag>
-      
-      <tag>若依</tag>
-      
-      <tag>JFlow</tag>
-      
-      <tag>MySQL</tag>
-      
-      <tag>开源</tag>
-      
-      <tag>Git</tag>
-      
-      <tag>Maven</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Scala 2安装教程（Windows版）</title>
     <link href="/posts/15.html"/>
     <url>/posts/15.html</url>
@@ -62,6 +29,53 @@
       <tag>Windows</tag>
       
       <tag>Scala</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>第一章 若依-JFlow配置与启动</title>
+    <link href="/posts/16.html"/>
+    <url>/posts/16.html</url>
+    
+    <content type="html"><![CDATA[<p>若依（Ruoyi）一款开源的后台管理admin框架，JFlow 是一款经典的纯国产全开源的工作流引擎，该版本是两者的完美结合。</p><p>RuoYi是一个后台管理系统，基于经典技术组合（Spring Boot、Apache Shiro、MyBatis、Thymeleaf）主要目的让开发者注重专注业务，降低技术难度，从而节省人力成本，缩短项目周期，提高软件安全质量。</p><p>JFlow是由济南驰骋团队负责研发，开发语言主要是Java，是一款开源软件，工作流引擎操作简单，概念通俗易懂，操作手册完善（计:14万字操作手册说明书），代码注释完整，案例丰富翔实，单元测试完整，符合国内多种场景的需要。</p><p>以下是二者的官网：<a href="https://ruoyi.vip/">若依官网</a>，<a href="http://ccflow.org/">驰骋官网</a></p><h1 id="一、安装准备"><a href="#一、安装准备" class="headerlink" title="一、安装准备"></a>一、安装准备</h1><p>需要安装如下软件：</p><table><thead><tr><th>软件名称</th><th>安装教程</th></tr></thead><tbody><tr><td>Java</td><td><a href="http://www.icode504.com/posts/1.html">点我查看</a></td></tr><tr><td>MySQL</td><td><a href="http://www.icode504.com/posts/18.html">点我查看</a></td></tr><tr><td>Intellij IDEA</td><td><a href="http://www.icode504.com/posts/10.html">点我查看</a></td></tr><tr><td>Navicat</td><td><a href="https://www.jianshu.com/p/4bb2e2bfb449">点我查看</a></td></tr><tr><td>Maven</td><td><a href="https://blog.csdn.net/m0_72248235/article/details/130589912?spm=1001.2014.3001.5501">点我查看</a></td></tr><tr><td>Git</td><td><a href="https://blog.csdn.net/u012124199/article/details/114004087">点我查看</a></td></tr></tbody></table><h1 id="二、若依-JFlow代码下载"><a href="#二、若依-JFlow代码下载" class="headerlink" title="二、若依-JFlow代码下载"></a>二、若依-JFlow代码下载</h1><p>1. 找到一个合适文件夹，鼠标右键，点击<code>Git Bash Here</code>，此时会进入Git命令行窗口：</p><p><img src="https://source.icode504.com/images/image-20231201104451452.png"></p><p>2. 复制下面的内容到Git命令行并回车：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone https://gitee.com/opencc/RuoYi-JFlow.git<br></code></pre></td></tr></table></figure><blockquote><p>说明：如果你在gitee中添加了SSH KEY，也可以直接复制下面的内容到Git命令行中</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone git@gitee.com:opencc/RuoYi-JFlow.git<br></code></pre></td></tr></table></figure></blockquote><p>3. Git中如果出现如下提示及说明代码克隆完成：</p><p><img src="https://source.icode504.com/images/image-20231201105147112.png"></p><h1 id="三、导入项目"><a href="#三、导入项目" class="headerlink" title="三、导入项目"></a>三、导入项目</h1><p>1. 使用Intellij IDEA打开这个文件夹：</p><p><img src="https://source.icode504.com/images/image-20231201105456043.png"></p><p>2. 打开<code>Settings</code>，按照下图所示配置Maven</p><p><img src="https://source.icode504.com/images/image-20231201105802938.png"></p><p>3. 下载依赖需要一段时间，请耐心等待。</p><p>4. 在左侧项目目录，选中<code>sql</code>文件，按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>，复制文件路径</p><p><img src="https://source.icode504.com/images/image-20231201110144811.png"></p><p>5. 打开Navicat，如果你没有和本地MySQL连接的话，就点击左上角的连接，选择MySQL</p><p><img src="https://source.icode504.com/images/image-20231201110329123.png"></p><p>6. 连接名自定义或者不填，用户名填写root，密码即root用户的密码，填写完成后点击确定</p><p><img src="https://source.icode504.com/images/image-20231201110541430.png"></p><p>7. 鼠标右键点击新建数据库</p><p><img src="https://source.icode504.com/images/image-20231201110738537.png"></p><p>8. 数据库名称自定义，这里我命名为<code>ruoyi_jflow</code>，字符集选择<code>utf8mb4</code>即可，排序规则选择<code>utf8mb4_0900_ai_ci</code>即可，然后点击<strong>确定</strong>。</p><p><img src="https://source.icode504.com/images/image-20231201111256799.png"></p><p>9. 鼠标右键点击数据库，点击<strong>运行SQL文件</strong>：</p><p><img src="https://source.icode504.com/images/image-20231201111742572.png"></p><p>10. 按照下图所示导入SQL：</p><p><img src="https://source.icode504.com/images/image-20231201111908315.png"></p><p><img src="https://source.icode504.com/images/image-20231201111954377.png"></p><p><img src="https://source.icode504.com/images/image-20231201112052134.png"></p><p><img src="https://source.icode504.com/images/image-20231201112138717.png"></p><p>11. 导入SQL中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20231201112248515.png"></p><p>12. 导入完成，点击关闭：</p><p><img src="https://source.icode504.com/images/image-20231201112320508.png"></p><p>13. 刷新一下数据库，一共由242张表</p><p><img src="https://source.icode504.com/images/image-20231201162802611.png"></p><p>12. 双击打开IDEA项目中的<code>application-druid2.yml</code>文件</p><p><img src="https://source.icode504.com/images/image-20231201113749133.png"></p><p>13. 修改数据库配置</p><p><img src="https://source.icode504.com/images/image-20231201115235424.png"></p><p>14. 将<code>application-druid2.yml</code>文件改为<code>application-druid.yml</code></p><p><img src="https://source.icode504.com/images/image-20231201115432241.png"></p><p><img src="https://source.icode504.com/images/image-20231201115332224.png"></p><p>14. 点击文件左上角<code>File -&gt; Project Stucture</code>，确保版本是JDK 8：</p><p><img src="https://source.icode504.com/images/image-20231201114408428.png"></p><p>15. Redis配置：需要确保你在本地安装Redis，如果没有安装包，点击右侧链接下载：<a href="https://icode504.lanzouw.com/irWZP1ghutla">点我下载</a></p><ul><li><p>找一个你熟悉的位置，创建一个文件夹，命名为Redis</p></li><li><p>将下载的压缩包解压到这个文件夹中</p></li></ul><p><img src="https://source.icode504.com/images/image-20231201150102280.png"></p><ul><li>在上方文件路径中输入<code>cmd</code>并回车，进入命令行</li><li>在命令行中输入如下指令</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">redis-server --service-install redis.windows-service.conf<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-20231201150335394.png"></p><ul><li>此时按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>，打开任务管理器，点击服务，在下方找到Redis说明软件配置成功：</li></ul><p><img src="https://source.icode504.com/images/image-20231201151105294.png"></p><p>16. 打开项目中<code>application.yml</code>，这里关于Redis的配置信息不用修改，因为上面我们已经成功启动了本地Redis服务了：</p><p><img src="https://source.icode504.com/images/image-20231201151340895.png"></p><h1 id="四、启动项目"><a href="#四、启动项目" class="headerlink" title="四、启动项目"></a>四、启动项目</h1><p>1. 项目启动：点击右上角Debug调试启动，如果出现下面内容，就说明后端项目启动成功</p><p><img src="https://source.icode504.com/images/image-20231201150836073.png"></p><blockquote><p>说明：如果后端项目起不来，报错信息是8089端口被占用（如下图）</p><p><img src="https://source.icode504.com/images/image-20231201141026025.png"></p><p>解决办法：打开项目中的<code>application.yml</code>，找到<code>server.port</code>，将端口号修改成你知道的即可，这里我改成8090：</p><p><img src="https://source.icode504.com/images/image-20231201141214554.png"></p><p>重启一下项目即可。</p></blockquote><p>2. 打开浏览器，在上方输入地址：<a href="http://localhost:8089/ry-jflow/login">点我进入</a>，进入登录页面：</p><p>账号名：admin，密码：admin123</p><p><img src="https://source.icode504.com/images/image-20231201150919953.png"></p><p>3. 登录成功：</p><p><img src="https://source.icode504.com/images/image-20231201150939145.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>框架</category>
+      
+      <category>Java</category>
+      
+      <category>工作流框架</category>
+      
+      <category>JFlow</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>Intellij IDEA</tag>
+      
+      <tag>Git</tag>
+      
+      <tag>JFlow</tag>
+      
+      <tag>Maven</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>开源</tag>
+      
+      <tag>若依</tag>
       
     </tags>
     
