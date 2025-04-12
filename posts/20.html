@@ -18,27 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程提供了Scala安装的详细步骤，包括前期准备、下载Scala安装包、配置环境变量以及验证安装是否成功。遵循本教程，用户可以在自己的计算机上轻松安装Scala，为后续的Scala编程和开发打下基础。">
+    <meta name="description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scala 2安装教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/15.html">
+<meta property="og:title" content="MySQL 8.0安装、配置与卸载教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/20.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程提供了Scala安装的详细步骤，包括前期准备、下载Scala安装包、配置环境变量以及验证安装是否成功。遵循本教程，用户可以在自己的计算机上轻松安装Scala，为后续的Scala编程和开发打下基础。">
+<meta property="og:description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/f19dcb3f520f40332971fb756bfc138c.png">
-<meta property="article:published_time" content="2025-04-12T13:04:47.075Z">
-<meta property="article:modified_time" content="2025-04-12T13:04:47.079Z">
+<meta property="og:image" content="https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png">
+<meta property="article:published_time" content="2025-04-12T13:22:46.509Z">
+<meta property="article:modified_time" content="2025-04-12T13:22:46.509Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Scala">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/f19dcb3f520f40332971fb756bfc138c.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Scala 2安装教程（Windows版） - iCode504个人博客</title>
+  <title>MySQL 8.0安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/f19dcb3f520f40332971fb756bfc138c.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Scala 2安装教程（Windows版）</span>
+            <span id="subtitle">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
           
         </div>
 
@@ -220,7 +220,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 21:04" pubdate>
+        <time datetime="2025-04-12 21:22" pubdate>
           2025年4月12日
         </time>
       </span>
@@ -333,17 +333,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -355,7 +355,7 @@
       
         <a href="/posts/20.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -370,17 +370,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -434,17 +434,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Scala"
         id="heading-3012dcff1477e1feaab81764587c9bbd" role="tab" data-toggle="collapse" href="#collapse-3012dcff1477e1feaab81764587c9bbd"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Scala
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3012dcff1477e1feaab81764587c9bbd"
+      <div class="category-collapse collapse " id="collapse-3012dcff1477e1feaab81764587c9bbd"
            role="tabpanel" aria-labelledby="heading-3012dcff1477e1feaab81764587c9bbd">
         
         
@@ -456,7 +456,7 @@
       
         <a href="/posts/15.html" title="Scala 2安装教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Scala 2安装教程（Windows版）</span>
         </a>
       
@@ -528,111 +528,135 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Scala 2安装教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月12日
-                  
-                
-              </p>
+            <h1 id="seo-header">MySQL 8.0安装、配置与卸载教程（Windows版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://scala-lang.org/">Scala官网</a>介绍：Scala是一门现代多范式编程语言，旨在以简洁、优雅和类型安全的方式表达常见的编程模式。它无缝衔接了面向对象语言和函数式语言的特性。</p>
-<p>Scala是一门纯粹的面向对象语言，因为每个值都是一个对象。对象的类型和行为是通过类和特征来描述的。类可以通过子类化进行扩展，并使用灵活的基于mixin的组合机制作为多重继承的干净替代。</p>
-<p>Scala 也是一门函数式语言，因为每个函数都是一个值。Scala 提供了定义匿名函数的轻量级语法，支持高阶函数，允许嵌套函数，并支持柯里化。Scala 的大小写类及其对模式匹配的内置支持提供了代数类型的功能，这在许多函数式语言中都有应用。单例对象为分组非类成员的函数提供了一种便捷的方式。</p>
-<p>接下来就讲解一下Scala的下载与安装。</p>
-<h1 id="安装前检查"><a href="#安装前检查" class="headerlink" title="安装前检查"></a>安装前检查</h1><p>请确保电脑本机安装了JDK，如果没有安装，请点击右侧链接查看JDK安装教程：<a href="./1.html">点我查看</a></p>
-<p>安装完成后，按<kbd>Win</kbd>+<kbd>R</kbd>键，输入<code>cmd</code>，进入控制台，输入<code>java -version</code>，如果出现如下内容，就说明JDK已经安装成功了：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140629530.png" srcset="/img/loading.gif" lazyload></p>
+                <p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p>
+<p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p>
+<p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程：</p>
+<h1 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a>一、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/installer/">点我查看</a></p>
+<p>2. 按照下图所示操作选择相应的MySQL版本下载，这里我选择的Windows MySQL 8.0.30版本。</p>
+<p><img src="https://source.icode504.com/images/image-20240220110125037.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 下载中，请耐心等待。</p>
+<h1 id="二、安装并配置MySQL"><a href="#二、安装并配置MySQL" class="headerlink" title="二、安装并配置MySQL"></a>二、安装并配置MySQL</h1><p>安装MySQL过程中，<strong>请保持网络畅通</strong>！！！</p>
+<p>1. 双击打开安装包，安装器启动需要一些时间，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20240220110324590.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如果遇到这个窗口，点击<strong>Yes</strong>即可。如没遇到，请查看下一步。</p>
+<p><img src="https://source.icode504.com/images/image-20230512214714122.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装类型选择<strong>Custom</strong>，然后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220111156356.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 按照下图所示操作，选择安装<code>MySQL Server 8.0.30 - X64</code>，完成后直接点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/00003.gif" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>如果后续在官网下载Scala安装包比较慢，我个人推荐使用NDM（Neat Download Manager）下载器来下载，可以加快下载速度。</p>
-<p>如果不需要或者已安装的朋友请忽略。没有安装的小伙伴可以点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/24.html">《NDM下载器安装配置教程》</a></p>
+<p>（小白可以忽略下列内容，直接跳到第5步）</p>
+<ul>
+<li>如果你想修改MySQL的安装路径，如下图，可以点击下方<strong>Advanced Options</strong>：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20240220111320444.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>按照下图所示，选择安装路径，为避免后续过程中出现问题，<strong>安装路径建议只包含英文字符</strong>；下面的是MySQL数据存储路径，如果不懂这方面的内容，建议不要修改这个路径。配置完成后后点击<strong>OK</strong>：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20240220111711714.png" srcset="/img/loading.gif" lazyload></p>
 </blockquote>
-<p>注意：下文一共提供了两种方式安装Scala，第三种方式是在线体验Scala。<strong>方式一、方式二任选其一安装</strong>即可。</p>
-<h1 id="方式一：MSI方式安装Scala"><a href="#方式一：MSI方式安装Scala" class="headerlink" title="方式一：MSI方式安装Scala"></a>方式一：MSI方式安装Scala</h1><h2 id="一、Scala安装包下载"><a href="#一、Scala安装包下载" class="headerlink" title="一、Scala安装包下载"></a>一、Scala安装包下载</h2><p>1. 点击右侧链接，进入下载页面：<a target="_blank" rel="noopener" href="https://www.scala-lang.org/download/all.html">点我查看</a></p>
-<p>2. 这里我选择的是<code>2.12.18</code>版本的，在下方找到版本号后点击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20231209211237501.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入下载页面后，向下找到各个版本的下载链接，我使用的是Windows操作系统，这里我就点击Windows系统版本的Scala进行下载：</p>
-<p><img src="https://source.icode504.com/images/image-20231209211413991.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="二、安装Scala"><a href="#二、安装Scala" class="headerlink" title="二、安装Scala"></a>二、安装Scala</h2><p>1. 双击打开Scala安装包，会出现欢迎界面，然后点击<code>Next</code>：</p>
-<p><img src="https://source.icode504.com/images/image-20231012103003352.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 勾选下面的协议，然后点击<code>Next</code>：</p>
-<p><img src="https://source.icode504.com/images/image-20231012103048983.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择安装路径，推荐安装在除C盘外的其他路径，并且路径中只包含英文，这里我安装在了D盘：</p>
-<p><img src="https://source.icode504.com/images/image-20231012103459245.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<code>Install</code>:</p>
-<p><img src="https://source.icode504.com/images/image-20231012103526813.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20231012103553892.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 点击Finish，Scala安装完成</p>
-<p><img src="https://source.icode504.com/images/image-20231012103625099.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入命令提示行页面，输入<code>scala -version</code>，如果出现下图所示信息，说明Scala安装配置成功：</p>
-<p><img src="https://source.icode504.com/images/image-20231012105320529.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="三、卸载Scala（可选）"><a href="#三、卸载Scala（可选）" class="headerlink" title="三、卸载Scala（可选）"></a>三、卸载Scala（可选）</h2><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>appwiz.cpl</code>，然后点击确定：</p>
-<p><img src="https://source.icode504.com/images/image-20231228090817000.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 调出程序与功能的界面以后，找到<code>Scala Programming Language Distribution</code>，鼠标右键，点击卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20231228091109617.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择“是”：</p>
-<p><img src="https://source.icode504.com/images/image-20231228091144885.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. Scala卸载中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20231228091227059.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231228091232179.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. Scala卸载完成！此时在控制台上输入<code>scala -version</code>无反应：</p>
-<p><img src="https://source.icode504.com/images/image-20231228091352622.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="方式二：压缩包方式安装Scala"><a href="#方式二：压缩包方式安装Scala" class="headerlink" title="方式二：压缩包方式安装Scala"></a>方式二：压缩包方式安装Scala</h1><h2 id="一、Scala安装包下载-1"><a href="#一、Scala安装包下载-1" class="headerlink" title="一、Scala安装包下载"></a>一、Scala安装包下载</h2><p>1. 点击右侧链接，进入下载页面：<a target="_blank" rel="noopener" href="https://www.scala-lang.org/download/all.html">点我查看</a></p>
-<p>2. 这里我选择的是<code>2.12.18</code>版本的，在下方找到版本号后点击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20231209211237501.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入下载页面后，向下找到各个版本的下载链接，我使用的是Windows操作系统，这里我就点击Windows系统版本的Scala进行下载：</p>
-<p><img src="https://source.icode504.com/images/image-20231228092026444.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="二、安装配置Scala"><a href="#二、安装配置Scala" class="headerlink" title="二、安装配置Scala"></a>二、安装配置Scala</h2><p>1. 将下载好的压缩包解压到一个你熟悉的位置（为了避免后续出现各种奇奇怪怪问题，建议文件路径选择英文路径），这里我安装在了D盘：</p>
-<p><img src="https://source.icode504.com/images/image-20231228092238561.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231228092350172.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231228092413901.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 找到Scala安装路径，并复制：</p>
-<p><img src="https://source.icode504.com/images/image-20231228093714744.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314133908963.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击高级系统设置</p>
-<p><img src="https://source.icode504.com/images/image-20230314134201936.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击<strong>Execute</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512220628921.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20230512220740114.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 出现下图提示<strong>Complete</strong>以后，MySQL安装完成。直接点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512220836314.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 接下来开始配置MySQL，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512220905466.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 初次安装MySQL的小白请注意，下图的<strong>Port请务必配置成3306</strong>，完成后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220111939271.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>Windows 10的高级系统设置在右侧：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2023-03-14_13-44-54.png" srcset="/img/loading.gif" lazyload></p>
+<p>注意：如果你的电脑安装了多个MySQL，需要修改端口号，要和3306端口避开使用。只安装一个MySQL的小伙伴请忽略此条。</p>
 </blockquote>
-<p>5. 点击环境变量</p>
-<p><img src="https://source.icode504.com/images/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 点击新建</p>
-<p><img src="https://source.icode504.com/images/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 配置系统变量，按照图示操作即可</p>
-<p><img src="https://source.icode504.com/images/image-20231228094023984.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 双击Path进入</p>
-<p><img src="https://source.icode504.com/images/image-20231228094502229.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20231228094240240.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 验证Scala环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，打开命令行窗口，输入<code>scala -version</code>，出现Scala版本信息就说明Scala环境变量配置成功了！</p>
-<p><img src="https://source.icode504.com/images/image-20231228094810283.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="三、移除Scala（可选）"><a href="#三、移除Scala（可选）" class="headerlink" title="三、移除Scala（可选）"></a>三、移除Scala（可选）</h2><p>1. 找到Scala的安装目录，鼠标右键删除即可（如果不走回收站彻底删除，就直接按<kbd>Shift</kbd>和<kbd>Delete</kbd>键）</p>
-<p><img src="https://source.icode504.com/images/image-20231228095440509.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 删除环境变量：按照前面配置步骤，打开环境变量。找到前面我们配置的<code>SCALA_HOME</code>，点击右下角<strong>删除</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20231228095642032.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 双击进入Path：</p>
-<p><img src="https://source.icode504.com/images/image-20231228100153183.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 找到并选中<code>%SCALA_HOME%\bin</code>，然后一路点击确定即可。</p>
-<p><img src="https://source.icode504.com/images/image-20231228100351079.png" srcset="/img/loading.gif" lazyload></p>
-<p>至此，Scala就从本机成功移除了。</p>
-<h1 id="方式三：免安装，直接在线体验Scala"><a href="#方式三：免安装，直接在线体验Scala" class="headerlink" title="方式三：免安装，直接在线体验Scala"></a>方式三：免安装，直接在线体验Scala</h1><p>我们可以使用Scala官网为我们提供了在线编程页面，这种方式最大的优点是你不需要安装Scala，直接编程运行体验。但是缺点也很明显，后续使用Scala及大数据相关框架我们使用的最多的还是本地安装Scala，在Intellij IDEA中编写代码。</p>
-<p>这种方式非常适合新手，省去安装配置Scala的各种繁琐步骤。</p>
-<p>1. 浏览器打开Scala官网在线编程界面：<a target="_blank" rel="noopener" href="https://scastie.scala-lang.org/">点我查看</a></p>
-<p>2. 以下是我在编辑器中写的一段Scala代码（演示用，感兴趣的可以敲一敲）：</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs scala"><span class="hljs-keyword">var</span> greeting: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;你好，我是iCode504，程序猿一枚，请多指教！&quot;</span><br>println(greeting)<br><br><span class="hljs-keyword">var</span> a: <span class="hljs-type">Int</span> = <span class="hljs-number">20</span><br><span class="hljs-keyword">var</span> b: <span class="hljs-type">Int</span> = <span class="hljs-number">40</span><br>println(<span class="hljs-string">&quot;a + b = &quot;</span> + (a + b))<br></code></pre></td></tr></table></figure>
+<p>10. 认证方式选择第一个即可，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512221223745.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 设置root账户密码，这里强烈建议<strong>将密码设置成你最熟悉的密码</strong>，否则后续恢复密码比较麻烦。这里我设置成了<code>123456</code>。设置完成后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220110609804.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 在Windows中开启服务，直接点击<strong>Next</strong>即可：</p>
+<p><img src="https://source.icode504.com/images/image-20230512221927024.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 服务器文件权限按照默认配置<strong>选择第一个</strong>即可，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512222002468.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 点击<strong>Execute</strong>，MySQL安装器就会为我们配置上述内容。配置过程中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20230512222105185.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 出现下图信息，说明MySQL配置成功，点击<strong>Finish</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512222243451.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20230512222328898.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 点击<strong>Finish</strong>，MySQL配置完成。</p>
+<p><img src="https://source.icode504.com/images/image-20230512222401129.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置MySQL环境变量"><a href="#三、配置MySQL环境变量" class="headerlink" title="三、配置MySQL环境变量"></a>三、配置MySQL环境变量</h1><p>1. 初次安装MySQL的小白，按照下图操作复制路径：</p>
+<p><img src="https://source.icode504.com/images/00005.gif" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>（此条内容小白请忽略）安装在其他位置的小伙伴找到MySQL的安装路径，进入bin文件夹后复制文件路径。</p>
+</blockquote>
+<p>2. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击<strong>高级系统设置</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows 11</th>
+<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>Windows 10</strong></td>
+<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+</tbody></table>
+<p>4. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://source.icode504.com/images/9b32c83db0d6df2c2f698e9d67d0edfd.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 在下方系统变量找到Path，双击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20230512223639743.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按照下图所示操作，粘贴前面复制的MySQL安装路径，然后一路点击确定即可。</p>
+<p><img src="https://source.icode504.com/images/image-20240220112157561.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击进入，在命令提示行中输入<code>mysql -u root -p</code>，按回车后会提示让你输入密码。这个密码是前面我们安装MySQL的时候设置的密码，输入完成后按回车即可。完成后出现下图界面表示MySQL安装成功！</p>
+<p><img src="https://source.icode504.com/images/image-20240220105038897.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、卸载MySQL（可选）"><a href="#四、卸载MySQL（可选）" class="headerlink" title="四、卸载MySQL（可选）"></a>四、卸载MySQL（可选）</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p><p>以下两种卸载方式任选其一即可。</p>
+          </div>
 
-<p>3. 点击左上角的<code>Run</code>即可运行：</p>
-<p><img src="https://source.icode504.com/images/image-20231228105809379.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在下方的控制台即可看到内容的输出：</p>
-<p><img src="https://source.icode504.com/images/image-20231228105819934.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="方式一：使用Geek-Uninstaller卸载（推荐）"><a href="#方式一：使用Geek-Uninstaller卸载（推荐）" class="headerlink" title="方式一：使用Geek Uninstaller卸载（推荐）"></a>方式一：使用Geek Uninstaller卸载（推荐）</h2><blockquote>
+<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
+<p>已经安装的小伙伴可以接着往下看！</p>
+</blockquote>
+<p>1. 打开Geek Installer，在程序列表中找到MySQL相关的内容，鼠标右键，依次点击卸载：</p>
+<p><img src="https://source.icode504.com/images/image-20240220113015742.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 卸载时如果存在残留，直接清理即可。</p>
+<h2 id="方式二：手动卸载（较麻烦，不推荐）"><a href="#方式二：手动卸载（较麻烦，不推荐）" class="headerlink" title="方式二：手动卸载（较麻烦，不推荐）"></a>方式二：手动卸载（较麻烦，不推荐）</h2><blockquote>
+<p>MySQL卸载过程会有一些繁琐，卸载过程请一定耐心！如果你按照前面的步骤成功安装MySQL并可以正常使用了，就直接忽略下面的内容。</p>
+</blockquote>
+<p>1. 停止MySQL的服务：按下图所示操作，进入服务页面。找到MySQL80服务。</p>
+<p><img src="https://source.icode504.com/images/00006.gif" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>control</code>，点击进入控制面板，在下方找到卸载程序。</p>
+<p><img src="https://source.icode504.com/images/image-20240220105209312.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 将带有MySQL的程序依次使用鼠标右键卸载：</p>
+<p><img src="https://source.icode504.com/images/image-20230512231355775.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 卸载中，请耐心等待。</p>
+<p>5. 卸载界面不存在MySQL相关程序，说明MySQL卸载成功。</p>
+<p><img src="https://source.icode504.com/images/image-20230512231640785.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 清理残余文件：如果你是小白并且没有修改过MySQL路径，那么你可以去<code>C盘</code>的<code>Program Files</code>文件夹内看看是否存在MySQL的文件夹。如果存在，直接删除文件夹即可。</p>
+<p>7. 清理注册表</p>
+<ul>
+<li>按<kbd>Win</kbd>和<kbd>S</kbd>键，输入<code>regedit</code>，打开注册表编辑器：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20240220105352865.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>依次删除下面和MySQL有关的目录。</li>
+</ul>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\ApplicationMySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL服务目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL服务 目录删除<br></code></pre></td></tr></table></figure>
+
+<p>8. 删除环境变量</p>
+<ul>
+<li>如何进入环境变量，请参考第三部分配置MySQL环境变量的前5步。</li>
+<li>选中MySQL环境变量，点击删除，然后一路点击确定即可。</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20230512233341214.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -661,15 +685,8 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Scala/" class="category-chain-item">Scala</a>
-  
-  
-
   
 
   
@@ -689,7 +706,7 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Scala/" class="print-no-link">#Scala</a>
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
       
     </div>
   
@@ -701,8 +718,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Scala 2安装教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/15.html</div>
+      <div>MySQL 8.0安装、配置与卸载教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/20.html</div>
     </div>
     <div class="license-meta">
       
@@ -746,18 +763,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/17.html" title="第二章 若依-JFlow流程模型与单节点表单设计">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第二章 若依-JFlow流程模型与单节点表单设计</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/16.html" title="第一章 若依-JFlow配置与启动">
-                        <span class="hidden-mobile">第一章 若依-JFlow配置与启动</span>
+                      <a href="/posts/19.html" title="第四章 若依-JFlow设置用户并测试流程">
+                        <span class="hidden-mobile">第四章 若依-JFlow设置用户并测试流程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
