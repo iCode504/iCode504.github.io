@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-12T14:09:18.517Z</updated>
+  <updated>2025-04-12T14:11:28.219Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组篇-其之一-数组的概念与一维数组</title>
+    <link href="https://www.icode504.com/posts/29.html"/>
+    <id>https://www.icode504.com/posts/29.html</id>
+    <published>2025-04-12T14:11:28.219Z</published>
+    <updated>2025-04-12T14:11:28.219Z</updated>
+    
+    
+    <summary type="html">本文介绍了数组的概念、初始化和访问数组元素、数组的长度、普通循环和foreach遍历以及数组元素的默认值。深入浅出地讲解了数组的应用。</summary>
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>JDK 11安装配置教程（Windows版）</title>
@@ -515,29 +540,6 @@
     
     
     <summary type="html">本文介绍了八种基本数据类型及其使用、基本数据类型的相互转换；自动类型提升和强制类型转换、数字进制在Java中的使用、二进制的原码、补码、反码的简单使用。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>入门篇-其之二-Java基础知识</title>
-    <link href="https://www.icode504.com/posts/3.html"/>
-    <id>https://www.icode504.com/posts/3.html</id>
-    <published>2025-04-05T16:00:00.000Z</published>
-    <updated>2025-04-06T13:46:49.233Z</updated>
-    
-    
-    <summary type="html">对第一个Java程序的深入理解、Java的三种注释和使用的注意事项、标识符、变量。</summary>
     
     
     
