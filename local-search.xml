@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>访问Github卡顿甚至进不去的解决办法（适用于Windows）</title>
+    <link href="/posts/25.html"/>
+    <url>/posts/25.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>Github 是全球知名的开源宝库，但是对国内用户并不友好。当我们在浏览器中输入<code>www.github.com</code>时，如果你赶的时间点比较好可能会进去，但是大多数情况下浏览器不会对你的请求做出任何响应，就像下图这样：</p><p><img src="https://source.icode504.com/images/image-20231229085526297.png"></p><p>那么，有什么办法解决这个问题呢？</p><h1 id="二、访问-Github——Watt-Tookit（原-Steam-）"><a href="#二、访问-Github——Watt-Tookit（原-Steam-）" class="headerlink" title="二、访问 Github——Watt Tookit（原 Steam++）"></a>二、访问 Github——Watt Tookit（原 Steam++）</h1><p>官网介绍：Watt Tookit 是一个开源的跨平台的多功能 Stream 工具箱，它可以管理你 Steam 游戏库存，监控 Steam 游戏下载进度实现自动定时关机等功能。本文要介绍的是它的网络加速功能，它内部添加了 Github 网络加速功能。</p><p>原作者在 B 站有账号，感兴趣的小伙伴可以关注支持一下：<a href="https://space.bilibili.com/3546572635768935">点我传送到 B 站</a></p><p>接下来我们就来安装一下 Watt Tookit：</p><p>1. 点击右侧链接进入官网：<a href="https://steampp.net/">点我进入官网</a></p><p>2. 根据自己的操作系统下载，这里我使用的是 Windows 版本，点击下载按钮：</p><p><img src="https://source.icode504.com/images/image-20231229091457093.png"></p><p>3. 此时会弹出一个 GNU 通用公共许可证协议，点击右下角<strong>接受并下载</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229091615168.png"></p><p>4. 官方给了我们多个下载渠道，大家任选一种方式下载即可，这里我给大家标注了下载的优先级：</p><p><img src="https://source.icode504.com/images/image-20231229092847673.png"></p><p>5. 我选择的是蓝奏云下载，访问密码：1234，进入后直接下载 exe 安装包：</p><p><img src="https://source.icode504.com/images/image-20231229093049336.png"></p><p>6. 双击打开安装包，点击自定义安装，选择安装位置，这里我安装在了 D 盘：</p><p><img src="https://source.icode504.com/images/image-20231229093303865.png"></p><p><img src="https://source.icode504.com/images/image-20231229093315287.png"></p><p><img src="https://source.icode504.com/images/image-20231229093436756.png"></p><p><img src="https://source.icode504.com/images/image-20231229093446834.png"></p><p>7. 点击<strong>立即安装</strong>，软件开始安装：</p><p><img src="https://source.icode504.com/images/image-20231229093527419.png"></p><p><img src="https://source.icode504.com/images/image-20231229093535180.png"></p><p>8. 安装完成，点击<strong>立即体验</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229093625530.png"></p><p>9. 打开后，点击左侧第二个图标<strong>网站加速</strong>，向下翻找到 Github 并勾选，</p><p><img src="https://source.icode504.com/images/image-20231229093925945.png"></p><p>10. 此时在浏览器再次访问<a href="https://www.github.com/">Github</a>，就可以正常显示页面了。虽然访问速度还是慢，但是总比响应超时啥也不显示的强：</p><p><img src="https://source.icode504.com/images/image-20231229101555911.png"></p><p>此时我们使用<code>git clone</code>命令拉取仓库代码，或者是使用<code>git push</code>命令将代码推送到我们的 Github 仓库就不会因为网络问题而无法进行操作的问题了。</p><h1 id="三、下载-Github-中的内容"><a href="#三、下载-Github-中的内容" class="headerlink" title="三、下载 Github 中的内容"></a>三、下载 Github 中的内容</h1><p>Github 有很多优秀的开源作品可以下载，如果是大文件使用浏览器，等到猴年马月都下载不完（下载速度真的是太慢了），以下是使用 NDM 和 Github 加速网站下载 Github 的内容的实现步骤。</p><p>这里我想下载 Google 家的 Noto Serif 全语言字体包（<a href="https://github.com/notofonts/noto-cjk/releases">点我查看源网站</a>），文件大小 600M 左右，如果正常使用浏览器下载非常慢，接下来我们就使用 NDM+Github 加速网站解决上述问题。</p><blockquote><p>本文后续内容使用 NDM（Neat Download Manager）下载文件，如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器 NDM（Neat Download Manager）安装配置教程（适用于 Windows 和 MacOS）</a></p></blockquote><p><img src="https://source.icode504.com/images/image-20231229102536561.png"></p><p>3. 首先，我们对要下载的文件，鼠标右键<strong>复制链接</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229102717918.png"></p><p>4. 以下是我整理的 Github 镜像网站，大家任选一个链接进入即可，这里我选择第一个网站进入：</p><table><thead><tr><th>网站名称</th><th>链接</th></tr></thead><tbody><tr><td>Github 镜像站 1</td><td><a href="https://gitdl.cn/">https://gitdl.cn/</a></td></tr><tr><td>Github 镜像站 2</td><td><a href="https://moeyy.cn/gh-proxy">https://moeyy.cn/gh-proxy</a></td></tr><tr><td>Github 镜像站 3</td><td><a href="https://github.zhlh6.cn/">https://github.zhlh6.cn/</a></td></tr></tbody></table><p>5. 将上面复制的链接粘贴到输入框中，点击下载即可</p><p><img src="https://source.icode504.com/images/image-20231229103230888.png"></p><p>6. 使用 NDM，下载速度直接原地起飞：</p><p><img src="https://source.icode504.com/images/image-20231229103620649.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>常用工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Neat Download Manager</tag>
+      
+      <tag>NDM</tag>
+      
+      <tag>Watt Tookit</tag>
+      
+      <tag>Github</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</title>
     <link href="/posts/24.html"/>
     <url>/posts/24.html</url>
