@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-12T14:08:14.769Z</updated>
+  <updated>2025-04-12T14:09:18.517Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JDK 11安装配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/28.html"/>
+    <id>https://www.icode504.com/posts/28.html</id>
+    <published>2025-04-12T14:09:18.517Z</published>
+    <updated>2025-04-12T14:09:18.517Z</updated>
+    
+    
+    <summary type="html">Windows环境下安装JDK 11教程</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java/JDK" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>JDK 21安装配置教程（Windows版）</title>
@@ -511,36 +538,6 @@
     
     
     <summary type="html">对第一个Java程序的深入理解、Java的三种注释和使用的注意事项、标识符、变量。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</title>
-    <link href="https://www.icode504.com/posts/8.html"/>
-    <id>https://www.icode504.com/posts/8.html</id>
-    <published>2025-04-05T16:00:00.000Z</published>
-    <updated>2025-04-06T14:02:30.389Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;前言：众所周知，&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;的区别是：&lt;code&gt;i++&lt;/code&gt;先将&lt;code&gt;i&lt;/code&gt;的值赋值给变量，再将&lt;code&gt;i&lt;/code&gt;的值自增1；而&lt;code&gt;++i&lt;/code</summary>
-        
-      
     
     
     
