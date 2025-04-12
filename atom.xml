@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-06T14:04:54.915Z</updated>
+  <updated>2025-04-12T13:04:47.079Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scala 2安装教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/15.html"/>
+    <id>https://www.icode504.com/posts/15.html</id>
+    <published>2025-04-12T13:04:47.075Z</published>
+    <updated>2025-04-12T13:04:47.079Z</updated>
+    
+    
+    <summary type="html">本教程提供了Scala安装的详细步骤，包括前期准备、下载Scala安装包、配置环境变量以及验证安装是否成功。遵循本教程，用户可以在自己的计算机上轻松安装Scala，为后续的Scala编程和开发打下基础。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Scala" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Scala/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Scala" scheme="https://www.icode504.com/tags/Scala/"/>
+    
+  </entry>
   
   <entry>
     <title>入门篇-其之七-Java运算符（下）</title>
