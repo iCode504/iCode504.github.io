@@ -4,39 +4,6 @@
   
   
   <entry>
-    <title>JDK 17安装配置教程（Windows版）</title>
-    <link href="/posts/26.html"/>
-    <url>/posts/26.html</url>
-    
-    <content type="html"><![CDATA[<hr><h2 id="title-date-2024-01-02-14-20-39tags-Java-Windows-category-软件安装-Windows-编程语言-Java-JDKabbrlink-26description"><a href="#title-date-2024-01-02-14-20-39tags-Java-Windows-category-软件安装-Windows-编程语言-Java-JDKabbrlink-26description" class="headerlink" title="title:date: 2024-01-02 14:20:39tags: [Java, Windows]category:  - 软件安装  - Windows  - 编程语言  - Java&#x2F;JDKabbrlink: 26description: "></a>title:<br>date: 2024-01-02 14:20:39<br>tags: [Java, Windows]<br>category:<br>  - 软件安装<br>  - Windows<br>  - 编程语言<br>  - Java&#x2F;JDK<br>abbrlink: 26<br>description: </h2><blockquote><p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p></blockquote><p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p><p>接下来为大家讲解一下JDK 17如何安装与使用。</p><h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">点我查看</a></p><p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是17.0.6版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p><p><img src="https://source.icode504.com/images/image-20240102140251099.png"></p><h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140356853.png"></p><p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p><p><img src="https://source.icode504.com/images/image-20240102140438115.png"></p><p><img src="https://source.icode504.com/images/image-20240102140629136.png"></p><p><img src="https://source.icode504.com/images/image-20240102140706171.png"></p><p>3. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240102140729167.png"></p><p>4. 安装完成，点击<strong>关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140754229.png"></p><blockquote><p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p></blockquote><h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102141010328.png"></p><p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>3. 点击<strong>高级系统设置</strong>：</p><table><thead><tr><th align="center">Windows 11</th><th><img src="https://source.icode504.com/images/image-20240101010932039.png"></th></tr></thead><tbody><tr><td align="center"><strong>Windows 10</strong></td><td><img src="https://source.icode504.com/images/image-20240101011132186.png"></td></tr></tbody></table><p>4. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002218161.png"></p><p>5. 在下方系统变量，点击<strong>新建</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002302057.png"></p><p>6. 配置系统变量，按照图示操作即可：</p><p><img src="https://source.icode504.com/images/image-20240102141211785.png"></p><p>7. 双击Path进入：</p><p><img src="https://source.icode504.com/images/image-20240101002655185.png"></p><p>8. 按照图示操作即可，然后一路点击确定。</p><p><img src="https://source.icode504.com/images/image-20240101002812677.png"></p><p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p><p><img src="https://source.icode504.com/images/image-20240101003131968.png"></p><p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 17安装成功了：</p><p><img src="https://source.icode504.com/images/image-20240102141350623.png"></p><p><img src="https://source.icode504.com/images/image-20240102141433688.png"></p><p><img src="https://source.icode504.com/images/image-20240102141538207.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件安装</category>
-      
-      <category>Windows</category>
-      
-      <category>编程语言</category>
-      
-      <category>Java/JDK</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Java</tag>
-      
-      <tag>Windows</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</title>
     <link href="/posts/24.html"/>
     <url>/posts/24.html</url>
@@ -412,6 +379,39 @@
       <tag>Github</tag>
       
       <tag>Watt Tookit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>JDK 17安装配置教程（Windows版）</title>
+    <link href="/posts/26.html"/>
+    <url>/posts/26.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p></blockquote><p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p><p>接下来为大家讲解一下JDK 17如何安装与使用。</p><h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">点我查看</a></p><p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是17.0.6版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p><p><img src="https://source.icode504.com/images/image-20240102140251099.png"></p><h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140356853.png"></p><p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p><p><img src="https://source.icode504.com/images/image-20240102140438115.png"></p><p><img src="https://source.icode504.com/images/image-20240102140629136.png"></p><p><img src="https://source.icode504.com/images/image-20240102140706171.png"></p><p>3. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240102140729167.png"></p><p>4. 安装完成，点击<strong>关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140754229.png"></p><blockquote><p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p></blockquote><h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102141010328.png"></p><p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>3. 点击<strong>高级系统设置</strong>：</p><table><thead><tr><th align="center">Windows 11</th><th><img src="https://source.icode504.com/images/image-20240101010932039.png"></th></tr></thead><tbody><tr><td align="center"><strong>Windows 10</strong></td><td><img src="https://source.icode504.com/images/image-20240101011132186.png"></td></tr></tbody></table><p>4. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002218161.png"></p><p>5. 在下方系统变量，点击<strong>新建</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002302057.png"></p><p>6. 配置系统变量，按照图示操作即可：</p><p><img src="https://source.icode504.com/images/image-20240102141211785.png"></p><p>7. 双击Path进入：</p><p><img src="https://source.icode504.com/images/image-20240101002655185.png"></p><p>8. 按照图示操作即可，然后一路点击确定。</p><p><img src="https://source.icode504.com/images/image-20240101002812677.png"></p><p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p><p><img src="https://source.icode504.com/images/image-20240101003131968.png"></p><p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 17安装成功了：</p><p><img src="https://source.icode504.com/images/image-20240102141350623.png"></p><p><img src="https://source.icode504.com/images/image-20240102141433688.png"></p><p><img src="https://source.icode504.com/images/image-20240102141538207.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>编程语言</category>
+      
+      <category>Java/JDK</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>Windows</tag>
       
     </tags>
     
