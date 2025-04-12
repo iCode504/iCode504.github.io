@@ -18,55 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装配置JDK 8教程。">
+    <meta name="description" content="Maven是一款项目管理和构建工具，适用于Java开发。本教程提供Windows版本的Maven安装和配置方法，包括下载和安装Maven，配置环境变量设置。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 8安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/1.html">
+<meta property="og:title" content="Maven安装与配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/22.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装配置JDK 8教程。">
+<meta property="og:description" content="Maven是一款项目管理和构建工具，适用于Java开发。本教程提供Windows版本的Maven安装和配置方法，包括下载和安装Maven，配置环境变量设置。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101131122731.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101131317529.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101132604565.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101133458956.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240714131003147.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101134018241.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314125453675.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314130028313.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101134722779.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101134758455.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314131058441.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314131446348.png">
-<meta property="og:image" content="https://source.icode504.com/images/240101001.gif">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101140732789.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314132647334.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314132930503.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101141148295.png">
-<meta property="og:image" content="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101010932039.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101011132186.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314134716166.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314134919881.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101141636264.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314135756989.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101141809160.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314140351859.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314140519091.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314141144190.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20230314140629530.png">
-<meta property="article:published_time" content="2025-03-20T02:00:55.984Z">
-<meta property="article:modified_time" content="2025-03-20T02:00:56.020Z">
+<meta property="og:image" content="https://source.icode504.com/images/25553bb14efc2f4928920c54d9d3f573.png">
+<meta property="article:published_time" content="2025-04-12T13:35:43.339Z">
+<meta property="article:modified_time" content="2025-04-12T13:35:43.339Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
 <meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Maven">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20240101131122731.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/25553bb14efc2f4928920c54d9d3f573.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 8安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>Maven安装与配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -231,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/25553bb14efc2f4928920c54d9d3f573.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 8安装配置教程（Windows版）</span>
+            <span id="subtitle">Maven安装与配置教程（Windows版）</span>
           
         </div>
 
@@ -248,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-20 10:00" pubdate>
-          2025年3月20日
+        <time datetime="2025-04-12 21:35" pubdate>
+          2025年4月12日
         </time>
       </span>
     
@@ -398,17 +370,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -425,17 +397,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -447,7 +419,7 @@
       
         <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 8安装配置教程（Windows版）</span>
         </a>
       
@@ -540,17 +512,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
         id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         项目构建工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+      <div class="category-collapse collapse show" id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
            role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
         
         
@@ -562,7 +534,7 @@
       
         <a href="/posts/22.html" title="Maven安装与配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Maven安装与配置教程（Windows版）</span>
         </a>
       
@@ -593,102 +565,132 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 8安装配置教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年3月20日
-                  
-                
-              </p>
+            <h1 id="seo-header">Maven安装与配置教程（Windows版）</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-</blockquote>
-<p>接下来为大家讲解一下JDK 8如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>以下两种方式二选一下载即可：</p>
-<h2 id="方式一：网盘下载"><a href="#方式一：网盘下载" class="headerlink" title="方式一：网盘下载"></a>方式一：网盘下载</h2><p>请选择任意一个链接，选择任意一个安装包下载即可：</p>
-<table>
-<thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1FjQlCUulceJWOQP96qQvjQ?pwd=mclj">点击下载</a></th>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1K4gR2k152JWimdxEADvp2g?pwd=1024">备用下载1</a></th>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-KFO-_GQOsF2M-PVzKt24w?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://source.icode504.com/images/image-20240101131122731.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h2><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/archive/">点击进入</a></p>
-<p><img src="https://source.icode504.com/images/image-20240101131317529.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 找到以Java SE Development Kit开头的下载列表，找到64位的版本版本下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240101132604565.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 按图所示点击下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240101133458956.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240714131003147.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK（这里我使用的版本是JDK-8）"><a href="#二、安装JDK（这里我使用的版本是JDK-8）" class="headerlink" title="二、安装JDK（这里我使用的版本是JDK 8）"></a>二、安装JDK（这里我使用的版本是JDK 8）</h1><p>1. 双击文件，开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20240101134018241.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 点击<strong>下一步</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314125453675.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 修改安装路径（如果你是新手小白，可以不执行这一步操作，直接跳转到第5步），点击<strong>更改</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314130028313.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在新建一个路径。为了避免后续出现问题，创建路径时，请不要JDK安装位置放在有中文字符的路径中。选择当前路径，点击确定：</p>
-<p><img src="https://source.icode504.com/images/image-20240101134722779.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击下一步：</p>
-<p><img src="https://source.icode504.com/images/image-20240101134758455.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230314131058441.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 安装过程中，出现了一个JRE安装（前面我们安装的JDK已经包含了JRE，可以选择不安装，如果不需要安装，出现下图窗口后直接点击右上角关闭即可，直接跳到第11步）。点击<strong>更改路径</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314131446348.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 新建一个路径，建议不要出现中文字符，然后选中此文件夹，点击确定：</p>
-<p><img src="https://source.icode504.com/images/240101001.gif" srcset="/img/loading.gif" lazyload></p>
-<p>9. 点击下一步：</p>
-<p><img src="https://source.icode504.com/images/image-20240101140732789.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 安装中，安装完成以后此窗口会自动消失：</p>
-<p><img src="https://source.icode504.com/images/image-20230314132647334.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 点击关闭，JDK安装完成。</p>
-<p><img src="https://source.icode504.com/images/image-20230314132930503.png" srcset="/img/loading.gif" lazyload></p>
+                <h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><ol>
+<li><p>检查电脑上是否安装JDK，如果没有安装，请查看JDK安装教程：<a href="./1.html">点我查看</a></p>
+</li>
+<li><p>如果电脑上已经安装JDK，按<kbd>Win</kbd> 和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击确定</p>
+</li>
+</ol>
+<p><img src="https://source.icode504.com/images/b716b0c10465827fe9ca93eafc58ad17.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="3">
+<li>输入<code>java -version</code>，点击<code>回车</code>，查看JDK安装信息，如果有下面提示信息，说明JDK安装成功</li>
+</ol>
+<p><img src="https://source.icode504.com/images/a51459c85c968f63a5ce92e7d794da2e.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、下载Maven"><a href="#二、下载Maven" class="headerlink" title="二、下载Maven"></a>二、下载Maven</h1><p>以下两种方式二选一：</p>
+<p>方式一：网盘下载（强烈推荐，下载速度较快！）</p>
+<p>打开此链接：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/b012xidad">点击下载，密码:1024</a>，选择任意一个文件下载即可，这里我选择的是3.6.3版本的：</p>
+<p><img src="https://source.icode504.com/images/4811146fea7f7e60ab942659e741d5a5.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/8e6d9da608d9b3b33fbebc31300bab6c.png" srcset="/img/loading.gif" lazyload></p>
+<p>方式二：官网下载（不推荐，曾经同事和我吐槽由于官网是国外的，下载速度非常慢）</p>
+<ol>
+<li>点击进入官网下载链接：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/maven/maven-3/">点击进入</a>，会出现如下界面</li>
+</ol>
+<p><img src="https://source.icode504.com/images/d7d87a2d523517dfc327f42cae6ca939.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="2">
+<li>选择一个，点击进入，这里我以3.6.3版本的为例，按下图所示操作即可</li>
+</ol>
+<p><img src="https://source.icode504.com/images/f3a00383bb7b443772a6111cf6a1665c.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手或者已经安装了其他版本的JDK，可以选择性往下看。</p>
+<p>说明：source目录下的文件是Maven的源码文件，如果有查看的源码的小伙伴，也可以点击进入下载，这里就不过多赘述了。</p>
 </blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101141148295.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击高级系统设置：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量中，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置安装路径，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240101141636264.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240101141809160.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、检查JDK是否安装成功"><a href="#四、检查JDK是否安装成功" class="headerlink" title="四、检查JDK是否安装成功"></a>四、检查JDK是否安装成功</h1><p>1. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140351859.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 输入<code>javac</code>和<code>java</code>，会出现下图内容：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140519091.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20230314141144190.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 输入<code>java -version</code>，出现下图信息表示JDK安装成功：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140629530.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="3">
+<li>如果你使用的是Windows，请下载后缀名为<code>.zip</code>的文件；其他操作系统的请下载<code>.tar.gz</code>的版本。</li>
+</ol>
+<p><img src="https://source.icode504.com/images/a14ac41429304d8c8aeec7e378a23841.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置Maven"><a href="#三、配置Maven" class="headerlink" title="三、配置Maven"></a>三、配置Maven</h1><ol>
+<li>将下载下来的压缩包<strong>解压到一个你知道的文件夹下</strong>，为了避免后续可能出现问题，解压目录只包含英文字符 的目录，这里我解压到了<code>E:/Environment</code>中</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508220254005.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="2">
+<li>双击进入<code>apache-maven-3.6.3</code>文件夹中，点击上方路径，鼠标右键点击复制</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508220546223.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="3">
+<li>在文件夹左侧，找到此文件，鼠标右键，点击属性</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508220742398.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="4">
+<li>点击高级系统设置</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508220833089.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="5">
+<li>点击环境变量</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508220912799.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="6">
+<li>新建一个环境变量</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508220944612.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="7">
+<li>变量名填写<code>M2_HOME</code>，变量值将前面复制的内容粘贴进去即可，完成后点击确定。</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508221142253.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="8">
+<li>双击打开Path</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508221248363.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="9">
+<li>按照下图所示操作即可，完成后一路点击确定。</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508221458356.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="10">
+<li><p>验证Maven是否安装成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入cmd，点击进入。</p>
+</li>
+<li><p>在命令提示行中输入<code>mvn -version</code>，如果出现如下提示，说明Maven配置成功！</p>
+</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230508221728184.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、下载源配置"><a href="#四、下载源配置" class="headerlink" title="四、下载源配置"></a>四、下载源配置</h1><p>前面我们已经配置好Maven，但是我们在以后导入依赖的时候默认使用的是Maven的中央仓库，而中央仓库是国外网站，下载速度比较慢。因此我们需要将Maven下载源设置成国内镜像仓库，提高导入依赖的速度。以下是下载源配置教程。</p>
+<p>如果你是小白，请一定按照下面的步骤一步一步做:smile::smile::smile:</p>
+<ol>
+<li>打开前面我们安装Maven的位置，双击打开conf文件夹。</li>
+</ol>
+<p><img src="https://source.icode504.com/images/image-20230509200621227.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="2">
+<li>按照下图所示的操作，使用记事本打开<code>settings.xml</code>文件</li>
+</ol>
+<p><img src="https://source.icode504.com/images/00002.gif" srcset="/img/loading.gif" lazyload alt="00002"></p>
+<ol start="3">
+<li>用记事本打开后，在上方点击<code>查看</code>，然后点击<code>状态栏</code>，此时记事本右下角会出现行数</li>
+</ol>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509204353762.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509204435611.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="4">
+<li>请复制下面的代码</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>jdk-1.8<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">activation</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">activeByDefault</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">jdk</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">jdk</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">activation</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>在记事本第246行末尾换行，将上一步的代码粘贴到第247行中，效果如下图</li>
+</ol>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509204919658.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时我们配好了Maven的全局JDK版本，使用的是JDK 8版本。</p>
+<ol start="6">
+<li>请复制下面的代码</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus-aliyun<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus aliyun<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>在记事本第158行末尾处换行，粘贴上一步代码，效果如下图：</li>
+</ol>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509205353978.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="8">
+<li>打开Maven的安装目录，在这里新建一个repository文件夹，创建完成后，进入此文件夹，复制上述路径。</li>
+</ol>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509205928445.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509210144270.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="9">
+<li>打开记事本，在第55行创建一个<code>&lt;localRepository&gt;&lt;/localRepository&gt;</code>标签，并在二者中间粘贴上一步的路径，效果如下图所示：</li>
+</ol>
+<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509210555912.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="10">
+<li>上述操作完成，请一定一定一定按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存！！！至此Maven就全部配置完成了。</li>
+</ol>
 
                 
               </div>
@@ -717,15 +719,8 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="category-chain-item">项目构建工具</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
-  
-  
-
   
 
   
@@ -743,9 +738,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
-      
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/Maven/" class="print-no-link">#Maven</a>
       
     </div>
   
@@ -757,8 +752,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 8安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/1.html</div>
+      <div>Maven安装与配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/22.html</div>
     </div>
     <div class="license-meta">
       
@@ -770,7 +765,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月20日</div>
+          <div>2025年4月12日</div>
         </div>
       
       
@@ -802,18 +797,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/14.html" title="Intellij IDEA 2021.1.3安装配置教程（Windows版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA 2021.1.3安装配置教程（Windows版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/2.html" title="入门篇-其之一-第一个程序">
-                        <span class="hidden-mobile">入门篇-其之一-第一个程序</span>
+                      <a href="/posts/21.html" title="Intellij IDEA安装Scala插件并运行Scala程序">
+                        <span class="hidden-mobile">Intellij IDEA安装Scala插件并运行Scala程序</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

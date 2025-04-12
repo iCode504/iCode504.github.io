@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-12T13:30:32.615Z</updated>
+  <updated>2025-04-12T13:35:43.339Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven安装与配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/22.html"/>
+    <id>https://www.icode504.com/posts/22.html</id>
+    <published>2025-04-12T13:35:43.339Z</published>
+    <updated>2025-04-12T13:35:43.339Z</updated>
+    
+    
+    <summary type="html">Maven是一款项目管理和构建工具，适用于Java开发。本教程提供Windows版本的Maven安装和配置方法，包括下载和安装Maven，配置环境变量设置。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="项目构建工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Maven" scheme="https://www.icode504.com/tags/Maven/"/>
+    
+  </entry>
   
   <entry>
     <title>Intellij IDEA安装Scala插件并运行Scala程序</title>
@@ -503,33 +528,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JDK 8安装配置教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/1.html"/>
-    <id>https://www.icode504.com/posts/1.html</id>
-    <published>2025-03-20T02:00:55.984Z</published>
-    <updated>2025-03-20T02:00:56.020Z</updated>
-    
-    
-    <summary type="html">Windows环境下安装配置JDK 8教程。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java/JDK" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
   </entry>
   
