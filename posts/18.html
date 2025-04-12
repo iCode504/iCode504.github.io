@@ -18,27 +18,61 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文主要讲述了Java三元运算符的使用、三元运算符和if语句的区别、运算符的优先级展示和括号运算符如何提升运算符的级别。">
+    <meta name="description" content="本文主要讲述了其他节点导入之前节点的表单，并在表单的基础上进一步设计。设计完成后，对流程进行检查并查看检查信息。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门篇-其之七-Java运算符（下）">
-<meta property="og:url" content="https://www.icode504.com/posts/9.html">
+<meta property="og:title" content="第三章 若依-JFlow其他节点的表单设计和流程检查">
+<meta property="og:url" content="https://www.icode504.com/posts/18.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文主要讲述了Java三元运算符的使用、三元运算符和if语句的区别、运算符的优先级展示和括号运算符如何提升运算符的级别。">
+<meta property="og:description" content="本文主要讲述了其他节点导入之前节点的表单，并在表单的基础上进一步设计。设计完成后，对流程进行检查并查看检查信息。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231027105629436.png">
-<meta property="article:published_time" content="2025-04-06T14:04:54.915Z">
-<meta property="article:modified_time" content="2025-04-06T14:04:54.915Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208103559698.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104024130.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104153563.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104255122.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104433275.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104552660.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104631504.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208104815228.png">
+<meta property="og:image" content="https://source.icode504.com/images/231208001.gif">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208105403289.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208105544768.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208143308747.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208110047034.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208110154390.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208110409316.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208110449181.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208110543956.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208110733501.png">
+<meta property="og:image" content="https://source.icode504.com/images/231208002.gif">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208143815630.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208143848071.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208143736417.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208144458457.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208144635810.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208112907328.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208145630246.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208145656696.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208145719723.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208145122221.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208153534633.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208114525358.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208154932112.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208114932402.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208115111283.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231205174128064.png">
+<meta property="article:published_time" content="2025-04-12T13:16:47.505Z">
+<meta property="article:modified_time" content="2025-04-12T13:16:47.505Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="JFlow">
+<meta property="article:tag" content="若依">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-20231208103559698.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>入门篇-其之七-Java运算符（下） - iCode504个人博客</title>
+  <title>第三章 若依-JFlow其他节点的表单设计和流程检查 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +243,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">入门篇-其之七-Java运算符（下）</span>
+            <span id="subtitle">第三章 若依-JFlow其他节点的表单设计和流程检查</span>
           
         </div>
 
@@ -220,8 +254,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-06 22:04" pubdate>
-          2025年4月6日
+        <time datetime="2025-04-12 21:16" pubdate>
+          2025年4月12日
         </time>
       </span>
     
@@ -306,17 +340,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="框架"
         id="heading-41f1d2b62436eded1a6776504b6895d7" role="tab" data-toggle="collapse" href="#collapse-41f1d2b62436eded1a6776504b6895d7"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         框架
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-41f1d2b62436eded1a6776504b6895d7"
+      <div class="category-collapse collapse show" id="collapse-41f1d2b62436eded1a6776504b6895d7"
            role="tabpanel" aria-labelledby="heading-41f1d2b62436eded1a6776504b6895d7">
         
         
@@ -333,17 +367,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Java
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -360,17 +394,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="工作流框架"
         id="heading-43b803afc9e3e908f3da7d55b3b7b46d" role="tab" data-toggle="collapse" href="#collapse-43b803afc9e3e908f3da7d55b3b7b46d"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         工作流框架
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-43b803afc9e3e908f3da7d55b3b7b46d"
+      <div class="category-collapse collapse show" id="collapse-43b803afc9e3e908f3da7d55b3b7b46d"
            role="tabpanel" aria-labelledby="heading-43b803afc9e3e908f3da7d55b3b7b46d">
         
         
@@ -387,17 +421,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="JFlow"
         id="heading-277922b91f864d05c9fb26477dbfcb83" role="tab" data-toggle="collapse" href="#collapse-277922b91f864d05c9fb26477dbfcb83"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         JFlow
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-277922b91f864d05c9fb26477dbfcb83"
+      <div class="category-collapse collapse show" id="collapse-277922b91f864d05c9fb26477dbfcb83"
            role="tabpanel" aria-labelledby="heading-277922b91f864d05c9fb26477dbfcb83">
         
         
@@ -427,7 +461,7 @@
       
         <a href="/posts/18.html" title="第三章 若依-JFlow其他节点的表单设计和流程检查"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">第三章 若依-JFlow其他节点的表单设计和流程检查</span>
         </a>
       
@@ -454,17 +488,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(12)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -481,17 +515,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java
         <span class="list-group-count">(12)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -602,7 +636,7 @@
       
         <a href="/posts/9.html" title="入门篇-其之七-Java运算符（下）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">入门篇-其之七-Java运算符（下）</span>
         </a>
       
@@ -633,108 +667,120 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">入门篇-其之七-Java运算符（下）</h1>
+            <h1 id="seo-header">第三章 若依-JFlow其他节点的表单设计和流程检查</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、三元运算符的使用"><a href="#一、三元运算符的使用" class="headerlink" title="一、三元运算符的使用"></a>一、三元运算符的使用</h1><p>三元运算符（也称作三目运算符），使用<code>:</code>和<code>?</code>表示，其格式为：<strong>布尔表达式 ? 表达式1 : 表达式2</strong></p>
+                <blockquote>
+<p>若依-JFlow框架如何拉取、配置并运行请查看这篇文章：<a href="./16.html">《第一章 若依-JFlow的配置与启动》</a></p>
+<p>如何创建业务场景、流程图和单节点表单设计请查看这篇文章：<a href="./17.html">《第二章 若依-JFlow流程模型设计》</a></p>
+</blockquote>
+<p>上一节我们讲述了如何创建一个业务场景和流程模型，如何创建一个流程，如何设置单个节点的表单。</p>
+<p><img src="https://source.icode504.com/images/image-20231208103559698.png" srcset="/img/loading.gif" lazyload></p>
+<p>这一节我们就设置所有节点人员的表单。并检查相关的流程。</p>
+<h1 id="一、设置各节点人员审批表单"><a href="#一、设置各节点人员审批表单" class="headerlink" title="一、设置各节点人员审批表单"></a>一、设置各节点人员审批表单</h1><h2 id="1-1-部门领导审批节点表单设计"><a href="#1-1-部门领导审批节点表单设计" class="headerlink" title="1.1 部门领导审批节点表单设计"></a>1.1 部门领导审批节点表单设计</h2><p>部门领导审批当前员工的请假申请单时，没有修改员工填写的申请信息权限，因此在审批时，部门领导看到的员工信息表单是只读状态，他只有审批通过&#x2F;驳回的权限。</p>
+<p>驳回需要填写驳回理由，也就是说当点击驳回时，触发填写驳回原因事件，这些在JFlow框架中全部都能实现。</p>
+<p>鼠标右键点击部门领导节点，点击<strong>设计表单</strong>，出现如下页面：</p>
+<p><img src="https://source.icode504.com/images/image-20231208104024130.png" srcset="/img/loading.gif" lazyload></p>
+<p>我们需要再重新绘制一遍员工请假申请单的内容吗？并不是，JFlow为我们提供了节点内容的选项。</p>
+<p>1. 点击右上角的<strong>导入导出</strong></p>
+<p><img src="https://source.icode504.com/images/image-20231208104153563.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 进入导入导出页面以后，选择导入方式为<strong>从流程节点表单导入</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231208104255122.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 选择第一个节点，我们之前设计的表单；开启<strong>是否只读</strong>，导入后的表单内容全部设置为只读状态，然后点击<strong>执行从节点表单导入</strong>即可。</p>
+<p><img src="https://source.icode504.com/images/image-20231208104433275.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 此时弹出框会弹出一个提示，点击确定，覆盖原有节点内容即可：</p>
+<p><img src="https://source.icode504.com/images/image-20231208104552660.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 出现如下内容就说明上一个节点的内容导入成功，点击确定，关闭导入窗口。</p>
+<p><img src="https://source.icode504.com/images/image-20231208104631504.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 此时就出现了上一个节点（员工填写请假单）设计的表单内容，并且全部设置只读：</p>
+<p><img src="https://source.icode504.com/images/image-20231208104815228.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 此时我们在左侧组件最下方，找打审核分组，拖到请假单的下方：</p>
+<p><img src="https://source.icode504.com/images/231208001.gif" srcset="/img/loading.gif" lazyload alt="231208001"></p>
+<p>8. 此时表单下方的审核分组中就会出现审核意见、审核人、审核日期。但是我们需要对表单内容进行修改：</p>
+<p><img src="https://source.icode504.com/images/image-20231208105403289.png" srcset="/img/loading.gif" lazyload></p>
 <ul>
-<li>如果布尔表达式的计算结果是<code>true</code>，那么执行表达式1；否则，如果布尔表达式的计算结果是<code>false</code>，则执行表达式2。</li>
-<li><strong>表达式1和表达式2计算结果的数据类型必须要和左侧变量定义的数据类型保持一致</strong>。例如：表达式1和表达式2的计算结果都是<code>double</code>类型，那么左侧定义的变量类型也是<code>double</code>。</li>
+<li>首先我们先将审核日期设置为只读：</li>
 </ul>
-<p>以下是三元运算符作用原理图：</p>
-<p><img src="https://source.icode504.com/images/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>以下是三元运算符在代码中的使用：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 三元运算符的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-25 11:57:21</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Ternary</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">byte</span> <span class="hljs-variable">byteValue1</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br>        <span class="hljs-type">byte</span> <span class="hljs-variable">byteValue2</span> <span class="hljs-operator">=</span> <span class="hljs-number">30</span>;<br><br>        <span class="hljs-type">byte</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> byteValue1 &gt; byteValue2 ? byteValue1 : byteValue2;<br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br><br>        <span class="hljs-type">double</span> <span class="hljs-variable">doubleValue1</span> <span class="hljs-operator">=</span> <span class="hljs-number">40.13</span>;<br>        <span class="hljs-type">double</span> <span class="hljs-variable">doubleValue2</span> <span class="hljs-operator">=</span> <span class="hljs-number">30.28</span>;<br><br>        <span class="hljs-type">double</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> doubleValue1 == doubleValue2 ? doubleValue1 : doubleValue2;<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br><br>        <span class="hljs-type">String</span> <span class="hljs-variable">strValue1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">result3</span> <span class="hljs-operator">=</span> strValue1.length() == <span class="hljs-number">0</span> ? <span class="hljs-string">&quot;strValue1的长度是0&quot;</span> : <span class="hljs-string">&quot;strValue1的长度不是0&quot;</span>;<br>        System.out.println(<span class="hljs-string">&quot;result3 = &quot;</span> + result3);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>运行结果：</p>
-<p><img src="https://source.icode504.com/images/image-20231027105629436.png" srcset="/img/loading.gif" lazyload></p>
-<p>三元运算符可以嵌套使用，但不推荐，原因是可读性变差。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">strValue</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;iCode504&quot;</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">length</span> <span class="hljs-operator">=</span> strValue.length();<br><span class="hljs-comment">// 不推荐嵌套的写法</span><br><span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> length &gt; <span class="hljs-number">0</span> ? length &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&quot;strValue的长度在0~10之间&quot;</span> : <span class="hljs-string">&quot;strValue的长度超过10&quot;</span> : <span class="hljs-string">&quot;strValue的长度为0&quot;</span>;<br>System.out.println(<span class="hljs-string">&quot;result = &quot;</span> + result);<br></code></pre></td></tr></table></figure>
-
-<p>嵌套式写法做进一步简化处理：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">strValue</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;iCode504&quot;</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">length</span> <span class="hljs-operator">=</span> strValue.length();<br><span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> length &gt; <span class="hljs-number">0</span> &amp;&amp; length &lt; <span class="hljs-number">10</span> ? <span class="hljs-string">&quot;strValue的长度在0~10之间&quot;</span> : <span class="hljs-string">&quot;strValue的长度不在0~10之间&quot;</span>;<br>System.out.println(result);<br></code></pre></td></tr></table></figure>
-
-<h1 id="二、三元运算符和if语句的区别"><a href="#二、三元运算符和if语句的区别" class="headerlink" title="二、三元运算符和if语句的区别"></a>二、三元运算符和if语句的区别</h1><p>共同点：三元运算符和<code>if</code>语句的作用都是用作条件判断。但二者也存在一些差别：</p>
-<p>1. 语法层面：在大多数情况下，三元运算符语法是一行语句，<code>if</code>语句可能是多行。例如：判断一个字符串的长度是否为0，以下分别是三元运算符和<code>if</code>语句的写法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 三元运算符写法</span><br><span class="hljs-type">String</span> <span class="hljs-variable">strValue</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;iCode504&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> strValue.length() == <span class="hljs-number">0</span> ? <span class="hljs-string">&quot;strValue的长度为0&quot;</span> : <span class="hljs-string">&quot;strValue的长度不为0&quot;</span>;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// if写法</span><br><span class="hljs-type">String</span> <span class="hljs-variable">strValue</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;iCode504&quot;</span>;<br>String result;<br><span class="hljs-keyword">if</span> (strValue.length() == <span class="hljs-number">0</span>) &#123;<br>    result = <span class="hljs-string">&quot;strValue的长度为0&quot;</span>;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    result = <span class="hljs-string">&quot;strValue的长度不为0&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>2. 代码可读性：对于简单的条件判断，使用三元运算符确实可以简化代码，但是如果是复杂条件或者嵌套，那么三元运算符会让代码变得更加复杂难以理解。</p>
-<p>3. 灵活性：<code>if</code>语句中可以在代码块中放入更多的表达式，但是三目运算符的表达式只能存在一个。</p>
-<p>总体来说，三目运算符和<code>if</code>语句都有各自的优点和使用场景。在简单的情况下，使用三目运算符比较方便；在复杂情况下，使用<code>if</code>语句更合适。</p>
-<h1 id="三、运算符的优先级"><a href="#三、运算符的优先级" class="headerlink" title="三、运算符的优先级"></a>三、运算符的优先级</h1><p>前面学过很多的运算符：例如算术运算符、比较运算符、逻辑运算符等等，如果这些运算符进行混合运算时，存在着一个优先级，即谁先计算，谁后计算的问题。数学中存在这样一条规定：先乘除，后加减。也就是说，乘和除是同一级别，二者的计算级别要比加和减的级别高。这条规定在Java中也完全适用。</p>
-<p>以下是运算符的优先级顺序表（由高到低，这张表了解即可，不需要额外记忆）：</p>
-<table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>关联性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>()   []</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>!   ~   ++   –   正负号</td>
-<td>从右向左</td>
-</tr>
-<tr>
-<td>*   &#x2F;   %</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>+   -</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>&lt;&lt;   &gt;&gt;   &gt;&gt;&gt;</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>&lt;   &lt;&#x3D;   &gt;   &gt;&#x3D;   instanceof</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>&#x3D;&#x3D;   !&#x3D;</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>^</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>|</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>&amp;&amp;</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>||</td>
-<td>从左向右</td>
-</tr>
-<tr>
-<td>?:</td>
-<td>从右向左</td>
-</tr>
-<tr>
-<td>&#x3D;   +&#x3D;   -&#x3D;   *&#x3D;   &#x2F;&#x3D;   %&#x3D;   &amp;&#x3D;   |&#x3D;   ^&#x3D;   &lt;&lt;&#x3D;   &gt;&gt;&#x3D;   &gt;&gt;&gt;&#x3D;</td>
-<td>从右向左</td>
-</tr>
-</tbody></table>
-<p><strong>使用括号()可以提升运算符的优先级</strong>。例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">value1</span> <span class="hljs-operator">=</span> <span class="hljs-number">30</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">value2</span> <span class="hljs-operator">=</span> <span class="hljs-number">28</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">value3</span> <span class="hljs-operator">=</span> <span class="hljs-number">17</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> value1 * value2 + value3;		<span class="hljs-comment">// 先乘除，后加减</span><br><span class="hljs-type">int</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> value1 * (value2 + value3);	<span class="hljs-comment">// 有括号的优先计算</span><br></code></pre></td></tr></table></figure>
-
-<p>原本加号的运算等级要比乘号的等级要低，但是给加法表达式加上括号以后，加法表达式优先计算，然后再计算乘除法。</p>
+<p><img src="https://source.icode504.com/images/image-20231208105544768.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>审核人默认显示方式改成登陆人员姓名，即<code>@WebUser.Name</code></li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208143308747.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>审核意见也不符合前面我们预期的要求，选中审核意见组件，点击右侧图标删除组件。</li>
+<li>在左侧组件库中拉入一个枚举单选到部门经理审核组件框中，此时弹出一个添加枚举类型字段的窗口，在右上角点击新建：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208110047034.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>枚举内容按照下图填写即可，然后点击右上角保存，关闭此窗口：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208110154390.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>枚举值选择第一个：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208110409316.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>弹出框内容点击确定即可：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208110449181.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>点击保存，然后再点击关闭即可：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208110543956.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>再选中部门经理审核意见组件，将内容设置为必填：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208110733501.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 此时我们再对部门经理审核意见组件绑定驳回填写驳回原因事件。</p>
+<ul>
+<li>向审批框中再拖入一个文本框，命名为驳回理由。</li>
+</ul>
+<p><img src="https://source.icode504.com/images/231208002.gif" srcset="/img/loading.gif" lazyload alt="231208002"></p>
+<ul>
+<li>选中部门经理审核意见组件，点击蓝色齿轮进入设置，设置联动如下图所示：</li>
+</ul>
+<blockquote>
+<p>说明：设置一次列表值以后，一定要在在右上角点击一次保存。如果你设置了三次以后，再点击保存，此时只对最后一次修改生效。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20231208143815630.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208143848071.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208143736417.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>驳回理由按照下图所示设置：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208144458457.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 至此，部门经理审核组件框内的所有组件全部设计完成。</p>
+<p><img src="https://source.icode504.com/images/image-20231208144635810.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="1-2-人事签字备案节点、总经理审批节点表单设计"><a href="#1-2-人事签字备案节点、总经理审批节点表单设计" class="headerlink" title="1.2 人事签字备案节点、总经理审批节点表单设计"></a>1.2 人事签字备案节点、总经理审批节点表单设计</h2><p>这三个节点的表单设计和部门领导审批节点的表单设计步骤基本相同。</p>
+<p>1. 导入节点的内容选择上一个节点内容即可：</p>
+<p>2. 拖入审批组件，设计表单。</p>
+<p>3. 添加人事经理审批意见组件（组件是枚举单选），内容设置如下：</p>
+<p><img src="https://source.icode504.com/images/image-20231208112907328.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 添加一个文本框，文本框名称填写格式：职位名称+驳回理由，以人事经理审批为例，这个文本框的名称是人事经理驳回理由，其他角色亦同理。</p>
+<p><img src="https://source.icode504.com/images/image-20231208145630246.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208145656696.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208145719723.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 设计完成后的请假单如下图所示：</p>
+<ul>
+<li>人事签字备案节点表单：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208145122221.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>总经理审批节点界面：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20231208153534633.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="1-3-查看请假单节点表单设计"><a href="#1-3-查看请假单节点表单设计" class="headerlink" title="1.3 查看请假单节点表单设计"></a>1.3 查看请假单节点表单设计</h2><p>查看请假单节点对应的表单就比较简单了，设计时只需要导入总经理审批节点的内容即可，不需要做任何修改：</p>
+<p><img src="https://source.icode504.com/images/image-20231208114525358.png" srcset="/img/loading.gif" lazyload></p>
+<p>查看请假单节点的表单内容如下，内容全部是只读状态：</p>
+<p><img src="https://source.icode504.com/images/image-20231208154932112.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、检查流程"><a href="#二、检查流程" class="headerlink" title="二、检查流程"></a>二、检查流程</h1><p>点击流程上方的检查按钮，系统会对流程和表单内容进行检查：</p>
+<p><img src="https://source.icode504.com/images/image-20231208114932402.png" srcset="/img/loading.gif" lazyload></p>
+<p>检查完成后，会出现如下的检查结果，如果没有红色的错误信息，就说明我们的流程和表单设计没有问题：</p>
+<p><img src="https://source.icode504.com/images/image-20231208115111283.png" srcset="/img/loading.gif" lazyload></p>
+<p>至此，我们已经完成了所有节点的表单设计与检查，下一部分我们来测试执行整个请假流程。</p>
+<p><img src="https://source.icode504.com/images/image-20231205174128064.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -758,13 +804,27 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/" class="category-chain-item">框架</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/" class="category-chain-item">Java</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/" class="category-chain-item">工作流框架</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/JFlow/" class="category-chain-item">JFlow</a>
+  
+  
+
+  
+
   
 
   
@@ -782,7 +842,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/JFlow/" class="print-no-link">#JFlow</a>
+      
+        <a href="/tags/%E8%8B%A5%E4%BE%9D/" class="print-no-link">#若依</a>
       
     </div>
   
@@ -794,8 +856,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>入门篇-其之七-Java运算符（下）</div>
-      <div>https://www.icode504.com/posts/9.html</div>
+      <div>第三章 若依-JFlow其他节点的表单设计和流程检查</div>
+      <div>https://www.icode504.com/posts/18.html</div>
     </div>
     <div class="license-meta">
       
@@ -807,7 +869,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月6日</div>
+          <div>2025年4月12日</div>
         </div>
       
       
@@ -839,18 +901,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/16.html" title="第一章 若依-JFlow配置与启动">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第一章 若依-JFlow配置与启动</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/7.html" title="入门篇-其之六-Java运算符（中）">
-                        <span class="hidden-mobile">入门篇-其之六-Java运算符（中）</span>
+                      <a href="/posts/17.html" title="第二章 若依-JFlow流程模型与单节点表单设计">
+                        <span class="hidden-mobile">第二章 若依-JFlow流程模型与单节点表单设计</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
