@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-12T13:22:46.509Z</updated>
+  <updated>2025-04-12T13:30:32.615Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intellij IDEA安装Scala插件并运行Scala程序</title>
+    <link href="https://www.icode504.com/posts/21.html"/>
+    <id>https://www.icode504.com/posts/21.html</id>
+    <published>2025-04-12T13:30:32.615Z</published>
+    <updated>2025-04-12T13:30:32.615Z</updated>
+    
+    
+    <summary type="html">在Intellij IDEA中安装Scala插件，创建Scala项目以及文件，并运行Scala程序。</summary>
+    
+    
+    
+    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/"/>
+    
+    <category term="Scala" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/Scala/"/>
+    
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
+    
+    <category term="Scala" scheme="https://www.icode504.com/tags/Scala/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL 8.0安装、配置与卸载教程（Windows版）</title>
@@ -505,29 +530,6 @@
     <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
     
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>入门篇-其之一-第一个程序</title>
-    <link href="https://www.icode504.com/posts/2.html"/>
-    <id>https://www.icode504.com/posts/2.html</id>
-    <published>2025-03-19T16:00:00.000Z</published>
-    <updated>2025-04-05T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">使用Java输出英文语句和中文内容。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
     
   </entry>
   
