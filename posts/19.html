@@ -18,42 +18,50 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言：众所周知，i++和++i的区别是：i++先将i的值赋值给变量，再将i的值自增1；而++i则是先将i的值自增1，再将结果赋值给变量。因此，二者最终都给i自增了1，只是方式不同而已。 当然，如果在面试过程中面试官问你这个问题，只回答出上述内容，只能说明你对这方面的知识了解的还是太浅显。那么i++和++i到底有什么不同之处呢？  一、局部变量表与操作数栈简介《深入理解Java虚拟机》第八章对栈帧">
+    <meta name="description" content="本文在完成流程模型和各节点的表单设计的基础上，使用若依框架来创建用户并分配角色和部门，实现部门员工请假逐级审批的过程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i">
-<meta property="og:url" content="https://www.icode504.com/posts/8.html">
+<meta property="og:title" content="第四章 若依-JFlow设置用户并测试流程">
+<meta property="og:url" content="https://www.icode504.com/posts/19.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="前言：众所周知，i++和++i的区别是：i++先将i的值赋值给变量，再将i的值自增1；而++i则是先将i的值自增1，再将结果赋值给变量。因此，二者最终都给i自增了1，只是方式不同而已。 当然，如果在面试过程中面试官问你这个问题，只回答出上述内容，只能说明你对这方面的知识了解的还是太浅显。那么i++和++i到底有什么不同之处呢？  一、局部变量表与操作数栈简介《深入理解Java虚拟机》第八章对栈帧">
+<meta property="og:description" content="本文在完成流程模型和各节点的表单设计的基础上，使用若依框架来创建用户并分配角色和部门，实现部门员工请假逐级审批的过程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023221121858.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023222236855.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231017063620627.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023180543810.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023180636090.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023180949754.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023181650491.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023182309249.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023182828787.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023183808061.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023183842487.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023184139208.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023184445793.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021153508365.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021154150053.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021162911742.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021162952984.png">
-<meta property="article:published_time" content="2025-04-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-06T14:02:30.389Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208135500591.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208135738944.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208140240453.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208140558667.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208140735464.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208141202035.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208141713794.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208141953776.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208142054478.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208142136668.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208151209317.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208151412103.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208151427486.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208151525891.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208151706251.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208154107771.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208154426432.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208154609844.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208155633882.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208160042749.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208155922811.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208160144682.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208160359210.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20231208160614626.png">
+<meta property="article:published_time" content="2025-04-12T13:19:42.971Z">
+<meta property="article:modified_time" content="2025-04-12T13:19:42.971Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="JFlow">
+<meta property="article:tag" content="若依">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20231023221121858.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-20231208135500591.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>入门篇-其之六-附录一-以字节码的角度分析分析i++和++i - iCode504个人博客</title>
+  <title>第四章 若依-JFlow设置用户并测试流程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,7 +232,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
+            <span id="subtitle">第四章 若依-JFlow设置用户并测试流程</span>
           
         </div>
 
@@ -235,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-06 00:00" pubdate>
-          2025年4月6日
+        <time datetime="2025-04-12 21:19" pubdate>
+          2025年4月12日
         </time>
       </span>
     
@@ -321,17 +329,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="框架"
         id="heading-41f1d2b62436eded1a6776504b6895d7" role="tab" data-toggle="collapse" href="#collapse-41f1d2b62436eded1a6776504b6895d7"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         框架
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-41f1d2b62436eded1a6776504b6895d7"
+      <div class="category-collapse collapse show" id="collapse-41f1d2b62436eded1a6776504b6895d7"
            role="tabpanel" aria-labelledby="heading-41f1d2b62436eded1a6776504b6895d7">
         
         
@@ -348,17 +356,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Java
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -375,17 +383,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="工作流框架"
         id="heading-43b803afc9e3e908f3da7d55b3b7b46d" role="tab" data-toggle="collapse" href="#collapse-43b803afc9e3e908f3da7d55b3b7b46d"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         工作流框架
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-43b803afc9e3e908f3da7d55b3b7b46d"
+      <div class="category-collapse collapse show" id="collapse-43b803afc9e3e908f3da7d55b3b7b46d"
            role="tabpanel" aria-labelledby="heading-43b803afc9e3e908f3da7d55b3b7b46d">
         
         
@@ -402,17 +410,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="JFlow"
         id="heading-277922b91f864d05c9fb26477dbfcb83" role="tab" data-toggle="collapse" href="#collapse-277922b91f864d05c9fb26477dbfcb83"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         JFlow
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-277922b91f864d05c9fb26477dbfcb83"
+      <div class="category-collapse collapse show" id="collapse-277922b91f864d05c9fb26477dbfcb83"
            role="tabpanel" aria-labelledby="heading-277922b91f864d05c9fb26477dbfcb83">
         
         
@@ -451,7 +459,7 @@
       
         <a href="/posts/19.html" title="第四章 若依-JFlow设置用户并测试流程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">第四章 若依-JFlow设置用户并测试流程</span>
         </a>
       
@@ -478,17 +486,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(12)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -505,17 +513,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java
         <span class="list-group-count">(12)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -545,7 +553,7 @@
       
         <a href="/posts/8.html" title="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
         </a>
       
@@ -657,94 +665,83 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月6日
-                  
-                
-              </p>
+            <h1 id="seo-header">第四章 若依-JFlow设置用户并测试流程</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>前言：众所周知，<code>i++</code>和<code>++i</code>的区别是：<code>i++</code>先将<code>i</code>的值赋值给变量，再将<code>i</code>的值自增1；而<code>++i</code>则是先将<code>i</code>的值自增1，再将结果赋值给变量。因此，二者最终都给<code>i</code>自增了1，只是方式不同而已。</p>
-<p>当然，如果在面试过程中面试官问你这个问题，只回答出上述内容，只能说明你对这方面的知识了解的还是太浅显。那么<code>i++</code>和<code>++i</code>到底有什么不同之处呢？</p>
+<p>若依-JFlow框架如何拉取、配置并运行请查看这篇文章：<a href="./16.html">《第一章 若依-JFlow的配置与启动》</a></p>
+<p>如何创建业务场景、流程图和单节点表单设计请查看这篇文章：<a href="./17.html">《第二章 若依-JFlow流程模型与单节点表单设计》</a></p>
+<p>如何设置多节点的表单并检查流程，请查看这篇文章：<a href="./18.html">《第三章 若依-JFlow其他节点的表单设计和流程检查》</a></p>
 </blockquote>
-<h1 id="一、局部变量表与操作数栈简介"><a href="#一、局部变量表与操作数栈简介" class="headerlink" title="一、局部变量表与操作数栈简介"></a>一、局部变量表与操作数栈简介</h1><p>《深入理解Java虚拟机》第八章对栈帧结构有如下描述Java虚拟机以方法作为最基本的执行单元，“栈帧”（Stack Frame）则是用于支持虚拟机进行方法调用和方法执行背后的数据结构，它也是虚拟机运行时数据区中的虚拟机栈的栈元素。</p>
-<p>在一个活动线程中，可能会执行多个方法，因此会存在多个栈帧，和“栈”（先进后出）一样，处于栈顶的栈帧才是真正运行的，处于栈顶的栈帧称作“当前栈帧”（Current Stack Frame），这个栈帧所属的方法称作“当前方法”（Current Method）。</p>
-<p>在执行<code>main</code>方法时，<code>main</code>方法所属的线程主线程，假设在主线程中调用了一个<code>method1()</code>方法，在<code>method1()</code>内部调用了<code>method2()</code>方法，在<code>method2()</code>方法执行两个整数运算，示例如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 方法调用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-23 22:05</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StackFrameDemo1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;main开始执行&quot;</span>);<br>        method1();<br>        System.out.println(<span class="hljs-string">&quot;main执行完成&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;method1开始执行&quot;</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> method2();<br>        System.out.println(<span class="hljs-string">&quot;result = &quot;</span> + result);<br>        System.out.println(<span class="hljs-string">&quot;method1执行结束&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">method2</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">var1</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">var2</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br>        <span class="hljs-keyword">return</span> var1 + var2;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>运行结果：</p>
-<p><img src="https://source.icode504.com/images/image-20231023221121858.png" srcset="/img/loading.gif" lazyload></p>
-<p>由代码我们可以看出，<code>main</code>方法最先执行一个输出，然后进入<code>method1</code>执行第一个输出，再完整执行<code>method2</code>。<code>method2</code>执行完成以后，再执行<code>method1</code>，最后执行<code>main</code>方法，由于这段代码中只涉及一个主线程，并且最先完整执行方法的是<code>method2</code>，因此<code>method2</code>对应的栈帧就是当前栈帧，<code>main</code>方法最后执行完毕，因此<code>main</code>方法对应的栈帧在<code>method2</code>和<code>method1</code>之下。以下是这段代码对应的栈帧概念图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023222236855.png" srcset="/img/loading.gif" lazyload></p>
-<p>在每一个栈帧中存储了方法的局部变量表、操作数栈、动态链接和方法返回地址等信息</p>
-<h2 id="1-1-局部变量表"><a href="#1-1-局部变量表" class="headerlink" title="1.1 局部变量表"></a>1.1 局部变量表</h2><p>局部变量表（Local variable Table）是一组<strong>变量值</strong>的存储空间，用于存放方法参数和方法内部定义的局部变量。</p>
-<p>局部变量表的容量是以变量槽（Variable Slot）为最小单位，每个变量槽能存储基本数据类型和引用数据类型的数据。为了尽可能节省栈帧消耗的内存空间，局部变量表中的变量槽是可以重用的。</p>
-<p>JVM使用索引定位的方式使用索引变量表，索引值的范围是从0开始到局部变量表最大变量槽的数量（类似数组结构）。</p>
-<p>当一个方法被调用的时候，JVM会使用局部变量表来完成参数值到参数变量列表的传递，即实参到形参的传递。</p>
-<h2 id="1-2-操作数栈"><a href="#1-2-操作数栈" class="headerlink" title="1.2 操作数栈"></a>1.2 操作数栈</h2><p>操作数栈（Operand Stack）也称作操作数栈，它是一个栈结构（后进先出，例如手枪的弹夹，先打出去的子弹是最顶上的子弹）。</p>
-<p>在方法开始执行的时候，这个方法对应的操作数栈是空的，在方法执行过程中，会有各种字节码指令向操作数栈中写入或读取内容，即出栈和入栈操作，例如：两数相加运算时，就需要将两个数压入栈顶后调用运算指令。</p>
-<p><strong>操作数栈中的元素的数据类型必须和字节码指令序列严格匹配</strong>，在编译程序代码的时候编译器必须要严格保证这一点，在类的校验阶段的数据流分析时候还需要再次校验。例如：执行加法<code>iadd</code>（<code>i</code>是<code>int</code>类型，<code>add</code>是两个数相加）命令时，就需要保证两个操作数必须是<code>int</code>类型，不能出现其他类型相加的情况。</p>
-<h1 id="二、字节码分析（图解）"><a href="#二、字节码分析（图解）" class="headerlink" title="二、字节码分析（图解）"></a>二、字节码分析（图解）</h1><p>我们可以从字节码的角度进一步对<code>i++</code>和<code>++i</code>的执行过程做进一步的分析。以下面代码为例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * i++和++i的深入分析</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-17 5:58</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">IncrementAndDecrementOperators2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue1</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue2</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> intValue1++;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> ++intValue2;<br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>我们需要查看编译后的字节码文件，字节码文件不能直接使用记事本打开，但是我们可以使用<code>javap -verbose 文件名.class</code>命令，以<code>IncrementAndDecrementOperators2.class</code>为例：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javap -verbose IncrementAndDecrementOperators2.class<br></code></pre></td></tr></table></figure>
-
-<p>此时就会打开所有的字节码文件，我们只需要关注<code>main</code>方法内的执行过程即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231017063620627.png" srcset="/img/loading.gif" lazyload></p>
-<p>首先来解释一下这四行代码的含义：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">0</span>: iconst_2<br><span class="hljs-number">1</span>: istore_1<br><span class="hljs-number">2</span>: iconst_2<br><span class="hljs-number">3</span>: istore_2<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li><code>iconst_2</code>一共有两部分组成，<code>i</code>指的是<code>int</code>类型（源代码中我们定义的确实是<code>int</code>类型），<code>const</code>代表常量（数字<code>2</code>是整型常量），<code>iconst_2</code>的含义是将2入操作数栈。</li>
-<li><code>istore_1</code>中的<code>store</code>代表的是存储，<code>istore_1</code>的含义是将操作数栈中的数值2出栈，存入到局部变量表1的位置。同理，<code>i_store2</code>表示将操作数栈中的数值2出栈，存储到局部变量表2的位置。</li>
-</ul>
-<p>以下是前面四行代码存储过程图（存储过程全部流程图点击此链接下载：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/ijDp41cn4p0b">点我下载</a>）：</p>
-<p><img src="https://source.icode504.com/images/image-20231023180543810.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023180636090.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023180949754.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023181650491.png" srcset="/img/loading.gif" lazyload></p>
-<p>此时我们继续观察4-8行代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">4</span>: iload_1<br><span class="hljs-number">5</span>: iinc			<span class="hljs-number">1</span>, <span class="hljs-number">1</span><br><span class="hljs-number">8</span>: istore_3<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li><code>iload_1</code>的作用是将局部变量表1号位置存储的值移动到操作数栈。</li>
-<li>第5行的<code>iinc</code>有两个参数，第一个参数<code>1</code>是局部变量表的位置，另一个参数<code>1</code>的含义是在该位置存储一个<code>1</code>，如果这个位置存在值，那么这个值的结果是<strong>已存在值 + 参数值</strong>。</li>
-<li><code>istore_3</code>将操作数栈中的数移动到局部变量表的3号位置。</li>
-</ul>
-<p>以下是这三行代码的示意图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023182309249.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023182828787.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023183808061.png" srcset="/img/loading.gif" lazyload></p>
-<p>9-12行的字节码的作用原理和4-8行的作用原理基本相同：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">9</span>: iinc			<span class="hljs-number">2</span>, <span class="hljs-number">1</span><br><span class="hljs-number">12</span>: iload_2<br><span class="hljs-number">13</span>: istore		<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
-
-<p><code>istore 4</code>的作用是将操作数栈中的值存储到局部变量表4号位置。</p>
-<p>以下是这三行代码的示意图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023183842487.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023184139208.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023184445793.png" srcset="/img/loading.gif" lazyload></p>
-<p>接下来15-30行是和系统输出有关的。其中第30行<code>iload_3</code>在局部变量表中（这个值为2）值移动到操作数栈顶供系统输出，事实上<code>iload_3</code>的值正好对应源代码中变量<code>result1</code>的值。也就是说，<code>result1</code>输出结果就是<code>iload_3</code>的数值2。</p>
-<p><img src="https://source.icode504.com/images/image-20231021153508365.png" srcset="/img/loading.gif" lazyload></p>
-<p>同理，<code>iload 4</code>就是第二个要输出的值，在局部变量表中第4个位置存储的值正好是3，而输出的变量名是<code>result2</code>，因此<code>result2</code>的输出结果是3。</p>
-<p><img src="https://source.icode504.com/images/image-20231021154150053.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、i-和-i性能分析"><a href="#三、i-和-i性能分析" class="headerlink" title="三、i++和++i性能分析"></a>三、<code>i++</code>和<code>++i</code>性能分析</h1><p><code>i++</code>和<code>++i</code>主要用在普通<code>for</code>循环上，那么我们就将二者用在<code>for</code>循环上，循环相同的次数，从字节码的角度进行分析。</p>
-<p>以下是使用<code>i++</code>和<code>++i</code>的两个<code>for</code>循环文件：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * i++在for循环的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-21 16:14:33</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoopTest1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * ++i在for循环的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-21 16:15:17</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoopTest2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; ++i) &#123;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>执行编译命令以后，我们来查看两个文件的字节码：</p>
-<p><img src="https://source.icode504.com/images/image-20231021162911742.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231021162952984.png" srcset="/img/loading.gif" lazyload></p>
-<p>仔细观察这两个字节码文件内容，我们发现在两个文件<code>main</code>方法的字节码内容完全相同。由此可见，两种方式执行<code>for</code>循环的效率是相同的。</p>
+<h1 id="一、创建用户及相关信息"><a href="#一、创建用户及相关信息" class="headerlink" title="一、创建用户及相关信息"></a>一、创建用户及相关信息</h1><p>在正式进行测试之前，我们需要保证有相应的用户来执行我们前面设计的流程。</p>
+<p>假设我们的岗位是程序员，属于研发部，我们至少需要两个角色：普通员工和开发组长。</p>
+<p>1. 点击左侧菜单：<code>系统管理--&gt;用户管理</code>，在左上角点击<strong>新增</strong>，创建用户：</p>
+<p><img src="https://source.icode504.com/images/image-20231208135500591.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 这里我创建了四个用户，小张、小李、小陈、小刘，它们的基本信息如下图所示（密码默认是123456）：</p>
+<blockquote>
+<p>其中：小张是研发部门的一名普通员工，小李是研发部门的经理，小陈是人事部门的总经理，小刘是公司的总经理。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20231208135738944.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208140240453.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208140558667.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231208140735464.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、测试请假流程"><a href="#二、测试请假流程" class="headerlink" title="二、测试请假流程"></a>二、测试请假流程</h1><blockquote>
+<p>情景一：顺序执行</p>
+<p>假设研发部员工小张今天有事需要请假，它需要填写请假单，到部门经理小李那边审批，小李通过审批以后，人事部门经理小陈继续审批申请单，审批以后，再流经总经理小刘进行审批，审批通过以后，小张即可查看请假单信息。</p>
+</blockquote>
+<p>1. 进入我们设计的流程图，在上方点击<strong>测试运行</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231208141202035.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 点击小张，开始运行，此时表单中上方系统已经为我们自动加载了申请人的基本信息，不需要我们再填写了。填写后的内容如下所示：</p>
+<p><img src="https://source.icode504.com/images/image-20231208141713794.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击左上角<strong>发送</strong>，在选择接收人界面中选择由部门经理小李。然后点击发送：</p>
+<p><img src="https://source.icode504.com/images/image-20231208141953776.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 出现下面的信息，就说明已经成功向部门经理小李发送请假申请了：</p>
+<p><img src="https://source.icode504.com/images/image-20231208142054478.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 切换用户到小李，让小李执行任务</p>
+<p><img src="https://source.icode504.com/images/image-20231208142136668.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 假设小李默认选择同意，发送给人事经理小陈执行任务：</p>
+<p><img src="https://source.icode504.com/images/image-20231208151209317.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 选择人事经理小陈并发送</p>
+<p><img src="https://source.icode504.com/images/image-20231208151412103.png" srcset="/img/loading.gif" lazyload></p>
+<p>发送成功：</p>
+<p><img src="https://source.icode504.com/images/image-20231208151427486.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 切换到人事经理小陈执行任务：</p>
+<p><img src="https://source.icode504.com/images/image-20231208151525891.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 假设人事同意申请，就发送给总经理小刘：</p>
+<p><img src="https://source.icode504.com/images/image-20231208151706251.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 假设总经理也同意我们的申请：</p>
+<p><img src="https://source.icode504.com/images/image-20231208154107771.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 点击发送以后，填写请假单的小张就会看到所有人的审批结果：</p>
+<p><img src="https://source.icode504.com/images/image-20231208154426432.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击左上角的轨迹可以查看任意一个节点审批情况：</p>
+<p><img src="https://source.icode504.com/images/image-20231208154609844.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>情景二：驳回场景</p>
+<p>假设研发部员工小张今天有事需要请假，它需要填写请假单，到部门经理小李那边审批，小李通过审批以后，人事部门经理小陈继续审批申请单，但是给出了驳回理由，让xxx重新填写。</p>
+</blockquote>
+<p>1. 小张填写请假申请单，假设部门经理审批通过，到人事经理小陈进行审批，此时小陈点击驳回时需要填写驳回理由</p>
+<p><img src="https://source.icode504.com/images/image-20231208155633882.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在左上角点击退回，退回节点选择员工填写请假单，并填写退回理由</p>
+<p><img src="https://source.icode504.com/images/image-20231208160042749.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时退回到小张那里，重新填写请假单</p>
+<p><img src="https://source.icode504.com/images/image-20231208155922811.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 切换到小张，重新填写请假单，此时会弹出一个提示信息：</p>
+<p><img src="https://source.icode504.com/images/image-20231208160144682.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 重新填写表单信息，重新发送给人事经理并审批：</p>
+<p><img src="https://source.icode504.com/images/image-20231208160359210.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 假设人事经理、总经理全部同意，那么我们再查看请假申请单时的轨迹图如下：</p>
+<p><img src="https://source.icode504.com/images/image-20231208160614626.png" srcset="/img/loading.gif" lazyload></p>
+<p>至此，请假的两种简单情况流程就执行完成了。</p>
+<h1 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h1><p>我们在《第二章 若依-JFlow流程模型设计》中提到过，设计流程一共有五个步骤：</p>
+<ol>
+<li>绘制流程图：创建各个节点，并根据实际情况连结各个节点。</li>
+<li>设置接收人规则：每一个节点到底是有谁来执行任务，是某一个人还是某一个特定部门的人在执行，JFlow框架都已经为我们设置好了。</li>
+<li>设计表单：根据实际的业务设计表单，注意表单中的细节要和实际对应上。其他节点的表单可以引入上一个节点的，并再次基础上进行设计即可。</li>
+<li>检查流程：流程图和各个节点的表单设计完成后，最好检查一下流程，有错误可以及时更改。</li>
+<li>测试并运行该流程：测试过程中可以按角色所在部门一级一级审批，审批过程中可以对某个节点进行退回，每一个角色可以查看审批情况。</li>
+</ol>
 
                 
               </div>
@@ -768,13 +765,27 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/" class="category-chain-item">框架</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/" class="category-chain-item">Java</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/" class="category-chain-item">工作流框架</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/JFlow/" class="category-chain-item">JFlow</a>
+  
+  
+
+  
+
   
 
   
@@ -792,7 +803,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/JFlow/" class="print-no-link">#JFlow</a>
+      
+        <a href="/tags/%E8%8B%A5%E4%BE%9D/" class="print-no-link">#若依</a>
       
     </div>
   
@@ -804,8 +817,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</div>
-      <div>https://www.icode504.com/posts/8.html</div>
+      <div>第四章 若依-JFlow设置用户并测试流程</div>
+      <div>https://www.icode504.com/posts/19.html</div>
     </div>
     <div class="license-meta">
       
@@ -817,7 +830,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月6日</div>
+          <div>2025年4月12日</div>
         </div>
       
       
@@ -849,18 +862,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/3.html" title="入门篇-其之二-Java基础知识">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">入门篇-其之二-Java基础知识</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/10.html" title="入门篇-其之八-常用类的简单使用">
-                        <span class="hidden-mobile">入门篇-其之八-常用类的简单使用</span>
+                      <a href="/posts/18.html" title="第三章 若依-JFlow其他节点的表单设计和流程检查">
+                        <span class="hidden-mobile">第三章 若依-JFlow其他节点的表单设计和流程检查</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

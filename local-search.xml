@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>第四章 若依-JFlow设置用户并测试流程</title>
+    <link href="/posts/19.html"/>
+    <url>/posts/19.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>若依-JFlow框架如何拉取、配置并运行请查看这篇文章：<a href="./16.html">《第一章 若依-JFlow的配置与启动》</a></p><p>如何创建业务场景、流程图和单节点表单设计请查看这篇文章：<a href="./17.html">《第二章 若依-JFlow流程模型与单节点表单设计》</a></p><p>如何设置多节点的表单并检查流程，请查看这篇文章：<a href="./18.html">《第三章 若依-JFlow其他节点的表单设计和流程检查》</a></p></blockquote><h1 id="一、创建用户及相关信息"><a href="#一、创建用户及相关信息" class="headerlink" title="一、创建用户及相关信息"></a>一、创建用户及相关信息</h1><p>在正式进行测试之前，我们需要保证有相应的用户来执行我们前面设计的流程。</p><p>假设我们的岗位是程序员，属于研发部，我们至少需要两个角色：普通员工和开发组长。</p><p>1. 点击左侧菜单：<code>系统管理--&gt;用户管理</code>，在左上角点击<strong>新增</strong>，创建用户：</p><p><img src="https://source.icode504.com/images/image-20231208135500591.png"></p><p>2. 这里我创建了四个用户，小张、小李、小陈、小刘，它们的基本信息如下图所示（密码默认是123456）：</p><blockquote><p>其中：小张是研发部门的一名普通员工，小李是研发部门的经理，小陈是人事部门的总经理，小刘是公司的总经理。</p></blockquote><p><img src="https://source.icode504.com/images/image-20231208135738944.png"></p><p><img src="https://source.icode504.com/images/image-20231208140240453.png"></p><p><img src="https://source.icode504.com/images/image-20231208140558667.png"></p><p><img src="https://source.icode504.com/images/image-20231208140735464.png"></p><h1 id="二、测试请假流程"><a href="#二、测试请假流程" class="headerlink" title="二、测试请假流程"></a>二、测试请假流程</h1><blockquote><p>情景一：顺序执行</p><p>假设研发部员工小张今天有事需要请假，它需要填写请假单，到部门经理小李那边审批，小李通过审批以后，人事部门经理小陈继续审批申请单，审批以后，再流经总经理小刘进行审批，审批通过以后，小张即可查看请假单信息。</p></blockquote><p>1. 进入我们设计的流程图，在上方点击<strong>测试运行</strong>：</p><p><img src="https://source.icode504.com/images/image-20231208141202035.png"></p><p>2. 点击小张，开始运行，此时表单中上方系统已经为我们自动加载了申请人的基本信息，不需要我们再填写了。填写后的内容如下所示：</p><p><img src="https://source.icode504.com/images/image-20231208141713794.png"></p><p>3. 点击左上角<strong>发送</strong>，在选择接收人界面中选择由部门经理小李。然后点击发送：</p><p><img src="https://source.icode504.com/images/image-20231208141953776.png"></p><p>4. 出现下面的信息，就说明已经成功向部门经理小李发送请假申请了：</p><p><img src="https://source.icode504.com/images/image-20231208142054478.png"></p><p>5. 切换用户到小李，让小李执行任务</p><p><img src="https://source.icode504.com/images/image-20231208142136668.png"></p><p>6. 假设小李默认选择同意，发送给人事经理小陈执行任务：</p><p><img src="https://source.icode504.com/images/image-20231208151209317.png"></p><p>7. 选择人事经理小陈并发送</p><p><img src="https://source.icode504.com/images/image-20231208151412103.png"></p><p>发送成功：</p><p><img src="https://source.icode504.com/images/image-20231208151427486.png"></p><p>8. 切换到人事经理小陈执行任务：</p><p><img src="https://source.icode504.com/images/image-20231208151525891.png"></p><p>9. 假设人事同意申请，就发送给总经理小刘：</p><p><img src="https://source.icode504.com/images/image-20231208151706251.png"></p><p>10. 假设总经理也同意我们的申请：</p><p><img src="https://source.icode504.com/images/image-20231208154107771.png"></p><p>11. 点击发送以后，填写请假单的小张就会看到所有人的审批结果：</p><p><img src="https://source.icode504.com/images/image-20231208154426432.png"></p><p>点击左上角的轨迹可以查看任意一个节点审批情况：</p><p><img src="https://source.icode504.com/images/image-20231208154609844.png"></p><blockquote><p>情景二：驳回场景</p><p>假设研发部员工小张今天有事需要请假，它需要填写请假单，到部门经理小李那边审批，小李通过审批以后，人事部门经理小陈继续审批申请单，但是给出了驳回理由，让xxx重新填写。</p></blockquote><p>1. 小张填写请假申请单，假设部门经理审批通过，到人事经理小陈进行审批，此时小陈点击驳回时需要填写驳回理由</p><p><img src="https://source.icode504.com/images/image-20231208155633882.png"></p><p>2. 在左上角点击退回，退回节点选择员工填写请假单，并填写退回理由</p><p><img src="https://source.icode504.com/images/image-20231208160042749.png"></p><p>3. 此时退回到小张那里，重新填写请假单</p><p><img src="https://source.icode504.com/images/image-20231208155922811.png"></p><p>4. 切换到小张，重新填写请假单，此时会弹出一个提示信息：</p><p><img src="https://source.icode504.com/images/image-20231208160144682.png"></p><p>5. 重新填写表单信息，重新发送给人事经理并审批：</p><p><img src="https://source.icode504.com/images/image-20231208160359210.png"></p><p>6. 假设人事经理、总经理全部同意，那么我们再查看请假申请单时的轨迹图如下：</p><p><img src="https://source.icode504.com/images/image-20231208160614626.png"></p><p>至此，请假的两种简单情况流程就执行完成了。</p><h1 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h1><p>我们在《第二章 若依-JFlow流程模型设计》中提到过，设计流程一共有五个步骤：</p><ol><li>绘制流程图：创建各个节点，并根据实际情况连结各个节点。</li><li>设置接收人规则：每一个节点到底是有谁来执行任务，是某一个人还是某一个特定部门的人在执行，JFlow框架都已经为我们设置好了。</li><li>设计表单：根据实际的业务设计表单，注意表单中的细节要和实际对应上。其他节点的表单可以引入上一个节点的，并再次基础上进行设计即可。</li><li>检查流程：流程图和各个节点的表单设计完成后，最好检查一下流程，有错误可以及时更改。</li><li>测试并运行该流程：测试过程中可以按角色所在部门一级一级审批，审批过程中可以对某个节点进行退回，每一个角色可以查看审批情况。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>框架</category>
+      
+      <category>Java</category>
+      
+      <category>工作流框架</category>
+      
+      <category>JFlow</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JFlow</tag>
+      
+      <tag>若依</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第三章 若依-JFlow其他节点的表单设计和流程检查</title>
     <link href="/posts/18.html"/>
     <url>/posts/18.html</url>
