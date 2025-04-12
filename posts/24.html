@@ -18,27 +18,29 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程介绍Windows下安装配置Gradle的方法，包括下载、安装、配置环境变量等步骤。">
+    <meta name="description" content="NDM（Neat Download Manger）是一款免费小巧的网络资源下载器。它支持Windows和MacOS，和浏览器相比，它的优势是下载文件速度非常快，是一款好用的下载神器。本文主要讲述了NDM的安装、配置和浏览器插件配置，并对同一个文件下载，NDM下载文件的时间和浏览器自身下载文件的时间做出对比。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle安装与配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/23.html">
+<meta property="og:title" content="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）">
+<meta property="og:url" content="https://www.icode504.com/posts/24.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程介绍Windows下安装配置Gradle的方法，包括下载、安装、配置环境变量等步骤。">
+<meta property="og:description" content="NDM（Neat Download Manger）是一款免费小巧的网络资源下载器。它支持Windows和MacOS，和浏览器相比，它的优势是下载文件速度非常快，是一款好用的下载神器。本文主要讲述了NDM的安装、配置和浏览器插件配置，并对同一个文件下载，NDM下载文件的时间和浏览器自身下载文件的时间做出对比。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/47be4435f24a4b0c7ed8daf5ed68b531.png">
-<meta property="article:published_time" content="2025-04-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-12T13:48:50.730Z">
+<meta property="og:image" content="https://source.icode504.com/images/de299b66bf6085548155f7714cd2accc.png">
+<meta property="article:published_time" content="2025-04-12T13:54:49.950Z">
+<meta property="article:modified_time" content="2025-04-12T13:54:49.954Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Gradle">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Neat Download Manager">
+<meta property="article:tag" content="NDM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/47be4435f24a4b0c7ed8daf5ed68b531.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/de299b66bf6085548155f7714cd2accc.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Gradle安装与配置教程（Windows版） - iCode504个人博客</title>
+  <title>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +205,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/47be4435f24a4b0c7ed8daf5ed68b531.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/de299b66bf6085548155f7714cd2accc.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Gradle安装与配置教程（Windows版）</span>
+            <span id="subtitle">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
           
         </div>
 
@@ -220,7 +222,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 00:00" pubdate>
+        <time datetime="2025-04-12 21:54" pubdate>
           2025年4月12日
         </time>
       </span>
@@ -333,17 +335,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
         id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         常用工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+      <div class="category-collapse collapse show" id="collapse-3e90c5117dc0fe9d71410e448d766e52"
            role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
         
         
@@ -355,7 +357,7 @@
       
         <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
         </a>
       
@@ -549,17 +551,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
         id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         项目构建工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
            role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
         
         
@@ -571,7 +573,7 @@
       
         <a href="/posts/23.html" title="Gradle安装与配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Gradle安装与配置教程（Windows版）</span>
         </a>
       
@@ -599,17 +601,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -626,17 +628,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
         id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         常用工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+      <div class="category-collapse collapse show" id="collapse-3e90c5117dc0fe9d71410e448d766e52"
            role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
         
         
@@ -648,7 +650,7 @@
       
         <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
         </a>
       
@@ -679,7 +681,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Gradle安装与配置教程（Windows版）</h1>
+            <h1 id="seo-header">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</h1>
             
               <p class="note note-info">
                 
@@ -692,128 +694,81 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请点击下方<strong>任意一个</strong>链接查看安装教程（这里我使用的是JDK 8）。</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a href="./1.html">JDK 8安装教程</a></th>
-<th align="center"><a href="./28.html">JDK 11安装教程</a></th>
-<th align="center"><a href="./26.html">JDK 17安装教程</a></th>
-<th align="center"><a href="./27.html">JDK 21安装教程</a></th>
-</tr>
-</thead>
-</table>
-<p>2. 如果电脑上已经安装JDK，按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击<strong>确定</strong>：</p>
-<p><img src="https://source.icode504.com/images/0aedba0e40c0f9f2ef5041ce0c93c7d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 输入<code>java -version</code>，按一下回车键，查看JDK安装信息，如果有下面提示信息，说明JDK安装成功：</p>
-<p><img src="https://source.icode504.com/images/52280b5c9f2c1705e03fb27ea671af0f.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、Gradle下载"><a href="#二、Gradle下载" class="headerlink" title="二、Gradle下载"></a>二、Gradle下载</h1><blockquote>
-<p>  如果你使用的SpringBoot项目，建议使用6.8及以上版本的Gradle。</p>
+                <p>Neat Download Manager（以下简称 NDM）是一款免费小巧的网络资源下载器。说白了就是和迅雷、IDM（Internet Download Manager）类似。和 IDM 相比，NDM 占用空间非常小（安装空间就 2M 左右），并且支持 Windows 和 MacOS 操作系统。它可以对单个文件进行多线程下载（将单个文件切割成多份下载，大幅加快下载速度）。</p>
+<p>多线程下载是 NDM 的一大优势，更多内容可以到官网页面了解：<a target="_blank" rel="noopener" href="https://www.neatdownloadmanager.com/index.php/en/">点我进入官网</a></p>
+<p>以下是 Windows 和 macOS 环境下安装 NDM 教程：</p>
+<h1 id="一、下载-NDM"><a href="#一、下载-NDM" class="headerlink" title="一、下载 NDM"></a>一、下载 NDM</h1><p>1. 打开 NDM 官网：<a target="_blank" rel="noopener" href="https://www.neatdownloadmanager.com/index.php/en/">点我查看</a></p>
+<p>2. 根据自己的操作系统下载 NDM，这里我下载的是 Windows 版的，点击左边的下载（macOS 点击右侧链接下载）：</p>
+<p><img src="https://source.icode504.com/images/image-427df2cf376b372a09c0f19dbca05e00.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装-NDM（Windows）"><a href="#二、安装-NDM（Windows）" class="headerlink" title="二、安装 NDM（Windows）"></a>二、安装 NDM（Windows）</h1><p>1. 双击打开安装包，选择安装路径，这里我安装了 D 盘：</p>
+<p><img src="https://source.icode504.com/images/image-20231228111448526.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231228111637064.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231228111658143.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 根据自身情况是否创建桌面图标，完成后点击 <strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228111828907.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击<strong>Install</strong>开始安装：</p>
+<p><img src="https://source.icode504.com/images/image-20231228111852068.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 安装中，请耐心等待。</p>
+<p>5. 安装完成，点击<strong>Finish</strong>直接启动：</p>
+<p><img src="https://source.icode504.com/images/image-20231228112031479.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. NDM 界面如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20231228112107266.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装-NDM（macOS）"><a href="#三、安装-NDM（macOS）" class="headerlink" title="三、安装 NDM（macOS）"></a>三、安装 NDM（macOS）</h1><p>1. 双击打开下载好的安装包，将 NDM 拖入到 Applications 中，完成安装：</p>
+<p><img src="https://source.icode504.com/images/image-20240417140248009.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在应用程序中双击打开 NDM：</p>
+<p><img src="https://source.icode504.com/images/image-20240417140743668.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时会弹出一个提示，点击<strong>打开</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240417140835641.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. NDM 界面如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240417140941812.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、配置-NDM"><a href="#四、配置-NDM" class="headerlink" title="四、配置 NDM"></a>四、配置 NDM</h1><p>接下来，我们对 NDM 做一些简单配置，点击右上角的小齿轮（Settings），打开 NDM 设置：</p>
+<p><img src="https://source.icode504.com/images/image-20231228112157668.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 最大连接数推荐设置为 32，让 NDM 在下载文件时拉满带宽，加快下载速度：</p>
+<p><img src="https://source.icode504.com/images/image-20231228112309663.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示选择文件下载位置和临时文件下载位置：</p>
+<blockquote>
+<p>Windows 用户推荐将下载位置选择在除C盘以外的其他位置，例如：D盘。</p>
+<p>macOS 用户推荐将下载位置选择在你熟悉的位置。</p>
 </blockquote>
-<p>以下两种下载方式任选其一：</p>
-<h2 id="方式一：百度网盘下载"><a href="#方式一：百度网盘下载" class="headerlink" title="方式一：百度网盘下载"></a>方式一：百度网盘下载</h2><p>请点击下方任意一个链接，进入下载页面：</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Nc0-DKvcxBylkSLV99LtPA?pwd=1024">点击下载</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1P8IYEwPfooZea2VdsDq5fg?pwd=1024">备用下载1</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1FjpGp7ijBCwMeyPqJdmYuA?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://source.icode504.com/images/image-20240311121145684.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240311121311976.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方式二：官网下载"><a href="#方式二：官网下载" class="headerlink" title="方式二：官网下载"></a>方式二：官网下载</h2><p>1. 打开官网下载界面：<a target="_blank" rel="noopener" href="https://gradle.org/releases/">https://gradle.org/releases/</a></p>
-<p><img src="https://source.icode504.com/images/ad47bfc158abac0b8a5826545e6c79f9.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 这里我选择8.0.2版本下载。点击<code>complete</code>下载</p>
-<p><img src="https://source.icode504.com/images/ddd68e56bc5944099d9147df3512a793.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Gradle配置环境变量"><a href="#三、Gradle配置环境变量" class="headerlink" title="三、Gradle配置环境变量"></a>三、Gradle配置环境变量</h1><p>1. 将下载的压缩包进行解压，<strong>建议解压目录只包含英文路径</strong>，这里我解压到了E盘：</p>
-<p><img src="https://source.icode504.com/images/0a4af939173256af69ad0680e2aa03a4.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 双击打开<code>gradle-8.0.2</code>目录，鼠标右键复制路径：</p>
-<p><img src="https://source.icode504.com/images/9cd654aae344c32426bb373aea375b8e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/f697704142b2f047a745a2d86a239994.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>5. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/1765e57d00639a95fc8efce9a0d89e93.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在下方系统变量点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/ac0e3261b85c6ce2fe2572362d01d813.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 如下图，变量名输入<code>GRADLE_HOME</code>，变量值是前面第2步复制的路径粘贴即可，完成后点击<strong>确定</strong>：</p>
-<p><img src="https://source.icode504.com/images/51d54e16a281094de98e90c2f68839f5.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 在系统变量中<strong>双击打开Path</strong>：</p>
-<p><img src="https://source.icode504.com/images/6d6d2c63710adbbc6169a12d3d2bc9c5.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 在右上角点击<strong>新建</strong>，输入<code>%GRADLE_HOME%\bin</code>，完成后<strong>一路点击确定</strong>：</p>
-<p><img src="https://source.icode504.com/images/01402c291cf35c4ae0e507a3f648ce2b.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 验证Gradle是否安装成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>打开命令提示行。输入<code>gradle -v</code>，如果有下面的版本说明Gradle环境变量配置成功：</p>
-<p><img src="https://source.icode504.com/images/3ef98b93a4e6c75335da8a9ab0ca05a6.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、配置下载源"><a href="#四、配置下载源" class="headerlink" title="四、配置下载源"></a>四、配置下载源</h1><p>由于Gradle自带Maven下载源是国外的，在后续下载依赖的过程中会比较慢。这里我们需要将下载源换成国内镜像。</p>
-<p>1. 需要保证能看到文件的后缀名：在文件夹上方点击<strong>查看</strong>，在右侧勾选<strong>文件扩展名</strong>：</p>
-<p><img src="https://source.icode504.com/images/85e411cb52a2cb2aa9536eebc93992ac.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开Gradle目录，进入init.d文件夹，会发现里面有一个<code>readme.txt</code>文件，打开后会有如下信息</p>
-<p><img src="https://source.icode504.com/images/b7c4f64045b4e81a2394fab571e01f94.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">You can <span class="hljs-built_in">add</span> .gradle (e.g. test.gradle) init scripts <span class="hljs-built_in">to</span> this <span class="hljs-built_in">directory</span>. Each <span class="hljs-literal">one</span> is executed <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">start</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> build.<br></code></pre></td></tr></table></figure>
-
-<p>简单翻译一下就是需要在init.d目录下配置一个初始文件，这里我们需要新建一个<code>init.gradle</code>文件。</p>
-<p>3. 鼠标右键新建并打开init.txt文件，将下面的内容粘贴到文件中，然后点击<code>保存</code></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs groovy">allprojects &#123;<br>    repositories &#123; <br>        mavenLocal() <br>        maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&quot;https://maven.aliyun.com/repository/public&quot;</span> &#125; <br>        maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&quot;https://nexus.bsdn.org/content/groups/public/&quot;</span> &#125; <br>        mavenCentral()<br>    &#125;<br>    buildscript &#123;<br>        repositories &#123; <br>            maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&#x27;https://maven.aliyun.com/repository/public&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&#x27;https://nexus.bsdn.org/content/groups/public/&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;M2&quot;</span> ; url <span class="hljs-string">&#x27;https://plugins.gradle.org/m2/&#x27;</span> &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>4. 将文件命名为<code>init.gradle</code>，对下面弹窗提示点击确定。至此，Gradle下载源配置成功：</p>
-<p><img src="https://source.icode504.com/images/3362e93e0d0a401da1d2b302b32debca.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/6282e25c86f3f137c5bfad2c06f4dea7.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、Intellij-IDEA创建Gradle项目"><a href="#五、Intellij-IDEA创建Gradle项目" class="headerlink" title="五、Intellij IDEA创建Gradle项目"></a>五、Intellij IDEA创建Gradle项目</h1><blockquote>
-<p>需要安装Intellij IDEA的小伙伴点击右侧链接查看安装教程：<a href="./14.html">点我查看</a></p>
-</blockquote>
-<p>1. 新建Gradle项目或模块：</p>
-<p><img src="https://source.icode504.com/images/76203ff9222dc0959eb8f4f4b6710651.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 创建完成后，按<code>Ctrl + Alt + S</code>打开设置，找到Gradle并按下图设置</p>
-<p><img src="https://source.icode504.com/images/3a6931121aca6a1337384bb29e984842.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 使用JUnit4进行测试：在IDEA左侧目录打开<code>build.gradle</code>文件，在<code>dependencies</code>中添加一条依赖：</p>
-<p><img src="https://source.icode504.com/images/0c7c204a4797f32c5d821cd015b03b98.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy">dependencies &#123;<br>    testImplementation <span class="hljs-string">&#x27;junit:junit:4.12&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>4. 在src目录下，创建<code>test\java</code>目录：</p>
-<p><img src="https://source.icode504.com/images/2c073ecb104c4d60e7595dcbfde0ba49.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/8d1f80eed162d14c06fb54c48ebd4993.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 创建一个测试类MyTest01</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@className</span> MyTest01</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@time</span> 2023/5/2 23:45</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span> TODO</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTest01</span> &#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello, world&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>6. 点击运行，即可看到控制台输出内容：</p>
-<p><img src="https://source.icode504.com/images/c2a4f011461c0b9ae39146278dc01824.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="六、Eclipse创建Gradle项目"><a href="#六、Eclipse创建Gradle项目" class="headerlink" title="六、Eclipse创建Gradle项目"></a>六、Eclipse创建Gradle项目</h1><blockquote>
-<p>  需要安装Eclipse的小伙伴点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/30.html">点我查看</a></p>
-</blockquote>
-<p>1. 在Eclipse上方打开<code>Windows --&gt; Preferences</code>，按照下图所示配置。</p>
-<p><img src="https://source.icode504.com/images/d1ed50fd2d6d53e7228c399917af64a6.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 重启Eclipse，新建一个Gradle项目：</p>
-<p><img src="https://source.icode504.com/images/6b7b7e21dd32bf0cea197005cee1c235.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/70e6342f92228aa46eacabaac8430058.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入到欢迎页后，取消勾选，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/847ff89caac5801d11fac987ce409165.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 自定义项目名称，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/b5859c84ee9dfe9247e180f8a55bbccb.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击<strong>Finish</strong>，Gradle项目创建完成：</p>
-<p><img src="https://source.icode504.com/images/c67916d21c69090fdccda4347bf7ab4c.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在左侧目录打开<code>lib --&gt; build.gradle</code>文件，导入如下依赖：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy">dependencies &#123;<br>	testImplementation <span class="hljs-string">&#x27;junit:junit:4.12&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>7. 在<code>src\test\java</code>目录下创建一个Java文件：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504;<br><br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTest02</span> &#123;<br>	<br>	<span class="hljs-meta">@Test</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testName</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>		System.out.println(<span class="hljs-string">&quot;Hello, world&quot;</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>8. 双击方法名，鼠标右键点击运行，即可看到控制台输出：</p>
-<p><img src="https://source.icode504.com/images/f7cb09e65cbda0e8bce348157bdd2596.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/960ed61f612e91c852a19b6f68c62ff4.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20231228112529398.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 完成后点击 OK 即可，对 NDM 的配置就完成了。</p>
+<h1 id="五、给浏览器安装-NDM-插件"><a href="#五、给浏览器安装-NDM-插件" class="headerlink" title="五、给浏览器安装 NDM 插件"></a>五、给浏览器安装 NDM 插件</h1><p>接下来，我们给浏览器安装 NDM 插件，方便后续我们在浏览器下载内容是让 NDM 能嗅探到，直接调用 NDM 代替浏览器下载文件。</p>
+<p>以下提供了三个浏览器安装插件的方式：Chrome 浏览器、火狐浏览器、Edge 浏览器。大家根据实际情况任选其一即可。</p>
+<h2 id="5-1-Chorme-浏览器"><a href="#5-1-Chorme-浏览器" class="headerlink" title="5.1 Chorme 浏览器"></a>5.1 Chorme 浏览器</h2><p>1. 由于国内无法访问谷歌应用商店，因此正常方式无法获得 NDM 插件。这里我为大家分享了 NDM 插件，点击右侧链接下载插件：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/ikPCA1j6omkd">点我下载</a></p>
+<p>2. 按照下图所示操作，打开扩展程序管理页面：</p>
+<p><img src="https://source.icode504.com/images/image-20231228113739950.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开右上角的<strong>开发者模式</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228113846887.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 将刚才下载好的插件直接拖入到界面中，上方会有一个弹窗，点击<strong>添加扩展程序</strong>即可：</p>
+<p><img src="https://source.icode504.com/images/231228001.gif" srcset="/img/loading.gif" lazyload></p>
+<p>5. 至此，NDM 插件就已经安装完成了。</p>
+<p><img src="https://source.icode504.com/images/image-20231228114300605.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="5-2-火狐浏览器"><a href="#5-2-火狐浏览器" class="headerlink" title="5.2 火狐浏览器"></a>5.2 火狐浏览器</h2><p>1. 点击右上角，选择扩展与主题（或者直接按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>A</kbd>），搜索<strong>NeatDownloadManger</strong>并按回车键搜索：</p>
+<p><img src="https://source.icode504.com/images/image-20231228115328017.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 搜索结果中，找到<strong>NeatDownloadManger Extension</strong>，点击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20231228115418650.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 添加到 FireFox：</p>
+<p><img src="https://source.icode504.com/images/image-20231228115540347.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 右上角会有一个小弹窗，点击<strong>添加</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228115610110.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 添加成功，点击<strong>好的</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228115653250.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="5-3-Edge-浏览器"><a href="#5-3-Edge-浏览器" class="headerlink" title="5.3 Edge 浏览器"></a>5.3 Edge 浏览器</h2><p>1. 打开 Edge 浏览器，点击右上角的三个小点，点击扩展：</p>
+<p><img src="https://source.icode504.com/images/image-20231228150457486.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 选择倒数第二个，<strong>管理扩展</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228150538422.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在扩展页面左侧选择<strong>获取 Microsoft Edge 扩展</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228150628199.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在扩展商店搜索 <strong>NeatDownloadManager</strong>，完成后按回车就能看到搜索结果，点击<strong>获取</strong>即可：</p>
+<p><img src="https://source.icode504.com/images/image-20231228150918779.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 选择<strong>添加扩展</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231228151039221.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 右上角出现如下弹窗信息就说明 NDM 插件添加成功：</p>
+<p><img src="https://source.icode504.com/images/image-20231228151125225.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、试一下-NDM-有多快"><a href="#六、试一下-NDM-有多快" class="headerlink" title="六、试一下 NDM 有多快"></a>六、试一下 NDM 有多快</h1><p>以下是演示内容。这里我找了一个大一点 MySQL 的安装包（约 1.3G）下载来演示：</p>
+<p><img src="https://source.icode504.com/images/image-20231228134507751.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用 NDM 下载：速度直接拉满，我这台电脑使用 NDM 下载上述文件用时 2 分 39 秒，感兴趣的小伙伴可以观看：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yRZk0dI6i6AqQXiuvrpoeQ?pwd=w4jk">NDM 下载文件视频（未剪辑版）</a>。</p>
+<p>如果使用浏览器本身下载：速度就差了一大截，下载速度维持在 500KB~1.3M 左右，下载用时 19 分 22 秒，感兴趣的小伙伴可以观看：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1tSky3oSyQ4Pq2nYJrctvJg?pwd=nxwn">浏览器下载文件视频（未剪辑版）</a>。</p>
 
                 
               </div>
@@ -842,7 +797,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="category-chain-item">项目构建工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" class="category-chain-item">常用工具</a>
   
   
 
@@ -863,7 +818,11 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Gradle/" class="print-no-link">#Gradle</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
+      
+        <a href="/tags/Neat-Download-Manager/" class="print-no-link">#Neat Download Manager</a>
+      
+        <a href="/tags/NDM/" class="print-no-link">#NDM</a>
       
     </div>
   
@@ -875,8 +834,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Gradle安装与配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/23.html</div>
+      <div>下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</div>
+      <div>https://www.icode504.com/posts/24.html</div>
     </div>
     <div class="license-meta">
       
@@ -920,18 +879,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/16.html" title="第一章 若依-JFlow配置与启动">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第一章 若依-JFlow配置与启动</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/9.html" title="入门篇-其之七-Java运算符（下）">
-                        <span class="hidden-mobile">入门篇-其之七-Java运算符（下）</span>
+                      <a href="/posts/22.html" title="Maven安装与配置教程（Windows版）">
+                        <span class="hidden-mobile">Maven安装与配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
