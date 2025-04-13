@@ -18,27 +18,48 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+    <meta name="description" content="macOS环境下安装JDK 8教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PostgreSQL安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/35.html">
+<meta property="og:title" content="JDK 8安装配置教程（macOS版）">
+<meta property="og:url" content="https://www.icode504.com/posts/78.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+<meta property="og:description" content="macOS环境下安装JDK 8教程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/01f035a833a1a2e9871be08bbe1cc24c.png">
-<meta property="article:published_time" content="2025-04-13T02:59:45.448Z">
-<meta property="article:modified_time" content="2025-04-13T02:59:45.448Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-b5b304b00a39ffda8a82861d3668fdc4.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-81de7f2d35d7de4a63d3923b67274dfd.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20f70e229e4108efdc136e3cedbcc3c7.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-fc97bf3c031cf0673f5bbf130412c693.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-5b8bc10be92b19950e5095215139e199.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-256ec5721d3cf0841b7cce8210f6c07d.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240224151904945.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240224152112087.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714125850370.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714130847156.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714131651565.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714131003147.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714131920803.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714132042344.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714132136705.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714132229961.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714132349877.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714132457319.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714132544426.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714133154774.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714133231247.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240714133339950.png">
+<meta property="article:published_time" content="2025-04-13T07:24:56.609Z">
+<meta property="article:modified_time" content="2025-04-13T07:24:56.609Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="PostgreSQL">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/01f035a833a1a2e9871be08bbe1cc24c.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-b5b304b00a39ffda8a82861d3668fdc4.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>PostgreSQL安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>JDK 8安装配置教程（macOS版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +224,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/01f035a833a1a2e9871be08bbe1cc24c.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">JDK 8安装配置教程（macOS版）</span>
           
         </div>
 
@@ -220,7 +241,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 10:59" pubdate>
+        <time datetime="2025-04-13 15:24" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -602,17 +623,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(29)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -730,17 +751,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         数据库工具
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -770,7 +791,7 @@
       
         <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -1289,17 +1310,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -1390,17 +1411,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         编程语言
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -1417,17 +1438,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Java/JDK
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -1439,7 +1460,7 @@
       
         <a href="/posts/78.html" title="JDK 8安装配置教程（macOS版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">JDK 8安装配置教程（macOS版）</span>
         </a>
       
@@ -1474,83 +1495,84 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">PostgreSQL安装、配置与卸载教程（Windows版）</h1>
+            <h1 id="seo-header">JDK 8安装配置教程（macOS版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>PostgreSQL是基于<a target="_blank" rel="noopener" href="https://dsf.berkeley.edu/postgres.html">POSTGRES 4.2</a>版本的对象-关系型数据库，由加州大学伯克利分校计算机系研发。POSTGRES开创了许多先进理念，这些概念后来才在一些数据库系统中出现（他们的<a target="_blank" rel="noopener" href="https://www.postgresql.org/">官网</a>标题宣传的是世界上最先进的开源关系型数据库）。</p>
-<p>PostgreSQL是原伯克利代码的后代，它是开源的，支持大部分SQL标准并提供很多现代化特性：复杂查询、外键、触发器、更新视图等。</p>
-<p>此外，用户能以多种方式扩展PostgreSQL，例如可以添加新数据类型、新函数、新操作符等。由于自由的许可，PostgreSQL可以被任何人使用、修改、发布。</p>
-<p>以下是Windows环境下PostgreSQL的安装、配置与卸载教程：</p>
-<h1 id="一、下载PostgreSQL"><a href="#一、下载PostgreSQL" class="headerlink" title="一、下载PostgreSQL"></a>一、下载PostgreSQL</h1><p>1. 进入官网下载链接：<a target="_blank" rel="noopener" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">点我进入</a>（网页加载可能比较慢，请耐心等待）</p>
-<p>2. 根据自己的操作系统下载，这里我选择Windows版PostgreSQL 15版本：</p>
-<p><img src="https://source.icode504.com/images/image-5adb5c7f3f9993b49cf13cadf5133070.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装PostgreSQL"><a href="#二、安装PostgreSQL" class="headerlink" title="二、安装PostgreSQL"></a>二、安装PostgreSQL</h1><p>1. 双击打开安装包，进入欢迎界面，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-f9f077db3caecb00a08503191143d6bc.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择安装路径，建议安装路径是全英文的（小白安装可以不用修改此路径），完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240105161313262.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择组件：这里安装器为我们默认勾选了四个组件，简单解释一下这些组件的作用。</p>
+                <p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
+<p>以下是macOS环境下JDK 8的安装和使用教程，以下两种方式任选其一：</p>
+<h1 id="方式一：使用SDKMAN-安装"><a href="#方式一：使用SDKMAN-安装" class="headerlink" title="方式一：使用SDKMAN!安装"></a>方式一：使用SDKMAN!安装</h1><p>1. 打开终端，请确保macOS上已经安装了SDKMAN!，没有安装的小伙伴可以点击右侧链接查看安装教程：<a href="./108.html">点我查看</a></p>
+<p>2. 执行如下命令，查看各大厂商可以安装的JDK相关版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk list java<br></code></pre></td></tr></table></figure>
+
+<p>下图中提供了各个厂商提供的Java，翻到页面最下方，这里我下载的是ZuluJDK，按照下图中选中复制版本号：</p>
+<blockquote>
+<p>提示：上、下键可以翻页，或者按<kbd>PageUp</kbd>或<kbd>PageDown</kbd>翻页，按<kbd>Q</kbd>键退出。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-b5b304b00a39ffda8a82861d3668fdc4.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 执行如下命令，安装ZuluJDK：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk install java 版本号-厂商名<br></code></pre></td></tr></table></figure>
+
+<p>效果图如下（将前面复制的版本信息粘贴此处）：</p>
+<p><img src="https://source.icode504.com/images/image-81de7f2d35d7de4a63d3923b67274dfd.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 等待一段时间后，JDK安装完成：</p>
+<p><img src="https://source.icode504.com/images/image-20f70e229e4108efdc136e3cedbcc3c7.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 接下来，我们可以分别使用<code>java</code>、<code>javac</code>、<code>java -version</code>查看版本信息：</p>
+<p><img src="https://source.icode504.com/images/image-fc97bf3c031cf0673f5bbf130412c693.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-5b8bc10be92b19950e5095215139e199.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-256ec5721d3cf0841b7cce8210f6c07d.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="方式二：正常安装"><a href="#方式二：正常安装" class="headerlink" title="方式二：正常安装"></a>方式二：正常安装</h1><h2 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h2><p>检查本机信息：点击左上角苹果logo，点击第一个<strong>关于本机</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240224151904945.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里需要留意一下处理器信息，这里我的电脑使用的是Intel芯片：</p>
+<p><img src="https://source.icode504.com/images/image-20240224152112087.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="二、下载JDK"><a href="#二、下载JDK" class="headerlink" title="二、下载JDK"></a>二、下载JDK</h2><p>以下两种方式二选一下载即可：</p>
+<h3 id="方式一：网盘下载"><a href="#方式一：网盘下载" class="headerlink" title="方式一：网盘下载"></a>方式一：网盘下载</h3><p>根据上方的处理器信息选择对应的下载链接：</p>
 <table>
 <thead>
 <tr>
-<th>组件名称</th>
-<th>说明</th>
+<th align="center">说明</th>
+<th align="center">下载链接</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>PostgreSQL Server</td>
-<td>PostgreSQL数据库服务器（首次安装必须勾选）</td>
+<td align="center">macOS(Intel芯片, x64版本) JDK</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1GGuNm0rp_BS58ds6jmua_g?pwd=1024">点我下载</a></td>
 </tr>
 <tr>
-<td>pgAdmin 4</td>
-<td>pgAdmin 4是PostgreSQL图形管理界面，用来管理PostgreSQL数据库和服务器，可以在内部编写SQL语句</td>
-</tr>
-<tr>
-<td>Stack Builder</td>
-<td>Stack Builder通过下载安装工具、驱动和应用，可以补充PostgreSQL未安装的内容。</td>
-</tr>
-<tr>
-<td>Command Line Tools</td>
-<td>PostgreSQL的命令行工具，如果需要使用pgAdmin 4，需要安装命令行工具</td>
+<td align="center">macOS(Intel芯片, arm64版本) JDK</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1pwIRrLqfnDsTJdXTpyUMKA?pwd=1024">点我下载</a></td>
 </tr>
 </tbody></table>
-<p>如果你是新手小白，按照系统默认勾选即可，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911145322812.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 选择数据存储路径：第2步如果选择了安装路径，那么这一步就按照系统默认安装位置即可（不用修改），点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240105163356163.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 为超级管理员设置密码。注意：如果你记不住密码，就将密码设置成123456即可，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911145851183.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. PostgreSQL默认端口是<strong>5432</strong>，保持默认即可，不用修改。点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150036442.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 地区按照系统默认选择<strong>Default Locale</strong>，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150143566.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 对前面安装选项进行确认，如果没有问题点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240105164020363.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 点击<strong>Next</strong>，开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150301037.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150326605.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 安装完毕，点击<strong>Finish</strong>。Postgres安装完成：</p>
-<p><img src="https://source.icode504.com/images/image-20240130105919293.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、卸载PostgreSQL"><a href="#三、卸载PostgreSQL" class="headerlink" title="三、卸载PostgreSQL"></a>三、卸载PostgreSQL</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
-
-<blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴可以接着往下看！</p>
-</blockquote>
-<p>1. 打开Geek Uninstaller，找到PostgreSQL 15，鼠标右键，点击<strong>卸载</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240130101637247.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 此时卸载模式，默认选择第一个<strong>Entire Application</strong>（完全卸载），点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240130101833493.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 卸载中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240130101938418.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 此时弹出一个卸载成功的小窗口，点击OK：</p>
-<p><img src="https://source.icode504.com/images/image-20240130102132979.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在Geek Uninstaller中清理注册表等卸载残留，点击<strong>完成</strong>，卸载残留清理完毕。至此，Postgres卸载完成。</p>
-<p><img src="https://source.icode504.com/images/image-20240130102238678.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h3><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/archive/">点击进入</a></p>
+<p>2. 根据自己的电脑的操作系统点击对应的链接进入，M1及之后的芯片的小伙伴点击**Java SE 8 (8u211 and later)**进入；Intel芯片的小伙伴点击任意一个Java SE 8进入即可。</p>
+<p><img src="https://source.icode504.com/images/image-20240714125850370.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 找到以Java SE Development Kit开头的下载列表，按照下图所示的操作，根据自己的芯片下载JDK安装包：</p>
+<p><img src="https://source.icode504.com/images/image-20240714130847156.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 按图所示点击下载：</p>
+<p><img src="https://source.icode504.com/images/image-20240714131651565.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
+<p><img src="https://source.icode504.com/images/image-20240714131003147.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="三、安装JDK"><a href="#三、安装JDK" class="headerlink" title="三、安装JDK"></a>三、安装JDK</h2><p>1. 找到下载好的文件，双击文件dmg文件：</p>
+<p><img src="https://source.icode504.com/images/image-20240714131920803.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 双击pkg安装包，开始安装JDK：</p>
+<p><img src="https://source.icode504.com/images/image-20240714132042344.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 进入欢迎页面，点击<strong>继续</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240714132136705.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击<strong>安装</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240714132229961.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 输入本机用户密码，然后点击<strong>安装软件</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240714132349877.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 安装中，请耐心等待</p>
+<p><img src="https://source.icode504.com/images/image-20240714132457319.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 安装成功，点击<strong>关闭</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240714132544426.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 这里弹出一个提示框，如果后续你还要继续使用JDK安装包，请点击保留，如果不需要，就点击移动到废纸篓。</p>
+<h2 id="四、检查JDK相关命令是否在终端中可用"><a href="#四、检查JDK相关命令是否在终端中可用" class="headerlink" title="四、检查JDK相关命令是否在终端中可用"></a>四、检查JDK相关命令是否在终端中可用</h2><p>1. 打开终端，输入<code>javac</code>和<code>java</code>，会出现下图内容：</p>
+<p><img src="https://source.icode504.com/images/image-20240714133154774.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240714133231247.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 输入<code>java -version</code>即可查看当前JDK版本信息：</p>
+<p><img src="https://source.icode504.com/images/image-20240714133339950.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1574,13 +1596,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/" class="category-chain-item">macOS</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
+  
+  
+
   
 
   
@@ -1598,9 +1627,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
       
-        <a href="/tags/PostgreSQL/" class="print-no-link">#PostgreSQL</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
       
     </div>
   
@@ -1612,8 +1641,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PostgreSQL安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/35.html</div>
+      <div>JDK 8安装配置教程（macOS版）</div>
+      <div>https://www.icode504.com/posts/78.html</div>
     </div>
     <div class="license-meta">
       
@@ -1657,18 +1686,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）">
-                        <span class="hidden-mobile">Groovy安装、配置与卸载教程（Windows版）</span>
+                      <a href="/posts/76.html" title="Windows通过命令行关闭某个端口">
+                        <span class="hidden-mobile">Windows通过命令行关闭某个端口</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
