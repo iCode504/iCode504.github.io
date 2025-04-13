@@ -1160,6 +1160,37 @@
   
   
   <entry>
+    <title>MySQL 8.0安装、配置与卸载教程（macOS版）</title>
+    <link href="/posts/68.html"/>
+    <url>/posts/68.html</url>
+    
+    <content type="html"><![CDATA[<p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p><p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p><p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程：</p><h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>检查本机信息：点击左上角苹果logo，点击第一个<strong>关于本机</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224151904945.png"></p><p>这里需要留意一下处理器信息，这里我的电脑使用的是Intel芯片：</p><p><img src="https://source.icode504.com/images/image-20240224152112087.png"></p><h1 id="二、下载MySQL"><a href="#二、下载MySQL" class="headerlink" title="二、下载MySQL"></a>二、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a href="https://downloads.mysql.com/archives/community/">点我查看</a></p><p>2. 按照下图所示选择对应版本的MySQL安装包下载，这里我选择的是8.0.30版本的MySQL：</p><p><img src="https://source.icode504.com/images/image-20240224152756696.png"></p><h1 id="三、安装并配置MySQL"><a href="#三、安装并配置MySQL" class="headerlink" title="三、安装并配置MySQL"></a>三、安装并配置MySQL</h1><p>安装MySQL过程中，<strong>请保持网络畅通</strong>！！！</p><p>1. 双击打开dmg磁盘影像文件：</p><p><img src="https://source.icode504.com/images/image-20240224154757639.png"></p><p>2. 进入磁盘映像文件中，双击打开pkg软件安装包：</p><p><img src="https://source.icode504.com/images/image-20240224154853841.png"></p><p>3. 此时会弹出一个错误信息：<strong>无法打开“mysql-8.0.30-macos12-86_64.pkg”，因为它来自身份不明的开发者。</strong>（没有这个错误信息并且能正常打开上述软件包的小伙伴请跳转到<strong>第8步</strong>）我们需要解决这个问题：</p><p><img src="https://source.icode504.com/images/image-20240224155004670.png"></p><p>4. 点击左上角苹果logo，然后点击<strong>系统设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155139125.png"></p><p>5. 点击<strong>左侧隐私与安全性</strong>，向下找安全性中有一个提示信息：已阻止使用“mysql-8.0.30-macos12-86_64.pkg”，因为它来自身份不明的开发者。点击提示信息下方的<strong>仍要打开</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155406642.png"></p><p>6. 输入本机的用户名和密码，完成后点击<strong>修改设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155514630.png"></p><p>7. 再次双击打开pkg软件安装包，此时会弹出如下的提示信息，点击<strong>打开</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155622622.png"></p><p>8. 此时会弹出一个信息：<strong>此软件包将运行一个程序以确定该软件能否安装</strong>，选择<strong>允许</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155700068.png"></p><p>9. 进入MySQL安装器欢迎页面，点击右下角<strong>继续</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155745310.png"></p><p>10. 进入软件许可协议页面，点击右下角的<strong>继续</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155810677.png"></p><p>11. 点击<strong>同意</strong>，继续安装：</p><p><img src="https://source.icode504.com/images/image-20240224155823918.png"></p><p>12. 点击<strong>安装</strong>，安装MySQL：</p><p><img src="https://source.icode504.com/images/image-20240224155915966.png"></p><p>13. 输入用户名和密码，然后点击<strong>安装软件</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224160017901.png"></p><p>14. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240224160032278.png"></p><p>15. 进入配置页面，加密方式选择第一个<strong>Use Strong Password Encryption</strong>，然后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224160125824.png"></p><p>16. 为root用户设置密码。勾选<strong>Start MySQL Server once the installation is complete.<strong>（MySQL配置完成后开启服务）。完成后点击</strong>Finish</strong>：</p><blockquote><p>密码要求至少8位，并且由字母、数字和其他字符混合而成。</p></blockquote><p><img src="https://source.icode504.com/images/image-20240224160705939.png"></p><p>17. 此时需要再次输入一次用户名和密码，然后点击<strong>好</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224160832172.png"></p><p>18. 配置中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240224160843908.png"></p><p>19. 安装完成，点击<strong>关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224160936245.png"></p><p>20. 不需要安装包的小伙伴，可以点击<strong>移至废纸篓</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224161023547.png"></p><h1 id="四、配置MySQL环境变量"><a href="#四、配置MySQL环境变量" class="headerlink" title="四、配置MySQL环境变量"></a>四、配置MySQL环境变量</h1><p>为了后续我们打开终端后直接使用MySQL命令登录数据库，我们需要配置一下环境变量。</p><p>1. 按<kbd>Command</kbd>和<kbd>空格</kbd>，搜索终端并打开。</p><p>2. 在当前目录下创建一个<code>mysql_env.sh</code>文件，执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim mysql_env.sh<br></code></pre></td></tr></table></figure><p>3. 按<kbd>i</kbd>键进入编辑模式，复制下面的内容，在Vim编辑器中鼠标右键粘贴，效果如下图所示：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">MYSQL</span><br>PATH=/usr/local/mysql/bin<br>export PATH<br></code></pre></td></tr></table></figure><blockquote><p>  说明：如果你的MySQL安装在了其他位置，请将第二行等号右面的值改成你的安装路径。</p></blockquote><p><img src="https://source.icode504.com/images/image-20240429232916930.png"></p><p>4. 按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p><p>5. 执行如下命令，让环境变量配置生效：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> mysql_env.sh<br></code></pre></td></tr></table></figure><p>6. 执行如下命令登录<code>root</code>用户：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysql -u root -p<br></code></pre></td></tr></table></figure><p>此时输入密码不会显示在命令行中，下图界面说明<code>root</code>用户登录成功！</p><p><img src="https://source.icode504.com/images/image-20240429233700930.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>数据库工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+      <tag>macOS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Eclipse安装配置、卸载教程（Windows版）</title>
     <link href="/posts/30.html"/>
     <url>/posts/30.html</url>
