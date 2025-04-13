@@ -18,27 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
+    <meta name="description" content="本文详细介绍了在Linux系统上安装和配置Gradle的步骤。通过本教程，用户可以轻松掌握Gradle在Linux端的安装配置方法，完成下载源的配置，为后续的项目构建和管理提供便利。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL 8.0安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/20.html">
+<meta property="og:title" content="Gradle安装配置教程（Linux通用版）">
+<meta property="og:url" content="https://www.icode504.com/posts/57.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
+<meta property="og:description" content="本文详细介绍了在Linux系统上安装和配置Gradle的步骤。通过本教程，用户可以轻松掌握Gradle在Linux端的安装配置方法，完成下载源的配置，为后续的项目构建和管理提供便利。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png">
-<meta property="article:published_time" content="2025-04-12T13:22:46.509Z">
-<meta property="article:modified_time" content="2025-04-12T13:22:46.509Z">
+<meta property="og:image" content="https://source.icode504.com/images/f044dd13eb32f716c6081adc73f074cf.png">
+<meta property="article:published_time" content="2025-04-13T06:13:29.914Z">
+<meta property="article:modified_time" content="2025-04-13T06:13:29.918Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Gradle">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/f044dd13eb32f716c6081adc73f074cf.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>MySQL 8.0安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>Gradle安装配置教程（Linux通用版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/f044dd13eb32f716c6081adc73f074cf.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">Gradle安装配置教程（Linux通用版）</span>
           
         </div>
 
@@ -220,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 21:22" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 14:13" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -306,17 +306,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -401,17 +401,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
         id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         项目构建工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+      <div class="category-collapse collapse show" id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
            role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
         
         
@@ -432,7 +432,7 @@
       
         <a href="/posts/57.html" title="Gradle安装配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Gradle安装配置教程（Linux通用版）</span>
         </a>
       
@@ -451,17 +451,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(23)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -533,17 +533,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         数据库工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -555,7 +555,7 @@
       
         <a href="/posts/20.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -1108,135 +1108,153 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MySQL 8.0安装、配置与卸载教程（Windows版）</h1>
+            <h1 id="seo-header">Gradle安装配置教程（Linux通用版）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年4月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p>
-<p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p>
-<p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程：</p>
-<h1 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a>一、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/installer/">点我查看</a></p>
-<p>2. 按照下图所示操作选择相应的MySQL版本下载，这里我选择的Windows MySQL 8.0.30版本。</p>
-<p><img src="https://source.icode504.com/images/image-20240220110125037.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 下载中，请耐心等待。</p>
-<h1 id="二、安装并配置MySQL"><a href="#二、安装并配置MySQL" class="headerlink" title="二、安装并配置MySQL"></a>二、安装并配置MySQL</h1><p>安装MySQL过程中，<strong>请保持网络畅通</strong>！！！</p>
-<p>1. 双击打开安装包，安装器启动需要一些时间，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240220110324590.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 如果遇到这个窗口，点击<strong>Yes</strong>即可。如没遇到，请查看下一步。</p>
-<p><img src="https://source.icode504.com/images/image-20230512214714122.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装类型选择<strong>Custom</strong>，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111156356.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示操作，选择安装<code>MySQL Server 8.0.30 - X64</code>，完成后直接点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/00003.gif" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>（小白可以忽略下列内容，直接跳到第5步）</p>
-<ul>
-<li>如果你想修改MySQL的安装路径，如下图，可以点击下方<strong>Advanced Options</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20240220111320444.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>按照下图所示，选择安装路径，为避免后续过程中出现问题，<strong>安装路径建议只包含英文字符</strong>；下面的是MySQL数据存储路径，如果不懂这方面的内容，建议不要修改这个路径。配置完成后后点击<strong>OK</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20240220111711714.png" srcset="/img/loading.gif" lazyload></p>
-</blockquote>
-<p>5. 点击<strong>Execute</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220628921.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220740114.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 出现下图提示<strong>Complete</strong>以后，MySQL安装完成。直接点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220836314.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 接下来开始配置MySQL，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220905466.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 初次安装MySQL的小白请注意，下图的<strong>Port请务必配置成3306</strong>，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111939271.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>注意：如果你的电脑安装了多个MySQL，需要修改端口号，要和3306端口避开使用。只安装一个MySQL的小伙伴请忽略此条。</p>
-</blockquote>
-<p>10. 认证方式选择第一个即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512221223745.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 设置root账户密码，这里强烈建议<strong>将密码设置成你最熟悉的密码</strong>，否则后续恢复密码比较麻烦。这里我设置成了<code>123456</code>。设置完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220110609804.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 在Windows中开启服务，直接点击<strong>Next</strong>即可：</p>
-<p><img src="https://source.icode504.com/images/image-20230512221927024.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 服务器文件权限按照默认配置<strong>选择第一个</strong>即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222002468.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 点击<strong>Execute</strong>，MySQL安装器就会为我们配置上述内容。配置过程中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222105185.png" srcset="/img/loading.gif" lazyload></p>
-<p>15. 出现下图信息，说明MySQL配置成功，点击<strong>Finish</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222243451.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222328898.png" srcset="/img/loading.gif" lazyload></p>
-<p>17. 点击<strong>Finish</strong>，MySQL配置完成。</p>
-<p><img src="https://source.icode504.com/images/image-20230512222401129.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、配置MySQL环境变量"><a href="#三、配置MySQL环境变量" class="headerlink" title="三、配置MySQL环境变量"></a>三、配置MySQL环境变量</h1><p>1. 初次安装MySQL的小白，按照下图操作复制路径：</p>
-<p><img src="https://source.icode504.com/images/00005.gif" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>（此条内容小白请忽略）安装在其他位置的小伙伴找到MySQL的安装路径，进入bin文件夹后复制文件路径。</p>
-</blockquote>
-<p>2. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
+                <p>有需要安装Linux系统的小伙伴，可以点击下面任意一个链接查看安装教程：</p>
 <table>
 <thead>
 <tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th align="center"></th>
+<th align="center">CentOS</th>
+<th align="center">Ubuntu</th>
+<th align="center">Debian</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center">安装教程</td>
+<td align="center"><a href="./48.html">点我查看</a></td>
+<td align="center"><a href="./51.html">点我查看</a></td>
+<td align="center"><a href="./52.html">点我查看</a></td>
 </tr>
 </tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/9b32c83db0d6df2c2f698e9d67d0edfd.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量找到Path，双击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230512223639743.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按照下图所示操作，粘贴前面复制的MySQL安装路径，然后一路点击确定即可。</p>
-<p><img src="https://source.icode504.com/images/image-20240220112157561.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击进入，在命令提示行中输入<code>mysql -u root -p</code>，按回车后会提示让你输入密码。这个密码是前面我们安装MySQL的时候设置的密码，输入完成后按回车即可。完成后出现下图界面表示MySQL安装成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240220105038897.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、卸载MySQL（可选）"><a href="#四、卸载MySQL（可选）" class="headerlink" title="四、卸载MySQL（可选）"></a>四、卸载MySQL（可选）</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p><p>以下两种卸载方式任选其一即可。</p>
-          </div>
+<h1 id="一、安装前检查（Linux端）"><a href="#一、安装前检查（Linux端）" class="headerlink" title="一、安装前检查（Linux端）"></a>一、安装前检查（Linux端）</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请查看JDK安装教程：<a href="./55.html">点我查看</a></p>
+<p>2. 已经安装JDK的小伙伴，请在命令行执行如下命令，如果出现下图的版本信息，就说明JDK环境变量配置成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -version<br></code></pre></td></tr></table></figure>
 
-<h2 id="方式一：使用Geek-Uninstaller卸载（推荐）"><a href="#方式一：使用Geek-Uninstaller卸载（推荐）" class="headerlink" title="方式一：使用Geek Uninstaller卸载（推荐）"></a>方式一：使用Geek Uninstaller卸载（推荐）</h2><blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴可以接着往下看！</p>
-</blockquote>
-<p>1. 打开Geek Installer，在程序列表中找到MySQL相关的内容，鼠标右键，依次点击卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20240220113015742.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 卸载时如果存在残留，直接清理即可。</p>
-<h2 id="方式二：手动卸载（较麻烦，不推荐）"><a href="#方式二：手动卸载（较麻烦，不推荐）" class="headerlink" title="方式二：手动卸载（较麻烦，不推荐）"></a>方式二：手动卸载（较麻烦，不推荐）</h2><blockquote>
-<p>MySQL卸载过程会有一些繁琐，卸载过程请一定耐心！如果你按照前面的步骤成功安装MySQL并可以正常使用了，就直接忽略下面的内容。</p>
-</blockquote>
-<p>1. 停止MySQL的服务：按下图所示操作，进入服务页面。找到MySQL80服务。</p>
-<p><img src="https://source.icode504.com/images/00006.gif" srcset="/img/loading.gif" lazyload></p>
-<p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>control</code>，点击进入控制面板，在下方找到卸载程序。</p>
-<p><img src="https://source.icode504.com/images/image-20240220105209312.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 将带有MySQL的程序依次使用鼠标右键卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20230512231355775.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 卸载中，请耐心等待。</p>
-<p>5. 卸载界面不存在MySQL相关程序，说明MySQL卸载成功。</p>
-<p><img src="https://source.icode504.com/images/image-20230512231640785.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 清理残余文件：如果你是小白并且没有修改过MySQL路径，那么你可以去<code>C盘</code>的<code>Program Files</code>文件夹内看看是否存在MySQL的文件夹。如果存在，直接删除文件夹即可。</p>
-<p>7. 清理注册表</p>
-<ul>
-<li>按<kbd>Win</kbd>和<kbd>S</kbd>键，输入<code>regedit</code>，打开注册表编辑器：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20240220105352865.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>依次删除下面和MySQL有关的目录。</li>
-</ul>
-<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\ApplicationMySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL服务目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL服务 目录删除<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-20240225121013682.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 检查Ubuntu发行版本信息，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br></code></pre></td></tr></table></figure>
 
-<p>8. 删除环境变量</p>
+<p><img src="https://source.icode504.com/images/image-20240310222707920.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、下载Gradle安装包（Windows端）"><a href="#二、下载Gradle安装包（Windows端）" class="headerlink" title="二、下载Gradle安装包（Windows端）"></a>二、下载Gradle安装包（Windows端）</h1><p>1. 点击右侧链接打开官网页面：<a target="_blank" rel="noopener" href="https://gradle.org/releases/">https://gradle.org/releases/</a></p>
+<blockquote>
+<p>  如果你使用的SpringBoot项目，建议使用6.8及以上的版本。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20240307110337332.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 这里我选择8.0.2版本下载。点击<strong>complete</strong>下载：</p>
+<p><img src="https://source.icode504.com/images/image-20240307110441377.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装并配置Gradle环境变量"><a href="#三、安装并配置Gradle环境变量" class="headerlink" title="三、安装并配置Gradle环境变量"></a>三、安装并配置Gradle环境变量</h1><p>1. 将前面下载好的Gradle安装包使用SFTP工具（这里我使用的是Eleterm）由Windows端传输到Linux端（请先确保Windows本身已经通过SSH方式连接到Linux）：</p>
+<p><img src="https://source.icode504.com/images/image-20240224172925751.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在左侧Windows端找到下载好的安装包：</p>
+<p><img src="https://source.icode504.com/images/image-20240310214142976.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在右侧Linux端设置安装包存放路径，这里我将安装包存放在<code>/opt</code>下：</p>
+<p><img src="https://source.icode504.com/images/image-20240224173503187.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 按照下图所示操作，将Maven安装包传到Linux端的<code>/opt</code>目录下：</p>
+<p><img src="https://source.icode504.com/images/24010310001.gif" srcset="/img/loading.gif" lazyload></p>
+<p>5. 等待一段时间后，此时Linux端的<code>/opt</code>目录下已经存放了刚才我们传输的文件：</p>
+<p><img src="https://source.icode504.com/images/image-20240310214339373.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 此时我们切换回命令行，执行如下命令切换到<code>/opt</code>目录下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt<br></code></pre></td></tr></table></figure>
+
+<p>7. 在Linux端下载安装unzip（解压缩工具）：</p>
 <ul>
-<li>如何进入环境变量，请参考第三部分配置MySQL环境变量的前5步。</li>
-<li>选中MySQL环境变量，点击删除，然后一路点击确定即可。</li>
+<li>Ubuntu&#x2F;Debian</li>
 </ul>
-<p><img src="https://source.icode504.com/images/image-20230512233341214.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt -y install unzip<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>CentOS</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum -y install unzip<br></code></pre></td></tr></table></figure>
+
+<p>7. 解压刚刚传输过来的安装包，执行如下命令：</p>
+<blockquote>
+<p>  小技巧：在命令行中输入文件名时，我们可以只写文件的前一部分，然后按一下<kbd>Tab</kbd>键补齐文件名。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">unzip gradle-8.0.2-all.zip<br></code></pre></td></tr></table></figure>
+
+<p>8. 等待一段时间后，解压完成，执行如下命令，进入解压后的文件夹名称：</p>
+<p><img src="https://source.icode504.com/images/image-20240310214538214.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用<code>cd</code>命令进入解压后的文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> gradle-8.0.2<br></code></pre></td></tr></table></figure>
+
+<p>9. 安装vim编辑器，根据自己的操作系统执行如下命令来安装：</p>
+<ul>
+<li>CentOS</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum -y install vim<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu&#x2F;Debian</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt -y install vim<br></code></pre></td></tr></table></figure>
+
+<p>10. 在<code>/etc/profile.d</code>目录下创建<code>gradle_env.sh</code>文件，执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim /etc/profile.d/gradle_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>11. 复制如下代码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">GRADLE_HOME</span>  <br>GRADLE_HOME=<br>PATH=$PATH:$GRADLE_HOME/bin<br>export PATH GRADLE_HOME<br></code></pre></td></tr></table></figure>
+
+<p>12. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第十步的代码，效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240310220804783.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
+<p>14. 输入如下命令，查看当前文件路径，选中这个路径并复制：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">pwd</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240310220307085.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 再次打开<code>gradle_env.sh</code>文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/gradle_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>16. 将光标移动到第2行，按<kbd>i</kbd>进入编辑模式，将<code>GRADLE_HOME</code>对应的值替换成第14步复制的路径，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴，最终效果如下图：</p>
+<p><img src="https://source.icode504.com/images/image-20240310220723840.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
+<p>18. 执行如下命令，让环境变量配置生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile.d/gradle_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>19. 执行如下命令可以查看Gradle版本，如果出现如下提示信息，说明Gradle环境变量配置成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gradle -v<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240310221119015.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、配置Gradle下载源"><a href="#四、配置Gradle下载源" class="headerlink" title="四、配置Gradle下载源"></a>四、配置Gradle下载源</h1><p>由于Gradle自带Maven下载源是国外的，在后续下载依赖的过程中会比较慢。这里我们需要将下载源换成国内镜像。</p>
+<p>1. 找一个你熟悉的位置存放Gradle依赖，这里我创建一个目录专门存放Gradle依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /home/gradle/repository<br></code></pre></td></tr></table></figure>
+
+<p>2. 进入Gradle安装目录，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/gradle-8.0.2<br></code></pre></td></tr></table></figure>
+
+<p>3. 执行如下命令，查看当前目录下的所有文件和文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
+
+<p>4. 执行如下命令，查看当前目录下的所有文件和文件夹：</p>
+<p><img src="https://source.icode504.com/images/image-20240310221640106.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 进入<code>init.d</code>文件夹，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> init.d/<br></code></pre></td></tr></table></figure>
+
+<p>6. 执行<code>ls</code>命令，我们发现这个目录下有一个<code>readme.txt</code>文件。执行<code>cat readme.txt</code>命令可以查看文件内容：</p>
+<p><img src="https://source.icode504.com/images/image-20240310221945889.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">You can add .gradle (e.g. test.gradle) init scripts to this directory. Each one is executed at the start of the build.<br></code></pre></td></tr></table></figure>
+
+<p>简单翻译一下就是在<code>init.d</code>目录下创建一个初始化文件，这里我们需要新建一个<code>init.gradle</code>文件。</p>
+<p>3. 新建一个<code>init.gradle</code>文件，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim init.gradle<br></code></pre></td></tr></table></figure>
+
+<p>4. 复制如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">allprojects &#123;<br>    repositories &#123; <br>        mavenLocal() <br>        maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&quot;https://maven.aliyun.com/repository/public&quot;</span> &#125; <br>        maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&quot;https://nexus.bsdn.org/content/groups/public/&quot;</span> &#125; <br>        mavenCentral()<br>    &#125;<br>    buildscript &#123;<br>        repositories &#123; <br>            maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&#x27;https://maven.aliyun.com/repository/public&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&#x27;https://nexus.bsdn.org/content/groups/public/&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;M2&quot;</span> ; url <span class="hljs-string">&#x27;https://plugins.gradle.org/m2/&#x27;</span> &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>5. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第十步的代码，效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240310222300304.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。至此，Gradle下载源配置完成。</p>
 
                 
               </div>
@@ -1260,12 +1278,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="category-chain-item">项目构建工具</a>
   
   
 
@@ -1284,9 +1302,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Gradle/" class="print-no-link">#Gradle</a>
       
-        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
     </div>
   
@@ -1298,8 +1316,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MySQL 8.0安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/20.html</div>
+      <div>Gradle安装配置教程（Linux通用版）</div>
+      <div>https://www.icode504.com/posts/57.html</div>
     </div>
     <div class="license-meta">
       
@@ -1311,7 +1329,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -1343,18 +1361,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/21.html" title="Intellij IDEA安装Scala插件并运行Scala程序">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA安装Scala插件并运行Scala程序</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/19.html" title="第四章 若依-JFlow设置用户并测试流程">
-                        <span class="hidden-mobile">第四章 若依-JFlow设置用户并测试流程</span>
+                      <a href="/posts/56.html" title="Maven安装配置教程（Linux通用版）">
+                        <span class="hidden-mobile">Maven安装配置教程（Linux通用版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
