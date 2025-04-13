@@ -4,6 +4,47 @@
   
   
   <entry>
+    <title>若依关闭登录页面的验证码</title>
+    <link href="/posts/100.html"/>
+    <url>/posts/100.html</url>
+    
+    <content type="html"><![CDATA[<p>请确保电脑上已经部署了若依框架：</p><table><thead><tr><th>框架名称</th><th>部署教程</th></tr></thead><tbody><tr><td>若依</td><td><a href="./102.html">点我查看</a></td></tr><tr><td>若依（前后端分离版）</td><td><a href="./98.html">点我查看</a></td></tr><tr><td>若依（微服务版）</td><td>敬请期待</td></tr></tbody></table><p>进入若依登录页后，默认是需要输入验证码的，如果使用Apifox、Postman等工具进行接口测试时，可能会因为验证码的拦截无法正常测试接口，这里若依官方提供了解决办法：</p><p><img src="https://source.icode504.com/images/image-20240723182112573.png"></p><p>1. 登录admin账号后，在左侧菜单栏中找到<strong>系统管理</strong>并展开，然后点击<strong>参数管理</strong>：</p><p><img src="https://source.icode504.com/images/image-20240723182443908.png"></p><p>2. 找到第4个账号自助-验证码开关，点击右侧的<strong>修改</strong>：</p><p><img src="https://source.icode504.com/images/image-20240723182628813.png"></p><p>3. 在修改参数窗口，将参数键值修改成<strong>false</strong>，点击<strong>确定</strong>：</p><p><img src="https://source.icode504.com/images/image-20240723182754077.png"></p><p>4. 重新登陆后，此时发现登录页就不需要验证码了：</p><p><img src="https://source.icode504.com/images/image-20240723182938765.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>框架</category>
+      
+      <category>Java</category>
+      
+      <category>开源框架</category>
+      
+      <category>若依</category>
+      
+      <category>常见问题</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>开源</tag>
+      
+      <tag>若依</tag>
+      
+      <tag>Vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Electerm安装、配置与卸载教程（macOS版）</title>
     <link href="/posts/99.html"/>
     <url>/posts/99.html</url>
