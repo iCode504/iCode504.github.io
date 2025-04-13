@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>访问Github卡顿甚至进不去的解决办法（适用于macOS）</title>
+    <link href="/posts/80.html"/>
+    <url>/posts/80.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>Github 是全球知名的开源宝库，但是对国内用户并不友好。当我们在浏览器中输入<code>www.github.com</code>时，如果你赶的时间点比较好可能会进去，但是大多数情况下浏览器不会对你的请求做出任何响应，就像下图这样：</p><p><img src="https://source.icode504.com/images/image-20231229085526297.png"></p><p>那么，有什么办法解决这个问题呢？</p><h1 id="二、访问-Github——Watt-Tookit（原-Steam-）"><a href="#二、访问-Github——Watt-Tookit（原-Steam-）" class="headerlink" title="二、访问 Github——Watt Tookit（原 Steam++）"></a>二、访问 Github——Watt Tookit（原 Steam++）</h1><p>官网介绍：Watt Tookit 是一个开源的跨平台的多功能 Stream 工具箱，它可以管理你 Steam 游戏库存，监控 Steam 游戏下载进度实现自动定时关机等功能。本文要介绍的是它的网络加速功能，它内部添加了 Github 网络加速功能。</p><p>原作者在 B 站有账号，感兴趣的小伙伴可以关注支持一下：<a href="https://space.bilibili.com/3546572635768935">点我传送到 B 站</a></p><p>接下来我们就来安装一下 Watt Tookit：</p><p>1. 点击右侧链接进入官网：<a href="https://steampp.net/">点我进入官网</a></p><p>2. 根据自己的操作系统下载，这里我使用的是 macOS 版本，点击下载按钮：</p><p><img src="https://source.icode504.com/images/image-20240720123429084.png"></p><p>3. 此时会弹出一个 GNU 通用公共许可证协议，点击右下角<strong>接受并下载</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229091615168.png"></p><p>4. 官方为我们提供多个下载渠道，这里我点击左下角Nas分流（德国）下载链接：</p><p><img src="https://source.icode504.com/images/image-20240720125053299.png"></p><p>5. 进入后，点击最新版本：</p><p><img src="https://source.icode504.com/images/image-20240720125252862.png"></p><p>6. 选择Mac版本的文件夹：</p><p><img src="https://source.icode504.com/images/image-20240720125357620.png"></p><p>7. 选中这个文件，点击右上角的<strong>下载</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720125531721.png"></p><p>8. 双击打开安装包，按照下图所示操作，将Steam++拖入到应用程序：</p><p><img src="https://source.icode504.com/images/240720001.gif"></p><p>9. 等待一段时间后，软件安装完成，找到Steam++并打开：</p><p><img src="https://source.icode504.com/images/image-20240720130155688.png"></p><p>10. 此时会系统会弹出一个错误：无法打开“Steam++”，因为它来自身份不明的开发者。点击窗口下方<strong>好</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720130427359.png"></p><p>11. 点击左上角苹果logo，然后点击<strong>系统设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155139125.png"></p><p>12. 点击<strong>左侧隐私与安全性</strong>，向下找安全性中有一个提示信息：已阻止使用“Steam++”，因为它来自身份不明的开发者。点击提示信息下方的<strong>仍要打开</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720130839492.png"></p><p>13. 输入本机的用户名和密码，完成后点击<strong>修改设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240224155514630.png"></p><p>14. 此时会弹出如下的提示信息，点击<strong>打开</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720131206774.png"></p><p>15. 打开后，按照下图所示操作完成对Github的配置：</p><p><img src="https://source.icode504.com/images/image-20240720133958064.png"></p><p>16. 为了避免每次启动和关闭加速需要输入密码，打开终端执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chmod</span> 666 /etc/hosts<br></code></pre></td></tr></table></figure><p>输入本机用户密码（密码不在终端中显示），完成后按一下回车：</p><p><img src="https://source.icode504.com/images/image-20240720133727253.png"></p><p>17. 切回到Watt Tookit，点击一键加速，此时Github的加速已经成功开启：</p><p><img src="https://source.icode504.com/images/image-20240720134347410.png"></p><p>11. 此时在浏览器再次访问<a href="https://www.github.com/">Github</a>，就可以正常显示页面了。虽然访问速度还是慢，但是总比响应超时啥也不显示的强：</p><p><img src="https://source.icode504.com/images/image-20231229101555911.png"></p><p>此时我们使用<code>git clone</code>命令拉取仓库代码，或者是使用<code>git push</code>命令将代码推送到我们的 Github 仓库就不会因为网络问题而无法进行操作的问题了。</p><h1 id="三、下载-Github-中的内容"><a href="#三、下载-Github-中的内容" class="headerlink" title="三、下载 Github 中的内容"></a>三、下载 Github 中的内容</h1><p>Github 有很多优秀的开源作品可以下载，如果是大文件使用浏览器，等到猴年马月都下载不完（下载速度真的是太慢了），以下是使用 NDM 和 Github 加速网站下载 Github 的内容的实现步骤。</p><p>这里我想下载 Google 家的 Noto Serif 全语言字体包（<a href="https://github.com/notofonts/noto-cjk/releases">点我查看源网站</a>），文件大小 600M 左右，如果正常使用浏览器下载非常慢，接下来我们就使用 NDM+Github 加速网站解决上述问题。</p><blockquote><p>本文后续内容使用 NDM（Neat Download Manager）下载文件，如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器 NDM（Neat Download Manager）安装配置教程（适用于 Windows 和 MacOS）</a></p></blockquote><p><img src="https://source.icode504.com/images/image-20240720135903758.png"></p><p>3. 首先，我们对要下载的文件，鼠标右键<strong>复制链接</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720140012891.png"></p><p>4. 以下是我整理的 Github 镜像网站，大家任选一个链接进入即可，这里我选择第一个网站进入：</p><table><thead><tr><th>网站名称</th><th>链接</th></tr></thead><tbody><tr><td>Github 镜像站 1</td><td><a href="https://gitdl.cn/">https://gitdl.cn/</a></td></tr><tr><td>Github 镜像站 2</td><td><a href="https://moeyy.cn/gh-proxy">https://moeyy.cn/gh-proxy</a></td></tr><tr><td>Github 镜像站 3</td><td><a href="https://github.zhlh6.cn/">https://github.zhlh6.cn/</a></td></tr></tbody></table><p>5. 将上面复制的链接粘贴到输入框中，点击下载即可</p><p><img src="https://source.icode504.com/images/image-20231229103230888.png"></p><p>6. 使用 NDM，下载速度直接原地起飞：</p><p><img src="https://source.icode504.com/images/image-20240720135740502.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>常用工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Neat Download Manager</tag>
+      
+      <tag>NDM</tag>
+      
+      <tag>Github</tag>
+      
+      <tag>Watt Tookit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Intellij IDEA安装配置教程（macOS版）</title>
     <link href="/posts/79.html"/>
     <url>/posts/79.html</url>
