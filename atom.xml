@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T03:54:31.090Z</updated>
+  <updated>2025-04-13T03:56:18.231Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python3安装、配置与卸载教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/49.html"/>
+    <id>https://www.icode504.com/posts/49.html</id>
+    <published>2025-04-13T03:56:18.231Z</published>
+    <updated>2025-04-13T03:56:18.231Z</updated>
+    
+    
+    <summary type="html">本文提供了在Windows操作系统上安装、配置和卸载Python的详细步骤。该教程适合初学者和需要重新安装或更新Python的用户，帮助他们轻松完成Python环境的搭建。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Python" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Python" scheme="https://www.icode504.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux CentOS 7安装教程</title>
@@ -512,31 +539,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Eclipse" scheme="https://www.icode504.com/tags/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数组篇-其之一-数组的概念与一维数组</title>
-    <link href="https://www.icode504.com/posts/29.html"/>
-    <id>https://www.icode504.com/posts/29.html</id>
-    <published>2025-04-12T14:11:28.219Z</published>
-    <updated>2025-04-12T14:11:28.219Z</updated>
-    
-    
-    <summary type="html">本文介绍了数组的概念、初始化和访问数组元素、数组的长度、普通循环和foreach遍历以及数组元素的默认值。深入浅出地讲解了数组的应用。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
     
   </entry>
   
