@@ -47,49 +47,6 @@
   
   
   <entry>
-    <title>若依环境部署教程</title>
-    <link href="/posts/102.html"/>
-    <url>/posts/102.html</url>
-    
-    <content type="html"><![CDATA[<p>官网介绍：RuoYi 是一个 Java EE 企业级快速开发平台，基于经典技术组合（Spring Boot、Apache Shiro、MyBatis、Thymeleaf、Bootstrap），内置模块如：部门管理、角色用户、菜单及按钮授权、数据权限、系统参数、日志管理、通知公告等。在线定时任务配置；支持集群，支持多数据源，支持分布式事务。</p><p>以下是若以框架环境部署教程：</p><h1 id="第一部分-准备操作"><a href="#第一部分-准备操作" class="headerlink" title="第一部分 准备操作"></a>第一部分 准备操作</h1><p>根据自己的操作系统安装如下软件：</p><table><thead><tr><th align="center"></th><th align="center">Windows</th><th align="center">macOS</th><th align="center">系统版本要求</th></tr></thead><tbody><tr><td align="center">JDK 8</td><td align="center"><a href="./1.html">点我查看</a></td><td align="center"><a href="./78.html">点我查看</a></td><td align="center">JDK &gt;&#x3D; 8</td></tr><tr><td align="center">Intellij IDEA</td><td align="center"><a href="./14.html">点我查看</a></td><td align="center"><a href="./79.html">点我查看</a></td><td align="center">无版本要求</td></tr><tr><td align="center">Maven</td><td align="center"><a href="./22.html">点我查看</a></td><td align="center"><a href="./96.html">点我查看</a></td><td align="center">Maven &gt;&#x3D; 3.0</td></tr><tr><td align="center">MySQL</td><td align="center"><a href="./20.html">点我查看</a></td><td align="center"><a href="./68.html">点我查看</a></td><td align="center">MySQL &gt;&#x3D; 5.7</td></tr><tr><td align="center">DBeaver</td><td align="center"><a href="./77.html">点我查看</a></td><td align="center"><a href="./81.html">点我查看</a></td><td align="center">无版本要求</td></tr><tr><td align="center">Git</td><td align="center"><a href="./69.html">点我查看</a></td><td align="center">系统默认已安装</td><td align="center">无版本要求</td></tr></tbody></table><h1 id="第二部分-拉取若依代码"><a href="#第二部分-拉取若依代码" class="headerlink" title="第二部分 拉取若依代码"></a>第二部分 拉取若依代码</h1><p>1. 打开文件夹，找到一个你熟悉的位置，鼠标右键点击<strong>Git Bash Here</strong>，打开Git命令行窗口：</p><p><img src="https://source.icode504.com/images/image-20240612090244663.png"></p><p>2. 使用Git拉取若依代码，以下两种方式任选其一：</p><ul><li>国内用户建议在Gitee上拉取若依代码：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/y_project/RuoYi.git<br></code></pre></td></tr></table></figure><ul><li>如果你已经有Gitee账号（没有的小伙伴可以注册一个）并对SSH Key做了配置，可以执行如下命令拉取代码：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git@gitee.com:y_project/RuoYi.git<br></code></pre></td></tr></table></figure><p>3. 在Git命令行中，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴上一步复制的命令：</p><blockquote><p>笔记本用户可能还需要按<kbd>Fn</kbd>键，因为你的<kbd>Insert</kbd>键可能会被占用。</p></blockquote><p><img src="https://source.icode504.com/images/image-81c9da5d1dbcdc180b47aa37dc547baa.png"></p><p>4. 代码拉取中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-a55841fcb49e28caf7e622555d2f9de4.png"></p><p>5. 拉取完成，此时关闭Git命令行窗口，我们发现此时有一个RuoYi的文件夹，点击进入：</p><p><img src="https://source.icode504.com/images/image-8d029f12967a66dc344d8f3c713bc093.png"></p><p>6. 点击上方路径，鼠标右键，点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-d95e42a5b5fe833185c55a48613cd408.png"></p><h1 id="第三部分-加载并启动项目"><a href="#第三部分-加载并启动项目" class="headerlink" title="第三部分 加载并启动项目"></a>第三部分 加载并启动项目</h1><h2 id="3-1-Intellij-IDEA导入后端项目"><a href="#3-1-Intellij-IDEA导入后端项目" class="headerlink" title="3.1 Intellij IDEA导入后端项目"></a>3.1 Intellij IDEA导入后端项目</h2><p>1. 打开Intellij IDEA，点击左上角File，点击Open：</p><p><img src="https://source.icode504.com/images/image-20240612093338341.png"></p><p>2. 此时会弹出一个文件路径，将上一部分复制的文件路径，粘贴到上面的文件路径框中，完成后点击<strong>OK</strong>：</p><p><img src="https://source.icode504.com/images/image-12656211ac3229e289a7eb3687c06f80.png"></p><p>3. 此时会加载项目。按<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>S</kbd>，进入设置界面，按照下图所示找到Maven并进行配置：</p><p><img src="https://source.icode504.com/images/image-20240612094117863.png"></p><p>4. （未出现下面情况的可以跳过这一步）导入后如果你的Maven项目也是下图这样，鼠标右键点击pom.xml，然后点击Add as Maven Project，加载Maven项目：</p><blockquote><p>说明：如果你的IDEA没有侧边栏，如下图所示，点击左下角的图标即可显示侧边栏菜单。</p></blockquote><p><img src="https://source.icode504.com/images/image-20240615141217194.png"></p><p>5. 加载过程中会下载很多的依赖，需要保证网络畅通。等待一段时间后，Maven项目加载成功，此时IDEA左侧文件夹目录变成了模块图标，右侧Maven菜单中也存在对应的模块：</p><p><img src="https://source.icode504.com/images/image-5b081eb2748e01a177f3ec4330596026.png"></p><h2 id="3-2-数据库操作"><a href="#3-2-数据库操作" class="headerlink" title="3.2 数据库操作"></a>3.2 数据库操作</h2><p>1. 打开DBeaver，按照下图所示连接数据库：</p><p><img src="https://source.icode504.com/images/image-20240720215317528.png"></p><p><img src="https://source.icode504.com/images/image-20240713145311611.png"></p><p>2. 鼠标右键选中数据库，鼠标右键点击<strong>新建数据库</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720215815009.png"></p><p>3. 这里我将数据库命名为<code>ruoyi</code>，字符集是<strong>utf8mb4</strong>，排序规则<strong>utf8mb4_0900_ai_ci</strong>，完成后点击<strong>确定</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720215926863.png"></p><p>4. 打开IDEA，在左侧找到sql文件夹，选中<code>ry_xxx.sql</code>，按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>，复制文件所在路径：</p><p><img src="https://source.icode504.com/images/image-bff0f0d9ff6ce356c30bf4a0b13d7c85.png"></p><p>5. 打开DBeaver，在左侧找到并选中刚刚创建好的数据库，鼠标右键点击<strong>工具</strong>，选择<strong>执行脚本</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720222126116.png"></p><p>6. 按照下图所示完成SQL导入操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">--default-character-set=utf8mb4<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-7ec695c0b64d9c4622d3b6da361c1a2b.png"></p><p>如果出现这个窗口提示，选择<strong>是</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720223047365.png"></p><p>5. 导入完成，点击右下角<strong>取消</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720223144515.png"></p><h2 id="3-3-启动项目"><a href="#3-3-启动项目" class="headerlink" title="3.3 启动项目"></a>3.3 启动项目</h2><p>1. 打开IDEA，按照下图所示操作找到application-druid.yml配置文件：</p><p><img src="https://source.icode504.com/images/image-f63fce31e7346faf7f1aec80cde26107.png"></p><p>2. 双击打开application-druid.yml，第九行数据库名称改为ruoyi；第10行用户名填写root即可，第11行密码是MySQL的root用户密码，如下图所示：</p><p><img src="https://source.icode504.com/images/image-20240612102449230.png"></p><p>3. 点击右上角的Debug图标，以调试的方式启动：</p><p><img src="https://source.icode504.com/images/image-20240612102553143.png"></p><p>4. 如果控制台出现如下图所示内容，说明若依后端项目启动成功！</p><p><img src="https://source.icode504.com/images/image-20240612102816451.png"></p><blockquote><p>（正常启动的小伙伴请忽略这部分内容）如果你在启动时报错，出现如下错误信息：</p><p><img src="https://source.icode504.com/images/image-e0a622632e9b61fc2641bbe47e5dc4f6.png"></p><p>打开application.yml，找到服务器端口，将其改为其他端口，为了方便展示，我将其改为8888：</p><p><img src="https://source.icode504.com/images/image-651763bafc9cd8f35b346d5015ee885e.png"></p><p>重新启动就不会报错啦：</p><p><img src="https://source.icode504.com/images/image-a6ee86fc3d4623839e9abca5d14e36d6.png"></p></blockquote><p>5. 打开浏览器，在上方搜索框中输入<code>localhost</code>即可访问：</p><blockquote><p>如果你修改了服务端口，访问地址是<code>localhost:端口号</code>，这里我将端口号修改成了8888，因此访问地址是<code>localhost:8888</code></p></blockquote><p><img src="https://source.icode504.com/images/image-a51527f3db133518442168ea9c89d9e5.png"></p><p>6. 默认用户名是<code>admin</code>，密码<code>admin123</code>，验证码需要按照图片计算，完成后点击<strong>登录</strong>：</p><p><img src="https://source.icode504.com/images/image-4ded7c16044b758eec3ee62ec0519c23.png"></p><p>7. 进入主界面，<code>admin</code>用户登录成功！</p><p><img src="https://source.icode504.com/images/image-88cbb6a61a3aa28beed16a497b632f6d.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>后端</category>
-      
-      <category>框架</category>
-      
-      <category>Java</category>
-      
-      <category>开源框架</category>
-      
-      <category>若依</category>
-      
-      <category>框架配置和启动</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Java</tag>
-      
-      <tag>开源</tag>
-      
-      <tag>若依</tag>
-      
-      <tag>SpringBoot</tag>
-      
-      <tag>Thymeleaf</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>若依+Apifox实现接口测试（解决访问接口401问题）</title>
     <link href="/posts/101.html"/>
     <url>/posts/101.html</url>
