@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>VMware Workstation安装+彻底卸载教程（Windows版）</title>
+    <link href="/posts/41.html"/>
+    <url>/posts/41.html</url>
+    
+    <content type="html"><![CDATA[<p>VMware Workstation是一款虚拟机软件，它允许你在一台电脑上创建并运行多个虚拟操作系统。就像在一台电脑上同时运行多个计算机一样，你可以在VMware Workstation中创建虚拟计算机，安装不同的操作系统（如Windows、Linux等），并在它们之间轻松切换。这对普通用户来说，就好像在电脑上开设了多个独立的虚拟环境，方便进行软件测试、学习和实验，而不用担心影响到主机系统。</p><p>接下来为大家讲解Windows环境下个人版VMware Workstation的安装：</p><h1 id="一、下载VMware-Workstation"><a href="#一、下载VMware-Workstation" class="headerlink" title="一、下载VMware Workstation"></a>一、下载VMware Workstation</h1><p>以下提供两种方式下载VMware Workstation，任选其一即可。</p><h2 id="方式一：百度网盘下载"><a href="#方式一：百度网盘下载" class="headerlink" title="方式一：百度网盘下载"></a>方式一：百度网盘下载</h2><p>点击右侧连接下载VMWare安装包：<a href="https://pan.baidu.com/s/1aYOCmjHPW7n8_KjJ2e56GA?pwd=1024">点我查看</a></p><p>选择任意一个安装包下载即可。</p><h2 id="方式二：官网下载（操作较为繁琐，不推荐）"><a href="#方式二：官网下载（操作较为繁琐，不推荐）" class="headerlink" title="方式二：官网下载（操作较为繁琐，不推荐）"></a>方式二：官网下载（操作较为繁琐，不推荐）</h2><blockquote><p>2023年年末VMware被知名半导体厂商Broadcom（博通）收购，我们需要到博通官网注册账号下载VMware的安装包，以下是注册、登录账号下载安装包操作。</p></blockquote><p>1. 点击右侧链接进入官网账号注册页面：<a href="https://support.broadcom.com/group/ecx/downloads">点我查看</a></p><p>2. 此时会进入一个登录页面，没有账号的小伙伴需要注册。这里我们点击右上角的<strong>LOGIN</strong>，然后点击<strong>REGISTER</strong>注册账号：</p><p><img src="https://source.icode504.com/images/image-20240522112320246.png"></p><p>3. 在注册页面，我们先输入自己的邮箱（可以使用自己的QQ邮箱），然后输入图片验证码，完成后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522112713958.png"></p><p>4. 找到官方发送过来的验证码邮件，输入验证码，然后点击<strong>Verify &amp; Continue</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522134002848.png"></p><p>5. 按照下面的提示补充注册信息和密码，完成后点击<strong>Create Account</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522135157928.png"></p><p>6. （可选）此时浏览器会弹出一个存储密码信息，如果你记不住密码的话可以点击保存来存储密码：</p><p><img src="https://source.icode504.com/images/image-20240522135306156.png"></p><p>7. 注册成功，点击最下方的按钮<strong>I’ll do again later</strong>（稍后再做）：</p><p><img src="https://source.icode504.com/images/image-20240522135512531.png"></p><p>8. 再次点击右侧链接进入登陆页面：<a href="https://support.broadcom.com/group/ecx/downloads">点我查看</a>，用户名输入刚刚我们注册的邮箱，记不住密码的小伙伴可以勾选<strong>Remember me</strong>，然后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522135930427.png"></p><p>9. 点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522140135070.png"></p><p>10. 输入密码（可以使用前面浏览器记住的密码），记不住密码的小伙伴可以勾选<strong>保存我的信息</strong>，然后点击<strong>登录</strong>：</p><p><img src="https://source.icode504.com/images/image-7bf43e27097b48ee4297fe5c48e811b7.png"></p><p>11. 登录成功，此时进入个人控制台，点击上方图标，选择<strong>VMware Cloud Foundation</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522141632590.png"></p><p>12. 在下方页面找到<strong>VMware Workstation Pro</strong>，点击打开：</p><p><img src="https://source.icode504.com/images/image-20240522141753889.png"></p><p>13. 这里我选择的是17.0版本，Windows个人使用：</p><p><img src="https://source.icode504.com/images/image-20240522142009010.png"></p><p>14. 此时上方有一个许可协议需要勾选（由于前面我勾选过了，这里并没有显示），然后再点击下载按钮：</p><p><img src="https://source.icode504.com/images/image-20240522142151695.png"></p><p>15. 此时会弹出一个确认提示，点击<strong>Yes</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522142213363.png"></p><p>16. 按照下图提示填写表单信息，填写完成后点击右下角的<strong>Submit</strong>提交：</p><p><img src="https://source.icode504.com/images/image-20240522142500089.png"></p><p>17. 点击下载按钮，下载安装包：</p><p><img src="https://source.icode504.com/images/image-20240522142551657.png"></p><h1 id="二、安装VMware-Workstation"><a href="#二、安装VMware-Workstation" class="headerlink" title="二、安装VMware Workstation"></a>二、安装VMware Workstation</h1><p>1. 下载完成后双击打开安装包，进入欢迎界面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522144112400.png"></p><p>2. 进入用户协议以后，勾选左下方的协议，完成后点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522144212006.png"></p><p>3. 兼容设置（没有此页面的小伙伴直接跳转到下一步），这里不需要勾选下面的内容，直接点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522144335207.png"></p><p>4. 点击右上角<strong>更改</strong>，更改安装路径，这里我安装在D盘：</p><p><img src="https://source.icode504.com/images/image-20240121170033841.png"></p><p><img src="https://source.icode504.com/images/image-20240121170339244.png"></p><p><img src="https://source.icode504.com/images/image-20240121170431309.png"></p><p>5. 用户体验设置页面，<strong>取消勾选</strong><u>启动时检查产品更新</u>和<u>加入VMware客户体验提升计划</u>，完成后点击下一步：</p><p><img src="https://source.icode504.com/images/image-20240121170532539.png"></p><p>6. 快捷方式按照默认勾选的即可，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240121170655703.png"></p><p>7. 点击<strong>安装</strong>：</p><p><img src="https://source.icode504.com/images/image-20240522144440486.png"></p><p>8. 安装中，请耐心等待。期间电脑可能会断网，这是因为VMWare需要配置自身网络驱动。</p><p><img src="https://source.icode504.com/images/image-20240121170947012.png"></p><p>9. 安装完毕。点击右下角<strong>许可证</strong>，接下来我们填写许可证密钥信息：</p><p><img src="https://source.icode504.com/images/image-20240121171554249.png"></p><p>10. 获取许可证密钥：点击右侧链接获取VMware的许可证密钥：<a href="https://www.bilibili.com/read/cv25413961/">点我查看</a></p><blockquote><p>密钥仅供学习使用，请勿用于商业用途！</p></blockquote><p>11. 将许可证密钥信息填入，完成后点击<strong>输入</strong>：</p><p><img src="https://source.icode504.com/images/image-20240121171805677.png"></p><p>12. 点击<strong>完成</strong>。VMware安装完成：</p><p><img src="https://source.icode504.com/images/image-20240121172001187.png"></p><h1 id="三、VMware-Workstation的卸载（可选）"><a href="#三、VMware-Workstation的卸载（可选）" class="headerlink" title="三、VMware Workstation的卸载（可选）"></a>三、VMware Workstation的卸载（可选）</h1><div class="note note-danger">            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><blockquote><p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p><p>已经安装的小伙伴可以接着往下看！</p></blockquote><p>1. 打开Geek Installer，在程序列表中找到VMware Worksation，鼠标右键，点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240121164255938.png"></p><p>2. 此时会弹出一个提示窗口，选择<strong>是</strong>：</p><p><img src="https://source.icode504.com/images/image-20240121164336939.png"></p><p>3. 卸载过程比较慢，请耐心等待。</p><p>4. 卸载完成，此时Geek会我们检测出安装残留，我们只需要点击<strong>完成</strong>即可，清除卸载残留：</p><p><img src="https://source.icode504.com/images/image-20240121164745966.png"></p><p>5. 清理完毕，关闭Geek即可：</p><p><img src="https://source.icode504.com/images/image-20240121164930832.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>服务器&amp;虚拟机</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>VMware Workstation</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</title>
     <link href="/posts/40.html"/>
     <url>/posts/40.html</url>
