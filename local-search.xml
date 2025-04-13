@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>卸载神器：Geek Uninstaller安装使用教程（Windows版）</title>
+    <link href="/posts/31.html"/>
+    <url>/posts/31.html</url>
+    
+    <content type="html"><![CDATA[<hr><h2 id="title-tags-Windows-Geek-Uninstallercategory-bar-trueabbrlink-31description-banner-img-https-source-icode504-com-images-卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面-pngindex-img-https-source-icode504-com-images-卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面-pngcategory-软件安装-Windows-常用工具date-2024-01-29-09-56-42"><a href="#title-tags-Windows-Geek-Uninstallercategory-bar-trueabbrlink-31description-banner-img-https-source-icode504-com-images-卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面-pngindex-img-https-source-icode504-com-images-卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面-pngcategory-软件安装-Windows-常用工具date-2024-01-29-09-56-42" class="headerlink" title="title:tags:  - Windows  - Geek Uninstallercategory_bar: trueabbrlink: 31description: &gt;-banner_img: &gt;-  https://source.icode504.com/images/卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面.pngindex_img: &gt;-  https://source.icode504.com/images/卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面.pngcategory:  - 软件安装  - Windows  - 常用工具date: 2024-01-29 09:56:42"></a>title:<br>tags:<br>  - Windows<br>  - Geek Uninstaller<br>category_bar: true<br>abbrlink: 31<br>description: &gt;-<br><br>banner_img: &gt;-<br>  <a href="https://source.icode504.com/images/%E5%8D%B8%E8%BD%BD%E7%A5%9E%E5%99%A8%EF%BC%9AGeek-Uninstaller%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89-%E5%B0%81%E9%9D%A2.png">https://source.icode504.com/images/卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面.png</a><br>index_img: &gt;-<br>  <a href="https://source.icode504.com/images/%E5%8D%B8%E8%BD%BD%E7%A5%9E%E5%99%A8%EF%BC%9AGeek-Uninstaller%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89-%E5%B0%81%E9%9D%A2.png">https://source.icode504.com/images/卸载神器：Geek-Uninstaller安装使用教程（Windows版）-封面.png</a><br>category:<br>  - 软件安装<br>  - Windows<br>  - 常用工具<br>date: 2024-01-29 09:56:42</h2><p><a href="https://geekuninstaller.com/">Geek Uninstaller</a> 是一款 Windows 平台上的免费软件卸载工具，它的主要功能是帮助用户彻底删除计算机上的程序，包括那些难以通过标准程序卸载方式完全删除的软件。以下是 Geek Uninstaller 的一些主要特点和功能：</p><ol><li><p><strong>彻底卸载：</strong> 与 Windows 自带的程序卸载功能相比，Geek Uninstaller 能够更彻底地卸载程序，包括清理残留的注册表项和文件，确保程序的所有相关文件和设置都被完全删除。</p></li><li><p><strong>轻量级：</strong> Geek Uninstaller 是一款非常轻量级的程序（7z格式的压缩包仅为1.98MB），下载和安装速度快，占用系统资源少。</p></li><li><p><strong>用户友好界面：</strong> 界面简洁直观，易于使用，即使对于不擅长计算机操作的用户也很容易上手。</p></li><li><p><strong>批量卸载：</strong> 支持批量卸载多个程序，方便快捷。</p></li><li><p><strong>强大的强制卸载功能：</strong> 对于一些顽固的软件，Geek Uninstaller 提供了强制卸载功能（例如系统自带的Edge浏览器也可以卸载），可以强制删除相关文件和注册表项。</p></li></ol><p>总的来说，Geek Uninstaller 是一款功能强大、简单易用的程序卸载工具，适用于需要彻底清理计算机中无用软件和残留文件的用户。</p><h1 id="一、下载Geek-Uninstaller"><a href="#一、下载Geek-Uninstaller" class="headerlink" title="一、下载Geek Uninstaller"></a>一、下载Geek Uninstaller</h1><p>1. 点击右侧链接进入下载页面：<a href="https://geekuninstaller.com/download">点我进入下载页面</a></p><p>2. 选择左侧免费版，这里我选择ZIP压缩包下载：</p><p><img src="https://source.icode504.com/images/image-20240121162105283.png"></p><p>3. 将下载好的文件解压到一个你熟悉的文件路径，这里我解压到D盘：</p><p><img src="https://source.icode504.com/images/image-20240121162416854.png"></p><p>4. 发送到桌面，方便下次使用：鼠标右键点击<code>geek.exe</code>，下方选择<strong>发送到</strong>，选择最后一个<strong>桌面快捷方式</strong>：</p><p><img src="https://source.icode504.com/images/image-20240121162526552.png"></p><p>5. 在桌面上双击打开快捷方式，打开软件：</p><p><img src="https://source.icode504.com/images/image-20240121162743623.png"></p><h1 id="二、Geek-Uninstaller使用演示"><a href="#二、Geek-Uninstaller使用演示" class="headerlink" title="二、Geek Uninstaller使用演示"></a>二、Geek Uninstaller使用演示</h1><div class="note note-success">            <p>以下是Geek Unistaller的使用演示</p>          </div><p>这里我以卸载Adobe Acrobat DC为例：</p><p><img src="https://source.icode504.com/images/image-20240121163355153.png"></p><p>鼠标右键点击这款软件，点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240121163449906.png"></p><p>卸载完成，此时Geek会检测是否存在卸载残留，如果存在，直接点击<strong>完成</strong>，此时Geek就会为我们清除：</p><p><img src="https://source.icode504.com/images/image-20240121163833750.png"></p><p>清理完成，Adobe Acrobat CC这款软件就彻底卸载了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>常用工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Geek Uninstaller</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Eclipse安装配置、卸载教程（Windows版）</title>
     <link href="/posts/30.html"/>
     <url>/posts/30.html</url>

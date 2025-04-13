@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-12T14:13:45.053Z</updated>
+  <updated>2025-04-13T00:42:44.557Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>卸载神器：Geek Uninstaller安装使用教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/31.html"/>
+    <id>https://www.icode504.com/posts/31.html</id>
+    <published>2025-04-13T00:42:44.557Z</published>
+    <updated>2025-04-13T00:42:44.557Z</updated>
+    
+    
+    <summary type="html">Geek Uninstaller是一款轻量级、强大的Windows程序卸载工具。本教程介绍了它的安装步骤、彻底卸载功能、批量卸载特性以及程序启动项管理，帮助用户轻松清理系统中的无用软件和残留文件。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="常用工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Geek Uninstaller" scheme="https://www.icode504.com/tags/Geek-Uninstaller/"/>
+    
+  </entry>
   
   <entry>
     <title>Eclipse安装配置、卸载教程（Windows版）</title>
@@ -519,29 +544,6 @@
     
     
     <summary type="html">本文的主要内容有：一元运算符正负号的使用、算术运算符进行四则运算、使用算术运算符的一些特殊情况、浮点数有时候”算不准“的原因、赋值运算符的使用。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>入门篇-其之四-字符串String的简单使用</title>
-    <link href="https://www.icode504.com/posts/5.html"/>
-    <id>https://www.icode504.com/posts/5.html</id>
-    <published>2025-04-06T13:51:53.701Z</published>
-    <updated>2025-04-06T13:51:53.705Z</updated>
-    
-    
-    <summary type="html">字符串的定义与简单使用、转义字符、类和对象的简介、引用数据类型变量的默认值null</summary>
     
     
     
