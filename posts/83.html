@@ -18,29 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程详细介绍了在Linux Ubuntu系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。">
+    <meta name="description" content="本教程详细介绍了在Linux系统上安装Redis的步骤，包括两种方式：Docker方式安装并启动Redis、源码方式安装、配置并启动Redis，帮助用户快速部署和运行Redis实例。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker安装和配置教程（适用于Linux Ubuntu和Debian）">
-<meta property="og:url" content="https://www.icode504.com/posts/75.html">
+<meta property="og:title" content="Redis单机版安装教程（Linux版）">
+<meta property="og:url" content="https://www.icode504.com/posts/83.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程详细介绍了在Linux Ubuntu系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。">
+<meta property="og:description" content="本教程详细介绍了在Linux系统上安装Redis的步骤，包括两种方式：Docker方式安装并启动Redis、源码方式安装、配置并启动Redis，帮助用户快速部署和运行Redis实例。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/dfe7b9efd370e3b9cc1f8aeab4a7ab32.png">
-<meta property="article:published_time" content="2025-04-13T07:15:51.490Z">
-<meta property="article:modified_time" content="2025-04-13T07:15:51.490Z">
+<meta property="og:image" content="https://source.icode504.com/images/3a5d8cfae1c28c9cd2c8b960e174f7b6.png">
+<meta property="article:published_time" content="2025-04-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-13T07:48:11.547Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Ubuntu">
-<meta property="article:tag" content="Debian">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/dfe7b9efd370e3b9cc1f8aeab4a7ab32.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/3a5d8cfae1c28c9cd2c8b960e174f7b6.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Docker安装和配置教程（适用于Linux Ubuntu和Debian） - iCode504个人博客</title>
+  <title>Redis单机版安装教程（Linux版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/dfe7b9efd370e3b9cc1f8aeab4a7ab32.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/3a5d8cfae1c28c9cd2c8b960e174f7b6.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Docker安装和配置教程（适用于Linux Ubuntu和Debian）</span>
+            <span id="subtitle">Redis单机版安装教程（Linux版）</span>
           
         </div>
 
@@ -222,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 15:15" pubdate>
+        <time datetime="2025-04-13 00:00" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -372,17 +371,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="容器化"
         id="heading-09919c03105ff63440d33b04b664e3ce" role="tab" data-toggle="collapse" href="#collapse-09919c03105ff63440d33b04b664e3ce"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         容器化
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-09919c03105ff63440d33b04b664e3ce"
+      <div class="category-collapse collapse " id="collapse-09919c03105ff63440d33b04b664e3ce"
            role="tabpanel" aria-labelledby="heading-09919c03105ff63440d33b04b664e3ce">
         
         
@@ -399,17 +398,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Docker"
         id="heading-c5fd214cdd0d2b3b4272e73b022ba5c2" role="tab" data-toggle="collapse" href="#collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Docker
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
+      <div class="category-collapse collapse " id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
            role="tabpanel" aria-labelledby="heading-c5fd214cdd0d2b3b4272e73b022ba5c2">
         
         
@@ -430,7 +429,7 @@
       
         <a href="/posts/75.html" title="Docker安装和配置教程（适用于Linux Ubuntu和Debian）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Docker安装和配置教程（适用于Linux Ubuntu和Debian）</span>
         </a>
       
@@ -449,17 +448,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
         id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-68051bf4aa2743b030984b694628ee9c"
+      <div class="category-collapse collapse show" id="collapse-68051bf4aa2743b030984b694628ee9c"
            role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
         
         
@@ -476,17 +475,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库（NoSQL）"
         id="heading-758e06fe79f650731ef27d2600ac8b03" role="tab" data-toggle="collapse" href="#collapse-758e06fe79f650731ef27d2600ac8b03"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         非关系型数据库（NoSQL）
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-758e06fe79f650731ef27d2600ac8b03"
+      <div class="category-collapse collapse show" id="collapse-758e06fe79f650731ef27d2600ac8b03"
            role="tabpanel" aria-labelledby="heading-758e06fe79f650731ef27d2600ac8b03">
         
         
@@ -498,7 +497,7 @@
       
         <a href="/posts/83.html" title="Redis单机版安装教程（Linux版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis单机版安装教程（Linux版）</span>
         </a>
       
@@ -1636,135 +1635,246 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Docker安装和配置教程（适用于Linux Ubuntu和Debian）</h1>
+            <h1 id="seo-header">Redis单机版安装教程（Linux版）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年4月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <p>Docker 是一种开源的平台，用于开发、运输和运行应用程序。它通过将应用程序及其依赖项打包在一个可移植的容器中，使得应用程序可以在任何环境中一致地运行。Docker 容器利用了操作系统的虚拟化技术，相比传统的虚拟机更加轻量级、高效。开发人员可以在本地构建和测试容器，然后将其部署到生产环境，确保环境一致性和快速部署。Docker 极大地简化了应用程序的开发和运维流程，提高了工作效率和系统的可扩展性。</p>
-<p>以下是 Linux Ubuntu 和 Debian 系统环境下 Docker 的安装和配置教程：</p>
-<h1 id="一、安装前操作"><a href="#一、安装前操作" class="headerlink" title="一、安装前操作"></a>一、安装前操作</h1><p>1. 需要安装 Ubuntu 或 Debian 操作系统的小伙伴，请根据自己的需要点击下方链接查看安装教程：</p>
+                <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p>
+<p>Redis是一种开源的、内存中的键值存储数据库，通常用作缓存、消息代理和持久化存储。它支持丰富的数据结构，如字符串、哈希、列表、集合和有序集合等，能够高效地执行各种操作。Redis具有极高的性能，常被用于需要快速数据读写的场景，同时提供持久化选项，可以将数据定期保存到磁盘上，以确保数据的持久性。其丰富的功能和灵活性使其在分布式系统和实时应用中非常受欢迎。</p>
+<p>以下是Redis的安装教程，两种方式任选其一：</p>
+<h1 id="方式一：源码安装"><a href="#方式一：源码安装" class="headerlink" title="方式一：源码安装"></a>方式一：源码安装</h1><h2 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h2><p>1. 请根据自己的操作系统，安装以下软件，如果里面的软件你已经安装可以直接跳过：</p>
 <table>
 <thead>
 <tr>
-<th align="center">系统&#x2F;软件名称</th>
-<th align="center">安装教程</th>
+<th></th>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Ubuntu</td>
-<td align="center"><a href="./51.html">点我查看</a></td>
+<td>解决Github国内无法访问问题</td>
+<td align="center"><a href="./25.html">点我查看</a></td>
+<td align="center"><a href="./80.html">点我查看</a></td>
+<td>本文需要下载的软件在Github上，目前国内访问Github访问速度较慢，推荐大家看一下本文教程，可以模仿文中的方式下载安装包</td>
 </tr>
 <tr>
-<td align="center">Debian</td>
-<td align="center"><a href="./52.html">点我查看</a></td>
+<td>Neat Download Manager</td>
+<td align="center"><a href="./24.html">点我查看</a></td>
+<td align="center"><a href="./24.html">点我查看</a></td>
+<td>本文所需要的软件下载源在国外，使用此软件可以加快下载速度。</td>
 </tr>
 <tr>
-<td align="center">Electerm</td>
+<td>Electerm</td>
 <td align="center"><a href="./47.html">点我查看</a></td>
+<td align="center"><a href="./99.html">点我查看</a></td>
+<td>一款比较好用的通过SSH远程连接Linux的工具，支持Windows&#x2F;macOS以SFTP的方式传输文件</td>
 </tr>
 </tbody></table>
-<p>2. 执行如下命令可以查看当前操作系统信息，这里我使用的 Ubuntu 操作系统：</p>
+<p>2. 打开Electerm并连接Linux服务器后，执行如下命令查看操作系统信息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-20240623105752873.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 如果你要安装新版本的 Docker，需要将系统中安装的旧版本 Docker 卸载。执行如下命令卸载 Docker：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> pkg <span class="hljs-keyword">in</span> docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; <span class="hljs-keyword">do</span> sudo apt-get remove <span class="hljs-variable">$pkg</span>; <span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
-
-<p>4. 删除以前在 Docker 安装的镜像、容器等文件：Docker 在卸载过程中默认不会删除原来下载的镜像文件，它们默认存储在<code>/var/lib/docker</code>中，如果需要删除这些残留文件，可以执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf /var/lib/docker/<br></code></pre></td></tr></table></figure>
-
-<p>5. 安装一些必要的工具，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt-get -y update<br>apt-get -y install vim apt-transport-https ca-certificates curl software-properties-common gpg-agent<br></code></pre></td></tr></table></figure>
-
-<h1 id="二、安装-Docker"><a href="#二、安装-Docker" class="headerlink" title="二、安装 Docker"></a>二、安装 Docker</h1><p>接下来我们就可以安装 Docker 了，这里我使用的是<code>apt-get</code>方式安装 Docker。</p>
-<p>1. 根据自己的操作系统，执行如下命令添加 Docker 官方 GPG key：</p>
+<p>这里我使用的是Debian操作系统：</p>
+<p><img src="https://source.icode504.com/images/image-20240725214016476.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 根据所在的操作系统，安装如下的依赖：</p>
 <ul>
-<li>Ubuntu</li>
+<li>CentOS</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y install gcc-c++ make vim<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>Debian</li>
+<li>Ubuntu&#x2F;Debian</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo apt-key add -<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y install gcc-c++ make vim<br></code></pre></td></tr></table></figure>
 
-<p>2. 根据自己的操作系统，写入软件源信息：</p>
-<ul>
-<li>Ubuntu</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo add-apt-repository <span class="hljs-string">&quot;deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu <span class="hljs-subst">$(lsb_release -cs)</span> stable&quot;</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>Debian</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo add-apt-repository <span class="hljs-string">&quot;deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/debian <span class="hljs-subst">$(lsb_release -cs)</span> stable&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>按一下回车键继续：</p>
-<p><img src="https://source.icode504.com/images/image-20240623111157253.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 更新软件包列表，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get -y update<br></code></pre></td></tr></table></figure>
-
-<p>3. 执行如下命令安装 Docker（下载安装的时间可能会较长，请耐心等待！）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br></code></pre></td></tr></table></figure>
-
-<p>4. 安装完成后，执行如下命令即可查看 Docker 版本信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker version<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-20240623094637000.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、配置镜像加速器"><a href="#三、配置镜像加速器" class="headerlink" title="三、配置镜像加速器"></a>三、配置镜像加速器</h1><p>以下两种方式任选其一：</p>
-<h2 id="方式一：配置镜像源（可能拉取不了最新版本镜像）"><a href="#方式一：配置镜像源（可能拉取不了最新版本镜像）" class="headerlink" title="方式一：配置镜像源（可能拉取不了最新版本镜像）"></a>方式一：配置镜像源（可能拉取不了最新版本镜像）</h2><blockquote>
-<p>说明：镜像加速器面向个人开发者，仅适用于个人开发场景，<strong>请勿用于商业用途</strong>！</p>
+<h2 id="二、下载Redis安装包"><a href="#二、下载Redis安装包" class="headerlink" title="二、下载Redis安装包"></a>二、下载Redis安装包</h2><p>1. 打开Redis官方Github仓库：<a target="_blank" rel="noopener" href="https://github.com/redis/redis/tags">点我查看</a></p>
+<p>2. 这里我下载的是6.2.14版本的Redis，点击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20240722215142941.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在下方Assets中鼠标右键点击<code>.tar.gz</code>结尾的安装包，然后点击<strong>复制链接地址</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240722215323382.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击右侧链接打开Github加速站：<a target="_blank" rel="noopener" href="https://moeyy.cn/gh-proxy">点我查看</a></p>
+<blockquote>
+<p>说明：如果这个加速网站失效，请到第一部分《准备操作》中的Github加速教程中寻找可加速的网站地址！</p>
 </blockquote>
-<p>我们使用 Docker 创建容器的时候，首先需要获取镜像，如果本地存在镜像就是用本地的镜像创建容器，如果本地不存在这个镜像，就需要到官方镜像仓库中下载镜像，但是官方镜像国内无法访问（除非你有特殊的方法）。为了解决上述问题，我们需要配置国内镜像加速器，这里我使用的阿里云的镜像加速器，确保后续能顺利拉取镜像。以下是配置阿里云镜像加速器教程：</p>
-<p>1. 打开阿里云官网，注册一个阿里云账号（使用钉钉、支付宝、淘宝登录都 OK，毕竟它们都是一家的）：<a target="_blank" rel="noopener" href="https://account.aliyun.com/login/login.htm">点我登录&#x2F;注册</a></p>
-<p>2. 登陆后，在主页面搜索<strong>容器镜像服务</strong>，点击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240623100827340.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>管理控制台</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240623100914010.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 进入控制台，在左侧菜单栏单机镜像加速器，此时页面中有一给个人的加速器地址，点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240623101441310.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 回到命令行界面，我们使用 vim 命令，在<code>/etc/docker</code>目录下创建一个 daemon.json 文件，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/docker/daemon.json<br></code></pre></td></tr></table></figure>
+<p>5. 将前面复制的链接地址粘贴到此处，点击<strong>下载</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240722215812500.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 打开Electerm并连接到远程Linux服务器，点击左上角的SFTP，在左侧找到本地下载好的Redis安装包，</p>
+<p><img src="https://source.icode504.com/images/image-20240722220910319.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240722221051181.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 按照下图所示操作，将Redis安装包传输到Linux端：</p>
+<p><img src="https://source.icode504.com/images/240722001.gif" srcset="/img/loading.gif" lazyload></p>
+<p>8. 此时Linux端有一个Redis安装包，我们再点击左上角SSH，返回命令行：</p>
+<p><img src="https://source.icode504.com/images/image-20240722221409176.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 执行<code>ls</code>命令即可查看当前目录下的文件，此时我们发现Redis安装包也在此目录下：</p>
+<p><img src="https://source.icode504.com/images/image-20240722221541947.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 解压这个安装包，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf redis-6.2.14.tar.gz<br></code></pre></td></tr></table></figure>
 
-<p>6. 按<kbd>i</kbd>键进入编辑模式（此时命令行左下角会有一个 INSERT 的提示），编写如下内容：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>	<span class="hljs-attr">&quot;registry-mirrors&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+<p>11. 在执行一遍<code>ls</code>命令，可以看到解压后的文件夹：</p>
+<p><img src="https://source.icode504.com/images/image-20240722221732124.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 进入<code>redis-6.2.14</code>目录下，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> redis-6.2.14<br></code></pre></td></tr></table></figure>
 
-<p>效果图如下：</p>
-<p><img src="https://source.icode504.com/images/image-20240623102231989.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 将光标移动到两个中括号内部的双引号中，按<kbd>Shift</kbd><kbd>Insert</kbd>键粘贴前面复制的镜像加速器地址，效果图如下：</p>
-<p><img src="https://source.icode504.com/images/image-20240623102402464.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 检查无误后，按<kbd>Esc</kbd>键退出编辑模式，输入<kbd>:wq</kbd>（左下角有提示）并按一下回车保存并退出编辑。</p>
-<p>9. 依次执行如下命令重新加载 daemon 和 Docker：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure>
+<p>13. 执行如下命令，对源码进行编译和安装，这一过程消耗的时间教程，请耐心等待（预计需要5分钟）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make &amp;&amp; make install<br></code></pre></td></tr></table></figure>
 
-<h2 id="方式二：通过Github拉取Dockerhub镜像并推送到阿里云"><a href="#方式二：通过Github拉取Dockerhub镜像并推送到阿里云" class="headerlink" title="方式二：通过Github拉取Dockerhub镜像并推送到阿里云"></a>方式二：通过Github拉取Dockerhub镜像并推送到阿里云</h2><p>该方案请点击右侧链接查看具体教程：<a href="./113.html">点我查看</a></p>
-<h1 id="四、Docker-的简单使用"><a href="#四、Docker-的简单使用" class="headerlink" title="四、Docker 的简单使用"></a>四、Docker 的简单使用</h1><p>1. 使用<code>systemctl</code>命令启动 Docker：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl start docker<br></code></pre></td></tr></table></figure>
+<p>14. 出现下面的提示后，说明Redis已经安装成功：</p>
+<p><img src="https://source.icode504.com/images/image-20240725100221971.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="三、修改Redis配置文件"><a href="#三、修改Redis配置文件" class="headerlink" title="三、修改Redis配置文件"></a>三、修改Redis配置文件</h2><p>1. （当前位置：解压后的redis文件夹）执行<code>ls</code>命令，我们可以看到当前文件夹下有一个<code>redis.conf</code>文件，这个文件是Redis的配置文件，我们需要将其复制到Redis安装位置下：</p>
+<p><img src="https://source.icode504.com/images/image-20240725100556725.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. Redis的安装位置在<code>/usr/local/bin</code>目录下，我们需要切到这个目录下，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/lobal/bin<br></code></pre></td></tr></table></figure>
 
-<p>2. 运行<code>hello-world</code>镜像，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo docker run hello-world<br></code></pre></td></tr></table></figure>
+<p>3. （当前位置：Redis安装目录）在这个目录下创建一个文件夹<code>redis-config</code>用于存放Redis配置文件，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> redis-config<br></code></pre></td></tr></table></figure>
 
-<p>执行这个命令时，首先去本地寻找是否存在 hello-world 镜像，如果没有，就去镜像仓库拉取（下载）Docker 镜像，拉取完成后会创建一个容器，此时 Docker 会运行这个容器并在控制台输出结果：</p>
-<p><img src="https://source.icode504.com/images/image-20240623102936551.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. （可选）如果想让 Docker 开机自启动，可以执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl <span class="hljs-built_in">enable</span> docker<br></code></pre></td></tr></table></figure>
+<p>4. 将配置文件redis.conf复制到redis-config目录下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> ~/redis-6.2.14/redis.conf /usr/local/bin/redis-config/<br></code></pre></td></tr></table></figure>
 
-<p>4. （可选）如果禁用 Docker 开机自启动，可以执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl <span class="hljs-built_in">disable</span> docker<br></code></pre></td></tr></table></figure>
+<p>5. 使用vim命令修改复制的redis.conf文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim redis-config/redis.conf<br></code></pre></td></tr></table></figure>
 
-<p>5. （可选）如果想停止 Docker，可以执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl stop docker<br></code></pre></td></tr></table></figure>
+<p>6. 执行如下命令并回车显示行号：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">:<span class="hljs-built_in">set</span> nu<br></code></pre></td></tr></table></figure>
 
-<h1 id="五、卸载-Docker（可选）"><a href="#五、卸载-Docker（可选）" class="headerlink" title="五、卸载 Docker（可选）"></a>五、卸载 Docker（可选）</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
+<p><img src="https://source.icode504.com/images/image-20240725111632228.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 执行如下命令并按一下回车（按<kbd>N</kbd>键查找下一个，按<kbd>P</kbd>查找上一个），查找Redis后台运行相关配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/daemonize<br></code></pre></td></tr></table></figure>
 
-<p>1. 执行下面命令，卸载 Docker：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get -y purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras<br></code></pre></td></tr></table></figure>
+<p>在259行，Redis默认是不能后台运行，即<code>damonize no</code>，我们需要将no改为yes，将其更改为能后台运行：</p>
+<p><img src="https://source.icode504.com/images/image-20240725112834580.png" srcset="/img/loading.gif" lazyload></p>
+<p>按<kbd>i</kbd>进入编辑模式（左下角会有INSERT提示），将这个地方改成yes（如下图），修改完成后按一下<kbd>Esc</kbd>键退出编辑模式：</p>
+<p><img src="https://source.icode504.com/images/image-20240725113130945.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 执行如下命令并按一下回车（按<kbd>N</kbd>键查找下一个，按<kbd>P</kbd>查找上一个），查找Redis保护模式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/protected-mode<br></code></pre></td></tr></table></figure>
 
-<p>2. 卸载时，镜像和容器文件默认不会删除，如果需要删除这些文件，请依次执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">rm</span> -rf /var/lib/docker<br>sudo <span class="hljs-built_in">rm</span> -rf /var/lib/containerd<br></code></pre></td></tr></table></figure>
+<p>在94行，Redis默认开启了保护模式，即<code>protect-mode yes</code>，我们需要将yes改为no，保证后续其他的客户端也能连接到Redis：</p>
+<p><img src="https://source.icode504.com/images/image-20240725113635641.png" srcset="/img/loading.gif" lazyload></p>
+<p>按<kbd>i</kbd>进入编辑模式（左下角会有INSERT提示），将这个地方改成no（如下图），修改完成后按一下<kbd>Esc</kbd>键退出编辑模式：</p>
+<p><img src="https://source.icode504.com/images/image-20240725114022138.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 执行如下命令并按一下回车（按<kbd>N</kbd>键查找下一个，按<kbd>P</kbd>查找上一个），查看Redis所绑定的ip：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bind<br></code></pre></td></tr></table></figure>
+
+<p>在75行，Redis默认只允许本机访问，其他IP在访问都会被拒绝，这里为了演示，我将第75行的代码注释掉，让所有IP都可以访问到Redis服务端：</p>
+<blockquote>
+<p>说明：上述做法只适合学习环境中使用。在生产环境中，bind后面只能填写一个或多个可以访问到redis的IP地址。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20240725114711153.png" srcset="/img/loading.gif" lazyload></p>
+<p>按<kbd>i</kbd>进入编辑模式（左下角会有INSERT提示），将第75号注掉，修改完成后按一下<kbd>Esc</kbd>键退出编辑模式：</p>
+<p><img src="https://source.icode504.com/images/image-20240725115136412.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 执行如下命令并按一下回车（按<kbd>N</kbd>键查找下一个，按<kbd>P</kbd>查找上一个），查看访问Redis是否需要密码访问：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/requirepass<br></code></pre></td></tr></table></figure>
+
+<p>在903行，这段配置默认是被注掉的，说明不需要密码也可以访问到Redis服务器。处理安全考虑，我们需要为Redis访问设置密码：</p>
+<p><img src="https://source.icode504.com/images/image-20240725115520187.png" srcset="/img/loading.gif" lazyload></p>
+<p>按<kbd>i</kbd>进入编辑模式（左下角会有INSERT提示），将第903号注释去掉，为了方便记忆，我将密码设置为123456，修改完成后按一下<kbd>Esc</kbd>键退出编辑模式：</p>
+<p><img src="https://source.icode504.com/images/image-20240725115705245.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 上述配置完成后，输入<kbd>:wq</kbd>命令保存并退出。</p>
+<h2 id="四、启动Redis"><a href="#四、启动Redis" class="headerlink" title="四、启动Redis"></a>四、启动Redis</h2><p>1. （当前位置：Redis安装目录<code>/usr/local/bin</code>）启动Redis服务端（后台启动）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-server redis-config/redis.conf<br></code></pre></td></tr></table></figure>
+
+<p>此时命令行没有提示说明Redis启动成功，那么我们如何验证Redis是否在后台正常运行呢？使用如下命令即可查看Redis服务端是否正常运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -ef |grep redis|grep -v grep<br></code></pre></td></tr></table></figure>
+
+<p>这里我的Redis正常运行，使用6379号端口（Redis默认端口）：</p>
+<p><img src="https://source.icode504.com/images/image-20240725172804006.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 连接到Redis服务端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli<br></code></pre></td></tr></table></figure>
+
+<p>此时命令提示变成了<code>127.0.0.1:6379</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20240725173225493.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 由于前面我们设置了密码，我们需要使用下面的命令去登录且输入前面的密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">auth 前面设置的密码<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240725173428604.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 执行如下命令，如果返回结果是PONG，就说明我们的Redis可以正常使用了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PING<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240725173708679.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 退出Redis：使用下面任意一个命令都可以退出Redis客户端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br>quit<br></code></pre></td></tr></table></figure>
+
+<h2 id="五、关闭Redis"><a href="#五、关闭Redis" class="headerlink" title="五、关闭Redis"></a>五、关闭Redis</h2><p>1. 关闭单个的客户端命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli -a 密码 shutdown<br></code></pre></td></tr></table></figure>
+
+<p>2. 关闭6379端口下的所有客户端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli -p 6379 shutdown<br></code></pre></td></tr></table></figure>
+
+<h2 id="六、卸载Redis（可选）"><a href="#六、卸载Redis（可选）" class="headerlink" title="六、卸载Redis（可选）"></a>六、卸载Redis（可选）</h2><p>1. 停止Redis服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli shutdown<br></code></pre></td></tr></table></figure>
+
+<p>2. 删除<code>/usr/lobal/bin</code>目录下的所有和redis相关的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf /usr/lobal/bin/redis-*<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="方式二：Docker方式安装并启动Redis"><a href="#方式二：Docker方式安装并启动Redis" class="headerlink" title="方式二：Docker方式安装并启动Redis"></a>方式二：Docker方式安装并启动Redis</h1><p>请确保电脑上已经安装了Docker，需要安装Docker的小伙伴根据自己的操作系统去安装Docker：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">CentOS</th>
+<th align="center">Ubuntu&#x2F;Debian</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Docker安装教程</td>
+<td align="center"><a href="./94.html">点我查看</a></td>
+<td align="center"><a href="./75.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>这里我使用的是Redis 6.0.10版本。</p>
+<p>1. 拉取Redis镜像：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull redis:6.0.10<br></code></pre></td></tr></table></figure>
+
+<p>2. 创建一个文件目录，用来存储redis配置文件，这里我创建了<code>/opt/redis/conf</code>目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /opt/redis/conf<br></code></pre></td></tr></table></figure>
+
+<p>3. 下载Redis配置文件到上面的目录中，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -P /opt/redis/conf/ https://source.icode504.com/data/conf/redis/redis.conf<br></code></pre></td></tr></table></figure>
+
+<p>这个配置文件中一共修改了4个地方：</p>
+<ul>
+<li>将第259行的修改为可以后台运行<code>daemonize yes</code>；</li>
+<li>第94行的保护模式<code>protect-mode</code>的值改为了no；</li>
+<li>将第75行默认只能本机访问的<code>bind 127.0.0.1 -::1</code>注释掉，改成所有IP都可以访问Redis；</li>
+<li>第903行访问Redis需要输入密码，默认是123456</li>
+</ul>
+<p>4. 根据第1步拉取的镜像创建Redis容器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -p 6379:6379 -d\<br> 		--privileged=<span class="hljs-literal">true</span>\<br> 		-v /opt/redis/conf/redis.conf:/etc/redis/redis.conf\<br> 		-v /opt/redis/data:/data\<br> 		--name redis\<br> 		redis:6.0.10<br></code></pre></td></tr></table></figure>
+
+<p>5. 查看所有容器的运行情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps -a<br></code></pre></td></tr></table></figure>
+
+<p>此时我们发现redis正常运行：</p>
+<p><img src="https://source.icode504.com/images/image-20240725213246978.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 进入到容器（<code>/bin/bash</code>命令行方式），执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it redis /bin/bash<br></code></pre></td></tr></table></figure>
+
+<p>7. 此时我们进入了Redis容器的内部，接下来我们来既可以使用客户端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">redis-cli<br></code></pre></td></tr></table></figure>
+
+<p>此时左侧提示变为<code>127.0.0.1:6379</code>：</p>
+<p><img src="https://source.icode504.com/images/image-20240725222722661.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 执行如下命令，如果返回结果是PONG，就说明我们的Redis可以正常使用了：</p>
+<p><img src="https://source.icode504.com/images/image-20240725173708679.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 退出Redis客户端，执行如下任意一个命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br>quit<br></code></pre></td></tr></table></figure>
+
+<p>10. 退出当前Docker容器，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure>
+
+
+
 
                 
               </div>
@@ -1793,12 +1903,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/" class="category-chain-item">容器化</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/Docker/" class="category-chain-item">Docker</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/" class="category-chain-item">非关系型数据库（NoSQL）</a>
   
   
 
@@ -1819,13 +1929,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
-      
-        <a href="/tags/Debian/" class="print-no-link">#Debian</a>
-      
         <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
         <a href="/tags/Docker/" class="print-no-link">#Docker</a>
+      
+        <a href="/tags/Redis/" class="print-no-link">#Redis</a>
       
     </div>
   
@@ -1837,8 +1945,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Docker安装和配置教程（适用于Linux Ubuntu和Debian）</div>
-      <div>https://www.icode504.com/posts/75.html</div>
+      <div>Redis单机版安装教程（Linux版）</div>
+      <div>https://www.icode504.com/posts/83.html</div>
     </div>
     <div class="license-meta">
       
@@ -1882,9 +1990,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/76.html" title="Windows通过命令行关闭某个端口">
+                      <a href="/posts/82.html" title="软件包管理器Homebrew安装教程（适用于macOS系统）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows通过命令行关闭某个端口</span>
+                        <span class="hidden-mobile">软件包管理器Homebrew安装教程（适用于macOS系统）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1892,8 +2000,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/73.html" title="EasyExcel工作表操作">
-                        <span class="hidden-mobile">EasyExcel工作表操作</span>
+                      <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）">
+                        <span class="hidden-mobile">Eclipse安装配置、卸载教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
