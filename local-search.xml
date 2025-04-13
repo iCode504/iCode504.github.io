@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Visual Studio Code安装配置教程（Windows版）</title>
+    <link href="/posts/38.html"/>
+    <url>/posts/38.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、下载Visual-Studio-Code（VS-Code）"><a href="#一、下载Visual-Studio-Code（VS-Code）" class="headerlink" title="一、下载Visual Studio Code（VS Code）"></a>一、下载Visual Studio Code（VS Code）</h1><blockquote><p>本文后续内容使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a>，已经安装的小伙伴接着往下看。</p></blockquote><p>1. 打开官网下载地址：<a href="https://code.visualstudio.com/Download">点我查看</a></p><p>2. 根据自己的操作系统，选择下载安装包。这里我使用的是Windows，只需要点击第一个即可：</p><p><img src="https://source.icode504.com/images/image-20231222155257752.png"></p><p>3. 如果浏览器没有下载，就点击页面中的这个链接下载（浏览器已下载的请忽略这条）：</p><p><img src="https://source.icode504.com/images/image-20231222155506749.png"></p><h1 id="二、安装Visual-Studio-Code（VS-Code）"><a href="#二、安装Visual-Studio-Code（VS-Code）" class="headerlink" title="二、安装Visual Studio Code（VS Code）"></a>二、安装Visual Studio Code（VS Code）</h1><p>1. 双击打开安装包。按照下图所示<strong>勾选协议</strong>，点击下一步：</p><p><img src="https://source.icode504.com/images/image-20231222160359382.png"></p><p>2. 点击<strong>浏览</strong>选择安装路径，这里我安装在了D盘（如不需要更改安装路径的请跳转至下一步）：</p><p><img src="https://source.icode504.com/images/image-20231222160520232.png"></p><p><img src="https://source.icode504.com/images/image-20231222160616103.png"></p><p><img src="https://source.icode504.com/images/image-20231222160650958.png"></p><p>3. 点击下一步</p><p><img src="https://source.icode504.com/images/image-20231222160715044.png"></p><p>4. 附加服务页面建议全部勾选，然后点击下一步：</p><p><img src="https://source.icode504.com/images/image-20231222160944031.png"></p><p>5. 上述内容确认无误后，点击安装：</p><p><img src="https://source.icode504.com/images/image-20231222161027142.png"></p><p>6. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20231222161056793.png"></p><p>7. 安装完成，勾选<strong>运行Visual Studio Code</strong></p><p><img src="https://source.icode504.com/images/image-20231222161130731.png"></p><h1 id="三、Visual-Studio-Code（VS-Code）的简单配置"><a href="#三、Visual-Studio-Code（VS-Code）的简单配置" class="headerlink" title="三、Visual Studio Code（VS Code）的简单配置"></a>三、Visual Studio Code（VS Code）的简单配置</h1><h2 id="3-1-页面汉化（可选）"><a href="#3-1-页面汉化（可选）" class="headerlink" title="3.1 页面汉化（可选）"></a>3.1 页面汉化（可选）</h2><p>VS Code默认是英文界面，对于一些英文不太好的小伙伴可能不太友好，好在官方为我们提供了VS Code的汉化包。</p><p>1. 在左侧菜单找到插件商店：</p><p><img src="https://source.icode504.com/images/image-20240131170427487.png"></p><p>2. 在搜索框中搜索<code>Chinese Simplified</code>，搜索结果第一个就是我们要安装插件，点击Install安装插件：</p><p><img src="https://source.icode504.com/images/image-20240131170733135.png"></p><p>3. 安装完成后，右下角会弹出一个窗口提示，点击<code>Change Language and Restart</code>，重新加载：</p><p><img src="https://source.icode504.com/images/image-20240131170831058.png"></p><p>4. 汉化成功！页面如下图所示：</p><p><img src="https://source.icode504.com/images/image-20240131170910022.png"></p><h2 id="3-2-开启文件自动保存（可选）"><a href="#3-2-开启文件自动保存（可选）" class="headerlink" title="3.2 开启文件自动保存（可选）"></a>3.2 开启文件自动保存（可选）</h2><p>在VS Code中写代码，默认是需要按<kbd>Ctrl</kbd>+<kbd>S</kbd>键保存文件。但是如果出现意外状况（例如电脑突然断电），你编写的代码如果没保存，绝对能搞炸你的心态。因此，我们需要开启文件自动保存功能</p><p>1. 点击左下角的齿轮（或者按快捷键<kbd>Ctrl</kbd>和<kbd>,</kbd>），进入设置：</p><p><img src="https://source.icode504.com/images/image-20240131213903209.png"></p><p>2. 在上方搜索框中输入<code>auto save</code>，常用设置中改为<code>afterDelay</code>：</p><p><img src="https://source.icode504.com/images/image-20240131171830424.png"></p><p>3. 左侧菜单选择<strong>文件</strong>，将保存方式更改成<strong>afterDelay</strong>，保存时间间隔自定义（以毫秒为单位）：</p><p><img src="https://source.icode504.com/images/image-20240131172107593.png"></p><h2 id="3-3-主题风格配置（可选）"><a href="#3-3-主题风格配置（可选）" class="headerlink" title="3.3 主题风格配置（可选）"></a>3.3 主题风格配置（可选）</h2><p>VS Code支持多种主题风格配置。例如：暗黑风格、纯白风格等等。</p><blockquote><p>说明：如果系统自带的风格都不符合，可以到插件商店自行下载其他风格的主题。</p></blockquote><p>1. 点击左下角的齿轮，选择主题：</p><p><img src="https://source.icode504.com/images/image-20240131214819974.png"></p><p>2. 此时浏览器上方会弹出系统自带的颜色主题。2024是龙年，也是我的本命年，这里我选个红色，图个喜庆！</p><p><img src="https://source.icode504.com/images/image-20240131214912974.png"></p><p>3. 修改后的颜色风格如下图所示：</p><p><img src="https://source.icode504.com/images/image-20240131215053668.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>集成开发环境</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Visual Studio Code</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Eclipse配置PostgreSQL教程（Windows版）</title>
     <link href="/posts/37.html"/>
     <url>/posts/37.html</url>
