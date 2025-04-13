@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文使用EasyExcel代码实现了无表头数据的Excel文件导出和复杂表头的输出。">
+    <meta name="description" content="解决若依启动后，使用Apifox访问接口返回401的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EasyExcel的表头操作">
-<meta property="og:url" content="https://www.icode504.com/posts/61.html">
+<meta property="og:title" content="若依+Apifox实现接口测试（解决访问接口401问题）">
+<meta property="og:url" content="https://www.icode504.com/posts/101.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文使用EasyExcel代码实现了无表头数据的Excel文件导出和复杂表头的输出。">
+<meta property="og:description" content="解决若依启动后，使用Apifox访问接口返回401的问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/bfa44c95e9add7d3f65f99b1ac332cea.png">
-<meta property="article:published_time" content="2025-04-13T06:25:36.507Z">
-<meta property="article:modified_time" content="2025-04-13T06:25:36.507Z">
+<meta property="og:image" content="https://source.icode504.com/images/c5c392504ec159e50118471f5713a5e0.png">
+<meta property="article:published_time" content="2025-04-13T11:21:50.537Z">
+<meta property="article:modified_time" content="2025-04-13T11:21:50.537Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="EasyExcel">
+<meta property="article:tag" content="若依">
+<meta property="article:tag" content="Apifox">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/bfa44c95e9add7d3f65f99b1ac332cea.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/c5c392504ec159e50118471f5713a5e0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>EasyExcel的表头操作 - iCode504个人博客</title>
+  <title>若依+Apifox实现接口测试（解决访问接口401问题） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/bfa44c95e9add7d3f65f99b1ac332cea.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/c5c392504ec159e50118471f5713a5e0.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">EasyExcel的表头操作</span>
+            <span id="subtitle">若依+Apifox实现接口测试（解决访问接口401问题）</span>
           
         </div>
 
@@ -220,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 14:25" pubdate>
+        <time datetime="2025-04-13 19:21" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -306,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
         id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         常用工具
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
            role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
         
         
@@ -333,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -360,17 +361,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="文档操作"
         id="heading-21c4c3dbc6bdd53cab3b881f2fecf95a" role="tab" data-toggle="collapse" href="#collapse-21c4c3dbc6bdd53cab3b881f2fecf95a"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         文档操作
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-21c4c3dbc6bdd53cab3b881f2fecf95a"
+      <div class="category-collapse collapse " id="collapse-21c4c3dbc6bdd53cab3b881f2fecf95a"
            role="tabpanel" aria-labelledby="heading-21c4c3dbc6bdd53cab3b881f2fecf95a">
         
         
@@ -387,17 +388,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="EasyExcel"
         id="heading-a681a9f8b7e2deaadc3369bd9303ccd9" role="tab" data-toggle="collapse" href="#collapse-a681a9f8b7e2deaadc3369bd9303ccd9"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         EasyExcel
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-a681a9f8b7e2deaadc3369bd9303ccd9"
+      <div class="category-collapse collapse " id="collapse-a681a9f8b7e2deaadc3369bd9303ccd9"
            role="tabpanel" aria-labelledby="heading-a681a9f8b7e2deaadc3369bd9303ccd9">
         
         
@@ -414,17 +415,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="使用EasyExcel将数据写入到Excel文件"
         id="heading-1e9e8378c4af7c515da20bb14dcea66d" role="tab" data-toggle="collapse" href="#collapse-1e9e8378c4af7c515da20bb14dcea66d"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         使用EasyExcel将数据写入到Excel文件
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-1e9e8378c4af7c515da20bb14dcea66d"
+      <div class="category-collapse collapse " id="collapse-1e9e8378c4af7c515da20bb14dcea66d"
            role="tabpanel" aria-labelledby="heading-1e9e8378c4af7c515da20bb14dcea66d">
         
         
@@ -454,7 +455,7 @@
       
         <a href="/posts/61.html" title="EasyExcel的表头操作"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">EasyExcel的表头操作</span>
         </a>
       
@@ -503,17 +504,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="框架"
         id="heading-41f1d2b62436eded1a6776504b6895d7" role="tab" data-toggle="collapse" href="#collapse-41f1d2b62436eded1a6776504b6895d7"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         框架
         <span class="list-group-count">(7)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-41f1d2b62436eded1a6776504b6895d7"
+      <div class="category-collapse collapse show" id="collapse-41f1d2b62436eded1a6776504b6895d7"
            role="tabpanel" aria-labelledby="heading-41f1d2b62436eded1a6776504b6895d7">
         
         
@@ -530,17 +531,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Java
         <span class="list-group-count">(7)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -652,17 +653,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="开源框架"
         id="heading-0b1545866d587b27d3847c003aabd462" role="tab" data-toggle="collapse" href="#collapse-0b1545866d587b27d3847c003aabd462"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         开源框架
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-0b1545866d587b27d3847c003aabd462"
+      <div class="category-collapse collapse show" id="collapse-0b1545866d587b27d3847c003aabd462"
            role="tabpanel" aria-labelledby="heading-0b1545866d587b27d3847c003aabd462">
         
         
@@ -679,17 +680,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="若依"
         id="heading-e2b7c595c2c7d8c531ccbc19963f8c8c" role="tab" data-toggle="collapse" href="#collapse-e2b7c595c2c7d8c531ccbc19963f8c8c"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         若依
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-e2b7c595c2c7d8c531ccbc19963f8c8c"
+      <div class="category-collapse collapse show" id="collapse-e2b7c595c2c7d8c531ccbc19963f8c8c"
            role="tabpanel" aria-labelledby="heading-e2b7c595c2c7d8c531ccbc19963f8c8c">
         
         
@@ -706,17 +707,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常见问题"
         id="heading-50d52dd929a75bb9b0f4afb0b7d879e1" role="tab" data-toggle="collapse" href="#collapse-50d52dd929a75bb9b0f4afb0b7d879e1"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         常见问题
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-50d52dd929a75bb9b0f4afb0b7d879e1"
+      <div class="category-collapse collapse show" id="collapse-50d52dd929a75bb9b0f4afb0b7d879e1"
            role="tabpanel" aria-labelledby="heading-50d52dd929a75bb9b0f4afb0b7d879e1">
         
         
@@ -737,7 +738,7 @@
       
         <a href="/posts/101.html" title="若依+Apifox实现接口测试（解决访问接口401问题）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">若依+Apifox实现接口测试（解决访问接口401问题）</span>
         </a>
       
@@ -993,46 +994,39 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">EasyExcel的表头操作</h1>
+            <h1 id="seo-header">若依+Apifox实现接口测试（解决访问接口401问题）</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a href="./60.html">上一节</a>我们使用EasyExcel框架的四种方式将数据输出到Excel文件中，实现了如下图的效果：</p>
-<p><img src="https://source.icode504.com/images/image-20240319160342595.png" srcset="/img/loading.gif" lazyload></p>
-<p>其中序号、员工号、员工姓名等是各个列的表头（灰色单元格），接下来这一部分我们要对表头进行相关操作。</p>
-<h1 id="一、输出无表头数据"><a href="#一、输出无表头数据" class="headerlink" title="一、输出无表头数据"></a>一、输出无表头数据</h1><blockquote>
-<p>案例：不输出表头，显示效果如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20240320231754335.png" srcset="/img/loading.gif" lazyload></p>
+                <p>在使用Apifox测试用户登录时，需要关闭验证码功能：<a href="./100.html">点我查看</a></p>
+<h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>假设我们在若依框架的ruoyi-admin模块中编写了一个controller代码，已知端口号是8080：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.ruoyi.data.controller;<br><br><span class="hljs-keyword">import</span> com.ruoyi.common.core.controller.BaseController;<br><span class="hljs-keyword">import</span> com.ruoyi.common.core.domain.AjaxResult;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.GetMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 业务Controller</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-08-16</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/data&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DataController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseController</span> &#123;<br><br>    <span class="hljs-meta">@GetMapping(value = &quot;/getDataInfo&quot;)</span><br>    <span class="hljs-keyword">public</span> AjaxResult <span class="hljs-title function_">getDataInfo</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> success(<span class="hljs-string">&quot;你好，我是iCode504，程序猿一枚，请多指教(●&#x27;◡&#x27;●)&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我们在Apifox中对该接口进行测试时，响应结果很有可能会出现401的情况：</p>
+<p><img src="https://source.icode504.com/images/image-628598e7654d766dca652734cd2bd431.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、问题分析"><a href="#二、问题分析" class="headerlink" title="二、问题分析"></a>二、问题分析</h1><p>出现上述问题的主要原因是登录时返回的token并没有添加到接口实际的请求上：</p>
+<p><img src="https://source.icode504.com/images/image-51a6129a4ed2763f7b14a56ae89a5032.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h1><h2 id="方式一：提取token（一劳永逸）"><a href="#方式一：提取token（一劳永逸）" class="headerlink" title="方式一：提取token（一劳永逸）"></a>方式一：提取token（一劳永逸）</h2><p>1. 我们先找到用户登录接口，按照下图所示找到接口的后置操作：</p>
+<p><img src="https://source.icode504.com/images/image-d27008d23d0374a75ac9b270dff4c377.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 添加后置操作中选择<strong>提取变量</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-579fe89652657b0beb3b8cdbce403004.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 按照下图填写相关信息，完成后按<kbd>Ctrl</kbd>+<kbd>S</kbd>键保存：</p>
+<p><img src="https://source.icode504.com/images/image-09584c12e4826795ab503e5725a2d91a.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在左侧找到根目录，按照下图所示填写全局Token，完成后按<kbd>Ctrl</kbd>+<kbd>S</kbd>键保存：</p>
+<p><img src="https://source.icode504.com/images/image-3778be6ce990e7f68a927267593ebad5.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 此时重新登录，再次运行测试接口，此时我们就可以看到接口返回的数据了：</p>
+<p><img src="https://source.icode504.com/images/image-cb4ca24c8172b5ac4b19c5aa90ad2c95.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 此时接口的实际请求中也包含登录时返回的token信息：</p>
+<p><img src="https://source.icode504.com/images/image-eeffaed26a4117bc798a961a131b53b7.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="方式二：在接口方法上添加-Anoymous注解（临时使用）"><a href="#方式二：在接口方法上添加-Anoymous注解（临时使用）" class="headerlink" title="方式二：在接口方法上添加@Anoymous注解（临时使用）"></a>方式二：在接口方法上添加@Anoymous注解（临时使用）</h2><blockquote>
+<p>注意：该方式只适用于开发环境中，请勿用于生产环境！</p>
 </blockquote>
-<p>EasyExcel框架中有一个类AbstractExcelWriterParameterBuilder，这是一个抽象类，在这个类中有一个方法<code>needHead</code>，参数是Boolean类型，如果传入的值是false就可以确保表头不再输出，以下是执行的代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br>    EasyExcel.write(filePath, Employee.class)<br>            <span class="hljs-comment">// 不输出表头</span><br>            .needHead(<span class="hljs-literal">false</span>)<br>            .sheet(<span class="hljs-string">&quot;测试工作表&quot;</span>)<br>            .doWrite(EmployeeUtils.getDataList());<br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>要想避开登录访问，可以在controller方法中添加@Anoymous注解，即匿名访问：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.ruoyi.data.controller;<br><br><span class="hljs-keyword">import</span> com.ruoyi.common.annotation.Anonymous;<br><span class="hljs-keyword">import</span> com.ruoyi.common.core.controller.BaseController;<br><span class="hljs-keyword">import</span> com.ruoyi.common.core.domain.AjaxResult;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.GetMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 业务Controller</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-08-16</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/data&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DataController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseController</span> &#123;<br><br>    <span class="hljs-meta">@Anonymous</span>      <span class="hljs-comment">// 添加匿名访问注解</span><br>    <span class="hljs-meta">@GetMapping(value = &quot;/getDataInfo&quot;)</span><br>    <span class="hljs-keyword">public</span> AjaxResult <span class="hljs-title function_">getDataInfo</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> success(<span class="hljs-string">&quot;你好，我是iCode504，程序猿一枚，请多指教(●&#x27;◡&#x27;●)&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>此时执行这段代码就不会出现表头信息，符合我们预期目标：</p>
-<p><img src="https://source.icode504.com/images/image-20240321102207670.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、输出复杂表头"><a href="#二、输出复杂表头" class="headerlink" title="二、输出复杂表头"></a>二、输出复杂表头</h1><blockquote>
-<p>案例：输出的Excel文件表头如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20240320113132026.png" srcset="/img/loading.gif" lazyload></p>
-</blockquote>
-<p>由上述表头我们发现员工信息表和其他属性（例如：序号、员工号等）是一对多的关系，为了更加直观地在代码中显示，我们需要将图中的关系进一步拆解一对一的关系：</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ada">员工信息表 <span class="hljs-comment">--&gt; 序号</span><br>员工信息表 <span class="hljs-comment">--&gt; 员工号</span><br>员工信息表 <span class="hljs-comment">--&gt; 员工姓名</span><br>员工信息表 <span class="hljs-comment">--&gt; 年龄</span><br>员工信息表 <span class="hljs-comment">--&gt; 性别</span><br>员工信息表 <span class="hljs-comment">--&gt; 生日</span><br></code></pre></td></tr></table></figure>
-
-<p>这样拆解以后，我们就可以在<code>@ExcelProperty</code>中使用<code>value</code>属性了，这个属性本身是一个字符串数组，要想发生类似上图表头合并，需要满足如下条件：</p>
-<ul>
-<li>类中的属性之间必须相邻；</li>
-<li>属性使用<code>@ExcelProprety</code>修饰并且注解中包含<code>value</code>属性（字符串数组）；</li>
-<li>字符串数组中相同的索引值对应的字符串值完全相同。</li>
-</ul>
-<p>根据上述内容，我们将实体类Employee属性中的注解做一点改动，代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504.entity;<br><br><span class="hljs-keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;<br><span class="hljs-keyword">import</span> lombok.*;<br><br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 员工--实体类</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-03-18</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@AllArgsConstructor</span><br><span class="hljs-meta">@NoArgsConstructor</span><br><span class="hljs-meta">@Getter</span><br><span class="hljs-meta">@Setter</span><br><span class="hljs-meta">@ToString</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Employee</span> &#123;<br><br>    <span class="hljs-comment">// 序号</span><br>    <span class="hljs-meta">@ExcelProperty(&#123;&quot;员工信息表&quot;,&quot;序号&quot;&#125;)</span><br>    <span class="hljs-keyword">private</span> Integer id;<br><br>    <span class="hljs-comment">// 员工号</span><br>    <span class="hljs-meta">@ExcelProperty(&#123;&quot;员工信息表&quot;, &quot;员工号&quot;&#125;)</span><br>    <span class="hljs-keyword">private</span> String employeeId;<br><br>    <span class="hljs-comment">// 员工姓名</span><br>    <span class="hljs-meta">@ExcelProperty(&#123;&quot;员工信息表&quot;, &quot;员工姓名&quot;&#125;)</span><br>    <span class="hljs-keyword">private</span> String employeeName;<br><br>    <span class="hljs-comment">// 年龄</span><br>    <span class="hljs-meta">@ExcelProperty(&#123;&quot;员工信息表&quot;, &quot;年龄&quot;&#125;)</span><br>    <span class="hljs-keyword">private</span> Integer age;<br><br>    <span class="hljs-comment">// 性别（男/女）</span><br>    <span class="hljs-meta">@ExcelProperty(&#123;&quot;员工信息表&quot;, &quot;性别&quot;&#125;)</span><br>    <span class="hljs-keyword">private</span> String gender;<br><br>    <span class="hljs-comment">// 生日</span><br>    <span class="hljs-meta">@ExcelProperty(&#123;&quot;员工信息表&quot;, &quot;生日&quot;&#125;)</span><br>    <span class="hljs-keyword">private</span> Date birthday;<br><br>    <span class="hljs-comment">// 构造器、getter、setter已省略...</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>我们再运行一次EasyExcel代码来导出Excel文件：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br>    EasyExcel.write(filePath, Employee.class)<br>            .sheet(<span class="hljs-string">&quot;模板&quot;</span>)<br>            .doWrite(EmployeeUtils.getDataList());<br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>此时生成的表头符合案例的要求：</p>
-<p><img src="https://source.icode504.com/images/image-20240320224957864.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、知识点总结"><a href="#三、知识点总结" class="headerlink" title="三、知识点总结"></a>三、知识点总结</h1><p>EasyExcel的表头操作的知识点总结如下图所示：</p>
-<p><img src="https://source.icode504.com/images/EasyExcel%E7%9A%84%E8%A1%A8%E5%A4%B4%E6%93%8D%E4%BD%9C.svg" srcset="/img/loading.gif" lazyload></p>
+<p>重新启动若依框架，此时到Apifox中对该接口进行测试，也可以看到返回结果：</p>
+<p><img src="https://source.icode504.com/images/image-8694746e2d2dbb6d2d44e79847eec214.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1056,27 +1050,27 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" class="category-chain-item">常用工具</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/" class="category-chain-item">框架</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/" class="category-chain-item">Java</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/" class="category-chain-item">文档操作</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/" class="category-chain-item">开源框架</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/" class="category-chain-item">EasyExcel</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/%E8%8B%A5%E4%BE%9D/" class="category-chain-item">若依</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/" class="category-chain-item">使用EasyExcel将数据写入到Excel文件</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/%E8%8B%A5%E4%BE%9D/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="category-chain-item">常见问题</a>
   
   
 
@@ -1103,7 +1097,9 @@
       
         <a href="/tags/Java/" class="print-no-link">#Java</a>
       
-        <a href="/tags/EasyExcel/" class="print-no-link">#EasyExcel</a>
+        <a href="/tags/%E8%8B%A5%E4%BE%9D/" class="print-no-link">#若依</a>
+      
+        <a href="/tags/Apifox/" class="print-no-link">#Apifox</a>
       
     </div>
   
@@ -1115,8 +1111,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>EasyExcel的表头操作</div>
-      <div>https://www.icode504.com/posts/61.html</div>
+      <div>若依+Apifox实现接口测试（解决访问接口401问题）</div>
+      <div>https://www.icode504.com/posts/101.html</div>
     </div>
     <div class="license-meta">
       
@@ -1160,18 +1156,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/62.html" title="EasyExcel的列操作">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">EasyExcel的列操作</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/60.html" title="使用EasyExcel将数据写入到Excel文件的四种方式">
-                        <span class="hidden-mobile">使用EasyExcel将数据写入到Excel文件的四种方式</span>
+                      <a href="/posts/100.html" title="若依关闭登录页面的验证码">
+                        <span class="hidden-mobile">若依关闭登录页面的验证码</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
