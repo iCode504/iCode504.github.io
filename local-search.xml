@@ -4,6 +4,43 @@
   
   
   <entry>
+    <title>MinGW安装配置教程（Windows版）</title>
+    <link href="/posts/39.html"/>
+    <url>/posts/39.html</url>
+    
+    <content type="html"><![CDATA[<p>MinGW，全称为Minimalist GNU for Windows，是一个可自由使用和发布的Windows特定头文件和使用GNU工具集导入库的集合。它允许在GNU&#x2F;Linux和Windows平台生成本地的Windows程序而不需要第三方C运行时（C Runtime）库。使用MinGW开发的程序不需要额外的第三方DLL支持就可以在Windows下运行。</p><p>以下是MinGW在Windows环境下的安装和配置教程：</p><h1 id="一、下载MinGW-w64"><a href="#一、下载MinGW-w64" class="headerlink" title="一、下载MinGW-w64"></a>一、下载MinGW-w64</h1><p>1. 打开MinGW-w64官网下载页面（托管到了SourceForge上）：<a href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">点我查看</a></p><p>2. 向下找，找到最新版本的MinGW，选择seh下载：</p><p><img src="https://source.icode504.com/images/image-20240201104452235.png"></p><blockquote><p>说明（第2、3、4、5点总结的可能不太严谨，如果您在这方面有很深入的了解，可以评论区或者私信告诉我）：</p><p>1. <font color="FF0000">不要</font>安装上面的<code>MinGW-W64-install.exe</code>，这个是联网安装的，服务器在国外，在国内安装因为网络原因大概率会失败。</p><p>2. x86_64简单而言是64位的操作系统（绝大部分电脑都是64位的），i686属于32位操作系统</p><p>3. posix（全称Portable Operating System Interface of UNIX，翻译过来就是UNIX可移植操作系统接口），是<a href="http://www.ieee.com/">IEEE</a>为要在各种UNIX操作系统上运行的软件而定义的一系列API标准总称。</p><p>4. win32是由Windows操作系统的API，主要也是应用在Windows操作系统上。</p><p>5. seh（Structured Exception Handling）是Windows操作系统中默认的异常处理机制，sjlj（Signal Set JMP）是Unix及类Unix系统中的一种轻量级异常处理机制。</p></blockquote><h1 id="二、安装配置MinGW-w64"><a href="#二、安装配置MinGW-w64" class="headerlink" title="二、安装配置MinGW-w64"></a>二、安装配置MinGW-w64</h1><p>1. 将下载的7z压缩包（推荐使用<a href="https://www.bandisoft.com/bandizip/">Bandzip</a>、<a href="https://7-zip.org/">7-zip</a>等解压工具）解压到一个你熟悉的地方（建议是英文路径），这里我解压到了D盘：</p><p><img src="https://source.icode504.com/images/image-20240131155552319.png"></p><p><img src="https://source.icode504.com/images/image-20240131155721190.png"></p><p>2. 为MinGW配置环境变量：找到MinGW的安装路径，出现bin、etc、include等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131160221163.png"></p><p>3. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>4. 点击<strong>高级系统设置</strong>：</p><table><thead><tr><th align="center">Windows 11</th><th align="center"><img src="https://source.icode504.com/images/image-20240101010932039.png"></th></tr></thead><tbody><tr><td align="center"><strong>Windows 10</strong></td><td align="center"><img src="https://source.icode504.com/images/image-20240101011132186.png"></td></tr></tbody></table><p>5. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20230314134716166.png"></p><p>6. 在下方系统变量中，点击<strong>新建</strong>：</p><p><img src="https://source.icode504.com/images/image-20230314134919881.png"></p><p>7. 配置安装路径，按照图示操作即可：</p><p><img src="https://source.icode504.com/images/image-20240131162334741.png"></p><p>8. 双击Path进入：</p><p><img src="https://source.icode504.com/images/image-20230314135756989.png"></p><p>8. 按照图示操作即可，然后一路点击确定。</p><p><img src="https://source.icode504.com/images/image-20240131162546989.png"></p><p>9. 检查Mingw环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，进入控制台，输入<code>gcc -v</code>和<code>g++ -v</code>，出现版本信息说明环境变量配置成功！</p><p><img src="https://source.icode504.com/images/image-20240131162902042.png"></p><p><img src="https://source.icode504.com/images/image-20240131162938776.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>编程语言</category>
+      
+      <category>C/C++</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>C</tag>
+      
+      <tag>C++</tag>
+      
+      <tag>MinGW</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Visual Studio Code安装配置教程（Windows版）</title>
     <link href="/posts/38.html"/>
     <url>/posts/38.html</url>
