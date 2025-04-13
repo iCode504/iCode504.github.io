@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T00:45:06.255Z</updated>
+  <updated>2025-04-13T00:43:25.950Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,35 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Golang安装、配置和卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/32.html"/>
-    <id>https://www.icode504.com/posts/32.html</id>
-    <published>2025-04-13T00:45:06.255Z</published>
-    <updated>2025-04-13T00:45:06.255Z</updated>
-    
-    
-    <summary type="html">本教程简要介绍了在Windows操作系统上安装、配置和卸载Go语言（Golang）的步骤。涵盖了安装程序、环境变量配置和卸载过程，为初学者提供了简单易懂的指导。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Golang" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Golang/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Golang" scheme="https://www.icode504.com/tags/Golang/"/>
-    
-    <category term="Go" scheme="https://www.icode504.com/tags/Go/"/>
-    
-  </entry>
   
   <entry>
     <title>卸载神器：Geek Uninstaller安装使用教程（Windows版）</title>
@@ -67,6 +38,35 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Geek Uninstaller" scheme="https://www.icode504.com/tags/Geek-Uninstaller/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Golang安装、配置和卸载教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/32.html"/>
+    <id>https://www.icode504.com/posts/32.html</id>
+    <published>2025-04-12T16:00:00.000Z</published>
+    <updated>2025-04-13T00:45:52.484Z</updated>
+    
+    
+    <summary type="html">本教程简要介绍了在Windows操作系统上安装、配置和卸载Go语言（Golang）的步骤。涵盖了安装程序、环境变量配置和卸载过程，为初学者提供了简单易懂的指导。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Golang" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Golang/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Go" scheme="https://www.icode504.com/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://www.icode504.com/tags/Golang/"/>
     
   </entry>
   
