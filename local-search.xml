@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Debian虚拟机修改静态IP</title>
+    <link href="/posts/110.html"/>
+    <url>/posts/110.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>需要在VMware安装Debian虚拟机的小伙伴，点击右侧链接查看安装教程：<a href="./52.html">点我查看</a></p><p>使用云服务器的小伙伴不需要看下面的配置哦(ᕑᗢᓫ∗)˒</p><h1 id="二、VMware相关操作"><a href="#二、VMware相关操作" class="headerlink" title="二、VMware相关操作"></a>二、VMware相关操作</h1><p>1. （虚拟机处于关机状态）在未开启Debian虚拟机之前，按照下图所示打开虚拟机的网络设置：</p><p><img src="https://source.icode504.com/images/30f37dbd371b7ac93ce756d1b7424f60.png"></p><p>2. 点击右下角的<strong>更改设置</strong>：</p><p><img src="https://source.icode504.com/images/a7cb64c3b9c6396a8370e31f03a45e51.png"></p><p>3. 进入编辑模式后，上方的虚拟网络选中VMnet8（NAT模式）：</p><p><img src="https://source.icode504.com/images/020ceab236d61c0341c80ade96ebdf49.png"></p><p>4. 按照下图所示修改子网IP，修改的数值范围在<strong>0~255</strong>之间，我修改后的子网IP为192.168.40.0：</p><p><img src="https://source.icode504.com/images/5fe139fec7dde3d798a240acbb2ff10a.png"></p><p>5. 点击右下角的<strong>DHCP设置</strong>：</p><p><img src="https://source.icode504.com/images/b28c1b878fca3e76e9038f66cc3d28be.png"></p><p>6. 按照下图操作修改网段，完成后一路点击确定，虚拟网络配置完成。</p><p><img src="https://source.icode504.com/images/2475fa8817e27d03b932c28866ba886a.png"></p><h1 id="三、Debian修改静态IP"><a href="#三、Debian修改静态IP" class="headerlink" title="三、Debian修改静态IP"></a>三、Debian修改静态IP</h1><p>1. 开启Debian虚拟机，执行如下命令查看当前虚拟机的IP地址：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip addr<br></code></pre></td></tr></table></figure><p>这里我的虚拟机IP地址是192.168.40.5，接下来我将这个IP修改为静态IP，192.168.40.100：</p><p><img src="https://source.icode504.com/images/6b5a474d812bedc220d46e12d2bd045e.png"></p><p>2. Debian关于网络IP的配置在<code>/etc/network/interfaces</code>文件中，使用Vim编辑这个文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/network/interfaces<br></code></pre></td></tr></table></figure><p>3. 输入<code>:set nu</code>可以查看行号，此时我们看到未修改之前为动态IP：</p><p><img src="https://source.icode504.com/images/c2a15482c33771fd577823fc2bdb34ac.png"></p><p>4. 按<kbd>I</kbd>键进入编辑模式，将最后两行代码注掉，效果图如下：</p><p><img src="https://source.icode504.com/images/1fdb92edb1735377e9f8d6eaf864b158.png"></p><p>5. 另起一行，输入如下内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">auto ens33<br>iface ens33 inet static    <span class="hljs-comment"># 修改为静态ip</span><br>address 192.168.40.100     <span class="hljs-comment"># 其中40要和前面自定义的要保持一致，100可以设置其他数字（0~255之间）</span><br>netmask 255.255.255.0<br>gateway 192.168.40.2       <span class="hljs-comment"># 其中40要和前面自定义的要保持一致</span><br></code></pre></td></tr></table></figure><p>修改后的效果如下图：</p><p><img src="https://source.icode504.com/images/18d2853a81e652f845b66fea032effad.png"></p><p>6. 按<kbd>Esc</kbd>键退出编辑模式，输入<code>:wq</code>保存并退出。</p><p>7. 执行如下命令重新启动网络服务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sysmctl restart networking<br></code></pre></td></tr></table></figure><p>8. 执行如下命令重新启动：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">reboot<br></code></pre></td></tr></table></figure><p>9. 再次执行<code>ip addr</code>命令，发现IP已经变为192.168.40.100：</p><p><img src="https://source.icode504.com/images/0e1f4c2e2b46f3741147273a970ea6c0.png"></p><p>10. 此时我们ping一下百度也有响应，至此，Debian成功修改为静态IP并且可以访问外网：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping www.baidu.com<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/dc1fead36b500490bd96dd65104a6b65.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>常用操作</category>
+      
+      <category>Debian</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Debian</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Consul安装配置教程（Windows版）</title>
     <link href="/posts/109.html"/>
     <url>/posts/109.html</url>
