@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T03:56:18.231Z</updated>
+  <updated>2025-04-13T03:57:52.461Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pycharm的安装、配置与卸载教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/50.html"/>
+    <id>https://www.icode504.com/posts/50.html</id>
+    <published>2025-04-13T03:57:52.461Z</published>
+    <updated>2025-04-13T03:57:52.461Z</updated>
+    
+    
+    <summary type="html">本教程详细介绍了在Windows操作系统下，如何安装、配置和卸载PyCharm这款强大的Python集成开发环境。涵盖了安装步骤、配置选项及卸载流程，帮助用户轻松管理PyCharm。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Pycharm" scheme="https://www.icode504.com/tags/Pycharm/"/>
+    
+  </entry>
   
   <entry>
     <title>Python3安装、配置与卸载教程（Windows版）</title>
@@ -514,31 +539,6 @@
     <category term="MySQL" scheme="https://www.icode504.com/tags/MySQL/"/>
     
     <category term="DataGrip" scheme="https://www.icode504.com/tags/DataGrip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Eclipse安装配置、卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/30.html"/>
-    <id>https://www.icode504.com/posts/30.html</id>
-    <published>2025-04-12T14:13:45.053Z</published>
-    <updated>2025-04-12T14:13:45.053Z</updated>
-    
-    
-    <summary type="html">本文主要介绍了Java集成开发环境Eclipse的下载、安装配置，以及创建一个Java项目、编写代码并成功运行的过程。同时还提供了Eclipse的卸载方法。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Eclipse" scheme="https://www.icode504.com/tags/Eclipse/"/>
     
   </entry>
   
