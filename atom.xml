@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T10:36:00.906Z</updated>
+  <updated>2025-04-13T10:40:02.321Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis数据类型之无序集合类型Set</title>
+    <link href="https://www.icode504.com/posts/92.html"/>
+    <id>https://www.icode504.com/posts/92.html</id>
+    <published>2025-04-13T10:40:02.321Z</published>
+    <updated>2025-04-13T10:40:02.321Z</updated>
+    
+    
+    <summary type="html">Redis集合类型介绍及其常用的命令</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库（NoSQL）" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/"/>
+    
+    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis数据类型之列表List</title>
@@ -532,31 +561,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Tomcat" scheme="https://www.icode504.com/tags/Tomcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</title>
-    <link href="https://www.icode504.com/posts/63.html"/>
-    <id>https://www.icode504.com/posts/63.html</id>
-    <published>2025-04-13T06:29:35.782Z</published>
-    <updated>2025-04-13T06:29:35.782Z</updated>
-    
-    
-    <summary type="html">本文描述了使用VS Code编写Vue3代码时提示如下错误信息[vue/no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue，并给出解决方案</summary>
-    
-    
-    
-    <category term="前端" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Vue" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
-    
-    <category term="Vue Bug" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/Vue/Vue-Bug/"/>
-    
-    
-    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
-    
-    <category term="Vue Bug" scheme="https://www.icode504.com/tags/Vue-Bug/"/>
     
   </entry>
   

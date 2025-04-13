@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>Redis数据类型之无序集合类型Set</title>
+    <link href="/posts/92.html"/>
+    <url>/posts/92.html</url>
+    
+    <content type="html"><![CDATA[<p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p><h1 id="一、Redis集合类型介绍"><a href="#一、Redis集合类型介绍" class="headerlink" title="一、Redis集合类型介绍"></a>一、Redis集合类型介绍</h1><p><strong>Redis集合（Set）中的成员是唯一且无序的</strong>，成员（Member）是Redis集合的组成单位，多个成员组成了集合。Redis集合类型在以下场景中使用效率较高：</p><ul><li>记录当前用户访问网站页面时的IP地址；</li><li>社交APP中推荐可能认识的人；</li><li>查看微信朋友圈点赞的朋友；</li></ul><h1 id="二、Redis集合类型常用命令"><a href="#二、Redis集合类型常用命令" class="headerlink" title="二、Redis集合类型常用命令"></a>二、Redis集合类型常用命令</h1><h2 id="2-1-单个集合操作命令"><a href="#2-1-单个集合操作命令" class="headerlink" title="2.1 单个集合操作命令"></a>2.1 单个集合操作命令</h2><p>1. 添加一个或多个成员：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SADD key member [member ...]<br></code></pre></td></tr></table></figure><p>返回结果是成功添加到当前集合成员的个数：</p><p><img src="https://source.icode504.com/images/image-7cef9761aa2b9fc3670a4f27f0c2d53e.png"></p><p>2. 遍历集合中所有的成员：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SMEMBERS key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-a9b70a94d0b56a40dce689e0f2b67755.png"></p><p>3. 判断当前成员是否在集合中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SISMEMBER key member<br></code></pre></td></tr></table></figure><p>如果当前集合中存在该成员，返回结果是1；如果不存在，返回结果是0：</p><p><img src="https://source.icode504.com/images/image-325cf1a904c2c15f701c28584e6ee82b.png"></p><p>4. 删除一个或多个成员：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SREM key member [member ...]<br></code></pre></td></tr></table></figure><p>默认返回的是成功删除的成员数量：</p><p><img src="https://source.icode504.com/images/image-cce5054ee9a745b0a403f4d8d6215dcd.png"></p><p>5. 获取集合中成员数量：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SCARD key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-fa2c920cae97b9df5c2dab47cb3f0661.png"></p><p>6. 从集合中随机展现1个或多个成员作为展示（<strong>不执行删除操作</strong>）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SRANDMEMBER key [count]<br></code></pre></td></tr></table></figure><p>count可以分成如下情况（假设集合的长度是<code>set.length</code>并且$set.length \geq 1$）</p><ul><li>如果count没有值，那么随机展示一个成员；</li><li>如果count在$[1, set.length)$中，那么展示count个成员；</li><li>如果$count\geq set.length$，那么展示当前集合所有的成员；</li><li>如果$count&lt;0$，此时随机展示|count|个元素，展示过程中，可能出现成员重复的情况：</li></ul><p>以下是SRANDMEMBER的使用演示：</p><p><img src="https://source.icode504.com/images/image-f25c93d5fa489c4acab46e42c375084f.png"></p><p>7. 从集合中随机弹出一个或多个成员：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SPOP key [count]<br></code></pre></td></tr></table></figure><p>如果不指定count，默认只弹出一个成员；指定count可以弹出多个成员：</p><p><img src="https://source.icode504.com/images/image-5a3391a5b8a7dc2203ade48b472e168e.png"></p><h2 id="2-2-多个集合操作命令"><a href="#2-2-多个集合操作命令" class="headerlink" title="2.2 多个集合操作命令"></a>2.2 多个集合操作命令</h2><p>1. 将当前集合中已经存在某个成员赋值给另一个集合：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SMOVE <span class="hljs-built_in">source</span> destination member<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-c26af97efba88bf7e2a595852cb865ee.png"></p><p>2. 集合的差集运算（$A-B$）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SDIFF key [key ...]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-acef2a21c121fcd6954763c73553768c.png"></p><p>3. 集合的并集运算（$A\cup B$）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SUNION key [key ...]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-e8c9847b0aae57d8d4fec7d52492bf36.png"></p><p>4. 集合的交集运算（$A \cap B$）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SINTER key [key ...]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-eb6fe0b6d739b14db810df5e96d35505.png"></p><h1 id="三、Redis集合类型的使用事项"><a href="#三、Redis集合类型的使用事项" class="headerlink" title="三、Redis集合类型的使用事项"></a>三、Redis集合类型的使用事项</h1><p>1. Redis集合最大可以存储$2^{32}-1$个元素。</p><p><img src="https://source.icode504.com/images/image-2462e9a545ecbe5797ef4616dcaeb797.png"></p><p>2. 大多数和集合相关的命令在执行过程中效率较高。然而，如果集合中几十万几百万的数据时，需要谨慎使用SMEMBERS命令，因为命令在执行过程中的时间复杂度是$O(n)$。为了解决上述问题，可以使用SSCAN命令（后续会讲到）获取到集合中所有成员。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+      <category>非关系型数据库（NoSQL）</category>
+      
+      <category>Redis</category>
+      
+      <category>Redis数据类型</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Redis</tag>
+      
+      <tag>数据库</tag>
+      
+      <tag>非关系型数据库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Redis数据类型之列表List</title>
     <link href="/posts/91.html"/>
     <url>/posts/91.html</url>
