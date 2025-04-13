@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>DBeaver加快依赖下载速度</title>
+    <link href="/posts/105.html"/>
+    <url>/posts/105.html</url>
+    
+    <content type="html"><![CDATA[<p>需要安装DBeaver的小伙伴根据自己所在的操作系统查看安装教程：</p><table><thead><tr><th align="center">Windows</th><th align="center">macOS</th></tr></thead><tbody><tr><td align="center"><a href="./77.html">点我查看</a></td><td align="center"><a href="./81.html">点我查看</a></td></tr></tbody></table><p>我们在使用DBeaver连接数据库的时候，可能会需要到Maven中央仓库下载一些依赖（JAR包），但是中央仓库服务器在国外，对于国内用户下载不一定友好：</p><p><img src="https://source.icode504.com/images/image-29db969146c7cf2a81bf0eadec186213.png"></p><p>要想解决上述问题，只需要将下载源改为国内的镜像源，这里我使用的阿里云镜像源。以下是修改镜像源的教程：</p><p>1. 复制下面的链接地址：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//m</span>aven.aliyun.com<span class="hljs-regexp">/nexus/</span>content<span class="hljs-regexp">/groups/</span>public/<br></code></pre></td></tr></table></figure><p>2. 在上方菜单找到<strong>窗口</strong> –&gt; <strong>首选项</strong>，进入设置页面：</p><p><img src="https://source.icode504.com/images/image-990a04be1d839a7e51c3c3ab0028c077.png"></p><p>3. 在左侧菜单上方的搜索框搜索Maven，然后点击右侧的<strong>添加</strong>：</p><p><img src="https://source.icode504.com/images/image-ea0e0efaccd7f60934db5e95ea8349ab.png"></p><p>4. 将第1步中复制的链接地址粘贴到此处，完成后点击确定：</p><p><img src="https://source.icode504.com/images/image-4c5896454e65e5368fde581f7d708d0e.png"></p><p>5. 选中新添加的链接，点击右侧的<strong>向上</strong>，将这个链接置顶，完成后点击右下角<strong>应用并关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-60144dd59bd7a4a9a229ebbbc5bdc1e0.png"></p><p>6. 此时配置完数据库以后，再次点击测试连接时，下载依赖使用的国内的镜像源，下载速度比较快：</p><p><img src="https://source.icode504.com/images/image-d110c55820a47a9214aa3ee801c86ac3.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>DBeaver</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>DBeaver</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PostgreSQL安装和配置教程（Linux版）</title>
     <link href="/posts/104.html"/>
     <url>/posts/104.html</url>
