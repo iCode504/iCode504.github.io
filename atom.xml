@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T07:20:40.714Z</updated>
+  <updated>2025-04-13T07:17:41.568Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>数据库管理软件DBeaver安装、配置和卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/77.html"/>
-    <id>https://www.icode504.com/posts/77.html</id>
-    <published>2025-04-13T07:20:40.710Z</published>
-    <updated>2025-04-13T07:20:40.714Z</updated>
-    
-    
-    <summary type="html">本文介绍了数据库管理软件DBeaver在Windows系统上的安装、配置和卸载步骤。详细说明了下载DBeaver安装包，进行安装配置数据库连接的过程，以及如何卸载DBeaver，帮助用户轻松管理和使用数据库。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="数据库工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="DBeaver" scheme="https://www.icode504.com/tags/DBeaver/"/>
-    
-  </entry>
   
   <entry>
     <title>Windows通过命令行关闭某个端口</title>
@@ -553,6 +528,27 @@
     <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
     
     <category term="Vue Bug" scheme="https://www.icode504.com/tags/Vue-Bug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Debian安装教程</title>
+    <link href="https://www.icode504.com/posts/52.html"/>
+    <id>https://www.icode504.com/posts/52.html</id>
+    <published>2025-04-13T05:38:41.663Z</published>
+    <updated>2025-04-13T05:38:41.667Z</updated>
+    
+    
+    <summary type="html">本教程介绍了如何安装和配置 Linux Debian 操作系统，包括虚拟机创建、开启虚拟化、操作系统安装和SSH远程连接，适用于初学者和有经验的用户。</summary>
+    
+    
+    
+    <category term="系统安装" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Debian" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/Debian/"/>
+    
+    
+    <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
     
   </entry>
   
