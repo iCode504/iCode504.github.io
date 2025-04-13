@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:29:35.782Z</updated>
+  <updated>2025-04-13T06:38:48.430Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tomcat安装配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/64.html"/>
+    <id>https://www.icode504.com/posts/64.html</id>
+    <published>2025-04-13T06:38:48.430Z</published>
+    <updated>2025-04-13T06:38:48.430Z</updated>
+    
+    
+    <summary type="html">本文介绍了Tomcat下载与安装，配置环境变量和启动，添加了Tomcat启动过程中乱码的解决方案。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="服务器&amp;虚拟机" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Tomcat" scheme="https://www.icode504.com/tags/Tomcat/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</title>
@@ -498,31 +523,6 @@
     <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
     
     <category term="Live Server" scheme="https://www.icode504.com/tags/Live-Server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VS Code查看Git提交记录</title>
-    <link href="https://www.icode504.com/posts/43.html"/>
-    <id>https://www.icode504.com/posts/43.html</id>
-    <published>2025-04-13T03:26:02.768Z</published>
-    <updated>2025-04-13T03:26:02.768Z</updated>
-    
-    
-    <summary type="html">VS Code默认不显示项目的Git提交历史，需要安装插件才能实现效果</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Visual Studio Code（VS Code）" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/"/>
-    
-    <category term="Git" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/Git/"/>
-    
-    
-    <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
-    
-    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
     
   </entry>
   
