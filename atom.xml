@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T07:29:48.285Z</updated>
+  <updated>2025-04-13T07:50:35.777Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Node.js安装、配置教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/84.html"/>
+    <id>https://www.icode504.com/posts/84.html</id>
+    <published>2025-04-13T07:50:35.773Z</published>
+    <updated>2025-04-13T07:50:35.777Z</updated>
+    
+    
+    <summary type="html">这篇教程旨在为 macOS 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="前端框架工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+    <category term="Node.js" scheme="https://www.icode504.com/tags/Node-js/"/>
+    
+    <category term="Homebrew" scheme="https://www.icode504.com/tags/Homebrew/"/>
+    
+  </entry>
   
   <entry>
     <title>访问Github卡顿甚至进不去的解决办法（适用于macOS）</title>
@@ -532,33 +559,6 @@
     
     
     <category term="Maven" scheme="https://www.icode504.com/tags/Maven/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JDK 8安装配置教程（Linux通用版）</title>
-    <link href="https://www.icode504.com/posts/55.html"/>
-    <id>https://www.icode504.com/posts/55.html</id>
-    <published>2025-04-13T05:47:48.814Z</published>
-    <updated>2025-04-13T05:47:48.818Z</updated>
-    
-    
-    <summary type="html">Linux（适用于CentOS、Ubuntu、Debian等主流版本）环境下安装与配置JDK 8教程。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
-    
-    <category term="编程语言" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java/JDK" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
     
     <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     

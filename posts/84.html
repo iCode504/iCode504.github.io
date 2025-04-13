@@ -18,46 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装配置JDK 17教程">
+    <meta name="description" content="这篇教程旨在为 macOS 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 17安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/26.html">
+<meta property="og:title" content="Node.js安装、配置教程（macOS版）">
+<meta property="og:url" content="https://www.icode504.com/posts/84.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装配置JDK 17教程">
+<meta property="og:description" content="这篇教程旨在为 macOS 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140251099.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140356853.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140438115.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140629136.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140706171.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140729167.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102140754229.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102141010328.png">
-<meta property="og:image" content="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101010932039.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101011132186.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002218161.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002302057.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102141211785.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002655185.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002812677.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003131968.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102141350623.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102141433688.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240102141538207.png">
-<meta property="article:published_time" content="2025-04-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-12T14:06:38.107Z">
+<meta property="og:image" content="https://source.icode504.com/images/53181158eafb105793ff7db5f4a4215c.png">
+<meta property="article:published_time" content="2025-04-13T07:50:35.773Z">
+<meta property="article:modified_time" content="2025-04-13T07:50:35.777Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Node.js">
+<meta property="article:tag" content="Homebrew">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20240102140251099.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/53181158eafb105793ff7db5f4a4215c.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 17安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>Node.js安装、配置教程（macOS版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/53181158eafb105793ff7db5f4a4215c.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 17安装配置教程（Windows版）</span>
+            <span id="subtitle">Node.js安装、配置教程（macOS版）</span>
           
         </div>
 
@@ -239,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 00:00" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 15:50" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -689,17 +671,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(29)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -973,17 +955,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(9)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -1111,17 +1093,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -1142,7 +1124,7 @@
       
         <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 17安装配置教程（Windows版）</span>
         </a>
       
@@ -1376,17 +1358,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -1403,17 +1385,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架工具"
         id="heading-735090e03c20badeb2d3daa204b219ae" role="tab" data-toggle="collapse" href="#collapse-735090e03c20badeb2d3daa204b219ae"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         前端框架工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-735090e03c20badeb2d3daa204b219ae"
+      <div class="category-collapse collapse show" id="collapse-735090e03c20badeb2d3daa204b219ae"
            role="tabpanel" aria-labelledby="heading-735090e03c20badeb2d3daa204b219ae">
         
         
@@ -1425,7 +1407,7 @@
       
         <a href="/posts/84.html" title="Node.js安装、配置教程（macOS版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Node.js安装、配置教程（macOS版）</span>
         </a>
       
@@ -1690,12 +1672,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 17安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">Node.js安装、配置教程（macOS版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年4月12日
+                    本文最后更新于：2025年4月13日
                   
                 
               </p>
@@ -1703,60 +1685,81 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
-</blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-<p>接下来为大家讲解一下JDK 17如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">点我查看</a></p>
-<p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是17.0.6版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p>
-<p><img src="https://source.icode504.com/images/image-20240102140251099.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240102140356853.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p>
-<p><img src="https://source.icode504.com/images/image-20240102140438115.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240102140629136.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240102140706171.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240102140729167.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 安装完成，点击<strong>关闭</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240102140754229.png" srcset="/img/loading.gif" lazyload></p>
+                <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，使 JavaScript 能够在服务器端运行，它提供了一个事件驱动的非阻塞 I&#x2F;O 模型，使得构建高效、可扩展的网络应用变得更加容易。而 npm（Node Package Manager）是 Node.js 的包管理工具，用于安装、分享、管理 JavaScript 代码包，使开发者能够轻松地将自己的代码与他人的代码集成，并且享受到社区共享的各种功能模块。Node.js 和 npm 的结合使得 JavaScript 开发者能够在服务器端和客户端都使用同一种语言，极大地提高了开发效率和跨平台能力。</p>
+<p>以下是 macOS 环境下 Node.js 的安装教程。本文提供两种方式安装Node.js，读者任选一种方式安装即可：</p>
+<h1 id="方式一：正常安装"><a href="#方式一：正常安装" class="headerlink" title="方式一：正常安装"></a>方式一：正常安装</h1><h2 id="一、下载-Node-js-安装包"><a href="#一、下载-Node-js-安装包" class="headerlink" title="一、下载 Node.js 安装包"></a>一、下载 Node.js 安装包</h2><p>1. 打开右侧链接地址，进入 Node.js 官方下载链接列表页：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">点我查看</a></p>
+<p>2. 这里我选择 v16.20.2 版本下载，找到这个文件夹，点击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20240610231104421.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. macOS 系统点击以<code>.pkg</code>结尾的安装包下载：</p>
+<p><img src="https://source.icode504.com/images/image-20240720234836974.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="二、安装-Node-js"><a href="#二、安装-Node-js" class="headerlink" title="二、安装 Node.js"></a>二、安装 Node.js</h2><p>1. 打开安装包，进入欢迎界面，点击<strong>继续</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235111507.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 软件许可协议，点击<strong>继续</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235157923.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击<strong>同意</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235223513.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击<strong>安装</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235315573.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 输入当前用户名和密码，然后点击<strong>安装软件</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235518573.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235554831.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 安装完成，点击<strong>关闭</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235630219.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 如果不需要安装包，点击<strong>移到废纸篓</strong>即可：</p>
+<p><img src="https://source.icode504.com/images/image-20240720235653399.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="三、npm-更换镜像源"><a href="#三、npm-更换镜像源" class="headerlink" title="三、npm 更换镜像源"></a>三、npm 更换镜像源</h2><p>Node.js 中包含一个重要模块：npm，它的作用是帮助我们下载项目中的依赖（你可以理解成下载对应的软件包），但是 npm 默认的下载地址在国外，如果使用了默认的下载地址，后续在使用 npm 的过程中下载依赖会非常慢，因此，我们需要将 npm 默认的下载地址改成国内镜像，这里我使用的是淘宝镜像源。</p>
+<p>1. 执行如下命令查看当前<code>npm</code>的下载源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240721000008097.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 将镜像源更改成淘宝镜像源，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
+
+<p>3. 再次执行如下命令，镜像源成功修改为淘宝镜像源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240721000256123.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="方式二：Homebrew-安装-Node-js"><a href="#方式二：Homebrew-安装-Node-js" class="headerlink" title="方式二：Homebrew 安装 Node.js"></a>方式二：Homebrew 安装 Node.js</h1><p>请确保电脑上已经安装了 Homebrew：<a href="https://www.icode504.com/posts/82.html">点我查看</a></p>
+<h2 id="一、安装-Node-js-并配置环境变量"><a href="#一、安装-Node-js-并配置环境变量" class="headerlink" title="一、安装 Node.js 并配置环境变量"></a>一、安装 Node.js 并配置环境变量</h2><p>1. 打开终端，执行如下命令查找可安装的 Node.js 版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew search node<br></code></pre></td></tr></table></figure>
+
+<p>等待一段时间后，我们可以看到如下几个版本的 Node.js：</p>
+<p><img src="https://source.icode504.com/images/image-20240721102504550.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 这里我安装的是 Node.js 16 的最新稳定版本，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node@16<br></code></pre></td></tr></table></figure>
+
+<p>等待一段时间后（预估 5~10 分钟），安装完成，接下来我们来配置环境变量。</p>
+<p>3. 在当前目录下新建一个文件 node_env.sh，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim node_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>4. 复制如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#NODEJS_HOME</span><br>NODEJS_HOME=/usr/local/opt/node@16<br>PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$NODEJS_HOME</span>/bin<br><span class="hljs-built_in">export</span> PATH NODEJS_HOME<br></code></pre></td></tr></table></figure>
+
+<p>5. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第 4 步的代码，效果如下图所示：</p>
 <blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p>
+<p>下图第 2 行中的路径需要根据你所安装的 Node.js 版本去更改，这里我安装的是 Node.js 16 版本，因此路径是<code>/usr/local/opt/node@16</code>，如果你安装的是其他版本的 Node.js，那么将路径改成其他版本的路径。</p>
 </blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240102141010328.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002218161.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002302057.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置系统变量，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240102141211785.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002655185.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240101002812677.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p>
-<p><img src="https://source.icode504.com/images/image-20240101003131968.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 17安装成功了：</p>
-<p><img src="https://source.icode504.com/images/image-20240102141350623.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240102141433688.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240102141538207.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240721104239363.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 完成上述配置后，按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>并按一下回车（保存并退出）。</p>
+<p>7. 执行如下命令，让环境变量配置生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> node_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>8. 执行如下两个命令即可查看 Node.js 和 npm 的版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">node -v<br>npm -v<br></code></pre></td></tr></table></figure>
+
+<h2 id="二、npm-更换镜像源"><a href="#二、npm-更换镜像源" class="headerlink" title="二、npm 更换镜像源"></a>二、npm 更换镜像源</h2><p>Node.js 中包含一个重要模块：npm，它的作用是帮助我们下载项目中的依赖（你可以理解成下载对应的软件包），但是 npm 默认的下载地址在国外，如果使用了默认的下载地址，后续在使用 npm 的过程中下载依赖会非常慢，因此，我们需要将 npm 默认的下载地址改成国内镜像，这里我使用的是淘宝镜像源。</p>
+<p>1. 执行如下命令查看当前<code>npm</code>的下载源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240721105347155.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 将镜像源更改成淘宝镜像源，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
+
+<p>3. 再次执行如下命令，镜像源成功修改为淘宝镜像源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240721105711377.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1780,20 +1783,13 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/" class="category-chain-item">macOS</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%B7%A5%E5%85%B7/" class="category-chain-item">前端框架工具</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
-  
-  
-
   
 
   
@@ -1811,9 +1807,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Node-js/" class="print-no-link">#Node.js</a>
+      
+        <a href="/tags/Homebrew/" class="print-no-link">#Homebrew</a>
       
     </div>
   
@@ -1825,8 +1823,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 17安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/26.html</div>
+      <div>Node.js安装、配置教程（macOS版）</div>
+      <div>https://www.icode504.com/posts/84.html</div>
     </div>
     <div class="license-meta">
       
@@ -1838,7 +1836,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -1870,18 +1868,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">访问Github卡顿甚至进不去的解决办法（适用于Windows）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/9.html" title="入门篇-其之七-Java运算符（下）">
-                        <span class="hidden-mobile">入门篇-其之七-Java运算符（下）</span>
+                      <a href="/posts/80.html" title="访问Github卡顿甚至进不去的解决办法（适用于macOS）">
+                        <span class="hidden-mobile">访问Github卡顿甚至进不去的解决办法（适用于macOS）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
