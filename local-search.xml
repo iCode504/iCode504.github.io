@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>Redis数据类型之基数统计HyperLogLog</title>
+    <link href="/posts/106.html"/>
+    <url>/posts/106.html</url>
+    
+    <content type="html"><![CDATA[<p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p><h1 id="一、Redis-基数统计类型（HyperLogLog）介绍"><a href="#一、Redis-基数统计类型（HyperLogLog）介绍" class="headerlink" title="一、Redis 基数统计类型（HyperLogLog）介绍"></a>一、Redis 基数统计类型（HyperLogLog）介绍</h1><p>Redis HyperLogLog是一种概率型数据结构，用于统计当前集合的近似基数，它以完美的准确性换取了高效的空间利用率。</p><blockquote><p>这里说的基数指的是集合中不重复元素数量。</p></blockquote><p>统计集合中唯一数据项的数量通常和内存使用量成正比。也就是说，查询的唯一数据项的数量越多，消耗的内存也越多。一种简单暴力的方法就是我们记住都存储了那些元素，以避免多次计数，但是很显然，这并不是一个现实的选择。</p><p>有一种可以通过内存换取精度的算法，这个算法会返回一个带有标准误差的统计基数。Redis在使用HyperLogLog统计数据的情况下，标准误差小于1%。使用这个算法的好处在于，你不需要考虑统计数据所消耗内存的问题，所消耗的内存量是恒定的，最多也不超过12KB。如果你的数据很小，所需要的内存量也要比12KB小很多。</p><p>HyperLogLog最多使用<strong>12KB</strong>的内存空间，标准误差是**0.81%**。</p><p>从技术层面而言，HyperLogLog是一种不同的数据结构，但实际上编码仍然是字符串（String）：</p><p><img src="https://source.icode504.com/images/image-b377ad022070b3d4538e10c50b6b9eca.png"></p><p>应用场景：</p><ul><li>统计网站、文章等UV；</li></ul><blockquote><p>UV，英文全称Unique Visitor，独立访客，一般理解为客户端IP，需要去重。</p><p>例如：某个IP今天访问了50次网站<a href="https://www.icode504.com/">https://www.icode504.com</a>，那么该网站在最终统计UV时，该IP的访问次数是1次。</p></blockquote><ul><li>统计用户搜索网站关键词数量；</li><li>统计用户每天搜索不同词条的次数；</li><li>……</li></ul><h1 id="二、Redis-基数统计类型（HyperLogLog）常用命令"><a href="#二、Redis-基数统计类型（HyperLogLog）常用命令" class="headerlink" title="二、Redis 基数统计类型（HyperLogLog）常用命令"></a>二、Redis 基数统计类型（HyperLogLog）常用命令</h1><p>1. 添加指定一个或多个元素：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFADD key [element [element ...]]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-61b2bab03b649a7e0f345eaefb04491b.png"></p><p>2. 统计当前HyperLogLog的基数估算值：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFCOUNT key [key ...]<br></code></pre></td></tr></table></figure><p>PFCOUNT统计基数时，如果数据量较大时会存在最大0.81%误差。</p><ul><li>如果参数只有一个key，那么统计的是当前集合的近似基数，如果key不存在，那么返回结果是0。</li></ul><p><img src="https://source.icode504.com/images/image-0732657f8c6dd7bb566bbc49b81ac4b3.png"></p><ul><li>如果参数有多个key，此时这些HyperLogLog先进行并集运算，再存储到一个临时的HyperLogLog，统计好数量以后，返回最终统计的近似基数：</li></ul><p><img src="https://source.icode504.com/images/image-60427d59d0d06e71a91fcc8f1840510d.png"></p><p>3. 将多个HyperLogLog合并为一个HyperLogLog（并集运算）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFMERGE destkey sourcekey ...<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-c31916fcd8d7887e294e9af22016c49b.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+      <category>非关系型数据库（NoSQL）</category>
+      
+      <category>Redis</category>
+      
+      <category>Redis数据类型</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Redis</tag>
+      
+      <tag>数据库</tag>
+      
+      <tag>非关系型数据库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>DBeaver加快依赖下载速度</title>
     <link href="/posts/105.html"/>
     <url>/posts/105.html</url>

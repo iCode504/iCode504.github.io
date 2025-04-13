@@ -18,28 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis字符串类型介绍及其常用的命令">
+    <meta name="description" content="Redis基数统计类型HyperLogLog介绍和常用命令。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis数据类型之字符串类型string">
-<meta property="og:url" content="https://www.icode504.com/posts/87.html">
+<meta property="og:title" content="Redis数据类型之基数统计HyperLogLog">
+<meta property="og:url" content="https://www.icode504.com/posts/106.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis字符串类型介绍及其常用的命令">
+<meta property="og:description" content="Redis基数统计类型HyperLogLog介绍和常用命令。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/6d26777aa4f615e8456fa71cd41d2f77.png">
-<meta property="article:published_time" content="2025-04-13T07:59:02.660Z">
-<meta property="article:modified_time" content="2025-04-13T07:59:02.660Z">
+<meta property="og:image" content="https://source.icode504.com/images/15b835f800796e09ef6cf64d6be2aa4e.png">
+<meta property="article:published_time" content="2025-04-13T11:50:13.075Z">
+<meta property="article:modified_time" content="2025-04-13T11:50:13.075Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta property="article:tag" content="数据库">
 <meta property="article:tag" content="非关系型数据库">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/6d26777aa4f615e8456fa71cd41d2f77.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/15b835f800796e09ef6cf64d6be2aa4e.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis数据类型之字符串类型string - iCode504个人博客</title>
+  <title>Redis数据类型之基数统计HyperLogLog - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/6d26777aa4f615e8456fa71cd41d2f77.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/15b835f800796e09ef6cf64d6be2aa4e.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis数据类型之字符串类型string</span>
+            <span id="subtitle">Redis数据类型之基数统计HyperLogLog</span>
           
         </div>
 
@@ -221,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 15:59" pubdate>
+        <time datetime="2025-04-13 19:50" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -410,7 +410,7 @@
       
         <a href="/posts/87.html" title="Redis数据类型之字符串类型string"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Redis数据类型之字符串类型string</span>
         </a>
       
@@ -455,7 +455,7 @@
       
         <a href="/posts/106.html" title="Redis数据类型之基数统计HyperLogLog"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis数据类型之基数统计HyperLogLog</span>
         </a>
       
@@ -490,139 +490,54 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis数据类型之字符串类型string</h1>
+            <h1 id="seo-header">Redis数据类型之基数统计HyperLogLog</h1>
             
             
               <div class="markdown-body">
                 
                 <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p>
-<h1 id="一、Redis字符串类型介绍"><a href="#一、Redis字符串类型介绍" class="headerlink" title="一、Redis字符串类型介绍"></a>一、Redis字符串类型介绍</h1><p>Redis字符串类型官网介绍（英文）</p>
-<p><img src="https://source.icode504.com/images/image-20240724223009996.png" srcset="/img/loading.gif" lazyload></p>
-<p>Redis的字符串（string）存储字节序列，包含文本、序列化对象和二进制数组。字符串类型是Redis的key对应的值中最简单的类型。字符串类型通常用于缓存，但是它们也可以实现计数和位运算等功能。</p>
-<p>Redis字符串类型特性：<strong>单个键（key）对应单个值（value）</strong>。</p>
-<p><img src="https://source.icode504.com/images/image-f1474adb7a4a9785602de95d07b7154f.png" srcset="/img/loading.gif" lazyload></p>
-<p>默认情况下，一个字符串类型的值（value）最大可以存储<strong>512MB</strong>数据。</p>
-<p><img src="https://source.icode504.com/images/image-20240724223651330.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="一、Redis-基数统计类型（HyperLogLog）介绍"><a href="#一、Redis-基数统计类型（HyperLogLog）介绍" class="headerlink" title="一、Redis 基数统计类型（HyperLogLog）介绍"></a>一、Redis 基数统计类型（HyperLogLog）介绍</h1><p>Redis HyperLogLog是一种概率型数据结构，用于统计当前集合的近似基数，它以完美的准确性换取了高效的空间利用率。</p>
+<blockquote>
+<p>这里说的基数指的是集合中不重复元素数量。</p>
+</blockquote>
+<p>统计集合中唯一数据项的数量通常和内存使用量成正比。也就是说，查询的唯一数据项的数量越多，消耗的内存也越多。一种简单暴力的方法就是我们记住都存储了那些元素，以避免多次计数，但是很显然，这并不是一个现实的选择。</p>
+<p>有一种可以通过内存换取精度的算法，这个算法会返回一个带有标准误差的统计基数。Redis在使用HyperLogLog统计数据的情况下，标准误差小于1%。使用这个算法的好处在于，你不需要考虑统计数据所消耗内存的问题，所消耗的内存量是恒定的，最多也不超过12KB。如果你的数据很小，所需要的内存量也要比12KB小很多。</p>
+<p>HyperLogLog最多使用<strong>12KB</strong>的内存空间，标准误差是**0.81%**。</p>
+<p>从技术层面而言，HyperLogLog是一种不同的数据结构，但实际上编码仍然是字符串（String）：</p>
+<p><img src="https://source.icode504.com/images/image-b377ad022070b3d4538e10c50b6b9eca.png" srcset="/img/loading.gif" lazyload></p>
 <p>应用场景：</p>
-<p>1. 视频&#x2F;文章点赞功能；</p>
-<p>2. 统计视频播放量、文章阅读量等。</p>
-<h1 id="二、Redis字符串常用命令"><a href="#二、Redis字符串常用命令" class="headerlink" title="二、Redis字符串常用命令"></a>二、Redis字符串常用命令</h1><p>1. 添加和修改Key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-2a901b0690611a7031359aae33788a63.png" srcset="/img/loading.gif" lazyload></p>
-<p>如果对应的value存在空格等特殊符号，需要使用双引号：</p>
-<p><img src="https://source.icode504.com/images/image-77fbf8e4d87a87b69d254175fecc9b3c.png" srcset="/img/loading.gif" lazyload></p>
 <ul>
-<li>为当前的key设置过期时间（单位：秒）：</li>
+<li>统计网站、文章等UV；</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value EX seconds<br></code></pre></td></tr></table></figure>
-
-<p>其中ex（expire）值的是当前的key-value存在过期时间，seconds就是我们自定义的过期时间（秒）：</p>
-<p><img src="https://source.icode504.com/images/image-02b57f88cac1a9974ae8fad0599f60a1.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>UV，英文全称Unique Visitor，独立访客，一般理解为客户端IP，需要去重。</p>
+<p>例如：某个IP今天访问了50次网站<a href="https://www.icode504.com/">https://www.icode504.com</a>，那么该网站在最终统计UV时，该IP的访问次数是1次。</p>
+</blockquote>
 <ul>
-<li>为当前的key设置过期时间（单位：毫秒）</li>
+<li>统计用户搜索网站关键词数量；</li>
+<li>统计用户每天搜索不同词条的次数；</li>
+<li>……</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value PX milliseconds<br></code></pre></td></tr></table></figure>
+<h1 id="二、Redis-基数统计类型（HyperLogLog）常用命令"><a href="#二、Redis-基数统计类型（HyperLogLog）常用命令" class="headerlink" title="二、Redis 基数统计类型（HyperLogLog）常用命令"></a>二、Redis 基数统计类型（HyperLogLog）常用命令</h1><p>1. 添加指定一个或多个元素：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFADD key [element [element ...]]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-705784c2a1f19ec632ec1db11eeaf33e.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-61b2bab03b649a7e0f345eaefb04491b.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 统计当前HyperLogLog的基数估算值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFCOUNT key [key ...]<br></code></pre></td></tr></table></figure>
+
+<p>PFCOUNT统计基数时，如果数据量较大时会存在最大0.81%误差。</p>
 <ul>
-<li>当前key如果不存在时，创建key，否则不创建，相当于后续学习的SETNX命令：</li>
+<li>如果参数只有一个key，那么统计的是当前集合的近似基数，如果key不存在，那么返回结果是0。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value NX<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-3e89873a762343855f4b2036fa932fc7.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-0732657f8c6dd7bb566bbc49b81ac4b3.png" srcset="/img/loading.gif" lazyload></p>
 <ul>
-<li>当前key如果存在时，对当前的value进行覆盖：</li>
+<li>如果参数有多个key，此时这些HyperLogLog先进行并集运算，再存储到一个临时的HyperLogLog，统计好数量以后，返回最终统计的近似基数：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value XX<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-60427d59d0d06e71a91fcc8f1840510d.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 将多个HyperLogLog合并为一个HyperLogLog（并集运算）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">PFMERGE destkey sourcekey ...<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-41cf5e3aae6b4e89b75a712179e30ed9.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 获取当前key对应的value：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure>
-
-<p>这里我们顺便验证一下上述set命令是否由修改key的功能（数据覆盖）：</p>
-<p><img src="https://source.icode504.com/images/image-28cea7af55609ec0792a4ebe2d608691.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 批量设置多个key-value：</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss">MSET <span class="hljs-built_in">key</span> value [<span class="hljs-built_in">key</span> value ...]<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-e2536ace26340d57f76adef48331f83b.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 批量获取多个key对应的value：</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss">MGET <span class="hljs-built_in">key</span> [<span class="hljs-built_in">key</span> ...]<br></code></pre></td></tr></table></figure>
-
-<p>获取前面设置的key对应的value：</p>
-<p><img src="https://source.icode504.com/images/image-9b58a9f114c3e1a30846ffff8cd8af5c.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 批量设置一个或多个key-value对，<strong>当前仅当所有给定的key都不存在</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MSETNX key value [key value ...]<br></code></pre></td></tr></table></figure>
-
-<p>执行成功返回1，如果命令中的key已经存在，则执行失败，返回结果是0：</p>
-<p><img src="https://source.icode504.com/images/image-fb8b56760bf93b030a66d9c43b3b823f.png" srcset="/img/loading.gif" lazyload></p>
-<p>MSETNX具有原子性，所给的key-value要么执行成功，如果有一个key已经存在，那么这个命令就不会执行成功。</p>
-<p>6. 获取指定区间范围内的值：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GETRANGE key start end<br></code></pre></td></tr></table></figure>
-
-<p>假设key对应的value默认的长度是<code>value.length</code>。和Java的字符串类似，Redis字符串从左向有得出的范围是$[0,value.length)$。</p>
-<p>Redis对于value的索引值范围也可以从当前字符串最末尾的字符索引值是-1，前一个字符索引值为-2，以此类推（从右向左）。由此我们也可以得出Redis字符串索引值范围是$[-value.length, -1]$。</p>
-<p>假设当前有一个key，对应的value是iCode504，下图就是对正向索引值范围和逆向索引值范围的分析：</p>
-<p><img src="https://source.icode504.com/images/image-1076b561c2fa8becf4dd98d60323243f.png" srcset="/img/loading.gif" lazyload></p>
-<p>我们在使用上述GETRANGE命令时，start和end的索引值范围是$[0, value.length)$或者$[-value.length, -1]$，两个范围的值可以混用。例如：value的开始位置0，末尾是-1，如果想通过GETRANGE获取整个字符串，那么执行命令就是<code>GETRANGE 0 -1</code>。</p>
-<p>以下是GETRANGE命令的使用：</p>
-<p><img src="https://source.icode504.com/images/image-dcf603c77dbe6061d0dba8512660118f.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 将当前key对应的value某个偏移量覆盖新值（overwriteValue），</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">SETRANGE key <span class="hljs-built_in">offset</span> value<br></code></pre></td></tr></table></figure>
-
-<p>其中offset是偏移量，它本质上就是一个索引值，这个命令是将当前offset及之后覆盖新值value，覆盖区间：$[offset, offset + value.length)$</p>
-<p>以下是SETRANGE实现数据覆盖的原理图：</p>
-<p><img src="https://source.icode504.com/images/image-9ad4794848618a4e0784890300a8d998.png" srcset="/img/loading.gif" lazyload></p>
-<p>以下是SETRANGE命令的使用：</p>
-<p><img src="https://source.icode504.com/images/image-7e6e141d7031ea51939d41eb4f442f6c.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 数值加减操作：必须保证key对应的value是数字才可以进行加减操作。</p>
-<p>下面命令的返回值都是数值增加&#x2F;减少的结果：</p>
-<p>递增数值，每次自增1：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">INCR key<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-e6c32a793ccd237c80cd561489f6b26a.png" srcset="/img/loading.gif" lazyload></p>
-<p>增加指定的整数：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">INCRBY key increment<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-575a722e1c570676e93783735291f1cb.png" srcset="/img/loading.gif" lazyload></p>
-<p>递减数值，每次自减1：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DECR key<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-fe3517bfd85889618543507b47d496c8.png" srcset="/img/loading.gif" lazyload></p>
-<p>减少指定的整数：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DECR key decrement<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-b27415726001c043d5860c790317574a.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 获取字符串长度：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">STRLEN key<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-3aa4ff5e2541e511d9cb20648b5c6e4c.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 内容追加（在字符串末尾添加内容）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">APPEND key value<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-32754c3500385b5f25a6238f2f9468b9.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 当前key不存在时，创建key；存在则不执行上述操作（该命令可用于分布式锁）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SETNX key value<br></code></pre></td></tr></table></figure>
-
-<p>如果执行成功，返回结果是1；如果失败，返回结果是0</p>
-<p><img src="https://source.icode504.com/images/image-4dae23cd2ea1dd158f9773bc134dd903.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 为当前key设置过期时间（单位：秒，该命令可用于分布式锁）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SETEX key seconds value<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-a5d91ddff5c5b28557b761e191b798e9.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="13">
-<li>GETSET命令：先执行GET命令并返回当前key对应的value，然后对key<strong>立即执行</strong>GET操作：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GETSET key value<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-94033a91a726b3d72b0526a089dbb90b.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Redis字符串命令的注意事项"><a href="#三、Redis字符串命令的注意事项" class="headerlink" title="三、Redis字符串命令的注意事项"></a>三、Redis字符串命令的注意事项</h1><p>大多数字符串命令的时间复杂度是$O(1)$，这也就意味着执行这些命令效率非常高。需要注意的是，如下几个命令的时间复杂度是$O(n)$：</p>
-<ul>
-<li>SUBSTR</li>
-<li>GETRANGE</li>
-<li>SETRANGE</li>
-</ul>
-<p>这几个随机访问的字符串命令在处理超大字符串的时候可能会出现性能问题。</p>
+<p><img src="https://source.icode504.com/images/image-c31916fcd8d7887e294e9af22016c49b.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -693,8 +608,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis数据类型之字符串类型string</div>
-      <div>https://www.icode504.com/posts/87.html</div>
+      <div>Redis数据类型之基数统计HyperLogLog</div>
+      <div>https://www.icode504.com/posts/106.html</div>
     </div>
     <div class="license-meta">
       
@@ -738,18 +653,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/88.html" title="Linux Ubuntu桌面版安装配置教程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Linux Ubuntu桌面版安装配置教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/86.html" title="Redis的key（键）相关操作">
-                        <span class="hidden-mobile">Redis的key（键）相关操作</span>
+                      <a href="/posts/105.html" title="DBeaver加快依赖下载速度">
+                        <span class="hidden-mobile">DBeaver加快依赖下载速度</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

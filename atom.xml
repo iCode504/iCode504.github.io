@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T11:45:15.956Z</updated>
+  <updated>2025-04-13T11:50:13.075Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis数据类型之基数统计HyperLogLog</title>
+    <link href="https://www.icode504.com/posts/106.html"/>
+    <id>https://www.icode504.com/posts/106.html</id>
+    <published>2025-04-13T11:50:13.075Z</published>
+    <updated>2025-04-13T11:50:13.075Z</updated>
+    
+    
+    <summary type="html">Redis基数统计类型HyperLogLog介绍和常用命令。</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库（NoSQL）" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/"/>
+    
+    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>DBeaver加快依赖下载速度</title>
@@ -538,33 +567,6 @@
     <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
     
     <category term="TinyRDM" scheme="https://www.icode504.com/tags/TinyRDM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js安装、配置教程（macOS版）</title>
-    <link href="https://www.icode504.com/posts/84.html"/>
-    <id>https://www.icode504.com/posts/84.html</id>
-    <published>2025-04-13T07:50:35.773Z</published>
-    <updated>2025-04-13T07:50:35.777Z</updated>
-    
-    
-    <summary type="html">这篇教程旨在为 macOS 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
-    
-    <category term="前端框架工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
-    
-    <category term="Node.js" scheme="https://www.icode504.com/tags/Node-js/"/>
-    
-    <category term="Homebrew" scheme="https://www.icode504.com/tags/Homebrew/"/>
     
   </entry>
   
