@@ -4,6 +4,43 @@
   
   
   <entry>
+    <title>Git安装配置教程（Linux通用版）</title>
+    <link href="/posts/72.html"/>
+    <url>/posts/72.html</url>
+    
+    <content type="html"><![CDATA[<p>Git是一种分布式版本控制系统，用于跟踪文件和文件夹的变化，并协调多人在同一个项目中的工作。它允许开发者在不同的分支上并行开发，轻松地将更改合并到主分支中，并提供了强大的版本控制和协作功能。</p><p>以下是Linux环境下Git的安装教程。</p><p>有需要在虚拟机安装Linux系统的小伙伴，请点击下方任意一个链接查看安装配置教程：</p><table><thead><tr><th align="center"></th><th align="center">CentOS</th><th align="center">Ubuntu</th><th align="center">Debian</th></tr></thead><tbody><tr><td align="center">安装教程</td><td align="center"><a href="./48.html">点我查看</a></td><td align="center"><a href="./51.html">点我查看</a></td><td align="center"><a href="./52.html">点我查看</a></td></tr></tbody></table><h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>执行如下命令查看当前Linux发行版本信息：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br></code></pre></td></tr></table></figure><p>这里我使用的Debian操作系统：</p><p><img src="https://source.icode504.com/images/image-20240430090546557.png"></p><h1 id="二、安装Git"><a href="#二、安装Git" class="headerlink" title="二、安装Git"></a>二、安装Git</h1><p>1. 请根据当前操作系统，执行如下命令安装Git：</p><ul><li>Ubuntu&#x2F;Debian</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y install git<br></code></pre></td></tr></table></figure><ul><li>CentOS</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y install git<br></code></pre></td></tr></table></figure><p>2. 安装完成后，执行如下命令查看当前Git的版本信息：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git --version<br></code></pre></td></tr></table></figure><p>如果出现下图版本信息提示说明Git安装成功：</p><p><img src="https://source.icode504.com/images/image-20240430085355974.png"></p><h1 id="三、卸载Git（可选）"><a href="#三、卸载Git（可选）" class="headerlink" title="三、卸载Git（可选）"></a>三、卸载Git（可选）</h1><p>根据自己的操作系统，执行如下命令卸载Git：</p><ul><li>Ubuntu&#x2F;Debian</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y remove git<br></code></pre></td></tr></table></figure><ul><li>CentOS</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y uninstall git<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Linux</category>
+      
+      <category>版本控制工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+      <tag>CentOS</tag>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Debian</tag>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>qBittorrent安装教程（Windows版）</title>
     <link href="/posts/71.html"/>
     <url>/posts/71.html</url>
