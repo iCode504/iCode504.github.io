@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T03:57:52.461Z</updated>
+  <updated>2025-04-13T05:35:33.273Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux Ubuntu安装配置教程</title>
+    <link href="https://www.icode504.com/posts/51.html"/>
+    <id>https://www.icode504.com/posts/51.html</id>
+    <published>2025-04-13T05:35:33.269Z</published>
+    <updated>2025-04-13T05:35:33.273Z</updated>
+    
+    
+    <summary type="html">本教程详细介绍Linux Ubuntu的安装配置步骤，包括虚拟机创建、系统安装、网络配置、用户权限设置等关键内容，帮助用户快速搭建稳定、高效的Ubuntu系统环境。</summary>
+    
+    
+    
+    <category term="系统安装" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Ubuntu" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/Ubuntu/"/>
+    
+    
+    <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>Pycharm的安装、配置与卸载教程（Windows版）</title>
@@ -508,37 +529,6 @@
     <category term="Go" scheme="https://www.icode504.com/tags/Go/"/>
     
     <category term="Golang" scheme="https://www.icode504.com/tags/Golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intellij IDEA/DataGrip配置MySQL8.0教程</title>
-    <link href="https://www.icode504.com/posts/45.html"/>
-    <id>https://www.icode504.com/posts/45.html</id>
-    <published>2025-04-12T16:00:00.000Z</published>
-    <updated>2025-04-13T03:34:50.087Z</updated>
-    
-    
-    <summary type="html">本文提供了关于如何在Intellij IDEA/DataGrip中配置MySQL的详细教程。通过此教程，读者将了解如何安装MySQL插件、配置数据库并测试连接。</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/"/>
-    
-    <category term="MySQL" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/MySQL/"/>
-    
-    <category term="DataGrip" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/DataGrip/"/>
-    
-    <category term="MySQL" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/DataGrip/MySQL/"/>
-    
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
-    
-    <category term="MySQL" scheme="https://www.icode504.com/tags/MySQL/"/>
-    
-    <category term="DataGrip" scheme="https://www.icode504.com/tags/DataGrip/"/>
     
   </entry>
   
