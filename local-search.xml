@@ -4,6 +4,43 @@
   
   
   <entry>
+    <title>EasyExcel介绍与依赖导入</title>
+    <link href="/posts/58.html"/>
+    <url>/posts/58.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、EasyExcel介绍"><a href="#一、EasyExcel介绍" class="headerlink" title="一、EasyExcel介绍"></a>一、EasyExcel介绍</h1><p>EasyExcel是由阿里巴巴一款开源的读写Excel项目，和Apache POI相比，它的最大优势就是在尽可能节省内存的情况下支持读写百兆的Excel，目前维护的版本是3.1.x-3.2.x（截止到2024年3月），更多内容说明可以到官网查看：<a href="https://easyexcel.opensource.alibaba.com/">点我进入官网</a></p><p><img src="https://source.icode504.com/images/large-20799fd0a966e90931a35cbfff69253d.png" alt="16M内存23秒读取了75M（46W行25列）的Excel"></p><h1 id="二、创建项目"><a href="#二、创建项目" class="headerlink" title="二、创建项目"></a>二、创建项目</h1><p>1. 请确保电脑上已经安装如下软件：</p><ul><li>Java开发工具：JDK</li><li>集成开发环境：Intellij IDEA或者Eclipse</li><li>项目构建工具：Maven或者Gradle</li></ul><p>需要安装的小伙伴根据自身操作系统查看安装教程：</p><table><thead><tr><th align="center"></th><th align="center">Windows</th><th align="center">macOS</th><th align="center">Linux</th></tr></thead><tbody><tr><td align="center">JDK 8</td><td align="center"><a href="./1.html">点我查看</a></td><td align="center">敬请期待</td><td align="center"><a href="./55.html">点我查看</a></td></tr><tr><td align="center">Intellij IDEA</td><td align="center"><a href="./14.html">点我查看</a></td><td align="center">敬请期待</td><td align="center">暂无</td></tr><tr><td align="center">Eclipse</td><td align="center"><a href="./30.html">点我查看</a></td><td align="center">敬请期待</td><td align="center">暂无</td></tr><tr><td align="center">Maven</td><td align="center"><a href="./22.html">点我查看</a></td><td align="center">敬请期待</td><td align="center"><a href="./56.html">点我查看</a></td></tr><tr><td align="center">Gradle</td><td align="center"><a href="./23.html">点我查看</a></td><td align="center">敬请期待</td><td align="center"><a href="./57.html">敬请期待</a></td></tr></tbody></table><p>2. 打开Intellij IDEA，创建一个项目：</p><blockquote><p>以下提供了Maven和Gradle两种方式创建项目，任选其一创建项目即可。</p></blockquote><table><thead><tr><th align="center">Maven构建项目</th><th align="center">Gradle构建项目</th></tr></thead><tbody><tr><td align="center"><img src="https://source.icode504.com/images/image-20240305172709416.png"></td><td align="center"><img src="https://source.icode504.com/images/image-20240305173309106.png" alt="image-20240305173309106"></td></tr><tr><td align="center"><img src="https://source.icode504.com/images/image-20240305173055254.png"></td><td align="center"><img src="https://source.icode504.com/images/image-20240305173055254.png"></td></tr></tbody></table><p>3. 导入依赖（这里我使用的是3.1.1版本）</p><ul><li>pom.xml</li></ul><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- easyexcel --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>easyexcel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 日志框架slf4j --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.slf4j<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>slf4j-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.7.36<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- lombok(简化getter/setter、构造器，仅推荐学习阶段使用) --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.18.24<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 测试工具Junit5 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.junit.jupiter<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit-jupiter-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.8.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure><ul><li>build.gradle</li></ul><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs groovy">implementation <span class="hljs-string">&#x27;com.alibaba:easyexcel:3.1.1&#x27;</span><br>implementation <span class="hljs-string">&#x27;org.slf4j:slf4j-api:1.7.36&#x27;</span><br>compileOnly <span class="hljs-string">&#x27;org.projectlombok:lombok:1.18.24&#x27;</span><br>testImplementation <span class="hljs-string">&#x27;org.junit.jupiter:junit-jupiter-api:5.8.2&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>常用工具</category>
+      
+      <category>Java</category>
+      
+      <category>文档操作</category>
+      
+      <category>EasyExcel</category>
+      
+      <category>使用EasyExcel将数据写入到Excel文件</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>EasyExcel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Gradle安装配置教程（Linux通用版）</title>
     <link href="/posts/57.html"/>
     <url>/posts/57.html</url>

@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:13:29.918Z</updated>
+  <updated>2025-04-13T06:17:56.117Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EasyExcel介绍与依赖导入</title>
+    <link href="https://www.icode504.com/posts/58.html"/>
+    <id>https://www.icode504.com/posts/58.html</id>
+    <published>2025-04-13T06:17:56.117Z</published>
+    <updated>2025-04-13T06:17:56.117Z</updated>
+    
+    
+    <summary type="html">本文简要介绍了EasyExcel的优势，并创建了Maven/Gradle项目，并导入相关的依赖</summary>
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="常用工具" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/"/>
+    
+    <category term="文档操作" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
+    
+    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
+    
+  </entry>
   
   <entry>
     <title>Gradle安装配置教程（Linux通用版）</title>
@@ -488,31 +519,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Eclipse配置PostgreSQL教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/37.html"/>
-    <id>https://www.icode504.com/posts/37.html</id>
-    <published>2025-04-13T03:05:35.724Z</published>
-    <updated>2025-04-13T03:05:35.724Z</updated>
-    
-    
-    <summary type="html">Eclipse配置PostgreSQL教程</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Eclipse" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Eclipse/"/>
-    
-    <category term="PostgreSQL" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Eclipse/PostgreSQL/"/>
-    
-    
-    <category term="Eclipse" scheme="https://www.icode504.com/tags/Eclipse/"/>
-    
-    <category term="PostgreSQL" scheme="https://www.icode504.com/tags/PostgreSQL/"/>
     
   </entry>
   
