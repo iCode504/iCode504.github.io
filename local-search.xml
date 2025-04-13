@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Visual Studio安装配置教程（Windows版）</title>
+    <link href="/posts/66.html"/>
+    <url>/posts/66.html</url>
+    
+    <content type="html"><![CDATA[<p>Visual Studio是由微软开发的集成开发环境（IDE），用于软件开发和应用程序编程。它支持多种编程语言，包括C#、C++、Python、JavaScript等，因此广泛应用于各种软件开发项目中，包括桌面应用程序、网站、移动应用程序等。</p><p>Visual Studio拥有丰富的功能和工具，使开发人员能够高效地编写、调试和测试代码。其中一些主要特性包括：</p><ol><li><p><strong>代码编辑器</strong>：提供了强大的代码编辑功能，包括语法高亮、自动补全、代码片段等，以提高编码效率。</p></li><li><p><strong>调试工具</strong>：支持在代码中设置断点，逐步执行代码并观察变量的值，以便定位和修复程序中的错误。</p></li><li><p><strong>图形化设计工具</strong>：包括界面设计器、数据库设计器等，用于快速创建用户界面和数据库结构。</p></li><li><p><strong>版本控制集成</strong>：与版本控制系统（如Git、SVN）集成，方便团队协作开发，管理代码版本。</p></li><li><p><strong>扩展性</strong>：Visual Studio支持各种插件和扩展，可以根据需要添加新的功能和工具，以满足特定项目的需求。</p></li><li><p><strong>跨平台开发</strong>：Visual Studio支持开发各种平台的应用程序，包括Windows、Linux、iOS和Android等。</p></li></ol><p>以下是Windows环境下安装Visual Studio教程：</p><h1 id="一、下载Visual-Studio安装器"><a href="#一、下载Visual-Studio安装器" class="headerlink" title="一、下载Visual Studio安装器"></a>一、下载Visual Studio安装器</h1><p>1. 下载地址：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/">点我查看</a></p><p>2. 对于个人学习开发，选择社区版的Visual Studio即可。点击左下角的下载按钮，开始下载VS的安装器</p><p><img src="https://source.icode504.com/images/image-20231229160920246.png"></p><h1 id="二、安装前准备——网络设置"><a href="#二、安装前准备——网络设置" class="headerlink" title="二、安装前准备——网络设置"></a>二、安装前准备——网络设置</h1><p>1. 在右下角<strong>鼠标右键点击</strong>网络，这里我使用的是宽带连接，<strong>打开“网络和Internet”设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229161633822.png"></p><p><img src="https://source.icode504.com/images/image-20231229161658718.png"></p><p>2. 在状态设置中，下方有一个高级网络设置，点击<strong>更改适配器选项</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229161755127.png"></p><p>3. <strong>鼠标右键</strong>点击网络，菜单倒数第二个，选择<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229161958376.png"></p><p>4. <strong>取消勾选</strong>Internet 协议版本 6（TCP&#x2F;IPv6）</p><p><img src="https://source.icode504.com/images/image-20231229162117601.png"></p><p>5. 选择<strong>Internet协议版本 4（TCP&#x2F;IPv4）</strong>，然后点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229162316539.png"></p><p>6. DNS服务器服务器地址选择<strong>使用下面的DNS服务器地址</strong>（下方第二个），首选DNS服务器设置为<code>8.8.8.8</code>，完成后点击确定：</p><p><img src="https://source.icode504.com/images/image-20231229162617811.png"></p><h1 id="三、安装Visual-Studio"><a href="#三、安装Visual-Studio" class="headerlink" title="三、安装Visual Studio"></a>三、安装Visual Studio</h1><p>1. 双击打开刚刚下载好的VS安装器，弹出一个小窗口，点击<strong>继续</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229161128976.png"></p><p>2. 准备VS安装程序中，请耐心等待（预计需要等待2~5分钟）：</p><p><img src="https://source.icode504.com/images/image-20231229161150347.png"></p><p>3. 进入安装界面后（页面加载预计需要3~5分钟，请耐心等待），左上角菜单选择第四个<strong>安装位置</strong>，推荐安装在除C盘以外的位置（这里我安装了D盘），并且路径中建议只包含英文字符：</p><p><img src="https://source.icode504.com/images/image-20231229163505725.png"></p><p>4. 点击左上角第三个菜单<strong>语言包</strong>，按照默认勾选的就可以（中文简体和英文）：</p><p><img src="https://source.icode504.com/images/image-20231229163823319.png"></p><p>5. 点击左上角<strong>工作负荷</strong>，根据自己使用场景来安装，这里我要学习C++开发，只需要<strong>勾选使用C++的桌面开发</strong>，完成后点击右下角的<strong>安装</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229164719742.png"></p><p>6. 安装中，请耐心等待（预计需要等待20~30分钟）：</p><p><img src="https://source.icode504.com/images/image-20231229164837515.png"></p><p>7. 安装完毕，点击<strong>确定</strong>（没有此窗口的小伙伴请跳转到下一步）：</p><p><img src="https://source.icode504.com/images/image-20231229171425937.png"></p><p>8. 点击启动，启动Visual Studio Community 2022：</p><p><img src="https://source.icode504.com/images/image-20231229175937840.png"></p><p>9. 推荐登录，没有账号可以创建账户：</p><p><img src="https://source.icode504.com/images/image-20231229180039421.png"></p><p>10. 登录成功，此时出现了创建项目界面：</p><p><img src="https://source.icode504.com/images/image-20231229180253254.png"></p><h1 id="四、创建C-项目"><a href="#四、创建C-项目" class="headerlink" title="四、创建C++项目"></a>四、创建C++项目</h1><p>1. 点击<strong>创建新项目</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229180329093.png"></p><p>2. 选择<strong>控制台应用</strong>，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229180424885.png"></p><p>3. 按照下图所示修改项目信息，完成后点击<strong>创建</strong>：</p><p><img src="https://source.icode504.com/images/image-20231229180700557.png"></p><p>4. 进入编辑器界面以后，右侧解决方案资源管理器中已经为我们创建了一个实例文件：<code>MyWorkspace231229.cpp</code>，这个<code>cpp</code>文件我们点击上方的开始执行按钮（或者按<kbd>Ctrl</kbd><kbd>F5</kbd>）运行一下这个程序：</p><p><img src="https://source.icode504.com/images/image-20231229181024875.png"></p><p>5. 此时会弹出一个<code>Hello, world</code>控制台窗口就说明程序运行成功！</p><p><img src="https://source.icode504.com/images/image-20231229181107515.png"></p><h1 id="五、卸载Visual-Studio（可选）"><a href="#五、卸载Visual-Studio（可选）" class="headerlink" title="五、卸载Visual Studio（可选）"></a>五、卸载Visual Studio（可选）</h1><div class="note note-danger">            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><blockquote><p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p><p>已经安装的小伙伴可以接着往下看！</p></blockquote><p>1. 打开Geek Installer，在程序列表中找到Visual Studio，鼠标右键，点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240416160607127.png"></p><p>2. 此时会加载安装器，加载完成后会弹出一个是否卸载的窗口，选择<strong>是</strong>：</p><p><img src="https://source.icode504.com/images/image-20240416160729270.png"></p><p>3. 卸载中，请耐心等待（预计需要等待5分钟以上）：</p><p><img src="https://source.icode504.com/images/image-20240416160754932.png"></p><p>4. 卸载完成，点击关闭即可：</p><p><img src="https://source.icode504.com/images/image-20240416161511251.png"></p><p>5. 此时Geek扫描无残留文件，直接点击关闭即可：</p><p><img src="https://source.icode504.com/images/image-20240416161554587.png"></p><p>6. 将Visual Studio的安装器也卸载：找到Visual Studio Installer，鼠标右键点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240416162636148.png"></p><p>7. 此时弹窗一个卸载窗口，点击<strong>卸载</strong>：</p><p><img src="https://source.icode504.com/images/image-20240416162738912.png"></p><p>8. 卸载完成，点击<strong>确定</strong>：</p><p><img src="https://source.icode504.com/images/image-20240416162831757.png"></p><p>9. 此时Geek扫描到残留文件，直接点击完成就会清理卸载残留：</p><p><img src="https://source.icode504.com/images/image-20240416162917310.png"></p><p>10. 点击完成，至此Visual Studio卸载完成：</p><p><img src="https://source.icode504.com/images/image-20240416163020699.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>集成开发环境</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Visual Studio</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Tomcat安装配置教程（Windows版）</title>
     <link href="/posts/64.html"/>
     <url>/posts/64.html</url>

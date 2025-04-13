@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:38:48.430Z</updated>
+  <updated>2025-04-13T06:42:54.921Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio安装配置教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/66.html"/>
+    <id>https://www.icode504.com/posts/66.html</id>
+    <published>2025-04-13T06:42:54.921Z</published>
+    <updated>2025-04-13T06:42:54.921Z</updated>
+    
+    
+    <summary type="html">本文将指导您在Windows操作系统上安装、配置和卸载Visual Studio，并在IDE上运行一个简单的C++程序。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="Visual Studio" scheme="https://www.icode504.com/tags/Visual-Studio/"/>
+    
+  </entry>
   
   <entry>
     <title>Tomcat安装配置教程（Windows版）</title>
@@ -498,31 +523,6 @@
     <category term="MySQL" scheme="https://www.icode504.com/tags/MySQL/"/>
     
     <category term="Eclipse" scheme="https://www.icode504.com/tags/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Live Server插件安装、使用与卸载教程</title>
-    <link href="https://www.icode504.com/posts/44.html"/>
-    <id>https://www.icode504.com/posts/44.html</id>
-    <published>2025-04-13T03:28:06.914Z</published>
-    <updated>2025-04-13T03:28:06.914Z</updated>
-    
-    
-    <summary type="html">这篇教程提供Live Server插件的简明安装、使用与卸载指南，帮助用户编写代码并且在浏览器上实时显示。</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Visual Studio Code（VS Code）" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/"/>
-    
-    <category term="Live Server" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/Live-Server/"/>
-    
-    
-    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
-    
-    <category term="Live Server" scheme="https://www.icode504.com/tags/Live-Server/"/>
     
   </entry>
   
