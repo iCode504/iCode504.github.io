@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</title>
+    <link href="/posts/63.html"/>
+    <url>/posts/63.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>笔者使用VS Code写Vue2代码时，在<code>template</code>标签里只能写一个根标签，在这个根标签里面可以任意多个标签：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;!-- Vue2在template标签里面只能写一个根标签，这里我使用的div标签 --&gt;<br>  &lt;div&gt;<br>      &lt;!-- 在这个根标签div中可以写多个标签 --&gt;<br>      &lt;h1&gt;员工信息&lt;/h1&gt;<br>      &lt;h2&gt;姓名: &#123;&#123;employeeName&#125;&#125;&lt;/h2&gt;<br>      &lt;!-- 其他代码已省略 --&gt;<br>  &lt;/div&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure><p>在Vue3中，可以不用在<code>&lt;template&gt;</code>中写根标签了，直接写成如下形式：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;!-- 直接在template标签中写代码 --&gt;<br>  &lt;h1&gt;员工信息&lt;/h1&gt;<br>  &lt;h2&gt;姓名: &#123;&#123;employeeName&#125;&#125;&lt;/h2&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure><p>但是，VS Code会对当前代码进行语法检查，会出现如下报错提示，虽然不影响正常使用，但是这样挂着报错信息也不太好看（属于强迫症了哈哈哈）：</p><p><img src="https://source.icode504.com/images/image-20240401100744537.png"></p><p>出现上述问题的主要原因是VS Code中安装的插件Vetur中对<code>&lt;template&gt;</code>标签检查的问题。</p><h1 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h1><p>1. 点击左侧插件商店（或者按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd>）：</p><p><img src="https://source.icode504.com/images/image-20240401101233136.png"></p><p>2. 找到Vetur插件，点击<strong>设置</strong>（小齿轮），然后点击<strong>扩展设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240401101417022.png"></p><p>3. 在当前设置中一直向下翻到最后，找到<strong>Vetur &gt; Validation: Template</strong>，然后<strong>取消勾选</strong><code>Validate vue-html in &lt;template&gt; using eslint-plugin-vue</code>，如下图：</p><p><img src="https://source.icode504.com/images/image-20240401101539176.png"></p><p>4. 此时在<code>&lt;template&gt;</code>标签中就不会出现语法检查提示错误现象了，正常启动项目也不会出现错误信息：</p><p><img src="https://source.icode504.com/images/image-20240401101939631.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>前端</category>
+      
+      <category>Vue</category>
+      
+      <category>Vue Bug</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vue</tag>
+      
+      <tag>Vue Bug</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>EasyExcel的列操作</title>
     <link href="/posts/62.html"/>
     <url>/posts/62.html</url>

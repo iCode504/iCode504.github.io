@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:27:17.201Z</updated>
+  <updated>2025-04-13T06:29:35.782Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</title>
+    <link href="https://www.icode504.com/posts/63.html"/>
+    <id>https://www.icode504.com/posts/63.html</id>
+    <published>2025-04-13T06:29:35.782Z</published>
+    <updated>2025-04-13T06:29:35.782Z</updated>
+    
+    
+    <summary type="html">本文描述了使用VS Code编写Vue3代码时提示如下错误信息[vue/no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue，并给出解决方案</summary>
+    
+    
+    
+    <category term="前端" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Vue" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
+    
+    <category term="Vue Bug" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/Vue/Vue-Bug/"/>
+    
+    
+    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
+    
+    <category term="Vue Bug" scheme="https://www.icode504.com/tags/Vue-Bug/"/>
+    
+  </entry>
   
   <entry>
     <title>EasyExcel的列操作</title>
@@ -498,31 +523,6 @@
     <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
     
     <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Winodws Subsystem for Linux（WSL）安装教程</title>
-    <link href="https://www.icode504.com/posts/42.html"/>
-    <id>https://www.icode504.com/posts/42.html</id>
-    <published>2025-04-13T03:23:55.450Z</published>
-    <updated>2025-04-13T03:23:55.450Z</updated>
-    
-    
-    <summary type="html">本文介绍了在Windows系统上安装配置WSL的详细步骤，让用户能够轻松在Windows平台上运行Linux Ubantu环境。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="服务器&amp;虚拟机" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="WSL" scheme="https://www.icode504.com/tags/WSL/"/>
     
   </entry>
   

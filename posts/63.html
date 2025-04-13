@@ -18,33 +18,31 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="创建并通过npm run命令启动Vue项目报错Component name xxx should always be multi-word vue&#x2F;multi-word-component-names的解决办法">
+    <meta name="description" content="本文描述了使用VS Code编写Vue3代码时提示如下错误信息[vue&#x2F;no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue，并给出解决方案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue项目启动报错 Component name xxx should always be multi-word vue&#x2F;multi-word-component-names">
-<meta property="og:url" content="https://www.icode504.com/posts/53.html">
+<meta property="og:title" content="VS Code编写Vue3代码时提示[vue&#x2F;no-multiple-template-root]The template root requires exactly one element.">
+<meta property="og:url" content="https://www.icode504.com/posts/63.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="创建并通过npm run命令启动Vue项目报错Component name xxx should always be multi-word vue&#x2F;multi-word-component-names的解决办法">
+<meta property="og:description" content="本文描述了使用VS Code编写Vue3代码时提示如下错误信息[vue&#x2F;no-multiple-template-root]The template root requires exactly one element. eslint-plugin-vue，并给出解决方案">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229143247782.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229143710857.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229143934337.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229150105631.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229150407355.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229150713246.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240229150916373.png">
-<meta property="article:published_time" content="2025-04-13T05:43:12.682Z">
-<meta property="article:modified_time" content="2025-04-13T05:43:12.682Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401100744537.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101233136.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101417022.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101539176.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240401101939631.png">
+<meta property="article:published_time" content="2025-04-13T06:29:35.782Z">
+<meta property="article:modified_time" content="2025-04-13T06:29:35.782Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Vue">
 <meta property="article:tag" content="Vue Bug">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20240229143247782.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-20240401100744537.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names - iCode504个人博客</title>
+  <title>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element. - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</span>
+            <span id="subtitle">VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</span>
           
         </div>
 
@@ -226,7 +224,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 13:43" pubdate>
+        <time datetime="2025-04-13 14:29" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -361,7 +359,7 @@
       
         <a href="/posts/53.html" title="Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</span>
         </a>
       
@@ -370,7 +368,7 @@
       
         <a href="/posts/63.html" title="VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element."
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</span>
         </a>
       
@@ -401,33 +399,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</h1>
+            <h1 id="seo-header">VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>今天在写Vue代码时，启动时出现了报错信息：</p>
-<p><img src="https://source.icode504.com/images/image-20240229143247782.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、问题分析"><a href="#二、问题分析" class="headerlink" title="二、问题分析"></a>二、问题分析</h1><p>出现上述错误的主要原因就是我们的Vue文件名不符合Vue官方的命名规范</p>
-<p><img src="https://source.icode504.com/images/image-20240229143710857.png" srcset="/img/loading.gif" lazyload></p>
-<p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/style-guide/rules-essential">Vue官方文档</a>提供了详细的说明：</p>
-<p><font color="FF0000">除了App组件以外，其他所有的组件都应该以多个单词组合命名</font>。这样做的目的是避免和HTML自带的标签冲突（因为所有HTML标签都是用单个单词命名）。</p>
-<p><img src="https://source.icode504.com/images/image-20240229143934337.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h1><p>共有两种解决方案任选其一：</p>
-<h2 id="方案一：修改文件名（虽然麻烦，但是推荐）"><a href="#方案一：修改文件名（虽然麻烦，但是推荐）" class="headerlink" title="方案一：修改文件名（虽然麻烦，但是推荐）"></a>方案一：修改文件名（虽然麻烦，但是推荐）</h2><p>将所有组件中出现的单个单词都修改成多个单词命名（大驼峰命名法或者单词之间使用<code>-</code>做分隔），这里我将我的组件都命名成<code>My</code>+<code>xxx</code>的形式，例如：<code>MySchool</code>、<code>MyStudent</code>：</p>
-<p><img src="https://source.icode504.com/images/image-20240229150105631.png" srcset="/img/loading.gif" lazyload></p>
-<p>需要注意的是，文件名修改后，文件中出现和文件名相关的内容也需要修改：</p>
-<p><img src="https://source.icode504.com/images/image-20240229150407355.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方案二：修改vue-config-js文件（简单，但只推荐在学习中使用）"><a href="#方案二：修改vue-config-js文件（简单，但只推荐在学习中使用）" class="headerlink" title="方案二：修改vue.config.js文件（简单，但只推荐在学习中使用）"></a>方案二：修改vue.config.js文件（简单，但只推荐在学习中使用）</h2><p>打开<code>vue.config.js</code>文件，添加如下内容</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">lintOnSave: true<br></code></pre></td></tr></table></figure>
+                <h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>笔者使用VS Code写Vue2代码时，在<code>template</code>标签里只能写一个根标签，在这个根标签里面可以任意多个标签：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;!-- Vue2在template标签里面只能写一个根标签，这里我使用的div标签 --&gt;<br>  &lt;div&gt;<br>      &lt;!-- 在这个根标签div中可以写多个标签 --&gt;<br>      &lt;h1&gt;员工信息&lt;/h1&gt;<br>      &lt;h2&gt;姓名: &#123;&#123;employeeName&#125;&#125;&lt;/h2&gt;<br>      &lt;!-- 其他代码已省略 --&gt;<br>  &lt;/div&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure>
 
-<p>添加效果如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20240229150713246.png" srcset="/img/loading.gif" lazyload></p>
-<p>通过<code>npm run</code>命令也可以运行：</p>
-<p><img src="https://source.icode504.com/images/image-20240229150916373.png" srcset="/img/loading.gif" lazyload></p>
-<p>虽然这样改确实很方便，但是文件命名方式有可能违背了Vue组件命名规范，仅限制在学习过程中使用！</p>
-<h1 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/XYH-Learning/p/16305348.html">https://www.cnblogs.com/XYH-Learning/p/16305348.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://vuejs.org/style-guide/rules-essential">https://vuejs.org/style-guide/rules-essential</a></p>
+<p>在Vue3中，可以不用在<code>&lt;template&gt;</code>中写根标签了，直接写成如下形式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;!-- 直接在template标签中写代码 --&gt;<br>  &lt;h1&gt;员工信息&lt;/h1&gt;<br>  &lt;h2&gt;姓名: &#123;&#123;employeeName&#125;&#125;&lt;/h2&gt;<br>&lt;/template&gt;<br></code></pre></td></tr></table></figure>
+
+<p>但是，VS Code会对当前代码进行语法检查，会出现如下报错提示，虽然不影响正常使用，但是这样挂着报错信息也不太好看（属于强迫症了哈哈哈）：</p>
+<p><img src="https://source.icode504.com/images/image-20240401100744537.png" srcset="/img/loading.gif" lazyload></p>
+<p>出现上述问题的主要原因是VS Code中安装的插件Vetur中对<code>&lt;template&gt;</code>标签检查的问题。</p>
+<h1 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h1><p>1. 点击左侧插件商店（或者按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd>）：</p>
+<p><img src="https://source.icode504.com/images/image-20240401101233136.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 找到Vetur插件，点击<strong>设置</strong>（小齿轮），然后点击<strong>扩展设置</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240401101417022.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在当前设置中一直向下翻到最后，找到<strong>Vetur &gt; Validation: Template</strong>，然后<strong>取消勾选</strong><code>Validate vue-html in &lt;template&gt; using eslint-plugin-vue</code>，如下图：</p>
+<p><img src="https://source.icode504.com/images/image-20240401101539176.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 此时在<code>&lt;template&gt;</code>标签中就不会出现语法检查提示错误现象了，正常启动项目也不会出现错误信息：</p>
+<p><img src="https://source.icode504.com/images/image-20240401101939631.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -489,8 +482,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</div>
-      <div>https://www.icode504.com/posts/53.html</div>
+      <div>VS Code编写Vue3代码时提示[vue/no-multiple-template-root]The template root requires exactly one element.</div>
+      <div>https://www.icode504.com/posts/63.html</div>
     </div>
     <div class="license-meta">
       
@@ -534,18 +527,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/54.html" title="VS Code开启多个标签页">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VS Code开启多个标签页</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/52.html" title="Linux Debian安装教程">
-                        <span class="hidden-mobile">Linux Debian安装教程</span>
+                      <a href="/posts/62.html" title="EasyExcel的列操作">
+                        <span class="hidden-mobile">EasyExcel的列操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
