@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T03:26:02.768Z</updated>
+  <updated>2025-04-13T03:28:06.914Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Live Server插件安装、使用与卸载教程</title>
+    <link href="https://www.icode504.com/posts/44.html"/>
+    <id>https://www.icode504.com/posts/44.html</id>
+    <published>2025-04-13T03:28:06.914Z</published>
+    <updated>2025-04-13T03:28:06.914Z</updated>
+    
+    
+    <summary type="html">这篇教程提供Live Server插件的简明安装、使用与卸载指南，帮助用户编写代码并且在浏览器上实时显示。</summary>
+    
+    
+    
+    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="Visual Studio Code（VS Code）" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/"/>
+    
+    <category term="Live Server" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/Live-Server/"/>
+    
+    
+    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
+    
+    <category term="Live Server" scheme="https://www.icode504.com/tags/Live-Server/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code查看Git提交记录</title>
@@ -522,31 +547,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Maven" scheme="https://www.icode504.com/tags/Maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intellij IDEA安装Scala插件并运行Scala程序</title>
-    <link href="https://www.icode504.com/posts/21.html"/>
-    <id>https://www.icode504.com/posts/21.html</id>
-    <published>2025-04-12T13:30:32.615Z</published>
-    <updated>2025-04-12T13:30:32.615Z</updated>
-    
-    
-    <summary type="html">在Intellij IDEA中安装Scala插件，创建Scala项目以及文件，并运行Scala程序。</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/"/>
-    
-    <category term="Scala" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/Scala/"/>
-    
-    
-    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
-    
-    <category term="Scala" scheme="https://www.icode504.com/tags/Scala/"/>
     
   </entry>
   

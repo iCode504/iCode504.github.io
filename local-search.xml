@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Live Server插件安装、使用与卸载教程</title>
+    <link href="/posts/44.html"/>
+    <url>/posts/44.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、下载安装Live-Server插件"><a href="#一、下载安装Live-Server插件" class="headerlink" title="一、下载安装Live Server插件"></a>一、下载安装Live Server插件</h1><p>1. 打开VS Code左侧插件商店，搜索Live Server并<strong>安装</strong>：</p><p><img src="https://source.icode504.com/images/image-20240206101011065.png"></p><p>2. 安装完成后，点击插件右下角的小齿轮，点击<strong>扩展设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240206104022501.png"></p><p>3. 找到<strong>Custom Browser</strong>，在这里可以选择你要使用的浏览器。这里我选择的是chrome（需要保证电脑本地已经安装了浏览器）：</p><ul><li>null是系统默认的浏览器。</li><li>带PrivateMode是以隐私保护模式打开浏览器。</li></ul><p><img src="https://source.icode504.com/images/image-20240206104446439.png"></p><h1 id="二、Live-Server使用演示"><a href="#二、Live-Server使用演示" class="headerlink" title="二、Live Server使用演示"></a>二、Live Server使用演示</h1><p>1. 在VS Code中创建一个HTML文件：<code>page01.html</code>，代码如下图所示（浏览器页面中无内容），<strong>鼠标右键点击Open with Live Server</strong>：</p><p><img src="https://source.icode504.com/images/image-20240206101705146.png"></p><p>2. 此时我在body标签内写内容，可以在右侧浏览器页面中实时显示：</p><p><img src="https://source.icode504.com/images/240206001.gif"></p><h1 id="三、卸载Live-Server插件（可选）"><a href="#三、卸载Live-Server插件（可选）" class="headerlink" title="三、卸载Live Server插件（可选）"></a>三、卸载Live Server插件（可选）</h1><div class="note note-danger">            <p>这一部分会将插件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><p>1. 打开左侧VS Code左侧插件商店，找到已经安装的Live Server，点击齿轮，然后点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240206100359816.png"></p><p>2. 点击<strong>需要重新加载</strong>。至此，Live Server卸载成功：</p><p><img src="https://source.icode504.com/images/image-20240206100553238.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Visual Studio Code（VS Code）</category>
+      
+      <category>Live Server</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Visual Studio Code</tag>
+      
+      <tag>Live Server</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>VS Code查看Git提交记录</title>
     <link href="/posts/43.html"/>
     <url>/posts/43.html</url>
