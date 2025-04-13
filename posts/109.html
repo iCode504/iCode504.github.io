@@ -18,49 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装JDK 11教程">
+    <meta name="description" content="本教程介绍了在Windows上安装Consul的步骤，包括下载、启动Consul服务。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 11安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/28.html">
+<meta property="og:title" content="Consul安装配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/109.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装JDK 11教程">
+<meta property="og:description" content="本教程介绍了在Windows上安装Consul的步骤，包括下载、启动Consul服务。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111162958652.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111164500464.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111164519079.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101133536759.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111164925746.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111164941122.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165150762.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165212543.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165226556.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165249045.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165445818.png">
-<meta property="og:image" content="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101010932039.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101011132186.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002218161.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002302057.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165721488.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002655185.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002812677.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003131968.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111165930479.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111170010337.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240111170348792.png">
-<meta property="article:published_time" content="2025-04-12T14:09:18.517Z">
-<meta property="article:modified_time" content="2025-04-12T14:09:18.517Z">
+<meta property="og:image" content="https://source.icode504.com/images/72a2d9e6aae503026b7aaa6d96f9f8b7.png">
+<meta property="article:published_time" content="2025-04-13T12:00:09.667Z">
+<meta property="article:modified_time" content="2025-04-13T12:00:09.667Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
 <meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Consul">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20240111162958652.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/72a2d9e6aae503026b7aaa6d96f9f8b7.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 11安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>Consul安装配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -225,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/72a2d9e6aae503026b7aaa6d96f9f8b7.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 11安装配置教程（Windows版）</span>
+            <span id="subtitle">Consul安装配置教程（Windows版）</span>
           
         </div>
 
@@ -242,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 22:09" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 20:00" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -793,17 +771,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
         id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         中间件
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
+      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
            role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
         
         
@@ -820,17 +798,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务注册和配置中心"
         id="heading-1bd6c58ba4fcd3b64f2594c658c7fddc" role="tab" data-toggle="collapse" href="#collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         服务注册和配置中心
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
+      <div class="category-collapse collapse show" id="collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
            role="tabpanel" aria-labelledby="heading-1bd6c58ba4fcd3b64f2594c658c7fddc">
         
         
@@ -842,7 +820,7 @@
       
         <a href="/posts/109.html" title="Consul安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Consul安装配置教程（Windows版）</span>
         </a>
       
@@ -1127,17 +1105,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -1265,17 +1243,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -1314,7 +1292,7 @@
       
         <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 11安装配置教程（Windows版）</span>
         </a>
       
@@ -1982,80 +1960,45 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 11安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">Consul安装配置教程（Windows版）</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-</blockquote>
-<p>接下来为大家讲解一下JDK 11如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>以下两种方式二选一下载即可：</p>
-<h2 id="方式一：网盘下载"><a href="#方式一：网盘下载" class="headerlink" title="方式一：网盘下载"></a>方式一：网盘下载</h2><p>请选择任意一个链接，选择任意一个安装包下载即可：</p>
-<table>
-<thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1FjQlCUulceJWOQP96qQvjQ?pwd=mclj">点击下载</a></th>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1K4gR2k152JWimdxEADvp2g?pwd=1024">备用下载1</a></th>
-<th><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-KFO-_GQOsF2M-PVzKt24w?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://source.icode504.com/images/image-20240111162958652.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h2><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html">点击进入</a></p>
-<p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是11.0.20版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p>
-<p><img src="https://source.icode504.com/images/image-20240111164500464.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 按图所示点击下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240111164519079.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240101133536759.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111164925746.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p>
-<p><img src="https://source.icode504.com/images/image-20240111164941122.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111165150762.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111165212543.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240111165226556.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 安装完成，点击<strong>关闭</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111165249045.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p>
-</blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111165445818.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002218161.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002302057.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置系统变量，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240111165721488.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002655185.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002812677.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p>
-<p><img src="https://source.icode504.com/images/image-20240101003131968.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 11安装成功了：</p>
-<p><img src="https://source.icode504.com/images/image-20240111165930479.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111170010337.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111170348792.png" srcset="/img/loading.gif" lazyload></p>
+                <p>Consul 是一个开源的分布式服务发现和配置管理工具，主要用于支持微服务架构。它提供了服务发现、健康检查、键值存储、分布式锁、以及多数据中心的服务网格功能。通过 Consul，服务可以动态注册和发现彼此，无需手动配置 IP 地址或端口，同时能够自动执行健康检查，确保只将健康的服务实例注册到集群中。此外，Consul 还支持一致性哈希的分布式键值存储，用于配置共享和动态更新，广泛应用于微服务、云原生架构中。</p>
+<p>以下是Windows环境下Consul安装和配置教程。</p>
+<h1 id="一、下载Consul"><a href="#一、下载Consul" class="headerlink" title="一、下载Consul"></a>一、下载Consul</h1><p>1. 点击右侧链接进入官网下载页：<a target="_blank" rel="noopener" href="https://developer.hashicorp.com/consul/downloads">点我查看</a></p>
+<p>2. 选择你要安装的版本，新手小白可以跳过这一步：</p>
+<p><img src="https://source.icode504.com/images/23dc2e97e8517c0899ac02bfd3195710.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在下方找到Windows操作系统，根据自己的电脑的操作系统位数下载Consul。这里我的电脑是64位的操作系统，点击红色链接下载：</p>
+<details>
+<summary>如何查看自己的电脑是32位还是64位？</summary>
+<br>
+<ul>
+<li>按<kbd>Win</kbd>和<kbd>R</kbd>，输入<code>cmd</code>并按一下回车，进入命令行界面。</li>
+<li>执行如下命令，查看当前操作系统的信息：</li>
+
+</ul>
+
+
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">systeminfo<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/2b462c49d961e5b4aa5d7b8218996b13.png" srcset="/img/loading.gif" lazyload></p>
+</details>
+
+<p><img src="https://source.icode504.com/images/3aac2bbfb580aa063b2e7747ca23e37c.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装并启动Consul"><a href="#二、安装并启动Consul" class="headerlink" title="二、安装并启动Consul"></a>二、安装并启动Consul</h1><p>1. 将下载好的Consul安装包解压到你熟悉的位置且只包含英文路径，这里我解压到了D盘的Environment目录下：</p>
+<p><img src="https://source.icode504.com/images/45448112151373a7252351b028b018a5.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/7fc316d64b698afa6e6d028af55979d0.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 进入解压后的目录，点击上方路径，输入 <code>cmd</code>并回车，进入命令行界面：</p>
+<p><img src="https://source.icode504.com/images/89028e0b5055bda019a0d3b0ca07d587.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 输入 <code>consul -version</code>，如果可以查看当前Consul版本信息，就说明Consul配置成功：</p>
+<p><img src="https://source.icode504.com/images/ce7e130f51e7e02fb65050fbd6b98c4e.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 通过开发模式启动Consul：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">consul agent <span class="hljs-literal">-dev</span><br></code></pre></td></tr></table></figure>
+
+<p>5. 打开浏览器，在上方搜索框输入 <code>http://localhost:8500</code>即可访问Consul，如果出现如下页面就说明Consul启动成功！</p>
+<p><img src="https://source.icode504.com/images/7daee3a472c39d15f88338bf3d87b89b.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2084,12 +2027,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" class="category-chain-item">服务注册和配置中心</a>
   
   
 
@@ -2110,9 +2053,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
-      
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/Consul/" class="print-no-link">#Consul</a>
       
     </div>
   
@@ -2124,8 +2067,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 11安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/28.html</div>
+      <div>Consul安装配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/109.html</div>
     </div>
     <div class="license-meta">
       
@@ -2137,7 +2080,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -2169,18 +2112,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/29.html" title="数组篇-其之一-数组的概念与一维数组">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数组篇-其之一-数组的概念与一维数组</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）">
-                        <span class="hidden-mobile">JDK 21安装配置教程（Windows版）</span>
+                      <a href="/posts/108.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）">
+                        <span class="hidden-mobile">Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
