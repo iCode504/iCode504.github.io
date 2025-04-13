@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Electerm安装、配置与卸载教程（macOS版）</title>
+    <link href="/posts/99.html"/>
+    <url>/posts/99.html</url>
+    
+    <content type="html"><![CDATA[<p>Electerm 是一款开源免费的终端模拟器，集终端模拟器、文件管理器、SSH 远程连接、SFTP 客户端等功能于一体。它可以在 Windows、macOS 和 Linux 操作系统上运行，为用户提供一个功能丰富、易于使用的终端环境。</p><p>通过 Electerm，用户可以在同一窗口中运行多个 SSH 会话，轻松管理远程服务器，并使用各种 Shell 命令。它还支持多种认证方式，包括密码、密钥、双因素认证等，以满足不同用户的需求，使得使用 SSH 会话更加高效方便。</p><p>在文件传输方面，Electerm 支持 SFTP 功能，可以方便地传输文件和管理网络连接。它还支持多语言，包括英语、中文等。</p><p>接下来介绍一下 macOS 环境下的 Electerm 的安装和简单配置。</p><h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>在正式下载Electerm安装包时，推荐下载安装如下两个软件：</p><table><thead><tr><th align="left">软件名称</th><th align="left">安装教程</th><th>说明</th></tr></thead><tbody><tr><td align="left">NDM（Neat Download Manager）</td><td align="left"><a href="./24.html">点我查看</a></td><td>本文后续内容使用 NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。</td></tr></tbody></table><h1 id="二、下载-Electerm"><a href="#二、下载-Electerm" class="headerlink" title="二、下载 Electerm"></a>二、下载 Electerm</h1><p>1. 打开 Electerm 官网：<a href="https://electerm.html5beta.com/index-zh_cn.html">点我查看</a></p><p>2. 在下方页面找到 Windows 相关的安装包，鼠标右键选择复制链接地址：</p><p><img src="https://source.icode504.com/images/a9b3cdfb87b75ab5759586ea0e6320eb.png"></p><p>3. 点击右侧链接进入Github镜像加速站：<a href="https://gitdl.cn/">点我查看</a></p><blockquote><p>说明：如果上述链接无法进入，请点击<a href="./25.html#%E4%B8%89%E3%80%81%E4%B8%8B%E8%BD%BD-Github-%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9">此链接</a>进入查看其它镜像加速站。</p></blockquote><p>4. 打开镜像加速站，将前面复制的链接粘贴到此处，然后点击<strong>下载</strong>即可：</p><p><img src="https://source.icode504.com/images/17101011d63791e5788d21f4e16c9f64.png"></p><h1 id="三、安装-Electerm"><a href="#三、安装-Electerm" class="headerlink" title="三、安装 Electerm"></a>三、安装 Electerm</h1><p>1. 打开下载好的安装包，将安装包拖入到应用程序中即可完成安装：</p><p><img src="https://source.icode504.com/images/image-48458ace6275c4ab0977884451b68a7f.gif" alt="https://source.icode504.com/images/image-48458ace6275c4ab0977884451b68a7f.gif"></p><p>2. 安装完成后，在控制台找到Electerm，双击打开：</p><p><img src="https://source.icode504.com/images/image-a1062be1ee06af09c1dd3901096cd993.png"></p><h1 id="四、Electerm-的简单配置"><a href="#四、Electerm-的简单配置" class="headerlink" title="四、Electerm 的简单配置"></a>四、Electerm 的简单配置</h1><blockquote><p>说明：以下包含“可选”的标题中可以自行修改，并不影响实际使用。</p></blockquote><h2 id="4-1-更换主题风格（可选）"><a href="#4-1-更换主题风格（可选）" class="headerlink" title="4.1 更换主题风格（可选）"></a>4.1 更换主题风格（可选）</h2><p>在桌面打开 Electerm，默认是黑色界面：</p><p><img src="https://source.icode504.com/images/image-20240213105358335.png"></p><p>如果你不喜欢这个纯黑界面，可以在左侧找到<strong>设置</strong>（小齿轮）对主题进行更改：</p><p><img src="https://source.icode504.com/images/image-20240213105514644.png"></p><p>在设置中，找到 UI 主题（内置了多个主题，也可以自定义主题，这里我选用的是 Github 主题），在下方搜索框中输入 Github，其中第二个搜索结果就是我们想要的：</p><p><img src="https://source.icode504.com/images/image-20240213110343282.png"></p><p>选择 Github 主题，此时最右侧会出现一个对号图标，点击这个图标就是应用这个主题：</p><p><img src="https://source.icode504.com/images/image-20240213110645152.png"></p><p>点击左上角的关闭图标，此时我们发现界面变成了白色风格：</p><p><img src="https://source.icode504.com/images/image-20240213110745168.png"></p><p><img src="https://source.icode504.com/images/image-20240213111646109.png"></p><h2 id="4-2-设置背景图片（可选）"><a href="#4-2-设置背景图片（可选）" class="headerlink" title="4.2 设置背景图片（可选）"></a>4.2 设置背景图片（可选）</h2><p>界面上有一个 Electerm 的大 logo，其实这是一张背景图片。软件本身支持修改背景图片。</p><p><img src="https://source.icode504.com/images/image-20240213111722825.png"></p><p>点击左侧菜单，打开<strong>设置</strong>（小齿轮）：</p><p><img src="https://source.icode504.com/images/image-20240213111908999.png"></p><p>在设置下方，找到<strong>终端</strong>，右侧有<strong>终端背景图片</strong>设置：</p><p><img src="https://source.icode504.com/images/image-20240213112130980.png"></p><p>如果你不需要背景图片，就点击以下输入框，此时会弹出一个列表框，选择无背景图片即可：</p><p><img src="https://source.icode504.com/images/image-20240213112256558.png"></p><p>需要更换背景图片的小伙伴，建议是保存在本地的电脑壁纸（虽然 Electerm 支持在线图片链接，但是没有网了以后图片也不会显示）。点击右侧<strong>选择文件</strong>：</p><p><img src="https://source.icode504.com/images/image-20240213114042874.png"></p><p>在本地选择一张壁纸（壁纸建议是简约风，否则花里胡哨可能会影响使用体验）：</p><p><img src="https://source.icode504.com/images/image-20240213114529925.png"></p><p>图片设置好以后，我们可以在下方设置图片的透明度和模糊度：</p><ul><li>透明度（Opacity），值在 0~1 之间，数值越小，图片的透明度越低。</li><li>模糊度（Blur），数值越大，图片越模糊。</li></ul><p><img src="https://source.icode504.com/images/image-20240213115310321.png"></p><p>修改后界面效果如下：</p><p><img src="https://source.icode504.com/images/image-20240213115750587.png"></p><h2 id="4-3-关闭检查更新"><a href="#4-3-关闭检查更新" class="headerlink" title="4.3 关闭检查更新"></a>4.3 关闭检查更新</h2><p>Electerm 更新软件默认会从 Github 下载，但是 Github 对国内用户并不友好（因为网络原因经常访问失败）。如果你不想使用新版本的 Electerm，建议关闭检查更新这一项。</p><p>点击右侧的<strong>设置</strong>（小齿轮）：</p><p><img src="https://source.icode504.com/images/image-20240213111908999.png"></p><p>在设置中的 Common，在下方设置中关闭<strong>检查应用程序启动时的更新</strong>：</p><p><img src="https://source.icode504.com/images/image-20240213120341726.png"></p><h1 id="五、卸载-Electerm（可选）"><a href="#五、卸载-Electerm（可选）" class="headerlink" title="五、卸载 Electerm（可选）"></a>五、卸载 Electerm（可选）</h1><div class="note note-danger">            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><p>打开访达，在左侧选择应用程序，找到Electerm拖入到废纸篓即可完成卸载：</p><p><img src="https://source.icode504.com/images/image-fb53c515d742c104654573b4528c694d.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>服务器&amp;虚拟机</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+      <tag>Electerm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>若依（前后端分离版）环境部署教程</title>
     <link href="/posts/98.html"/>
     <url>/posts/98.html</url>
