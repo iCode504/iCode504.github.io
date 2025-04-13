@@ -18,28 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis的key的相关操作">
+    <meta name="description" content="Redis哈希类型介绍及其常用的命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis的key（键）相关操作">
-<meta property="og:url" content="https://www.icode504.com/posts/86.html">
+<meta property="og:title" content="Redis数据类型之哈希类型Hash">
+<meta property="og:url" content="https://www.icode504.com/posts/89.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis的key的相关操作">
+<meta property="og:description" content="Redis哈希类型介绍及其常用的命令">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/f89bfa2cddbe7fc9f64e6e416781a80e.png">
-<meta property="article:published_time" content="2025-04-13T07:56:40.294Z">
-<meta property="article:modified_time" content="2025-04-13T07:56:40.294Z">
+<meta property="og:image" content="https://source.icode504.com/images/7be1dcd74da9cc177f3cdba17789d36a.png">
+<meta property="article:published_time" content="2025-04-13T08:04:02.244Z">
+<meta property="article:modified_time" content="2025-04-13T08:04:02.248Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta property="article:tag" content="数据库">
 <meta property="article:tag" content="非关系型数据库">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/f89bfa2cddbe7fc9f64e6e416781a80e.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/7be1dcd74da9cc177f3cdba17789d36a.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis的key（键）相关操作 - iCode504个人博客</title>
+  <title>Redis数据类型之哈希类型Hash - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/f89bfa2cddbe7fc9f64e6e416781a80e.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/7be1dcd74da9cc177f3cdba17789d36a.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis的key（键）相关操作</span>
+            <span id="subtitle">Redis数据类型之哈希类型Hash</span>
           
         </div>
 
@@ -221,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 15:56" pubdate>
+        <time datetime="2025-04-13 16:04" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -383,7 +383,7 @@
       
         <a href="/posts/86.html" title="Redis的key（键）相关操作"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Redis的key（键）相关操作</span>
         </a>
       
@@ -401,7 +401,7 @@
       
         <a href="/posts/89.html" title="Redis数据类型之哈希类型Hash"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis数据类型之哈希类型Hash</span>
         </a>
       
@@ -436,83 +436,99 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis的key（键）相关操作</h1>
+            <h1 id="seo-header">Redis数据类型之哈希类型Hash</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年4月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
                 <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p>
-<p>以下是Redis键（以下称作 key）的相关操作：</p>
-<p>1. 添加一个key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure>
+<h1 id="一、Redis哈希类型介绍"><a href="#一、Redis哈希类型介绍" class="headerlink" title="一、Redis哈希类型介绍"></a>一、Redis哈希类型介绍</h1><p>Redis的哈希（Hash）类型记录的是多个属性（field）及其对应的值（value）的集合，它本身仍然是键值对（key-value），但是value变为由多个field-value组成的结构，类似Java中的<code>Map&lt;String, Map&lt;String, Object&gt;&gt;</code>，下图是Redis哈希类型存储结构示意图：</p>
+<p><img src="https://source.icode504.com/images/image-eecffbe113d8b40c145632b548403706.png" srcset="/img/loading.gif" lazyload></p>
+<p>应用场景：早期购物车的应用。</p>
+<ul>
+<li>新增商品使用HSET命令；</li>
+<li>添加当前商品数量使用HINCRBY命令；</li>
+<li>获取商品总数HLEN命令；</li>
+<li>全部选择使用HGETALL命令；</li>
+</ul>
+<h1 id="二、Redis哈希类型常用命令"><a href="#二、Redis哈希类型常用命令" class="headerlink" title="二、Redis哈希类型常用命令"></a>二、Redis哈希类型常用命令</h1><p>1. 添加和修改key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HSET key field value [field value ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-b788c6b1211981fa4908a7286b3f93fb.png" srcset="/img/loading.gif" lazyload></p>
-<p>本文中涉及到的value默认都是Redis字符串（String）类型。</p>
-<p>2. 获取key对应的value：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure>
+<p>该命令默认返回的是添加&#x2F;修改field的个数：</p>
+<p><img src="https://source.icode504.com/images/image-cc58e26839d6f986cc6de8ef3b4eb1fb.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如果当前key中属性field不存在则创建，存在则不创建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HSETNX key field value [field value ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-f1e5415d917fa4d114583692923f974e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 查看当前库所有的 key名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEYS *<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-1cfb6a17bfe021a8169bb20c0f9f722e.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 获取当前的key中属性field对应的value</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGET key field<br></code></pre></td></tr></table></figure>
 
-<p>这里我的库中有 3 个 key：k1、k2、k3：</p>
-<p><img src="https://source.icode504.com/images/image-ffd4c285af89882da0374d2e6eec6c14.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 判断某个 key 是否存在：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EXISTS key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-b8e6af5ed05803707bcf49d4621d8c85.png" srcset="/img/loading.gif" lazyload></p>
+<p><del>4. 添加和修改key（该命令已经在Redis 4.0.0以后已过时，推荐使用前面的HSET命令）</del></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HMSET key field value [field value ...]<br></code></pre></td></tr></table></figure>
 
-<p>如果 key 存在，那么返回 1，不存在则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-5602cf9de396706af8b6833254c22f24.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 查看当前 key 的类型：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TYPE key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-8bfc512527b09d0918cd470b5605ed05.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 批量获取key中多个属性field对应的value</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGET key field [field ...]<br></code></pre></td></tr></table></figure>
 
-<p>这里我们查看一下键 k1 的类型，它是 string（字符串）类型：</p>
-<p><img src="https://source.icode504.com/images/image-93453d8afe5c7c3d278819ef938d7cb0.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 删除指定的 key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEL key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-7ddfdc27260741f8f4514de943117f13.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 获取当前key所有属性field对应的value：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGETALL key<br></code></pre></td></tr></table></figure>
 
-<p>删除成功返回 1，失败返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-e3c13ff500eb3662e6d2dae08557b629.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 非阻塞删除：仅仅将当前 key 在 keyspace 元数据中删除，真正删除操作会在后续的异步中操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">UNLINK key<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-5675c5babff9315db80d476f5307c056.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 删除某一个key中的一个或多个属性field：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HDEL key field [field ...]<br></code></pre></td></tr></table></figure>
 
-<p>如果删除成功，返回结果是 1，失败则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-72c1dbc529ff96ee3abce9ad163e077d.png" srcset="/img/loading.gif" lazyload></p>
-<p>DEL 命令在删除 key 对应的数据的时候，默认是阻塞的，如果不彻底将数据删除，后续的操作将无法执行。在一些高并发系统中，这样的删除方式可能会影响到程序的正常运行。而 UNLINK 命令做到数据在“表面上”删除，真正的数据删除在后续的异步中操作。</p>
-<p>UNLINK 命令类似于 Windows 中的普通删除，如果我们想删除一个大文件，直接按<kbd>Delete</kbd>键会将其快速将文件放入到回收站，后续想删除直接鼠标右键点击清空回收站就真正执行删除数据操作；而 DEL 命令则类似选中这个文件直接按<kbd>Shift</kbd><kbd>Delete</kbd>键不通过回收站直接彻底删除文件。</p>
-<p>8. 查看当前 key 过期时间（单位：秒）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TTL key<br></code></pre></td></tr></table></figure>
+<p>该命令默认返回的是删除数量：</p>
+<p><img src="https://source.icode504.com/images/image-76ca30147ab2b6e4e39aba0c99aa445b.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 获取当前key所拥有的属性field的数量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HLEN key<br></code></pre></td></tr></table></figure>
 
-<p>-1 表示当前 key 永不过期，-2 表示当前 key 已过期：</p>
-<p><img src="https://source.icode504.com/images/image-34761b6bb584859d47f974b7dfba7feb.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 为给定的 key 设置过期时间（单位：秒）：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">EXPIRE key seconds</span><br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-1f7f715bde5db10cb704763671d05863.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 判断当前key中里面是否存在某个属性field：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HEXISTS key field<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-18ff0e12cfa2ad0aa2f6d324ccee0ca5.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 将当前数据库的 key 移动到指定的数据库 db 当中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MOVE key dbindex [0-15]<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-9d7ca9906140236a1bcf9aa7455b0db3.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 获取当前key所有属性field名称：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HKEYS key<br></code></pre></td></tr></table></figure>
 
-<p>如果目标库中已经存在key，那么执行上述命令的结果是0；不存在的时候，返回结果是1。</p>
-<p>11. 切换数据库[0-15]，默认使用的索引值为 0 数据库（这里我称之为db0，索引值为5的数据库称之为db5，以此类推）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SELECT dbindex<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-707da910a57527cf478dc8de5e5eb6d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>Redis 默认有 16 个数据库，编号范围是[0, 15]，在 Redis 配置文件 redis.conf 中有相应配置可以作证上述说法：</p>
-<p><img src="https://source.icode504.com/images/image-20240724213929763.png" srcset="/img/loading.gif" lazyload></p>
-<p>配置数据库的数量，默认的数据库是索引为 0 的数据库（db0），你可以通过<code>select &lt;dbid&gt;</code>命令切换到另一个数据库，数据库 id（dbid）范围是 0 到 databases - 1（在配置文件中 databases 对应的值是 16），即可切换的数据库范围在[0, 15]这个区间内。</p>
-<p>12. 查看当前数据库 key 的数量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DBSIZE<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-bad2a23ae450b082a5eb5d5d16b051ac.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="13">
-<li>清空当前库：</li>
+<p><img src="https://source.icode504.com/images/image-1f4de46415af27494e4111960adb5677.png" srcset="/img/loading.gif" lazyload></p>
+<ol start="11">
+<li>获取当前key所有属性对应的值value：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHDB<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HVALS key<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-73843f8f9abb8bd22c5efd728cd368d3.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 清空全部库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHALL<br></code></pre></td></tr></table></figure>
+<p><img src="https://source.icode504.com/images/image-02a60584eb3b472d2c55be2de7969c36.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 将当前key中某个属性field对应的<strong>整数值</strong>进行增加操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HINCRBY key field increment<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-7fac8545aeb2cd3e504ad7c699caf5b8.png" srcset="/img/loading.gif" lazyload></p>
+<p>该命令默认返回的是增加后的结果：</p>
+<p><img src="https://source.icode504.com/images/image-4d6c76c473713f84c87341b8be05a548.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用HINCRBY也可以执行减少操作，将increment对应的值改成负数即可：</p>
+<p><img src="https://source.icode504.com/images/image-4e4661b57cad5ec06992439634323bbf.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果key不存在，那么则执行创建操作；如果key存在，而field不存在，此时会创建一个field，并对field的值由0设置为对应的值：</p>
+<p><img src="https://source.icode504.com/images/image-4988ba12daa7df5cad133c4681d52855.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 将当前key中某个属性field对应的小数值进行增加操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HINCRBYFLOAT key field increment<br></code></pre></td></tr></table></figure>
+
+<p>HINCRBYFLOAT命令的特性基本上和HINCRBY命令相同：</p>
+<p><img src="https://source.icode504.com/images/image-52b730c8cc642cf39681fd9a7a751c89.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、使用Redis哈希类型的注意事项"><a href="#三、使用Redis哈希类型的注意事项" class="headerlink" title="三、使用Redis哈希类型的注意事项"></a>三、使用Redis哈希类型的注意事项</h1><p>1. 大部分的Redis哈希类型的命令的时间复杂度是$O(1)$，少部分命令，例如：</p>
+<ul>
+<li>HKEYS</li>
+<li>HVALS</li>
+<li>HGETALL</li>
+</ul>
+<p>这些命令的时间复杂度是$O(n)$，因为它们需要遍历当前key中所有的fields。</p>
+<p>2. 哈希类型理论上可以存储$2^{32}-1$个键值对，但是实际上，这个存储上限取决于你的Redis实际在内存中占用的空间大小。</p>
 
                 
               </div>
@@ -583,8 +599,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis的key（键）相关操作</div>
-      <div>https://www.icode504.com/posts/86.html</div>
+      <div>Redis数据类型之哈希类型Hash</div>
+      <div>https://www.icode504.com/posts/89.html</div>
     </div>
     <div class="license-meta">
       
@@ -628,18 +644,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/87.html" title="Redis数据类型之字符串类型string">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis数据类型之字符串类型string</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）">
-                        <span class="hidden-mobile">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
+                      <a href="/posts/88.html" title="Linux Ubuntu桌面版安装配置教程">
+                        <span class="hidden-mobile">Linux Ubuntu桌面版安装配置教程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

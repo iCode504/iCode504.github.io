@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>Redis数据类型之哈希类型Hash</title>
+    <link href="/posts/89.html"/>
+    <url>/posts/89.html</url>
+    
+    <content type="html"><![CDATA[<p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p><h1 id="一、Redis哈希类型介绍"><a href="#一、Redis哈希类型介绍" class="headerlink" title="一、Redis哈希类型介绍"></a>一、Redis哈希类型介绍</h1><p>Redis的哈希（Hash）类型记录的是多个属性（field）及其对应的值（value）的集合，它本身仍然是键值对（key-value），但是value变为由多个field-value组成的结构，类似Java中的<code>Map&lt;String, Map&lt;String, Object&gt;&gt;</code>，下图是Redis哈希类型存储结构示意图：</p><p><img src="https://source.icode504.com/images/image-eecffbe113d8b40c145632b548403706.png"></p><p>应用场景：早期购物车的应用。</p><ul><li>新增商品使用HSET命令；</li><li>添加当前商品数量使用HINCRBY命令；</li><li>获取商品总数HLEN命令；</li><li>全部选择使用HGETALL命令；</li></ul><h1 id="二、Redis哈希类型常用命令"><a href="#二、Redis哈希类型常用命令" class="headerlink" title="二、Redis哈希类型常用命令"></a>二、Redis哈希类型常用命令</h1><p>1. 添加和修改key：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HSET key field value [field value ...]<br></code></pre></td></tr></table></figure><p>该命令默认返回的是添加&#x2F;修改field的个数：</p><p><img src="https://source.icode504.com/images/image-cc58e26839d6f986cc6de8ef3b4eb1fb.png"></p><p>2. 如果当前key中属性field不存在则创建，存在则不创建：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HSETNX key field value [field value ...]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-1cfb6a17bfe021a8169bb20c0f9f722e.png"></p><p>3. 获取当前的key中属性field对应的value</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGET key field<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-b8e6af5ed05803707bcf49d4621d8c85.png"></p><p><del>4. 添加和修改key（该命令已经在Redis 4.0.0以后已过时，推荐使用前面的HSET命令）</del></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HMSET key field value [field value ...]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-8bfc512527b09d0918cd470b5605ed05.png"></p><p>5. 批量获取key中多个属性field对应的value</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGET key field [field ...]<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-7ddfdc27260741f8f4514de943117f13.png"></p><p>6. 获取当前key所有属性field对应的value：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HGETALL key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-5675c5babff9315db80d476f5307c056.png"></p><p>7. 删除某一个key中的一个或多个属性field：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HDEL key field [field ...]<br></code></pre></td></tr></table></figure><p>该命令默认返回的是删除数量：</p><p><img src="https://source.icode504.com/images/image-76ca30147ab2b6e4e39aba0c99aa445b.png"></p><p>8. 获取当前key所拥有的属性field的数量：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HLEN key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-1f7f715bde5db10cb704763671d05863.png"></p><p>9. 判断当前key中里面是否存在某个属性field：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HEXISTS key field<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-9d7ca9906140236a1bcf9aa7455b0db3.png"></p><p>10. 获取当前key所有属性field名称：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HKEYS key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-1f4de46415af27494e4111960adb5677.png"></p><ol start="11"><li>获取当前key所有属性对应的值value：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HVALS key<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-02a60584eb3b472d2c55be2de7969c36.png"></p><p>12. 将当前key中某个属性field对应的<strong>整数值</strong>进行增加操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HINCRBY key field increment<br></code></pre></td></tr></table></figure><p>该命令默认返回的是增加后的结果：</p><p><img src="https://source.icode504.com/images/image-4d6c76c473713f84c87341b8be05a548.png"></p><p>使用HINCRBY也可以执行减少操作，将increment对应的值改成负数即可：</p><p><img src="https://source.icode504.com/images/image-4e4661b57cad5ec06992439634323bbf.png"></p><p>如果key不存在，那么则执行创建操作；如果key存在，而field不存在，此时会创建一个field，并对field的值由0设置为对应的值：</p><p><img src="https://source.icode504.com/images/image-4988ba12daa7df5cad133c4681d52855.png"></p><p>13. 将当前key中某个属性field对应的小数值进行增加操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">HINCRBYFLOAT key field increment<br></code></pre></td></tr></table></figure><p>HINCRBYFLOAT命令的特性基本上和HINCRBY命令相同：</p><p><img src="https://source.icode504.com/images/image-52b730c8cc642cf39681fd9a7a751c89.png"></p><h1 id="三、使用Redis哈希类型的注意事项"><a href="#三、使用Redis哈希类型的注意事项" class="headerlink" title="三、使用Redis哈希类型的注意事项"></a>三、使用Redis哈希类型的注意事项</h1><p>1. 大部分的Redis哈希类型的命令的时间复杂度是$O(1)$，少部分命令，例如：</p><ul><li>HKEYS</li><li>HVALS</li><li>HGETALL</li></ul><p>这些命令的时间复杂度是$O(n)$，因为它们需要遍历当前key中所有的fields。</p><p>2. 哈希类型理论上可以存储$2^{32}-1$个键值对，但是实际上，这个存储上限取决于你的Redis实际在内存中占用的空间大小。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+      <category>非关系型数据库（NoSQL）</category>
+      
+      <category>Redis</category>
+      
+      <category>Redis数据类型</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Redis</tag>
+      
+      <tag>数据库</tag>
+      
+      <tag>非关系型数据库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux Ubuntu桌面版安装配置教程</title>
     <link href="/posts/88.html"/>
     <url>/posts/88.html</url>
