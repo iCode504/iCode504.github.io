@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T07:10:36.742Z</updated>
+  <updated>2025-04-13T07:15:51.490Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker安装和配置教程（适用于Linux Ubuntu和Debian）</title>
+    <link href="https://www.icode504.com/posts/75.html"/>
+    <id>https://www.icode504.com/posts/75.html</id>
+    <published>2025-04-13T07:15:51.490Z</published>
+    <updated>2025-04-13T07:15:51.490Z</updated>
+    
+    
+    <summary type="html">本教程详细介绍了在Linux Ubuntu系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
+    
+    <category term="容器化" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/"/>
+    
+    <category term="Docker" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/Docker/"/>
+    
+    
+    <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
+    
+    <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
+    
+    <category term="Docker" scheme="https://www.icode504.com/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>EasyExcel工作表操作</title>
@@ -516,31 +547,6 @@
     
     
     <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pycharm的安装、配置与卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/50.html"/>
-    <id>https://www.icode504.com/posts/50.html</id>
-    <published>2025-04-13T03:57:52.461Z</published>
-    <updated>2025-04-13T03:57:52.461Z</updated>
-    
-    
-    <summary type="html">本教程详细介绍了在Windows操作系统下，如何安装、配置和卸载PyCharm这款强大的Python集成开发环境。涵盖了安装步骤、配置选项及卸载流程，帮助用户轻松管理PyCharm。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Pycharm" scheme="https://www.icode504.com/tags/Pycharm/"/>
     
   </entry>
   
