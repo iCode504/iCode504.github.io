@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>RSS订阅指南</title>
+    <link href="/posts/59.html"/>
+    <url>/posts/59.html</url>
+    
+    <content type="html"><![CDATA[<p>RSS是一种简易的网页内容聚合格式，其全称为“Really Simple Syndication”（简易消息聚合）。它允许用户获取网站更新的摘要或完整内容，而无需访问网站本身。RSS以XML格式发布，允许内容从一个源（网站）传送到另一个源（RSS阅读器）。</p><p>RSS的好处包括：</p><ol><li><p><strong>便利的信息获取</strong>: 用户可以通过RSS阅读器一次性获取多个网站的更新内容，无需逐个访问网站，节省时间和精力。</p></li><li><p><strong>定制化订阅</strong>: 用户可以根据个人兴趣订阅特定网站或特定主题的内容，使其阅读体验更加个性化。</p></li><li><p><strong>实时更新</strong>: RSS阅读器能够及时获取更新内容，使用户随时了解最新信息。</p></li><li><p><strong>减少信息干扰</strong>: 通过RSS，用户可以将感兴趣的内容集中在一个平台上，减少了在各个网站间的跳转，避免了信息干扰。</p></li><li><p><strong>隐私保护</strong>: RSS阅读器通常不需要用户提供个人信息，因此能够保护用户的隐私。</p></li></ol><p>以下是RSS相关插件安装及在浏览器中使用教程：</p><h1 id="一、下载插件"><a href="#一、下载插件" class="headerlink" title="一、下载插件"></a>一、下载插件</h1><table><thead><tr><th>插件名称</th><th>下载链接</th></tr></thead><tbody><tr><td>RSS阅读器——Feedbro插件</td><td><a href="https://icode504.lanzn.com/inWah1p1vh6h">点我下载</a></td></tr><tr><td>信息抓取——Rsshub插件</td><td><a href="https://icode504.lanzn.com/iXhFp1p1vhab">点我下载</a></td></tr></tbody></table><h1 id="二、安装插件"><a href="#二、安装插件" class="headerlink" title="二、安装插件"></a>二、安装插件</h1><p>1. 打开谷歌浏览器，按照下图所示打开管理扩展程序：</p><p><img src="https://source.icode504.com/images/image-20231127152259082.png"></p><p>2. 在浏览器右上角打开开发者模式：</p><p><img src="https://source.icode504.com/images/image-20231127152522395.png"></p><p>3. 将下载好的两个插件<strong>依次拖入</strong>浏览器的扩展程序中，如果开关打开，就说明两个插件已经安装成功了。</p><p><img src="https://source.icode504.com/images/240222009.gif"></p><p>4. 安装完成后，点击右上角的插件图标，将这两个插件置顶显示：</p><p><img src="https://source.icode504.com/images/image-20240317211639175.png"></p><p>5. 此时在搜索栏就会出现这两个图标：</p><p><img src="https://source.icode504.com/images/image-20240317211752012.png"></p><h1 id="三、Feedbro插件汉化"><a href="#三、Feedbro插件汉化" class="headerlink" title="三、Feedbro插件汉化"></a>三、Feedbro插件汉化</h1><p>1. 按照下图所示打开Feedbro插件设置：</p><p><img src="https://source.icode504.com/images/image-20240317212017375.png"></p><p>2. 复制下面的链接：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>source.icode504.com<span class="hljs-regexp">/images/</span>feedbro-locale-zh_CN.json<br></code></pre></td></tr></table></figure><p>3. 找到Settings –&gt; User interface language，点击<strong>Import Locale</strong>：</p><p><img src="https://source.icode504.com/images/image-20240222170611845.png"></p><p>4. 将前面复制的链接粘贴到此处，完成后点击OK：</p><p><img src="https://source.icode504.com/images/image-20240222171356676.png"></p><p>5. 汉化完成：</p><p><img src="https://source.icode504.com/images/image-20240222171438729.png"></p><h1 id="四、抓取RSS订阅源"><a href="#四、抓取RSS订阅源" class="headerlink" title="四、抓取RSS订阅源"></a>四、抓取RSS订阅源</h1><p>1. 以我的个人网站为例：<a href="https://www.icode504.com，此时RSSHub图标有一个数字，点击图标：">https://www.icode504.com，此时RSSHub图标有一个数字，点击图标：</a></p><p><img src="https://source.icode504.com/images/image-20240318203343379.png"></p><p>2. 点击Feedbro插件图标，然后点击<strong>打开订阅源阅读器</strong>：</p><p><img src="https://source.icode504.com/images/image-20240318203509688.png"></p><p>3. 进入到主页面以后，点击<strong>添加新的源</strong>：</p><p><img src="https://source.icode504.com/images/image-20240318203630935.png"></p><p>4. 将第一步复制的链接粘贴到订阅源URL，然后点击<strong>加载</strong>，此时会显示标题内容，然后点击<strong>保存</strong>：</p><p><img src="https://source.icode504.com/images/image-20240318203911654.png"></p><p>5. 此时点击左侧标题，界面会显示最近抓取的内容，点击任意一个链接可以跳转到网站查看对应的内容：</p><blockquote><p>  说明：以本网站为例，后续文章更新都可以在Feedbro中可以查看阅读</p></blockquote><p><img src="https://source.icode504.com/images/image-20240318204226290.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>RSS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>RSS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>EasyExcel介绍与依赖导入</title>
     <link href="/posts/58.html"/>
     <url>/posts/58.html</url>
