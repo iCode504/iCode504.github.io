@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>数据库管理软件DBeaver安装、配置和卸载教程（Windows版）</title>
+    <link href="/posts/77.html"/>
+    <url>/posts/77.html</url>
+    
+    <content type="html"><![CDATA[<p>DBeaver是一款通用的数据库管理工具和SQL客户端，适用于开发人员和数据库管理员。它支持多种关系数据库和NoSQL数据库，提供直观的用户界面、高级SQL编辑器、数据可视化工具和数据迁移功能，跨平台运行并支持插件扩展，是管理和分析数据库的强大利器。</p><p>以下是Windows环境下DBeaver安装教程：</p><h1 id="一、安装前操作"><a href="#一、安装前操作" class="headerlink" title="一、安装前操作"></a>一、安装前操作</h1><p>推荐电脑上安装的软件：</p><table><thead><tr><th>软件名称</th><th>教程链接</th><th>说明</th></tr></thead><tbody><tr><td>MySQL</td><td><a href="./18.html">点我查看</a></td><td>在Windows本地安装MySQL教程，已安装的小伙伴请忽略。</td></tr><tr><td>下载神器Neat Download Manager</td><td><a href="./24.html">点我查看</a></td><td>本文所需要的软件下载源在国外，使用此软件可以加快下载速度。已经安装的小伙伴请直接跳过。</td></tr><tr><td>Github加速访问软件Watt Tookit</td><td><a href="./25.html">点我查看</a></td><td>本文需要下载的软件在Github上，目前国内访问Github访问速度较慢，推荐大家看一下本文教程，可以模仿文中的方式下载安装包</td></tr></tbody></table><h1 id="二、下载DBeaver"><a href="#二、下载DBeaver" class="headerlink" title="二、下载DBeaver"></a>二、下载DBeaver</h1><p>1. 点击右侧连接打开DBeaver官网：<a href="https://github.com/dbeaver/dbeaver/releases">点我查看</a></p><blockquote><p>注意：请确保已经打开了Watt Tookit的Github加速（教程请跳转到第一部分去查看）。加载速度可能会较慢，请耐心等待！</p></blockquote><p>2. 这里我下载的是最新版的24.1.2（截止至2024年7月13日发布的最新版本），向下找到Assets并展开即可看到各个操作系统对应的安装包：</p><p><img src="https://source.icode504.com/images/image-20240713135720470.png"></p><p>3. 找到exe结尾的安装包，鼠标右键，复制链接地址：</p><p><img src="https://source.icode504.com/images/image-20240713135852009.png"></p><p>4. 点击右侧链接打开Github加速站：<a href="https://moeyy.cn/gh-proxy">点我查看</a></p><blockquote><p>说明：如果这个加速网站失效，请到第一部分的Github加速教程中寻找可加速的网站地址！</p></blockquote><p>5. 将前面复制的链接地址粘贴到此处，点击<strong>下载</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140225258.png"></p><p>6. 下载中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240713140322465.png"></p><h1 id="三、安装DBeaver"><a href="#三、安装DBeaver" class="headerlink" title="三、安装DBeaver"></a>三、安装DBeaver</h1><p>1. 打开前面下载好的安装包，此时会弹出一个语言选择窗口，按照默认选择<strong>中文（简体）</strong>即可，然后点击<strong>OK</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140522081.png"></p><p>2. 进入欢迎页面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140629386.png"></p><p>3. 许可证协议界面，点击<strong>我接受</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140721087.png"></p><p>4. 选择为那些用户安装DBeaver，这里我选择第一个<strong>For anyone who uses this computer (all users)<strong>（为本机所有用户安装），然后点击</strong>下一步</strong>（需要管理员权限）：</p><p><img src="https://source.icode504.com/images/image-20240713140918366.png"></p><p>5. 此时会再次选择语言，按照第一步选择中文（简体），然后点击<strong>OK</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713141158997.png"></p><p>6. 进入欢迎页面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140629386.png"></p><p>7. 进入许可证协议界面后点击<strong>我接受</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140721087.png"></p><p>8. 选择要安装的组件：如果你不熟悉里面的组件的作用，就按照系统默认即可，然后点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713141654132.png"></p><p>9. 选择安装位置，这里我安装在了D盘（推荐是全英文目录，避免出现不必要的麻烦）：</p><p><img src="https://source.icode504.com/images/image-20240713141909875.png"></p><p><img src="https://source.icode504.com/images/image-20240713142216382.png"></p><p><img src="https://source.icode504.com/images/image-20240713142342949.png"></p><p>10. 点击<strong>安装</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713142432104.png"></p><p>11. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240713142517716.png"></p><p>12. 安装完成，勾选<strong>Create Desktop shortcut</strong>即可在桌面上创建桌面快捷方式，点击<strong>完成</strong>，DBeaver安装完成：</p><p><img src="https://source.icode504.com/images/image-20240713142923438.png"></p><h1 id="四、连接数据库"><a href="#四、连接数据库" class="headerlink" title="四、连接数据库"></a>四、连接数据库</h1><p>1. 在桌面上找到DBeaver，双击打开：</p><p><img src="https://source.icode504.com/images/image-20240713143436878.png"></p><p>2. 此时会弹出一个创建样本数据库的提示，这里选择<strong>否</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713143614282.png"></p><p>3. 此时会弹出一个连接数据库界面，在上方的搜索框中输入你要连接的关系型数据库，这里我要连接MySQL数据库。选中第一个MySQL，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713144145836.png"></p><p>4. 按照下图所示配置数据库连接：</p><p><img src="https://source.icode504.com/images/image-20240713145311611.png"></p><p>5. 初次点击左下角的测试连接，会下载MySQL JDBC驱动文件，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240713144440746.png"></p><p>6. 下载完成后，再次点击左下角的测试连接，如果出现下图的弹窗，就说明MySQL数据库连接成功！点击确认即可：</p><p><img src="https://source.icode504.com/images/image-20240713145507350.png"></p><p>7. 点击右下角的完成，数据库成功连接：</p><p><img src="https://source.icode504.com/images/image-20240713145557976.png"></p><p>8. 接下来我们就可以正常使用MySQL数据库了：</p><p><img src="https://source.icode504.com/images/image-20240713145928196.png"></p><h1 id="五、DBeaver加快下载依赖的速度（推荐）"><a href="#五、DBeaver加快下载依赖的速度（推荐）" class="headerlink" title="五、DBeaver加快下载依赖的速度（推荐）"></a>五、DBeaver加快下载依赖的速度（推荐）</h1><p><a href="https://www.icode504.com/posts/105.html">点我查看</a></p><h1 id="六、卸载DBeaver（可选）"><a href="#六、卸载DBeaver（可选）" class="headerlink" title="六、卸载DBeaver（可选）"></a>六、卸载DBeaver（可选）</h1><div class="note note-danger">            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><blockquote><p>注意：本文使用到 Geek Uninstaller 卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p><p>已经安装的小伙伴可以接着往下看！</p></blockquote><p>1. 打开Geek Uninstaller，找到DBeaver，<strong>鼠标右键</strong>点击<strong>卸载</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713151956348.png"></p><p>2. 点击<strong>卸载</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713152040318.png"></p><p>3. 卸载中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240713152105862.png"></p><p>4. 卸载完成，点击<strong>关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713152140401.png"></p><p>5. 此时Geek Uninstaller会检查卸载残留，如果没有卸载残留，点击<strong>关闭</strong>即可：</p><p><img src="https://source.icode504.com/images/image-20240713152250626.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>数据库工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>DBeaver</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows通过命令行关闭某个端口</title>
     <link href="/posts/76.html"/>
     <url>/posts/76.html</url>
