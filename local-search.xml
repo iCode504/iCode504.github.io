@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>Groovy安装、配置与卸载教程（Windows版）</title>
+    <link href="/posts/34.html"/>
+    <url>/posts/34.html</url>
+    
+    <content type="html"><![CDATA[<p>Groovy是一种基于JVM（Java 虚拟机）的动态脚本语言，它结合了Python、Ruby等语言的特性，旨在提供一种更简洁、更灵活的编程方式。以下是 Groovy 的一主要特点：</p><ol><li><p><strong>动态性：</strong> Groovy是一种动态类型的语言，不需要在编写代码时指定变量的类型，可以根据上下文自动推断类型。</p></li><li><p><strong>与Java互操作性：</strong> Groovy可以与Java无缝互操作，可以直接调用Java类库和代码，并且可以被 Java 代码调用。</p></li><li><p><strong>闭包支持：</strong>Groovy 支持闭包（Closures），可以轻松实现函数式编程的特性，简化代码结构。</p></li><li><p><strong>简化语法：</strong>Groovy提供了简洁的语法，例如支持点操作符、集合操作、字符串插值等，使得代码更加清晰易读。</p></li><li><p><strong>元编程特性：</strong>Groovy具有强大的元编程特性，包括运行时元编程和编译时元编程，使得可以在运行时动态修改类和对象的行为。</p></li><li><p><strong>脚本语言特性：</strong>Groovy可以作为脚本语言使用，不需要显式的类和方法定义，可以直接编写执行代码。</p></li><li><p><strong>丰富的标准库：</strong>Groovy提供了丰富的标准库，包括文件操作、XML&#x2F;JSON 处理、数据库访问等功能，可以满足各种开发需求。</p></li></ol><p>Groovy适用于开发 Web 应用、脚本编写、测试自动化等各种场景。它可以充分发挥 Java 平台的优势，同时提供更加便捷的编程体验。</p><h1 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h1><p>安装Groovy前请确保电脑本机安装了JDK，没有安装的小伙伴，请点击下方任意一个链接查看安装教程（这里我安装的是JDK 8版本的）：</p><table><thead><tr><th align="center"><a href="./1.html">JDK 8安装教程</a></th><th align="center"><a href="./28.html">JDK 11安装教程</a></th><th align="center"><a href="./26.html">JDK 17安装教程</a></th></tr></thead></table><p>JDK安装完成后，按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入控制台，输入<code>java -version</code>，如果出现如下内容，就说明JDK已经安装成功了。</p><p><img src="https://source.icode504.com/images/image-20230314140629530.png"></p><p>由于我们要安装的是4.0版本的Groovy，需要保证JDK版本至少在8以上。以下是官网对不同版本的Groovy安装要求：</p><p><img src="https://source.icode504.com/images/image-20231226172918718.png" alt="官网对不同的Groovy版本所需的JVM版本要求"></p><h1 id="二、下载Groovy"><a href="#二、下载Groovy" class="headerlink" title="二、下载Groovy"></a>二、下载Groovy</h1><blockquote><p>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="https://www.icode504.com/posts/24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p></blockquote><p>1. 打开Groovy官网下载链接：<a href="https://groovy.apache.org/download.html">点我查看</a>。向下找到各个版本的下载页：</p><p><img src="https://source.icode504.com/images/image-20240129144559883.png"></p><p>2. 笔者在撰写这篇文章的时候，Groovy最新稳定版本是4.0版本，我们下载SDK bundle安装包：</p><p><img src="https://source.icode504.com/images/image-20240129144815996.png"></p><h1 id="三、安装配置Groovy"><a href="#三、安装配置Groovy" class="headerlink" title="三、安装配置Groovy"></a>三、安装配置Groovy</h1><p>1. 将下载好的安装包解压到一个你熟悉的位置，这里我解压到了D盘：</p><p><img src="https://source.icode504.com/images/image-20240129150722591.png"></p><p><img src="https://source.icode504.com/images/image-20240129150612519.png"></p><p>2. 接下来我们为Groovy来配置环境变量。找到Groovy安装路径，直到出现bin、conf、doc等文件夹。点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-20240129151122757.png"></p><p>3. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>4. 点击<strong>高级系统设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101010932039.png"></p><blockquote><p>Windows 10的高级系统设置在右侧：</p><p><img src="https://source.icode504.com/images/image-20240101011132186.png"></p></blockquote><p>5. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002218161.png"></p><p>6. 在下方系统变量，点击<strong>新建</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002302057.png"></p><p>7. 配置系统变量，按照图示操作即可：</p><p><img src="https://source.icode504.com/images/image-20240129151523312.png"></p><p>8. 双击Path进入：</p><p><img src="https://source.icode504.com/images/image-20240101002655185.png"></p><p>9. 按照图示操作即可，然后<strong>一路点击确定</strong>：</p><p><img src="https://source.icode504.com/images/image-20240129151715260.png"></p><p>10. 检查Groovy环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入命令行窗口。输入<code>groovy -v</code>或者<code>groovy -version</code>，下方出现版本信息就说明Groovy安装成功：</p><p><img src="https://source.icode504.com/images/image-20240129152111794.png"></p><h1 id="四、卸载Groovy"><a href="#四、卸载Groovy" class="headerlink" title="四、卸载Groovy"></a>四、卸载Groovy</h1><p>1. 找到Groovy安装目录，按<kbd>Shift</kbd><kbd>Delete</kbd>彻底删除：</p><p><img src="https://source.icode504.com/images/image-20240129145348459.png"></p><p>2. 删除环境变量：打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>3. 点击<strong>高级系统设置</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101010932039.png"></p><blockquote><p>Windows 10的高级系统设置在右侧：</p><p><img src="https://source.icode504.com/images/image-20240101011132186.png"></p></blockquote><p>4. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002218161.png"></p><p>5. 在下方系统变量中，找到<code>GROOVY_HOME</code>并选中，点击右下角<strong>删除</strong>：</p><p><img src="https://source.icode504.com/images/image-20240129145751651.png"></p><p>6. 双击<strong>Path</strong>进入：</p><p><img src="https://source.icode504.com/images/image-20240101002655185.png"></p><p>7. 找到下方配置的<code>%GROOVY_HOME%\bin</code>并选中，点击右上角的<strong>删除</strong>，完成后<strong>一路点击确定</strong>。至此，Groovy卸载完成。</p><p><img src="https://source.icode504.com/images/image-20240129150138239.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>编程语言</category>
+      
+      <category>Groovy</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Groovy</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Live Server插件打开浏览器时：该网页无法正常运作，127.0.0.1未发送任何数据的问题解决</title>
     <link href="/posts/33.html"/>
     <url>/posts/33.html</url>
