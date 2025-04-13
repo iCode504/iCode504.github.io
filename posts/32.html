@@ -18,46 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装JDK 21教程">
+    <meta name="description" content="本教程简要介绍了在Windows操作系统上安装、配置和卸载Go语言（Golang）的步骤。涵盖了安装程序、环境变量配置和卸载过程，为初学者提供了简单易懂的指导。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 21安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/27.html">
+<meta property="og:title" content="Golang安装、配置和卸载教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/32.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装JDK 21教程">
+<meta property="og:description" content="本教程简要介绍了在Windows操作系统上安装、配置和卸载Go语言（Golang）的步骤。涵盖了安装程序、环境变量配置和卸载过程，为初学者提供了简单易懂的指导。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231231234124976.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000342542.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000606080.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000829197.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000948438.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101001012592.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101001101762.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101001823379.png">
-<meta property="og:image" content="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101010932039.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101011132186.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002218161.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002302057.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002611204.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002655185.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002812677.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003131968.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003211769.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003254767.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003343061.png">
-<meta property="article:published_time" content="2025-04-12T14:08:14.769Z">
-<meta property="article:modified_time" content="2025-04-12T14:08:14.769Z">
+<meta property="og:image" content="https://source.icode504.com/images/3ee677aee108241823276394f9c1bac1.png">
+<meta property="article:published_time" content="2025-04-13T00:45:06.255Z">
+<meta property="article:modified_time" content="2025-04-13T00:45:06.255Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
 <meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Golang">
+<meta property="article:tag" content="Go">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20231231234124976.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/3ee677aee108241823276394f9c1bac1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 21安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>Golang安装、配置和卸载教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/3ee677aee108241823276394f9c1bac1.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 21安装配置教程（Windows版）</span>
+            <span id="subtitle">Golang安装、配置和卸载教程（Windows版）</span>
           
         </div>
 
@@ -239,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 22:08" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 08:45" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -471,17 +453,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Golang"
         id="heading-eda14e187a768b38eda999457c9cca1e" role="tab" data-toggle="collapse" href="#collapse-eda14e187a768b38eda999457c9cca1e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Golang
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-eda14e187a768b38eda999457c9cca1e"
+      <div class="category-collapse collapse show" id="collapse-eda14e187a768b38eda999457c9cca1e"
            role="tabpanel" aria-labelledby="heading-eda14e187a768b38eda999457c9cca1e">
         
         
@@ -493,7 +475,7 @@
       
         <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
         </a>
       
@@ -508,17 +490,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -548,7 +530,7 @@
       
         <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 21安装配置教程（Windows版）</span>
         </a>
       
@@ -789,65 +771,119 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 21安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">Golang安装、配置和卸载教程（Windows版）</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
-</blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-<p>接下来为大家讲解一下JDK 21如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html">点我查看</a></p>
-<p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是21.0.1版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p>
-<p><img src="https://source.icode504.com/images/image-20231231234124976.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101000342542.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p>
-<p><img src="https://source.icode504.com/images/image-20240101000606080.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101000829197.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101000948438.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240101001012592.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 安装完成，点击<strong>关闭</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101001101762.png" srcset="/img/loading.gif" lazyload></p>
+                <hr>
+<h2 id="title-tags-Golang-Go-Windowscategory-bar-trueabbrlink-32description-banner-img-https-source-icode504-com-images-Golang安装、配置、卸载教程（Windows版）-pngindex-img-https-source-icode504-com-images-Golang安装、配置、卸载教程（Windows版）-pngcategory-软件安装-Windows-编程语言-Golangpassword-date-2024-01-29-13-47-58"><a href="#title-tags-Golang-Go-Windowscategory-bar-trueabbrlink-32description-banner-img-https-source-icode504-com-images-Golang安装、配置、卸载教程（Windows版）-pngindex-img-https-source-icode504-com-images-Golang安装、配置、卸载教程（Windows版）-pngcategory-软件安装-Windows-编程语言-Golangpassword-date-2024-01-29-13-47-58" class="headerlink" title="title:tags:  - Golang  - Go  - Windowscategory_bar: trueabbrlink: 32description: &gt;-banner_img: https://source.icode504.com/images/Golang安装、配置、卸载教程（Windows版）.pngindex_img: https://source.icode504.com/images/Golang安装、配置、卸载教程（Windows版）.pngcategory:  - 软件安装  - Windows  - 编程语言  - Golangpassword:date: 2024-01-29 13:47:58"></a>title:<br>tags:<br>  - Golang<br>  - Go<br>  - Windows<br>category_bar: true<br>abbrlink: 32<br>description: &gt;-<br><br>banner_img: <a target="_blank" rel="noopener" href="https://source.icode504.com/images/Golang%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">https://source.icode504.com/images/Golang安装、配置、卸载教程（Windows版）.png</a><br>index_img: <a target="_blank" rel="noopener" href="https://source.icode504.com/images/Golang%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">https://source.icode504.com/images/Golang安装、配置、卸载教程（Windows版）.png</a><br>category:<br>  - 软件安装<br>  - Windows<br>  - 编程语言<br>  - Golang<br>password:<br>date: 2024-01-29 13:47:58</h2><p>Golang，也称为Go语言，是由Google开发的一种静态类型、编译型的编程语言。以下是关于Go语言的一些重要特点和特性：</p>
+<ol>
+<li><p><strong>简洁易读：</strong> Go语言设计简洁，语法清晰，易于阅读和学习。它借鉴了C语言的部分特性，但去除了一些复杂的特性和语法，使得代码更加简洁明了。</p>
+</li>
+<li><p><strong>并发支持：</strong> Go语言内置了轻量级的并发支持，通过goroutine和channel来实现并发编程。这使得编写并发程序变得更加简单和高效。</p>
+</li>
+<li><p><strong>垃圾回收：</strong> Go语言拥有自动垃圾回收机制，可以帮助程序员管理内存，减少内存泄漏问题。</p>
+</li>
+<li><p><strong>静态类型：</strong> Go语言是一种静态类型语言，变量在编译时需要声明其类型，这有助于提高代码的可读性和稳定性。</p>
+</li>
+<li><p><strong>快速编译：</strong> Go语言的编译速度非常快，可以快速生成可执行文件，适合于快速开发和部署应用程序。</p>
+</li>
+<li><p><strong>跨平台支持：</strong> Go语言提供了良好的跨平台支持，可以在不同的操作系统上进行开发和部署，包括Windows、Linux和MacOS等。</p>
+</li>
+<li><p><strong>丰富的标准库：</strong> Go语言拥有丰富的标准库，涵盖了网络、文件操作、并发等各个领域，使得开发者可以更加高效地编写各种类型的应用程序。</p>
+</li>
+</ol>
+<p>Golang主要应用于Web开发、云计算、区块链等领域。</p>
+<p>Windows安装Golang有两种方式：直接安装、ZIP解压缩安装（需要配置环境变量）。两种方式<strong>二选一</strong>即可。</p>
+<h1 id="方式一：直接安装"><a href="#方式一：直接安装" class="headerlink" title="方式一：直接安装"></a>方式一：直接安装</h1><h2 id="一、下载Golang安装包"><a href="#一、下载Golang安装包" class="headerlink" title="一、下载Golang安装包"></a>一、下载Golang安装包</h2><p>1. 打开右侧链接，进入Go语言官网下载页面：<a target="_blank" rel="noopener" href="https://golang.google.cn/dl/">点我查看</a></p>
+<p><img src="https://source.icode504.com/images/image-20231017111013563.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在下方<strong>Stable versions</strong>（稳定版本），选择相应的操作系统对应的安装包下载。这里我使用的是Windows 64位，直接下载下图的安装包即可。</p>
+<p><img src="https://source.icode504.com/images/image-20240129110522537.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="二、安装Golang"><a href="#二、安装Golang" class="headerlink" title="二、安装Golang"></a>二、安装Golang</h2><p>1. 双击打开安装包：</p>
+<p><img src="https://source.icode504.com/images/image-20231017112220938.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如果弹出安全警告，直接勾选下面选项，然后点击<strong>运行</strong>即可（没有此弹窗的直接跳转到下一步）。</p>
+<p><img src="https://source.icode504.com/images/image-20231017112356575.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 进入安装欢迎页面以后，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231017112444322.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在协议下方勾选<strong>I accept the terms in the Lincense Agreement</strong>，然后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231017112652583.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击<strong>Change</strong>选择安装路径，建议安装在除C盘外的路径，路径中建议只包含英文（避免后续使用过程中出现各种各样未知的bug），这里我安装在了D盘：</p>
+<p><img src="https://source.icode504.com/images/image-20231017113238490.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 点击<strong>Install</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20231017113305680.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20231017113326710.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 点击<strong>Finish</strong>，Golang安装完成：</p>
+<p><img src="https://source.icode504.com/images/image-20231017113409596.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入命令提示行页面后，输入<code>go version</code>，如果出现下方的界面就说明你的Golang安装成功并且可以正常使用了：</p>
+<p><img src="https://source.icode504.com/images/image-20231017113724236.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="三、卸载Golang（可选）"><a href="#三、卸载Golang（可选）" class="headerlink" title="三、卸载Golang（可选）"></a>三、卸载Golang（可选）</h2><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
+
 <blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p>
+<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
+<p>已经安装的小伙伴可以接着往下看！</p>
 </blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101001823379.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p>1. 打开Geek Uninstaller，找到<code>Go Programming Language amd64 go.xxx</code>，鼠标右键，点击卸载：</p>
+<p><img src="https://source.icode504.com/images/image-20240127160904157.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 此时弹出一个窗口，选择<strong>是</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240127160943100.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 卸载中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20240127161051126.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 卸载完毕，Golang程序卸载完成。</p>
+<h1 id="方式二：ZIP解压缩安装并配置"><a href="#方式二：ZIP解压缩安装并配置" class="headerlink" title="方式二：ZIP解压缩安装并配置"></a>方式二：ZIP解压缩安装并配置</h1><h2 id="一、下载Golang安装包-1"><a href="#一、下载Golang安装包-1" class="headerlink" title="一、下载Golang安装包"></a>一、下载Golang安装包</h2><p>1. 打开右侧链接，进入Go语言官网下载页面：<a target="_blank" rel="noopener" href="https://golang.google.cn/dl/">点我查看</a></p>
+<p><img src="https://source.icode504.com/images/image-20240127161816194.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在下方<strong>Stable versions</strong>（稳定版本），选择相应的操作系统对应的安装包下载。这里我使用的是Windows 64位，直接下载下图的zip压缩包即可。</p>
+<p><img src="https://source.icode504.com/images/image-20240129115224186.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="二、安装并配置Golang"><a href="#二、安装并配置Golang" class="headerlink" title="二、安装并配置Golang"></a>二、安装并配置Golang</h2><p>1. 将下载好的压缩包解压到一个你熟悉的位置（建议是全英文路径），这里我解压到了D盘：</p>
+<p><img src="https://source.icode504.com/images/image-20240127162207325.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240127162317618.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 接下来我们为Golang配置一下环境变量。找到Golang的安装路径，出现api、bin、doc等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240127162639860.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
+<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击<strong>高级系统设置</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>Windows 10的高级系统设置在右侧：</p>
+<p><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+<p>5. 点击<strong>环境变量</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240101002218161.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 在下方系统变量，点击<strong>新建</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240101002302057.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 配置系统变量，按照图示操作即可：</p>
+<p><img src="https://source.icode504.com/images/image-20240127163059204.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 双击Path进入：</p>
+<p><img src="https://source.icode504.com/images/image-20240101002655185.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 按照图示操作即可，然后<strong>一路点击确定</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240129115523661.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入命令提示行页面后，输入<code>go version</code>，如果出现下方的界面就说明你的Golang安装成功并且可以正常使用了：</p>
+<p><img src="https://source.icode504.com/images/image-20240127163412787.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="三、卸载Golang（可选）-1"><a href="#三、卸载Golang（可选）-1" class="headerlink" title="三、卸载Golang（可选）"></a>三、卸载Golang（可选）</h2><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
+
+<p>1. 找到go的安装路径，按<kbd>Shift</kbd><kbd>Delete</kbd>彻底删除：</p>
+<p><img src="https://source.icode504.com/images/image-20240127163842351.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 删除环境变量：打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
 <p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
 <p>3. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
+<p><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>Windows 10的高级系统设置在右侧：</p>
+<p><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
 <p>4. 点击<strong>环境变量</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20240101002218161.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002302057.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置系统变量，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002611204.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
+<p>5. 在下方系统变量中，找到<code>GO_HOME</code>并选中，点击右下角<strong>删除</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240127164226369.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 双击<strong>Path</strong>进入：</p>
 <p><img src="https://source.icode504.com/images/image-20240101002655185.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240101002812677.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p>
-<p><img src="https://source.icode504.com/images/image-20240101003131968.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 21安装成功了：</p>
-<p><img src="https://source.icode504.com/images/image-20240101003211769.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101003254767.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101003343061.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 找到下方配置的<code>%GO_HOME%\bin</code>并选中，点击右上角的<strong>删除</strong>，完成后<strong>一路点击确定</strong>。至此，Golang卸载完成。</p>
+<p><img src="https://source.icode504.com/images/image-20240129115642752.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -881,7 +917,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Golang/" class="category-chain-item">Golang</a>
   
   
 
@@ -902,9 +938,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
-      
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+      
+        <a href="/tags/Golang/" class="print-no-link">#Golang</a>
+      
+        <a href="/tags/Go/" class="print-no-link">#Go</a>
       
     </div>
   
@@ -916,8 +954,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 21安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/27.html</div>
+      <div>Golang安装、配置和卸载教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/32.html</div>
     </div>
     <div class="license-meta">
       
@@ -929,7 +967,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -961,18 +999,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JDK 11安装配置教程（Windows版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）">
-                        <span class="hidden-mobile">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
+                      <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）">
+                        <span class="hidden-mobile">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
