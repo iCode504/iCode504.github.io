@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:51:17.739Z</updated>
+  <updated>2025-04-13T07:02:19.896Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>qBittorrent安装教程（Windows版）</title>
+    <link href="https://www.icode504.com/posts/71.html"/>
+    <id>https://www.icode504.com/posts/71.html</id>
+    <published>2025-04-13T07:02:19.896Z</published>
+    <updated>2025-04-13T07:02:19.896Z</updated>
+    
+    
+    <summary type="html">BT种子和磁力链接下载工具qBittorrent安装教程，并提供相应的演示。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
+    
+    <category term="常用工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
+    
+    <category term="qBittorrent" scheme="https://www.icode504.com/tags/qBittorrent/"/>
+    
+    <category term="磁力" scheme="https://www.icode504.com/tags/%E7%A3%81%E5%8A%9B/"/>
+    
+    <category term="BT种子" scheme="https://www.icode504.com/tags/BT%E7%A7%8D%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title>Git安装配置教程（Windows版）</title>
@@ -498,31 +527,6 @@
     
     
     <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Electerm安装、配置与卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/47.html"/>
-    <id>https://www.icode504.com/posts/47.html</id>
-    <published>2025-04-13T03:52:36.505Z</published>
-    <updated>2025-04-13T03:52:36.505Z</updated>
-    
-    
-    <summary type="html">本文简要介绍了在Windows操作系统上安装Electerm的步骤。通过该教程，用户可以轻松下载、安装并配置Electerm，确保后续在Windows平台上享受强大的终端功能和文件管理能力。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="服务器&amp;虚拟机" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Electerm" scheme="https://www.icode504.com/tags/Electerm/"/>
     
   </entry>
   
