@@ -460,6 +460,43 @@
   
   
   <entry>
+    <title>Intellij IDEA/DataGrip配置MySQL8.0教程</title>
+    <link href="/posts/45.html"/>
+    <url>/posts/45.html</url>
+    
+    <content type="html"><![CDATA[<p>请确保电脑本机已经安装MySQL和Intellij IDEA&#x2F;DataGrip，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p><table><thead><tr><th align="center"></th><th align="center">Windows</th><th align="center">macOS</th><th align="center">Linux</th></tr></thead><tbody><tr><td align="center">MySQL 8.0</td><td align="center"><a href="./20.html">点我查看</a></td><td align="center"><a href="./68.html">点我查看</a></td><td align="center">敬请期待</td></tr><tr><td align="center">Intellij IDEA</td><td align="center"><a href="./14.html">点我查看</a></td><td align="center"><a href="./79.html">点我查看</a></td><td align="center">敬请期待</td></tr><tr><td align="center">DataGrip</td><td align="center">敬请期待</td><td align="center">敬请期待</td><td align="center">敬请期待</td></tr></tbody></table><ul><li>Windows检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</li></ul><p><img src="https://source.icode504.com/images/image-20240220151342379.png"></p><ul><li>macOS检查MySQL安装版本：如果你是按照上面的链接一步一步安装的MySQL。在安装完成后，重新打开终端，在终端中输入<code>mysql --version</code>，即可查看当前MySQL版本信息。</li></ul><p>1. 打开Intellij IDEA，按照下图所示操作，数据源选择<strong>MySQL</strong>：</p><p><img src="https://source.icode504.com/images/image-20240220143236662.png"></p><p>2. 在Driver处，点击<strong>MySQL</strong>，点击<strong>Go to Driver</strong>：</p><p><img src="https://source.icode504.com/images/image-20240220143412262.png"></p><p>3. 在Driver Files处，点击<strong>加号</strong>，选择<strong>Proviced Dirver</strong>，数据库驱动选择MySQL官网最新稳定版本：</p><p><img src="https://source.icode504.com/images/image-20240220143707207.png"></p><p>4. 由于我的电脑中已经下载最新版本的MySQL数据库驱动（JDBC），直接点击右侧的<code>Switch to ver. xxxx</code>即可：</p><blockquote><p>如果你没有数据库驱动，此时右侧应该是<code>Download ver. xxxx</code>，直接点击下载即可。</p></blockquote><p><img src="https://source.icode504.com/images/image-20240220144109011.png"></p><p>5. 此时数据库驱动切换成功，我们再点击左上角的<strong>Data Sources</strong>：</p><p><img src="https://source.icode504.com/images/image-20240220144741605.png"></p><p>6. 按照下图操作，根据自己的实际情况添加数据库配置信息：</p><p><img src="https://source.icode504.com/images/image-20240220145242313.png"></p><p>7. 填写完成后，点击右下角的<strong>Test Connection</strong>测试一下数据库连接，出现下图所示的连接就说明MySQL连接成功：</p><p><img src="https://source.icode504.com/images/image-20240220145404194.png"></p><p>8. 此时再次输入以下密码，直接点击<strong>OK</strong>：</p><p><img src="https://source.icode504.com/images/image-20240220145705718.png"></p><p>9. 连接成功，接下来你就可以在console中写SQL语句了：</p><p><img src="https://source.icode504.com/images/image-20240220145832765.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Intellij IDEA</category>
+      
+      <category>MySQL</category>
+      
+      <category>DataGrip</category>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Intellij IDEA</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>DataGrip</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Eclipse安装配置、卸载教程（Windows版）</title>
     <link href="/posts/30.html"/>
     <url>/posts/30.html</url>

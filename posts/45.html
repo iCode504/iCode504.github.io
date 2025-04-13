@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Eclipse配置PostgreSQL教程">
+    <meta name="description" content="本文提供了关于如何在Intellij IDEA&#x2F;DataGrip中配置MySQL的详细教程。通过此教程，读者将了解如何安装MySQL插件、配置数据库并测试连接。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Eclipse配置PostgreSQL教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/37.html">
+<meta property="og:title" content="Intellij IDEA&#x2F;DataGrip配置MySQL8.0教程">
+<meta property="og:url" content="https://www.icode504.com/posts/45.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Eclipse配置PostgreSQL教程">
+<meta property="og:description" content="本文提供了关于如何在Intellij IDEA&#x2F;DataGrip中配置MySQL的详细教程。通过此教程，读者将了解如何安装MySQL插件、配置数据库并测试连接。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/372d77256ae5dc98e955f65283b61c6e.png">
-<meta property="article:published_time" content="2025-04-13T03:05:35.724Z">
-<meta property="article:modified_time" content="2025-04-13T03:05:35.724Z">
+<meta property="og:image" content="https://source.icode504.com/images/699f3a5a571664e670f0f558f438ae57.png">
+<meta property="article:published_time" content="2025-04-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-13T03:34:50.087Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Eclipse">
-<meta property="article:tag" content="PostgreSQL">
+<meta property="article:tag" content="Intellij IDEA">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="DataGrip">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/372d77256ae5dc98e955f65283b61c6e.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/699f3a5a571664e670f0f558f438ae57.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Eclipse配置PostgreSQL教程（Windows版） - iCode504个人博客</title>
+  <title>Intellij IDEA/DataGrip配置MySQL8.0教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/372d77256ae5dc98e955f65283b61c6e.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/699f3a5a571664e670f0f558f438ae57.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Eclipse配置PostgreSQL教程（Windows版）</span>
+            <span id="subtitle">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
           
         </div>
 
@@ -220,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 11:05" pubdate>
+        <time datetime="2025-04-13 00:00" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -306,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="DataGrip"
         id="heading-9b454287aaa34344680bb85e164ad045" role="tab" data-toggle="collapse" href="#collapse-9b454287aaa34344680bb85e164ad045"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         DataGrip
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-9b454287aaa34344680bb85e164ad045"
+      <div class="category-collapse collapse show" id="collapse-9b454287aaa34344680bb85e164ad045"
            role="tabpanel" aria-labelledby="heading-9b454287aaa34344680bb85e164ad045">
         
         
@@ -333,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="MySQL"
         id="heading-62a004b95946bb97541afa471dcca73a" role="tab" data-toggle="collapse" href="#collapse-62a004b95946bb97541afa471dcca73a"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         MySQL
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-62a004b95946bb97541afa471dcca73a"
+      <div class="category-collapse collapse show" id="collapse-62a004b95946bb97541afa471dcca73a"
            role="tabpanel" aria-labelledby="heading-62a004b95946bb97541afa471dcca73a">
         
         
@@ -355,7 +356,7 @@
       
         <a href="/posts/45.html" title="Intellij IDEA/DataGrip配置MySQL8.0教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
         </a>
       
@@ -411,17 +412,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Eclipse"
         id="heading-32f7222026696f30787889194dee83e5" role="tab" data-toggle="collapse" href="#collapse-32f7222026696f30787889194dee83e5"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Eclipse
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-32f7222026696f30787889194dee83e5"
+      <div class="category-collapse collapse " id="collapse-32f7222026696f30787889194dee83e5"
            role="tabpanel" aria-labelledby="heading-32f7222026696f30787889194dee83e5">
         
         
@@ -438,17 +439,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgreSQL"
         id="heading-399bd1ee587245ecac6f39beaa99886f" role="tab" data-toggle="collapse" href="#collapse-399bd1ee587245ecac6f39beaa99886f"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         PostgreSQL
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-399bd1ee587245ecac6f39beaa99886f"
+      <div class="category-collapse collapse " id="collapse-399bd1ee587245ecac6f39beaa99886f"
            role="tabpanel" aria-labelledby="heading-399bd1ee587245ecac6f39beaa99886f">
         
         
@@ -460,7 +461,7 @@
       
         <a href="/posts/37.html" title="Eclipse配置PostgreSQL教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Eclipse配置PostgreSQL教程（Windows版）</span>
         </a>
       
@@ -479,17 +480,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Intellij IDEA"
         id="heading-85c0a6888d99dd0941fad3b2264ee859" role="tab" data-toggle="collapse" href="#collapse-85c0a6888d99dd0941fad3b2264ee859"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Intellij IDEA
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-85c0a6888d99dd0941fad3b2264ee859"
+      <div class="category-collapse collapse show" id="collapse-85c0a6888d99dd0941fad3b2264ee859"
            role="tabpanel" aria-labelledby="heading-85c0a6888d99dd0941fad3b2264ee859">
         
         
@@ -506,17 +507,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="MySQL"
         id="heading-62a004b95946bb97541afa471dcca73a" role="tab" data-toggle="collapse" href="#collapse-62a004b95946bb97541afa471dcca73a"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         MySQL
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-62a004b95946bb97541afa471dcca73a"
+      <div class="category-collapse collapse show" id="collapse-62a004b95946bb97541afa471dcca73a"
            role="tabpanel" aria-labelledby="heading-62a004b95946bb97541afa471dcca73a">
         
         
@@ -528,7 +529,7 @@
       
         <a href="/posts/45.html" title="Intellij IDEA/DataGrip配置MySQL8.0教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
         </a>
       
@@ -784,12 +785,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Eclipse配置PostgreSQL教程（Windows版）</h1>
+            <h1 id="seo-header">Intellij IDEA/DataGrip配置MySQL8.0教程</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年4月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <p>请确保电脑本机已经安装PostgresSQL和Eclipse，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p>
+                <p>请确保电脑本机已经安装MySQL和Intellij IDEA&#x2F;DataGrip，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p>
 <table>
 <thead>
 <tr>
@@ -800,69 +809,52 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">PostgreSQL</td>
-<td align="center"><a href="./35.html">点我查看</a></td>
-<td align="center">敬请期待</td>
+<td align="center">MySQL 8.0</td>
+<td align="center"><a href="./20.html">点我查看</a></td>
+<td align="center"><a href="./68.html">点我查看</a></td>
 <td align="center">敬请期待</td>
 </tr>
 <tr>
-<td align="center">Eclipse</td>
-<td align="center"><a href="./30.html">点我查看</a></td>
+<td align="center">Intellij IDEA</td>
+<td align="center"><a href="./14.html">点我查看</a></td>
+<td align="center"><a href="./79.html">点我查看</a></td>
+<td align="center">敬请期待</td>
+</tr>
+<tr>
+<td align="center">DataGrip</td>
+<td align="center">敬请期待</td>
 <td align="center">敬请期待</td>
 <td align="center">敬请期待</td>
 </tr>
 </tbody></table>
-<h1 id="一、下载并安装pgJDBC"><a href="#一、下载并安装pgJDBC" class="headerlink" title="一、下载并安装pgJDBC"></a>一、下载并安装pgJDBC</h1><p>1. 按<kbd>Win</kbd>和<kbd>S</kbd>键，在搜索框中搜索Stack Builder并打开：</p>
-<p><img src="https://source.icode504.com/images/image-20240131100854755.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 这里我们选择本地安装的PostgreSQL，完成后点击<strong>下一个</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131101117119.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 按照下图操作，选择pgJDBC：</p>
-<p><img src="https://source.icode504.com/images/image-20240131101409184.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 下载目录自定义，这里我安装在D盘，完成后点击<strong>下一个</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131101553293.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 下载完成，点击<strong>下一个</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131101620551.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 进入pgJDBC安装界面，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131101713249.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 选择一个你熟悉的安装位置，这里我安装在了D盘，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131101906926.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131102038330.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131102113012.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 点击<strong>Next</strong>，开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20240131102151200.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240131102227258.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 点击<strong>Finish</strong>，安装完成：</p>
-<p><img src="https://source.icode504.com/images/image-20240131102245360.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 点击<strong>完成</strong>，关闭Stack Builder：</p>
-<p><img src="https://source.icode504.com/images/image-20240131102428855.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、Eclipse配置PostgreSQL"><a href="#二、Eclipse配置PostgreSQL" class="headerlink" title="二、Eclipse配置PostgreSQL"></a>二、Eclipse配置PostgreSQL</h1><p>1. 打开Eclipse，在上方菜单栏选择<strong>Window</strong> –&gt; <strong>Show View</strong> –&gt; <strong>Other</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131100443322.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 双击打开<strong>Data Management</strong>，选择<strong>Data Source Explorer</strong>，完成后点击<strong>Open</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131100530658.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 此时会弹出一个Data Source Explorer窗口，鼠标右键选中第一个<strong>Database Connections</strong>，点击<strong>New</strong>新建一个连接：</p>
-<p><img src="https://source.icode504.com/images/image-20240131102657948.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 连接类型<strong>选择PostgreSQL并选中</strong>，Name和Description自定义，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131102920348.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击右上角<strong>加号</strong>修改数据库驱动和连接信息：</p>
-<p><img src="https://source.icode504.com/images/image-20240131103041407.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 选中数据库驱动模板<strong>PostgreSQL JDBC Driver</strong>，此时上方弹出一个错误信息：在本地系统中无法找到<code>postgresql-8.1-xxxx.jdbc2.jar</code>，这说明我们需要将Eclipse原有的数据库驱动改成前面我们下载安装的pgJDBC：</p>
-<p><img src="https://source.icode504.com/images/image-20240131103624152.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 选择<strong>JAR List</strong>，点击右侧的<strong>Clear All</strong>，清空驱动文件（下图列出来的JAR包本地不存在）</p>
-<p><img src="https://source.icode504.com/images/image-20240131103928756.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 点击<strong>Add JAR&#x2F;Zip</strong>，找到前面我们安装的pgJDBC的位置，选中<code>postgresql-42.6.0.jar</code>文件，点击<strong>打开</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131104057823.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131104254745.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131104425996.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 点击上方的<strong>Properties</strong>，按照下图所给的提示填写好配置信息：</p>
-<p><img src="https://source.icode504.com/images/image-20240131104642198.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 记不住密码的小伙伴建议勾选<code>Save Password</code>，点击右下角的<strong>Test Connection</strong>，测试一下数据库连接：</p>
-<p><img src="https://source.icode504.com/images/image-20240131105018333.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 此时弹出一个窗口：<code>Ping succeeded</code>，说明数据库测试连接成功，点击<strong>OK</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131105137424.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 点击<strong>Finish</strong>，PostgreSQL连接成功：</p>
-<p><img src="https://source.icode504.com/images/image-20240131105306411.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131105549246.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>Windows检查MySQL安装版本：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，在命令行中输入<code>mysql --version</code>，确保本机安装的MySQL版本在8.0及以上：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-20240220151342379.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>macOS检查MySQL安装版本：如果你是按照上面的链接一步一步安装的MySQL。在安装完成后，重新打开终端，在终端中输入<code>mysql --version</code>，即可查看当前MySQL版本信息。</li>
+</ul>
+<p>1. 打开Intellij IDEA，按照下图所示操作，数据源选择<strong>MySQL</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220143236662.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在Driver处，点击<strong>MySQL</strong>，点击<strong>Go to Driver</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220143412262.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在Driver Files处，点击<strong>加号</strong>，选择<strong>Proviced Dirver</strong>，数据库驱动选择MySQL官网最新稳定版本：</p>
+<p><img src="https://source.icode504.com/images/image-20240220143707207.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 由于我的电脑中已经下载最新版本的MySQL数据库驱动（JDBC），直接点击右侧的<code>Switch to ver. xxxx</code>即可：</p>
+<blockquote>
+<p>如果你没有数据库驱动，此时右侧应该是<code>Download ver. xxxx</code>，直接点击下载即可。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20240220144109011.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 此时数据库驱动切换成功，我们再点击左上角的<strong>Data Sources</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220144741605.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按照下图操作，根据自己的实际情况添加数据库配置信息：</p>
+<p><img src="https://source.icode504.com/images/image-20240220145242313.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 填写完成后，点击右下角的<strong>Test Connection</strong>测试一下数据库连接，出现下图所示的连接就说明MySQL连接成功：</p>
+<p><img src="https://source.icode504.com/images/image-20240220145404194.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 此时再次输入以下密码，直接点击<strong>OK</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240220145705718.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 连接成功，接下来你就可以在console中写SQL语句了：</p>
+<p><img src="https://source.icode504.com/images/image-20240220145832765.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -886,12 +878,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Eclipse/" class="category-chain-item">Eclipse</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/" class="category-chain-item">Intellij IDEA</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Eclipse/PostgreSQL/" class="category-chain-item">PostgreSQL</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/MySQL/" class="category-chain-item">MySQL</a>
   
   
 
@@ -910,9 +902,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Eclipse/" class="print-no-link">#Eclipse</a>
+        <a href="/tags/Intellij-IDEA/" class="print-no-link">#Intellij IDEA</a>
       
-        <a href="/tags/PostgreSQL/" class="print-no-link">#PostgreSQL</a>
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+      
+        <a href="/tags/DataGrip/" class="print-no-link">#DataGrip</a>
       
     </div>
   
@@ -924,8 +918,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Eclipse配置PostgreSQL教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/37.html</div>
+      <div>Intellij IDEA/DataGrip配置MySQL8.0教程</div>
+      <div>https://www.icode504.com/posts/45.html</div>
     </div>
     <div class="license-meta">
       
@@ -969,9 +963,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）">
+                      <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Visual Studio Code安装配置教程（Windows版）</span>
+                        <span class="hidden-mobile">Golang安装、配置和卸载教程（Windows版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -979,8 +973,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程">
-                        <span class="hidden-mobile">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
+                      <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）">
+                        <span class="hidden-mobile">Eclipse安装配置、卸载教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
