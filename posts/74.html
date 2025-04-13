@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+    <meta name="description" content="这篇教程旨在为 Linux 用户提供 Node.js的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PostgreSQL安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/35.html">
+<meta property="og:title" content="Node.js安装、配置教程（Linux通用版）">
+<meta property="og:url" content="https://www.icode504.com/posts/74.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文提供详细的步骤指导，帮助用户在Windows系统上顺利安装、配置和卸载PostgreSQL数据库软件。">
+<meta property="og:description" content="这篇教程旨在为 Linux 用户提供 Node.js的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/01f035a833a1a2e9871be08bbe1cc24c.png">
-<meta property="article:published_time" content="2025-04-13T02:59:45.448Z">
-<meta property="article:modified_time" content="2025-04-13T02:59:45.448Z">
+<meta property="og:image" content="https://source.icode504.com/images/dd825a30a39179622651f071b7ea08d2.png">
+<meta property="article:published_time" content="2025-04-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-13T07:13:47.661Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="PostgreSQL">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Node.js">
+<meta property="article:tag" content="npm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/01f035a833a1a2e9871be08bbe1cc24c.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/dd825a30a39179622651f071b7ea08d2.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>PostgreSQL安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>Node.js安装、配置教程（Linux通用版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/01f035a833a1a2e9871be08bbe1cc24c.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/dd825a30a39179622651f071b7ea08d2.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">Node.js安装、配置教程（Linux通用版）</span>
           
         </div>
 
@@ -220,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 10:59" pubdate>
+        <time datetime="2025-04-13 00:00" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -306,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(6)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -333,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架"
         id="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6" role="tab" data-toggle="collapse" href="#collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         前端框架
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+      <div class="category-collapse collapse show" id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
            role="tabpanel" aria-labelledby="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6">
         
         
@@ -355,7 +356,7 @@
       
         <a href="/posts/74.html" title="Node.js安装、配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Node.js安装、配置教程（Linux通用版）</span>
         </a>
       
@@ -593,17 +594,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(28)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -721,17 +722,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         数据库工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -752,7 +753,7 @@
       
         <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -1388,83 +1389,136 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">PostgreSQL安装、配置与卸载教程（Windows版）</h1>
+            <h1 id="seo-header">Node.js安装、配置教程（Linux通用版）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年4月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <p>PostgreSQL是基于<a target="_blank" rel="noopener" href="https://dsf.berkeley.edu/postgres.html">POSTGRES 4.2</a>版本的对象-关系型数据库，由加州大学伯克利分校计算机系研发。POSTGRES开创了许多先进理念，这些概念后来才在一些数据库系统中出现（他们的<a target="_blank" rel="noopener" href="https://www.postgresql.org/">官网</a>标题宣传的是世界上最先进的开源关系型数据库）。</p>
-<p>PostgreSQL是原伯克利代码的后代，它是开源的，支持大部分SQL标准并提供很多现代化特性：复杂查询、外键、触发器、更新视图等。</p>
-<p>此外，用户能以多种方式扩展PostgreSQL，例如可以添加新数据类型、新函数、新操作符等。由于自由的许可，PostgreSQL可以被任何人使用、修改、发布。</p>
-<p>以下是Windows环境下PostgreSQL的安装、配置与卸载教程：</p>
-<h1 id="一、下载PostgreSQL"><a href="#一、下载PostgreSQL" class="headerlink" title="一、下载PostgreSQL"></a>一、下载PostgreSQL</h1><p>1. 进入官网下载链接：<a target="_blank" rel="noopener" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">点我进入</a>（网页加载可能比较慢，请耐心等待）</p>
-<p>2. 根据自己的操作系统下载，这里我选择Windows版PostgreSQL 15版本：</p>
-<p><img src="https://source.icode504.com/images/image-5adb5c7f3f9993b49cf13cadf5133070.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装PostgreSQL"><a href="#二、安装PostgreSQL" class="headerlink" title="二、安装PostgreSQL"></a>二、安装PostgreSQL</h1><p>1. 双击打开安装包，进入欢迎界面，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-f9f077db3caecb00a08503191143d6bc.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择安装路径，建议安装路径是全英文的（小白安装可以不用修改此路径），完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240105161313262.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 选择组件：这里安装器为我们默认勾选了四个组件，简单解释一下这些组件的作用。</p>
+                <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，使 JavaScript 能够在服务器端运行，它提供了一个事件驱动的非阻塞 I&#x2F;O 模型，使得构建高效、可扩展的网络应用变得更加容易。而 npm（Node Package Manager）是 Node.js 的包管理工具，用于安装、分享、管理 JavaScript 代码包，使开发者能够轻松地将自己的代码与他人的代码集成，并且享受到社区共享的各种功能模块。Node.js 和 npm 的结合使得 JavaScript 开发者能够在服务器端和客户端都使用同一种语言，极大地提高了开发效率和跨平台能力。</p>
+<p>以下是 Linux 环境下 Node.js 的安装教程：</p>
+<h1 id="一、安装前操作"><a href="#一、安装前操作" class="headerlink" title="一、安装前操作"></a>一、安装前操作</h1><p>1. 需要安装Linux操作系统的小伙伴，可以根据需要点击下方任意一个链接查看安装教程：</p>
 <table>
 <thead>
 <tr>
-<th>组件名称</th>
+<th>Cent OS</th>
+<th>Ubuntu</th>
+<th>Debian</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="./94.html">点我查看</a></td>
+<td><a href="./51.html">点我查看</a></td>
+<td><a href="./52.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>2. 本文使用到如下软件，需要安装的小伙伴可以点击对应的链接查看安装教程：</p>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装教程</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>PostgreSQL Server</td>
-<td>PostgreSQL数据库服务器（首次安装必须勾选）</td>
+<td>Electerm</td>
+<td><a href="./47.html">点我查看</a></td>
+<td>一款比较好用的通过SSH远程连接Linux的工具，支持Windows&#x2F;macOS以SFTP的方式传输文件</td>
 </tr>
 <tr>
-<td>pgAdmin 4</td>
-<td>pgAdmin 4是PostgreSQL图形管理界面，用来管理PostgreSQL数据库和服务器，可以在内部编写SQL语句</td>
-</tr>
-<tr>
-<td>Stack Builder</td>
-<td>Stack Builder通过下载安装工具、驱动和应用，可以补充PostgreSQL未安装的内容。</td>
-</tr>
-<tr>
-<td>Command Line Tools</td>
-<td>PostgreSQL的命令行工具，如果需要使用pgAdmin 4，需要安装命令行工具</td>
+<td>Neat Download Manager</td>
+<td><a href="./24.html">点我查看</a></td>
+<td>使用此软件下载安装包可以加快下载速度。</td>
 </tr>
 </tbody></table>
-<p>如果你是新手小白，按照系统默认勾选即可，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911145322812.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 选择数据存储路径：第2步如果选择了安装路径，那么这一步就按照系统默认安装位置即可（不用修改），点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240105163356163.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 为超级管理员设置密码。注意：如果你记不住密码，就将密码设置成123456即可，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911145851183.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. PostgreSQL默认端口是<strong>5432</strong>，保持默认即可，不用修改。点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150036442.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 地区按照系统默认选择<strong>Default Locale</strong>，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150143566.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 对前面安装选项进行确认，如果没有问题点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240105164020363.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 点击<strong>Next</strong>，开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150301037.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230911150326605.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 安装完毕，点击<strong>Finish</strong>。Postgres安装完成：</p>
-<p><img src="https://source.icode504.com/images/image-20240130105919293.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、卸载PostgreSQL"><a href="#三、卸载PostgreSQL" class="headerlink" title="三、卸载PostgreSQL"></a>三、卸载PostgreSQL</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
+<ol start="3">
+<li>打开Electerm并连接上Linux服务器，执行如下命令查看当前操作系统信息：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br></code></pre></td></tr></table></figure>
 
+<p>这里我使用的是 x86_64 的 Debian 操作系统：</p>
+<p><img src="https://source.icode504.com/images/image-20240611073052595.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 下载并安装如下工具：wget、vim、tar</p>
 <blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴可以接着往下看！</p>
+<p>wget 是 Linux 下载文件常用的命令。</p>
+<p>vim 是一款编辑器，里面包含编辑模式、查看模式和命令模式。</p>
+<p>tar 用来解压 tar 类型相关压缩包的命令。</p>
 </blockquote>
-<p>1. 打开Geek Uninstaller，找到PostgreSQL 15，鼠标右键，点击<strong>卸载</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240130101637247.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 此时卸载模式，默认选择第一个<strong>Entire Application</strong>（完全卸载），点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240130101833493.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 卸载中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240130101938418.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 此时弹出一个卸载成功的小窗口，点击OK：</p>
-<p><img src="https://source.icode504.com/images/image-20240130102132979.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在Geek Uninstaller中清理注册表等卸载残留，点击<strong>完成</strong>，卸载残留清理完毕。至此，Postgres卸载完成。</p>
-<p><img src="https://source.icode504.com/images/image-20240130102238678.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>CentOS</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y install wget vim tar<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu&#x2F;Debian</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y install wget vim tar<br></code></pre></td></tr></table></figure>
+
+<h1 id="二、下载-Node-js-安装包"><a href="#二、下载-Node-js-安装包" class="headerlink" title="二、下载 Node.js 安装包"></a>二、下载 Node.js 安装包</h1><p>1. 打开右侧链接地址，进入 Node.js 官方下载链接列表页：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">点我查看</a></p>
+<p>2. 这里我选择 v16.20.2 版本下载，找到这个文件夹，点击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20240610231104421.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 根据前面的指令集下载对应的安装包，由于我的 Linux 是 x86_64 指令集，因此需要鼠标点击下图的红色框链接再点击复制链接：</p>
+<p><img src="https://source.icode504.com/images/image-20240611080533882.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在命令行中，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget 上一步复制的链接地址<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240611080811017.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 等待一段时间后，下载完成，执行<code>ls</code>文件就可以看到当前目录下存在一个 node.js 的安装包：</p>
+<p><img src="https://source.icode504.com/images/image-20240611081213944.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 这里我将压缩包解压到<code>/usr/local</code>目录下，执行如下命令：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">tar -zxvf <span class="hljs-keyword">node</span><span class="hljs-title">-v16</span>.<span class="hljs-number">20.2</span>-linux-x64.tar.gz -C /usr/local<br></code></pre></td></tr></table></figure>
+
+<p>7. 解压完成，切换到<code>/usr/local</code>目录，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local<br></code></pre></td></tr></table></figure>
+
+<p>8. 执行<code>ls</code>命令可以看到我们刚刚解压到的文件目录：</p>
+<p><img src="https://source.icode504.com/images/image-20240611081956844.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、设置环境变量"><a href="#三、设置环境变量" class="headerlink" title="三、设置环境变量"></a>三、设置环境变量</h1><p>1. 鼠标<strong>移到</strong>上方的加号位置，找到你现在所连接的服务器，再开启一个窗口：</p>
+<p><img src="https://source.icode504.com/images/image-20240611091759323.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时有弹出了一个命令行窗口，我们将这个窗口称作窗口 2，原来的窗口称作窗口 1：</p>
+<p><img src="https://source.icode504.com/images/image-20240611092026272.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. （当前位置：窗口 2）在当前目录下新建一个文件 node_env.sh，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim node_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>3. 复制如下代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">NODEJS_HOME</span><br>NODEJS_HOME=/usr/local/node-v16.20.2-linux-x64<br>PATH=$PATH:$NODEJS_HOME/bin<br>export PATH NODEJS_HOME<br></code></pre></td></tr></table></figure>
+
+<p>4. （当前位置：窗口 2）按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第 4 步的代码，效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240611085017634.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 切换到窗口 1，进入解压后的文件目录，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> node-v16.20.2-linux-x64/<br></code></pre></td></tr></table></figure>
+
+<p>6. （当前位置：窗口 1）输入<code>pwd</code>命令查看当前文件所在路径并复制：</p>
+<blockquote>
+<p>说明：鼠标直接选中红色框中的内容，按<kbd>Ctrl</kbd><kbd>C</kbd>复制（或者鼠标右键点击复制也可以）。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20240611082219906.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. （当前位置：窗口 2）将光标移动到第二行，将<code>NODEJS_HOME</code>对应的值替换成第 6 步复制的路径。完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
+<p>8. 执行如下命令，让环境变量配置生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile/node_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>9. 依次执行<code>node -v</code>和<code>npm -v</code>命令，如果能查看到对应的版本号，就说明上面的环境变量已生效：</p>
+<p><img src="https://source.icode504.com/images/image-20240611085516463.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、npm-更换镜像源"><a href="#四、npm-更换镜像源" class="headerlink" title="四、npm 更换镜像源"></a>四、npm 更换镜像源</h1><p>Node.js 中包含一个重要模块：npm，它的作用是帮助我们下载项目中的依赖（你可以理解成下载对应的软件包），但是 npm 默认的下载地址在国外，如果使用了默认的下载地址，后续在使用 npm 的过程中下载依赖会非常慢，因此，我们需要将 npm 默认的下载地址改成国内镜像，这里我使用的是淘宝镜像源。</p>
+<p>1. 执行如下命令查看当前<code>npm</code>的下载源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240611085737362.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 将镜像源更改成淘宝镜像源，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
+
+<p>3. 再次执行如下命令，镜像源成功修改为淘宝镜像源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240611085952087.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1488,12 +1542,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" class="category-chain-item">前端框架</a>
   
   
 
@@ -1512,9 +1566,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
-        <a href="/tags/PostgreSQL/" class="print-no-link">#PostgreSQL</a>
+        <a href="/tags/Node-js/" class="print-no-link">#Node.js</a>
+      
+        <a href="/tags/npm/" class="print-no-link">#npm</a>
       
     </div>
   
@@ -1526,8 +1582,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PostgreSQL安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/35.html</div>
+      <div>Node.js安装、配置教程（Linux通用版）</div>
+      <div>https://www.icode504.com/posts/74.html</div>
     </div>
     <div class="license-meta">
       
@@ -1571,9 +1627,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程">
+                      <a href="/posts/70.html" title="Docker安装和配置教程（Linux CentOS版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
+                        <span class="hidden-mobile">Docker安装和配置教程（Linux CentOS版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1581,8 +1637,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）">
-                        <span class="hidden-mobile">Groovy安装、配置与卸载教程（Windows版）</span>
+                      <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）">
+                        <span class="hidden-mobile">Eclipse安装配置、卸载教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
