@@ -18,28 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这篇教程旨在为 Linux 用户提供 Node.js的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
+    <meta name="description" content="本教程详细介绍了在Windows系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js安装、配置教程（Linux通用版）">
-<meta property="og:url" content="https://www.icode504.com/posts/74.html">
+<meta property="og:title" content="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）">
+<meta property="og:url" content="https://www.icode504.com/posts/85.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="这篇教程旨在为 Linux 用户提供 Node.js的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
+<meta property="og:description" content="本教程详细介绍了在Windows系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/dd825a30a39179622651f071b7ea08d2.png">
-<meta property="article:published_time" content="2025-04-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-13T07:13:47.661Z">
+<meta property="og:image" content="https://source.icode504.com/images/849107ddef3928fced4ff8ae1dfbd7c2.png">
+<meta property="article:published_time" content="2025-04-13T07:53:37.612Z">
+<meta property="article:modified_time" content="2025-04-13T07:53:37.612Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Node.js">
-<meta property="article:tag" content="npm">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Redis">
+<meta property="article:tag" content="TinyRDM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/dd825a30a39179622651f071b7ea08d2.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/849107ddef3928fced4ff8ae1dfbd7c2.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Node.js安装、配置教程（Linux通用版） - iCode504个人博客</title>
+  <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/dd825a30a39179622651f071b7ea08d2.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/849107ddef3928fced4ff8ae1dfbd7c2.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Node.js安装、配置教程（Linux通用版）</span>
+            <span id="subtitle">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
           
         </div>
 
@@ -221,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 00:00" pubdate>
+        <time datetime="2025-04-13 15:53" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -307,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Linux
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -334,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架"
         id="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6" role="tab" data-toggle="collapse" href="#collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         前端框架
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+      <div class="category-collapse collapse " id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
            role="tabpanel" aria-labelledby="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6">
         
         
@@ -356,7 +356,7 @@
       
         <a href="/posts/74.html" title="Node.js安装、配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Node.js安装、配置教程（Linux通用版）</span>
         </a>
       
@@ -671,17 +671,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Windows
         <span class="list-group-count">(30)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -799,17 +799,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库工具
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -848,7 +848,7 @@
       
         <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
         </a>
       
@@ -1681,136 +1681,59 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Node.js安装、配置教程（Linux通用版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月13日
-                  
-                
-              </p>
+            <h1 id="seo-header">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，使 JavaScript 能够在服务器端运行，它提供了一个事件驱动的非阻塞 I&#x2F;O 模型，使得构建高效、可扩展的网络应用变得更加容易。而 npm（Node Package Manager）是 Node.js 的包管理工具，用于安装、分享、管理 JavaScript 代码包，使开发者能够轻松地将自己的代码与他人的代码集成，并且享受到社区共享的各种功能模块。Node.js 和 npm 的结合使得 JavaScript 开发者能够在服务器端和客户端都使用同一种语言，极大地提高了开发效率和跨平台能力。</p>
-<p>以下是 Linux 环境下 Node.js 的安装教程：</p>
-<h1 id="一、安装前操作"><a href="#一、安装前操作" class="headerlink" title="一、安装前操作"></a>一、安装前操作</h1><p>1. 需要安装Linux操作系统的小伙伴，可以根据需要点击下方任意一个链接查看安装教程：</p>
-<table>
-<thead>
-<tr>
-<th>Cent OS</th>
-<th>Ubuntu</th>
-<th>Debian</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="./94.html">点我查看</a></td>
-<td><a href="./51.html">点我查看</a></td>
-<td><a href="./52.html">点我查看</a></td>
-</tr>
-</tbody></table>
-<p>2. 本文使用到如下软件，需要安装的小伙伴可以点击对应的链接查看安装教程：</p>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装教程</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Electerm</td>
-<td><a href="./47.html">点我查看</a></td>
-<td>一款比较好用的通过SSH远程连接Linux的工具，支持Windows&#x2F;macOS以SFTP的方式传输文件</td>
-</tr>
-<tr>
-<td>Neat Download Manager</td>
-<td><a href="./24.html">点我查看</a></td>
-<td>使用此软件下载安装包可以加快下载速度。</td>
-</tr>
-</tbody></table>
-<ol start="3">
-<li>打开Electerm并连接上Linux服务器，执行如下命令查看当前操作系统信息：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -a<br></code></pre></td></tr></table></figure>
+                <p>TinyRDM是一款轻量级的Redis数据库管理工具，提供了用户友好的图形界面，便于开发者和数据库管理员进行Redis数据库的连接、管理和监控。它支持多种Redis命令操作，提供丰富的可视化功能，直观地展示数据结构和存储信息。TinyRDM简洁高效，适合日常的Redis管理工作。</p>
+<p>以下是Windows环境下安装Tiny RDM教程：</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请确保Linux操作系统上安装了Redis，需要安装的小伙伴点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/83.html">点我查看</a></p>
+<p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>进入命令行界面，执行如下命令查看当前操作系统信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">systeminfo<br></code></pre></td></tr></table></figure>
 
-<p>这里我使用的是 x86_64 的 Debian 操作系统：</p>
-<p><img src="https://source.icode504.com/images/image-20240611073052595.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 下载并安装如下工具：wget、vim、tar</p>
+<p>这里我的电脑是Windows操作系统，使用的是x64指令集：</p>
+<p><img src="https://source.icode504.com/images/image-42448e12a41218868a6c13ecb9bb4fac.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、下载RDM"><a href="#二、下载RDM" class="headerlink" title="二、下载RDM"></a>二、下载RDM</h1><p>1. 打开Tiny RDM官网：<a target="_blank" rel="noopener" href="https://redis.tinycraft.cc/zh/">点我查看</a></p>
+<p>2. 鼠标移到<strong>下载安装</strong>按钮，根据前面我们查看的电脑指令集，x64的小伙伴点击第一个链接下载，arm64的小伙伴按照下图蓝色框找到arm64安装包下载：</p>
+<p><img src="https://source.icode504.com/images/image-b59501b9a12f6cd374df34e6bbea4d73.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装Tiny-RDM"><a href="#三、安装Tiny-RDM" class="headerlink" title="三、安装Tiny RDM"></a>三、安装Tiny RDM</h1><p>1. 双击下载好的安装包，进入欢迎页面，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-5d61a9e5c54b2371c1de5f9bd7371741.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 选择安装位置，这里我安装在了D盘，完成后点击下方的<strong>Install</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-0338ea215e228ffe2f1f75d4f53756b0.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-cdb3280e85900997f87c56463a7321fa.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-366228e45dde0f2d6242215118aad761.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-19b9e279c735690243cb0c280afa633e.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 安装完成，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-41e953de613efc4a40ceb7f40bf5c63e.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击Finish，Tiny RDM安装完成：</p>
+<p><img src="https://source.icode504.com/images/image-aea53fb429cfdcd78af24fe463d79aa1.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、使用Tiny-RDM远程连接Redis"><a href="#四、使用Tiny-RDM远程连接Redis" class="headerlink" title="四、使用Tiny RDM远程连接Redis"></a>四、使用Tiny RDM远程连接Redis</h1><p>1. 在桌面上打开Tiny RDM，点击左下角的加号，新建一个Redis连接：</p>
+<p><img src="https://source.icode504.com/images/image-c9ca4f23e1de2fbae1604ab9d3e397d5.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示操作，配置Redis的连接配置，完成后点击左下角的<strong>测试连接</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-5f52a47a8b58ea3606d615f8dbd4737c.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 如果下方弹出提示“成功连接到Redis服务器”就说明前面的Redis配置没有问题，此时我们点击右下角的确认就可以使用Redis了：</p>
+<p><img src="https://source.icode504.com/images/image-2e1872a9dac580830efd657e8e03d8cb.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 双击左侧的Redis连接，再点击控制台，我们就可以正常使用Redis命令了：</p>
+<p><img src="https://source.icode504.com/images/image-e69cbbaec6fcf640e0fca44ae8e6d89b.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-ce17051a4ad9fa5e8e7760faea13b289.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、卸载Tiny-RDM"><a href="#五、卸载Tiny-RDM" class="headerlink" title="五、卸载Tiny RDM"></a>五、卸载Tiny RDM</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
+
 <blockquote>
-<p>wget 是 Linux 下载文件常用的命令。</p>
-<p>vim 是一款编辑器，里面包含编辑模式、查看模式和命令模式。</p>
-<p>tar 用来解压 tar 类型相关压缩包的命令。</p>
+<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="./31.html">点我查看</a></p>
+<p>已经安装的小伙伴可以接着往下看！</p>
 </blockquote>
-<ul>
-<li>CentOS</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum -y install wget vim tar<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>Ubuntu&#x2F;Debian</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y install wget vim tar<br></code></pre></td></tr></table></figure>
-
-<h1 id="二、下载-Node-js-安装包"><a href="#二、下载-Node-js-安装包" class="headerlink" title="二、下载 Node.js 安装包"></a>二、下载 Node.js 安装包</h1><p>1. 打开右侧链接地址，进入 Node.js 官方下载链接列表页：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">点我查看</a></p>
-<p>2. 这里我选择 v16.20.2 版本下载，找到这个文件夹，点击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240610231104421.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 根据前面的指令集下载对应的安装包，由于我的 Linux 是 x86_64 指令集，因此需要鼠标点击下图的红色框链接再点击复制链接：</p>
-<p><img src="https://source.icode504.com/images/image-20240611080533882.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在命令行中，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget 上一步复制的链接地址<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-20240611080811017.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 等待一段时间后，下载完成，执行<code>ls</code>文件就可以看到当前目录下存在一个 node.js 的安装包：</p>
-<p><img src="https://source.icode504.com/images/image-20240611081213944.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 这里我将压缩包解压到<code>/usr/local</code>目录下，执行如下命令：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">tar -zxvf <span class="hljs-keyword">node</span><span class="hljs-title">-v16</span>.<span class="hljs-number">20.2</span>-linux-x64.tar.gz -C /usr/local<br></code></pre></td></tr></table></figure>
-
-<p>7. 解压完成，切换到<code>/usr/local</code>目录，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local<br></code></pre></td></tr></table></figure>
-
-<p>8. 执行<code>ls</code>命令可以看到我们刚刚解压到的文件目录：</p>
-<p><img src="https://source.icode504.com/images/image-20240611081956844.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、设置环境变量"><a href="#三、设置环境变量" class="headerlink" title="三、设置环境变量"></a>三、设置环境变量</h1><p>1. 鼠标<strong>移到</strong>上方的加号位置，找到你现在所连接的服务器，再开启一个窗口：</p>
-<p><img src="https://source.icode504.com/images/image-20240611091759323.png" srcset="/img/loading.gif" lazyload></p>
-<p>此时有弹出了一个命令行窗口，我们将这个窗口称作窗口 2，原来的窗口称作窗口 1：</p>
-<p><img src="https://source.icode504.com/images/image-20240611092026272.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. （当前位置：窗口 2）在当前目录下新建一个文件 node_env.sh，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim node_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>3. 复制如下代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">NODEJS_HOME</span><br>NODEJS_HOME=/usr/local/node-v16.20.2-linux-x64<br>PATH=$PATH:$NODEJS_HOME/bin<br>export PATH NODEJS_HOME<br></code></pre></td></tr></table></figure>
-
-<p>4. （当前位置：窗口 2）按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第 4 步的代码，效果如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20240611085017634.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 切换到窗口 1，进入解压后的文件目录，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> node-v16.20.2-linux-x64/<br></code></pre></td></tr></table></figure>
-
-<p>6. （当前位置：窗口 1）输入<code>pwd</code>命令查看当前文件所在路径并复制：</p>
-<blockquote>
-<p>说明：鼠标直接选中红色框中的内容，按<kbd>Ctrl</kbd><kbd>C</kbd>复制（或者鼠标右键点击复制也可以）。</p>
-</blockquote>
-<p><img src="https://source.icode504.com/images/image-20240611082219906.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. （当前位置：窗口 2）将光标移动到第二行，将<code>NODEJS_HOME</code>对应的值替换成第 6 步复制的路径。完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
-<p>8. 执行如下命令，让环境变量配置生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile/node_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>9. 依次执行<code>node -v</code>和<code>npm -v</code>命令，如果能查看到对应的版本号，就说明上面的环境变量已生效：</p>
-<p><img src="https://source.icode504.com/images/image-20240611085516463.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、npm-更换镜像源"><a href="#四、npm-更换镜像源" class="headerlink" title="四、npm 更换镜像源"></a>四、npm 更换镜像源</h1><p>Node.js 中包含一个重要模块：npm，它的作用是帮助我们下载项目中的依赖（你可以理解成下载对应的软件包），但是 npm 默认的下载地址在国外，如果使用了默认的下载地址，后续在使用 npm 的过程中下载依赖会非常慢，因此，我们需要将 npm 默认的下载地址改成国内镜像，这里我使用的是淘宝镜像源。</p>
-<p>1. 执行如下命令查看当前<code>npm</code>的下载源：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-20240611085737362.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 将镜像源更改成淘宝镜像源，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
-
-<p>3. 再次执行如下命令，镜像源成功修改为淘宝镜像源：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-20240611085952087.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 打开Geek Uninstaller，找到Tiny RDM，鼠标右键点击卸载：</p>
+<p><img src="https://source.icode504.com/images/image-1a599a7929a7e9d3ef67b9493ee14e36.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 卸载完成，点击<strong>Close</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-e8074c380dab1832a162f5f92945eb4e.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时Geek会我们检测出安装残留，我们只需要点击<strong>完成</strong>即可，清除卸载残留：</p>
+<p><img src="https://source.icode504.com/images/image-1500d9efcb12ecffcfc0436750c6f07f.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 清理完毕，关闭Geek即可：</p>
+<p><img src="https://source.icode504.com/images/image-7e0bc4c21357f1e25531850670e992fb.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1834,12 +1757,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" class="category-chain-item">前端框架</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
   
   
 
@@ -1858,11 +1781,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Node-js/" class="print-no-link">#Node.js</a>
+        <a href="/tags/Redis/" class="print-no-link">#Redis</a>
       
-        <a href="/tags/npm/" class="print-no-link">#npm</a>
+        <a href="/tags/TinyRDM/" class="print-no-link">#TinyRDM</a>
       
     </div>
   
@@ -1874,8 +1797,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Node.js安装、配置教程（Linux通用版）</div>
-      <div>https://www.icode504.com/posts/74.html</div>
+      <div>Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</div>
+      <div>https://www.icode504.com/posts/85.html</div>
     </div>
     <div class="license-meta">
       
@@ -1919,18 +1842,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/70.html" title="Docker安装和配置教程（Linux CentOS版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Docker安装和配置教程（Linux CentOS版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/77.html" title="数据库管理软件DBeaver安装、配置和卸载教程（Windows版）">
-                        <span class="hidden-mobile">数据库管理软件DBeaver安装、配置和卸载教程（Windows版）</span>
+                      <a href="/posts/84.html" title="Node.js安装、配置教程（macOS版）">
+                        <span class="hidden-mobile">Node.js安装、配置教程（macOS版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
