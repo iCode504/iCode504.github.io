@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>数据库管理软件DBeaver安装、配置和卸载教程（macOS版）</title>
+    <link href="/posts/81.html"/>
+    <url>/posts/81.html</url>
+    
+    <content type="html"><![CDATA[<hr><h2 id="abbrlink-‘81’archive-falsebanner-img-https-source-icode504-com-images-数据库管理软件DBeaver安装、配置和卸载教程（Windows版）-pngcategories-category-软件安装-macOS-DBeavercategory-bar-truedate-‘2024-07-20T21-11-07-08-00’description-index-img-https-source-icode504-com-images-数据库管理软件DBeaver安装、配置和卸载教程（Windows版）-pngorder-‘’password-nulltags-macOS-DBeavertitle-updated-‘2024-08-23T15-43-46-621-08-00’"><a href="#abbrlink-‘81’archive-falsebanner-img-https-source-icode504-com-images-数据库管理软件DBeaver安装、配置和卸载教程（Windows版）-pngcategories-category-软件安装-macOS-DBeavercategory-bar-truedate-‘2024-07-20T21-11-07-08-00’description-index-img-https-source-icode504-com-images-数据库管理软件DBeaver安装、配置和卸载教程（Windows版）-pngorder-‘’password-nulltags-macOS-DBeavertitle-updated-‘2024-08-23T15-43-46-621-08-00’" class="headerlink" title="abbrlink: ‘81’archive: falsebanner_img: https://source.icode504.com/images/数据库管理软件DBeaver安装、配置和卸载教程（Windows版）.pngcategories: []category:- 软件安装- macOS- DBeavercategory_bar: truedate: ‘2024-07-20T21:11:07+08:00’description:index_img: https://source.icode504.com/images/数据库管理软件DBeaver安装、配置和卸载教程（Windows版）.pngorder: ‘’password: nulltags:- macOS- DBeavertitle:updated: ‘2024-08-23T15:43:46.621+08:00’"></a>abbrlink: ‘81’<br>archive: false<br>banner_img: <a href="https://source.icode504.com/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6DBeaver%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E5%92%8C%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">https://source.icode504.com/images/数据库管理软件DBeaver安装、配置和卸载教程（Windows版）.png</a><br>categories: []<br>category:<br>- 软件安装<br>- macOS<br>- DBeaver<br>category_bar: true<br>date: ‘2024-07-20T21:11:07+08:00’<br>description:<br>index_img: <a href="https://source.icode504.com/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6DBeaver%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E5%92%8C%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B%EF%BC%88Windows%E7%89%88%EF%BC%89.png">https://source.icode504.com/images/数据库管理软件DBeaver安装、配置和卸载教程（Windows版）.png</a><br>order: ‘’<br>password: null<br>tags:<br>- macOS<br>- DBeaver<br>title:<br>updated: ‘2024-08-23T15:43:46.621+08:00’</h2><p>DBeaver是一款通用的数据库管理工具和SQL客户端，适用于开发人员和数据库管理员。它支持多种关系数据库和NoSQL数据库，提供直观的用户界面、高级SQL编辑器、数据可视化工具和数据迁移功能，跨平台运行并支持插件扩展，是管理和分析数据库的强大利器。</p><p>以下是macOS环境下DBeaver安装教程：</p><h1 id="一、安装前操作"><a href="#一、安装前操作" class="headerlink" title="一、安装前操作"></a>一、安装前操作</h1><p>推荐电脑上安装的软件：</p><table><thead><tr><th>软件名称</th><th>教程链接</th><th>说明</th></tr></thead><tbody><tr><td>MySQL</td><td><a href="./68.html">点我查看</a></td><td>在macOS本地安装MySQL教程，已安装的小伙伴请忽略。</td></tr><tr><td>下载神器Neat Download Manager</td><td><a href="./24.html">点我查看</a></td><td>本文所需要的软件下载源在国外，使用此软件可以加快下载速度。已经安装的小伙伴请直接跳过。</td></tr><tr><td>Github加速访问软件Watt Tookit</td><td><a href="./80.html">点我查看</a></td><td>本文需要下载的软件在Github上，目前国内访问Github访问速度较慢，推荐大家看一下本文教程，可以模仿文中的方式下载安装包</td></tr></tbody></table><h1 id="二、下载DBeaver"><a href="#二、下载DBeaver" class="headerlink" title="二、下载DBeaver"></a>二、下载DBeaver</h1><p>1. 点击右侧连接打开DBeaver官网：<a href="https://github.com/dbeaver/dbeaver/releases">点我查看</a></p><blockquote><p>注意：请确保已经打开了Watt Tookit的Github加速（教程请跳转到第一部分去查看）。加载速度可能会较慢，请耐心等待！</p></blockquote><p>2. 这里我下载的是最新版的24.1.2（截止至2024年7月20日发布的最新版本），向下找到Assets并展开即可看到各个操作系统对应的安装包：</p><p><img src="https://source.icode504.com/images/image-20240720142359918.png"></p><p>3. 按照上面查看的信息，找到对应的dmg结尾的安装包，鼠标右键，复制链接地址：</p><p><img src="https://source.icode504.com/images/image-20240720142726246.png"></p><p>4. 点击右侧链接打开Github加速站：<a href="https://moeyy.cn/gh-proxy">点我查看</a></p><blockquote><p>说明：如果这个加速网站失效，请到第一部分的Github加速教程中寻找可加速的网站地址！</p></blockquote><p>5. 将前面复制的链接地址粘贴到此处，点击<strong>下载</strong>：</p><p><img src="https://source.icode504.com/images/image-20240713140225258.png"></p><p>6. 下载中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240720142956051.png"></p><h1 id="三、安装DBeaver"><a href="#三、安装DBeaver" class="headerlink" title="三、安装DBeaver"></a>三、安装DBeaver</h1><p>打开下载好的安装包，按照下图所示操作，将DBeaver拖入到应用程序即可完成安装：</p><p><img src="https://source.icode504.com/images/240720002.gif"></p><h1 id="四、连接数据库"><a href="#四、连接数据库" class="headerlink" title="四、连接数据库"></a>四、连接数据库</h1><p>1. 在应用中找到DBeaver并打开：</p><p><img src="https://source.icode504.com/images/image-20240720201756339.png"></p><p>2. 此时会有一个弹窗提示，选择<strong>打开</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720201910026.png"></p><p>3. 初次使用会弹出一个创建样本数据库的提示，这里选择<strong>否</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720202025821.png"></p><p>4. 此时会弹出一个连接数据库界面，在上方的搜索框中输入你要连接的关系型数据库，这里我要连接MySQL数据库。选中第一个MySQL，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720202431054.png"></p><p>5. 按照下图所示配置数据库连接：</p><p><img src="https://source.icode504.com/images/image-20240720203219249.png"></p><p>6. 初次点击左下角的测试连接，点击<strong>下载</strong>，会下载MySQL JDBC驱动文件，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240720203433931.png"></p><p>7. 下载完成后，再次点击左下角的测试连接，如果出现下图的弹窗，就说明MySQL数据库连接成功！点击<strong>确定</strong>即可：</p><p><img src="https://source.icode504.com/images/image-20240720203529687.png"></p><p>8. 点击右下角的<strong>完成</strong>，数据库成功连接：</p><p><img src="https://source.icode504.com/images/image-20240720203912319.png"></p><p>9. 数据分享窗口，勾选<strong>Do not share data.<strong>，然后点击右下角</strong>Confirm</strong>：</p><p><img src="https://source.icode504.com/images/image-20240720203829717.png"></p><p>10. 接下来我们就可以正常使用MySQL数据库了：</p><p><img src="https://source.icode504.com/images/image-20240720204119672.png"></p><h1 id="五、DBeaver加快下载依赖的速度（推荐）"><a href="#五、DBeaver加快下载依赖的速度（推荐）" class="headerlink" title="五、DBeaver加快下载依赖的速度（推荐）"></a>五、DBeaver加快下载依赖的速度（推荐）</h1><p><a href="https://www.icode504.com/posts/105.html">点我查看</a></p><h1 id="六、卸载DBeaver（可选）"><a href="#六、卸载DBeaver（可选）" class="headerlink" title="六、卸载DBeaver（可选）"></a>六、卸载DBeaver（可选）</h1><p>打开访达，在左侧找到<strong>应用程序</strong>，找到DBeaver，将其拖入到废纸篓即可完成卸载：</p><p><img src="https://source.icode504.com/images/240720003.gif"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>数据库工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+      <tag>DBeaver</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>访问Github卡顿甚至进不去的解决办法（适用于macOS）</title>
     <link href="/posts/80.html"/>
     <url>/posts/80.html</url>
