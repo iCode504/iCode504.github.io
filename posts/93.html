@@ -18,28 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Redis的key的相关操作">
+    <meta name="description" content="Redis有序集合类型介绍和常用的命令。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis的key（键）相关操作">
-<meta property="og:url" content="https://www.icode504.com/posts/86.html">
+<meta property="og:title" content="Redis数据类型之有序集合类型Sorted Set（Zset）">
+<meta property="og:url" content="https://www.icode504.com/posts/93.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Redis的key的相关操作">
+<meta property="og:description" content="Redis有序集合类型介绍和常用的命令。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/f89bfa2cddbe7fc9f64e6e416781a80e.png">
-<meta property="article:published_time" content="2025-04-13T07:56:40.294Z">
-<meta property="article:modified_time" content="2025-04-13T07:56:40.294Z">
+<meta property="og:image" content="https://source.icode504.com/images/e0c9a9b3328fb9638fff3ed1104563b0.png">
+<meta property="article:published_time" content="2025-04-13T10:42:06.086Z">
+<meta property="article:modified_time" content="2025-04-13T10:42:06.086Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Redis">
 <meta property="article:tag" content="数据库">
 <meta property="article:tag" content="非关系型数据库">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/f89bfa2cddbe7fc9f64e6e416781a80e.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/e0c9a9b3328fb9638fff3ed1104563b0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Redis的key（键）相关操作 - iCode504个人博客</title>
+  <title>Redis数据类型之有序集合类型Sorted Set（Zset） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/f89bfa2cddbe7fc9f64e6e416781a80e.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/e0c9a9b3328fb9638fff3ed1104563b0.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Redis的key（键）相关操作</span>
+            <span id="subtitle">Redis数据类型之有序集合类型Sorted Set（Zset）</span>
           
         </div>
 
@@ -221,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 15:56" pubdate>
+        <time datetime="2025-04-13 18:42" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -392,7 +392,7 @@
       
         <a href="/posts/86.html" title="Redis的key（键）相关操作"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Redis的key（键）相关操作</span>
         </a>
       
@@ -437,7 +437,7 @@
       
         <a href="/posts/93.html" title="Redis数据类型之有序集合类型Sorted Set（Zset）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis数据类型之有序集合类型Sorted Set（Zset）</span>
         </a>
       
@@ -472,83 +472,217 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Redis的key（键）相关操作</h1>
+            <h1 id="seo-header">Redis数据类型之有序集合类型Sorted Set（Zset）</h1>
             
             
               <div class="markdown-body">
                 
                 <p>想学习更多Redis相关知识，请点击右侧链接查看Redis学习笔记：<a href="./90.html">点我查看</a></p>
-<p>以下是Redis键（以下称作 key）的相关操作：</p>
-<p>1. 添加一个key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SET key value<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-b788c6b1211981fa4908a7286b3f93fb.png" srcset="/img/loading.gif" lazyload></p>
-<p>本文中涉及到的value默认都是Redis字符串（String）类型。</p>
-<p>2. 获取key对应的value：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">GET key<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-f1e5415d917fa4d114583692923f974e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 查看当前库所有的 key名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">KEYS *<br></code></pre></td></tr></table></figure>
-
-<p>这里我的库中有 3 个 key：k1、k2、k3：</p>
-<p><img src="https://source.icode504.com/images/image-ffd4c285af89882da0374d2e6eec6c14.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 判断某个 key 是否存在：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">EXISTS key<br></code></pre></td></tr></table></figure>
-
-<p>如果 key 存在，那么返回 1，不存在则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-5602cf9de396706af8b6833254c22f24.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 查看当前 key 的类型：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TYPE key<br></code></pre></td></tr></table></figure>
-
-<p>这里我们查看一下键 k1 的类型，它是 string（字符串）类型：</p>
-<p><img src="https://source.icode504.com/images/image-93453d8afe5c7c3d278819ef938d7cb0.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 删除指定的 key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEL key<br></code></pre></td></tr></table></figure>
-
-<p>删除成功返回 1，失败返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-e3c13ff500eb3662e6d2dae08557b629.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 非阻塞删除：仅仅将当前 key 在 keyspace 元数据中删除，真正删除操作会在后续的异步中操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">UNLINK key<br></code></pre></td></tr></table></figure>
-
-<p>如果删除成功，返回结果是 1，失败则返回 0：</p>
-<p><img src="https://source.icode504.com/images/image-72c1dbc529ff96ee3abce9ad163e077d.png" srcset="/img/loading.gif" lazyload></p>
-<p>DEL 命令在删除 key 对应的数据的时候，默认是阻塞的，如果不彻底将数据删除，后续的操作将无法执行。在一些高并发系统中，这样的删除方式可能会影响到程序的正常运行。而 UNLINK 命令做到数据在“表面上”删除，真正的数据删除在后续的异步中操作。</p>
-<p>UNLINK 命令类似于 Windows 中的普通删除，如果我们想删除一个大文件，直接按<kbd>Delete</kbd>键会将其快速将文件放入到回收站，后续想删除直接鼠标右键点击清空回收站就真正执行删除数据操作；而 DEL 命令则类似选中这个文件直接按<kbd>Shift</kbd><kbd>Delete</kbd>键不通过回收站直接彻底删除文件。</p>
-<p>8. 查看当前 key 过期时间（单位：秒）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TTL key<br></code></pre></td></tr></table></figure>
-
-<p>-1 表示当前 key 永不过期，-2 表示当前 key 已过期：</p>
-<p><img src="https://source.icode504.com/images/image-34761b6bb584859d47f974b7dfba7feb.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 为给定的 key 设置过期时间（单位：秒）：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">EXPIRE key seconds</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-18ff0e12cfa2ad0aa2f6d324ccee0ca5.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 将当前数据库的 key 移动到指定的数据库 db 当中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">MOVE key dbindex [0-15]<br></code></pre></td></tr></table></figure>
-
-<p>如果目标库中已经存在key，那么执行上述命令的结果是0；不存在的时候，返回结果是1。</p>
-<p>11. 切换数据库[0-15]，默认使用的索引值为 0 数据库（这里我称之为db0，索引值为5的数据库称之为db5，以此类推）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SELECT dbindex<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-707da910a57527cf478dc8de5e5eb6d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>Redis 默认有 16 个数据库，编号范围是[0, 15]，在 Redis 配置文件 redis.conf 中有相应配置可以作证上述说法：</p>
-<p><img src="https://source.icode504.com/images/image-20240724213929763.png" srcset="/img/loading.gif" lazyload></p>
-<p>配置数据库的数量，默认的数据库是索引为 0 的数据库（db0），你可以通过<code>select &lt;dbid&gt;</code>命令切换到另一个数据库，数据库 id（dbid）范围是 0 到 databases - 1（在配置文件中 databases 对应的值是 16），即可切换的数据库范围在[0, 15]这个区间内。</p>
-<p>12. 查看当前数据库 key 的数量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DBSIZE<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-bad2a23ae450b082a5eb5d5d16b051ac.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="13">
-<li>清空当前库：</li>
+<h1 id="一、Redis有序集合类型介绍"><a href="#一、Redis有序集合类型介绍" class="headerlink" title="一、Redis有序集合类型介绍"></a>一、Redis有序集合类型介绍</h1><p>Redis有序集合（Sorted Set，也称作Zset）<strong>由多个带有分数（score）的成员（member）</strong>组成。</p>
+<p>和无序集合不同是，有序集合种的成员可以根据自己的分数按照特定规则排序。如果在有序集合中多个成员的分数相同，那么成员会按照字典序排列。</p>
+<blockquote>
+<p>字典序（Lexicographical Order）是一种常用排序方式，类似于现实生活中英文字典的单词排序。在这个顺序中，字符串或其他序列按照字符或元素逐个比较排列。</p>
+<p>规则：</p>
+<ol>
+<li>逐个字符比较：从当前字符串（序列）第一个字符开始，按照ASCII或Unicode值进行比较，较小的字符排在前面；</li>
+<li>比较长度：如果前面的字符相同，比较下一个字符，直到某一个字符不同或者达到当前字符串（序列）末尾。如果一个字符串（序列）是另一个字符串（序列）的前缀，那么较短的序列排在前面；</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHDB<br></code></pre></td></tr></table></figure>
+<p>案例：</p>
+<ol>
+<li>字符串apple和orange比较时，首字母 <code>a</code>比 <code>o</code>小，因此apple排在orange前面；</li>
+<li>字符串iCode504与iCode504abc比较时，由于iCode504比iCode504abc短，并且iCode504是iCode504abc的前缀，因此iCode504排在iCode504abc前面；</li>
+</ol>
+<p>字典序通常用于字符串排列，生成组合、排列等场景。</p>
+</blockquote>
+<p>有序集合融合了无序集合（Set）和哈希（Hash）类型的特性：</p>
+<ul>
+<li>有序集合中的每一个成员都是独一无二的（无序集合的特点）；</li>
+<li>一个成员对应一个分数（类似Hash类型种field-value）</li>
+</ul>
+<p>下图展示了有序集合的存储结构并对其特点做更详细的说明：</p>
+<p><img src="https://source.icode504.com/images/image-c1c78df81c4e7286d33a88260c744f61.png" srcset="/img/loading.gif" lazyload></p>
+<p>有序集合主要体现在如下应用场景：</p>
+<p>1. 微博热搜展示前50条词条：一个热搜词条对应Zset的成员，热度值对应当前成员的分数值：</p>
+<p><img src="https://source.icode504.com/images/image-8f1bacbf6e20569ed83eb6a6498a5f88.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 查看当前商家热销榜：商品名称作为当前Zset的成员，销量作为当前成员的分数值：</p>
+<p><img src="https://source.icode504.com/images/image-a0f85e2446e3b363007feb9a8886ca46.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、Redis有序集合常用类型"><a href="#二、Redis有序集合常用类型" class="headerlink" title="二、Redis有序集合常用类型"></a>二、Redis有序集合常用类型</h1><h2 id="2-1-添加操作"><a href="#2-1-添加操作" class="headerlink" title="2.1 添加操作"></a>2.1 添加操作</h2><p>使用ZADD命令，完整命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key [NX | XX] [GT | LT] [CH] [INCR] score member [score member ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-73843f8f9abb8bd22c5efd728cd368d3.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 清空全部库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">FLUSHALL<br></code></pre></td></tr></table></figure>
+<p>方括号中的内容是命令选项（按照实际情况选择）。以下是关于ZADD操作的详细说明：</p>
+<p>1. 向有序集合中添加一个或多个成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key score member [score member ...]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-7fac8545aeb2cd3e504ad7c699caf5b8.png" srcset="/img/loading.gif" lazyload></p>
+<p>默认返回的是成功向有序集合中添加的成员个数</p>
+<p><img src="https://source.icode504.com/images/image-952d74563de1cf523327b90b925dc323.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 如果当前集合某个成员不存在，则执行添加操作，否则不执行添加操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key NX score member [score member ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-abc6beac5bb27a64be57ec163a5344f2.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 如果当前集合中存在某个成员，则执行分数修改操作，不会新增成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key XX score member [score member ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-ccfad82f0bb48b2a7aa4cc3b46f047d0.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 如果新分数比当前集合中成员对应分数小，执行更新操作，否则不执行操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key LT score member [score member ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-ca5354364a1873ba7079579b483054c6.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 如果新分数比当前集合中成员对应分数大，执行更新操作，否则不执行操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key GT score member [score member ...]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-adfd044012de3f74ec7a873eb390eb62.png" srcset="/img/loading.gif" lazyload></p>
+<p>注意：ZADD命令中GT、LT和NX选项具有互斥性。在使用ZADD命令时，你只能使用三个中的一个。</p>
+<p>6. 将指定的分数与成员的当前分数相加。如果成员不存在，则相当于添加成员，并将初始分数设置为给定分数。INCR 选项只能与单个 <code>score</code> 和 <code>member</code> 配合使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key INCR score member<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-d801e7ca391348c9b35b1f73b8cd6587.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 返回受影响的成员数量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZADD key CH score member<br></code></pre></td></tr></table></figure>
+
+<p>其中CH是changed的缩写，这里说的受影响包括以下两种情况：</p>
+<ul>
+<li>向Zset中新增成员；</li>
+<li>在Zset中已经存在的成员但是分数被更新；</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-138e89cdeede346ff54f9021b03e0ed6.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="2-2-获取操作"><a href="#2-2-获取操作" class="headerlink" title="2.2 获取操作"></a>2.2 获取操作</h2><p>1. 获取集合中成员数量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZCARD key<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-ede4a9094c353623f57d9cfd8bdc04b1.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 获取成员对应的分数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZSCORE key member<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-2316584f9f27682e0ef8009291b5a04e.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 获取当前成员在当前有序集合中的索引值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZRANK key member<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-9ad86ab801b4c87170919bb409407035.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. （逆序）获取当前成员在当前有序集合中的索引值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZREVRANK key member<br></code></pre></td></tr></table></figure>
+
+<p>这里说的逆序指的是将当前有序集合整体反转过来，尾部成员变为头部成员，即尾部成员对应的索引值为0：</p>
+<p><img src="https://source.icode504.com/images/image-aaa5949ec6cc37cba330243453433ac4.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="2-3-范围获取"><a href="#2-3-范围获取" class="headerlink" title="2.3 范围获取"></a>2.3 范围获取</h2><p>1. 默认按照分数从小到大排序，返回索引从start到stop之间所有的元素：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZRANGE key start stop [BYSCORE | BYLEX] [REV] [LIMIT offset count] [WITHSCORES]<br></code></pre></td></tr></table></figure>
+
+<p>以下是命令中各个参数的相关说明（假设当前有序集合长度是 <code>zset.length</code>）：</p>
+<ul>
+<li><code>key</code>：当前有序集合的键名</li>
+<li><code>start</code>：获取有序集合的开始位置，默认范围：$[0,zset.length)$或$[-zset.length, -1]$</li>
+<li><code>stop</code>：获取有序集合的结束位置，默认范围：$[0,zset.length)$或$[-zset.length, -1]$</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-c01c9b633e48af99e1c332342e85d99e.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><code>WITHSCORES</code>：排序后显示每一个成员和对应的分数。</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-4b59bb4734e6fbff8746d9d4e9795419.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><code>BYSCORE</code>：指定此选项，将按照分数范围返回元素，此时 <code>start</code>和 <code>stop</code>会被解释为分数值，而不是原来的索引值。<code>start</code>和 <code>stop</code>默认是闭区间，如果某一个需要开区间，只需要在前面加上一个小括号即可，例如：<code>(start</code></li>
+<li><code>BYLEX</code>：指定此选项，将按照字典序返回元素，此时 <code>start</code>和 <code>stop</code>将被解释为元素的字典顺序范围（不支持使用 <code>WITHSCORES</code>）。</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-f373e3cdea3b479c01300afc14025a18.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-c392b7d82e5bf0e87f8f0e69e7ea11ee.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><code>REV</code>：反转当前的排序。</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-7893a532bfed0f218debc20fb239e289.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><code>LIMIT</code>：类似MySQL中的 <code>LIMIT</code>关键字，其中 <code>offset</code>是偏移量，范围在$[0, zset.length-1)$，<code>count</code>是显示数据个数，获取排序后的结果集中$[offset, offset + count)$区间内的数据。在使用 <code>LIMIT</code>时，需要配合 <code>BYSCORE</code>或 <code>BYLEX</code>使用：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-a7b64b66481be0ce7fc15b4a05a7befc.png" srcset="/img/loading.gif" lazyload></p>
+<p><del>2. （Redis 6.2.0以后过时）反转当前有序集合的排序：</del></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZREVRANGE key start stop [WITHSCORES]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-9953f7559735c3de2653aa924a5a36e4.png" srcset="/img/loading.gif" lazyload></p>
+<p><del>3. （Redis 6.2.0以后过时）获取指定分数范围的成员：</del></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-a29f78d83a2535b0319c8096f17398c1.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 获取指定分数范围的元素个数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZCOUNT key min max<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-2296752043a881b4c6488f57a80bea70.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="2-4-其他操作"><a href="#2-4-其他操作" class="headerlink" title="2.4 其他操作"></a>2.4 其他操作</h2><p>1. 删除一个或多个成员：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZREM key member [member ...]<br></code></pre></td></tr></table></figure>
+
+<p>默认返回成功删除成员个数：</p>
+<p><img src="https://source.icode504.com/images/image-262c5f4eedea2bc67fd9308d34e257d7.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 增加某个元素的分数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZINCRBY key increment member<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-b6ade2cd3cff2e71fe46937f0bbaf0fe.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 从键名列表中的第一个非空排序集中弹出一个或多个元素，弹出的元素是成员分数对</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZMPOP numkeys key [key ...] &lt;MIN | MAX&gt; [COUNT count]<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-5-多集合运算"><a href="#2-5-多集合运算" class="headerlink" title="2.5 多集合运算"></a>2.5 多集合运算</h2><p>和无序集合一样，有序集合也可以多集合运算，接下来我们通过一个案例来讲解相关的命令和对应的参数。</p>
+<p>已知通过ZADD命令添加了两个有序集合myzset1和myzset，添加的元素如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-3cf96ad9705a1f15350347c31180330b.png" srcset="/img/loading.gif" lazyload></p>
+<p>当前两个有序集合中成员和对应的分数如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-797e2a1ff7f997c6e720e5ea658baaa8.png" srcset="/img/loading.gif" lazyload></p>
+<p>以下是多个集合计算相关的命令：</p>
+<p>1. （Redis 6.2.0新增）获取两个集合的并集：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZUNION numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE &lt;SUM | MIN | MAX&gt;] [WITHSCORES]<br></code></pre></td></tr></table></figure>
+
+<p>以下是对该命令中相关参数的说明：</p>
+<ul>
+<li><code>numkeys</code>：表示有多少个有序集合参与并集运算；</li>
+<li><code>key [key ...]</code>：指定多个有序集合的键名；</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-06467f559084916ba2accc6d94246cb8.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><code>WITHSCORES</code>：返回结果中每一个成员包含分数；</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-29a6d4a4d0e3f3606bd0a50a0f23f151.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><code>AGGREGATE &lt;SUM | MIN | MAX&gt;</code>：指定并集运算中，如果相同的成员存在于多个集合中，如何计算其分数，可以下面任意一个选项：<ul>
+<li><code>SUM</code>（默认策略）：分数相加；</li>
+<li><code>MIN</code>：取最小的分数；</li>
+<li><code>MAX</code>：取最大的分数。</li>
+</ul>
+</li>
+</ul>
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-8b06e2a75aefa4def5a6c24826265c8c.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-0145c6f0403c2fd6d8234523968b6daa.png" srcset="/img/loading.gif" lazyload></div></div></div>
+
+<ul>
+<li><code>WEIGHTS weight [weight ...]</code>：为有序集合指定一个乘积因子，将集合中的每个元素的分数乘以该因子；</li>
+</ul>
+<p><img src="https://source.icode504.com/images/image-6a6f9ff7291a3ee4336630160b7a7d95.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 获取有序集合的并集并存储：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE &lt;SUM | MIN | MAX&gt;]<br></code></pre></td></tr></table></figure>
+
+<p>和前面的并集计算不同的是：使用ZUNIONSTORE计算出的结果需要指定一个key来保存。</p>
+<p>该命令中除了 <code>destination</code>是要保存的key的名称，其他使用到的参数和并集命令中的参数用法相同，这里不再赘述。</p>
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-ccb319dcea8f63d3c92217412c122658.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-98fc69ff9a8c3268eecd4d59e784282f.png" srcset="/img/loading.gif" lazyload></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-636c9ce9e56c355f6a3880ad9824db6d.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-73464b275782e63c9f629a3c34caf4f3.png" srcset="/img/loading.gif" lazyload></div></div></div>
+
+<p>3. （Redis 6.2.0新增）获取两个集合的并集：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZINTER numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE &lt;SUM | MIN | MAX&gt;] [WITHSCORES]<br></code></pre></td></tr></table></figure>
+
+<p>命令中使用到的参数和并集命令中的参数用法相同，这里不再赘述。</p>
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-0a2ae1a86ec0552292ff69ffc7a0a004.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-ecb16998be731122c367d505b64831ca.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-9676773014d4003f8e5ea6733b697997.png" srcset="/img/loading.gif" lazyload></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-f336cd087648f45108d2d7da34e68f63.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="https://source.icode504.com/images/image-cd968fce874078ed7c4eb233f0a725c3.png" srcset="/img/loading.gif" lazyload></div></div></div>
+
+<p>4. 获取有序集合的交集并存储：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZINTERSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE &lt;SUM | MIN | MAX&gt;]<br></code></pre></td></tr></table></figure>
+
+<p>命令中使用到的参数和并集命令中的参数用法相同，这里不再赘述。</p>
+<p>其中 <code>destination</code>是存储交集计算后的键名。如果 <code>destination</code>里面有数据，那么就会执行覆盖操作。</p>
+<p><img src="https://source.icode504.com/images/image-caab6b0724dd1d4c72ab937762927292.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-f986fdb6a83e1e3b0a343bae152f153a.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-c99787f82de44c3315ab0e1948e4474a.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. （Redis 7.0.0新增）获取有序集合的交集后成员的数量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZINTERCARD numkeys key [key ...] [LIMIT <span class="hljs-built_in">limit</span>]<br></code></pre></td></tr></table></figure>
+
+<p>其中LIMIT是限定成员返回的数量：</p>
+<p><img src="https://source.icode504.com/images/image-2a01c4234db3f186f4179624ddcbe236.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. （6.2.0新增）获取有序集合的差集：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZDIFF numkeys key [key ...] [WITHSCORES]<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-11234087fcbe28fae0d9138cf5072c50.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 获取有序集合的差集并存储：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ZDIFFSTORE destination numkeys key [key ...]<br></code></pre></td></tr></table></figure>
+
+<p>其中 <code>destination</code>是存储差集计算后的键名。如果 <code>destination</code>里面有数据，那么就会执行覆盖操作。</p>
+<p>该命令默认返回的是差集计算后的元素个数：</p>
+<p><img src="https://source.icode504.com/images/image-4db6776fb039c4835a292335731ccc07.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -619,8 +753,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Redis的key（键）相关操作</div>
-      <div>https://www.icode504.com/posts/86.html</div>
+      <div>Redis数据类型之有序集合类型Sorted Set（Zset）</div>
+      <div>https://www.icode504.com/posts/93.html</div>
     </div>
     <div class="license-meta">
       
@@ -664,18 +798,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/87.html" title="Redis数据类型之字符串类型string">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis数据类型之字符串类型string</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）">
-                        <span class="hidden-mobile">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
+                      <a href="/posts/92.html" title="Redis数据类型之无序集合类型Set">
+                        <span class="hidden-mobile">Redis数据类型之无序集合类型Set</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
