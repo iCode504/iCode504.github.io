@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T05:55:49.416Z</updated>
+  <updated>2025-04-13T05:58:17.054Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gradle安装配置教程（Linux通用版）</title>
+    <link href="https://www.icode504.com/posts/57.html"/>
+    <id>https://www.icode504.com/posts/57.html</id>
+    <published>2025-04-13T05:58:17.054Z</published>
+    <updated>2025-04-13T05:58:17.054Z</updated>
+    
+    
+    <summary type="html">本文详细介绍了在Linux系统上安装和配置Gradle的步骤。通过本教程，用户可以轻松掌握Gradle在Linux端的安装配置方法，完成下载源的配置，为后续的项目构建和管理提供便利。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
+    
+    <category term="项目构建工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Gradle" scheme="https://www.icode504.com/tags/Gradle/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Gradle安装配置教程（Linux通用版）</title>
@@ -488,31 +513,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Eclipse配置PostgreSQL教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/37.html"/>
-    <id>https://www.icode504.com/posts/37.html</id>
-    <published>2025-04-13T03:05:35.724Z</published>
-    <updated>2025-04-13T03:05:35.724Z</updated>
-    
-    
-    <summary type="html">Eclipse配置PostgreSQL教程</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Eclipse" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Eclipse/"/>
-    
-    <category term="PostgreSQL" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Eclipse/PostgreSQL/"/>
-    
-    
-    <category term="Eclipse" scheme="https://www.icode504.com/tags/Eclipse/"/>
-    
-    <category term="PostgreSQL" scheme="https://www.icode504.com/tags/PostgreSQL/"/>
     
   </entry>
   
