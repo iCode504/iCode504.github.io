@@ -18,29 +18,37 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍如何在Windows系统上安装和配置MinGW的教程。它提供了详细的步骤和注意事项，帮助用户顺利完成MinGW的安装和配置。">
+    <meta name="description" content="本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C&#x2F;C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C&#x2F;C++编程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MinGW安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/39.html">
+<meta property="og:title" content="VS Code配置MinGW并编写运行C&#x2F;C++代码（适用于Windows）">
+<meta property="og:url" content="https://www.icode504.com/posts/40.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="介绍如何在Windows系统上安装和配置MinGW的教程。它提供了详细的步骤和注意事项，帮助用户顺利完成MinGW的安装和配置。">
+<meta property="og:description" content="本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C&#x2F;C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C&#x2F;C++编程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/c0cc1232208984d802085e6f9f471da1.png">
-<meta property="article:published_time" content="2025-04-13T03:11:57.141Z">
-<meta property="article:modified_time" content="2025-04-13T03:11:57.141Z">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203202836440.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203203122206.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203203324194.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203203432028.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203204408841.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203204538939.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203210122970.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203210217881.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240203211336203.png">
+<meta property="article:published_time" content="2025-04-13T03:15:13.160Z">
+<meta property="article:modified_time" content="2025-04-13T03:15:13.160Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Visual Studio Code">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="MinGW">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/c0cc1232208984d802085e6f9f471da1.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/image-20240203202836440.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>MinGW安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>VS Code配置MinGW并编写运行C/C++代码（适用于Windows） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +213,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/c0cc1232208984d802085e6f9f471da1.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">MinGW安装配置教程（Windows版）</span>
+            <span id="subtitle">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
           
         </div>
 
@@ -222,7 +230,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 11:11" pubdate>
+        <time datetime="2025-04-13 11:15" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -282,44 +290,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
-        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件使用"
+        id="heading-178fa786fe5854bc7e41e4b5786c5ab5" role="tab" data-toggle="collapse" href="#collapse-178fa786fe5854bc7e41e4b5786c5ab5"
         aria-expanded="true"
       >
-        软件安装
-        <span class="list-group-count">(18)</span>
+        软件使用
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
-           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
-        id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
-      >
-        Windows
-        <span class="list-group-count">(18)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
-           role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
+      <div class="category-collapse collapse show" id="collapse-178fa786fe5854bc7e41e4b5786c5ab5"
+           role="tabpanel" aria-labelledby="heading-178fa786fe5854bc7e41e4b5786c5ab5">
         
         
           
@@ -336,17 +317,44 @@
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
-        id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="DataGrip"
+        id="heading-9b454287aaa34344680bb85e164ad045" role="tab" data-toggle="collapse" href="#collapse-9b454287aaa34344680bb85e164ad045"
         aria-expanded="false"
       >
-        常用工具
-        <span class="list-group-count">(3)</span>
+        DataGrip
+        <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
-           role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
+      <div class="category-collapse collapse " id="collapse-9b454287aaa34344680bb85e164ad045"
+           role="tabpanel" aria-labelledby="heading-9b454287aaa34344680bb85e164ad045">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgreSQL"
+        id="heading-399bd1ee587245ecac6f39beaa99886f" role="tab" data-toggle="collapse" href="#collapse-399bd1ee587245ecac6f39beaa99886f"
+        aria-expanded="false"
+      >
+        PostgreSQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-399bd1ee587245ecac6f39beaa99886f"
+           role="tabpanel" aria-labelledby="heading-399bd1ee587245ecac6f39beaa99886f">
         
         
           
@@ -355,28 +363,10 @@
     
       
       
-        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows）"
+        <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
+          <span class="category-post">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
         </a>
       
     
@@ -386,22 +376,121 @@
       </div>
     </div>
   
+        
+      </div>
+    </div>
+  
     
     
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
-        id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Eclipse"
+        id="heading-32f7222026696f30787889194dee83e5" role="tab" data-toggle="collapse" href="#collapse-32f7222026696f30787889194dee83e5"
         aria-expanded="false"
       >
-        数据库工具
+        Eclipse
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-32f7222026696f30787889194dee83e5"
+           role="tabpanel" aria-labelledby="heading-32f7222026696f30787889194dee83e5">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgreSQL"
+        id="heading-399bd1ee587245ecac6f39beaa99886f" role="tab" data-toggle="collapse" href="#collapse-399bd1ee587245ecac6f39beaa99886f"
+        aria-expanded="false"
+      >
+        PostgreSQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-399bd1ee587245ecac6f39beaa99886f"
+           role="tabpanel" aria-labelledby="heading-399bd1ee587245ecac6f39beaa99886f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/37.html" title="Eclipse配置PostgreSQL教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Eclipse配置PostgreSQL教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Intellij IDEA"
+        id="heading-85c0a6888d99dd0941fad3b2264ee859" role="tab" data-toggle="collapse" href="#collapse-85c0a6888d99dd0941fad3b2264ee859"
+        aria-expanded="false"
+      >
+        Intellij IDEA
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
-           role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
+      <div class="category-collapse collapse " id="collapse-85c0a6888d99dd0941fad3b2264ee859"
+           role="tabpanel" aria-labelledby="heading-85c0a6888d99dd0941fad3b2264ee859">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="PostgreSQL"
+        id="heading-399bd1ee587245ecac6f39beaa99886f" role="tab" data-toggle="collapse" href="#collapse-399bd1ee587245ecac6f39beaa99886f"
+        aria-expanded="false"
+      >
+        PostgreSQL
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-399bd1ee587245ecac6f39beaa99886f"
+           role="tabpanel" aria-labelledby="heading-399bd1ee587245ecac6f39beaa99886f">
         
         
           
@@ -410,19 +499,10 @@
     
       
       
-        <a href="/posts/20.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
+        <a href="/posts/36.html" title="Intellij IDEA/DataGrip配置PostgreSQL教程"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+          <span class="category-post">Intellij IDEA/DataGrip配置PostgreSQL教程</span>
         </a>
       
     
@@ -436,18 +516,59 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
-        id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Scala"
+        id="heading-3012dcff1477e1feaab81764587c9bbd" role="tab" data-toggle="collapse" href="#collapse-3012dcff1477e1feaab81764587c9bbd"
+        aria-expanded="false"
       >
-        编程语言
-        <span class="list-group-count">(8)</span>
+        Scala
+        <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-           role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
+      <div class="category-collapse collapse " id="collapse-3012dcff1477e1feaab81764587c9bbd"
+           role="tabpanel" aria-labelledby="heading-3012dcff1477e1feaab81764587c9bbd">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/21.html" title="Intellij IDEA安装Scala插件并运行Scala程序"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA安装Scala插件并运行Scala程序</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Visual Studio Code（VS Code）"
+        id="heading-5a7e5fe8f9fcc6d4d6159d5924484373" role="tab" data-toggle="collapse" href="#collapse-5a7e5fe8f9fcc6d4d6159d5924484373"
+        aria-expanded="true"
+      >
+        Visual Studio Code（VS Code）
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-5a7e5fe8f9fcc6d4d6159d5924484373"
+           role="tabpanel" aria-labelledby="heading-5a7e5fe8f9fcc6d4d6159d5924484373">
         
         
           
@@ -483,10 +604,10 @@
     
       
       
-        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
+        <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">MinGW安装配置教程（Windows版）</span>
+          <span class="category-post">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
         </a>
       
     
@@ -501,17 +622,17 @@
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Golang"
-        id="heading-eda14e187a768b38eda999457c9cca1e" role="tab" data-toggle="collapse" href="#collapse-eda14e187a768b38eda999457c9cca1e"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Live Server"
+        id="heading-559288b39de7c35a401a93a24425dff9" role="tab" data-toggle="collapse" href="#collapse-559288b39de7c35a401a93a24425dff9"
         aria-expanded="false"
       >
-        Golang
+        Live Server
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-eda14e187a768b38eda999457c9cca1e"
-           role="tabpanel" aria-labelledby="heading-eda14e187a768b38eda999457c9cca1e">
+      <div class="category-collapse collapse " id="collapse-559288b39de7c35a401a93a24425dff9"
+           role="tabpanel" aria-labelledby="heading-559288b39de7c35a401a93a24425dff9">
         
         
           
@@ -520,321 +641,10 @@
     
       
       
-        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
+        <a href="/posts/33.html" title="Live Server插件打开浏览器时：该网页无法正常运作，127.0.0.1未发送任何数据的问题解决"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Groovy"
-        id="heading-2d19c57fdd4fdc270c971f69ee8d5169" role="tab" data-toggle="collapse" href="#collapse-2d19c57fdd4fdc270c971f69ee8d5169"
-        aria-expanded="false"
-      >
-        Groovy
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-2d19c57fdd4fdc270c971f69ee8d5169"
-           role="tabpanel" aria-labelledby="heading-2d19c57fdd4fdc270c971f69ee8d5169">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
-        id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="false"
-      >
-        Java/JDK
-        <span class="list-group-count">(4)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
-           role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Scala"
-        id="heading-3012dcff1477e1feaab81764587c9bbd" role="tab" data-toggle="collapse" href="#collapse-3012dcff1477e1feaab81764587c9bbd"
-        aria-expanded="false"
-      >
-        Scala
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-3012dcff1477e1feaab81764587c9bbd"
-           role="tabpanel" aria-labelledby="heading-3012dcff1477e1feaab81764587c9bbd">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/15.html" title="Scala 2安装教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Scala 2安装教程（Windows版）</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="集成开发环境"
-        id="heading-bf3f16ac0114b2b7279f4887db8a2933" role="tab" data-toggle="collapse" href="#collapse-bf3f16ac0114b2b7279f4887db8a2933"
-        aria-expanded="false"
-      >
-        集成开发环境
-        <span class="list-group-count">(3)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
-           role="tabpanel" aria-labelledby="heading-bf3f16ac0114b2b7279f4887db8a2933">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/14.html" title="Intellij IDEA 2021.1.3安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Intellij IDEA 2021.1.3安装配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
-        id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-        aria-expanded="false"
-      >
-        项目构建工具
-        <span class="list-group-count">(2)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-           role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/23.html" title="Gradle安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/22.html" title="Maven安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Maven安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
-        id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
-      >
-        macOS
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
-           role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
-        id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
-        aria-expanded="false"
-      >
-        常用工具
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
-           role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
+          <span class="category-post">Live Server插件打开浏览器时：该网页无法正常运作，127.0.0.1未发送任何数据的问题解决</span>
         </a>
       
     
@@ -864,57 +674,40 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MinGW安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>MinGW，全称为Minimalist GNU for Windows，是一个可自由使用和发布的Windows特定头文件和使用GNU工具集导入库的集合。它允许在GNU&#x2F;Linux和Windows平台生成本地的Windows程序而不需要第三方C运行时（C Runtime）库。使用MinGW开发的程序不需要额外的第三方DLL支持就可以在Windows下运行。</p>
-<p>以下是MinGW在Windows环境下的安装和配置教程：</p>
-<h1 id="一、下载MinGW-w64"><a href="#一、下载MinGW-w64" class="headerlink" title="一、下载MinGW-w64"></a>一、下载MinGW-w64</h1><p>1. 打开MinGW-w64官网下载页面（托管到了SourceForge上）：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">点我查看</a></p>
-<p>2. 向下找，找到最新版本的MinGW，选择seh下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240201104452235.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>说明（第2、3、4、5点总结的可能不太严谨，如果您在这方面有很深入的了解，可以评论区或者私信告诉我）：</p>
-<p>1. <font color="FF0000">不要</font>安装上面的<code>MinGW-W64-install.exe</code>，这个是联网安装的，服务器在国外，在国内安装因为网络原因大概率会失败。</p>
-<p>2. x86_64简单而言是64位的操作系统（绝大部分电脑都是64位的），i686属于32位操作系统</p>
-<p>3. posix（全称Portable Operating System Interface of UNIX，翻译过来就是UNIX可移植操作系统接口），是<a target="_blank" rel="noopener" href="http://www.ieee.com/">IEEE</a>为要在各种UNIX操作系统上运行的软件而定义的一系列API标准总称。</p>
-<p>4. win32是由Windows操作系统的API，主要也是应用在Windows操作系统上。</p>
-<p>5. seh（Structured Exception Handling）是Windows操作系统中默认的异常处理机制，sjlj（Signal Set JMP）是Unix及类Unix系统中的一种轻量级异常处理机制。</p>
-</blockquote>
-<h1 id="二、安装配置MinGW-w64"><a href="#二、安装配置MinGW-w64" class="headerlink" title="二、安装配置MinGW-w64"></a>二、安装配置MinGW-w64</h1><p>1. 将下载的7z压缩包（推荐使用<a target="_blank" rel="noopener" href="https://www.bandisoft.com/bandizip/">Bandzip</a>、<a target="_blank" rel="noopener" href="https://7-zip.org/">7-zip</a>等解压工具）解压到一个你熟悉的地方（建议是英文路径），这里我解压到了D盘：</p>
-<p><img src="https://source.icode504.com/images/image-20240131155552319.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131155721190.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 为MinGW配置环境变量：找到MinGW的安装路径，出现bin、etc、include等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240131160221163.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 打开文件夹，在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<strong>高级系统设置</strong>：</p>
+                <p>请确保电脑本机已经安装了VS Code和MinGW，没有安装的小伙伴按照下方链接给出的教程进行安装：</p>
 <table>
 <thead>
 <tr>
-<th align="center">Windows 11</th>
-<th align="center"><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th align="center"><a href="./39.html">MinGW安装配置教程（Windows版）</a></th>
+<th align="center"><a href="./38.html">Visual Studio Code安装配置教程（Windows版）</a></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td align="center"><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>5. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134716166.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在下方系统变量中，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230314134919881.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 配置安装路径，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240131162334741.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230314135756989.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240131162546989.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 检查Mingw环境变量是否配置成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并回车，进入控制台，输入<code>gcc -v</code>和<code>g++ -v</code>，出现版本信息说明环境变量配置成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240131162902042.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240131162938776.png" srcset="/img/loading.gif" lazyload></p>
+</table>
+<p>1. 找一个你熟悉的位置写代码，建议文件路径只包含英文字符。这里我在F盘的Code文件夹下创建了一个C-Project文件夹：</p>
+<p><img src="https://source.icode504.com/images/image-20240203202836440.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 打开VS Code，点击左上角文件 –&gt; 打开文件夹。打开上一步我们创建的C-Project空文件夹：</p>
+<p><img src="https://source.icode504.com/images/image-20240203203122206.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240203203324194.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击左上角的插件商店：</p>
+<p><img src="https://source.icode504.com/images/image-20240203203432028.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在上方搜索框中输入C，下载前三个微软官方提供的插件：C&#x2F;C++、C&#x2F;C++ Themes、C++ Extension Pack：</p>
+<p><img src="https://source.icode504.com/images/image-20240203204408841.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 上方弹出一个颜色主题，这里我选择的是第一个：</p>
+<p><img src="https://source.icode504.com/images/image-20240203204538939.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 安装完成，我们点击上方的项目写代码。这里我创建一个C语言文件：<code>swap.c</code>，代码如下所示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">// 两数交换</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> x = <span class="hljs-number">5</span>, y = <span class="hljs-number">10</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;两个数未交换之前的值, x = %d, y = %d\n&quot;</span>, x, y);<br><br>    <span class="hljs-comment">// 额外定义一个变量，实现两数的交换</span><br>    <span class="hljs-type">int</span> temp = x;<br>    x = y;<br>    y = temp;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;交换后两个数的值, x = %d, y = %d\n&quot;</span>, x, y);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>6. 按<kbd>Ctrl</kbd>和<kbd>F5</kbd>键，以非调试状态运行程序。在上方调试器选择**C++ (GDB&#x2F;LLDB)**：</p>
+<p><img src="https://source.icode504.com/images/image-20240203210122970.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 选择<strong>C&#x2F;C++: gcc.exe 生成和调试活动文件</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240203210217881.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 此时左上角生成了一个<code>.vscode</code>文件夹，里面包含配置文件，此时点击终端，就可以看到C语言代码的输出结果：</p>
+<p><img src="https://source.icode504.com/images/image-20240203211336203.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -933,25 +726,18 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/" class="category-chain-item">软件使用</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/" class="category-chain-item">Visual Studio Code（VS Code）</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/C-C/" class="category-chain-item">C/C++</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C-C/" class="category-chain-item">C/C++</a>
-  
-  
-
   
 
   
@@ -969,7 +755,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Visual-Studio-Code/" class="print-no-link">#Visual Studio Code</a>
       
         <a href="/tags/C/" class="print-no-link">#C</a>
       
@@ -987,8 +773,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MinGW安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/39.html</div>
+      <div>VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</div>
+      <div>https://www.icode504.com/posts/40.html</div>
     </div>
     <div class="license-meta">
       
@@ -1032,18 +818,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）">
-                        <span class="hidden-mobile">Visual Studio Code安装配置教程（Windows版）</span>
+                      <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）">
+                        <span class="hidden-mobile">MinGW安装配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

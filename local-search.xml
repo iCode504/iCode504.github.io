@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</title>
+    <link href="/posts/40.html"/>
+    <url>/posts/40.html</url>
+    
+    <content type="html"><![CDATA[<p>请确保电脑本机已经安装了VS Code和MinGW，没有安装的小伙伴按照下方链接给出的教程进行安装：</p><table><thead><tr><th align="center"><a href="./39.html">MinGW安装配置教程（Windows版）</a></th><th align="center"><a href="./38.html">Visual Studio Code安装配置教程（Windows版）</a></th></tr></thead></table><p>1. 找一个你熟悉的位置写代码，建议文件路径只包含英文字符。这里我在F盘的Code文件夹下创建了一个C-Project文件夹：</p><p><img src="https://source.icode504.com/images/image-20240203202836440.png"></p><p>2. 打开VS Code，点击左上角文件 –&gt; 打开文件夹。打开上一步我们创建的C-Project空文件夹：</p><p><img src="https://source.icode504.com/images/image-20240203203122206.png"></p><p><img src="https://source.icode504.com/images/image-20240203203324194.png"></p><p>3. 点击左上角的插件商店：</p><p><img src="https://source.icode504.com/images/image-20240203203432028.png"></p><p>4. 在上方搜索框中输入C，下载前三个微软官方提供的插件：C&#x2F;C++、C&#x2F;C++ Themes、C++ Extension Pack：</p><p><img src="https://source.icode504.com/images/image-20240203204408841.png"></p><p>5. 上方弹出一个颜色主题，这里我选择的是第一个：</p><p><img src="https://source.icode504.com/images/image-20240203204538939.png"></p><p>5. 安装完成，我们点击上方的项目写代码。这里我创建一个C语言文件：<code>swap.c</code>，代码如下所示：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">// 两数交换</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> x = <span class="hljs-number">5</span>, y = <span class="hljs-number">10</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;两个数未交换之前的值, x = %d, y = %d\n&quot;</span>, x, y);<br><br>    <span class="hljs-comment">// 额外定义一个变量，实现两数的交换</span><br>    <span class="hljs-type">int</span> temp = x;<br>    x = y;<br>    y = temp;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;交换后两个数的值, x = %d, y = %d\n&quot;</span>, x, y);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>6. 按<kbd>Ctrl</kbd>和<kbd>F5</kbd>键，以非调试状态运行程序。在上方调试器选择**C++ (GDB&#x2F;LLDB)**：</p><p><img src="https://source.icode504.com/images/image-20240203210122970.png"></p><p>7. 选择<strong>C&#x2F;C++: gcc.exe 生成和调试活动文件</strong>：</p><p><img src="https://source.icode504.com/images/image-20240203210217881.png"></p><p>8. 此时左上角生成了一个<code>.vscode</code>文件夹，里面包含配置文件，此时点击终端，就可以看到C语言代码的输出结果：</p><p><img src="https://source.icode504.com/images/image-20240203211336203.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Visual Studio Code（VS Code）</category>
+      
+      <category>C/C++</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Visual Studio Code</tag>
+      
+      <tag>C</tag>
+      
+      <tag>C++</tag>
+      
+      <tag>MinGW</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MinGW安装配置教程（Windows版）</title>
     <link href="/posts/39.html"/>
     <url>/posts/39.html</url>
