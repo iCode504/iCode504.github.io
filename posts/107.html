@@ -18,46 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows环境下安装JDK 21教程">
+    <meta name="description" content="SDKMAN! 是一个用于管理开发人员工具的多平台命令行工具，支持版本切换和安装。它简化了JVM、Gradle、Maven等SDK的安装和更新，适用于Linux、macOS和Windows子系统。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 21安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/27.html">
+<meta property="og:title" content="SDKMAN!安装教程">
+<meta property="og:url" content="https://www.icode504.com/posts/107.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Windows环境下安装JDK 21教程">
+<meta property="og:description" content="SDKMAN! 是一个用于管理开发人员工具的多平台命令行工具，支持版本切换和安装。它简化了JVM、Gradle、Maven等SDK的安装和更新，适用于Linux、macOS和Windows子系统。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231231234124976.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000342542.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000606080.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000829197.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101000948438.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101001012592.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101001101762.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101001823379.png">
-<meta property="og:image" content="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101010932039.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101011132186.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002218161.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002302057.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002611204.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002655185.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101002812677.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003131968.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003211769.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003254767.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101003343061.png">
-<meta property="article:published_time" content="2025-04-12T14:08:14.769Z">
-<meta property="article:modified_time" content="2025-04-12T14:08:14.769Z">
+<meta property="og:image" content="https://source.icode504.com/images/e6b04b7ddab254e0ee46b5d44a82d6ff.png">
+<meta property="article:published_time" content="2025-04-13T11:55:26.599Z">
+<meta property="article:modified_time" content="2025-04-13T11:55:26.603Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="SDKMAN!">
+<meta property="article:tag" content="软件包管理工具">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20231231234124976.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/e6b04b7ddab254e0ee46b5d44a82d6ff.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 21安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>SDKMAN!安装教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/e6b04b7ddab254e0ee46b5d44a82d6ff.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 21安装配置教程（Windows版）</span>
+            <span id="subtitle">SDKMAN!安装教程</span>
           
         </div>
 
@@ -239,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 22:08" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 19:55" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -325,17 +306,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -676,17 +657,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件包管理工具"
         id="heading-adb66ae224793ec6faf3dd45b0d03d25" role="tab" data-toggle="collapse" href="#collapse-adb66ae224793ec6faf3dd45b0d03d25"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         软件包管理工具
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
+      <div class="category-collapse collapse show" id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
            role="tabpanel" aria-labelledby="heading-adb66ae224793ec6faf3dd45b0d03d25">
         
         
@@ -698,7 +679,7 @@
       
         <a href="/posts/107.html" title="SDKMAN!安装教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">SDKMAN!安装教程</span>
         </a>
       
@@ -763,17 +744,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(31)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -1056,17 +1037,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -1194,17 +1175,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -1234,7 +1215,7 @@
       
         <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 21安装配置教程（Windows版）</span>
         </a>
       
@@ -1496,17 +1477,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(12)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -1757,17 +1738,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件包管理工具"
         id="heading-adb66ae224793ec6faf3dd45b0d03d25" role="tab" data-toggle="collapse" href="#collapse-adb66ae224793ec6faf3dd45b0d03d25"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         软件包管理工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
+      <div class="category-collapse collapse show" id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
            role="tabpanel" aria-labelledby="heading-adb66ae224793ec6faf3dd45b0d03d25">
         
         
@@ -1788,7 +1769,7 @@
       
         <a href="/posts/107.html" title="SDKMAN!安装教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">SDKMAN!安装教程</span>
         </a>
       
@@ -1902,65 +1883,97 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 21安装配置教程（Windows版）</h1>
+            <h1 id="seo-header">SDKMAN!安装教程</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年4月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
-</blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-<p>接下来为大家讲解一下JDK 21如何安装与使用。</p>
-<h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html">点我查看</a></p>
-<p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是21.0.1版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p>
-<p><img src="https://source.icode504.com/images/image-20231231234124976.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101000342542.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p>
-<p><img src="https://source.icode504.com/images/image-20240101000606080.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101000829197.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101000948438.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240101001012592.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 安装完成，点击<strong>关闭</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101001101762.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p>
-</blockquote>
-<h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101001823379.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
+                <p><a target="_blank" rel="noopener" href="https://sdkman.io/">SDKMAN!</a>，全称The Software Development Kit Manager，中文翻译过来就是<strong>软件开发工具包管理器</strong>。以下是官网对这款工具的介绍（个人翻译）：</p>
+<p>认识一下SDKMAN!——你的可靠伙伴，它可以高效管理Unix系统上众多的软件开发工具包。假设您的系统上存在不同版本的软件开发工具包（SDKs），需要以一种无压力的方式在他们之间切换，SDKMAN!以简单易用的命令行界面（CLI）和API能介入上述过程。以前称作GVM，Groovy enVironment Managener（Groovy环境管理器），SDKMAN!从类似工具apt、pip、RVM、rbenv甚至是Git上获取灵感。将其视为您的一个乐于助人的朋友，随时为您准备简化SDK管理。</p>
+<ul>
+<li>源于开发者，为开发人员着想。简化SDK生命周期，不需要再寻找下载源，提取归档或添加修改<code>_HOME</code>和<code>PATH</code>等环境变量。</li>
+<li>一站式直接搞定所有和Java相关工具下载安装。可以安装基于JVM的软件开发工具包，例如：Java、Scala、Kotlin和Groovy、Ant、Gradle、Grails、Maven、SBT、Spark、Spring Boot、Vert.x和其他框架工具也支持。</li>
+<li>轻量级。SDKMAN!使用Rust和bash编写，并且系统上只需要有<code>curl</code>、<code>zip</code>和<code>unzip</code>三个依赖即可。甚至可以和ZSH一起工作。</li>
+<li>多平台。跨各种基于UNIX平台无缝操作，包括<strong>macOS、Linux、Windows下的Linux子系统</strong>（WSL）。</li>
+<li>APIs。通过使用我们的开放的Broker API，可以轻松编写新的客户端。软件提供者可以通过安全的Vendor API来发布和声明自己的软件版本。</li>
+<li>开源。SDKMAN!的研发离不开开源社区成员们的努力。Apache 2.0下的协议。</li>
+</ul>
+<p>接下来就为大家介绍一下SDKMAN!的安装和使用：</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>请确保您的操作系统是Linux&#x2F;macOS&#x2F;WSL，需要安装的小伙伴可以根据自己的需要查看安装教程：</p>
 <table>
 <thead>
 <tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th align="center">CentOS</th>
+<th align="center">Ubuntu</th>
+<th align="center">Debian</th>
+<th align="center">WSL</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><a href="./94.html">点我查看</a></td>
+<td align="center"><a href="./51.html">点我查看</a></td>
+<td align="center"><a href="./52.html">点我查看</a></td>
+<td align="center"><a href="./42.html">点我查看</a></td>
 </tr>
 </tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002218161.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量，点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002302057.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 配置系统变量，按照图示操作即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002611204.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 双击Path进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240101002655185.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 按照图示操作即可，然后一路点击确定。</p>
-<p><img src="https://source.icode504.com/images/image-20240101002812677.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p>
-<p><img src="https://source.icode504.com/images/image-20240101003131968.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 21安装成功了：</p>
-<p><img src="https://source.icode504.com/images/image-20240101003211769.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101003254767.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240101003343061.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装SDKMAN"><a href="#二、安装SDKMAN" class="headerlink" title="二、安装SDKMAN!"></a>二、安装SDKMAN!</h1><h2 id="方式一：国内用户安装"><a href="#方式一：国内用户安装" class="headerlink" title="方式一：国内用户安装"></a>方式一：国内用户安装</h2><blockquote>
+<p>说明：推荐国内用户使用，我在官方脚本上稍微做了一下改进。</p>
+</blockquote>
+<p>1. 打开命令行，执行如下命令即可安装SDKMAN!</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -s <span class="hljs-string">&quot;https://gitee.com/iCode504/my-sdkman/raw/master/install.sh&quot;</span> | bash<br></code></pre></td></tr></table></figure>
+
+<p>2. 安装完成，执行如下命令让SDKMAN!相关命令生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.sdkman/bin/sdkman-init.sh&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>3. 执行如下命令即可查看SDKMAN!的版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk v<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-8a3663e0c689f82dba9e907ea23a1d64.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="方式二：正常安装"><a href="#方式二：正常安装" class="headerlink" title="方式二：正常安装"></a>方式二：正常安装</h2><blockquote>
+<p>说明：国内用户不推荐使用，因为需要从Github上下载安装包，Github在国内访问速度较慢，下载可能会失败。</p>
+</blockquote>
+<p>安装SDKMAN!非常简单，只需要在命令行（macOS请打开终端执行命令）界面运行几行代码就OK了。</p>
+<p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>、<code>axel</code></p>
+<ul>
+<li>CentOS：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubantu&#x2F;Debian：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure>
+
+<p>2. 打开命令行窗口，在命令行中输入如下命令并执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -s &quot;https://get.sdkman.io&quot; | bash<br></code></pre></td></tr></table></figure>
+
+<p>因为这款软件是下载源在国外，下载速度较慢，请耐心等待！</p>
+<p>3. 出现下面提示即说明SDKMAN!安装成功：</p>
+<p><img src="https://source.icode504.com/images/image-20231227153819937.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果安装失败，执行如下命令删除残留文件重新执行上一步命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ./sdkman<br></code></pre></td></tr></table></figure>
+
+<p>4. 我们在命令行再执行如下命令，方便后续我们使用SDKMAN!相关的命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;<br></code></pre></td></tr></table></figure>
+
+<p>5. 此时在命令行输入如下命令，就可以看到SDKMAN!的版本信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sdk v<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20231227154230369.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、卸载SDKMAN-（可选）"><a href="#三、卸载SDKMAN-（可选）" class="headerlink" title="三、卸载SDKMAN!（可选）"></a>三、卸载SDKMAN!（可选）</h1><p>卸载SDKMAN!也非常简单！只需要几步就可以完成：</p>
+<p>1. （可选）如果后续还想使用SDKMAN!，可以对当前<code>./sdkman</code>目录打包成tar文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar zcvf ~/sdkman-backup_$(date +%F-%kh%M).tar.gz -C ~/ .sdkman<br></code></pre></td></tr></table></figure>
+
+<p>2. 使用<code>rm -rf</code>命令强制删除：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -rf ~/.sdkman<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -1984,20 +1997,13 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="category-chain-item">软件包管理工具</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
-  
-  
-
   
 
   
@@ -2015,9 +2021,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/SDKMAN/" class="print-no-link">#SDKMAN!</a>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="print-no-link">#软件包管理工具</a>
       
     </div>
   
@@ -2029,8 +2035,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 21安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/27.html</div>
+      <div>SDKMAN!安装教程</div>
+      <div>https://www.icode504.com/posts/107.html</div>
     </div>
     <div class="license-meta">
       
@@ -2042,7 +2048,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -2074,18 +2080,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JDK 11安装配置教程（Windows版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）">
-                        <span class="hidden-mobile">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
+                      <a href="/posts/106.html" title="Redis数据类型之基数统计HyperLogLog">
+                        <span class="hidden-mobile">Redis数据类型之基数统计HyperLogLog</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
