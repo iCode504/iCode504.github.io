@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T08:04:02.248Z</updated>
+  <updated>2025-04-13T08:07:27.566Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis学习前言</title>
+    <link href="https://www.icode504.com/posts/90.html"/>
+    <id>https://www.icode504.com/posts/90.html</id>
+    <published>2025-04-13T08:07:27.566Z</published>
+    <updated>2025-04-13T08:07:27.566Z</updated>
+    
+    
+    <summary type="html">本文主要包含如下内容：Redis简单介绍和具体的学习大纲，里面列举了Redis相关文章的链接</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库（NoSQL）" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="非关系型数据库" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis数据类型之哈希类型Hash</title>
@@ -513,37 +540,6 @@
     
     
     <summary type="html">本文主要通过@ExcelIgnore注解和EasyExcel自带的两种方法实现只导出特定的列；通过@ExcelProperty中的index属性实现隔列输出效果。</summary>
-    
-    
-    
-    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="常用工具" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/"/>
-    
-    <category term="文档操作" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
-    
-    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
-    
-    
-    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
-    
-    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EasyExcel的表头操作</title>
-    <link href="https://www.icode504.com/posts/61.html"/>
-    <id>https://www.icode504.com/posts/61.html</id>
-    <published>2025-04-13T06:25:36.507Z</published>
-    <updated>2025-04-13T06:25:36.507Z</updated>
-    
-    
-    <summary type="html">本文使用EasyExcel代码实现了无表头数据的Excel文件导出和复杂表头的输出。</summary>
     
     
     
