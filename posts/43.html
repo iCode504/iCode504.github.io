@@ -18,37 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C&#x2F;C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C&#x2F;C++编程。">
+    <meta name="description" content="VS Code默认不显示项目的Git提交历史，需要安装插件才能实现效果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS Code配置MinGW并编写运行C&#x2F;C++代码（适用于Windows）">
-<meta property="og:url" content="https://www.icode504.com/posts/40.html">
+<meta property="og:title" content="VS Code查看Git提交记录">
+<meta property="og:url" content="https://www.icode504.com/posts/43.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C&#x2F;C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C&#x2F;C++编程。">
+<meta property="og:description" content="VS Code默认不显示项目的Git提交历史，需要安装插件才能实现效果">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203202836440.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203203122206.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203203324194.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203203432028.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203204408841.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203204538939.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203210122970.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203210217881.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240203211336203.png">
-<meta property="article:published_time" content="2025-04-13T03:15:13.160Z">
-<meta property="article:modified_time" content="2025-04-13T03:15:13.160Z">
+<meta property="og:image" content="https://source.icode504.com/images/2b7d9bbc65258a2616109479ed201ceb.png">
+<meta property="article:published_time" content="2025-04-13T03:26:02.768Z">
+<meta property="article:modified_time" content="2025-04-13T03:26:02.768Z">
 <meta property="article:author" content="iCode504">
+<meta property="article:tag" content="Git">
 <meta property="article:tag" content="Visual Studio Code">
-<meta property="article:tag" content="C">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="MinGW">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20240203202836440.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/2b7d9bbc65258a2616109479ed201ceb.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>VS Code配置MinGW并编写运行C/C++代码（适用于Windows） - iCode504个人博客</title>
+  <title>VS Code查看Git提交记录 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/2b7d9bbc65258a2616109479ed201ceb.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
+            <span id="subtitle">VS Code查看Git提交记录</span>
           
         </div>
 
@@ -230,7 +220,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 11:15" pubdate>
+        <time datetime="2025-04-13 11:26" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -584,17 +574,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="C/C++"
         id="heading-915d356c4d213cec76d72f1cc1ec13f5" role="tab" data-toggle="collapse" href="#collapse-915d356c4d213cec76d72f1cc1ec13f5"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         C/C++
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
+      <div class="category-collapse collapse " id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
            role="tabpanel" aria-labelledby="heading-915d356c4d213cec76d72f1cc1ec13f5">
         
         
@@ -606,7 +596,7 @@
       
         <a href="/posts/40.html" title="VS Code配置MinGW并编写运行C/C++代码（适用于Windows）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</span>
         </a>
       
@@ -621,17 +611,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Git"
         id="heading-0bcc70105ad279503e31fe7b3f47b665" role="tab" data-toggle="collapse" href="#collapse-0bcc70105ad279503e31fe7b3f47b665"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Git
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-0bcc70105ad279503e31fe7b3f47b665"
+      <div class="category-collapse collapse show" id="collapse-0bcc70105ad279503e31fe7b3f47b665"
            role="tabpanel" aria-labelledby="heading-0bcc70105ad279503e31fe7b3f47b665">
         
         
@@ -643,7 +633,7 @@
       
         <a href="/posts/43.html" title="VS Code查看Git提交记录"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">VS Code查看Git提交记录</span>
         </a>
       
@@ -711,40 +701,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</h1>
+            <h1 id="seo-header">VS Code查看Git提交记录</h1>
             
             
               <div class="markdown-body">
                 
-                <p>请确保电脑本机已经安装了VS Code和MinGW，没有安装的小伙伴按照下方链接给出的教程进行安装：</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a href="./39.html">MinGW安装配置教程（Windows版）</a></th>
-<th align="center"><a href="./38.html">Visual Studio Code安装配置教程（Windows版）</a></th>
-</tr>
-</thead>
-</table>
-<p>1. 找一个你熟悉的位置写代码，建议文件路径只包含英文字符。这里我在F盘的Code文件夹下创建了一个C-Project文件夹：</p>
-<p><img src="https://source.icode504.com/images/image-20240203202836440.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开VS Code，点击左上角文件 –&gt; 打开文件夹。打开上一步我们创建的C-Project空文件夹：</p>
-<p><img src="https://source.icode504.com/images/image-20240203203122206.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240203203324194.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击左上角的插件商店：</p>
-<p><img src="https://source.icode504.com/images/image-20240203203432028.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在上方搜索框中输入C，下载前三个微软官方提供的插件：C&#x2F;C++、C&#x2F;C++ Themes、C++ Extension Pack：</p>
-<p><img src="https://source.icode504.com/images/image-20240203204408841.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 上方弹出一个颜色主题，这里我选择的是第一个：</p>
-<p><img src="https://source.icode504.com/images/image-20240203204538939.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 安装完成，我们点击上方的项目写代码。这里我创建一个C语言文件：<code>swap.c</code>，代码如下所示：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">// 两数交换</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> x = <span class="hljs-number">5</span>, y = <span class="hljs-number">10</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;两个数未交换之前的值, x = %d, y = %d\n&quot;</span>, x, y);<br><br>    <span class="hljs-comment">// 额外定义一个变量，实现两数的交换</span><br>    <span class="hljs-type">int</span> temp = x;<br>    x = y;<br>    y = temp;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;交换后两个数的值, x = %d, y = %d\n&quot;</span>, x, y);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>6. 按<kbd>Ctrl</kbd>和<kbd>F5</kbd>键，以非调试状态运行程序。在上方调试器选择**C++ (GDB&#x2F;LLDB)**：</p>
-<p><img src="https://source.icode504.com/images/image-20240203210122970.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 选择<strong>C&#x2F;C++: gcc.exe 生成和调试活动文件</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240203210217881.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 此时左上角生成了一个<code>.vscode</code>文件夹，里面包含配置文件，此时点击终端，就可以看到C语言代码的输出结果：</p>
-<p><img src="https://source.icode504.com/images/image-20240203211336203.png" srcset="/img/loading.gif" lazyload></p>
+                <p>在IDEA中，我们可以看到项目中Git的提交记录，但是VS Code中默认没有Git历史记录。</p>
+<p><img src="https://source.icode504.com/images/image-20240205141727113.png" srcset="/img/loading.gif" lazyload></p>
+<p>我们可以到VS Code插件商店中搜索<code>Git Graph</code>插件并安装：</p>
+<p><img src="https://source.icode504.com/images/image-20240205142106021.png" srcset="/img/loading.gif" lazyload></p>
+<p>安装完成，点击左侧<strong>Git图标</strong>，选择<strong>Git分支图标</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240205142400893.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时我们就可以看到这个项目的Git提交历史了：</p>
+<p><img src="https://source.icode504.com/images/image-20240205142643306.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -773,7 +742,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/C-C/" class="category-chain-item">C/C++</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/Git/" class="category-chain-item">Git</a>
   
   
 
@@ -792,13 +761,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/Git/" class="print-no-link">#Git</a>
+      
         <a href="/tags/Visual-Studio-Code/" class="print-no-link">#Visual Studio Code</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C</a>
-      
-        <a href="/tags/C/" class="print-no-link">#C++</a>
-      
-        <a href="/tags/MinGW/" class="print-no-link">#MinGW</a>
       
     </div>
   
@@ -810,8 +775,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</div>
-      <div>https://www.icode504.com/posts/40.html</div>
+      <div>VS Code查看Git提交记录</div>
+      <div>https://www.icode504.com/posts/43.html</div>
     </div>
     <div class="license-meta">
       
@@ -855,18 +820,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VMware Workstation安装+彻底卸载教程（Windows版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）">
-                        <span class="hidden-mobile">MinGW安装配置教程（Windows版）</span>
+                      <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程">
+                        <span class="hidden-mobile">Winodws Subsystem for Linux（WSL）安装教程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

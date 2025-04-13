@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>VS Code查看Git提交记录</title>
+    <link href="/posts/43.html"/>
+    <url>/posts/43.html</url>
+    
+    <content type="html"><![CDATA[<p>在IDEA中，我们可以看到项目中Git的提交记录，但是VS Code中默认没有Git历史记录。</p><p><img src="https://source.icode504.com/images/image-20240205141727113.png"></p><p>我们可以到VS Code插件商店中搜索<code>Git Graph</code>插件并安装：</p><p><img src="https://source.icode504.com/images/image-20240205142106021.png"></p><p>安装完成，点击左侧<strong>Git图标</strong>，选择<strong>Git分支图标</strong>：</p><p><img src="https://source.icode504.com/images/image-20240205142400893.png"></p><p>此时我们就可以看到这个项目的Git提交历史了：</p><p><img src="https://source.icode504.com/images/image-20240205142643306.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Visual Studio Code（VS Code）</category>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+      <tag>Visual Studio Code</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Winodws Subsystem for Linux（WSL）安装教程</title>
     <link href="/posts/42.html"/>
     <url>/posts/42.html</url>
