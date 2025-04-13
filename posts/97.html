@@ -18,51 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux（适用于CentOS、Ubuntu、Debian等主流版本）环境下安装与配置JDK 8教程。">
+    <meta name="description" content="macOS环境下安装Visual Studio Code并对其做简单的配置。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDK 8安装配置教程（Linux通用版）">
-<meta property="og:url" content="https://www.icode504.com/posts/55.html">
+<meta property="og:title" content="Visual Studio Code安装配置教程（macOS版）">
+<meta property="og:url" content="https://www.icode504.com/posts/97.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="Linux（适用于CentOS、Ubuntu、Debian等主流版本）环境下安装与配置JDK 8教程。">
+<meta property="og:description" content="macOS环境下安装Visual Studio Code并对其做简单的配置。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-b5b304b00a39ffda8a82861d3668fdc4.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-81de7f2d35d7de4a63d3923b67274dfd.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20f70e229e4108efdc136e3cedbcc3c7.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-fc97bf3c031cf0673f5bbf130412c693.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-5b8bc10be92b19950e5095215139e199.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-256ec5721d3cf0841b7cce8210f6c07d.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224090038508.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224171106909.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224171230465.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224171648598.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224171904465.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224172241466.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224172411350.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240101133536759.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224172925751.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224173324597.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224173503187.png">
-<meta property="og:image" content="https://source.icode504.com/images/24010224004.gif">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224173926690.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224175030125.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240224175326821.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240225120311514.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240225120919666.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240225120949167.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20240225121013682.png">
-<meta property="article:published_time" content="2025-04-13T05:47:48.814Z">
-<meta property="article:modified_time" content="2025-04-13T05:47:48.818Z">
+<meta property="og:image" content="https://source.icode504.com/images/2ff9d2d679a49d4c7d4197648be98774.png">
+<meta property="article:published_time" content="2025-04-13T11:03:04.107Z">
+<meta property="article:modified_time" content="2025-04-13T11:03:04.107Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Visual Studio Code">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-b5b304b00a39ffda8a82861d3668fdc4.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/2ff9d2d679a49d4c7d4197648be98774.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>JDK 8安装配置教程（Linux通用版） - iCode504个人博客</title>
+  <title>Visual Studio Code安装配置教程（macOS版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/2ff9d2d679a49d4c7d4197648be98774.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">JDK 8安装配置教程（Linux通用版）</span>
+            <span id="subtitle">Visual Studio Code安装配置教程（macOS版）</span>
           
         </div>
 
@@ -244,7 +220,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 13:47" pubdate>
+        <time datetime="2025-04-13 19:03" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -330,17 +306,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Linux
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -576,17 +552,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -603,17 +579,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
         id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java/JDK
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ae29470126f397245727f40bf008b9cc"
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
            role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
         
         
@@ -625,7 +601,7 @@
       
         <a href="/posts/55.html" title="JDK 8安装配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">JDK 8安装配置教程（Linux通用版）</span>
         </a>
       
@@ -1427,17 +1403,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -1688,17 +1664,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="集成开发环境"
         id="heading-bf3f16ac0114b2b7279f4887db8a2933" role="tab" data-toggle="collapse" href="#collapse-bf3f16ac0114b2b7279f4887db8a2933"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         集成开发环境
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
+      <div class="category-collapse collapse show" id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
            role="tabpanel" aria-labelledby="heading-bf3f16ac0114b2b7279f4887db8a2933">
         
         
@@ -1719,7 +1695,7 @@
       
         <a href="/posts/97.html" title="Visual Studio Code安装配置教程（macOS版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Visual Studio Code安装配置教程（macOS版）</span>
         </a>
       
@@ -1787,135 +1763,64 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JDK 8安装配置教程（Linux通用版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月13日
-                  
-                
-              </p>
+            <h1 id="seo-header">Visual Studio Code安装配置教程（macOS版）</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p>
-</blockquote>
-<p>接下来为大家讲解一下Linux环境下JDK 8如何安装与配置。</p>
-<p>有需要在虚拟机安装Linux系统的小伙伴，请点击下方任意一个链接查看安装配置教程：</p>
-<table>
+                <h1 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h1><table>
 <thead>
 <tr>
-<th align="center"></th>
-<th align="center">CentOS</th>
-<th align="center">Ubuntu</th>
-<th align="center">Debian</th>
+<th>软件名称</th>
+<th>安装教程</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">安装教程</td>
-<td align="center"><a href="./94.html">点我查看</a></td>
-<td align="center"><a href="./51.html">点我查看</a></td>
-<td align="center"><a href="./52.html">点我查看</a></td>
+<td>NDM（Neat Download Manager）</td>
+<td><a href="./24.html">点我查看</a></td>
+<td>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度。</td>
 </tr>
 </tbody></table>
-<h1 id="方式一：使用SDKMAN-安装"><a href="#方式一：使用SDKMAN-安装" class="headerlink" title="方式一：使用SDKMAN!安装"></a>方式一：使用SDKMAN!安装</h1><p>1. 请确保Linux上已经安装了SDKMAN!，没有安装的小伙伴可以点击右侧链接查看安装教程：<a href="./108.html">点我查看</a></p>
-<p>2. 执行如下命令，查看各大厂商可以安装的JDK相关版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk list java<br></code></pre></td></tr></table></figure>
-
-<p>下图中提供了各个厂商提供的Java，翻到页面最下方，这里我下载的是ZuluJDK，按照下图中选中复制版本号：</p>
+<h1 id="二、下载Visual-Studio-Code（VS-Code）"><a href="#二、下载Visual-Studio-Code（VS-Code）" class="headerlink" title="二、下载Visual Studio Code（VS Code）"></a>二、下载Visual Studio Code（VS Code）</h1><p>1. 打开官网下载地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">点我查看</a></p>
+<p>2. 根据自己的操作系统，选择下载安装包。这里我使用的是macOS，只需要点击第一个即可：</p>
+<p><img src="https://source.icode504.com/images/image-25df0f629c8a766d25cee7b39c312595.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 如果浏览器没有下载，就点击页面中的这个链接下载（浏览器已下载的请忽略这条）：</p>
+<p><img src="https://source.icode504.com/images/image-a323a0e7ad89cb03e55b167162afd809.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装Visual-Studio-Code（VS-Code）"><a href="#三、安装Visual-Studio-Code（VS-Code）" class="headerlink" title="三、安装Visual Studio Code（VS Code）"></a>三、安装Visual Studio Code（VS Code）</h1><p>1. 双击打开安装包，此时会将安装包自动解压到当前安装目录：</p>
+<p><img src="https://source.icode504.com/images/image-9703209f59d6b7eab88e8230ad8f6da1.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 将安装程序移动到应用程序中：</p>
+<p><img src="https://source.icode504.com/images/image-52472d528155bec64aa9aab4c8c36fad.gif" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在启动栏找到VS Code并打开：</p>
+<p><img src="https://source.icode504.com/images/image-e1d2a65c8ea75c17a98d4e8ba03cede9.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、Visual-Studio-Code（VS-Code）的简单配置"><a href="#四、Visual-Studio-Code（VS-Code）的简单配置" class="headerlink" title="四、Visual Studio Code（VS Code）的简单配置"></a>四、Visual Studio Code（VS Code）的简单配置</h1><h2 id="3-1-页面汉化（可选）"><a href="#3-1-页面汉化（可选）" class="headerlink" title="3.1 页面汉化（可选）"></a>3.1 页面汉化（可选）</h2><p>VS Code默认是英文界面，对于一些英文不太好的小伙伴可能不太友好，好在官方为我们提供了VS Code的汉化包。</p>
+<p>1. 在左侧菜单找到插件商店：</p>
+<p><img src="https://source.icode504.com/images/image-8db8004ea105ba41de9be3e7c7165a04.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在搜索框中搜索<code>Chinese Simplified</code>，搜索结果第一个就是我们要安装插件，点击<strong>Install</strong>安装插件：</p>
+<p><img src="https://source.icode504.com/images/image-20240131170733135.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装完成后，右下角会弹出一个窗口提示，点击<code>Change Language and Restart</code>，重新加载：</p>
+<p><img src="https://source.icode504.com/images/image-20240131170831058.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 汉化成功！页面如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-09e7d5fd36a440cead40287328cf8a9f.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-2-开启文件自动保存（可选）"><a href="#3-2-开启文件自动保存（可选）" class="headerlink" title="3.2 开启文件自动保存（可选）"></a>3.2 开启文件自动保存（可选）</h2><p>在VS Code中写代码，默认是需要按<kbd>⌘</kbd>+<kbd>S</kbd>键保存文件。但是如果出现意外状况（例如电脑突然断电），你编写的代码如果没保存，绝对能搞炸你的心态。因此，我们需要开启文件自动保存功能。</p>
+<p>1. 点击左下角的齿轮（或者按快捷键<kbd>⌘</kbd>和<kbd>,</kbd>），进入设置：</p>
+<p><img src="https://source.icode504.com/images/image-5e4e805e711f55df96f117fb6439a96e.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在上方搜索框中输入<code>auto save</code>，常用设置中改为<code>afterDelay</code>：</p>
+<p><img src="https://source.icode504.com/images/image-a4d562736ecc94f7ce97aff10e9a8cec.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 左侧菜单选择<strong>文件</strong>，将保存方式更改成<strong>afterDelay</strong>，保存时间间隔自定义（以毫秒为单位）：</p>
+<p><img src="https://source.icode504.com/images/image-fc8288ff3d9bbaf9455d6f6dae3e872e.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-3-主题风格配置（可选）"><a href="#3-3-主题风格配置（可选）" class="headerlink" title="3.3 主题风格配置（可选）"></a>3.3 主题风格配置（可选）</h2><p>VS Code支持多种主题风格配置。例如：暗黑风格、纯白风格等等。</p>
 <blockquote>
-<p>提示：上、下键可以翻页，或者按<kbd>PageUp</kbd>或<kbd>PageDown</kbd>翻页，按<kbd>Q</kbd>键退出。</p>
+<p>说明：如果系统自带的风格都不符合，可以到插件商店自行下载其他风格的主题。</p>
 </blockquote>
-<p><img src="https://source.icode504.com/images/image-b5b304b00a39ffda8a82861d3668fdc4.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 执行如下命令，安装ZuluJDK：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk install java 版本号-厂商名<br></code></pre></td></tr></table></figure>
-
-<p>效果图如下（将前面复制的版本信息粘贴此处）：</p>
-<p><img src="https://source.icode504.com/images/image-81de7f2d35d7de4a63d3923b67274dfd.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 等待一段时间后，JDK安装完成：</p>
-<p><img src="https://source.icode504.com/images/image-20f70e229e4108efdc136e3cedbcc3c7.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 接下来，我们可以分别使用<code>java</code>、<code>javac</code>、<code>java -version</code>查看版本信息：</p>
-<p><img src="https://source.icode504.com/images/image-fc97bf3c031cf0673f5bbf130412c693.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-5b8bc10be92b19950e5095215139e199.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-256ec5721d3cf0841b7cce8210f6c07d.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="方式二：正常下载安装"><a href="#方式二：正常下载安装" class="headerlink" title="方式二：正常下载安装"></a>方式二：正常下载安装</h1><h2 id="一、安装前检查（Linux端）"><a href="#一、安装前检查（Linux端）" class="headerlink" title="一、安装前检查（Linux端）"></a>一、安装前检查（Linux端）</h2><p>执行如下命令，查看当前系统的指令集：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">uname</span> -m<br></code></pre></td></tr></table></figure>
-
-<p>我的电脑是<code>x86_64</code>系统：</p>
-<p><img src="https://source.icode504.com/images/image-20240224090038508.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="二、下载JDK（Windows端）"><a href="#二、下载JDK（Windows端）" class="headerlink" title="二、下载JDK（Windows端）"></a>二、下载JDK（Windows端）</h2><p>提供了两种下载方式：百度网盘下载和官网下载。以下两种方式二选一<strong>下载到本地</strong>即可：</p>
-<h3 id="方式一：百度网盘下载（推荐）"><a href="#方式一：百度网盘下载（推荐）" class="headerlink" title="方式一：百度网盘下载（推荐）"></a>方式一：百度网盘下载（推荐）</h3><p>点击下方任意一个链接（百度网盘）进入下载页面：</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/12sU6r_YTYpkXF28IiiTayw?pwd=1024">点击下载</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/14zMAuIRLSpHU-PHrGw672Q?pwd=1024">备用下载1</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1XqxmHf5fRXl0ovz5zK-xbw?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://source.icode504.com/images/image-20240224171106909.png" srcset="/img/loading.gif" lazyload></p>
-<p>根据上面检查的指令集，进入相应的文件夹：</p>
-<p><img src="https://source.icode504.com/images/image-20240224171230465.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240224171648598.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="方式二：官网下载（需要注册账号登录，不推荐）"><a href="#方式二：官网下载（需要注册账号登录，不推荐）" class="headerlink" title="方式二：官网下载（需要注册账号登录，不推荐）"></a>方式二：官网下载（需要注册账号登录，不推荐）</h3><p>1. 点击此链接到官网下载页面：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/archive/">点击进入</a></p>
-<p><img src="https://source.icode504.com/images/image-20240224171904465.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 找到以Java SE Development Kit开头的下载列表，找到64位的版本版本下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240224172241466.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 按图所示点击下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240224172411350.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 需要登录Oracle账号，没有账号的可以注册一个。登陆后即可下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240101133536759.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="三、安装并配置JDK"><a href="#三、安装并配置JDK" class="headerlink" title="三、安装并配置JDK"></a>三、安装并配置JDK</h3><p>1. 将前面下载好的JDK安装包使用SFTP工具（这里我使用的是Eleterm）由Windows端传输到Linux端（请先确保Windows本身已经通过SSH方式连接到Linux）：</p>
-<p><img src="https://source.icode504.com/images/image-20240224172925751.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在左侧Windows端找到下载好的安装包：</p>
-<p><img src="https://source.icode504.com/images/image-20240224173324597.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在右侧Linux端设置安装包存放路径，这里我将安装包存放在<code>/opt</code>下：</p>
-<p><img src="https://source.icode504.com/images/image-20240224173503187.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示操作，将JDK安装包传到Linux端的<code>/opt</code>目录下：</p>
-<p><img src="https://source.icode504.com/images/24010224004.gif" srcset="/img/loading.gif" lazyload></p>
-<p>5. 等待一段时间后，此时Linux端的<code>/opt</code>目录下已经存放了刚才我们传输的文件：</p>
-<p><img src="https://source.icode504.com/images/image-20240224173926690.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 此时我们切换回命令行，执行如下命令切换到<code>/opt</code>目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt<br></code></pre></td></tr></table></figure>
-
-<p>7. 解压刚刚传入过来的压缩包，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf jdk-8u331-linux-x64.tar.gz<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>小技巧：在命令行中输入文件名时，我们可以只写文件的前一部分，然后按一下<kbd>Tab</kbd>键补齐文件名。</p>
-</blockquote>
-<p>8. 等待一段时间后，解压完成，执行如下命令，进入解压后的文件夹名称：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-20240224175030125.png" srcset="/img/loading.gif" lazyload></p>
-<p>使用<code>cd</code>命令进入解压后的文件夹：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> jdk1.8.0_331<br></code></pre></td></tr></table></figure>
-
-<p>9. 输入如下命令，查看并复制当前文件路径：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">pwd</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/image-20240224175326821.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 复制如下代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">JAVA_HOME</span>  <br>JAVA_HOME=/opt/jdk1.8.0_331<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME<br></code></pre></td></tr></table></figure>
-
-<p>11. 在<code>/etc/profile.d</code>目录下创建<code>java_env.sh</code>文件，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/java_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>12. 按<kbd>i</kbd>键进入编辑模式，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴第十步的代码，效果如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20240225120311514.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 将光标移动到第二行，将<code>JAVA_HOME</code>对应的值替换成第9步复制的路径。完成后按一下<kbd>Esc</kbd>键，然后输入<code>:wq</code>保存并退出。</p>
-<p>14. 执行如下命令，让环境变量配置生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile.d/java_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>15. 执行<code>java</code>、<code>javac</code>命令，可以看到如下内容：</p>
-<p><img src="https://source.icode504.com/images/image-20240225120919666.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240225120949167.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 输入<code>java -version</code>，出现下图信息表示JDK安装成功：</p>
-<p><img src="https://source.icode504.com/images/image-20240225121013682.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 点击左下角的齿轮，选择主题：</p>
+<p><img src="https://source.icode504.com/images/image-a8358af60ea73f89451f0da1b930bc3c.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 此时浏览器上方会弹出系统自带的颜色主题。2024是龙年，也是我的本命年，这里我选个红色，图个喜庆！</p>
+<p><img src="https://source.icode504.com/images/image-5fedf3568adfc2705308ad5497846200.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 修改后的颜色风格如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-c5cdc0b3625a070d71d19cfaed4be7f8.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、卸载Visual-Studio-Code（VS-Code）（可选）"><a href="#五、卸载Visual-Studio-Code（VS-Code）（可选）" class="headerlink" title="五、卸载Visual Studio Code（VS Code）（可选）"></a>五、卸载Visual Studio Code（VS Code）（可选）</h1><p>打开访达，点击左侧的应用程序，将Visual Studio Code安装程序移动到废纸篓即可完成卸载：</p>
+<p><img src="https://source.icode504.com/images/image-b11c13868c1330ab7036b476181ead79.gif" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1939,20 +1844,13 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/" class="category-chain-item">macOS</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="category-chain-item">集成开发环境</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-JDK/" class="category-chain-item">Java/JDK</a>
-  
-  
-
   
 
   
@@ -1970,9 +1868,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/Visual-Studio-Code/" class="print-no-link">#Visual Studio Code</a>
       
     </div>
   
@@ -1984,8 +1882,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JDK 8安装配置教程（Linux通用版）</div>
-      <div>https://www.icode504.com/posts/55.html</div>
+      <div>Visual Studio Code安装配置教程（macOS版）</div>
+      <div>https://www.icode504.com/posts/97.html</div>
     </div>
     <div class="license-meta">
       
@@ -2029,18 +1927,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/56.html" title="Maven安装配置教程（Linux通用版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Maven安装配置教程（Linux通用版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/54.html" title="VS Code开启多个标签页">
-                        <span class="hidden-mobile">VS Code开启多个标签页</span>
+                      <a href="/posts/96.html" title="Maven安装和配置教程（macOS版）">
+                        <span class="hidden-mobile">Maven安装和配置教程（macOS版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

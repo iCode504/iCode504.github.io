@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T10:58:52.132Z</updated>
+  <updated>2025-04-13T11:03:04.107Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio Code安装配置教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/97.html"/>
+    <id>https://www.icode504.com/posts/97.html</id>
+    <published>2025-04-13T11:03:04.107Z</published>
+    <updated>2025-04-13T11:03:04.107Z</updated>
+    
+    
+    <summary type="html">macOS环境下安装Visual Studio Code并对其做简单的配置。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven安装和配置教程（macOS版）</title>
@@ -530,37 +555,6 @@
     <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
     
     <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git安装配置教程（Linux通用版）</title>
-    <link href="https://www.icode504.com/posts/72.html"/>
-    <id>https://www.icode504.com/posts/72.html</id>
-    <published>2025-04-13T07:07:49.784Z</published>
-    <updated>2025-04-13T07:07:49.784Z</updated>
-    
-    
-    <summary type="html">Linux环境（包含CentOS/Ubuntu/Debian）下安装Git</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
-    
-    <category term="版本控制工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Git" scheme="https://www.icode504.com/tags/Git/"/>
-    
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
-    <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
-    
-    <category term="Debian" scheme="https://www.icode504.com/tags/Debian/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
     
   </entry>
   
