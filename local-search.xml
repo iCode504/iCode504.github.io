@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Eclipse配置PostgreSQL教程（Windows版）</title>
+    <link href="/posts/37.html"/>
+    <url>/posts/37.html</url>
+    
+    <content type="html"><![CDATA[<p>请确保电脑本机已经安装PostgresSQL和Eclipse，没有安装的小伙伴根据自己的操作系统点击下方链接查看安装教程（已经安装的小伙伴继续往下看）：</p><table><thead><tr><th align="center"></th><th align="center">Windows</th><th align="center">macOS</th><th align="center">Linux</th></tr></thead><tbody><tr><td align="center">PostgreSQL</td><td align="center"><a href="./35.html">点我查看</a></td><td align="center">敬请期待</td><td align="center">敬请期待</td></tr><tr><td align="center">Eclipse</td><td align="center"><a href="./30.html">点我查看</a></td><td align="center">敬请期待</td><td align="center">敬请期待</td></tr></tbody></table><h1 id="一、下载并安装pgJDBC"><a href="#一、下载并安装pgJDBC" class="headerlink" title="一、下载并安装pgJDBC"></a>一、下载并安装pgJDBC</h1><p>1. 按<kbd>Win</kbd>和<kbd>S</kbd>键，在搜索框中搜索Stack Builder并打开：</p><p><img src="https://source.icode504.com/images/image-20240131100854755.png"></p><p>2. 这里我们选择本地安装的PostgreSQL，完成后点击<strong>下一个</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131101117119.png"></p><p>3. 按照下图操作，选择pgJDBC：</p><p><img src="https://source.icode504.com/images/image-20240131101409184.png"></p><p>4. 下载目录自定义，这里我安装在D盘，完成后点击<strong>下一个</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131101553293.png"></p><p>5. 下载完成，点击<strong>下一个</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131101620551.png"></p><p>6. 进入pgJDBC安装界面，点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131101713249.png"></p><p>7. 选择一个你熟悉的安装位置，这里我安装在了D盘，完成后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131101906926.png"></p><p><img src="https://source.icode504.com/images/image-20240131102038330.png"></p><p><img src="https://source.icode504.com/images/image-20240131102113012.png"></p><p>8. 点击<strong>Next</strong>，开始安装：</p><p><img src="https://source.icode504.com/images/image-20240131102151200.png"></p><p>9. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240131102227258.png"></p><p>10. 点击<strong>Finish</strong>，安装完成：</p><p><img src="https://source.icode504.com/images/image-20240131102245360.png"></p><p>11. 点击<strong>完成</strong>，关闭Stack Builder：</p><p><img src="https://source.icode504.com/images/image-20240131102428855.png"></p><h1 id="二、Eclipse配置PostgreSQL"><a href="#二、Eclipse配置PostgreSQL" class="headerlink" title="二、Eclipse配置PostgreSQL"></a>二、Eclipse配置PostgreSQL</h1><p>1. 打开Eclipse，在上方菜单栏选择<strong>Window</strong> –&gt; <strong>Show View</strong> –&gt; <strong>Other</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131100443322.png"></p><p>2. 双击打开<strong>Data Management</strong>，选择<strong>Data Source Explorer</strong>，完成后点击<strong>Open</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131100530658.png"></p><p>3. 此时会弹出一个Data Source Explorer窗口，鼠标右键选中第一个<strong>Database Connections</strong>，点击<strong>New</strong>新建一个连接：</p><p><img src="https://source.icode504.com/images/image-20240131102657948.png"></p><p>4. 连接类型<strong>选择PostgreSQL并选中</strong>，Name和Description自定义，完成后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131102920348.png"></p><p>5. 点击右上角<strong>加号</strong>修改数据库驱动和连接信息：</p><p><img src="https://source.icode504.com/images/image-20240131103041407.png"></p><p>6. 选中数据库驱动模板<strong>PostgreSQL JDBC Driver</strong>，此时上方弹出一个错误信息：在本地系统中无法找到<code>postgresql-8.1-xxxx.jdbc2.jar</code>，这说明我们需要将Eclipse原有的数据库驱动改成前面我们下载安装的pgJDBC：</p><p><img src="https://source.icode504.com/images/image-20240131103624152.png"></p><p>7. 选择<strong>JAR List</strong>，点击右侧的<strong>Clear All</strong>，清空驱动文件（下图列出来的JAR包本地不存在）</p><p><img src="https://source.icode504.com/images/image-20240131103928756.png"></p><p>8. 点击<strong>Add JAR&#x2F;Zip</strong>，找到前面我们安装的pgJDBC的位置，选中<code>postgresql-42.6.0.jar</code>文件，点击<strong>打开</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131104057823.png"></p><p><img src="https://source.icode504.com/images/image-20240131104254745.png"></p><p><img src="https://source.icode504.com/images/image-20240131104425996.png"></p><p>9. 点击上方的<strong>Properties</strong>，按照下图所给的提示填写好配置信息：</p><p><img src="https://source.icode504.com/images/image-20240131104642198.png"></p><p>10. 记不住密码的小伙伴建议勾选<code>Save Password</code>，点击右下角的<strong>Test Connection</strong>，测试一下数据库连接：</p><p><img src="https://source.icode504.com/images/image-20240131105018333.png"></p><p>11. 此时弹出一个窗口：<code>Ping succeeded</code>，说明数据库测试连接成功，点击<strong>OK</strong>：</p><p><img src="https://source.icode504.com/images/image-20240131105137424.png"></p><p>12. 点击<strong>Finish</strong>，PostgreSQL连接成功：</p><p><img src="https://source.icode504.com/images/image-20240131105306411.png"></p><p><img src="https://source.icode504.com/images/image-20240131105549246.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Eclipse</category>
+      
+      <category>PostgreSQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Eclipse</tag>
+      
+      <tag>PostgreSQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Intellij IDEA/DataGrip配置PostgreSQL教程</title>
     <link href="/posts/36.html"/>
     <url>/posts/36.html</url>
