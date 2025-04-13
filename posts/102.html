@@ -18,91 +18,30 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这篇文章主要讲解了如何使用JFlow框架创建业务场景和流程模型，绘制流程图及注意事项，以及单节点的表单绘制和需要注意的细节。">
+    <meta name="description" content="若依是一个 Java EE 企业级快速开发平台，分成多个版本，本文介绍了若依环境部署和启动教程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二章 若依-JFlow流程模型与单节点表单设计">
-<meta property="og:url" content="https://www.icode504.com/posts/17.html">
+<meta property="og:title" content="若依环境部署教程">
+<meta property="og:url" content="https://www.icode504.com/posts/102.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="这篇文章主要讲解了如何使用JFlow框架创建业务场景和流程模型，绘制流程图及注意事项，以及单节点的表单绘制和需要注意的细节。">
+<meta property="og:description" content="若依是一个 Java EE 企业级快速开发平台，分成多个版本，本文介绍了若依环境部署和启动教程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231203223009921.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231203223138428.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231203223302018.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204093425596.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204093533548.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204093630169.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204094009656.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204100030936.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204100106500.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204100258286.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204101134781.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204101318505.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204101530818.png">
-<meta property="og:image" content="https://source.icode504.com/images/231204001.gif">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204102324735.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204102436768.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204102708338.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204103928929.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204104144498.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204105502375.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204105852064.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204105947521.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110044483.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110314753.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110406551.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110436302.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110745634.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110807995.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204110835391.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204111121990.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204152808020.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204152751665.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204153816250.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204154203357.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204155818857.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204160050348.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204160300519.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204160403680.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204163815833.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204165216030.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204165239922.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205084731593.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205092504817.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204160611753.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204160755988.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204161014587.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204161339799.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204161555868.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204161729204.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204162023924.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204162119535.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204163111633.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204163404217.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204163445971.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204163542696.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204163622231.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204164856107.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231204165807170.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205083750437.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205085558874.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205090844220.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205090938030.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205090419676.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205091132577.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231205174128064.png">
-<meta property="article:published_time" content="2025-04-12T13:14:40.271Z">
-<meta property="article:modified_time" content="2025-04-12T13:14:40.271Z">
+<meta property="og:image" content="https://source.icode504.com/images/3b612cb3227c80a07ad2fee6633b11e5.png">
+<meta property="article:published_time" content="2025-04-13T11:26:23.289Z">
+<meta property="article:modified_time" content="2025-04-13T11:26:23.289Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="JFlow">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="开源">
 <meta property="article:tag" content="若依">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="Thymeleaf">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20231203223009921.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/3b612cb3227c80a07ad2fee6633b11e5.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>第二章 若依-JFlow流程模型与单节点表单设计 - iCode504个人博客</title>
+  <title>若依环境部署教程 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -267,13 +206,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/3b612cb3227c80a07ad2fee6633b11e5.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">第二章 若依-JFlow流程模型与单节点表单设计</span>
+            <span id="subtitle">若依环境部署教程</span>
           
         </div>
 
@@ -284,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 21:14" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 19:26" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -621,17 +560,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="工作流框架"
         id="heading-43b803afc9e3e908f3da7d55b3b7b46d" role="tab" data-toggle="collapse" href="#collapse-43b803afc9e3e908f3da7d55b3b7b46d"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         工作流框架
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-43b803afc9e3e908f3da7d55b3b7b46d"
+      <div class="category-collapse collapse " id="collapse-43b803afc9e3e908f3da7d55b3b7b46d"
            role="tabpanel" aria-labelledby="heading-43b803afc9e3e908f3da7d55b3b7b46d">
         
         
@@ -648,17 +587,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="JFlow"
         id="heading-277922b91f864d05c9fb26477dbfcb83" role="tab" data-toggle="collapse" href="#collapse-277922b91f864d05c9fb26477dbfcb83"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         JFlow
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-277922b91f864d05c9fb26477dbfcb83"
+      <div class="category-collapse collapse " id="collapse-277922b91f864d05c9fb26477dbfcb83"
            role="tabpanel" aria-labelledby="heading-277922b91f864d05c9fb26477dbfcb83">
         
         
@@ -679,7 +618,7 @@
       
         <a href="/posts/17.html" title="第二章 若依-JFlow流程模型与单节点表单设计"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">第二章 若依-JFlow流程模型与单节点表单设计</span>
         </a>
       
@@ -716,17 +655,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="开源框架"
         id="heading-0b1545866d587b27d3847c003aabd462" role="tab" data-toggle="collapse" href="#collapse-0b1545866d587b27d3847c003aabd462"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         开源框架
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-0b1545866d587b27d3847c003aabd462"
+      <div class="category-collapse collapse show" id="collapse-0b1545866d587b27d3847c003aabd462"
            role="tabpanel" aria-labelledby="heading-0b1545866d587b27d3847c003aabd462">
         
         
@@ -743,17 +682,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="若依"
         id="heading-e2b7c595c2c7d8c531ccbc19963f8c8c" role="tab" data-toggle="collapse" href="#collapse-e2b7c595c2c7d8c531ccbc19963f8c8c"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         若依
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-e2b7c595c2c7d8c531ccbc19963f8c8c"
+      <div class="category-collapse collapse show" id="collapse-e2b7c595c2c7d8c531ccbc19963f8c8c"
            role="tabpanel" aria-labelledby="heading-e2b7c595c2c7d8c531ccbc19963f8c8c">
         
         
@@ -816,17 +755,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="框架配置和启动"
         id="heading-327055f1032051dd64afd0c0e94d5b74" role="tab" data-toggle="collapse" href="#collapse-327055f1032051dd64afd0c0e94d5b74"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         框架配置和启动
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-327055f1032051dd64afd0c0e94d5b74"
+      <div class="category-collapse collapse show" id="collapse-327055f1032051dd64afd0c0e94d5b74"
            role="tabpanel" aria-labelledby="heading-327055f1032051dd64afd0c0e94d5b74">
         
         
@@ -847,7 +786,7 @@
       
         <a href="/posts/102.html" title="若依环境部署教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">若依环境部署教程</span>
         </a>
       
@@ -1075,201 +1014,141 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第二章 若依-JFlow流程模型与单节点表单设计</h1>
+            <h1 id="seo-header">若依环境部署教程</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>若依-JFlow框架如何拉取、配置并运行请查看这篇文章：<a href="./16.html">《第一章 若依-JFlow的配置与启动》</a></p>
+                <p>官网介绍：RuoYi 是一个 Java EE 企业级快速开发平台，基于经典技术组合（Spring Boot、Apache Shiro、MyBatis、Thymeleaf、Bootstrap），内置模块如：部门管理、角色用户、菜单及按钮授权、数据权限、系统参数、日志管理、通知公告等。在线定时任务配置；支持集群，支持多数据源，支持分布式事务。</p>
+<p>以下是若以框架环境部署教程：</p>
+<h1 id="第一部分-准备操作"><a href="#第一部分-准备操作" class="headerlink" title="第一部分 准备操作"></a>第一部分 准备操作</h1><p>根据自己的操作系统安装如下软件：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+<th align="center">系统版本要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">JDK 8</td>
+<td align="center"><a href="./1.html">点我查看</a></td>
+<td align="center"><a href="./78.html">点我查看</a></td>
+<td align="center">JDK &gt;&#x3D; 8</td>
+</tr>
+<tr>
+<td align="center">Intellij IDEA</td>
+<td align="center"><a href="./14.html">点我查看</a></td>
+<td align="center"><a href="./79.html">点我查看</a></td>
+<td align="center">无版本要求</td>
+</tr>
+<tr>
+<td align="center">Maven</td>
+<td align="center"><a href="./22.html">点我查看</a></td>
+<td align="center"><a href="./96.html">点我查看</a></td>
+<td align="center">Maven &gt;&#x3D; 3.0</td>
+</tr>
+<tr>
+<td align="center">MySQL</td>
+<td align="center"><a href="./20.html">点我查看</a></td>
+<td align="center"><a href="./68.html">点我查看</a></td>
+<td align="center">MySQL &gt;&#x3D; 5.7</td>
+</tr>
+<tr>
+<td align="center">DBeaver</td>
+<td align="center"><a href="./77.html">点我查看</a></td>
+<td align="center"><a href="./81.html">点我查看</a></td>
+<td align="center">无版本要求</td>
+</tr>
+<tr>
+<td align="center">Git</td>
+<td align="center"><a href="./69.html">点我查看</a></td>
+<td align="center">系统默认已安装</td>
+<td align="center">无版本要求</td>
+</tr>
+</tbody></table>
+<h1 id="第二部分-拉取若依代码"><a href="#第二部分-拉取若依代码" class="headerlink" title="第二部分 拉取若依代码"></a>第二部分 拉取若依代码</h1><p>1. 打开文件夹，找到一个你熟悉的位置，鼠标右键点击<strong>Git Bash Here</strong>，打开Git命令行窗口：</p>
+<p><img src="https://source.icode504.com/images/image-20240612090244663.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 使用Git拉取若依代码，以下两种方式任选其一：</p>
+<ul>
+<li>国内用户建议在Gitee上拉取若依代码：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/y_project/RuoYi.git<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>如果你已经有Gitee账号（没有的小伙伴可以注册一个）并对SSH Key做了配置，可以执行如下命令拉取代码：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git@gitee.com:y_project/RuoYi.git<br></code></pre></td></tr></table></figure>
+
+<p>3. 在Git命令行中，按<kbd>Shift</kbd>和<kbd>Insert</kbd>键粘贴上一步复制的命令：</p>
+<blockquote>
+<p>笔记本用户可能还需要按<kbd>Fn</kbd>键，因为你的<kbd>Insert</kbd>键可能会被占用。</p>
 </blockquote>
-<p>上一节我们讲解了如何拉取若依-JFlow框架代码并配置运行，这一部分我们就以公司员工请假的流程为例，设计一个流程，并为初始节点设计一个表单。</p>
-<h1 id="一、新建业务场景和流程模型"><a href="#一、新建业务场景和流程模型" class="headerlink" title="一、新建业务场景和流程模型"></a>一、新建业务场景和流程模型</h1><p>1. 启动项目以后，登录管理员账号（用户名：admin，密码：admin123），进入系统首页：</p>
-<p><img src="https://source.icode504.com/images/image-20231203223009921.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 创建流程：点击左侧第二个JFlow流程设计，再点击流程模板：</p>
-<p><img src="https://source.icode504.com/images/image-20231203223138428.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 系统中，流程树已经定义了一些业务场景（即不同的文件夹）如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20231203223302018.png" srcset="/img/loading.gif" lazyload></p>
-<p>和文件夹的创建方式一样，我们只需要鼠标右键，点击新建子级目录即可创建一个业务场景，如果需要删除，就点击删除目录即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204093425596.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204093533548.png" srcset="/img/loading.gif" lazyload></p>
-<p>这里我创建一个名为<code>业务场景231204</code>的业务场景：</p>
-<p><img src="https://source.icode504.com/images/image-20231204093630169.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 创建流程模型：点击右上角<strong>新建流程</strong></p>
-<p>5. 流程名称自定义，设计模式选择<strong>专业模式</strong>即可，完成后点击右上角<strong>创建流程</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20231204094009656.png" srcset="/img/loading.gif" lazyload></p>
-<p>如果此时创建完成后，浏览器对弹出窗口拦截时，直接点击拦截窗口，选择<strong>始终允许弹出窗口并从<a href="http://localhost:8089重定向">http://localhost:8089重定向</a></strong>，然后点击完成即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204100030936.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204100106500.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 此时就会弹出一个流程设计的窗口：</p>
-<p><img src="https://source.icode504.com/images/image-20231204100258286.png" srcset="/img/loading.gif" lazyload></p>
-<p>设计流程一共有五个步骤：</p>
-<ol>
-<li>绘制流程图</li>
-<li>设置接收人规则</li>
-<li>设计表单</li>
-<li>检查流程</li>
-<li>测试并运行该流程</li>
-</ol>
-<h1 id="二、绘制流程图"><a href="#二、绘制流程图" class="headerlink" title="二、绘制流程图"></a>二、绘制流程图</h1><p>1. 一个流程是由一个个流程节点组成的，如下图所示，Start Node和Node 2都是这个流程图的节点，绿色标志的是开始节点：</p>
-<p><img src="https://source.icode504.com/images/image-20231204101134781.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 鼠标右键点击空白处，可以新建节点：</p>
-<p><img src="https://source.icode504.com/images/image-20231204101318505.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 双击某个节点可以修改该节点的名称：</p>
-<p><img src="https://source.icode504.com/images/image-20231204101530818.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 要想将两个节点连接起来，长按该节点的图标，然后将连接线拉向另一个节点：</p>
-<p><img src="https://source.icode504.com/images/231204001.gif" srcset="/img/loading.gif" lazyload></p>
-<p>当然，如果你需要对连接线上添加文字说明，双击连接线即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204102324735.png" srcset="/img/loading.gif" lazyload></p>
-<p>如需删除连接线，也需要双击连接线，点击删除即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204102436768.png" srcset="/img/loading.gif" lazyload></p>
-<p>以下是一个简单的请假的流程模型：</p>
-<p><img src="https://source.icode504.com/images/image-20231204102708338.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、设置接收人规则"><a href="#三、设置接收人规则" class="headerlink" title="三、设置接收人规则"></a>三、设置接收人规则</h1><p>接收人规则是指当前节点完成任务以后，这个任务转到下一节点时，由谁来处理。</p>
-<p>JFlow默认的处理规则是：上一个节点选择那一个人（或者部门），就由这个人（部门）来处理。当然，我们也可以自行设计接收人规则。</p>
-<p>鼠标右键点击节点，选择节点属性</p>
-<p><img src="https://source.icode504.com/images/image-20231204103928929.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204104144498.png" srcset="/img/loading.gif" lazyload></p>
-<p>接下来，我们就按照正常的请假流程设置每一个节点的接收人规则：</p>
-<p>1. 员工填写请假单：我们假设公司所有的员工都可以填写请假单，因此规则设定为：所有的人员都可以发起：</p>
-<p><img src="https://source.icode504.com/images/image-20231204105502375.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 部门领导审批：假设每一个员工都处于一个部门，那么员工要将请假单交给对应部门领导审批：</p>
-<p><img src="https://source.icode504.com/images/image-20231204105852064.png" srcset="/img/loading.gif" lazyload></p>
-<p>假设部门领导角色是开发组长，这里选择<strong>程序员</strong>，点击保存，然后关闭此窗口：</p>
-<p><img src="https://source.icode504.com/images/image-20231204105947521.png" srcset="/img/loading.gif" lazyload></p>
-<p>接收人规则页面也点击保存即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204110044483.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 人事签字备案：设置规则和部门领导审批基本相同，分组模式中选择人力资源部经理审批即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204110314753.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204110406551.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204110436302.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 总经理审批亦同理，分组模式中选择总经理审批即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204110745634.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204110807995.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204110835391.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 查看请假单信息：由于是公司员工发起的请假申请，因此查看请假单信息应该由开始节点员工对应</p>
-<p><img src="https://source.icode504.com/images/image-20231204111121990.png" srcset="/img/loading.gif" lazyload></p>
-<p>至此，整个请假流程的所有接收人规则设置完成。</p>
-<h1 id="四、设计单个节点表单"><a href="#四、设计单个节点表单" class="headerlink" title="四、设计单个节点表单"></a>四、设计单个节点表单</h1><h2 id="4-1-表单方案的说明"><a href="#4-1-表单方案的说明" class="headerlink" title="4.1 表单方案的说明"></a>4.1 表单方案的说明</h2><p>鼠标右键点击节点，点击<strong>表单方案</strong>。</p>
-<p><img src="https://source.icode504.com/images/image-20231204152808020.png" srcset="/img/loading.gif" lazyload></p>
-<p>系统默认给我们提供的是傻瓜表单。</p>
-<p><img src="https://source.icode504.com/images/image-20231204152751665.png" srcset="/img/loading.gif" lazyload></p>
-<p>傻瓜表单指的是在一个表单中，对应一个标签和一个控件，例如：如果标签为姓名，那么控件对应的就是文本框；如果填写的是性别，那么需要填写的控件是单选框。</p>
-<p>对于小白而言，<strong>选择傻瓜表单即可应对多种场景</strong>。当然，JFlow还为我们提供了更多的表单方案：</p>
-<p><img src="https://source.icode504.com/images/image-20231204153816250.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="4-2-请假单页面分析与设计"><a href="#4-2-请假单页面分析与设计" class="headerlink" title="4.2 请假单页面分析与设计"></a>4.2 请假单页面分析与设计</h2><p>接下来，我们就是用表单方案，设计各级角色的请假申请单。</p>
-<p>1. 员工填写请假单：鼠标右键点击节点，选择<strong>设计表单</strong>。进入表单设计页面：</p>
-<p><img src="https://source.icode504.com/images/image-20231204154203357.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 对于申请人而言，需要填写申请人姓名、所在部门名称、申请日期、请假类别（例如：事假、病假、婚假、丧假等）、请假事由、请假开始时间、请假结束时间、请假时长计算。</p>
-<ul>
-<li>对于申请人姓名、所在部门名称、申请日期我们只需要保证能获取到当前登录用户的信息和填写申请所在日期即可，直接让系统自动生成，不需要人为填写。</li>
-<li>请假类别对应的控件需要设置成单选框（假设请假只有一种情况）。</li>
-<li>请假开始时间、结束时间需要使用时间输入框。并且开始时间必须保证是今天及之后，结束时间必须是开始时间及之后。</li>
-<li>请假时长需要根据请假时间开始时间和请假结束时间计算即可。</li>
-</ul>
-<h2 id="4-3-绘制请假单基本框架"><a href="#4-3-绘制请假单基本框架" class="headerlink" title="4.3 绘制请假单基本框架"></a>4.3 绘制请假单基本框架</h2><p>按照前面对请假单页面的分析，绘制请假单。</p>
-<p>1. 申请人姓名：在左侧组件的基本字段中选中文字框拖入到中间区域，此时弹出一个提示框，这里我们组件名称为申请人姓名，组件id按照系统默认生成的即可，完成后点击继续添加：</p>
-<p><img src="https://source.icode504.com/images/image-20231204155818857.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 接下来组件名称填写为<strong>申请人所在部门</strong>，然后点击<strong>创建并继续添加</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20231204160050348.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 申请日期的输入框类型是<strong>日期类型</strong>，然后填写组件名称，然后点击创建即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204160300519.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 此时表单如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20231204160403680.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 请假事由是一个文本框，将左面文字组件拖入到表单即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204163815833.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 添加请假开始时间和请假结束时间，选择日期组件，输入格式设定为日期即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231204165216030.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231204165239922.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 请假时长控件的输入框类型选择数值即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231205084731593.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 至此，我们的请假单基本框架就绘制完成了，如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20231205092504817.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="4-4-对请假单进一步完善"><a href="#4-4-对请假单进一步完善" class="headerlink" title="4.4 对请假单进一步完善"></a>4.4 对请假单进一步完善</h2><p>1. 按照上面我们指定的要求：申请人姓名、所在部门、申请日期<strong>由系统自动生成</strong>，并且<strong>设置为只读</strong>。那么我们需要对这三个控件分别操作。</p>
-<ul>
-<li>首先，点击申请人姓名，点击小齿轮，进入组件设置：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204160611753.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>我们能看到当前组件的基本信息，将系统默认值设置为<strong>登陆人员名称</strong>，然后点击保存，然后关闭这个窗口即可。</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204160755988.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>此时申请人姓名组件中文本框出现一个<code>@WebUser.Name</code>的标识，这是我们上一步设置的结果，不用修改。</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204161014587.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>申请人所在部门的设置和申请人姓名设置基本相同，只不过将系统默认值改为<strong>登陆人员部门名称</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204161339799.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>申请日期的系统默认值设置为<code>@RDT</code>表示当前日期：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204161555868.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>设置完成后的表单如下图所示，我们需要将这三个组件设置为只读禁止修改：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204161729204.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>以申请人姓名组件为例，我们选中这个组件，然后在右侧开启<strong>是否只读</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204162023924.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>申请人所在部门、申请日期的设置只读方式和前面的相同，设置完成后的效果图如下：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204162119535.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 接下来，我们再添加两个组件：请假类别、请假事由。</p>
-<ul>
-<li>请假类别我们使用枚举单选控件，将其拉入表单中，此时会弹出一个添加枚举值字段的窗口，点击新建：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204163111633.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>标签填写<strong>请假类别</strong>，对应的类别名称我们填写到下面的枚举框中，完成后点击保存：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204163404217.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>选择请假类别的枚举值：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204163445971.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>弹出框的内容，点击确定：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204163542696.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>点击保存：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204163622231.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>选择请假事由组件，在右侧组件设置中的文本类型设置为<strong>大块文本</strong>，开启<strong>超长文本</strong>，控件栅格选择整行：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204164856107.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 接下来，我们为开始时间、结束时间、请假时长这三个组件设置规则：</p>
-<ul>
-<li>选中开始时间，点击齿轮，修改组件基本信息：选择日期输入限制，输入日期大于或等于当前日期，设置规则如下图所示：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231204165807170.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>选中结束时间，点击齿轮，修改组件基本信息：选择日期输入限制，输入日期大于等于请假开始时间，设置规则如下图所示：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231205083750437.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>选中请假时长，点击齿轮，修改组件基本信息：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231205085558874.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>为了更好向用户展示请假时长，我们需要对请假时长设置时间单位，由于我们在前面选择的是日期格式，因此请假时长单位是以天为单位：选中组件，在右侧组件设置的后置提示设置为“天”</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231205090844220.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>请假是由用户填写上述的上述的开始日期和结束日期，经过系统计算而得出的，因此这一部分不需要我们填写，我们把这个控件设置为只读即可：选中请假时长控件，在右侧开启<strong>是否只读</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20231205090938030.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击最外面的组件，在右侧我们修改一下组件名字为：请假申请单</p>
-<p><img src="https://source.icode504.com/images/image-20231205090419676.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 至此，“员工填写请假申请”节点的表单绘制完成，效果图如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20231205091132577.png" srcset="/img/loading.gif" lazyload></p>
-<p>当然，我们只绘制了一个节点表单，那么其他节点的表单也在上述表单的基础上进行绘制。如何在这个表单的基础上绘制其他节点的表单，以及后续所有表单绘制完成后的操作如何，我们放到下一篇文章讲解。</p>
-<p><img src="https://source.icode504.com/images/image-20231205174128064.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-81c9da5d1dbcdc180b47aa37dc547baa.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 代码拉取中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-a55841fcb49e28caf7e622555d2f9de4.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 拉取完成，此时关闭Git命令行窗口，我们发现此时有一个RuoYi的文件夹，点击进入：</p>
+<p><img src="https://source.icode504.com/images/image-8d029f12967a66dc344d8f3c713bc093.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 点击上方路径，鼠标右键，点击<strong>复制</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-d95e42a5b5fe833185c55a48613cd408.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="第三部分-加载并启动项目"><a href="#第三部分-加载并启动项目" class="headerlink" title="第三部分 加载并启动项目"></a>第三部分 加载并启动项目</h1><h2 id="3-1-Intellij-IDEA导入后端项目"><a href="#3-1-Intellij-IDEA导入后端项目" class="headerlink" title="3.1 Intellij IDEA导入后端项目"></a>3.1 Intellij IDEA导入后端项目</h2><p>1. 打开Intellij IDEA，点击左上角File，点击Open：</p>
+<p><img src="https://source.icode504.com/images/image-20240612093338341.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 此时会弹出一个文件路径，将上一部分复制的文件路径，粘贴到上面的文件路径框中，完成后点击<strong>OK</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-12656211ac3229e289a7eb3687c06f80.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时会加载项目。按<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>S</kbd>，进入设置界面，按照下图所示找到Maven并进行配置：</p>
+<p><img src="https://source.icode504.com/images/image-20240612094117863.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. （未出现下面情况的可以跳过这一步）导入后如果你的Maven项目也是下图这样，鼠标右键点击pom.xml，然后点击Add as Maven Project，加载Maven项目：</p>
+<blockquote>
+<p>说明：如果你的IDEA没有侧边栏，如下图所示，点击左下角的图标即可显示侧边栏菜单。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-20240615141217194.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 加载过程中会下载很多的依赖，需要保证网络畅通。等待一段时间后，Maven项目加载成功，此时IDEA左侧文件夹目录变成了模块图标，右侧Maven菜单中也存在对应的模块：</p>
+<p><img src="https://source.icode504.com/images/image-5b081eb2748e01a177f3ec4330596026.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-2-数据库操作"><a href="#3-2-数据库操作" class="headerlink" title="3.2 数据库操作"></a>3.2 数据库操作</h2><p>1. 打开DBeaver，按照下图所示连接数据库：</p>
+<p><img src="https://source.icode504.com/images/image-20240720215317528.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240713145311611.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 鼠标右键选中数据库，鼠标右键点击<strong>新建数据库</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720215815009.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 这里我将数据库命名为<code>ruoyi</code>，字符集是<strong>utf8mb4</strong>，排序规则<strong>utf8mb4_0900_ai_ci</strong>，完成后点击<strong>确定</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720215926863.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 打开IDEA，在左侧找到sql文件夹，选中<code>ry_xxx.sql</code>，按<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>，复制文件所在路径：</p>
+<p><img src="https://source.icode504.com/images/image-bff0f0d9ff6ce356c30bf4a0b13d7c85.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 打开DBeaver，在左侧找到并选中刚刚创建好的数据库，鼠标右键点击<strong>工具</strong>，选择<strong>执行脚本</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720222126116.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按照下图所示完成SQL导入操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">--default-character-set=utf8mb4<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-7ec695c0b64d9c4622d3b6da361c1a2b.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果出现这个窗口提示，选择<strong>是</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720223047365.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 导入完成，点击右下角<strong>取消</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240720223144515.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-3-启动项目"><a href="#3-3-启动项目" class="headerlink" title="3.3 启动项目"></a>3.3 启动项目</h2><p>1. 打开IDEA，按照下图所示操作找到application-druid.yml配置文件：</p>
+<p><img src="https://source.icode504.com/images/image-f63fce31e7346faf7f1aec80cde26107.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 双击打开application-druid.yml，第九行数据库名称改为ruoyi；第10行用户名填写root即可，第11行密码是MySQL的root用户密码，如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240612102449230.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击右上角的Debug图标，以调试的方式启动：</p>
+<p><img src="https://source.icode504.com/images/image-20240612102553143.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 如果控制台出现如下图所示内容，说明若依后端项目启动成功！</p>
+<p><img src="https://source.icode504.com/images/image-20240612102816451.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>（正常启动的小伙伴请忽略这部分内容）如果你在启动时报错，出现如下错误信息：</p>
+<p><img src="https://source.icode504.com/images/image-e0a622632e9b61fc2641bbe47e5dc4f6.png" srcset="/img/loading.gif" lazyload></p>
+<p>打开application.yml，找到服务器端口，将其改为其他端口，为了方便展示，我将其改为8888：</p>
+<p><img src="https://source.icode504.com/images/image-651763bafc9cd8f35b346d5015ee885e.png" srcset="/img/loading.gif" lazyload></p>
+<p>重新启动就不会报错啦：</p>
+<p><img src="https://source.icode504.com/images/image-a6ee86fc3d4623839e9abca5d14e36d6.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+<p>5. 打开浏览器，在上方搜索框中输入<code>localhost</code>即可访问：</p>
+<blockquote>
+<p>如果你修改了服务端口，访问地址是<code>localhost:端口号</code>，这里我将端口号修改成了8888，因此访问地址是<code>localhost:8888</code></p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/image-a51527f3db133518442168ea9c89d9e5.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 默认用户名是<code>admin</code>，密码<code>admin123</code>，验证码需要按照图片计算，完成后点击<strong>登录</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-4ded7c16044b758eec3ee62ec0519c23.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 进入主界面，<code>admin</code>用户登录成功！</p>
+<p><img src="https://source.icode504.com/images/image-88cbb6a61a3aa28beed16a497b632f6d.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1303,13 +1182,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/" class="category-chain-item">工作流框架</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/" class="category-chain-item">开源框架</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A1%86%E6%9E%B6/JFlow/" class="category-chain-item">JFlow</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/%E8%8B%A5%E4%BE%9D/" class="category-chain-item">若依</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%A1%86%E6%9E%B6/Java/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/%E8%8B%A5%E4%BE%9D/%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE%E5%92%8C%E5%90%AF%E5%8A%A8/" class="category-chain-item">框架配置和启动</a>
+  
+  
+
   
 
   
@@ -1331,9 +1217,15 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/JFlow/" class="print-no-link">#JFlow</a>
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
+      
+        <a href="/tags/%E5%BC%80%E6%BA%90/" class="print-no-link">#开源</a>
       
         <a href="/tags/%E8%8B%A5%E4%BE%9D/" class="print-no-link">#若依</a>
+      
+        <a href="/tags/SpringBoot/" class="print-no-link">#SpringBoot</a>
+      
+        <a href="/tags/Thymeleaf/" class="print-no-link">#Thymeleaf</a>
       
     </div>
   
@@ -1345,8 +1237,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第二章 若依-JFlow流程模型与单节点表单设计</div>
-      <div>https://www.icode504.com/posts/17.html</div>
+      <div>若依环境部署教程</div>
+      <div>https://www.icode504.com/posts/102.html</div>
     </div>
     <div class="license-meta">
       
@@ -1358,7 +1250,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -1390,9 +1282,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/18.html" title="第三章 若依-JFlow其他节点的表单设计和流程检查">
+                      <a href="/posts/102.html" title="若依环境部署教程">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第三章 若依-JFlow其他节点的表单设计和流程检查</span>
+                        <span class="hidden-mobile">若依环境部署教程</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1400,8 +1292,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/15.html" title="Scala 2安装教程（Windows版）">
-                        <span class="hidden-mobile">Scala 2安装教程（Windows版）</span>
+                      <a href="/posts/101.html" title="若依+Apifox实现接口测试（解决访问接口401问题）">
+                        <span class="hidden-mobile">若依+Apifox实现接口测试（解决访问接口401问题）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
