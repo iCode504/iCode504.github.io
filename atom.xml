@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:23:38.802Z</updated>
+  <updated>2025-04-13T06:25:36.507Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EasyExcel的表头操作</title>
+    <link href="https://www.icode504.com/posts/61.html"/>
+    <id>https://www.icode504.com/posts/61.html</id>
+    <published>2025-04-13T06:25:36.507Z</published>
+    <updated>2025-04-13T06:25:36.507Z</updated>
+    
+    
+    <summary type="html">本文使用EasyExcel代码实现了无表头数据的Excel文件导出和复杂表头的输出。</summary>
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="常用工具" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/"/>
+    
+    <category term="文档操作" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
+    
+    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
+    
+  </entry>
   
   <entry>
     <title>使用EasyExcel将数据写入到Excel文件的四种方式</title>
@@ -486,35 +517,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="VMware Workstation" scheme="https://www.icode504.com/tags/VMware-Workstation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VS Code配置MinGW并编写运行C/C++代码（适用于Windows）</title>
-    <link href="https://www.icode504.com/posts/40.html"/>
-    <id>https://www.icode504.com/posts/40.html</id>
-    <published>2025-04-13T03:15:13.160Z</published>
-    <updated>2025-04-13T03:15:13.160Z</updated>
-    
-    
-    <summary type="html">本文介绍了在Windows系统中使用VS Code配置MinGW环境，并编写运行C/C++代码的步骤。涵盖了MinGW的安装与配置、VS Code的设置以及简单代码示例，旨在帮助初学者快速上手C/C++编程。</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Visual Studio Code（VS Code）" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/"/>
-    
-    <category term="C/C++" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/C-C/"/>
-    
-    
-    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
-    
-    <category term="C" scheme="https://www.icode504.com/tags/C/"/>
-    
-    <category term="C++" scheme="https://www.icode504.com/tags/C/"/>
-    
-    <category term="MinGW" scheme="https://www.icode504.com/tags/MinGW/"/>
     
   </entry>
   
