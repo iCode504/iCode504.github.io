@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T06:25:36.507Z</updated>
+  <updated>2025-04-13T06:27:17.201Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EasyExcel的列操作</title>
+    <link href="https://www.icode504.com/posts/62.html"/>
+    <id>https://www.icode504.com/posts/62.html</id>
+    <published>2025-04-13T06:27:17.201Z</published>
+    <updated>2025-04-13T06:27:17.201Z</updated>
+    
+    
+    <summary type="html">本文主要通过@ExcelIgnore注解和EasyExcel自带的两种方法实现只导出特定的列；通过@ExcelProperty中的index属性实现隔列输出效果。</summary>
+    
+    
+    
+    <category term="后端" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="常用工具" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Java" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/"/>
+    
+    <category term="文档操作" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="EasyExcel" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/"/>
+    
+    <category term="使用EasyExcel将数据写入到Excel文件" scheme="https://www.icode504.com/categories/%E5%90%8E%E7%AB%AF/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/Java/%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/EasyExcel/%E4%BD%BF%E7%94%A8EasyExcel%E5%B0%86%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E5%88%B0Excel%E6%96%87%E4%BB%B6/"/>
+    
+    
+    <category term="Java" scheme="https://www.icode504.com/tags/Java/"/>
+    
+    <category term="EasyExcel" scheme="https://www.icode504.com/tags/EasyExcel/"/>
+    
+  </entry>
   
   <entry>
     <title>EasyExcel的表头操作</title>
@@ -492,31 +523,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="WSL" scheme="https://www.icode504.com/tags/WSL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VMware Workstation安装+彻底卸载教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/41.html"/>
-    <id>https://www.icode504.com/posts/41.html</id>
-    <published>2025-04-13T03:17:13.201Z</published>
-    <updated>2025-04-13T03:17:13.201Z</updated>
-    
-    
-    <summary type="html">这篇教程提供了关于在Windows操作系统上安装和彻底卸载VMware Workstation的详细步骤，帮助用户轻松完成虚拟机软件的管理和维护。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="服务器&amp;虚拟机" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="VMware Workstation" scheme="https://www.icode504.com/tags/VMware-Workstation/"/>
     
   </entry>
   

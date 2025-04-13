@@ -18,27 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文简要介绍了EasyExcel的优势，并创建了Maven&#x2F;Gradle项目，并导入相关的依赖">
+    <meta name="description" content="本文主要通过@ExcelIgnore注解和EasyExcel自带的两种方法实现只导出特定的列；通过@ExcelProperty中的index属性实现隔列输出效果。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EasyExcel介绍与依赖导入">
-<meta property="og:url" content="https://www.icode504.com/posts/58.html">
+<meta property="og:title" content="EasyExcel的列操作">
+<meta property="og:url" content="https://www.icode504.com/posts/62.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文简要介绍了EasyExcel的优势，并创建了Maven&#x2F;Gradle项目，并导入相关的依赖">
+<meta property="og:description" content="本文主要通过@ExcelIgnore注解和EasyExcel自带的两种方法实现只导出特定的列；通过@ExcelProperty中的index属性实现隔列输出效果。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/9c990a74683b0958f092484c8728c148.png">
-<meta property="article:published_time" content="2025-04-13T06:17:56.117Z">
-<meta property="article:modified_time" content="2025-04-13T06:17:56.117Z">
+<meta property="og:image" content="https://source.icode504.com/images/aad1dd1a9cd3ac24edc765dd0395349e.png">
+<meta property="article:published_time" content="2025-04-13T06:27:17.201Z">
+<meta property="article:modified_time" content="2025-04-13T06:27:17.201Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="EasyExcel">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/9c990a74683b0958f092484c8728c148.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/aad1dd1a9cd3ac24edc765dd0395349e.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>EasyExcel介绍与依赖导入 - iCode504个人博客</title>
+  <title>EasyExcel的列操作 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/9c990a74683b0958f092484c8728c148.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/aad1dd1a9cd3ac24edc765dd0395349e.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">EasyExcel介绍与依赖导入</span>
+            <span id="subtitle">EasyExcel的列操作</span>
           
         </div>
 
@@ -220,7 +220,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 14:17" pubdate>
+        <time datetime="2025-04-13 14:27" pubdate>
           2025年4月13日
         </time>
       </span>
@@ -436,7 +436,7 @@
       
         <a href="/posts/58.html" title="EasyExcel介绍与依赖导入"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">EasyExcel介绍与依赖导入</span>
         </a>
       
@@ -463,7 +463,7 @@
       
         <a href="/posts/62.html" title="EasyExcel的列操作"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">EasyExcel的列操作</span>
         </a>
       
@@ -839,91 +839,70 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">EasyExcel介绍与依赖导入</h1>
+            <h1 id="seo-header">EasyExcel的列操作</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、EasyExcel介绍"><a href="#一、EasyExcel介绍" class="headerlink" title="一、EasyExcel介绍"></a>一、EasyExcel介绍</h1><p>EasyExcel是由阿里巴巴一款开源的读写Excel项目，和Apache POI相比，它的最大优势就是在尽可能节省内存的情况下支持读写百兆的Excel，目前维护的版本是3.1.x-3.2.x（截止到2024年3月），更多内容说明可以到官网查看：<a target="_blank" rel="noopener" href="https://easyexcel.opensource.alibaba.com/">点我进入官网</a></p>
-<p><img src="https://source.icode504.com/images/large-20799fd0a966e90931a35cbfff69253d.png" srcset="/img/loading.gif" lazyload alt="16M内存23秒读取了75M（46W行25列）的Excel"></p>
-<h1 id="二、创建项目"><a href="#二、创建项目" class="headerlink" title="二、创建项目"></a>二、创建项目</h1><p>1. 请确保电脑上已经安装如下软件：</p>
-<ul>
-<li>Java开发工具：JDK</li>
-<li>集成开发环境：Intellij IDEA或者Eclipse</li>
-<li>项目构建工具：Maven或者Gradle</li>
-</ul>
-<p>需要安装的小伙伴根据自身操作系统查看安装教程：</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">Windows</th>
-<th align="center">macOS</th>
-<th align="center">Linux</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">JDK 8</td>
-<td align="center"><a href="./1.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center"><a href="./55.html">点我查看</a></td>
-</tr>
-<tr>
-<td align="center">Intellij IDEA</td>
-<td align="center"><a href="./14.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center">暂无</td>
-</tr>
-<tr>
-<td align="center">Eclipse</td>
-<td align="center"><a href="./30.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center">暂无</td>
-</tr>
-<tr>
-<td align="center">Maven</td>
-<td align="center"><a href="./22.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center"><a href="./56.html">点我查看</a></td>
-</tr>
-<tr>
-<td align="center">Gradle</td>
-<td align="center"><a href="./23.html">点我查看</a></td>
-<td align="center">敬请期待</td>
-<td align="center"><a href="./57.html">敬请期待</a></td>
-</tr>
-</tbody></table>
-<p>2. 打开Intellij IDEA，创建一个项目：</p>
-<blockquote>
-<p>以下提供了Maven和Gradle两种方式创建项目，任选其一创建项目即可。</p>
+                <h1 id="一、只导出特定的列"><a href="#一、只导出特定的列" class="headerlink" title="一、只导出特定的列"></a>一、只导出特定的列</h1><blockquote>
+<p>案例：只导出员工的序号、员工号、员工姓名和性别信息，其他内容（年龄、生日）不需要输出。</p>
+<p>实体类Employee、工具类EmployeeUtils已经准备好：<a href="./60.html#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87">点我查看</a></p>
+<p>导出的Excel文件显示效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240321155404585.png" srcset="/img/loading.gif" lazyload></p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th align="center">Maven构建项目</th>
-<th align="center">Gradle构建项目</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><img src="https://source.icode504.com/images/image-20240305172709416.png" srcset="/img/loading.gif" lazyload></td>
-<td align="center"><img src="https://source.icode504.com/images/image-20240305173309106.png" srcset="/img/loading.gif" lazyload alt="image-20240305173309106"></td>
-</tr>
-<tr>
-<td align="center"><img src="https://source.icode504.com/images/image-20240305173055254.png" srcset="/img/loading.gif" lazyload></td>
-<td align="center"><img src="https://source.icode504.com/images/image-20240305173055254.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>3. 导入依赖（这里我使用的是3.1.1版本）</p>
-<ul>
-<li>pom.xml</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- easyexcel --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>easyexcel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 日志框架slf4j --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.slf4j<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>slf4j-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.7.36<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- lombok(简化getter/setter、构造器，仅推荐学习阶段使用) --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.18.24<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 测试工具Junit5 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.junit.jupiter<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit-jupiter-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.8.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h2 id="方式一：在实体类属性上添加-ExcelIgnore注解"><a href="#方式一：在实体类属性上添加-ExcelIgnore注解" class="headerlink" title="方式一：在实体类属性上添加@ExcelIgnore注解"></a>方式一：在实体类属性上添加@ExcelIgnore注解</h2><p>和<code>@ExcelProperty</code>注解一样，<code>@ExcelIgnore</code>注解也是标注在类属性上，这个注解的作用是在导出Excel文件时默认忽略这个列。由于我们不需要输出年龄<code>age</code>和生日<code>birthday</code>两列，只需要在这两个属性上标记上<code>@ExcelIgnore</code>注解即可，实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504.entity;<br><br><span class="hljs-keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;<br><span class="hljs-keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;<br><span class="hljs-keyword">import</span> lombok.*;<br><br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 员工--实体类</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-03-18</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@AllArgsConstructor</span><br><span class="hljs-meta">@NoArgsConstructor</span><br><span class="hljs-meta">@Getter</span><br><span class="hljs-meta">@Setter</span><br><span class="hljs-meta">@ToString</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Employee</span> &#123;<br><br>    <span class="hljs-comment">// 序号</span><br>    <span class="hljs-meta">@ExcelProperty(&quot;序号&quot;)</span><br>    <span class="hljs-keyword">private</span> Integer id;<br><br>    <span class="hljs-comment">// 员工号</span><br>    <span class="hljs-meta">@ExcelProperty(&quot;员工号&quot;)</span><br>    <span class="hljs-keyword">private</span> String employeeId;<br><br>    <span class="hljs-comment">// 员工姓名</span><br>    <span class="hljs-meta">@ExcelProperty(&quot;员工姓名&quot;)</span><br>    <span class="hljs-keyword">private</span> String employeeName;<br><br>    <span class="hljs-comment">// 年龄</span><br>    <span class="hljs-meta">@ExcelIgnore</span><br>    <span class="hljs-meta">@ExcelProperty(&quot;年龄&quot;)</span><br>    <span class="hljs-keyword">private</span> Integer age;<br><br>    <span class="hljs-comment">// 性别（男/女）</span><br>    <span class="hljs-meta">@ExcelProperty(&quot;性别&quot;)</span><br>    <span class="hljs-keyword">private</span> String gender;<br><br>    <span class="hljs-comment">// 生日</span><br>    <span class="hljs-meta">@ExcelIgnore</span><br>    <span class="hljs-meta">@ExcelProperty(&quot;生日&quot;)</span><br>    <span class="hljs-keyword">private</span> Date birthday;<br><br>    <span class="hljs-comment">// 构造器、getter、setter已省略...</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<ul>
-<li>build.gradle</li>
-</ul>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs groovy">implementation <span class="hljs-string">&#x27;com.alibaba:easyexcel:3.1.1&#x27;</span><br>implementation <span class="hljs-string">&#x27;org.slf4j:slf4j-api:1.7.36&#x27;</span><br>compileOnly <span class="hljs-string">&#x27;org.projectlombok:lombok:1.18.24&#x27;</span><br>testImplementation <span class="hljs-string">&#x27;org.junit.jupiter:junit-jupiter-api:5.8.2&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>这里我使用EasyExcel的链式方法导出Excel文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br>    EasyExcel.write(filePath, Employee.class)<br>            .sheet(<span class="hljs-string">&quot;测试工作表&quot;</span>)<br>            .doWrite(EmployeeUtils.getDataList());<br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<p>导出的Excel文件符合案例的预期：</p>
+<p><img src="https://source.icode504.com/images/image-20240321160915285.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="方式二：调用includeColumnFieldNames方法实现导出特定的列"><a href="#方式二：调用includeColumnFieldNames方法实现导出特定的列" class="headerlink" title="方式二：调用includeColumnFieldNames方法实现导出特定的列"></a>方式二：调用includeColumnFieldNames方法实现导出特定的列</h2><p>方式一虽然能实现导出特定的列，但是后续如果我们还要使用年龄<code>age</code>和生日<code>birthday</code>两个属性，还需要将<code>@ExcelIgnore</code>注解去除，这并不是一个好办法。</p>
+<p>EasyExcel框架中有一个抽象类AbstractExcelWriterParameterBuilder，这个类提供了<code>includeColumnFieldNames</code>方法，可以传入字符串类型的集合，它的作用是将字符串集合中的数据列输出到Excel文件中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Only output the custom columns.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> T <span class="hljs-title function_">includeColumnFieldNames</span><span class="hljs-params">(Collection&lt;String&gt; includeColumnFieldNames)</span> &#123;<br>    parameter().setIncludeColumnFieldNames(includeColumnFieldNames);<br>    <span class="hljs-keyword">return</span> self();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我们只需要创建一个字符串列表，把<strong>导出的数据对应的属性名称</strong>存储到这个列表中，然后将这个列表作为参数传入上述方法中。以下是实现代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br><br>    <span class="hljs-comment">// 创建一个列表，这个列表中存储要导出的列对应的属性名称</span><br>    List&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>    list.add(<span class="hljs-string">&quot;id&quot;</span>);<br>    list.add(<span class="hljs-string">&quot;employeeId&quot;</span>);<br>    list.add(<span class="hljs-string">&quot;employeeName&quot;</span>);<br>    list.add(<span class="hljs-string">&quot;gender&quot;</span>);<br>    <br>    EasyExcel.write(filePath, Employee.class)<br>            <span class="hljs-comment">// 调用includeColumnFieldNames方法，传入上述的列表</span><br>            .includeColumnFieldNames(list)<br>            .sheet(<span class="hljs-string">&quot;测试工作表&quot;</span>)<br>            .doWrite(EmployeeUtils.getDataList());<br><br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>输出的Excel文件符合预期：</p>
+<p><img src="https://source.icode504.com/images/image-20240322084335128.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="方式三：调用excludeColumnFieldNames方法实现导出特定的列"><a href="#方式三：调用excludeColumnFieldNames方法实现导出特定的列" class="headerlink" title="方式三：调用excludeColumnFieldNames方法实现导出特定的列"></a>方式三：调用excludeColumnFieldNames方法实现导出特定的列</h2><p>和方式二实现方式相反，抽象类AbstractExcelWriterParameterBuilder也提供了<code>excludeColumnFieldNames</code>方法，它也可以传入字符串集合，只不过作用和方式二相反，传入的字符串集合不会输出到Excel文件中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Ignore the custom columns.</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> T <span class="hljs-title function_">excludeColumnFieldNames</span><span class="hljs-params">(Collection&lt;String&gt; excludeColumnFieldNames)</span> &#123;<br>    parameter().setExcludeColumnFieldNames(excludeColumnFieldNames);<br>    <span class="hljs-keyword">return</span> self();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>创建一个列表，用于存储不导出列对应的属性名称（即年龄<code>age</code>、生日<code>birthday</code>），然后将这个列表作为参数传入到<code>excludeColumnFieldNames</code>方法中，实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br><br>    <span class="hljs-comment">// 创建一个列表，这个列表中存储不需要导出的列对应的属性名称</span><br>    List&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>    list.add(<span class="hljs-string">&quot;age&quot;</span>);<br>    list.add(<span class="hljs-string">&quot;birthday&quot;</span>);<br><br>    EasyExcel.write(filePath, Employee.class)<br>            <span class="hljs-comment">// 调用excludeColumnFieldNames方法，传入上述的列表</span><br>            .excludeColumnFieldNames(list)<br>            .sheet(<span class="hljs-string">&quot;测试工作表&quot;</span>)<br>            .doWrite(EmployeeUtils.getDataList());<br><br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>输出的Excel文件效果和前两种方式效果相同：</p>
+<p><img src="https://source.icode504.com/images/image-20240322084820562.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、将数据导出到Excel文件的特定列"><a href="#二、将数据导出到Excel文件的特定列" class="headerlink" title="二、将数据导出到Excel文件的特定列"></a>二、将数据导出到Excel文件的特定列</h1><blockquote>
+<p>案例：使用EasyExcel实现数据隔列输出（每个数据列之间存在一个空列）</p>
+<p>实体类Employee、工具类EmployeeUtils已经准备好：<a href="https://www.icode504.com/posts/60.html#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87">点我查看</a></p>
+<p>导出的Excel文件显示效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/image-20240322090743061.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+<p>要想实现上述效果，我们对EasyExcel对Excel文件数据列的操作。</p>
+<p>Excel文件中，横向（从左到右）是行，竖向（从上到下）是列。如下图所示，由于每一列有自己的名称：列A、列B、列C……</p>
+<p><img src="https://source.icode504.com/images/image-20240322091435784.png" srcset="/img/loading.gif" lazyload></p>
+<p>前面我们使用过<code>@ExcelProperty</code>注解，这个注解中有一个属性<code>index</code>，它的默认值是-1，此时列输出的顺序按照Java实体类中属性进行输出；</p>
+<p>如果我们在注解中指定了<code>index</code>属性，默认从0开始，以上述表格为例，列A对应的<code>index</code>值是0，列B对应的<code>index</code>值是1，列C对应的<code>index</code>值是2，依次类推。</p>
+<p>要想实现案例中的效果，我们需要在<code>@ExcelProperty</code>注解上额外指定<code>index</code>值，“序号”列对应的<code>index</code>值是0，“员工号”列对应的值是2，“姓名”列对应的值是4，以此类推，实体类Employee对应的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504.entity;<br><br><span class="hljs-keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;<br><span class="hljs-keyword">import</span> lombok.*;<br><br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 员工--实体类</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-03-18</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@AllArgsConstructor</span><br><span class="hljs-meta">@NoArgsConstructor</span><br><span class="hljs-meta">@Getter</span><br><span class="hljs-meta">@Setter</span><br><span class="hljs-meta">@ToString</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Employee</span> &#123;<br><br>    <span class="hljs-comment">// 序号</span><br>    <span class="hljs-comment">// 由于我们既要输出表头，又要指定输出到特定的列，这里注解对应的属性名必须标记上</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;序号&quot;, index = 0)</span><br>    <span class="hljs-keyword">private</span> Integer id;<br><br>    <span class="hljs-comment">// 员工号</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;员工号&quot;, index = 2)</span><br>    <span class="hljs-keyword">private</span> String employeeId;<br><br>    <span class="hljs-comment">// 员工姓名</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;员工姓名&quot;, index = 4)</span><br>    <span class="hljs-keyword">private</span> String employeeName;<br><br>    <span class="hljs-comment">// 年龄</span><br>    <span class="hljs-comment">// @ExcelIgnore</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;年龄&quot;, index = 6)</span><br>    <span class="hljs-keyword">private</span> Integer age;<br><br>    <span class="hljs-comment">// 性别（男/女）</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;性别&quot;, index = 8)</span><br>    <span class="hljs-keyword">private</span> String gender;<br><br>    <span class="hljs-comment">// 生日</span><br>    <span class="hljs-comment">// @ExcelIgnore</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;生日&quot;, index = 10)</span><br>    <span class="hljs-keyword">private</span> Date birthday;<br><br>    <span class="hljs-comment">// 构造器、getter、setter已省略...</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>使用EasyExcel输出文件的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">filePath</span> <span class="hljs-operator">=</span> EmployeeUtils.getFilePath();<br><br>    EasyExcel.write(filePath, Employee.class)<br>            .sheet(<span class="hljs-string">&quot;测试工作表&quot;</span>)<br>            .doWrite(EmployeeUtils.getDataList());<br><br>    System.out.println(<span class="hljs-string">&quot;数据成功写出到Excel文件中&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>执行上述代码，输出的Excel文件符合案例要求：</p>
+<p><img src="https://source.icode504.com/images/image-20240322093022197.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>说明：</p>
+<ol>
+<li>如果你打开Excel文件时，“生日”一栏显示######，只需要将鼠标移动到生日一列，向右拉动即可查看日期信息。</li>
+<li>上图员工号和员工姓名并不是相邻的，向右拉动员工号一列，就会发现员工号和员工姓名二者是隔开的。</li>
+</ol>
+</blockquote>
+<h1 id="三、知识点总结"><a href="#三、知识点总结" class="headerlink" title="三、知识点总结"></a>三、知识点总结</h1><p>EasyExcel的列操作的知识点总结如下图所示：</p>
+<p><img src="https://source.icode504.com/images/EasyExcel%E5%88%97%E6%93%8D%E4%BD%9C.svg" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1006,8 +985,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>EasyExcel介绍与依赖导入</div>
-      <div>https://www.icode504.com/posts/58.html</div>
+      <div>EasyExcel的列操作</div>
+      <div>https://www.icode504.com/posts/62.html</div>
     </div>
     <div class="license-meta">
       
@@ -1051,18 +1030,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/59.html" title="RSS订阅指南">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">RSS订阅指南</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/57.html" title="Gradle安装配置教程（Linux通用版）">
-                        <span class="hidden-mobile">Gradle安装配置教程（Linux通用版）</span>
+                      <a href="/posts/61.html" title="EasyExcel的表头操作">
+                        <span class="hidden-mobile">EasyExcel的表头操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
