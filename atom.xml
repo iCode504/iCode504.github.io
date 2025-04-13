@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T05:38:41.667Z</updated>
+  <updated>2025-04-13T05:43:12.682Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</title>
+    <link href="https://www.icode504.com/posts/53.html"/>
+    <id>https://www.icode504.com/posts/53.html</id>
+    <published>2025-04-13T05:43:12.682Z</published>
+    <updated>2025-04-13T05:43:12.682Z</updated>
+    
+    
+    <summary type="html">创建并通过npm run命令启动Vue项目报错Component name xxx should always be multi-word vue/multi-word-component-names的解决办法</summary>
+    
+    
+    
+    <category term="前端" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Vue" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
+    
+    <category term="Vue Bug" scheme="https://www.icode504.com/categories/%E5%89%8D%E7%AB%AF/Vue/Vue-Bug/"/>
+    
+    
+    <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
+    
+    <category term="Vue Bug" scheme="https://www.icode504.com/tags/Vue-Bug/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Debian安装教程</title>
@@ -496,31 +521,6 @@
     <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
     
     <category term="Live Server" scheme="https://www.icode504.com/tags/Live-Server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>卸载神器：Geek Uninstaller安装使用教程（Windows版）</title>
-    <link href="https://www.icode504.com/posts/31.html"/>
-    <id>https://www.icode504.com/posts/31.html</id>
-    <published>2025-04-12T16:00:00.000Z</published>
-    <updated>2025-04-13T00:43:25.950Z</updated>
-    
-    
-    <summary type="html">Geek Uninstaller是一款轻量级、强大的Windows程序卸载工具。本教程介绍了它的安装步骤、彻底卸载功能、批量卸载特性以及程序启动项管理，帮助用户轻松清理系统中的无用软件和残留文件。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Windows" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/"/>
-    
-    <category term="常用工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
-    
-    <category term="Geek Uninstaller" scheme="https://www.icode504.com/tags/Geek-Uninstaller/"/>
     
   </entry>
   
