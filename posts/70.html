@@ -18,28 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这篇教程旨在为 Windows 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
+    <meta name="description" content="本教程详细介绍了在Linux CentOS系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js安装、配置和卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/67.html">
+<meta property="og:title" content="Docker安装和配置教程（Linux CentOS版）">
+<meta property="og:url" content="https://www.icode504.com/posts/70.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="这篇教程旨在为 Windows 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
+<meta property="og:description" content="本教程详细介绍了在Linux CentOS系统上安装和配置Docker的步骤，包括安装前的准备工作、安装Docker、启动和测试容器等内容，帮助用户快速上手Docker。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/d88197fbcaf4fd884dda7e0f56b4ba85.png">
+<meta property="og:image" content="https://source.icode504.com/images/c210ae2e058db1673938bd64729edf58.png">
 <meta property="article:published_time" content="2025-04-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-13T06:46:33.256Z">
+<meta property="article:modified_time" content="2025-04-13T06:54:49.722Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Node.js">
-<meta property="article:tag" content="npm">
+<meta property="article:tag" content="CentOS">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/d88197fbcaf4fd884dda7e0f56b4ba85.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/c210ae2e058db1673938bd64729edf58.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Node.js安装、配置和卸载教程（Windows版） - iCode504个人博客</title>
+  <title>Docker安装和配置教程（Linux CentOS版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/d88197fbcaf4fd884dda7e0f56b4ba85.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/c210ae2e058db1673938bd64729edf58.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Node.js安装、配置和卸载教程（Windows版）</span>
+            <span id="subtitle">Docker安装和配置教程（Linux CentOS版）</span>
           
         </div>
 
@@ -307,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -334,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="容器化"
         id="heading-09919c03105ff63440d33b04b664e3ce" role="tab" data-toggle="collapse" href="#collapse-09919c03105ff63440d33b04b664e3ce"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         容器化
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-09919c03105ff63440d33b04b664e3ce"
+      <div class="category-collapse collapse show" id="collapse-09919c03105ff63440d33b04b664e3ce"
            role="tabpanel" aria-labelledby="heading-09919c03105ff63440d33b04b664e3ce">
         
         
@@ -361,17 +361,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Docker"
         id="heading-c5fd214cdd0d2b3b4272e73b022ba5c2" role="tab" data-toggle="collapse" href="#collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Docker
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
+      <div class="category-collapse collapse show" id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
            role="tabpanel" aria-labelledby="heading-c5fd214cdd0d2b3b4272e73b022ba5c2">
         
         
@@ -383,7 +383,7 @@
       
         <a href="/posts/70.html" title="Docker安装和配置教程（Linux CentOS版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Docker安装和配置教程（Linux CentOS版）</span>
         </a>
       
@@ -520,17 +520,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(27)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -547,17 +547,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架"
         id="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6" role="tab" data-toggle="collapse" href="#collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         前端框架
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+      <div class="category-collapse collapse " id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
            role="tabpanel" aria-labelledby="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6">
         
         
@@ -569,7 +569,7 @@
       
         <a href="/posts/67.html" title="Node.js安装、配置和卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Node.js安装、配置和卸载教程（Windows版）</span>
         </a>
       
@@ -1306,7 +1306,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Node.js安装、配置和卸载教程（Windows版）</h1>
+            <h1 id="seo-header">Docker安装和配置教程（Linux CentOS版）</h1>
             
               <p class="note note-info">
                 
@@ -1319,76 +1319,83 @@
             
               <div class="markdown-body">
                 
-                <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，使 JavaScript 能够在服务器端运行，它提供了一个事件驱动的非阻塞 I&#x2F;O 模型，使得构建高效、可扩展的网络应用变得更加容易。而 npm（Node Package Manager）是 Node.js 的包管理工具，用于安装、分享、管理 JavaScript 代码包，使开发者能够轻松地将自己的代码与他人的代码集成，并且享受到社区共享的各种功能模块。Node.js 和 npm 的结合使得 JavaScript 开发者能够在服务器端和客户端都使用同一种语言，极大地提高了开发效率和跨平台能力。</p>
-<p>以下是Windows环境下Node.js的安装教程：</p>
-<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>推荐安装如下软件（不强制要求）：</p>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装教程</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>NDM（Neat Download Manager）</td>
-<td><a href="./24.html">点我查看</a></td>
-<td>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度。</td>
-</tr>
-</tbody></table>
-<h1 id="二、下载Node-js"><a href="#二、下载Node-js" class="headerlink" title="二、下载Node.js"></a>二、下载Node.js</h1><p>1. 点击右侧链接下载Node.js：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">点我查看</a></p>
-<p>2. 下载页面中有Node.js过去的各个发行版本，这里我选择的是最新的16版本的Node.js，如下图，点击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240619232411366.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. Windows 64位操作系统的小伙伴推荐下载msi方式的安装包下载（如下图）：</p>
-<p><img src="https://source.icode504.com/images/image-20240619232609935.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、安装Node-js"><a href="#三、安装Node-js" class="headerlink" title="三、安装Node.js"></a>三、安装Node.js</h1><p>1. 双击打开安装包，进入安装界面，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426110553409.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. <strong>勾选</strong>用户许可协议，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426110726211.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>Change</strong>修改安装路径，这里我安装在了D盘（建议安装路径存放在一个你熟悉的位置，并且是英文路径），完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426110747764.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240426111024855.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240426111136195.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 选择要安装的模块，不熟悉的小伙伴直接按照系统默认选择的模块即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111203354.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 本地模块工具，如果你使用Python或者Visual Studio的构建工具，就将下图内容勾选即可（这里我并没有用到上述内容，我选择<strong>不勾选</strong>），完成后点击Next：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111238393.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 点击<strong>Install</strong>开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111249199.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111304999.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 点击<strong>Finish</strong>，Node.js安装完成：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111317567.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>进入命令行，分别输入<code>node -v</code>和<code>npm -v</code>，如果能够查看到响应的版本信息就说明Node.js安装成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240426111504600.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、npm更换镜像源"><a href="#四、npm更换镜像源" class="headerlink" title="四、npm更换镜像源"></a>四、npm更换镜像源</h1><p>Node.js中包含一个重要模块：npm，它的作用是帮助我们下载项目中的依赖（你可以理解成下载对应的软件包），但是npm默认的下载地址在国外，如果使用了默认的下载地址，后续在使用npm的过程中下载依赖会非常慢，因此，我们需要将npm默认的下载地址改成国内镜像，这里我使用的是淘宝镜像源。</p>
-<p>1. 执行如下命令查看当前<code>npm</code>的下载源：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config get registry<br></code></pre></td></tr></table></figure>
+                <p>Docker 是一种开源的平台，用于开发、运输和运行应用程序。它通过将应用程序及其依赖项打包在一个可移植的容器中，使得应用程序可以在任何环境中一致地运行。Docker 容器利用了操作系统的虚拟化技术，相比传统的虚拟机更加轻量级、高效。开发人员可以在本地构建和测试容器，然后将其部署到生产环境，确保环境一致性和快速部署。Docker 极大地简化了应用程序的开发和运维流程，提高了工作效率和系统的可扩展性。</p>
+<p>以下是 Linux CentOS 系统环境下 Docker 的安装和配置教程：</p>
+<h1 id="一、安装前操作"><a href="#一、安装前操作" class="headerlink" title="一、安装前操作"></a>一、安装前操作</h1><p>1. 本文使用的是 CentOS 操作系统安装 Docker，如果需要在虚拟机安装 CentOS，可以点击右侧链接查看教程：<a href="./48.html">点我查看</a></p>
+<p>2. 如果你要安装新版本的 Docker，需要将系统中安装的旧版本 Docker 卸载。执行如下命令卸载 Docker：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum remove docker \<br>                docker-client \<br>                docker-client-latest \<br>                docker-common \<br>                docker-latest \<br>                docker-latest-logrotate \<br>                docker-logrotate \<br>                docker-engine<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-20240428091353944.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 将镜像源更改成淘宝镜像源，执行如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config set registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
+<p>3. 删除以前在 Docker 安装的镜像、容器等文件：Docker 在卸载过程中默认不会删除原来下载的镜像文件，它们默认存储在<code>/var/lib/docker</code>中，如果需要删除这些残留文件，可以执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf /var/lib/docker/<br></code></pre></td></tr></table></figure>
 
-<p>3. 再次执行如下命令，镜像源成功修改为淘宝镜像源：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config get registry<br></code></pre></td></tr></table></figure>
+<h1 id="二、安装-Docker"><a href="#二、安装-Docker" class="headerlink" title="二、安装 Docker"></a>二、安装 Docker</h1><p>接下来我们就可以安装 Docker 了，这里我使用的是 yum 的方式安装 Docker。</p>
+<p>1. 使用 yum 安装<code>yum-utils</code>包，这个包可以提供<code>yum-config-manager</code>工具，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum -y install yum-utils<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-20240426111933066.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、Node-js的卸载"><a href="#五、Node-js的卸载" class="headerlink" title="五、Node.js的卸载"></a>五、Node.js的卸载</h1><div class="note note-danger">
+<p>等待一段时间后，安装成功：</p>
+<p><img src="https://source.icode504.com/images/image-20240527105817903.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 接下来我们使用<code>yum-config-manager</code>命令设置后续 Docker 的下载源，这里我们使用国内的阿里云的下载源，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/image-20240527110224870.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装 Docker，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br></code></pre></td></tr></table></figure>
+
+<p>4. 等待一段时间后，下方如下提示信息就说明 Docker 安装成功！</p>
+<p><img src="https://source.icode504.com/images/image-20240527112307239.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置镜像源"><a href="#三、配置镜像源" class="headerlink" title="三、配置镜像源"></a>三、配置镜像源</h1><p>以下两种方式任选其一：</p>
+<h2 id="方式一：配置镜像源（可能拉取不了最新版本镜像）"><a href="#方式一：配置镜像源（可能拉取不了最新版本镜像）" class="headerlink" title="方式一：配置镜像源（可能拉取不了最新版本镜像）"></a>方式一：配置镜像源（可能拉取不了最新版本镜像）</h2><blockquote>
+<p>说明：镜像加速器面向个人开发者，仅适用于个人开发场景，<strong>请勿用于商业用途</strong>！</p>
+</blockquote>
+<p>我们使用 Docker 创建容器的时候，首先需要获取镜像，如果本地存在镜像就是用本地的镜像创建容器，如果本地不存在这个镜像，就需要到官方镜像仓库中下载镜像，但是官方镜像国内无法访问（除非你有特殊的方法）。为了解决上述问题，我们需要配置国内镜像加速器，这里我使用的阿里云的镜像加速器，确保后续能顺利拉取镜像。以下是配置叫长城</p>
+<p>1. 打开阿里云官网，注册一个阿里云账号（使用钉钉、支付宝、淘宝登录都 OK，毕竟它们都是一家的）：<a target="_blank" rel="noopener" href="https://account.aliyun.com/login/login.htm">点我登录&#x2F;注册</a></p>
+<p>2. 登陆后，在主页面搜索<strong>容器镜像服务</strong>，点击进入：</p>
+<p><img src="https://source.icode504.com/images/image-20240623100827340.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击<strong>管理控制台</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240623100914010.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 进入控制台，在左侧菜单栏单机镜像加速器，此时页面中有一给个人的加速器地址，点击<strong>复制</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240623101441310.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 回到命令行界面，我们使用 vim 命令，在<code>/etc/docker</code>目录下创建一个 daemon.json 文件，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/docker/daemon.json<br></code></pre></td></tr></table></figure>
+
+<p>6. 按<kbd>i</kbd>键进入编辑模式（此时命令行左下角会有一个 INSERT 的提示），编写如下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">&#123;<br>	<span class="hljs-string">&quot;registry-mirrors&quot;</span>: [“”]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>效果图如下：</p>
+<p><img src="https://source.icode504.com/images/image-20240623102231989.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 将光标移动到两个中括号内部的双引号中，按<kbd>Shift</kbd><kbd>Insert</kbd>键粘贴前面复制的镜像加速器地址，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/image-20240623102402464.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 检查无误后，按<kbd>Esc</kbd>键退出编辑模式，输入<kbd>:wq</kbd>（左下角有提示）并按一下回车保存并退出编辑。</p>
+<p>9. 依次执行如下命令重新加载 daemon 和 Docker：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure>
+
+<h2 id="方式二：通过Github拉取Dockerhub镜像并推送到阿里云"><a href="#方式二：通过Github拉取Dockerhub镜像并推送到阿里云" class="headerlink" title="方式二：通过Github拉取Dockerhub镜像并推送到阿里云"></a>方式二：通过Github拉取Dockerhub镜像并推送到阿里云</h2><p>该方案请点击右侧链接查看具体教程：<a href="./113.html">点我查看</a></p>
+<h1 id="四、Docker-的简单使用"><a href="#四、Docker-的简单使用" class="headerlink" title="四、Docker 的简单使用"></a>四、Docker 的简单使用</h1><p>1. 使用<code>systemctl</code>命令启动 Docker：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl start docker<br></code></pre></td></tr></table></figure>
+
+<p>2. 运行<code>hello-world</code>镜像，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo docker run hello-world<br></code></pre></td></tr></table></figure>
+
+<p>这个命令在执行时，会先拉取<code>hello-world</code>镜像，下载完成后会创建一个容器，此时 Docker 会运行这个容器并在控制台输出结果：</p>
+<p><img src="https://source.icode504.com/images/image-20240527113203614.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. （可选）如果想让 Docker 开机自启动，可以执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl <span class="hljs-built_in">enable</span> docker<br></code></pre></td></tr></table></figure>
+
+<p>4. （可选）如果禁用 Docker 开机自启动，可以执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl <span class="hljs-built_in">disable</span> docker<br></code></pre></td></tr></table></figure>
+
+<p>5. （可选）如果想停止 Docker，可以执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl stop docker<br></code></pre></td></tr></table></figure>
+
+<h1 id="五、卸载-Docker（可选）"><a href="#五、卸载-Docker（可选）" class="headerlink" title="五、卸载 Docker（可选）"></a>五、卸载 Docker（可选）</h1><div class="note note-danger">
             <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
           </div>
 
-<blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴请继续往下看！</p>
-</blockquote>
-<p>1. 打开Geek Uninstalller，找到Node.js，鼠标右键点击卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105703719.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择是，卸载Node.js：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105801702.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 卸载中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105842216.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 卸载完成，此时Geek Uninstaller并没有卸载残留，点击关闭，Geek Uninstaller卸载完毕：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105948110.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 执行如下命令即可卸载 Docker：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo yum remove docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras<br></code></pre></td></tr></table></figure>
+
+<p>2. Docker 镜像、容器等文件在卸载过程中不会删除，如果想清理这些文件，可以执行如下命令彻底删除：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">rm</span> -rf /var/lib/docker<br>sudo <span class="hljs-built_in">rm</span> -rf /var/lib/containerd<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -1412,13 +1419,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" class="category-chain-item">前端框架</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/" class="category-chain-item">容器化</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/Docker/" class="category-chain-item">Docker</a>
+  
+  
+
   
 
   
@@ -1436,11 +1450,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/CentOS/" class="print-no-link">#CentOS</a>
       
-        <a href="/tags/Node-js/" class="print-no-link">#Node.js</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
-        <a href="/tags/npm/" class="print-no-link">#npm</a>
+        <a href="/tags/Docker/" class="print-no-link">#Docker</a>
       
     </div>
   
@@ -1452,8 +1466,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Node.js安装、配置和卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/67.html</div>
+      <div>Docker安装和配置教程（Linux CentOS版）</div>
+      <div>https://www.icode504.com/posts/70.html</div>
     </div>
     <div class="license-meta">
       
@@ -1497,9 +1511,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/45.html" title="Intellij IDEA/DataGrip配置MySQL8.0教程">
+                      <a href="/posts/68.html" title="MySQL 8.0安装、配置与卸载教程（macOS版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA/DataGrip配置MySQL8.0教程</span>
+                        <span class="hidden-mobile">MySQL 8.0安装、配置与卸载教程（macOS版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1507,8 +1521,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/68.html" title="MySQL 8.0安装、配置与卸载教程（macOS版）">
-                        <span class="hidden-mobile">MySQL 8.0安装、配置与卸载教程（macOS版）</span>
+                      <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）">
+                        <span class="hidden-mobile">Eclipse安装配置、卸载教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
