@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
+    <meta name="description" content="本教程详细介绍了在macOS系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL 8.0安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/20.html">
+<meta property="og:title" content="Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）">
+<meta property="og:url" content="https://www.icode504.com/posts/108.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
+<meta property="og:description" content="本教程详细介绍了在macOS系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png">
-<meta property="article:published_time" content="2025-04-12T13:22:46.509Z">
-<meta property="article:modified_time" content="2025-04-12T13:22:46.509Z">
+<meta property="og:image" content="https://source.icode504.com/images/6116e3e9160cc1af72a779f9e7b62dba.png">
+<meta property="article:published_time" content="2025-04-13T11:58:23.534Z">
+<meta property="article:modified_time" content="2025-04-13T11:58:23.534Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Redis">
+<meta property="article:tag" content="TinyRDM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/6116e3e9160cc1af72a779f9e7b62dba.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>MySQL 8.0安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/53de4fe2dcfd7e7382c082cf3e93d8e0.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/6116e3e9160cc1af72a779f9e7b62dba.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</span>
           
         </div>
 
@@ -220,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 21:22" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-13 19:58" pubdate>
+          2025年4月13日
         </time>
       </span>
     
@@ -744,17 +745,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(31)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -872,17 +873,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         数据库工具
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -894,7 +895,7 @@
       
         <a href="/posts/20.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -1477,17 +1478,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
         id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         macOS
         <span class="list-group-count">(13)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+      <div class="category-collapse collapse show" id="collapse-8b06df0295926efcdcc1f9e13c49848e"
            role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
         
         
@@ -1587,17 +1588,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库工具
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -1627,7 +1628,7 @@
       
         <a href="/posts/108.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</span>
         </a>
       
@@ -1892,135 +1893,60 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MySQL 8.0安装、配置与卸载教程（Windows版）</h1>
+            <h1 id="seo-header">Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p>
-<p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p>
-<p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程：</p>
-<h1 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a>一、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/installer/">点我查看</a></p>
-<p>2. 按照下图所示操作选择相应的MySQL版本下载，这里我选择的Windows MySQL 8.0.30版本。</p>
-<p><img src="https://source.icode504.com/images/image-20240220110125037.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 下载中，请耐心等待。</p>
-<h1 id="二、安装并配置MySQL"><a href="#二、安装并配置MySQL" class="headerlink" title="二、安装并配置MySQL"></a>二、安装并配置MySQL</h1><p>安装MySQL过程中，<strong>请保持网络畅通</strong>！！！</p>
-<p>1. 双击打开安装包，安装器启动需要一些时间，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240220110324590.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 如果遇到这个窗口，点击<strong>Yes</strong>即可。如没遇到，请查看下一步。</p>
-<p><img src="https://source.icode504.com/images/image-20230512214714122.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装类型选择<strong>Custom</strong>，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111156356.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示操作，选择安装<code>MySQL Server 8.0.30 - X64</code>，完成后直接点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/00003.gif" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>（小白可以忽略下列内容，直接跳到第5步）</p>
-<ul>
-<li>如果你想修改MySQL的安装路径，如下图，可以点击下方<strong>Advanced Options</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20240220111320444.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>按照下图所示，选择安装路径，为避免后续过程中出现问题，<strong>安装路径建议只包含英文字符</strong>；下面的是MySQL数据存储路径，如果不懂这方面的内容，建议不要修改这个路径。配置完成后后点击<strong>OK</strong>：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20240220111711714.png" srcset="/img/loading.gif" lazyload></p>
-</blockquote>
-<p>5. 点击<strong>Execute</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220628921.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220740114.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 出现下图提示<strong>Complete</strong>以后，MySQL安装完成。直接点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220836314.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 接下来开始配置MySQL，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512220905466.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 初次安装MySQL的小白请注意，下图的<strong>Port请务必配置成3306</strong>，完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111939271.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>注意：如果你的电脑安装了多个MySQL，需要修改端口号，要和3306端口避开使用。只安装一个MySQL的小伙伴请忽略此条。</p>
-</blockquote>
-<p>10. 认证方式选择第一个即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512221223745.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 设置root账户密码，这里强烈建议<strong>将密码设置成你最熟悉的密码</strong>，否则后续恢复密码比较麻烦。这里我设置成了<code>123456</code>。设置完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220110609804.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 在Windows中开启服务，直接点击<strong>Next</strong>即可：</p>
-<p><img src="https://source.icode504.com/images/image-20230512221927024.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 服务器文件权限按照默认配置<strong>选择第一个</strong>即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222002468.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 点击<strong>Execute</strong>，MySQL安装器就会为我们配置上述内容。配置过程中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222105185.png" srcset="/img/loading.gif" lazyload></p>
-<p>15. 出现下图信息，说明MySQL配置成功，点击<strong>Finish</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222243451.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20230512222328898.png" srcset="/img/loading.gif" lazyload></p>
-<p>17. 点击<strong>Finish</strong>，MySQL配置完成。</p>
-<p><img src="https://source.icode504.com/images/image-20230512222401129.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、配置MySQL环境变量"><a href="#三、配置MySQL环境变量" class="headerlink" title="三、配置MySQL环境变量"></a>三、配置MySQL环境变量</h1><p>1. 初次安装MySQL的小白，按照下图操作复制路径：</p>
-<p><img src="https://source.icode504.com/images/00005.gif" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>（此条内容小白请忽略）安装在其他位置的小伙伴找到MySQL的安装路径，进入bin文件夹后复制文件路径。</p>
-</blockquote>
-<p>2. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
-</tr>
-</tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/9b32c83db0d6df2c2f698e9d67d0edfd.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量找到Path，双击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230512223639743.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按照下图所示操作，粘贴前面复制的MySQL安装路径，然后一路点击确定即可。</p>
-<p><img src="https://source.icode504.com/images/image-20240220112157561.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击进入，在命令提示行中输入<code>mysql -u root -p</code>，按回车后会提示让你输入密码。这个密码是前面我们安装MySQL的时候设置的密码，输入完成后按回车即可。完成后出现下图界面表示MySQL安装成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240220105038897.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、卸载MySQL（可选）"><a href="#四、卸载MySQL（可选）" class="headerlink" title="四、卸载MySQL（可选）"></a>四、卸载MySQL（可选）</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p><p>以下两种卸载方式任选其一即可。</p>
+                <p>TinyRDM是一款轻量级的Redis数据库管理工具，提供了用户友好的图形界面，便于开发者和数据库管理员进行Redis数据库的连接、管理和监控。它支持多种Redis命令操作，提供丰富的可视化功能，直观地展示数据结构和存储信息。TinyRDM简洁高效，适合日常的Redis管理工作。</p>
+<p>以下是macOS环境下安装Tiny RDM教程：</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请确保Linux操作系统上安装了Redis，需要安装的小伙伴点击右侧链接查看安装教程：<a href="./83.html">点我查看</a></p>
+<p>2. 检查本机信息：点击左上角苹果logo，点击第一个<strong>关于本机</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240224151904945.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里需要留意一下处理器信息，这里我的电脑使用的是Intel芯片：</p>
+<p><img src="https://source.icode504.com/images/image-20240224152112087.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、下载RDM"><a href="#二、下载RDM" class="headerlink" title="二、下载RDM"></a>二、下载RDM</h1><p>1. 打开Tiny RDM官网：<a target="_blank" rel="noopener" href="https://redis.tinycraft.cc/zh/">点我查看</a></p>
+<p>2. 鼠标移到<strong>下载安装</strong>按钮，使用Intel芯片的小伙伴点击蓝色框链接下载，使用M1及之后的芯片的小伙伴点击绿色框链接下载：</p>
+<p><img src="https://source.icode504.com/images/image-912eed7de70f93a1c913f9f9aad2e120.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装Tiny-RDM"><a href="#三、安装Tiny-RDM" class="headerlink" title="三、安装Tiny RDM"></a>三、安装Tiny RDM</h1><p>1. 打开dmg文件后，将Tiny RDM拖入到Applications中即可完成安装：</p>
+<p><img src="https://source.icode504.com/images/image-1250bf5e08e01647c68f560a1be3f8a8.gif" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在程序坞中找到Tiny RDM并打开：</p>
+<p><img src="https://source.icode504.com/images/image-83cdfa7a1d06315fe99cdf484ad555de.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 此时会弹出一个错误信息：<strong>无法打开“Tiny RDM”，因为它来自身份不明的开发者。</strong>（没有这个错误信息并且能正常打开上述软件包的小伙伴请此链接查看后续步骤：<a href="./110.html#%E5%9B%9B%E3%80%81%E4%BD%BF%E7%94%A8Tiny-RDM%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5Redis">点我查看</a>）我们需要解决这个问题：</p>
+<p><img src="https://source.icode504.com/images/image-a1ee1e6ad1c45188fda07bed08c013e3.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击左上角苹果logo，然后点击<strong>系统设置</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240224155139125.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击<strong>左侧隐私与安全性</strong>，向下找安全性中有一个提示信息：已阻止使用“Tiny RDM”，因为它来自身份不明的开发者。点击提示信息下方的<strong>仍要打开</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-f8f9f6de304816c7f2ef712073070e48.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 输入本机的用户名和密码，完成后点击<strong>修改设置</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240224155514630.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 此时会弹出一个提示，直接点击<strong>打开</strong>即可，此时就可以正常启动Tiny RDM了：</p>
+<p><img src="https://source.icode504.com/images/image-486edc8b66dd637581a97279babfd92c.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、使用Tiny-RDM远程连接Redis"><a href="#四、使用Tiny-RDM远程连接Redis" class="headerlink" title="四、使用Tiny RDM远程连接Redis"></a>四、使用Tiny RDM远程连接Redis</h1><p>1. 在桌面上打开Tiny RDM，点击左下角的加号，新建一个Redis连接：</p>
+<p><img src="https://source.icode504.com/images/image-8eb086d385bd77677e61b291464260bf.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示操作，配置Redis的连接配置，完成后点击左下角的<strong>测试连接</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-5f52a47a8b58ea3606d615f8dbd4737c.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 如果下方弹出提示“成功连接到Redis服务器”就说明前面的Redis配置没有问题，此时我们点击右下角的确认就可以使用Redis了：</p>
+<p><img src="https://source.icode504.com/images/image-2e1872a9dac580830efd657e8e03d8cb.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 双击左侧的Redis连接，再点击控制台，我们就可以正常使用Redis命令了：</p>
+<p><img src="https://source.icode504.com/images/image-e69cbbaec6fcf640e0fca44ae8e6d89b.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-ce17051a4ad9fa5e8e7760faea13b289.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、卸载Tiny-RDM"><a href="#五、卸载Tiny-RDM" class="headerlink" title="五、卸载Tiny RDM"></a>五、卸载Tiny RDM</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
           </div>
 
-<h2 id="方式一：使用Geek-Uninstaller卸载（推荐）"><a href="#方式一：使用Geek-Uninstaller卸载（推荐）" class="headerlink" title="方式一：使用Geek Uninstaller卸载（推荐）"></a>方式一：使用Geek Uninstaller卸载（推荐）</h2><blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
+<blockquote>
+<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="./31.html">点我查看</a></p>
 <p>已经安装的小伙伴可以接着往下看！</p>
 </blockquote>
-<p>1. 打开Geek Installer，在程序列表中找到MySQL相关的内容，鼠标右键，依次点击卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20240220113015742.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 卸载时如果存在残留，直接清理即可。</p>
-<h2 id="方式二：手动卸载（较麻烦，不推荐）"><a href="#方式二：手动卸载（较麻烦，不推荐）" class="headerlink" title="方式二：手动卸载（较麻烦，不推荐）"></a>方式二：手动卸载（较麻烦，不推荐）</h2><blockquote>
-<p>MySQL卸载过程会有一些繁琐，卸载过程请一定耐心！如果你按照前面的步骤成功安装MySQL并可以正常使用了，就直接忽略下面的内容。</p>
-</blockquote>
-<p>1. 停止MySQL的服务：按下图所示操作，进入服务页面。找到MySQL80服务。</p>
-<p><img src="https://source.icode504.com/images/00006.gif" srcset="/img/loading.gif" lazyload></p>
-<p>2. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>control</code>，点击进入控制面板，在下方找到卸载程序。</p>
-<p><img src="https://source.icode504.com/images/image-20240220105209312.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 将带有MySQL的程序依次使用鼠标右键卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20230512231355775.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 卸载中，请耐心等待。</p>
-<p>5. 卸载界面不存在MySQL相关程序，说明MySQL卸载成功。</p>
-<p><img src="https://source.icode504.com/images/image-20230512231640785.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 清理残余文件：如果你是小白并且没有修改过MySQL路径，那么你可以去<code>C盘</code>的<code>Program Files</code>文件夹内看看是否存在MySQL的文件夹。如果存在，直接删除文件夹即可。</p>
-<p>7. 清理注册表</p>
-<ul>
-<li>按<kbd>Win</kbd>和<kbd>S</kbd>键，输入<code>regedit</code>，打开注册表编辑器：</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20240220105352865.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>依次删除下面和MySQL有关的目录。</li>
-</ul>
-<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\ApplicationMySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL服务目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL服务 目录删除<br></code></pre></td></tr></table></figure>
-
-<p>8. 删除环境变量</p>
-<ul>
-<li>如何进入环境变量，请参考第三部分配置MySQL环境变量的前5步。</li>
-<li>选中MySQL环境变量，点击删除，然后一路点击确定即可。</li>
-</ul>
-<p><img src="https://source.icode504.com/images/image-20230512233341214.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 打开程序最左边的访达，在最左侧点击应用程序：</p>
+<p><img src="https://source.icode504.com/images/image-20240714213011161.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 找到Tiny RDM，按照下图所示操作将 IDEA 拖入到废纸篓中：</p>
+<p><img src="https://source.icode504.com/images/image-9fcda45ef1d40d96d581bfeee4820a29.gif" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开废纸篓，鼠标右键点击Tiny RDM图标，选择<strong>立即删除</strong>，Tiny RDM就成功卸载了：</p>
+<p><img src="https://source.icode504.com/images/image-5426bfded19e272978d8b688647d592b.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时会弹出一个弹窗提示，点击<strong>删除</strong>即可彻底卸载：</p>
+<p><img src="https://source.icode504.com/images/image-1321d3a887520019dfeb6f8fb9d10a71.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2044,12 +1970,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/" class="category-chain-item">macOS</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
   
   
 
@@ -2068,9 +1994,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
       
-        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+        <a href="/tags/Redis/" class="print-no-link">#Redis</a>
+      
+        <a href="/tags/TinyRDM/" class="print-no-link">#TinyRDM</a>
       
     </div>
   
@@ -2082,8 +2010,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MySQL 8.0安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/20.html</div>
+      <div>Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</div>
+      <div>https://www.icode504.com/posts/108.html</div>
     </div>
     <div class="license-meta">
       
@@ -2095,7 +2023,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月13日</div>
         </div>
       
       
@@ -2127,18 +2055,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/21.html" title="Intellij IDEA安装Scala插件并运行Scala程序">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Intellij IDEA安装Scala插件并运行Scala程序</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/19.html" title="第四章 若依-JFlow设置用户并测试流程">
-                        <span class="hidden-mobile">第四章 若依-JFlow设置用户并测试流程</span>
+                      <a href="/posts/107.html" title="SDKMAN!安装教程">
+                        <span class="hidden-mobile">SDKMAN!安装教程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

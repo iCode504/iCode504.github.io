@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T11:55:26.603Z</updated>
+  <updated>2025-04-13T11:58:23.534Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/108.html"/>
+    <id>https://www.icode504.com/posts/108.html</id>
+    <published>2025-04-13T11:58:23.534Z</published>
+    <updated>2025-04-13T11:58:23.534Z</updated>
+    
+    
+    <summary type="html">本教程详细介绍了在macOS系统上安装、配置和卸载Redis远程连接工具TinyRDM的步骤，包括下载安装包、配置连接Redis实例以及卸载程序的操作指南，帮助用户轻松管理Redis数据库。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="数据库工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
+    
+    <category term="TinyRDM" scheme="https://www.icode504.com/tags/TinyRDM/"/>
+    
+  </entry>
   
   <entry>
     <title>SDKMAN!安装教程</title>
@@ -523,35 +550,6 @@
     
     
     <summary type="html">Redis字符串类型介绍及其常用的命令</summary>
-    
-    
-    
-    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库（NoSQL）" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/"/>
-    
-    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/"/>
-    
-    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
-    
-    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis的key（键）相关操作</title>
-    <link href="https://www.icode504.com/posts/86.html"/>
-    <id>https://www.icode504.com/posts/86.html</id>
-    <published>2025-04-13T07:56:40.294Z</published>
-    <updated>2025-04-13T07:56:40.294Z</updated>
-    
-    
-    <summary type="html">Redis的key的相关操作</summary>
     
     
     
