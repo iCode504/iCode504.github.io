@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-13T05:43:12.682Z</updated>
+  <updated>2025-04-13T05:46:07.421Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code开启多个标签页</title>
+    <link href="https://www.icode504.com/posts/54.html"/>
+    <id>https://www.icode504.com/posts/54.html</id>
+    <published>2025-04-13T05:46:07.421Z</published>
+    <updated>2025-04-13T05:46:07.421Z</updated>
+    
+    
+    <summary type="html">VS Code在设置中开启多个标签页和多个标签页换行显示</summary>
+    
+    
+    
+    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="Visual Studio Code（VS Code）" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/"/>
+    
+    <category term="使用技巧" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</title>
@@ -496,31 +519,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Groovy" scheme="https://www.icode504.com/tags/Groovy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Live Server插件打开浏览器时：该网页无法正常运作，127.0.0.1未发送任何数据的问题解决</title>
-    <link href="https://www.icode504.com/posts/33.html"/>
-    <id>https://www.icode504.com/posts/33.html</id>
-    <published>2025-04-13T00:49:38.867Z</published>
-    <updated>2025-04-13T00:49:38.867Z</updated>
-    
-    
-    <summary type="html">Live Server插件打开浏览器时：该网页无法正常运作，127.0.0.1未发送任何数据的问题解决</summary>
-    
-    
-    
-    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    <category term="Visual Studio Code（VS Code）" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/"/>
-    
-    <category term="Live Server" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Visual-Studio-Code%EF%BC%88VS-Code%EF%BC%89/Live-Server/"/>
-    
-    
-    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
-    
-    <category term="Live Server" scheme="https://www.icode504.com/tags/Live-Server/"/>
     
   </entry>
   

@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>VS Code开启多个标签页</title>
+    <link href="/posts/54.html"/>
+    <url>/posts/54.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、VS-Code开启多个标签页"><a href="#一、VS-Code开启多个标签页" class="headerlink" title="一、VS Code开启多个标签页"></a>一、VS Code开启多个标签页</h1><p>VS Code在打开多个文件时，总是使用一个页签显示，这对于切换多个标签页的小伙伴很不友好</p><p><img src="https://source.icode504.com/images/240301006.gif"></p><p>打开左下角小齿轮，点击设置：</p><p><img src="https://source.icode504.com/images/image-20240301115459948.png"></p><p>在左侧找到工具台–&gt;编辑管理，将<strong>Enable Preview From Quick Open</strong>取消勾选：</p><p><img src="https://source.icode504.com/images/image-20240301115739501.png"></p><h1 id="二、VS-Code开启多个标签页换行显示"><a href="#二、VS-Code开启多个标签页换行显示" class="headerlink" title="二、VS Code开启多个标签页换行显示"></a>二、VS Code开启多个标签页换行显示</h1><p>在设置上方搜索框中搜索wrapTabs，将第一个搜索结果<strong>Workbench &gt; Editor: Wrap Tabs</strong>勾选：</p><p><img src="https://source.icode504.com/images/image-20240301133726842.png"></p><p>此时打开多个标签页时就会换行显示了：</p><p><img src="https://source.icode504.com/images/240301007.gif"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Visual Studio Code（VS Code）</category>
+      
+      <category>使用技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Visual Studio Code</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vue项目启动报错 Component name xxx should always be multi-word vue/multi-word-component-names</title>
     <link href="/posts/53.html"/>
     <url>/posts/53.html</url>
