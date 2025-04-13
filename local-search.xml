@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Live Server插件打开浏览器时：该网页无法正常运作，127.0.0.1未发送任何数据的问题解决</title>
+    <link href="/posts/33.html"/>
+    <url>/posts/33.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>今天使用Vs Code写HTML代码时，使用Live Server打开预览时，发现浏览器显示“该网页无法正常运作，127.0.0.1未发送任何数据”的问题。</p><p><img src="https://source.icode504.com/images/image-20231127110434914.png"></p><h1 id="二、解决办法"><a href="#二、解决办法" class="headerlink" title="二、解决办法"></a>二、解决办法</h1><p>1. 在左侧工具栏找到扩展商店，找到Live Server，然后点击对应的小齿轮，进入插件设置。</p><p><img src="https://source.icode504.com/images/image-20231127111656933.png"></p><p>2. 选择<code>Extension Settings</code></p><p><img src="https://source.icode504.com/images/image-20231127111808544.png"></p><p>3. 进入设置以后，在最下方有一个<code>Use Local Ip</code>的一个设置，将<code>Use local IP as host</code>勾选即可。</p><p><img src="https://source.icode504.com/images/image-20231127112103103.png"></p><p>4. 此时在HTML文件中鼠标右键点击<code>Open with Live Server</code>，再次弹出浏览器，此时Live Server就正常工作了。</p><p><img src="https://source.icode504.com/images/231127001.gif"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+      <category>Visual Studio Code（VS Code）</category>
+      
+      <category>Live Server</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Visual Studio Code</tag>
+      
+      <tag>Live Server</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>卸载神器：Geek Uninstaller安装使用教程（Windows版）</title>
     <link href="/posts/31.html"/>
     <url>/posts/31.html</url>
