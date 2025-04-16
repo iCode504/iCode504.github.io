@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>CentOS Stream 9修改静态IP</title>
+    <link href="/posts/113.html"/>
+    <url>/posts/113.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>需要在VMware安装CentOS Stream 9虚拟机的小伙伴，点击右侧链接查看安装教程：<a href="./94.html">点我查看</a></p><p>使用云服务器的小伙伴不需要看下面的配置哦(ᕑᗢᓫ∗)˒</p><h1 id="二、VMware相关操作"><a href="#二、VMware相关操作" class="headerlink" title="二、VMware相关操作"></a>二、VMware相关操作</h1><p>1. （虚拟机处于关机状态）在未开启CentOS虚拟机之前，按照下图所示打开虚拟机的网络设置：</p><p><img src="https://source.icode504.com/images/30f37dbd371b7ac93ce756d1b7424f60.png"></p><p>2. 点击右下角的<strong>更改设置</strong>：</p><p><img src="https://source.icode504.com/images/a7cb64c3b9c6396a8370e31f03a45e51.png"></p><p>3. 进入编辑模式后，上方的虚拟网络选中<strong>VMnet8（NAT模式）</strong>：</p><p><img src="https://source.icode504.com/images/020ceab236d61c0341c80ade96ebdf49.png"></p><p>4. 按照下图所示修改子网IP，修改的数值范围在<strong>0~255</strong>之间，我修改后的子网IP为192.168.40.0：</p><p><img src="https://source.icode504.com/images/5fe139fec7dde3d798a240acbb2ff10a.png"></p><p>5. 点击右下角的<strong>DHCP设置</strong>：</p><p><img src="https://source.icode504.com/images/b28c1b878fca3e76e9038f66cc3d28be.png"></p><p>6. 按照下图操作修改网段，完成后一路点击确定，虚拟网络配置完成。</p><p><img src="https://source.icode504.com/images/b9764bdede8b3b2b0853b705df411900.png"></p><h1 id="三、CentOS修改静态IP"><a href="#三、CentOS修改静态IP" class="headerlink" title="三、CentOS修改静态IP"></a>三、CentOS修改静态IP</h1><p>1. 开启CentOS虚拟机，执行如下命令查看当前虚拟机的IP地址：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip addr<br></code></pre></td></tr></table></figure><p>这里我的虚拟机IP地址是<code>192.168.40.131</code>，接下来我将这个IP修改为静态IP为<code>192.168.40.100</code>：</p><p><img src="https://source.icode504.com/images/3a1b93a0386c7c1d239d5e66ab9e7e69.png"></p><p>2. 列出所有的链接，这里我们要修改的是ens160：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmcli connection show<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/dd46ca06ffbcbad8abd8e2714b409bc7.png"></p><p>3. 在CentOS Stream 9中，关于网络的配置在<code>/etc/NetworkManager/system-connections</code>目录下。切换到该目录，执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/NetworkManager/system-connections<br></code></pre></td></tr></table></figure><p>4. 网络的配置在<code>ens160.nmconnection</code>文件中，在修改之前，我们复制一份文件留作备份：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> ens160.nmconnection ens160.nmconnection.default<br></code></pre></td></tr></table></figure><p>5. 试用vim命令编辑上述文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim ens160.nmconnection<br></code></pre></td></tr></table></figure><p>6. 输入<code>:set nu</code>可以查看行号，下图就是未修改前的网络配置</p><p><img src="https://source.icode504.com/images/70fbd77385efea4a189c7df66f7c275f.png"></p><p>7. 复制如下配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ipv4 网络配置</span><br>[ipv4]<br><span class="hljs-comment"># 手动进行 IP 的分配</span><br>method=manual<br><span class="hljs-comment"># 第一个IP是自定义的静态IP，第二个是网关</span><br>address1=192.168.40.100/24,192.168.40.1<br><span class="hljs-comment"># 指定 DNS 域名解析服务器，多个 dns 之间使用 , 分隔</span><br><span class="hljs-comment"># 这里试用的国内DNS和谷歌的DNS</span><br>dns=114.114.114.114,8.8.8.8<br></code></pre></td></tr></table></figure><p>8. 按<kbd>I</kbd>键进入编辑模式，将ipv4相关代码注掉，将上一步复制的代码粘贴到其后面，效果图如下：</p><p><img src="https://source.icode504.com/images/e91560819351216ee9cea2fce620827c.png"></p><p>9. 按<kbd>Esc</kbd>键退出编辑模式，输入<code>:wq</code>保存并退出。</p><p>10. 重启网络服务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl restart NetworkManager<br></code></pre></td></tr></table></figure><p>11. 再次执行<code>ip addr</code>命令，发现IP已经变为192.168.40.100：</p><p><img src="https://source.icode504.com/images/0e1f4c2e2b46f3741147273a970ea6c0.png"></p><p>12. 此时我们ping一下百度也有响应，至此，Debian成功修改为静态IP并且可以访问外网：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping www.baidu.com<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/dc1fead36b500490bd96dd65104a6b65.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>常用操作</category>
+      
+      <category>CentOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CentOS Stream</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MySQL 5.7安装、配置与卸载教程（Windows版）</title>
     <link href="/posts/112.html"/>
     <url>/posts/112.html</url>
