@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-15T16:00:00.000Z</updated>
+  <updated>2025-04-17T16:00:00.000Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx 安装配置教程（Linux通用版）</title>
+    <link href="https://www.icode504.com/posts/2023667288.html"/>
+    <id>https://www.icode504.com/posts/2023667288.html</id>
+    <published>2025-04-15T16:00:00.000Z</published>
+    <updated>2025-04-17T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">本教程介绍了Linux环境下Nginx的安装与配置指南，涵盖Nginx编译安装、常用的Nginx命令以及Nginx配置为系统服务。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
+    
+    <category term="服务器软件" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
+    
+    <category term="Nginx" scheme="https://www.icode504.com/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS Stream 9修改静态IP</title>
@@ -507,35 +532,6 @@
     
     
     <summary type="html">Redis有序集合类型介绍和常用的命令。</summary>
-    
-    
-    
-    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库（NoSQL）" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/"/>
-    
-    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/"/>
-    
-    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
-    
-    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis数据类型之无序集合类型Set</title>
-    <link href="https://www.icode504.com/posts/92.html"/>
-    <id>https://www.icode504.com/posts/92.html</id>
-    <published>2025-04-13T10:40:02.321Z</published>
-    <updated>2025-04-13T10:40:02.321Z</updated>
-    
-    
-    <summary type="html">Redis集合类型介绍及其常用的命令</summary>
     
     
     
