@@ -18,19 +18,13 @@
   
   <entry>
     <title>MySQL 5.7安装教程（Linux通用版）</title>
-    <link href="https://www.icode504.com/posts/1882820874.html"/>
-    <id>https://www.icode504.com/posts/1882820874.html</id>
+    <link href="https://www.icode504.com/posts/115.html"/>
+    <id>https://www.icode504.com/posts/115.html</id>
     <published>2025-04-22T16:00:00.000Z</published>
     <updated>2025-04-27T16:00:00.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;MySQL 是一个广泛使用的开源关系型数据库管理系统，它使用结构化查询语言（SQL）进行数据管理，支持事务处理、多用户访问和外键约束等功能，适用于各种规模的应用程序。以其可靠性、性能和易用性著称，MySQL</summary>
-        
-      
+    <summary type="html">本教程提供MySQL在Linux上的安装和配置指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤。</summary>
     
     
     
