@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-04-17T16:00:00.000Z</updated>
+  <updated>2025-04-27T16:00:00.000Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL 5.7安装教程（Linux通用版）</title>
+    <link href="https://www.icode504.com/posts/1882820874.html"/>
+    <id>https://www.icode504.com/posts/1882820874.html</id>
+    <published>2025-04-22T16:00:00.000Z</published>
+    <updated>2025-04-27T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;MySQL 是一个广泛使用的开源关系型数据库管理系统，它使用结构化查询语言（SQL）进行数据管理，支持事务处理、多用户访问和外键约束等功能，适用于各种规模的应用程序。以其可靠性、性能和易用性著称，MySQL</summary>
+        
+      
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
+    
+    <category term="数据库" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="关系型数据库" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="MySQL" scheme="https://www.icode504.com/tags/MySQL/"/>
+    
+    <category term="Linux" scheme="https://www.icode504.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx 安装配置教程（Linux通用版）</title>
@@ -520,35 +553,6 @@
     <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
     
     <category term="CentOS Stream" scheme="https://www.icode504.com/tags/CentOS-Stream/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis数据类型之有序集合类型Sorted Set（Zset）</title>
-    <link href="https://www.icode504.com/posts/93.html"/>
-    <id>https://www.icode504.com/posts/93.html</id>
-    <published>2025-04-13T10:42:06.086Z</published>
-    <updated>2025-04-13T10:42:06.086Z</updated>
-    
-    
-    <summary type="html">Redis有序集合类型介绍和常用的命令。</summary>
-    
-    
-    
-    <category term="数据库" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库（NoSQL）" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/"/>
-    
-    <category term="Redis" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/"/>
-    
-    <category term="Redis数据类型" scheme="https://www.icode504.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88NoSQL%EF%BC%89/Redis/Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-    <category term="Redis" scheme="https://www.icode504.com/tags/Redis/"/>
-    
-    <category term="数据库" scheme="https://www.icode504.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="非关系型数据库" scheme="https://www.icode504.com/tags/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
