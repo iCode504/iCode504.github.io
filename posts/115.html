@@ -2047,7 +2047,22 @@
 <td align="center"><a href="./52.html">点我查看</a></td>
 </tr>
 </tbody></table>
-<p>2. 根据自己的操作系统，安装如下依赖：</p>
+<p>2. 本文使用 Electerm 远程连接 Linux，需要安装的小伙伴，根据自己所在的操作系统查看安装配置教程：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Electerm 安装教程</td>
+<td align="center"><a href="./47.html">点我查看</a></td>
+<td align="center"><a href="./99.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>3. 根据自己的操作系统，安装如下依赖：</p>
 <ul>
 <li>CentOS：</li>
 </ul>
@@ -2059,13 +2074,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y install vim cmake gcc g++ bison perl openssl libssl-dev libncurses5-dev pkg-config ufw<br></code></pre></td></tr></table></figure>
 
 
-<p>3. 创建一个名为<code>mysql</code>用户组：</p>
+<p>4. 创建一个名为<code>mysql</code>用户组：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">groupadd mysql<br></code></pre></td></tr></table></figure>
 
-<p>4. 创建一个名为<code>mysql</code>的用户，所属用户组也是<code>mysql</code>：</p>
+<p>5. 创建一个名为<code>mysql</code>的用户，所属用户组也是<code>mysql</code>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">useradd -r -g mysql mysql<br></code></pre></td></tr></table></figure>
 
-<p>5. 创建 <code>/usr/local/mysql</code> 和 <code>/usr/local/mysql/data</code> 两个目录：</p>
+<p>6. 创建 <code>/usr/local/mysql</code> 和 <code>/usr/local/mysql/data</code> 两个目录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> /usr/local/mysql<br><span class="hljs-built_in">mkdir</span> /usr/local/mysql/data<br></code></pre></td></tr></table></figure>
 
 
@@ -2214,6 +2229,10 @@
 <p><img src="https://source.icode504.com/images/e55875f2d3812437baad33beea3230d5.png" srcset="/img/loading.gif" lazyload></p>
 <p>10. 接下来就可以在 DBeaver 中操作数据库了：</p>
 <p><img src="https://source.icode504.com/images/0b25e1e572449cce02ccb0e0ad743e94.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="八、参考"><a href="#八、参考" class="headerlink" title="八、参考"></a>八、参考</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/5.7/en/source-installation.html">MySQL 官网说明</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/louis-liu-oneself/p/13504270.html">CentOS7（Linux）源码安装MySQL5.7.30</a></li>
+</ol>
 
                 
               </div>
