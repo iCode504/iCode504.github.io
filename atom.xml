@@ -46,6 +46,27 @@
   </entry>
   
   <entry>
+    <title>Ubuntu 虚拟机修改静态IP</title>
+    <link href="https://www.icode504.com/posts/117.html"/>
+    <id>https://www.icode504.com/posts/117.html</id>
+    <published>2025-05-04T16:00:00.000Z</published>
+    <updated>2025-05-04T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">Ubuntu 虚拟机修改静态IP</summary>
+    
+    
+    
+    <category term="常用操作" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="Ubuntu" scheme="https://www.icode504.com/categories/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Ubuntu/"/>
+    
+    
+    <category term="Ubuntu" scheme="https://www.icode504.com/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL 5.7安装教程（Linux通用版）</title>
     <link href="https://www.icode504.com/posts/115.html"/>
     <id>https://www.icode504.com/posts/115.html</id>
@@ -532,29 +553,6 @@
     <category term="Windows" scheme="https://www.icode504.com/tags/Windows/"/>
     
     <category term="Lua" scheme="https://www.icode504.com/tags/Lua/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux CentOS Stream 9安装教程</title>
-    <link href="https://www.icode504.com/posts/94.html"/>
-    <id>https://www.icode504.com/posts/94.html</id>
-    <published>2025-04-13T10:49:26.776Z</published>
-    <updated>2025-04-13T10:49:26.780Z</updated>
-    
-    
-    <summary type="html">本文提供了在VMware Workstation上安装和配置CentOS虚拟机的详细步骤，指导用户完成从下载镜像到系统初始化等各个环节，帮助用户快速搭建CentOS环境。</summary>
-    
-    
-    
-    <category term="系统安装" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="CentOS" scheme="https://www.icode504.com/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/CentOS/"/>
-    
-    
-    <category term="CentOS" scheme="https://www.icode504.com/tags/CentOS/"/>
-    
-    <category term="CentOS Stream" scheme="https://www.icode504.com/tags/CentOS-Stream/"/>
     
   </entry>
   

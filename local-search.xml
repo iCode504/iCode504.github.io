@@ -39,6 +39,33 @@
   
   
   <entry>
+    <title>Ubuntu 虚拟机修改静态IP</title>
+    <link href="/posts/117.html"/>
+    <url>/posts/117.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>需要在 VMware 安装 Ubuntu 虚拟机的小伙伴，点击右侧链接查看安装教程：<a href="./51.html">点我查看</a></p><p>执行如下命令，安装 vim 编辑器：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt -y install vim<br></code></pre></td></tr></table></figure><h1 id="二、Ubuntu-修改静态IP"><a href="#二、Ubuntu-修改静态IP" class="headerlink" title="二、Ubuntu 修改静态IP"></a>二、Ubuntu 修改静态IP</h1><p>1. 启动 Ubuntu 虚拟机后，当前虚拟机的IP地址：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip addr<br></code></pre></td></tr></table></figure><p>这里我的虚拟机IP地址是 <code>192.168.40.3</code> ，接下来我将这个 IP 修改为静态IP为 <code>192.168.40.100</code>：</p><p><img src="https://source.icode504.com/images/834b3300f16103b783430359051981d6.png"></p><p>2. 查看当前虚拟机的网关地址，这里建议记录一下，后续会用到：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip route<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/f8faffc4a4959f346a7666fbc01ba467.png"></p><p>3. 在 Ubuntu 中，网络的配置在 <code>/etc/netplan</code> 目录下。切换到该目录，执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/netplan<br></code></pre></td></tr></table></figure><p>4. 执行如下命令，可以看到网络配置文件。网络的配置在 <code>00-installer-config.yaml</code> 文件中（具体文件名以你们的为准）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/06cf293175f0c89469eb422e46e96a71.png"></p><p>5. 在修改之前，我们复制一份文件留作备份：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> 00-installer-config.yaml 00-installer-config.yaml.default<br></code></pre></td></tr></table></figure><p>6. 使用 vim 命令编辑上述文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim 00-installer-config.yaml<br></code></pre></td></tr></table></figure><p>7. 在左下角输入 <code>:set nu</code> 查看行号，下图就是未修改前的网络配置：</p><p><img src="https://source.icode504.com/images/2a0bc7fc2d783909958f9dd57b202502.png"></p><p>8. 复制如下配置并进行修改。根据实际情况，只需要修改 IP 地址和网关地址，这里我要修改的静态 IP 为 <code>192.168.40.100</code>，网关 <code>192.168.40.2</code>（前面我们已经通过 <code>ip route</code> 命令查看过了）：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">network:</span><br>  <span class="hljs-attr">ethernets:</span><br>    <span class="hljs-attr">ens33:</span><br>      <span class="hljs-attr">dhcp4:</span> <span class="hljs-literal">false</span><br>      <span class="hljs-attr">addresses:</span> <br>        <span class="hljs-bullet">-</span> <span class="hljs-number">192.168</span><span class="hljs-number">.40</span><span class="hljs-number">.100</span><span class="hljs-string">/24</span>   <span class="hljs-comment"># 此处设置静态 IP 地址</span><br>      <span class="hljs-attr">routes:</span><br>        <span class="hljs-bullet">-</span> <span class="hljs-attr">to:</span> <span class="hljs-string">default</span><br>          <span class="hljs-attr">via:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.40</span><span class="hljs-number">.2</span>   <span class="hljs-comment"># 设置网关地址，使用 ip route 命令查看网关地址</span><br>      <span class="hljs-attr">nameservers:</span><br>        <span class="hljs-attr">addresses:</span> [<span class="hljs-number">114.114</span><span class="hljs-number">.114</span><span class="hljs-number">.114</span>,<span class="hljs-number">8.8</span><span class="hljs-number">.8</span><span class="hljs-number">.8</span>] <span class="hljs-comment"># 设置 DNS 地址</span><br>  <span class="hljs-attr">version:</span> <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure><p>9. 按<kbd>I</kbd>键进入编辑模式，将原有的代码删掉，将上一步复制的代码粘贴到其后面，效果图如下：</p><p><img src="https://source.icode504.com/images/760eff15c03896e285dd2d4df4020ff7.png"></p><p>10. 按<kbd>Esc</kbd>键退出编辑模式，输入<code>:wq</code>保存并退出。</p><p>11. 重启网络服务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">netplan apply<br></code></pre></td></tr></table></figure><p>出现警告信息属于正常现象：</p><p><img src="https://source.icode504.com/images/e35db276a96fbaa33aa9028e1be8f668.png"></p><p>12. 重新启动虚拟机：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">reboot<br></code></pre></td></tr></table></figure><p>13. 再次执行 <code>ip addr</code> 命令，发现IP已经变为 <code>192.168.40.100</code>：</p><p><img src="https://source.icode504.com/images/ebfe4847ce77a35da98b818870c2dbf2.png"></p><p>14. 此时我们 ping 一下百度也有响应，至此，CentOS 成功修改为静态IP并且可以访问外网：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping www.baidu.com -c 3<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/2e02e043f9b3a73c909341c7be99c286.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>常用操作</category>
+      
+      <category>Ubuntu</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MySQL 5.7安装教程（Linux通用版）</title>
     <link href="/posts/115.html"/>
     <url>/posts/115.html</url>
@@ -1152,13 +1179,13 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
-      <tag>Debian</tag>
-      
       <tag>Linux</tag>
       
       <tag>Docker</tag>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Debian</tag>
       
     </tags>
     
@@ -1228,11 +1255,11 @@
       
       <tag>CentOS</tag>
       
+      <tag>Linux</tag>
+      
       <tag>Ubuntu</tag>
       
       <tag>Debian</tag>
-      
-      <tag>Linux</tag>
       
     </tags>
     
