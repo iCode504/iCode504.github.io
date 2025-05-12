@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程介绍Windows下安装配置Gradle的方法，包括下载、安装、配置环境变量等步骤。">
+    <meta name="description" content="本文详细介绍在Linux系统上配置Zookeeper集群的完整步骤，包括环境准备、配置文件修改、集群节点设置以及启动验证方法，适用于主流Linux发行版。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle安装与配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/23.html">
+<meta property="og:title" content="Zookeeper 集群配置教程（Linux通用版）">
+<meta property="og:url" content="https://www.icode504.com/posts/119.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程介绍Windows下安装配置Gradle的方法，包括下载、安装、配置环境变量等步骤。">
+<meta property="og:description" content="本文详细介绍在Linux系统上配置Zookeeper集群的完整步骤，包括环境准备、配置文件修改、集群节点设置以及启动验证方法，适用于主流Linux发行版。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/47be4435f24a4b0c7ed8daf5ed68b531.png">
-<meta property="article:published_time" content="2025-04-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-12T13:48:50.730Z">
+<meta property="og:image" content="https://source.icode504.com/images/d560a1efbac6743d151b23a74383c423.png">
+<meta property="article:published_time" content="2025-05-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-04T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Gradle">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Zookeeper">
+<meta property="article:tag" content="Zookeeper集群">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/47be4435f24a4b0c7ed8daf5ed68b531.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/d560a1efbac6743d151b23a74383c423.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Gradle安装与配置教程（Windows版） - iCode504个人博客</title>
+  <title>Zookeeper 集群配置教程（Linux通用版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/47be4435f24a4b0c7ed8daf5ed68b531.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/d560a1efbac6743d151b23a74383c423.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Gradle安装与配置教程（Windows版）</span>
+            <span id="subtitle">Zookeeper 集群配置教程（Linux通用版）</span>
           
         </div>
 
@@ -220,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 00:00" pubdate>
-          2025年4月12日
+        <time datetime="2025-05-05 00:00" pubdate>
+          2025年5月5日
         </time>
       </span>
     
@@ -306,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(14)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -333,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
         id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         中间件
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
+      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
            role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
         
         
@@ -360,17 +361,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="分布式协调服务"
         id="heading-e28708e1d361d198ca97587b7cc8d380" role="tab" data-toggle="collapse" href="#collapse-e28708e1d361d198ca97587b7cc8d380"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         分布式协调服务
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-e28708e1d361d198ca97587b7cc8d380"
+      <div class="category-collapse collapse show" id="collapse-e28708e1d361d198ca97587b7cc8d380"
            role="tabpanel" aria-labelledby="heading-e28708e1d361d198ca97587b7cc8d380">
         
         
@@ -391,7 +392,7 @@
       
         <a href="/posts/119.html" title="Zookeeper 集群配置教程（Linux通用版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Zookeeper 集群配置教程（Linux通用版）</span>
         </a>
       
@@ -867,17 +868,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(33)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -1627,17 +1628,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
         id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         项目构建工具
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
            role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
         
         
@@ -1649,7 +1650,7 @@
       
         <a href="/posts/23.html" title="Gradle安装与配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Gradle安装与配置教程（Windows版）</span>
         </a>
       
@@ -2092,142 +2093,151 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Gradle安装与配置教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月12日
-                  
-                
-              </p>
+            <h1 id="seo-header">Zookeeper 集群配置教程（Linux通用版）</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请点击下方<strong>任意一个</strong>链接查看安装教程（这里我使用的是JDK 8）。</p>
+                <p>Zookeeper 集群是由多个节点组成的分布式协调服务，采用主从架构（Leader-Follower）实现高可用。集群通过 ZAB 一致性协议保证数据强一致性，所有写操作由 Leader 节点协调并同步到 Follower 节点。其典型部署包含奇数个节点（如3&#x2F;5台服务器），采用投票机制实现故障容错，当半数以上节点存活时集群即可继续提供服务。Zookeeper集群提供分布式锁、配置维护、命名服务等核心功能，广泛应用于Hadoop、Kafka等分布式系统的协调管理。</p>
+<p>以下是 Linux 环境下 Zookeeper 集群配置教程。</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请准备 3 台虚拟机，如需快速克隆并配置虚拟机相关设置，请点击右侧链接查看教程：<a href="./118.html">点我查看</a></p>
+<blockquote>
+<p>说明：这里我的 3 台主机信息如下，具体情况以你们的为准：</p>
 <table>
 <thead>
 <tr>
-<th align="center"><a href="./1.html">JDK 8安装教程</a></th>
-<th align="center"><a href="./28.html">JDK 11安装教程</a></th>
-<th align="center"><a href="./26.html">JDK 17安装教程</a></th>
-<th align="center"><a href="./27.html">JDK 21安装教程</a></th>
-</tr>
-</thead>
-</table>
-<p>2. 如果电脑上已经安装JDK，按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击<strong>确定</strong>：</p>
-<p><img src="https://source.icode504.com/images/0aedba0e40c0f9f2ef5041ce0c93c7d8.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 输入<code>java -version</code>，按一下回车键，查看JDK安装信息，如果有下面提示信息，说明JDK安装成功：</p>
-<p><img src="https://source.icode504.com/images/52280b5c9f2c1705e03fb27ea671af0f.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、Gradle下载"><a href="#二、Gradle下载" class="headerlink" title="二、Gradle下载"></a>二、Gradle下载</h1><blockquote>
-<p>  如果你使用的SpringBoot项目，建议使用6.8及以上版本的Gradle。</p>
-</blockquote>
-<p>以下两种下载方式任选其一：</p>
-<h2 id="方式一：百度网盘下载"><a href="#方式一：百度网盘下载" class="headerlink" title="方式一：百度网盘下载"></a>方式一：百度网盘下载</h2><p>请点击下方任意一个链接，进入下载页面：</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Nc0-DKvcxBylkSLV99LtPA?pwd=1024">点击下载</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1P8IYEwPfooZea2VdsDq5fg?pwd=1024">备用下载1</a></th>
-<th align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1FjpGp7ijBCwMeyPqJdmYuA?pwd=1024">备用下载2</a></th>
-</tr>
-</thead>
-</table>
-<p><img src="https://source.icode504.com/images/image-20240311121145684.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240311121311976.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="方式二：官网下载"><a href="#方式二：官网下载" class="headerlink" title="方式二：官网下载"></a>方式二：官网下载</h2><p>1. 打开官网下载界面：<a target="_blank" rel="noopener" href="https://gradle.org/releases/">https://gradle.org/releases/</a></p>
-<p><img src="https://source.icode504.com/images/ad47bfc158abac0b8a5826545e6c79f9.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 这里我选择8.0.2版本下载。点击<code>complete</code>下载</p>
-<p><img src="https://source.icode504.com/images/ddd68e56bc5944099d9147df3512a793.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Gradle配置环境变量"><a href="#三、Gradle配置环境变量" class="headerlink" title="三、Gradle配置环境变量"></a>三、Gradle配置环境变量</h1><p>1. 将下载的压缩包进行解压，<strong>建议解压目录只包含英文路径</strong>，这里我解压到了E盘：</p>
-<p><img src="https://source.icode504.com/images/0a4af939173256af69ad0680e2aa03a4.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 双击打开<code>gradle-8.0.2</code>目录，鼠标右键复制路径：</p>
-<p><img src="https://source.icode504.com/images/9cd654aae344c32426bb373aea375b8e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/f697704142b2f047a745a2d86a239994.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 点击<strong>高级系统设置</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th align="center">主机名称</th>
+<th align="center">IP地址</th>
+<th align="center">操作系统</th>
+<th align="center">说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center">debian100</td>
+<td align="center">192.168.40.100</td>
+<td align="center"><a href="./52.html">Debian</a></td>
+<td align="center">这台主机包含了<a href="./118.html#%E5%85%AD%E3%80%81%E5%A4%9A%E5%8F%B0%E4%B8%BB%E6%9C%BA%E5%90%8C%E6%97%B6%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4">parallel-execute</a>命令，可以在三台主机同时执行一条命令</td>
+</tr>
+<tr>
+<td align="center">debian101</td>
+<td align="center">192.168.40.101</td>
+<td align="center"><a href="./52.html">Debian</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">debian102</td>
+<td align="center">192.168.40.102</td>
+<td align="center"><a href="./52.html">Debian</a></td>
+<td align="center"></td>
 </tr>
 </tbody></table>
-<p>5. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/1765e57d00639a95fc8efce9a0d89e93.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在下方系统变量点击<strong>新建</strong>：</p>
-<p><img src="https://source.icode504.com/images/ac0e3261b85c6ce2fe2572362d01d813.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 如下图，变量名输入<code>GRADLE_HOME</code>，变量值是前面第2步复制的路径粘贴即可，完成后点击<strong>确定</strong>：</p>
-<p><img src="https://source.icode504.com/images/51d54e16a281094de98e90c2f68839f5.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 在系统变量中<strong>双击打开Path</strong>：</p>
-<p><img src="https://source.icode504.com/images/6d6d2c63710adbbc6169a12d3d2bc9c5.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 在右上角点击<strong>新建</strong>，输入<code>%GRADLE_HOME%\bin</code>，完成后<strong>一路点击确定</strong>：</p>
-<p><img src="https://source.icode504.com/images/01402c291cf35c4ae0e507a3f648ce2b.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 验证Gradle是否安装成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>打开命令提示行。输入<code>gradle -v</code>，如果有下面的版本说明Gradle环境变量配置成功：</p>
-<p><img src="https://source.icode504.com/images/3ef98b93a4e6c75335da8a9ab0ca05a6.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、配置下载源"><a href="#四、配置下载源" class="headerlink" title="四、配置下载源"></a>四、配置下载源</h1><p>由于Gradle自带Maven下载源是国外的，在后续下载依赖的过程中会比较慢。这里我们需要将下载源换成国内镜像。</p>
-<p>1. 需要保证能看到文件的后缀名：在文件夹上方点击<strong>查看</strong>，在右侧勾选<strong>文件扩展名</strong>：</p>
-<p><img src="https://source.icode504.com/images/85e411cb52a2cb2aa9536eebc93992ac.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 打开Gradle目录，进入init.d文件夹，会发现里面有一个<code>readme.txt</code>文件，打开后会有如下信息</p>
-<p><img src="https://source.icode504.com/images/b7c4f64045b4e81a2394fab571e01f94.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">You can <span class="hljs-built_in">add</span> .gradle (e.g. test.gradle) init scripts <span class="hljs-built_in">to</span> this <span class="hljs-built_in">directory</span>. Each <span class="hljs-literal">one</span> is executed <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">start</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> build.<br></code></pre></td></tr></table></figure>
-
-<p>简单翻译一下就是需要在init.d目录下配置一个初始文件，这里我们需要新建一个<code>init.gradle</code>文件。</p>
-<p>3. 鼠标右键新建并打开init.txt文件，将下面的内容粘贴到文件中，然后点击<code>保存</code></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs groovy">allprojects &#123;<br>    repositories &#123; <br>        mavenLocal() <br>        maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&quot;https://maven.aliyun.com/repository/public&quot;</span> &#125; <br>        maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&quot;https://nexus.bsdn.org/content/groups/public/&quot;</span> &#125; <br>        mavenCentral()<br>    &#125;<br>    buildscript &#123;<br>        repositories &#123; <br>            maven &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&#x27;https://maven.aliyun.com/repository/public&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&#x27;https://nexus.bsdn.org/content/groups/public/&#x27;</span> &#125; <br>            maven &#123; name <span class="hljs-string">&quot;M2&quot;</span> ; url <span class="hljs-string">&#x27;https://plugins.gradle.org/m2/&#x27;</span> &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>4. 将文件命名为<code>init.gradle</code>，对下面弹窗提示点击确定。至此，Gradle下载源配置成功：</p>
-<p><img src="https://source.icode504.com/images/3362e93e0d0a401da1d2b302b32debca.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/6282e25c86f3f137c5bfad2c06f4dea7.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、Intellij-IDEA创建Gradle项目"><a href="#五、Intellij-IDEA创建Gradle项目" class="headerlink" title="五、Intellij IDEA创建Gradle项目"></a>五、Intellij IDEA创建Gradle项目</h1><blockquote>
-<p>需要安装Intellij IDEA的小伙伴点击右侧链接查看安装教程：<a href="./14.html">点我查看</a></p>
 </blockquote>
-<p>1. 新建Gradle项目或模块：</p>
-<p><img src="https://source.icode504.com/images/76203ff9222dc0959eb8f4f4b6710651.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 创建完成后，按<code>Ctrl + Alt + S</code>打开设置，找到Gradle并按下图设置</p>
-<p><img src="https://source.icode504.com/images/3a6931121aca6a1337384bb29e984842.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 使用JUnit4进行测试：在IDEA左侧目录打开<code>build.gradle</code>文件，在<code>dependencies</code>中添加一条依赖：</p>
-<p><img src="https://source.icode504.com/images/0c7c204a4797f32c5d821cd015b03b98.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy">dependencies &#123;<br>    testImplementation <span class="hljs-string">&#x27;junit:junit:4.12&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>2. 请确保<strong>每一台虚拟机</strong>上已经安装了 Zookeeper，需要安装的小伙伴请点击右侧链接查看安装教程：<a href="./116.html">点我查看</a></p>
+<h1 id="二、配置-Zookeeper-集群信息"><a href="#二、配置-Zookeeper-集群信息" class="headerlink" title="二、配置 Zookeeper 集群信息"></a>二、配置 Zookeeper 集群信息</h1><div class="note note-info">
+            <p>说明：这部分内容无特殊说明外，都是在 debian100 主机上配置的。</p>
+          </div>
 
-<p>4. 在src目录下，创建<code>test\java</code>目录：</p>
-<p><img src="https://source.icode504.com/images/2c073ecb104c4d60e7595dcbfde0ba49.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/8d1f80eed162d14c06fb54c48ebd4993.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 创建一个测试类MyTest01</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@className</span> MyTest01</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@time</span> 2023/5/2 23:45</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span> TODO</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTest01</span> &#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello, world&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>1. 切换到 Zookeeper 数据存储目录下，这里我的数据存储目录是 <code>/usr/local/zookeeper-3.8.4/data</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/zookeeper-3.8.4/data<br></code></pre></td></tr></table></figure>
 
-<p>6. 点击运行，即可看到控制台输出内容：</p>
-<p><img src="https://source.icode504.com/images/c2a4f011461c0b9ae39146278dc01824.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="六、Eclipse创建Gradle项目"><a href="#六、Eclipse创建Gradle项目" class="headerlink" title="六、Eclipse创建Gradle项目"></a>六、Eclipse创建Gradle项目</h1><blockquote>
-<p>  需要安装Eclipse的小伙伴点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/30.html">点我查看</a></p>
+<p>2. 在此目录下创建一个 <code>myid</code> 文件，里面存储每一个存储 Zookeeper 节点的编号：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim myid<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>说明：</p>
+<ul>
+<li>编号必须是整数；</li>
+<li>三台虚拟机的节点编号互不相同；</li>
+<li>文件中只能存储数字，不要存储任何无关的字符；</li>
+</ul>
 </blockquote>
-<p>1. 在Eclipse上方打开<code>Windows --&gt; Preferences</code>，按照下图所示配置。</p>
-<p><img src="https://source.icode504.com/images/d1ed50fd2d6d53e7228c399917af64a6.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 重启Eclipse，新建一个Gradle项目：</p>
-<p><img src="https://source.icode504.com/images/6b7b7e21dd32bf0cea197005cee1c235.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/70e6342f92228aa46eacabaac8430058.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 进入到欢迎页后，取消勾选，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/847ff89caac5801d11fac987ce409165.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 自定义项目名称，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/b5859c84ee9dfe9247e180f8a55bbccb.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击<strong>Finish</strong>，Gradle项目创建完成：</p>
-<p><img src="https://source.icode504.com/images/c67916d21c69090fdccda4347bf7ab4c.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 在左侧目录打开<code>lib --&gt; build.gradle</code>文件，导入如下依赖：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy">dependencies &#123;<br>	testImplementation <span class="hljs-string">&#x27;junit:junit:4.12&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这里是我配置的 <code>myid</code> 情况：</p>
+<table>
+<thead>
+<tr>
+<th align="center">虚拟机名称</th>
+<th align="center">myid</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">debian100</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">debian101</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">debian102</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<p>3. 保存完成后，编辑 Zookeeper 配置文件 zoo.cfg：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /usr/local/zookeeper-3.8.4/conf/zoo.cfg<br></code></pre></td></tr></table></figure>
 
-<p>7. 在<code>src\test\java</code>目录下创建一个Java文件：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.icode504;<br><br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTest02</span> &#123;<br>	<br>	<span class="hljs-meta">@Test</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testName</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>		System.out.println(<span class="hljs-string">&quot;Hello, world&quot;</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>4. 在配置文件后面新增如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">server.1=debian100:2888:3888<br>server.2=debian101:2888:3888<br>server.3=debian102:2888:3888<br></code></pre></td></tr></table></figure>
 
-<p>8. 双击方法名，鼠标右键点击运行，即可看到控制台输出：</p>
-<p><img src="https://source.icode504.com/images/f7cb09e65cbda0e8bce348157bdd2596.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/960ed61f612e91c852a19b6f68c62ff4.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>关于 <code>server.A=B:C:D</code> 的说明：</p>
+<p>上述内容符合 <code>server.A=B:C:D</code> 的格式，其中：</p>
+<ul>
+<li>A 代表每一个 Zookeeper 的 myid；</li>
+<li>B 代表每一台虚拟机的 IP 地址，这里我修改了 <code>/etc/hosts</code> 文件，使用 hostname 代替 IP 地址</li>
+<li>C 代表 Zookeeper Follower 与集群中的 Leader 服务器交换信息的端口；</li>
+<li>D 代表万一集群中的 Leader 服务器挂了，需要一个端口来重新进行选举，选出一个新的 Leader，而这个端口就是用来执行选举时服务器相互通信的端口。</li>
+</ul>
+</blockquote>
+<p>5. 将上一步修改好的配置内容粘贴到每一个 zoo.cfg 文件中，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/cf3a0215108299920ccb387f905a1f07.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 保存完成。将 myid 依次分发到 debian101 和 debian102 上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp /usr/local/zookeeper-3.8.4/data/myid root@debian101:/usr/local/zookeeper-3.8.4/data<br>scp /usr/local/zookeeper-3.8.4/data/myid root@debian102:/usr/local/zookeeper-3.8.4/data<br></code></pre></td></tr></table></figure>
 
+<div class="note note-danger">
+            <p>注意：分发完成后，一定要到对应的主机下修改 myid 文件，确保三台主机的 myid 互不相同且为整数！</p>
+          </div>
+
+<p>7. 将配置文件 zoo.cfg 依次分发到 debian101 和 debian102 上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp /usr/local/zookeeper-3.8.4/conf/zoo.cfg root@debian101:/usr/local/zookeeper-3.8.4/conf<br>scp /usr/local/zookeeper-3.8.4/conf/zoo.cfg root@debian102:/usr/local/zookeeper-3.8.4/conf<br></code></pre></td></tr></table></figure>
+
+<p>8. 开放 2181、2888、3888 号端口，保证集群各个节点可以相互访问：</p>
+<blockquote>
+<p>说明：parallel-execute 命令脚本请点击右侧链接查看：<a href="./118.html#%E5%85%AD%E3%80%81%E5%A4%9A%E5%8F%B0%E4%B8%BB%E6%9C%BA%E5%90%8C%E6%97%B6%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4">点我查看</a></p>
+</blockquote>
+<ul>
+<li>CentOS</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;firewall-cmd --zone=public --add-port=2181/tcp --permanent &amp;&amp; firewall-cmd --zone=public --add-port=2888/tcp --permanent &amp;&amp; firewall-cmd --zone=public --add-port=3888/tcp --permanent &amp;&amp;firewall-cmd --reload&quot;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu&#x2F;Debian</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;ufw enable &amp;&amp; ufw allow 2181/tcp &amp;&amp; ufw allow 2888/tcp &amp;&amp; ufw allow 3888/tcp&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="三、Zookeeper集群启动与停止"><a href="#三、Zookeeper集群启动与停止" class="headerlink" title="三、Zookeeper集群启动与停止"></a>三、Zookeeper集群启动与停止</h1><p>1. 依次启动每一台 Zookeeper:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/zookeeper-3.8.4 &amp;&amp; bin/zkServer.sh start&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>2. 查看每一台 Zookeeper 启动状态，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/zookeeper-3.8.4 &amp;&amp; bin/zkServer.sh status&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这里 debian101 是 leader，其他的是 follower（具体那台机器是 leader 请以你们的为准）：</p>
+<table>
+<thead>
+<tr>
+<th align="center">debian100</th>
+<th align="center">debian101</th>
+<th align="center">debian102</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://source.icode504.com/images/b187221ccf3076685579f72b834cf9a0.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><img src="https://source.icode504.com/images/d1f00bef3f1e89dfdd0761b1e35207bd.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><img src="https://source.icode504.com/images/fb62b958e8a03ad7cda68780fe4e9359.png" srcset="/img/loading.gif" lazyload></td>
+</tr>
+</tbody></table>
+<p>至此，Zookeeper 集群启动成功！</p>
+<p>3. 如需停止当前集群，请执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/zookeeper-3.8.4 &amp;&amp; bin/zkServer.sh stop&quot;</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -2250,13 +2260,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="category-chain-item">项目构建工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1/" class="category-chain-item">分布式协调服务</a>
+  
+  
+
   
 
   
@@ -2274,9 +2291,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
-        <a href="/tags/Gradle/" class="print-no-link">#Gradle</a>
+        <a href="/tags/Zookeeper/" class="print-no-link">#Zookeeper</a>
+      
+        <a href="/tags/Zookeeper%E9%9B%86%E7%BE%A4/" class="print-no-link">#Zookeeper集群</a>
       
     </div>
   
@@ -2288,8 +2307,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Gradle安装与配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/23.html</div>
+      <div>Zookeeper 集群配置教程（Linux通用版）</div>
+      <div>https://www.icode504.com/posts/119.html</div>
     </div>
     <div class="license-meta">
       
@@ -2301,7 +2320,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年5月5日</div>
         </div>
       
       
@@ -2333,9 +2352,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/16.html" title="第一章 若依-JFlow配置与启动">
+                      <a href="/posts/116.html" title="Zookeeper 安装配置教程（Linux通用版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第一章 若依-JFlow配置与启动</span>
+                        <span class="hidden-mobile">Zookeeper 安装配置教程（Linux通用版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -2343,8 +2362,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows）">
-                        <span class="hidden-mobile">访问Github卡顿甚至进不去的解决办法（适用于Windows）</span>
+                      <a href="/posts/117.html" title="Ubuntu 虚拟机修改静态IP">
+                        <span class="hidden-mobile">Ubuntu 虚拟机修改静态IP</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
