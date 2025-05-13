@@ -18,27 +18,90 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文主要介绍了Java集成开发环境Eclipse的下载、安装配置，以及创建一个Java项目、编写代码并成功运行的过程。同时还提供了Eclipse的卸载方法。">
+    <meta name="description" content="本文详细讲解Windows环境下Nexus的下载安装、服务配置、仓库管理及与Maven&#x2F;Gradle的集成方法，通过Nexus管理Maven&#x2F;Gradle项目依赖。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Eclipse安装配置、卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/30.html">
+<meta property="og:title" content="私服仓库 Nexus 安装与配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/120.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文主要介绍了Java集成开发环境Eclipse的下载、安装配置，以及创建一个Java项目、编写代码并成功运行的过程。同时还提供了Eclipse的卸载方法。">
+<meta property="og:description" content="本文详细讲解Windows环境下Nexus的下载安装、服务配置、仓库管理及与Maven&#x2F;Gradle的集成方法，通过Nexus管理Maven&#x2F;Gradle项目依赖。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/7708089ac99ae2443f93881fd5e6745c.png">
-<meta property="article:published_time" content="2025-04-12T14:13:45.053Z">
-<meta property="article:modified_time" content="2025-04-12T14:13:45.053Z">
+<meta property="og:image" content="https://source.icode504.com/images/ffdf56eb35a89924cfab68f4e05f39ae.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20230508221728184.png">
+<meta property="og:image" content="https://source.icode504.com/images/71e60dd7a22a82fd932d47e0cb030f72.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410113548189.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410113721891.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410113859242.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410113959124.png">
+<meta property="og:image" content="https://source.icode504.com/images/c7bca3c7be1cb5ad57cddfc072bd6343.gif">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410115846582.png">
+<meta property="og:image" content="https://source.icode504.com/images/fa0433dc348f54e6f431e7e567576a05.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410133733885.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410143409903.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410143559819.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410143814465.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410143927150.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410144110382.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410144201668.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410144321224.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410144419100.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410144614630.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410144740737.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410145615164.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410151328225.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410151444916.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410151950507.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410152040098.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410152119520.png">
+<meta property="og:image" content="https://source.icode504.com/images/image-20240410153738013.png">
+<meta property="og:image" content="https://source.icode504.com/images/00002.gif">
+<meta property="og:image" content="https://source.icode504.com/images/25670298c528200bf791d641b6af50dc.png">
+<meta property="og:image" content="https://source.icode504.com/images/0f0ffaebacdf377944fbeeb537199fbc.png">
+<meta property="og:image" content="https://source.icode504.com/images/60de99a24d70d41d1924f9bf5bc00621.png">
+<meta property="og:image" content="https://source.icode504.com/images/e6056691993b6014f553a861693c69f1.png">
+<meta property="og:image" content="https://source.icode504.com/images/d715500661b65a40f2c5212bc3828fed.png">
+<meta property="og:image" content="https://source.icode504.com/images/06e7f0a761037586535a9f864c4de200.png">
+<meta property="og:image" content="https://source.icode504.com/images/3302275cf75cdfb2dec756b324c79938.png">
+<meta property="og:image" content="https://source.icode504.com/images/1e903c50dc6ce676acbe735584c76850.png">
+<meta property="og:image" content="https://source.icode504.com/images/1355e54ad0140362810e84a6b37d0f5d.png">
+<meta property="og:image" content="https://source.icode504.com/images/a953ff5b9eeac3f3be1f7ecdff58b8b5.png">
+<meta property="og:image" content="https://source.icode504.com/images/1dfb0aa2e3f4e12f3984bb87a00ad06c.png">
+<meta property="og:image" content="https://source.icode504.com/images/860ff60af9561cce259a53d52e87a052.png">
+<meta property="og:image" content="https://source.icode504.com/images/53fe92fc2d0561bf567a736c1f422adf.png">
+<meta property="og:image" content="https://source.icode504.com/images/238262dd0b13521d5446ed6cd52d7d86.png">
+<meta property="og:image" content="https://source.icode504.com/images/85e411cb52a2cb2aa9536eebc93992ac.png">
+<meta property="og:image" content="https://source.icode504.com/images/b7c4f64045b4e81a2394fab571e01f94.png">
+<meta property="og:image" content="https://source.icode504.com/images/06e7f0a761037586535a9f864c4de200.png">
+<meta property="og:image" content="https://source.icode504.com/images/3302275cf75cdfb2dec756b324c79938.png">
+<meta property="og:image" content="https://source.icode504.com/images/51097c7b9d54dab0fabae08d5def1da5.png">
+<meta property="og:image" content="https://source.icode504.com/images/cdfdcb1a68531554244380fbe5ea90d4.png">
+<meta property="og:image" content="https://source.icode504.com/images/c81f9b207e89e0293e6a79c8f6fa2f3d.png">
+<meta property="og:image" content="https://source.icode504.com/images/41723007fc2b7ccd4e625a11a85c2b19.png">
+<meta property="og:image" content="https://source.icode504.com/images/44b77dfe4216b8e99a812406dcb4c858.png">
+<meta property="og:image" content="https://source.icode504.com/images/f548854940a3934c13f5b8b4c4e5acd5.png">
+<meta property="og:image" content="https://source.icode504.com/images/b7348222b9b6b045ad9f135f0c41e9d8.png">
+<meta property="og:image" content="https://source.icode504.com/images/e6f2251aa5bed6048f7de755208ef8c0.png">
+<meta property="og:image" content="https://source.icode504.com/images/51097c7b9d54dab0fabae08d5def1da5.png">
+<meta property="og:image" content="https://source.icode504.com/images/89abfc920122cb36bd57cb0fb29f53c4.png">
+<meta property="og:image" content="https://source.icode504.com/images/2e93122bd66eaa3679867af58f33d12a.png">
+<meta property="og:image" content="https://source.icode504.com/images/4cebb7198d86e4fc58dd899bf3fb8f17.png">
+<meta property="og:image" content="https://source.icode504.com/images/8d8904303247917d68a0ba208e65bac8.png">
+<meta property="og:image" content="https://source.icode504.com/images/b7348222b9b6b045ad9f135f0c41e9d8.png">
+<meta property="og:image" content="https://source.icode504.com/images/de89c2bb68dbb531fd3b225a10c81bac.png">
+<meta property="article:published_time" content="2025-04-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-12T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Eclipse">
+<meta property="article:tag" content="Maven">
+<meta property="article:tag" content="Gradle">
+<meta property="article:tag" content="Nexus">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/7708089ac99ae2443f93881fd5e6745c.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/ffdf56eb35a89924cfab68f4e05f39ae.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Eclipse安装配置、卸载教程（Windows版） - iCode504个人博客</title>
+  <title>私服仓库 Nexus 安装与配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +266,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/7708089ac99ae2443f93881fd5e6745c.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Eclipse安装配置、卸载教程（Windows版）</span>
+            <span id="subtitle">私服仓库 Nexus 安装与配置教程（Windows版）</span>
           
         </div>
 
@@ -220,8 +283,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-12 22:13" pubdate>
-          2025年4月12日
+        <time datetime="2025-04-22 00:00" pubdate>
+          2025年4月22日
         </time>
       </span>
     
@@ -1554,17 +1617,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="集成开发环境"
         id="heading-bf3f16ac0114b2b7279f4887db8a2933" role="tab" data-toggle="collapse" href="#collapse-bf3f16ac0114b2b7279f4887db8a2933"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         集成开发环境
         <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
+      <div class="category-collapse collapse " id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
            role="tabpanel" aria-labelledby="heading-bf3f16ac0114b2b7279f4887db8a2933">
         
         
@@ -1585,7 +1648,7 @@
       
         <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
         </a>
       
@@ -1627,17 +1690,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
         id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         项目构建工具
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+      <div class="category-collapse collapse show" id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
            role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
         
         
@@ -1667,7 +1730,7 @@
       
         <a href="/posts/120.html" title="私服仓库 Nexus 安装与配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">私服仓库 Nexus 安装与配置教程（Windows版）</span>
         </a>
       
@@ -2101,141 +2164,234 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Eclipse安装配置、卸载教程（Windows版）</h1>
+            <h1 id="seo-header">私服仓库 Nexus 安装与配置教程（Windows版）</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2025年5月13日
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <p>Eclipse是一个开放源代码的集成开发环境（IDE），最初由IBM公司开发，现在由Eclipse基金会负责维护。它是一个跨平台的工具，可以用于开发多种编程语言，如Java、C&#x2F;C++、Python、PHP、Rust等。</p>
-<p>Eclipse提供了一个可扩展的架构，允许开发者通过安装插件来扩展其功能，因此它被广泛用于各种软件开发项目，包括企业级应用、移动应用、Web应用等。Eclipse的核心功能包括代码编辑器、调试器、版本控制系统集成（如Git）、构建工具集成（如Maven、Gradle）、项目管理工具等。</p>
-<p>Eclipse包含如下特点：</p>
-<ol>
-<li><strong>插件架构：</strong> Eclipse的插件架构使得开发者可以根据需要灵活地扩展IDE的功能，这使得Eclipse适用于多种开发场景。</li>
-<li><strong>跨平台性：</strong> Eclipse可以在多个操作系统上运行，包括Windows、MacOS和Linux，这使得开发者可以在不同的平台上使用相同的开发工具。</li>
-<li><strong>开源：</strong> Eclipse是开源的，这意味着任何人都可以查看其源代码、修改和定制它，以满足自己的需求。</li>
-<li><strong>社区支持：</strong> Eclipse拥有一个庞大的用户和开发者社区，这意味着可以轻松地找到支持、插件和解决方案。</li>
-</ol>
-<p>接下来为大家介绍一下Windows环境下Eclipse的安装：</p>
-<h1 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h1><p>请确保电脑本机安装了JDK，没有安装的小伙伴，请点击下方任意一个链接查看安装教程（这里我安装的是JDK 8版本的）：</p>
+                <h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请确保电脑本地需要安装 Maven 或者 Gradle，如果没有安装，请根据自己的实际需求，点击下方任意一个链接查看安装教程：</p>
 <table>
 <thead>
 <tr>
-<th align="center"><a href="./1.html">JDK 8安装教程</a></th>
-<th align="center"><a href="./28.html">JDK 11安装教程</a></th>
-<th align="center"><a href="./26.html">JDK 17 安装教程</a></th>
+<th align="center"><a href="./22.html">Maven安装配置教程</a></th>
+<th align="center"><a href="./23.html">Gradle安装配置教程</a></th>
 </tr>
 </thead>
 </table>
-<p>JDK安装完成后，按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，进入控制台，输入<code>java -version</code>，如果出现如下内容，就说明JDK已经安装成功了。这里我安装的是JDK 8：</p>
-<p><img src="https://source.icode504.com/images/image-20230314140629530.png" srcset="/img/loading.gif" lazyload></p>
-<p>本文后续内容使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
-<h1 id="二、下载安装Eclipse"><a href="#二、下载安装Eclipse" class="headerlink" title="二、下载安装Eclipse"></a>二、下载安装Eclipse</h1><p>1. 根据电脑上安装的JDK版本，选择要安装的Eclipse版本。以下是Eclipse所需最低JDK版本：</p>
+<p>5. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击<strong>确定</strong>：</p>
+<p><img src="https://source.icode504.com/images/ffdf56eb35a89924cfab68f4e05f39ae.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 进入命令行以后，如果你安装的是Maven，那么在控制台输入<code>mvn -v</code>即可查看当前安装的Maven版本信息；如果你安装的是Gradle，在控制台输入<code>gradle -v</code>即可查看当前安装的Gradle版本信息：</p>
 <table>
 <thead>
 <tr>
-<th>Eclipse版本</th>
-<th>所需JDK版本</th>
+<th align="center">输入<code>mvn -v</code>并执行即可查看Maven的安装信息</th>
+<th align="center">输入<code>gradle -v</code>并执行即可查看Gradle的安装信息</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>2020-06及之前的版本</td>
-<td>JDK 8&#x2F;11&#x2F;17</td>
-</tr>
-<tr>
-<td>2020-09至2022-06之前的版本</td>
-<td>JDK 11&#x2F;17</td>
-</tr>
-<tr>
-<td>2022-09及之后的版本</td>
-<td>JDK 17</td>
+<td align="center"><img src="https://source.icode504.com/images/image-20230508221728184.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><img src="https://source.icode504.com/images/71e60dd7a22a82fd932d47e0cb030f72.png" srcset="/img/loading.gif" lazyload></td>
 </tr>
 </tbody></table>
-<p>2. <a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/release">点我进入Eclipse官网下载列表</a>。由于我电脑上安装的是JDK 8，我需要选择2020-06及之前的版本，这里我选择2020-06版本的Eclipse下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240111145726978.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 找到<strong>Eclipse IDE for Enterprise Java Developers</strong>，在右侧选择Windows版本下载：</p>
-<p><img src="https://source.icode504.com/images/image-20240111145938732.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 下载完成后，将Eclipse解压到一个你熟悉的位置（建议文件路径是全英文的），这里我解压到了D盘：</p>
-<p><img src="https://source.icode504.com/images/image-20240111152225378.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 按照下图所示操作将Eclipse设置成<strong>桌面快捷方式</strong>，以后只需要在桌面直接打开快捷方式就可以了，比较方便。</p>
-<p><img src="https://source.icode504.com/images/image-20240111152158072.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、Eclipse创建Workspace和简单设置"><a href="#三、Eclipse创建Workspace和简单设置" class="headerlink" title="三、Eclipse创建Workspace和简单设置"></a>三、Eclipse创建Workspace和简单设置</h1><p>这一部分我们需要对Eclipse进行以下配置，方便后续我们使用Eclipse。</p>
-<h2 id="3-1-Eclipse配置本地安装的JDK"><a href="#3-1-Eclipse配置本地安装的JDK" class="headerlink" title="3.1 Eclipse配置本地安装的JDK"></a>3.1 Eclipse配置本地安装的JDK</h2><p>1. 在桌面双击打开Eclipse，此时会弹出一个选择工作空间Workspace的界面。点击<strong>Browse</strong>，选择一个你熟悉的文件夹，然后点击<strong>Launch</strong>即可：</p>
-<p><img src="https://source.icode504.com/images/image-20240111152952838.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111153151545.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111153221251.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 进入Eclipse以后，我们需要将本地安装的JDK应用到Eclipse中。点击上方菜单栏的<strong>Window</strong>，然后点击最后一个<strong>Preferences</strong>，进入Eclipse设置：</p>
-<p><img src="https://source.icode504.com/images/image-20240111153552268.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在左侧选项中，找到<strong>Java</strong>并展开，选择<strong>Installed JREs</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111153818844.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在Installed JREs中，选中系统自带的JRE，然后在右侧点击<strong>Edit</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111153952469.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 点击右上角的<strong>Directory</strong>，选择JDK安装位置，直到下方出现很多的JRE，然后点击<strong>Finish</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111154027524.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111154220109.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240111154317711.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 点击右下角<strong>Apply and Close</strong>，完成设置并关闭：</p>
-<p><img src="https://source.icode504.com/images/image-20240111154420980.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="3-2-配置新建文件菜单"><a href="#3-2-配置新建文件菜单" class="headerlink" title="3.2 配置新建文件菜单"></a>3.2 配置新建文件菜单</h2><p>安装完Eclipse后，你可能会发现在其新建文件菜单中默认并未包含所需的文件类型。为了确保后续的使用便捷，我们需要对Eclipse新建文件菜单进行一些配置。</p>
-<p>1. 在上方菜单栏点击<strong>Window</strong>，选择<strong>Perspective</strong>，然后点击<strong>Customize Perspective</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111155210783.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 点击<strong>Menu Visibilitiy</strong>，依次展开<strong>File</strong>、<strong>New</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111155336273.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 这里我勾选了Java常用的项目、文件类型，小白可以按照下图的方式进行勾选即可，完成后点击下方的<strong>Apply And Close</strong>：</p>
+<h1 id="二、下载并启动Nexus"><a href="#二、下载并启动Nexus" class="headerlink" title="二、下载并启动Nexus"></a>二、下载并启动Nexus</h1><p>1. 点击右侧链接进入官网下载链接（百度网盘）：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1xdXCvC8Ktam293OlP0uUtw?pwd=1024">点我下载</a></p>
+<p>2. 将下载好的安装包解压到一个你熟悉的位置，路径中建议只包含英文字符，这里我解压到了E盘：</p>
+<p><img src="https://source.icode504.com/images/image-20240410113548189.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240410113721891.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 找到解压后的路径，点击第一个文件夹<code>nexus-3.66.0-02</code>进入，然后进入<code>bin</code>文件夹：</p>
+<p><img src="https://source.icode504.com/images/image-20240410113859242.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240410113959124.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击上方路径，输入<code>cmd</code>，然后按一下回车，会弹出命令行窗口：</p>
+<p><img src="https://source.icode504.com/images/c7bca3c7be1cb5ad57cddfc072bd6343.gif" srcset="/img/loading.gif" lazyload></p>
+<p>5. 执行如下命令，启动 Nexus：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">nexus.exe /run<br></code></pre></td></tr></table></figure>
+
+<p>6. 首次启动过程中会进行一系列初始化，大家一定要耐心等待（初次加载预计需要5~6分钟，执行初始化过程中不要关闭窗口，否则初始化将会失败）。</p>
+<p>8. 当命令行最下方出现如下提示信息就说明 Nexus 初始化完成，并且成功启动：</p>
+<p><img src="https://source.icode504.com/images/image-20240410115846582.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、配置-Nexus"><a href="#三、配置-Nexus" class="headerlink" title="三、配置 Nexus"></a>三、配置 Nexus</h1><h2 id="3-1-为-admin-用户重置密码"><a href="#3-1-为-admin-用户重置密码" class="headerlink" title="3.1 为 admin 用户重置密码"></a>3.1 为 admin 用户重置密码</h2><p>1. 在配置 Nexus 之前，我们先看一下成功启动的 Nexus 命令行，这里我默认启动的端口号是8081（具体的端口号，请以你的命令行提示的端口号为准）：</p>
+<p><img src="https://source.icode504.com/images/fa0433dc348f54e6f431e7e567576a05.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 打开浏览器，在上方搜索框中输入<code>http://localhost:8081</code>，即可打开Nexus控制台欢迎界面：</p>
+<p><img src="https://source.icode504.com/images/image-20240410133733885.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 点击右上方的 <strong>Sign in</strong> 登录：</p>
+<p><img src="https://source.icode504.com/images/image-20240410143409903.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 首次使用 Nexus 时，系统默认会生成一个 admin 用户。用户名输入<code>admin</code>，然后根据输入框中的路径找到<code>admin.password</code>文件：</p>
+<p><img src="https://source.icode504.com/images/image-20240410143559819.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 根据上一步提示框中的路径（如下图），使用记事本打开<code>admin.password</code>文件：</p>
+<p><img src="https://source.icode504.com/images/image-20240410143814465.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240410143927150.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 复制文件中的密码，然后粘贴到提示框中的密码输入框：</p>
+<p><img src="https://source.icode504.com/images/image-20240410144110382.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20240410144201668.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 登录成功，此时会弹出一个启动向导，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240410144321224.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 这里我们需要重新设置用户<code>admin</code>的密码，为了方便记忆，这里我将密码设置成123456，完成后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240410144419100.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 配置是否允许匿名访问，处于仓库数据文件安全考虑，这里我们选择第二个禁止匿名访问<strong>Disable anonymous access</strong>。完成后点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240410144614630.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 点击<strong>Finish</strong>，启动向导配置完成：</p>
+<p><img src="https://source.icode504.com/images/image-20240410144740737.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-2-Nexus配置国内阿里云仓库"><a href="#3-2-Nexus配置国内阿里云仓库" class="headerlink" title="3.2 Nexus配置国内阿里云仓库"></a>3.2 Nexus配置国内阿里云仓库</h2><p>Nexus中提供了如下四个仓库：maven-central、maven-public、maven-releases、maven-snapshots，以下是对这四个仓库的相关说明</p>
+<p><img src="https://source.icode504.com/images/image-20240410145615164.png" srcset="/img/loading.gif" lazyload></p>
+<p>以公司研发的产品为例：</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img src="https://source.icode504.com/images/image-20240111155756137.png" srcset="/img/loading.gif" lazyload></th>
-<th align="center"><img src="https://source.icode504.com/images/image-20240111155835053.png" srcset="/img/loading.gif" lazyload></th>
+<th>仓库名称</th>
+<th>仓库说明</th>
+<th>类型</th>
+<th>类型说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><img src="https://source.icode504.com/images/image-20240111155908214.png" srcset="/img/loading.gif" lazyload></td>
-<td align="center"><img src="https://source.icode504.com/images/image-20240111155955716.png" srcset="/img/loading.gif" lazyload></td>
+<td>maven-central</td>
+<td>代理某个远程的中央仓库&#x2F;镜像仓库。如果Nexus本地不存在jar&#x2F;war包，就会转到配置的远程仓库中下载。</td>
+<td>proxy</td>
+<td>代理远程仓库</td>
+</tr>
+<tr>
+<td>maven-public</td>
+<td>这个仓库存放Nexus获取到的第三方jar包，供开发人员下载。</td>
+<td>group</td>
+<td>存储第三方的jar包</td>
+</tr>
+<tr>
+<td>maven-releases</td>
+<td>开发人员如果需要部署<strong>正式</strong>版本的jar&#x2F;war包，就会存储到maven-releases仓库中</td>
+<td>hosted</td>
+<td>存储开发人员部署到Nexus的jar包</td>
+</tr>
+<tr>
+<td>maven-snapshots</td>
+<td>开发人员如果需要部署<strong>快照</strong>版本的jar&#x2F;war包，就会存储到maven-snapshots仓库中</td>
+<td>hosted</td>
+<td></td>
 </tr>
 </tbody></table>
-<h2 id="3-3-调整代码字体样式"><a href="#3-3-调整代码字体样式" class="headerlink" title="3.3 调整代码字体样式"></a>3.3 调整代码字体样式</h2><p>Eclipse创建的代码文件在编辑器中字体比较小，事实上，你可以在设置菜单中调整Eclipse中代码的字体大小和样式，直到满足你的审美要求。</p>
-<p>1. 点击上方菜单栏的<strong>Windows</strong>，然后点击最后一个<strong>Preferences</strong>，进入Eclipse设置：</p>
-<p><img src="https://source.icode504.com/images/image-20240111153552268.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 进入设置以后，点击<strong>General</strong> –&gt; <strong>Appearance</strong> –&gt; <strong>Color And Fonts</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240127092622420.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在颜色和字体界面中，双击展开<strong>Basic</strong>，找到并选中最后一个<strong>Text Font</strong>，点击<strong>Edit</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240127092905624.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 在字体窗口中可以自行调整字体样式和大小，完成后点击确定，后续设置界面点击右下角的Apply and Close。</p>
-<blockquote>
-<p>这里我选择的Consolas字体，字体大小16号。下方示例可以预览字体：</p>
-</blockquote>
-<p><img src="https://source.icode504.com/images/image-20240127093145798.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、创建Java项目并运行Java程序"><a href="#四、创建Java项目并运行Java程序" class="headerlink" title="四、创建Java项目并运行Java程序"></a>四、创建Java项目并运行Java程序</h1><p>完成上面的配置后，我们就可以愉快写一段Java代码了。</p>
-<p>1. 在上方菜单栏点击<strong>File</strong>，选择第一个<strong>New</strong>（或者按<kbd>Shift</kbd><kbd>Alt</kbd><kbd>N</kbd>），选择<strong>Java Project</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240111160303603.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 按照下图操作，创建一个Java项目：</p>
-<p><img src="https://source.icode504.com/images/image-20240111160456392.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 如果出现下图弹窗，点击<strong>Open Perspective</strong>，此时Eclipse会以Java视图显示：</p>
-<p><img src="https://source.icode504.com/images/image-20240111160619795.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在左侧Package Explorer，<strong>双击展开</strong>我们的项目MyJavaProject，鼠标右键<strong>点击src</strong>，<strong>点击New</strong>，<strong>点击Class</strong>创建Java文件：</p>
-<p><img src="https://source.icode504.com/images/image-20240111161127180.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按照下图所示创建一个Java文件，注意文件名（类名要符合<a href="https://www.icode504.com/posts/3.html#%E6%A0%87%E8%AF%86%E7%AC%A6">标识符命名规范</a>）：</p>
-<p><img src="https://source.icode504.com/images/image-20240111161318647.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 在MyDemo01类中写一个main方法，如下图所示：</p>
-<p><img src="https://source.icode504.com/images/image-20240111161715860.png" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>注意：只要左上角页签MyProgram01.java前面会有一个星号标志，这说明我们未保存这个Java文件，需要按<kbd>Ctrl</kbd>和<kbd>S</kbd>保存。</p>
-</blockquote>
-<p>8. 鼠标右键点击代码，找到<strong>Run As</strong>，点击<strong>Java Application</strong>运行Java程序：</p>
-<p><img src="https://source.icode504.com/images/image-20240111162009202.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 此时下方控制台就会输出我们在程序中写的内容，说明我们的代码编译运行成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240111162103861.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、Eclipse的卸载（可选）"><a href="#五、Eclipse的卸载（可选）" class="headerlink" title="五、Eclipse的卸载（可选）"></a>五、Eclipse的卸载（可选）</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+<p>由于maven-central默认使用的是Maven官方的中央仓库，这个仓库服务器在国外，我们需要将仓库代理设置为国内阿里云的镜像仓库。</p>
+<p>1. 在上方点击Nexus设置：</p>
+<p><img src="https://source.icode504.com/images/image-20240410151328225.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 点击左侧的<strong>Repositories</strong>，然后点击列表中的<strong>maven-central</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20240410151444916.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 复制下方阿里云镜像仓库链接：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs http">https://maven.aliyun.com/repository/public<br></code></pre></td></tr></table></figure>
+
+<p>4. 将Remote storage中的链接替换成上一步复制的链接：</p>
+<p><img src="https://source.icode504.com/images/image-20240410151950507.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 翻到页面最下方，点击<strong>Save</strong>保存当前配置：</p>
+<p><img src="https://source.icode504.com/images/image-20240410152040098.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时右上角弹出一个绿色提示框说明配置保存成功，此时Nexus就会代理国内的阿里云镜像仓库了！</p>
+<p><img src="https://source.icode504.com/images/image-20240410152119520.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="3-3-将Maven镜像配置成Nexus私服仓库"><a href="#3-3-将Maven镜像配置成Nexus私服仓库" class="headerlink" title="3.3 将Maven镜像配置成Nexus私服仓库"></a>3.3 将Maven镜像配置成Nexus私服仓库</h2><div class="note note-info">
+            <p>说明：这里我的 Maven 是新安装的，如果你已经安装了 Maven，只需要按照实际情况修改即可：</p>
           </div>
 
-<p>1. 找到Eclipse安装目录，按<kbd>Shift</kbd><kbd>Delete</kbd>彻底删除（不经过回收站）：</p>
-<p><img src="https://source.icode504.com/images/image-20240127111815301.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 如果想删除掉Eclipse在本机的相关配置，请按照下图所示的操作，找到存在<strong>桌面</strong>的文件夹：</p>
-<p><img src="https://source.icode504.com/images/240127001.gif" srcset="/img/loading.gif" lazyload></p>
-<p>3. 找到<code>.p2</code>文件夹，选中，按<kbd>Shirt</kbd><kbd>Delete</kbd>彻底删除：</p>
-<p><img src="https://source.icode504.com/images/image-20240127113514365.png" srcset="/img/loading.gif" lazyload></p>
-<p>至此，Eclipse卸载完成。</p>
+<p>1. 找到 Maven 本地安装路径，打开<code>conf</code>目录，然后将这个目录下的<code>setting.xml</code>复制一份留作备份：</p>
+<p><img src="https://source.icode504.com/images/image-20240410153738013.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示的操作，使用记事本打开<code>settings.xml</code>文件：</p>
+<p><img src="https://source.icode504.com/images/00002.gif" srcset="/img/loading.gif" lazyload></p>
+<p>3. 用记事本打开后，在上方菜单栏点击<strong>查看</strong>，然后点击<strong>状态栏</strong>，此时记事本右下角会出现行数：</p>
+<p><img src="https://source.icode504.com/images/25670298c528200bf791d641b6af50dc.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/0f0ffaebacdf377944fbeeb537199fbc.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 请复制下面的代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>jdk-1.8<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">activation</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">activeByDefault</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">jdk</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">jdk</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">activation</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>5. 按 <kbd>Ctrl</kbd><kbd>F</kbd> 键，此时会弹出一个搜索框，在搜索框中搜索 <code>&lt;/profiles&gt;</code>，然后点击<strong>查找下一个</strong>，此时记事本会定位到 <code>&lt;profiles/&gt;</code> 所在位置：</p>
+<p><img src="https://source.icode504.com/images/60de99a24d70d41d1924f9bf5bc00621.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里我的 <code>&lt;profiles/&gt;</code> 在 254 行（具体行数以你们的为准）：</p>
+<p><img src="https://source.icode504.com/images/e6056691993b6014f553a861693c69f1.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 在 <code>&lt;profiles/&gt;</code> 的上一行，粘贴第 4 步的代码，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/d715500661b65a40f2c5212bc3828fed.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时我们配好了Maven的全局JDK版本，这里使用的是 JDK 8。</p>
+<p>7. 请根据实际情况，复制下面的代码并进行修改：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus-local<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>Nexus仓库下载地址<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>打开 Nexus 控制台，按照下图所示复制仓库地址：</li>
+</ul>
+<p><img src="https://source.icode504.com/images/06e7f0a761037586535a9f864c4de200.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/3302275cf75cdfb2dec756b324c79938.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>将上述 XML 代码的url中的内容，替换成复制的链接地址，修改后的代码如下（具体的仓库地址以你们的为准）：</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus-local<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://localhost:8081/repository/maven-public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>8. 按 <kbd>Ctrl</kbd><kbd>F</kbd> 键，此时会弹出一个搜索框，在搜索框中搜索 <code>&lt;/mirrors&gt;</code>，方向选择<strong>向上</strong>，然后点击<strong>查找下一个</strong>，此时记事本会定位到 <code>&lt;mirrors/&gt;</code> 所在位置：</p>
+<p><img src="https://source.icode504.com/images/1e903c50dc6ce676acbe735584c76850.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 这里我的 Maven 默认配置了一个镜像，我们先将这个镜像注释掉，然后在 <code>&lt;/mirrors&gt;</code> 上方粘贴第 7 步的代码，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/1355e54ad0140362810e84a6b37d0f5d.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 打开Maven的安装目录，在这里新建一个repository文件夹，创建完成后，进入此文件夹，复制上述路径。</p>
+<p><img src="https://source.icode504.com/images/a953ff5b9eeac3f3be1f7ecdff58b8b5.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/1dfb0aa2e3f4e12f3984bb87a00ad06c.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 在记事本第 55 行创建一个 <code>&lt;localRepository&gt;&lt;/localRepository&gt;</code> 标签，并在二者中间粘贴上一步的路径，效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/860ff60af9561cce259a53d52e87a052.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 按 <kbd>Ctrl</kbd><kbd>F</kbd> 键，此时会弹出一个搜索框，在搜索框中搜索 <code>&lt;/servers&gt;</code>，方向选择<strong>向下</strong>，然后点击<strong>查找下一个</strong>，此时记事本会定位到 <code>&lt;servers/&gt;</code> 所在位置：</p>
+<p><img src="https://source.icode504.com/images/53fe92fc2d0561bf567a736c1f422adf.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 请根据实际情况，复制下面的代码并进行修改 Nexus 登录信息：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">server</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus-local<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>  <span class="hljs-comment">&lt;!-- 这个ID需要与前面配置的mirror标签的id匹配 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">username</span>&gt;</span>admin<span class="hljs-tag">&lt;/<span class="hljs-name">username</span>&gt;</span> <span class="hljs-comment">&lt;!-- nexus登录用户名 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">password</span>&gt;</span>123456<span class="hljs-tag">&lt;/<span class="hljs-name">password</span>&gt;</span>  <span class="hljs-comment">&lt;!-- nexus登录密码 --&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">server</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>14. 在 <code>&lt;servers/&gt;</code> 标签粘贴上一步修改的代码，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/238262dd0b13521d5446ed6cd52d7d86.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 上述操作完成，请一定一定一定按 <kbd>Ctrl</kbd> 和 <kbd>S</kbd> 键保存！！！至此Maven就全部配置完成了。</p>
+<h2 id="3-4-将-Gradle-镜像配置成-Nexus-私服仓库"><a href="#3-4-将-Gradle-镜像配置成-Nexus-私服仓库" class="headerlink" title="3.4 将 Gradle 镜像配置成 Nexus 私服仓库"></a>3.4 将 Gradle 镜像配置成 Nexus 私服仓库</h2><div class="note note-info">
+            <p>说明：这里我的 Gradle 是新安装的，如果你已经安装了 Gradle，只需要按照实际情况修改即可：</p>
+          </div>
+
+<p>1. 需要保证能看到文件的后缀名：在文件夹上方点击<strong>查看</strong>，在右侧勾选<strong>文件扩展名</strong>：</p>
+<p><img src="https://source.icode504.com/images/85e411cb52a2cb2aa9536eebc93992ac.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 打开Gradle目录，进入init.d文件夹，会发现里面有一个readme.txt文件，打开后会有如下信息：</p>
+<p><img src="https://source.icode504.com/images/b7c4f64045b4e81a2394fab571e01f94.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">You can <span class="hljs-built_in">add</span> .gradle (e.g. test.gradle) init scripts <span class="hljs-built_in">to</span> this <span class="hljs-built_in">directory</span>. Each <span class="hljs-literal">one</span> is executed <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">start</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> build.<br></code></pre></td></tr></table></figure>
+
+<p>简单翻译一下就是需要在init.d目录下配置一个初始文件，这里我们需要新建一个init.gradle文件，在这个文件中配置 Nexus 私服仓库信息。</p>
+<p>3. 打开 Nexus 控制台，按照下图所示复制仓库地址：</p>
+<p><img src="https://source.icode504.com/images/06e7f0a761037586535a9f864c4de200.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/3302275cf75cdfb2dec756b324c79938.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 在init.d目录下，鼠标右键新建一个 <code>init.txt</code> 文件，将下面的内容粘贴到文件中，然后点击<strong>保存</strong>：</p>
+<blockquote>
+<p>说明：如下代码中的 url 需要替换成上一步复制的 Nexus 地址，username 替换成 Nexus 登陆用户名，password 替换成您设置的密码。</p>
+</blockquote>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs groovy">allprojects &#123;<br>    repositories &#123; <br>        mavenLocal() <br>        maven &#123; <br>            name <span class="hljs-string">&quot;Nexus&quot;</span><br>            url <span class="hljs-string">&quot;http://localhost:8081/repository/maven-public/&quot;</span><br>            allowInsecureProtocol = <span class="hljs-literal">true</span><br>            credentials &#123;<br>                username = <span class="hljs-string">&quot;admin&quot;</span><br>                password = <span class="hljs-string">&quot;123456&quot;</span><br>            &#125;<br>        &#125;<br>        mavenCentral()<br>    &#125;<br>    buildscript &#123;<br>        repositories &#123; <br>            maven &#123; <br>                name <span class="hljs-string">&quot;Nexus&quot;</span><br>                url <span class="hljs-string">&#x27;http://localhost:8081/repository/maven-public/&#x27;</span> <br>                allowInsecureProtocol = <span class="hljs-literal">true</span><br>                credentials &#123;<br>                    username = <span class="hljs-string">&quot;admin&quot;</span><br>                    password = <span class="hljs-string">&quot;123456&quot;</span><br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>5. 将文件命名为 init.gradle，对下面弹窗提示点击确定。至此，Gradle 下载源配置成功。</p>
+<h1 id="四、测试-Nexus-下载依赖"><a href="#四、测试-Nexus-下载依赖" class="headerlink" title="四、测试 Nexus 下载依赖"></a>四、测试 Nexus 下载依赖</h1><h2 id="4-1-Maven-项目"><a href="#4-1-Maven-项目" class="headerlink" title="4.1 Maven 项目"></a>4.1 Maven 项目</h2><p>1. 按照下图操作，创建一个 Maven 测试项目：</p>
+<p><img src="https://source.icode504.com/images/51097c7b9d54dab0fabae08d5def1da5.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/cdfdcb1a68531554244380fbe5ea90d4.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/c81f9b207e89e0293e6a79c8f6fa2f3d.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按 <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>S</kbd> 键进入设置界面。在左侧找到 Maven 配置，然后按照下面的操作步骤，配置 settings.xml：</p>
+<p><img src="https://source.icode504.com/images/41723007fc2b7ccd4e625a11a85c2b19.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 复制如下依赖，粘贴到项目的 pom.xml 文件中：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.zookeeper<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>zookeeper<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.9.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.httpcomponents.client5<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>httpclient5<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.2.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>4. 此时右上角会出现一个 Maven 刷新按钮，点击此按钮就会下载依赖：</p>
+<p><img src="https://source.icode504.com/images/44b77dfe4216b8e99a812406dcb4c858.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 此时点击右下角的进度条，下载链接变成了以 <code>http://localhost:8081</code> 开头的链接：</p>
+<p><img src="https://source.icode504.com/images/f548854940a3934c13f5b8b4c4e5acd5.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 下载完成，打开 Nexus，按照下图所示操作，可以查看到依赖下载到了 Nexus：</p>
+<p><img src="https://source.icode504.com/images/b7348222b9b6b045ad9f135f0c41e9d8.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/e6f2251aa5bed6048f7de755208ef8c0.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="4-2-Gradle-项目"><a href="#4-2-Gradle-项目" class="headerlink" title="4.2 Gradle 项目"></a>4.2 Gradle 项目</h2><p>1. 按照下图操作，创建一个 Gradle 测试项目：</p>
+<p><img src="https://source.icode504.com/images/51097c7b9d54dab0fabae08d5def1da5.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/89abfc920122cb36bd57cb0fb29f53c4.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/2e93122bd66eaa3679867af58f33d12a.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按 <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>S</kbd> 键进入设置界面。在左侧找到 Gradle 配置，然后按照下面的操作步骤，配置 Gradle：</p>
+<p><img src="https://source.icode504.com/images/4cebb7198d86e4fc58dd899bf3fb8f17.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>3. 复制如下依赖，粘贴到项目的 build.gradle 文件的 dependencies 中：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs groovy">implementation <span class="hljs-string">&#x27;mysql:mysql-connector-java:8.0.16&#x27;</span><br>implementation <span class="hljs-string">&#x27;com.alibaba:druid:1.2.8&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>4. 此时右上角会出现一个 Gradle 刷新按钮，点击此按钮就会下载依赖：</p>
+<p><img src="https://source.icode504.com/images/8d8904303247917d68a0ba208e65bac8.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 下载中，请耐心等待。</p>
+<p>6. 下载完成，打开 Nexus，按照下图所示操作，可以查看到 MySQL JDBC 和 Druid 依赖下载到了 Nexus：</p>
+<p><img src="https://source.icode504.com/images/b7348222b9b6b045ad9f135f0c41e9d8.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/de89c2bb68dbb531fd3b225a10c81bac.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2264,7 +2420,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="category-chain-item">集成开发环境</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="category-chain-item">项目构建工具</a>
   
   
 
@@ -2285,7 +2441,11 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Eclipse/" class="print-no-link">#Eclipse</a>
+        <a href="/tags/Maven/" class="print-no-link">#Maven</a>
+      
+        <a href="/tags/Gradle/" class="print-no-link">#Gradle</a>
+      
+        <a href="/tags/Nexus/" class="print-no-link">#Nexus</a>
       
     </div>
   
@@ -2297,8 +2457,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Eclipse安装配置、卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/30.html</div>
+      <div>私服仓库 Nexus 安装与配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/120.html</div>
     </div>
     <div class="license-meta">
       
@@ -2310,7 +2470,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月12日</div>
+          <div>2025年4月22日</div>
         </div>
       
       
@@ -2342,9 +2502,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/110.html" title="Debian 虚拟机修改静态 IP">
+                      <a href="/posts/115.html" title="MySQL 5.7安装教程（Linux通用版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Debian 虚拟机修改静态 IP</span>
+                        <span class="hidden-mobile">MySQL 5.7安装教程（Linux通用版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -2352,8 +2512,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/29.html" title="数组篇-其之一-数组的概念与一维数组">
-                        <span class="hidden-mobile">数组篇-其之一-数组的概念与一维数组</span>
+                      <a href="/posts/114.html" title="Nginx 安装配置教程（Linux通用版）">
+                        <span class="hidden-mobile">Nginx 安装配置教程（Linux通用版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
