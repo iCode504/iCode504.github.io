@@ -327,35 +327,6 @@
   </entry>
   
   <entry>
-    <title>SDKMAN!安装教程</title>
-    <link href="https://www.icode504.com/posts/107.html"/>
-    <id>https://www.icode504.com/posts/107.html</id>
-    <published>2025-04-13T11:55:26.599Z</published>
-    <updated>2025-04-13T11:55:26.603Z</updated>
-    
-    
-    <summary type="html">SDKMAN! 是一个用于管理开发人员工具的多平台命令行工具，支持版本切换和安装。它简化了JVM、Gradle、Maven等SDK的安装和更新，适用于Linux、macOS和Windows子系统。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="Linux" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/"/>
-    
-    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
-    
-    <category term="软件包管理工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="软件包管理工具" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="SDKMAN!" scheme="https://www.icode504.com/tags/SDKMAN/"/>
-    
-    <category term="软件包管理工具" scheme="https://www.icode504.com/tags/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Redis数据类型之基数统计HyperLogLog</title>
     <link href="https://www.icode504.com/posts/106.html"/>
     <id>https://www.icode504.com/posts/106.html</id>
@@ -557,6 +528,31 @@
     <category term="若依" scheme="https://www.icode504.com/tags/%E8%8B%A5%E4%BE%9D/"/>
     
     <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Studio Code安装配置教程（macOS版）</title>
+    <link href="https://www.icode504.com/posts/97.html"/>
+    <id>https://www.icode504.com/posts/97.html</id>
+    <published>2025-04-13T11:03:04.107Z</published>
+    <updated>2025-04-13T11:03:04.107Z</updated>
+    
+    
+    <summary type="html">macOS环境下安装Visual Studio Code并对其做简单的配置。</summary>
+    
+    
+    
+    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
+    
+    <category term="集成开发环境" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
+    
+    <category term="Visual Studio Code" scheme="https://www.icode504.com/tags/Visual-Studio-Code/"/>
     
   </entry>
   
