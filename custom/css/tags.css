@@ -1,0 +1,78 @@
+
+  :root {
+      --tab-border-color: rgba(100, 100, 100, 0.25);
+      --tab-botton-bg: rgba(100, 100, 100, 0.1);
+      --tab-botton-color: var(--text-color);
+      --tab-button-hover-bg: rgba(170, 170, 170, 0.15);
+      --tab-hover-border-color: rgba(95, 255, 121, 0.4);
+      --tab-active-border-color: rgba(55,171,222, 0.9);
+      --tab-button-active-bg: rgba(210, 210, 210, 0.1.5);
+      --tab-to-top-color: var(--text-color);
+      --tab-to-top-hover-color: rgba(203, 60, 60, 1);
+  }
+.tabs {
+  position: relative;
+  margin: 0 0 20px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(200,200,200,0.1);
+  overflow: hidden;
+}
+.tabs > .nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  background: var(--tab-botton-bg);
+}
+.tabs > .nav-tabs > .tab {
+  flex-grow: 1;
+  padding: 8px 18px;
+  border-top: none;
+  border-bottom: 2px solid var(--tab-border-color);
+  border-right: 0.75px solid var(--tab-border-color);
+  border-left: 0.75px solid var(--tab-border-color);
+  background: var(--tab-botton-bg);
+  color: var(--tab-botton-color);
+  line-height: 2;
+  transition: all 0.4s;
+}
+.tabs > .nav-tabs > .tab i {
+  width: 1.5em;
+}
+.tabs > .nav-tabs > .tab.active {
+  border-bottom: 2px solid var(--tab-active-border-color);
+  background: var(--tab-button-active-bg);
+  cursor: default;
+}
+.tabs > .nav-tabs > .tab:not(.active):hover {
+  border-bottom: 2px solid var(--tab-hover-border-color);
+  background: var(--tab-button-hover-bg);
+}
+.tabs > .nav-tabs.no-default ~ .tab-to-top {
+  display: none;
+}
+.tabs > .tab-contents .tab-item-content {
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .tabs > .tab-contents .tab-item-content {
+    padding: 24px 14px;
+  }
+}
+.tabs > .tab-contents .tab-item-content.active {
+  display: block;
+  animation: tabshow 0.5s;
+}
+.tabs > .tab-contents .tab-item-content > :last-child {
+  margin-bottom: 0;
+}
+.tabs > .tab-to-top {
+  padding: 0 16px 10px 0;
+  width: 100%;
+  text-align: right;
+}
+.tabs > .tab-to-top button {
+  display: none;
+}
