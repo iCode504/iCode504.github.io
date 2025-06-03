@@ -2283,12 +2283,11 @@
 <p>说明：配置过程中，具体 IP 地址&#x2F;主机名称以你们的为准，这里我的配置仅作参考。</p>
 </blockquote>
 <p><img src="https://source.icode504.com/images/6540509c9a674e24996bca7368b6755b.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/log.dir</code> 并按一下回车，跳转到74行，修改 <code>process.roles</code> 的值为 <code>broker,controller</code>：</p>
+<p>12. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/log.dir</code> 并按一下回车，跳转到74行，修改 <code>log.dirs</code> 的值为 <code>/usr/local/kafka/data</code>：</p>
 <p><img src="https://source.icode504.com/images/b3a922b9ac8765b9b4ccc1f876e434ce.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 编辑完成后，按 <kbd>Esc</kbd> 键退出编辑模式，左下角输入 <code>:wq</code> 保存并退出。</p>
-<p>14. 切换到 <code>/usr/local</code> 目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local<br></code></pre></td></tr></table></figure>
-
+<p>13. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/advertised.listeners</code> 并按一下回车，跳转到50行，修改 <code>advertised.listeners</code> 的值为 <code>PLAINTEXT://主机名:9092</code> 或者 <code>PLAINTEXT://当前主机IP地址:9092</code>，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/7a35abc035653a92389fd2b6cab64b23.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 编辑完成后，按 <kbd>Esc</kbd> 键退出编辑模式，左下角输入 <code>:wq</code> 保存并退出。</p>
 <p>15. 将 Kafka 安装目录分发给另外两台主机 debian101、debian102：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp -r /usr/local/kafka_2.13-3.0.0 root@debian101:/usr/local<br>scp -r /usr/local/kafka_2.13-3.0.0 root@debian102:/usr/local<br></code></pre></td></tr></table></figure>
 
@@ -2298,7 +2297,8 @@
 <p>17. （在 debian101 和 debian102 上依次执行命令）切换到 Kafka 目录下，编辑 <code>config/server.properties</code> 文件，修改里面的 <code>broker.id</code> 值：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br>vim config/kraft/server.properties<br></code></pre></td></tr></table></figure>
 
-<p>18. 这里我为三台节点设置的 <code>node.id</code> 值如下，仅供参考（切记要保证每一台主机的 <code>node.id</code> 是整数且互不相同）：</p>
+<blockquote>
+<p>这里我为三台节点设置的 <code>node.id</code> 值如下，仅供参考（切记要保证每一台主机的 <code>node.id</code> 是整数且互不相同）：</p>
 <table>
 <thead>
 <tr>
@@ -2319,18 +2319,22 @@
 <td align="center">3</td>
 </tr>
 </tbody></table>
-<p>18. （在 debian100 上执行命令）配置 Kafka 环境变量。创建 <code>/etc/profile.d/kafka_env.sh</code>：</p>
+</blockquote>
+<p>18. （在 debian101 和 debian102 上依次执行命令）将配置文件的 <code>advertised.listeners</code> 修改成 <code>PLAINTEXT://主机名:9092</code>（或者<code>PLAINTEXT://当前主机的IP地址:9092</code>），修改后的效果图如下：</p>
+<p><img src="https://source.icode504.com/images/1ee6fd7a190be101296f2a37eba94df7.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/5bee7c1ddcbbf7d563c3001f34633470.png" srcset="/img/loading.gif" lazyload></p>
+<p>19. （在 debian100 上执行命令）配置 Kafka 环境变量。创建 <code>/etc/profile.d/kafka_env.sh</code>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/kafka_env.sh<br></code></pre></td></tr></table></figure>
 
-<p>19. 复制如下内容：</p>
+<p>20. 复制如下内容：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">KAFKA_HOME</span><br>export KAFKA_HOME=/usr/local/kafka<br>export PATH=$PATH:$KAFKA_HOME/bin<br></code></pre></td></tr></table></figure>
 
-<p>20. 将上一步复制的内容粘贴到脚本文件中，效果图如下，完成后在左下角输入 <code>:wq</code> 保存并退出：</p>
+<p>21. 将上一步复制的内容粘贴到脚本文件中，效果图如下，完成后在左下角输入 <code>:wq</code> 保存并退出：</p>
 <p><img src="https://source.icode504.com/images/79029b88e24cf2b67d2f906b9f93e10a.png" srcset="/img/loading.gif" lazyload></p>
-<p>21. 将环境变量配置文件分发给 debian101 和 debian102：</p>
+<p>22. 将环境变量配置文件分发给 debian101 和 debian102：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp /etc/profile.d/kafka_env.sh root@debian101:/etc/profile.d/<br>scp /etc/profile.d/kafka_env.sh root@debian102:/etc/profile.d/<br></code></pre></td></tr></table></figure>
 
-<p>22. 让三台机器配置的 Kafka 环境变量生效：</p>
+<p>23. 让三台机器配置的 Kafka 环境变量生效：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-built_in">source</span> /etc/profile.d/kafka_env.sh<br></code></pre></td></tr></table></figure>
 
 
@@ -2339,7 +2343,7 @@
 
 <p>2. 初次启动前，需要初始化集群数据目录，依次执行如下命令，生成存储目录唯一 id：</p>
 <blockquote>
-<p>说明：如果此处已经配置，请跳转到第 x 步。</p>
+<p>说明：如果此处已经配置，请跳转到第 4 步。</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br>bin/kafka-storage.sh random-uuid<br></code></pre></td></tr></table></figure>
 
@@ -2348,19 +2352,19 @@
 <p>3. 用这个 id 格式化三个 Kafka 节点存储目录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-storage.sh format -t 上一步的id值 -c config/kraft/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
 
+<p><img src="https://source.icode504.com/images/ea338ed343b241e11c649042324f6c88.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 使用 <code>parallel-execute</code> 依次启动 Kafka：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-start.sh -daemon config/kraft/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>2. 使用 <code>parallel-execute</code> 依次启动 Kafka：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-start.sh -daemon config/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>3. 验证 Kafka 是否启动成功：由于 Kafka 是 Java 应用，因此可以使用 jps 命令查看对应的进程：</p>
+<p>5. 验证 Kafka 是否启动成功：由于 Kafka 是 Java 应用，因此可以使用 jps 命令查看对应的进程：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute jps -l<br></code></pre></td></tr></table></figure>
 
 <p>如果看到了对应的 Kafka 进程，就说明 Kafka 启动成功：</p>
-<p><img src="https://source.icode504.com/images/5344850f9a5ca90d5836315f7d3dfbfd.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. （可选）停止 Kafka 集群，执行如下命令即可停止 Kafka 集群：</p>
+<p><img src="https://source.icode504.com/images/17a9151086834ae707c78d5b784b851a.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. （可选）停止 Kafka 集群，执行如下命令即可停止 Kafka 集群：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-stop.sh&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>5. 等待一段时间后（kafka 停止进程较慢），再次执行 <code>jps -l</code>，看不到 Kafka 相关进程就说明 Kafka 集群已经停止了：</p>
+<p>7. 等待一段时间后（kafka 停止进程较慢），再次执行 <code>jps -l</code>，看不到 Kafka 相关进程就说明 Kafka 集群已经停止了：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute jps -l<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://source.icode504.com/images/dd5b7eba1b2c016bdc20a391dd1221f3.png" srcset="/img/loading.gif" lazyload></p>
