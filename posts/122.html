@@ -20,7 +20,7 @@
   
     <meta name="description" content="本文详细介绍了在Linux系统下安装和配置Kafka集群的步骤，涵盖环境准备、Zookeeper部署、Kafka配置及启动等内容，适用于搭建基于Zookeeper依赖的Kafka集群环境。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）">
+<meta property="og:title" content="Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）">
 <meta property="og:url" content="https://www.icode504.com/posts/122.html">
 <meta property="og:site_name" content="iCode504个人博客">
 <meta property="og:description" content="本文详细介绍了在Linux系统下安装和配置Kafka集群的步骤，涵盖环境准备、Zookeeper部署、Kafka配置及启动等内容，适用于搭建基于Zookeeper依赖的Kafka集群环境。">
@@ -39,7 +39,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper） - iCode504个人博客</title>
+  <title>Kafka集群安装和配置教程（Linux通用版，Kraft模式启动） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</span>
+            <span id="subtitle">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</span>
           
         </div>
 
@@ -428,10 +428,10 @@
     
       
       
-        <a href="/posts/122.html" title="Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）"
+        <a href="/posts/122.html" title="Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</span>
+          <span class="category-post">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</span>
         </a>
       
     
@@ -2177,7 +2177,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</h1>
+            <h1 id="seo-header">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</h1>
             
               <p class="note note-info">
                 
@@ -2194,7 +2194,7 @@
 <p>Kafka集群是由多个Broker（服务器节点）组成的分布式系统，通过横向扩展提升整体性能和容错能力。集群依赖ZooKeeper（或KRaft模式）管理元数据、选举控制器（Controller）和协调分区副本。每个主题的分区（Partition）会被复制到多个Broker上形成副本（Replica），其中领导者副本（Leader）处理读写请求，追随者副本（Follower）同步数据，确保数据高可用。集群支持动态扩展节点、自动故障转移（如Leader重选举）和负载均衡，适合大规模、高并发的实时数据处理场景。</p>
 <p>Kafka 2.8.0 以前需要依赖 Zookeeper 启动，本文介绍的是 Linux 环境下 Kafka 集群安装和配置教程。</p>
 <blockquote>
-<p>说明：在 Kafka 2.8.0 版本以后，官方引入了 KRaft 模式，不需要再依赖 Zookeeper，如需安装老版本，请点击右侧链接查看安装教程：<a href="./123.html">点我查看</a></p>
+<p>说明：在 Kafka 2.8.0 版本以前，需要依赖 Zookeeper 启动，需要的小伙伴点击右侧链家查看安装教程：<a href="./123.html">点我查看</a></p>
 </blockquote>
 <h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请准备 3 台虚拟机，如需快速克隆并配置虚拟机相关设置，请点击右侧链接查看教程：<a href="./118.html">点我查看</a></p>
 <blockquote>
@@ -2434,7 +2434,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</div>
+      <div>Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</div>
       <div>https://www.icode504.com/posts/122.html</div>
     </div>
     <div class="license-meta">
