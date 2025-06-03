@@ -1,0 +1,2845 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/blog-logo-tab.png">
+  <link rel="icon" href="/img/blog-logo-tab.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="iCode504">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="本文详细介绍了在Linux系统下安装和配置Kafka集群的步骤，涵盖环境准备、Zookeeper部署、Kafka配置及启动等内容，适用于搭建基于Zookeeper依赖的Kafka集群环境。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）">
+<meta property="og:url" content="https://www.icode504.com/posts/122.html">
+<meta property="og:site_name" content="iCode504个人博客">
+<meta property="og:description" content="本文详细介绍了在Linux系统下安装和配置Kafka集群的步骤，涵盖环境准备、Zookeeper部署、Kafka配置及启动等内容，适用于搭建基于Zookeeper依赖的Kafka集群环境。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://source.icode504.com/images/d0975788a23e64243368daf6978c78a6.png">
+<meta property="og:image" content="https://source.icode504.com/images/ccbf0916e6b24ae272e164207b0cfc86.png">
+<meta property="og:image" content="https://source.icode504.com/images/af36251351193002dd57c7cfa188e08e.gif">
+<meta property="og:image" content="https://source.icode504.com/images/87a9d5e96b083b7379c470cf4e4186fe.png">
+<meta property="og:image" content="https://source.icode504.com/images/cccec53eb160c9f9c6654b849e2a61c2.png">
+<meta property="og:image" content="https://source.icode504.com/images/aeb48fbfb6ae8b7c6afa04a800e89366.png">
+<meta property="og:image" content="https://source.icode504.com/images/f23259aeeb5f7d0c5282e547f0b6a688.png">
+<meta property="og:image" content="https://source.icode504.com/images/6540509c9a674e24996bca7368b6755b.png">
+<meta property="og:image" content="https://source.icode504.com/images/b3a922b9ac8765b9b4ccc1f876e434ce.png">
+<meta property="og:image" content="https://source.icode504.com/images/79029b88e24cf2b67d2f906b9f93e10a.png">
+<meta property="og:image" content="https://source.icode504.com/images/6aa98c6794acbc39582fe5dbd0591120.png">
+<meta property="og:image" content="https://source.icode504.com/images/5344850f9a5ca90d5836315f7d3dfbfd.png">
+<meta property="og:image" content="https://source.icode504.com/images/dd5b7eba1b2c016bdc20a391dd1221f3.png">
+<meta property="article:published_time" content="2025-05-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-21T16:00:00.000Z">
+<meta property="article:author" content="iCode504">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Kafka">
+<meta property="article:tag" content="Kafka集群">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://source.icode504.com/images/d0975788a23e64243368daf6978c78a6.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper） - iCode504个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/custom/css/tags.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4420931_mpqdtillgv.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.icode504.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="iCode504个人博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>iCode504学习小站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-22 00:00" pubdate>
+          2025年5月22日
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件安装"
+        id="heading-6aacb115d632dc4e1e2e8f804a16c97c" role="tab" data-toggle="collapse" href="#collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+        aria-expanded="true"
+      >
+        软件安装
+        <span class="list-group-count">(61)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-6aacb115d632dc4e1e2e8f804a16c97c"
+           role="tabpanel" aria-labelledby="heading-6aacb115d632dc4e1e2e8f804a16c97c">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
+        id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
+        aria-expanded="true"
+      >
+        Linux
+        <span class="list-group-count">(15)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
+           role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
+        id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
+        aria-expanded="true"
+      >
+        中间件
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
+           role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="分布式协调服务"
+        id="heading-e28708e1d361d198ca97587b7cc8d380" role="tab" data-toggle="collapse" href="#collapse-e28708e1d361d198ca97587b7cc8d380"
+        aria-expanded="false"
+      >
+        分布式协调服务
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-e28708e1d361d198ca97587b7cc8d380"
+           role="tabpanel" aria-labelledby="heading-e28708e1d361d198ca97587b7cc8d380">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/116.html" title="Zookeeper 安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Zookeeper 安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/119.html" title="Zookeeper 集群配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Zookeeper 集群配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="消息队列"
+        id="heading-8bedb7aae7ae74964d0363a1556c7a59" role="tab" data-toggle="collapse" href="#collapse-8bedb7aae7ae74964d0363a1556c7a59"
+        aria-expanded="true"
+      >
+        消息队列
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-8bedb7aae7ae74964d0363a1556c7a59"
+           role="tabpanel" aria-labelledby="heading-8bedb7aae7ae74964d0363a1556c7a59">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/122.html" title="Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架"
+        id="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6" role="tab" data-toggle="collapse" href="#collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+        aria-expanded="false"
+      >
+        前端框架
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+           role="tabpanel" aria-labelledby="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/74.html" title="Node.js安装、配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Node.js安装、配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="容器化"
+        id="heading-09919c03105ff63440d33b04b664e3ce" role="tab" data-toggle="collapse" href="#collapse-09919c03105ff63440d33b04b664e3ce"
+        aria-expanded="false"
+      >
+        容器化
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-09919c03105ff63440d33b04b664e3ce"
+           role="tabpanel" aria-labelledby="heading-09919c03105ff63440d33b04b664e3ce">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Docker"
+        id="heading-c5fd214cdd0d2b3b4272e73b022ba5c2" role="tab" data-toggle="collapse" href="#collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
+        aria-expanded="false"
+      >
+        Docker
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
+           role="tabpanel" aria-labelledby="heading-c5fd214cdd0d2b3b4272e73b022ba5c2">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/70.html" title="Docker安装和配置教程（Linux CentOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Docker安装和配置教程（Linux CentOS版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/75.html" title="Docker安装和配置教程（适用于Linux Ubuntu和Debian）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Docker安装和配置教程（适用于Linux Ubuntu和Debian）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
+        id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
+        aria-expanded="false"
+      >
+        数据库
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-68051bf4aa2743b030984b694628ee9c"
+           role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="关系型数据库"
+        id="heading-60169fae6a50ce3d2f41bf410ddfd5b3" role="tab" data-toggle="collapse" href="#collapse-60169fae6a50ce3d2f41bf410ddfd5b3"
+        aria-expanded="false"
+      >
+        关系型数据库
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-60169fae6a50ce3d2f41bf410ddfd5b3"
+           role="tabpanel" aria-labelledby="heading-60169fae6a50ce3d2f41bf410ddfd5b3">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/104.html" title="PostgreSQL安装和配置教程（Linux版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">PostgreSQL安装和配置教程（Linux版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/115.html" title="MySQL 5.7安装教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MySQL 5.7安装教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="非关系型数据库（NoSQL）"
+        id="heading-758e06fe79f650731ef27d2600ac8b03" role="tab" data-toggle="collapse" href="#collapse-758e06fe79f650731ef27d2600ac8b03"
+        aria-expanded="false"
+      >
+        非关系型数据库（NoSQL）
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-758e06fe79f650731ef27d2600ac8b03"
+           role="tabpanel" aria-labelledby="heading-758e06fe79f650731ef27d2600ac8b03">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/83.html" title="Redis单机版安装教程（Linux版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Redis单机版安装教程（Linux版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务器软件"
+        id="heading-ed4cc9997b696c46ec4b0134efdd5574" role="tab" data-toggle="collapse" href="#collapse-ed4cc9997b696c46ec4b0134efdd5574"
+        aria-expanded="false"
+      >
+        服务器软件
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-ed4cc9997b696c46ec4b0134efdd5574"
+           role="tabpanel" aria-labelledby="heading-ed4cc9997b696c46ec4b0134efdd5574">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/114.html" title="Nginx 安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Nginx 安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="版本控制工具"
+        id="heading-1ae8524e24b2cf5c18551a8a4c8a381e" role="tab" data-toggle="collapse" href="#collapse-1ae8524e24b2cf5c18551a8a4c8a381e"
+        aria-expanded="false"
+      >
+        版本控制工具
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-1ae8524e24b2cf5c18551a8a4c8a381e"
+           role="tabpanel" aria-labelledby="heading-1ae8524e24b2cf5c18551a8a4c8a381e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/72.html" title="Git安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
+        id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+        aria-expanded="false"
+      >
+        编程语言
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+           role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
+        id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
+        aria-expanded="false"
+      >
+        Java/JDK
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
+           role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/55.html" title="JDK 8安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 8安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件包管理工具"
+        id="heading-adb66ae224793ec6faf3dd45b0d03d25" role="tab" data-toggle="collapse" href="#collapse-adb66ae224793ec6faf3dd45b0d03d25"
+        aria-expanded="false"
+      >
+        软件包管理工具
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
+           role="tabpanel" aria-labelledby="heading-adb66ae224793ec6faf3dd45b0d03d25">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/107.html" title="SDKMAN!安装教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">SDKMAN!安装教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
+        id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+        aria-expanded="false"
+      >
+        项目构建工具
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+           role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/56.html" title="Maven安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Maven安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/57.html" title="Gradle安装配置教程（Linux通用版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Gradle安装配置教程（Linux通用版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
+        id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
+        aria-expanded="false"
+      >
+        Windows
+        <span class="list-group-count">(35)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+           role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
+        id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
+        aria-expanded="false"
+      >
+        中间件
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
+           role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务注册和配置中心"
+        id="heading-1bd6c58ba4fcd3b64f2594c658c7fddc" role="tab" data-toggle="collapse" href="#collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
+        aria-expanded="false"
+      >
+        服务注册和配置中心
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
+           role="tabpanel" aria-labelledby="heading-1bd6c58ba4fcd3b64f2594c658c7fddc">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/109.html" title="Consul安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Consul安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架"
+        id="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6" role="tab" data-toggle="collapse" href="#collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+        aria-expanded="false"
+      >
+        前端框架
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+           role="tabpanel" aria-labelledby="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/67.html" title="Node.js安装、配置和卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Node.js安装、配置和卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
+        id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
+        aria-expanded="false"
+      >
+        常用工具
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+           role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/25.html" title="访问Github卡顿甚至进不去的解决办法（适用于Windows）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于Windows）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/31.html" title="卸载神器：Geek Uninstaller安装使用教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">卸载神器：Geek Uninstaller安装使用教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/71.html" title="qBittorrent安装教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">qBittorrent安装教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
+        id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
+        aria-expanded="false"
+      >
+        数据库工具
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+           role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/20.html" title="MySQL 8.0安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MySQL 8.0安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/77.html" title="数据库管理软件DBeaver安装、配置和卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据库管理软件DBeaver安装、配置和卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/35.html" title="PostgreSQL安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">PostgreSQL安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/85.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（Window版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/112.html" title="MySQL 5.7安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MySQL 5.7安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务器&amp;虚拟机"
+        id="heading-7ec8cc6b4757baf09bb338cb829a21d5" role="tab" data-toggle="collapse" href="#collapse-7ec8cc6b4757baf09bb338cb829a21d5"
+        aria-expanded="false"
+      >
+        服务器&amp;虚拟机
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-7ec8cc6b4757baf09bb338cb829a21d5"
+           role="tabpanel" aria-labelledby="heading-7ec8cc6b4757baf09bb338cb829a21d5">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/41.html" title="VMware Workstation安装+彻底卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">VMware Workstation安装+彻底卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/42.html" title="Winodws Subsystem for Linux（WSL）安装教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Winodws Subsystem for Linux（WSL）安装教程</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/47.html" title="Electerm安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Electerm安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/64.html" title="Tomcat安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Tomcat安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="版本控制工具"
+        id="heading-1ae8524e24b2cf5c18551a8a4c8a381e" role="tab" data-toggle="collapse" href="#collapse-1ae8524e24b2cf5c18551a8a4c8a381e"
+        aria-expanded="false"
+      >
+        版本控制工具
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-1ae8524e24b2cf5c18551a8a4c8a381e"
+           role="tabpanel" aria-labelledby="heading-1ae8524e24b2cf5c18551a8a4c8a381e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/69.html" title="Git安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
+        id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+        aria-expanded="false"
+      >
+        编程语言
+        <span class="list-group-count">(11)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+           role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="C/C++"
+        id="heading-915d356c4d213cec76d72f1cc1ec13f5" role="tab" data-toggle="collapse" href="#collapse-915d356c4d213cec76d72f1cc1ec13f5"
+        aria-expanded="false"
+      >
+        C/C++
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-915d356c4d213cec76d72f1cc1ec13f5"
+           role="tabpanel" aria-labelledby="heading-915d356c4d213cec76d72f1cc1ec13f5">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/39.html" title="MinGW安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MinGW安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Erlang"
+        id="heading-f7e853158b776246c53345b938159cc1" role="tab" data-toggle="collapse" href="#collapse-f7e853158b776246c53345b938159cc1"
+        aria-expanded="false"
+      >
+        Erlang
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-f7e853158b776246c53345b938159cc1"
+           role="tabpanel" aria-labelledby="heading-f7e853158b776246c53345b938159cc1">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/121.html" title="Erlang 安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Erlang 安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Golang"
+        id="heading-eda14e187a768b38eda999457c9cca1e" role="tab" data-toggle="collapse" href="#collapse-eda14e187a768b38eda999457c9cca1e"
+        aria-expanded="false"
+      >
+        Golang
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-eda14e187a768b38eda999457c9cca1e"
+           role="tabpanel" aria-labelledby="heading-eda14e187a768b38eda999457c9cca1e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/32.html" title="Golang安装、配置和卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Golang安装、配置和卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Groovy"
+        id="heading-2d19c57fdd4fdc270c971f69ee8d5169" role="tab" data-toggle="collapse" href="#collapse-2d19c57fdd4fdc270c971f69ee8d5169"
+        aria-expanded="false"
+      >
+        Groovy
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-2d19c57fdd4fdc270c971f69ee8d5169"
+           role="tabpanel" aria-labelledby="heading-2d19c57fdd4fdc270c971f69ee8d5169">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/34.html" title="Groovy安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Groovy安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
+        id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
+        aria-expanded="false"
+      >
+        Java/JDK
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
+           role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/1.html" title="JDK 8安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 8安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 17安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 21安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/28.html" title="JDK 11安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 11安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Lua"
+        id="heading-0ae9478a1db9d1e2c48efa49eac1c7c6" role="tab" data-toggle="collapse" href="#collapse-0ae9478a1db9d1e2c48efa49eac1c7c6"
+        aria-expanded="false"
+      >
+        Lua
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-0ae9478a1db9d1e2c48efa49eac1c7c6"
+           role="tabpanel" aria-labelledby="heading-0ae9478a1db9d1e2c48efa49eac1c7c6">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/95.html" title="Lua安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Lua安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Python"
+        id="heading-a7f5f35426b927411fc9231b56382173" role="tab" data-toggle="collapse" href="#collapse-a7f5f35426b927411fc9231b56382173"
+        aria-expanded="false"
+      >
+        Python
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a7f5f35426b927411fc9231b56382173"
+           role="tabpanel" aria-labelledby="heading-a7f5f35426b927411fc9231b56382173">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/49.html" title="Python3安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python3安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Scala"
+        id="heading-3012dcff1477e1feaab81764587c9bbd" role="tab" data-toggle="collapse" href="#collapse-3012dcff1477e1feaab81764587c9bbd"
+        aria-expanded="false"
+      >
+        Scala
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3012dcff1477e1feaab81764587c9bbd"
+           role="tabpanel" aria-labelledby="heading-3012dcff1477e1feaab81764587c9bbd">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/15.html" title="Scala 2安装教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Scala 2安装教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="集成开发环境"
+        id="heading-bf3f16ac0114b2b7279f4887db8a2933" role="tab" data-toggle="collapse" href="#collapse-bf3f16ac0114b2b7279f4887db8a2933"
+        aria-expanded="false"
+      >
+        集成开发环境
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
+           role="tabpanel" aria-labelledby="heading-bf3f16ac0114b2b7279f4887db8a2933">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/14.html" title="Intellij IDEA 2021.1.3安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA 2021.1.3安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/30.html" title="Eclipse安装配置、卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Eclipse安装配置、卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/38.html" title="Visual Studio Code安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Visual Studio Code安装配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/50.html" title="Pycharm的安装、配置与卸载教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Pycharm的安装、配置与卸载教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/66.html" title="Visual Studio安装配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Visual Studio安装配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
+        id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+        aria-expanded="false"
+      >
+        项目构建工具
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+           role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/23.html" title="Gradle安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Gradle安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/22.html" title="Maven安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Maven安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/120.html" title="私服仓库 Nexus 安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">私服仓库 Nexus 安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="macOS"
+        id="heading-8b06df0295926efcdcc1f9e13c49848e" role="tab" data-toggle="collapse" href="#collapse-8b06df0295926efcdcc1f9e13c49848e"
+        aria-expanded="false"
+      >
+        macOS
+        <span class="list-group-count">(13)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-8b06df0295926efcdcc1f9e13c49848e"
+           role="tabpanel" aria-labelledby="heading-8b06df0295926efcdcc1f9e13c49848e">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架工具"
+        id="heading-735090e03c20badeb2d3daa204b219ae" role="tab" data-toggle="collapse" href="#collapse-735090e03c20badeb2d3daa204b219ae"
+        aria-expanded="false"
+      >
+        前端框架工具
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-735090e03c20badeb2d3daa204b219ae"
+           role="tabpanel" aria-labelledby="heading-735090e03c20badeb2d3daa204b219ae">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/84.html" title="Node.js安装、配置教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Node.js安装、配置教程（macOS版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具"
+        id="heading-3e90c5117dc0fe9d71410e448d766e52" role="tab" data-toggle="collapse" href="#collapse-3e90c5117dc0fe9d71410e448d766e52"
+        aria-expanded="false"
+      >
+        常用工具
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3e90c5117dc0fe9d71410e448d766e52"
+           role="tabpanel" aria-labelledby="heading-3e90c5117dc0fe9d71410e448d766e52">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/24.html" title="下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和macOS）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/80.html" title="访问Github卡顿甚至进不去的解决办法（适用于macOS）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">访问Github卡顿甚至进不去的解决办法（适用于macOS）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
+        id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
+        aria-expanded="false"
+      >
+        数据库工具
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+           role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/68.html" title="MySQL 8.0安装、配置与卸载教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MySQL 8.0安装、配置与卸载教程（macOS版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/81.html" title="数据库管理软件DBeaver安装、配置和卸载教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据库管理软件DBeaver安装、配置和卸载教程（macOS版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/108.html" title="Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Redis远程连接工具TinyRDM安装、配置和卸载教程（macOS版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务器&amp;虚拟机"
+        id="heading-7ec8cc6b4757baf09bb338cb829a21d5" role="tab" data-toggle="collapse" href="#collapse-7ec8cc6b4757baf09bb338cb829a21d5"
+        aria-expanded="false"
+      >
+        服务器&amp;虚拟机
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-7ec8cc6b4757baf09bb338cb829a21d5"
+           role="tabpanel" aria-labelledby="heading-7ec8cc6b4757baf09bb338cb829a21d5">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/99.html" title="Electerm安装、配置与卸载教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Electerm安装、配置与卸载教程（macOS版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
+        id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+        aria-expanded="false"
+      >
+        编程语言
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+           role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java/JDK"
+        id="heading-ae29470126f397245727f40bf008b9cc" role="tab" data-toggle="collapse" href="#collapse-ae29470126f397245727f40bf008b9cc"
+        aria-expanded="false"
+      >
+        Java/JDK
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-ae29470126f397245727f40bf008b9cc"
+           role="tabpanel" aria-labelledby="heading-ae29470126f397245727f40bf008b9cc">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/78.html" title="JDK 8安装配置教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">JDK 8安装配置教程（macOS版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件包管理工具"
+        id="heading-adb66ae224793ec6faf3dd45b0d03d25" role="tab" data-toggle="collapse" href="#collapse-adb66ae224793ec6faf3dd45b0d03d25"
+        aria-expanded="false"
+      >
+        软件包管理工具
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-adb66ae224793ec6faf3dd45b0d03d25"
+           role="tabpanel" aria-labelledby="heading-adb66ae224793ec6faf3dd45b0d03d25">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/82.html" title="软件包管理器Homebrew安装教程（适用于macOS系统）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">软件包管理器Homebrew安装教程（适用于macOS系统）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/107.html" title="SDKMAN!安装教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">SDKMAN!安装教程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="集成开发环境"
+        id="heading-bf3f16ac0114b2b7279f4887db8a2933" role="tab" data-toggle="collapse" href="#collapse-bf3f16ac0114b2b7279f4887db8a2933"
+        aria-expanded="false"
+      >
+        集成开发环境
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-bf3f16ac0114b2b7279f4887db8a2933"
+           role="tabpanel" aria-labelledby="heading-bf3f16ac0114b2b7279f4887db8a2933">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/79.html" title="Intellij IDEA安装配置教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Intellij IDEA安装配置教程（macOS版）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/97.html" title="Visual Studio Code安装配置教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Visual Studio Code安装配置教程（macOS版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="项目构建工具"
+        id="heading-edb51b5e4feb2ecfd3c535fa941d6757" role="tab" data-toggle="collapse" href="#collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+        aria-expanded="false"
+      >
+        项目构建工具
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-edb51b5e4feb2ecfd3c535fa941d6757"
+           role="tabpanel" aria-labelledby="heading-edb51b5e4feb2ecfd3c535fa941d6757">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/96.html" title="Maven安装和配置教程（macOS版）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Maven安装和配置教程（macOS版）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>Kafka 是一个开源的分布式事件流处理平台，由LinkedIn开发并捐赠给Apache基金会。它以高吞吐、低延迟和可扩展性著称，主要用于实时数据管道和流式数据处理。Kafka 的核心设计基于发布-订阅模型，数据以主题（Topic）为单位分类存储，生产者（Producer）将消息发布到主题，消费者（Consumer）订阅并消费这些消息。其持久化日志存储和分区机制保证了数据的可靠性和并行处理能力，适用于日志聚合、指标监控、事件溯源等场景。</p>
+<p>Kafka集群是由多个Broker（服务器节点）组成的分布式系统，通过横向扩展提升整体性能和容错能力。集群依赖ZooKeeper（或KRaft模式）管理元数据、选举控制器（Controller）和协调分区副本。每个主题的分区（Partition）会被复制到多个Broker上形成副本（Replica），其中领导者副本（Leader）处理读写请求，追随者副本（Follower）同步数据，确保数据高可用。集群支持动态扩展节点、自动故障转移（如Leader重选举）和负载均衡，适合大规模、高并发的实时数据处理场景。</p>
+<p>Kafka 2.8.0 以前需要依赖 Zookeeper 启动，本文介绍的是 Linux 环境下 Kafka 集群安装和配置教程。</p>
+<blockquote>
+<p>说明：在 Kafka 2.8.0 版本以后，官方引入了 KRaft 模式，不需要再依赖 Zookeeper，如需安装老版本，请点击右侧链接查看安装教程：<a href="./123.html">点我查看</a></p>
+</blockquote>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请准备 3 台虚拟机，如需快速克隆并配置虚拟机相关设置，请点击右侧链接查看教程：<a href="./118.html">点我查看</a></p>
+<blockquote>
+<p>说明：这里我的 3 台主机信息如下，具体情况以你们的为准：</p>
+<table>
+<thead>
+<tr>
+<th align="center">主机名称</th>
+<th align="center">IP地址</th>
+<th align="center">操作系统</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">debian100</td>
+<td align="center">192.168.40.100</td>
+<td align="center"><a href="./52.html">Debian</a></td>
+<td align="center">这台主机包含了<a href="./118.html#%E5%85%AD%E3%80%81%E5%A4%9A%E5%8F%B0%E4%B8%BB%E6%9C%BA%E5%90%8C%E6%97%B6%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4">parallel-execute</a>命令，可以在三台主机同时执行一条命令</td>
+</tr>
+<tr>
+<td align="center">debian101</td>
+<td align="center">192.168.40.101</td>
+<td align="center"><a href="./52.html">Debian</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">debian102</td>
+<td align="center">192.168.40.102</td>
+<td align="center"><a href="./52.html">Debian</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>2. 本文使用 Electerm 作为远程登录和文件传输工具，需要安装的小伙伴根据自己电脑操作系统查看对应的教程：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="./47.html">点我查看</a></td>
+<td align="center"><a href="./99.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>3. 推荐本地安装 NDM（Neat Download Manger），可以加快文件下载速度：<a href="./24.html">点我查看</a></p>
+<h1 id="二、下载-Kafka-安装包"><a href="#二、下载-Kafka-安装包" class="headerlink" title="二、下载 Kafka 安装包"></a>二、下载 Kafka 安装包</h1><p>1. 点击右侧链接进入官网下载页：<a target="_blank" rel="noopener" href="https://kafka.apache.org/downloads">点我查看</a></p>
+<p>2. 这里我们下载的是 Kafka 3.0.0 版本的安装包：</p>
+<p><img src="https://source.icode504.com/images/d0975788a23e64243368daf6978c78a6.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 下载完成后，将文件的后缀名改成 <code>.tgz</code>：</p>
+<p><img src="https://source.icode504.com/images/ccbf0916e6b24ae272e164207b0cfc86.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 使用 Electerm 将安装包远程发送到 debian100 上：</p>
+<p><img src="https://source.icode504.com/images/af36251351193002dd57c7cfa188e08e.gif" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、修改配置文件"><a href="#三、修改配置文件" class="headerlink" title="三、修改配置文件"></a>三、修改配置文件</h1><p>1. 将下载好的安装包解压到 <code>/usr/local</code> 目录下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf kafka_2.13-3.0.0.tgz -C /usr/local/<br></code></pre></td></tr></table></figure>
+
+<p>2. 解压完成，切换到 <code>/usr/local</code> 目录下，查看当前目录下的文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local<br><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/87a9d5e96b083b7379c470cf4e4186fe.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 这里对 <code>kafka_2.13-3.0.0</code> 文件夹创建一个软连接（类似 Windows 的桌面快捷方式）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s /usr/local/kafka_2.13-3.0.0 /usr/local/kafka<br></code></pre></td></tr></table></figure>
+
+<p>4. 此时再次执行 <code>ls</code> 就可以看到软连接了：</p>
+<p><img src="https://source.icode504.com/images/cccec53eb160c9f9c6654b849e2a61c2.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 进入 Kafka 安装目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br></code></pre></td></tr></table></figure>
+
+<p>6. 在当前目录下创建一个 <code>data</code> 文件夹，用于存储 Kafka 数据：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> data<br></code></pre></td></tr></table></figure>
+
+<p>7. 编辑 <code>config/kraft</code> 目录下的 <code>server.properties</code> 配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim config/kraft/server.properties<br></code></pre></td></tr></table></figure>
+
+<p>8. 在左下角输入 <code>:set nu</code> 并按一下回车，显示行号：</p>
+<p><img src="https://source.icode504.com/images/aeb48fbfb6ae8b7c6afa04a800e89366.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 在左下角输入 <code>/node.id</code> 并按一下回车，跳转到27行，修改 <code>node.id</code> 的值：</p>
+<blockquote>
+<p>说明：<code>node.id</code> 是 Kafka 集群中每一个节点的唯一标识，每一个节点对应的值都必须是一个唯一的整数。后续分发过程中还需要对这个 <code>node.id</code> 进一步配置。</p>
+</blockquote>
+<p>10. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/process.roles</code> 并按一下回车，跳转到24行，修改 <code>process.roles</code> 的值为 <code>broker,controller</code>：</p>
+<p><img src="https://source.icode504.com/images/f23259aeeb5f7d0c5282e547f0b6a688.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式。配置 Controller 链接信息，在左下角输入 <code>/controller.quorm.voters</code> 并按一下回车，跳转到第30行，修改 <code>controller.quorm.voters</code> 的值为** node.id@IP地址:9093**（主机名:9093也可以，但是前提需要到 <code>/etc/hosts</code> 文件配置），效果图如下：</p>
+<blockquote>
+<p>说明：配置过程中，具体 IP 地址&#x2F;主机名称以你们的为准，这里我的配置仅作参考。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/6540509c9a674e24996bca7368b6755b.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/log.dir</code> 并按一下回车，跳转到74行，修改 <code>process.roles</code> 的值为 <code>broker,controller</code>：</p>
+<p><img src="https://source.icode504.com/images/b3a922b9ac8765b9b4ccc1f876e434ce.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 编辑完成后，按 <kbd>Esc</kbd> 键退出编辑模式，左下角输入 <code>:wq</code> 保存并退出。</p>
+<p>14. 切换到 <code>/usr/local</code> 目录下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local<br></code></pre></td></tr></table></figure>
+
+<p>15. 将 Kafka 安装目录分发给另外两台主机 debian101、debian102：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp -r /usr/local/kafka_2.13-3.0.0 root@debian101:/usr/local<br>scp -r /usr/local/kafka_2.13-3.0.0 root@debian102:/usr/local<br></code></pre></td></tr></table></figure>
+
+<p>16. （在 debian100 上执行命令）为 debian101、debian102 配置软连接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-built_in">ln</span> -sf /usr/local/kafka_2.13-3.0.0 /usr/local/kafka<br></code></pre></td></tr></table></figure>
+
+<p>17. （在 debian101 和 debian102 上依次执行命令）切换到 Kafka 目录下，编辑 <code>config/server.properties</code> 文件，修改里面的 <code>broker.id</code> 值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br>vim config/kraft/server.properties<br></code></pre></td></tr></table></figure>
+
+<p>18. 这里我为三台节点设置的 <code>node.id</code> 值如下，仅供参考（切记要保证每一台主机的 <code>node.id</code> 是整数且互不相同）：</p>
+<table>
+<thead>
+<tr>
+<th align="center">主机名称</th>
+<th align="center">node.id值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">debian100</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">debian101</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">debian102</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<p>18. （在 debian100 上执行命令）配置 Kafka 环境变量。创建 <code>/etc/profile.d/kafka_env.sh</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/kafka_env.sh<br></code></pre></td></tr></table></figure>
+
+<p>19. 复制如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">KAFKA_HOME</span><br>export KAFKA_HOME=/usr/local/kafka<br>export PATH=$PATH:$KAFKA_HOME/bin<br></code></pre></td></tr></table></figure>
+
+<p>20. 将上一步复制的内容粘贴到脚本文件中，效果图如下，完成后在左下角输入 <code>:wq</code> 保存并退出：</p>
+<p><img src="https://source.icode504.com/images/79029b88e24cf2b67d2f906b9f93e10a.png" srcset="/img/loading.gif" lazyload></p>
+<p>21. 将环境变量配置文件分发给 debian101 和 debian102：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp /etc/profile.d/kafka_env.sh root@debian101:/etc/profile.d/<br>scp /etc/profile.d/kafka_env.sh root@debian102:/etc/profile.d/<br></code></pre></td></tr></table></figure>
+
+<p>22. 让三台机器配置的 Kafka 环境变量生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-built_in">source</span> /etc/profile.d/kafka_env.sh<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="四、启动-Kafka-集群"><a href="#四、启动-Kafka-集群" class="headerlink" title="四、启动 Kafka 集群"></a>四、启动 Kafka 集群</h1><p>1. （在 debian100 上执行命令）依次开放三台主机的 9092、9093 端口（Kafka 默认端口）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;ufw allow 9092/tcp&quot;</span><br>parallel-execute <span class="hljs-string">&quot;ufw allow 9093/tcp&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>2. 初次启动前，需要初始化集群数据目录，依次执行如下命令，生成存储目录唯一 id：</p>
+<blockquote>
+<p>说明：如果此处已经配置，请跳转到第 x 步。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br>bin/kafka-storage.sh random-uuid<br></code></pre></td></tr></table></figure>
+
+<p>这里生成了一个 id，下一步会用到（具体的 id 值以你们的为准）：</p>
+<p><img src="https://source.icode504.com/images/6aa98c6794acbc39582fe5dbd0591120.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 用这个 id 格式化三个 Kafka 节点存储目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-storage.sh format -t 上一步的id值 -c config/kraft/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
+
+
+<p>2. 使用 <code>parallel-execute</code> 依次启动 Kafka：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-start.sh -daemon config/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>3. 验证 Kafka 是否启动成功：由于 Kafka 是 Java 应用，因此可以使用 jps 命令查看对应的进程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute jps -l<br></code></pre></td></tr></table></figure>
+
+<p>如果看到了对应的 Kafka 进程，就说明 Kafka 启动成功：</p>
+<p><img src="https://source.icode504.com/images/5344850f9a5ca90d5836315f7d3dfbfd.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. （可选）停止 Kafka 集群，执行如下命令即可停止 Kafka 集群：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-stop.sh&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>5. 等待一段时间后（kafka 停止进程较慢），再次执行 <code>jps -l</code>，看不到 Kafka 相关进程就说明 Kafka 集群已经停止了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute jps -l<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/dd5b7eba1b2c016bdc20a391dd1221f3.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="category-chain-item">软件安装</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="category-chain-item">消息队列</a>
+  
+  
+
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+        <a href="/tags/Kafka/" class="print-no-link">#Kafka</a>
+      
+        <a href="/tags/Kafka%E9%9B%86%E7%BE%A4/" class="print-no-link">#Kafka集群</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Kafka集群安装和配置教程（Linux通用版，依赖Zookeeper）</div>
+      <div>https://www.icode504.com/posts/122.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>iCode504</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年5月22日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/121.html" title="Erlang 安装配置教程（Windows版）">
+                        <span class="hidden-mobile">Erlang 安装配置教程（Windows版）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/10.7.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://hexo.fluid-dev.com/docs/guide/" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      吉ICP备2023009024号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/=%20/custom/js/tags.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
