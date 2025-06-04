@@ -2194,7 +2194,7 @@
 <p>Kafka集群是由多个Broker（服务器节点）组成的分布式系统，通过横向扩展提升整体性能和容错能力。集群依赖ZooKeeper（或KRaft模式）管理元数据、选举控制器（Controller）和协调分区副本。每个主题的分区（Partition）会被复制到多个Broker上形成副本（Replica），其中领导者副本（Leader）处理读写请求，追随者副本（Follower）同步数据，确保数据高可用。集群支持动态扩展节点、自动故障转移（如Leader重选举）和负载均衡，适合大规模、高并发的实时数据处理场景。</p>
 <p>Kafka 2.8.0 以前需要依赖 Zookeeper 启动，本文介绍的是 Linux 环境下 Kafka 集群安装和配置教程。</p>
 <blockquote>
-<p>说明：在 Kafka 2.8.0 版本以前，需要依赖 Zookeeper 启动，需要的小伙伴点击右侧链家查看安装教程：<a href="./123.html">点我查看</a></p>
+<p>说明：在 Kafka 2.8.0 版本以前，需要依赖 Zookeeper 启动，需要的小伙伴点击右侧链接查看安装教程：<a href="./123.html">点我查看</a></p>
 </blockquote>
 <h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请准备 3 台虚拟机，如需快速克隆并配置虚拟机相关设置，请点击右侧链接查看教程：<a href="./118.html">点我查看</a></p>
 <blockquote>
