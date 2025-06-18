@@ -6,7 +6,7 @@
   <link href="https://www.icode504.com/atom.xml" rel="self"/>
   
   <link href="https://www.icode504.com/"/>
-  <updated>2025-06-02T16:00:00.000Z</updated>
+  <updated>2025-06-18T10:24:10.922Z</updated>
   <id>https://www.icode504.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Intellij IDEA在编写Java局部变量使用final修饰的问题</title>
+    <link href="https://www.icode504.com/posts/123.html"/>
+    <id>https://www.icode504.com/posts/123.html</id>
+    <published>2025-06-18T10:24:10.922Z</published>
+    <updated>2025-06-18T10:24:10.922Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、问题复现&quot;&gt;&lt;a href=&quot;#一、问题复现&quot; class=&quot;headerlink&quot; title=&quot;一、问题复现&quot;&gt;&lt;/a&gt;一、问题复现&lt;/h1&gt;&lt;p&gt;在 Intellij IDEA 中编写 Java 代码过程中，如果你在方法中编写局部变量，使用</summary>
+        
+      
+    
+    
+    
+    <category term="软件使用" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/Intellij-IDEA/"/>
+    
+    
+    <category term="Intellij IDEA" scheme="https://www.icode504.com/tags/Intellij-IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</title>
@@ -524,31 +551,6 @@
     <category term="若依" scheme="https://www.icode504.com/tags/%E8%8B%A5%E4%BE%9D/"/>
     
     <category term="Vue" scheme="https://www.icode504.com/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Electerm安装、配置与卸载教程（macOS版）</title>
-    <link href="https://www.icode504.com/posts/99.html"/>
-    <id>https://www.icode504.com/posts/99.html</id>
-    <published>2025-04-13T11:12:27.430Z</published>
-    <updated>2025-04-13T11:12:27.430Z</updated>
-    
-    
-    <summary type="html">本文简要介绍了在macOS操作系统上安装Electerm的步骤。通过该教程，用户可以轻松下载、安装并配置Electerm，确保后续在macOS平台上享受强大的终端功能和文件管理能力。</summary>
-    
-    
-    
-    <category term="软件安装" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="macOS" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/"/>
-    
-    <category term="服务器&amp;虚拟机" scheme="https://www.icode504.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/macOS/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-    
-    <category term="macOS" scheme="https://www.icode504.com/tags/macOS/"/>
-    
-    <category term="Electerm" scheme="https://www.icode504.com/tags/Electerm/"/>
     
   </entry>
   
