@@ -18,42 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言：众所周知，i++和++i的区别是：i++先将i的值赋值给变量，再将i的值自增1；而++i则是先将i的值自增1，再将结果赋值给变量。因此，二者最终都给i自增了1，只是方式不同而已。 当然，如果在面试过程中面试官问你这个问题，只回答出上述内容，只能说明你对这方面的知识了解的还是太浅显。那么i++和++i到底有什么不同之处呢？  一、局部变量表与操作数栈简介《深入理解Java虚拟机》第八章对栈帧">
+    <meta name="description" content="Zookeeper 客户端输入中文乱码的解决方案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i">
-<meta property="og:url" content="https://www.icode504.com/posts/8.html">
+<meta property="og:title" content="Zookeeper 客户端输入中文乱码的解决方案">
+<meta property="og:url" content="https://www.icode504.com/posts/124.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="前言：众所周知，i++和++i的区别是：i++先将i的值赋值给变量，再将i的值自增1；而++i则是先将i的值自增1，再将结果赋值给变量。因此，二者最终都给i自增了1，只是方式不同而已。 当然，如果在面试过程中面试官问你这个问题，只回答出上述内容，只能说明你对这方面的知识了解的还是太浅显。那么i++和++i到底有什么不同之处呢？  一、局部变量表与操作数栈简介《深入理解Java虚拟机》第八章对栈帧">
+<meta property="og:description" content="Zookeeper 客户端输入中文乱码的解决方案">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023221121858.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023222236855.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231017063620627.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023180543810.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023180636090.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023180949754.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023181650491.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023182309249.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023182828787.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023183808061.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023183842487.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023184139208.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231023184445793.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021153508365.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021154150053.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021162911742.png">
-<meta property="og:image" content="https://source.icode504.com/images/image-20231021162952984.png">
-<meta property="article:published_time" content="2025-04-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-06T14:02:30.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/a1289e9f1896edc3766f728996952f9d.gif">
+<meta property="og:image" content="https://source.icode504.com/images/bffcc333ef218ac2fe49db48524d29fa.png">
+<meta property="og:image" content="https://source.icode504.com/images/38c1b63b15e744d4134bd14089efaea6.png">
+<meta property="article:published_time" content="2025-08-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-17T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Zookeeper">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/image-20231023221121858.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/a1289e9f1896edc3766f728996952f9d.gif">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>入门篇-其之六-附录一-以字节码的角度分析分析i++和++i - iCode504个人博客</title>
+  <title>Zookeeper 客户端输入中文乱码的解决方案 - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -225,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
+            <span id="subtitle">Zookeeper 客户端输入中文乱码的解决方案</span>
           
         </div>
 
@@ -236,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-06 00:00" pubdate>
-          2025年4月6日
+        <time datetime="2025-08-05 00:00" pubdate>
+          2025年8月5日
         </time>
       </span>
     
@@ -322,17 +308,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
         id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         中间件
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
+      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
            role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
         
         
@@ -349,17 +335,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="分布式协调服务"
         id="heading-e28708e1d361d198ca97587b7cc8d380" role="tab" data-toggle="collapse" href="#collapse-e28708e1d361d198ca97587b7cc8d380"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         分布式协调服务
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-e28708e1d361d198ca97587b7cc8d380"
+      <div class="category-collapse collapse show" id="collapse-e28708e1d361d198ca97587b7cc8d380"
            role="tabpanel" aria-labelledby="heading-e28708e1d361d198ca97587b7cc8d380">
         
         
@@ -376,17 +362,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Zookeeper"
         id="heading-fb4ac192a5f039c2e2c335ba5ced3583" role="tab" data-toggle="collapse" href="#collapse-fb4ac192a5f039c2e2c335ba5ced3583"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Zookeeper
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-fb4ac192a5f039c2e2c335ba5ced3583"
+      <div class="category-collapse collapse show" id="collapse-fb4ac192a5f039c2e2c335ba5ced3583"
            role="tabpanel" aria-labelledby="heading-fb4ac192a5f039c2e2c335ba5ced3583">
         
         
@@ -403,17 +389,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Zookeeper常见问题及解决方案"
         id="heading-6dbbdf13bbc67df04f9f5476416370d8" role="tab" data-toggle="collapse" href="#collapse-6dbbdf13bbc67df04f9f5476416370d8"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Zookeeper常见问题及解决方案
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-6dbbdf13bbc67df04f9f5476416370d8"
+      <div class="category-collapse collapse show" id="collapse-6dbbdf13bbc67df04f9f5476416370d8"
            role="tabpanel" aria-labelledby="heading-6dbbdf13bbc67df04f9f5476416370d8">
         
         
@@ -425,7 +411,7 @@
       
         <a href="/posts/124.html" title="Zookeeper 客户端输入中文乱码的解决方案"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Zookeeper 客户端输入中文乱码的解决方案</span>
         </a>
       
@@ -960,17 +946,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
         id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         编程语言
         <span class="list-group-count">(13)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
            role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
         
         
@@ -987,17 +973,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
         id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Java
         <span class="list-group-count">(13)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
+      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
         
         
@@ -1018,7 +1004,7 @@
       
         <a href="/posts/8.html" title="入门篇-其之六-附录一-以字节码的角度分析分析i++和++i"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</span>
         </a>
       
@@ -1148,12 +1134,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</h1>
+            <h1 id="seo-header">Zookeeper 客户端输入中文乱码的解决方案</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年4月6日
+                    本文最后更新于：2025年8月18日
                   
                 
               </p>
@@ -1161,81 +1147,26 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>前言：众所周知，<code>i++</code>和<code>++i</code>的区别是：<code>i++</code>先将<code>i</code>的值赋值给变量，再将<code>i</code>的值自增1；而<code>++i</code>则是先将<code>i</code>的值自增1，再将结果赋值给变量。因此，二者最终都给<code>i</code>自增了1，只是方式不同而已。</p>
-<p>当然，如果在面试过程中面试官问你这个问题，只回答出上述内容，只能说明你对这方面的知识了解的还是太浅显。那么<code>i++</code>和<code>++i</code>到底有什么不同之处呢？</p>
+                <h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>在使用 Zookeeper 客户端 zkCli 的过程中，如果输入中文字符，可能会出现乱码的问题：</p>
+<p><img src="https://source.icode504.com/images/a1289e9f1896edc3766f728996952f9d.gif" srcset="/img/loading.gif" lazyload></p>
+<p>以下是解决上述问题的方案：</p>
+<h1 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h1><blockquote>
+<p>说明：本文默认 Zookeeper 安装位置在 <code>/usr/local/zookeeper</code> 目录下（可以看到 bin、data、conf 等目录），具体的安装位置请以你为准。</p>
 </blockquote>
-<h1 id="一、局部变量表与操作数栈简介"><a href="#一、局部变量表与操作数栈简介" class="headerlink" title="一、局部变量表与操作数栈简介"></a>一、局部变量表与操作数栈简介</h1><p>《深入理解Java虚拟机》第八章对栈帧结构有如下描述Java虚拟机以方法作为最基本的执行单元，“栈帧”（Stack Frame）则是用于支持虚拟机进行方法调用和方法执行背后的数据结构，它也是虚拟机运行时数据区中的虚拟机栈的栈元素。</p>
-<p>在一个活动线程中，可能会执行多个方法，因此会存在多个栈帧，和“栈”（先进后出）一样，处于栈顶的栈帧才是真正运行的，处于栈顶的栈帧称作“当前栈帧”（Current Stack Frame），这个栈帧所属的方法称作“当前方法”（Current Method）。</p>
-<p>在执行<code>main</code>方法时，<code>main</code>方法所属的线程主线程，假设在主线程中调用了一个<code>method1()</code>方法，在<code>method1()</code>内部调用了<code>method2()</code>方法，在<code>method2()</code>方法执行两个整数运算，示例如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 方法调用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-23 22:05</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StackFrameDemo1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;main开始执行&quot;</span>);<br>        method1();<br>        System.out.println(<span class="hljs-string">&quot;main执行完成&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;method1开始执行&quot;</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> method2();<br>        System.out.println(<span class="hljs-string">&quot;result = &quot;</span> + result);<br>        System.out.println(<span class="hljs-string">&quot;method1执行结束&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">method2</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">var1</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">var2</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br>        <span class="hljs-keyword">return</span> var1 + var2;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>1. 将 <code>bin/zkCli.sh</code> 文件留一个备份：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> bin/zkCli.sh bin/zkCli.sh.back<br></code></pre></td></tr></table></figure>
 
-<p>运行结果：</p>
-<p><img src="https://source.icode504.com/images/image-20231023221121858.png" srcset="/img/loading.gif" lazyload></p>
-<p>由代码我们可以看出，<code>main</code>方法最先执行一个输出，然后进入<code>method1</code>执行第一个输出，再完整执行<code>method2</code>。<code>method2</code>执行完成以后，再执行<code>method1</code>，最后执行<code>main</code>方法，由于这段代码中只涉及一个主线程，并且最先完整执行方法的是<code>method2</code>，因此<code>method2</code>对应的栈帧就是当前栈帧，<code>main</code>方法最后执行完毕，因此<code>main</code>方法对应的栈帧在<code>method2</code>和<code>method1</code>之下。以下是这段代码对应的栈帧概念图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023222236855.png" srcset="/img/loading.gif" lazyload></p>
-<p>在每一个栈帧中存储了方法的局部变量表、操作数栈、动态链接和方法返回地址等信息</p>
-<h2 id="1-1-局部变量表"><a href="#1-1-局部变量表" class="headerlink" title="1.1 局部变量表"></a>1.1 局部变量表</h2><p>局部变量表（Local variable Table）是一组<strong>变量值</strong>的存储空间，用于存放方法参数和方法内部定义的局部变量。</p>
-<p>局部变量表的容量是以变量槽（Variable Slot）为最小单位，每个变量槽能存储基本数据类型和引用数据类型的数据。为了尽可能节省栈帧消耗的内存空间，局部变量表中的变量槽是可以重用的。</p>
-<p>JVM使用索引定位的方式使用索引变量表，索引值的范围是从0开始到局部变量表最大变量槽的数量（类似数组结构）。</p>
-<p>当一个方法被调用的时候，JVM会使用局部变量表来完成参数值到参数变量列表的传递，即实参到形参的传递。</p>
-<h2 id="1-2-操作数栈"><a href="#1-2-操作数栈" class="headerlink" title="1.2 操作数栈"></a>1.2 操作数栈</h2><p>操作数栈（Operand Stack）也称作操作数栈，它是一个栈结构（后进先出，例如手枪的弹夹，先打出去的子弹是最顶上的子弹）。</p>
-<p>在方法开始执行的时候，这个方法对应的操作数栈是空的，在方法执行过程中，会有各种字节码指令向操作数栈中写入或读取内容，即出栈和入栈操作，例如：两数相加运算时，就需要将两个数压入栈顶后调用运算指令。</p>
-<p><strong>操作数栈中的元素的数据类型必须和字节码指令序列严格匹配</strong>，在编译程序代码的时候编译器必须要严格保证这一点，在类的校验阶段的数据流分析时候还需要再次校验。例如：执行加法<code>iadd</code>（<code>i</code>是<code>int</code>类型，<code>add</code>是两个数相加）命令时，就需要保证两个操作数必须是<code>int</code>类型，不能出现其他类型相加的情况。</p>
-<h1 id="二、字节码分析（图解）"><a href="#二、字节码分析（图解）" class="headerlink" title="二、字节码分析（图解）"></a>二、字节码分析（图解）</h1><p>我们可以从字节码的角度进一步对<code>i++</code>和<code>++i</code>的执行过程做进一步的分析。以下面代码为例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * i++和++i的深入分析</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> iCode504</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-17 5:58</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">IncrementAndDecrementOperators2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue1</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">intValue2</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result1</span> <span class="hljs-operator">=</span> intValue1++;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result2</span> <span class="hljs-operator">=</span> ++intValue2;<br>        System.out.println(<span class="hljs-string">&quot;result1 = &quot;</span> + result1);<br>        System.out.println(<span class="hljs-string">&quot;result2 = &quot;</span> + result2);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>2. 使用 <code>vim</code> 命令编辑 <code>bin/zkCli.sh</code>，在倒数第二行添加 <code>-Dfile.encoding=UTF-8 \</code>，修改后的效果图如下：</p>
+<p><img src="https://source.icode504.com/images/bffcc333ef218ac2fe49db48524d29fa.png" srcset="/img/loading.gif" lazyload></p>
+<p>完成后在左下角输入 <code>:wq</code> 保存。</p>
+<p>3. 重新启动 Zookeeper 客户端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bin/zkCli.sh<br></code></pre></td></tr></table></figure>
 
-<p>我们需要查看编译后的字节码文件，字节码文件不能直接使用记事本打开，但是我们可以使用<code>javap -verbose 文件名.class</code>命令，以<code>IncrementAndDecrementOperators2.class</code>为例：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javap -verbose IncrementAndDecrementOperators2.class<br></code></pre></td></tr></table></figure>
+<p>4. 创建一个带有中文字符的数据的节点：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">create -e /cnnode <span class="hljs-string">&quot;吉林省长春市&quot;</span><br>get /cnnode <br></code></pre></td></tr></table></figure>
 
-<p>此时就会打开所有的字节码文件，我们只需要关注<code>main</code>方法内的执行过程即可：</p>
-<p><img src="https://source.icode504.com/images/image-20231017063620627.png" srcset="/img/loading.gif" lazyload></p>
-<p>首先来解释一下这四行代码的含义：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">0</span>: iconst_2<br><span class="hljs-number">1</span>: istore_1<br><span class="hljs-number">2</span>: iconst_2<br><span class="hljs-number">3</span>: istore_2<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li><code>iconst_2</code>一共有两部分组成，<code>i</code>指的是<code>int</code>类型（源代码中我们定义的确实是<code>int</code>类型），<code>const</code>代表常量（数字<code>2</code>是整型常量），<code>iconst_2</code>的含义是将2入操作数栈。</li>
-<li><code>istore_1</code>中的<code>store</code>代表的是存储，<code>istore_1</code>的含义是将操作数栈中的数值2出栈，存入到局部变量表1的位置。同理，<code>i_store2</code>表示将操作数栈中的数值2出栈，存储到局部变量表2的位置。</li>
-</ul>
-<p>以下是前面四行代码存储过程图（存储过程全部流程图点击此链接下载：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/ijDp41cn4p0b">点我下载</a>）：</p>
-<p><img src="https://source.icode504.com/images/image-20231023180543810.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023180636090.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023180949754.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023181650491.png" srcset="/img/loading.gif" lazyload></p>
-<p>此时我们继续观察4-8行代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">4</span>: iload_1<br><span class="hljs-number">5</span>: iinc			<span class="hljs-number">1</span>, <span class="hljs-number">1</span><br><span class="hljs-number">8</span>: istore_3<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li><code>iload_1</code>的作用是将局部变量表1号位置存储的值移动到操作数栈。</li>
-<li>第5行的<code>iinc</code>有两个参数，第一个参数<code>1</code>是局部变量表的位置，另一个参数<code>1</code>的含义是在该位置存储一个<code>1</code>，如果这个位置存在值，那么这个值的结果是<strong>已存在值 + 参数值</strong>。</li>
-<li><code>istore_3</code>将操作数栈中的数移动到局部变量表的3号位置。</li>
-</ul>
-<p>以下是这三行代码的示意图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023182309249.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023182828787.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023183808061.png" srcset="/img/loading.gif" lazyload></p>
-<p>9-12行的字节码的作用原理和4-8行的作用原理基本相同：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">9</span>: iinc			<span class="hljs-number">2</span>, <span class="hljs-number">1</span><br><span class="hljs-number">12</span>: iload_2<br><span class="hljs-number">13</span>: istore		<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
-
-<p><code>istore 4</code>的作用是将操作数栈中的值存储到局部变量表4号位置。</p>
-<p>以下是这三行代码的示意图：</p>
-<p><img src="https://source.icode504.com/images/image-20231023183842487.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023184139208.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231023184445793.png" srcset="/img/loading.gif" lazyload></p>
-<p>接下来15-30行是和系统输出有关的。其中第30行<code>iload_3</code>在局部变量表中（这个值为2）值移动到操作数栈顶供系统输出，事实上<code>iload_3</code>的值正好对应源代码中变量<code>result1</code>的值。也就是说，<code>result1</code>输出结果就是<code>iload_3</code>的数值2。</p>
-<p><img src="https://source.icode504.com/images/image-20231021153508365.png" srcset="/img/loading.gif" lazyload></p>
-<p>同理，<code>iload 4</code>就是第二个要输出的值，在局部变量表中第4个位置存储的值正好是3，而输出的变量名是<code>result2</code>，因此<code>result2</code>的输出结果是3。</p>
-<p><img src="https://source.icode504.com/images/image-20231021154150053.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、i-和-i性能分析"><a href="#三、i-和-i性能分析" class="headerlink" title="三、i++和++i性能分析"></a>三、<code>i++</code>和<code>++i</code>性能分析</h1><p><code>i++</code>和<code>++i</code>主要用在普通<code>for</code>循环上，那么我们就将二者用在<code>for</code>循环上，循环相同的次数，从字节码的角度进行分析。</p>
-<p>以下是使用<code>i++</code>和<code>++i</code>的两个<code>for</code>循环文件：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * i++在for循环的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-21 16:14:33</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoopTest1</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * ++i在for循环的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ZhaoCong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-10-21 16:15:17</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoopTest2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; ++i) &#123;<br><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>执行编译命令以后，我们来查看两个文件的字节码：</p>
-<p><img src="https://source.icode504.com/images/image-20231021162911742.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20231021162952984.png" srcset="/img/loading.gif" lazyload></p>
-<p>仔细观察这两个字节码文件内容，我们发现在两个文件<code>main</code>方法的字节码内容完全相同。由此可见，两种方式执行<code>for</code>循环的效率是相同的。</p>
+<p>此时控制台就不会出现中文乱码了：</p>
+<p><img src="https://source.icode504.com/images/38c1b63b15e744d4134bd14089efaea6.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -1259,13 +1190,27 @@
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1/" class="category-chain-item">分布式协调服务</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1/Zookeeper/" class="category-chain-item">Zookeeper</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%90%8E%E7%AB%AF/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1/Zookeeper/Zookeeper%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="category-chain-item">Zookeeper常见问题及解决方案</a>
+  
+  
+
+  
+
   
 
   
@@ -1283,7 +1228,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/tags/Zookeeper/" class="print-no-link">#Zookeeper</a>
       
     </div>
   
@@ -1295,8 +1240,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>入门篇-其之六-附录一-以字节码的角度分析分析i++和++i</div>
-      <div>https://www.icode504.com/posts/8.html</div>
+      <div>Zookeeper 客户端输入中文乱码的解决方案</div>
+      <div>https://www.icode504.com/posts/124.html</div>
     </div>
     <div class="license-meta">
       
@@ -1308,7 +1253,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月6日</div>
+          <div>2025年8月5日</div>
         </div>
       
       
@@ -1340,9 +1285,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/26.html" title="JDK 17安装配置教程（Windows版）">
+                      <a href="/posts/5.html" title="入门篇-其之四-字符串String的简单使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JDK 17安装配置教程（Windows版）</span>
+                        <span class="hidden-mobile">入门篇-其之四-字符串String的简单使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1350,8 +1295,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/14.html" title="Intellij IDEA 2021.1.3安装配置教程（Windows版）">
-                        <span class="hidden-mobile">Intellij IDEA 2021.1.3安装配置教程（Windows版）</span>
+                      <a href="/posts/122.html" title="Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）">
+                        <span class="hidden-mobile">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

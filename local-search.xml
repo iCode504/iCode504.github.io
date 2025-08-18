@@ -2705,6 +2705,39 @@
   
   
   <entry>
+    <title>Zookeeper 客户端输入中文乱码的解决方案</title>
+    <link href="/posts/124.html"/>
+    <url>/posts/124.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、问题复现"><a href="#一、问题复现" class="headerlink" title="一、问题复现"></a>一、问题复现</h1><p>在使用 Zookeeper 客户端 zkCli 的过程中，如果输入中文字符，可能会出现乱码的问题：</p><p><img src="https://source.icode504.com/images/a1289e9f1896edc3766f728996952f9d.gif"></p><p>以下是解决上述问题的方案：</p><h1 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h1><blockquote><p>说明：本文默认 Zookeeper 安装位置在 <code>/usr/local/zookeeper</code> 目录下（可以看到 bin、data、conf 等目录），具体的安装位置请以你为准。</p></blockquote><p>1. 将 <code>bin/zkCli.sh</code> 文件留一个备份：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> bin/zkCli.sh bin/zkCli.sh.back<br></code></pre></td></tr></table></figure><p>2. 使用 <code>vim</code> 命令编辑 <code>bin/zkCli.sh</code>，在倒数第二行添加 <code>-Dfile.encoding=UTF-8 \</code>，修改后的效果图如下：</p><p><img src="https://source.icode504.com/images/bffcc333ef218ac2fe49db48524d29fa.png"></p><p>完成后在左下角输入 <code>:wq</code> 保存。</p><p>3. 重新启动 Zookeeper 客户端：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bin/zkCli.sh<br></code></pre></td></tr></table></figure><p>4. 创建一个带有中文字符的数据的节点：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">create -e /cnnode <span class="hljs-string">&quot;吉林省长春市&quot;</span><br>get /cnnode <br></code></pre></td></tr></table></figure><p>此时控制台就不会出现中文乱码了：</p><p><img src="https://source.icode504.com/images/38c1b63b15e744d4134bd14089efaea6.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>中间件</category>
+      
+      <category>分布式协调服务</category>
+      
+      <category>Zookeeper</category>
+      
+      <category>Zookeeper常见问题及解决方案</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Zookeeper</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</title>
     <link href="/posts/122.html"/>
     <url>/posts/122.html</url>
@@ -3355,37 +3388,6 @@
   
   
   <entry>
-    <title>软件包管理器Homebrew安装教程（适用于macOS系统）</title>
-    <link href="/posts/82.html"/>
-    <url>/posts/82.html</url>
-    
-    <content type="html"><![CDATA[<p>Homebrew 是一个面向 macOS 和 Linux 的包管理系统，可以轻松地安装、更新和管理软件包。它通过简单的命令行接口，让用户可以快速获取并安装各种开源软件和工具，而不需要复杂的配置过程。Homebrew 的核心理念是让用户能够轻松地管理软件环境，并保持系统的整洁和高效。它的主要优点是使用方便、社区活跃以及广泛的包支持，使其成为开发者和技术爱好者的理想选择。</p><p>以下是 macOS 环境下 Homebrew 的安装教程。本文参考自此文章：<a href="https://zhuanlan.zhihu.com/p/111014448">点我查看原文章</a></p><h1 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h1><p>1. 执行如下命令同意许可协议：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo xcodebuild -license<br></code></pre></td></tr></table></figure><p>需要输入密码（默认不在命令行显示）</p><p>查看许可协议后，输入<code>agree</code>，按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721001448428.png"></p><p>2. 安装Homebrew，执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure><p>3. 进入安装界面，输入<strong>1</strong>，通过清华大学下载Homebrew：</p><p><img src="https://source.icode504.com/images/image-20240721001800397.png"></p><p>4. 初次安装的小伙伴输入本机密码（默认不在命令行显示）：</p><p><img src="https://source.icode504.com/images/image-20240721001856160.png"></p><p>5. 此时会有一个检测本机是否安装Homebrew，这里输入<strong>Y</strong>，按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002054581.png"></p><p>6. 等待一段时间后，出现下面的提示后，按一下回车键<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002253336.png"></p><p>7. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240721002415491.png"></p><p>8. 等待一段时间后，Homebrew安装完成，接下来我们需要配置国内软件下载源，这里输入<strong>5</strong>，使用阿里国内镜像源下载软件包，并按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002617846.png"></p><p>9. 配置中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240721002728440.png"></p><p>10. 出现下面的提示后，说明Homebrew安装配置成功，重启终端：</p><p><img src="https://source.icode504.com/images/image-20240721002838422.png"></p><h1 id="二、卸载Homebrew（可选）"><a href="#二、卸载Homebrew（可选）" class="headerlink" title="二、卸载Homebrew（可选）"></a>二、卸载Homebrew（可选）</h1><p>卸载Homebrew十分简单，只需要执行如下命令即可：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件安装</category>
-      
-      <category>macOS</category>
-      
-      <category>软件包管理工具</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>macOS</tag>
-      
-      <tag>Homebrew</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Redis单机版安装教程（Linux版）</title>
     <link href="/posts/83.html"/>
     <url>/posts/83.html</url>
@@ -3413,6 +3415,37 @@
       <tag>Docker</tag>
       
       <tag>Redis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>软件包管理器Homebrew安装教程（适用于macOS系统）</title>
+    <link href="/posts/82.html"/>
+    <url>/posts/82.html</url>
+    
+    <content type="html"><![CDATA[<p>Homebrew 是一个面向 macOS 和 Linux 的包管理系统，可以轻松地安装、更新和管理软件包。它通过简单的命令行接口，让用户可以快速获取并安装各种开源软件和工具，而不需要复杂的配置过程。Homebrew 的核心理念是让用户能够轻松地管理软件环境，并保持系统的整洁和高效。它的主要优点是使用方便、社区活跃以及广泛的包支持，使其成为开发者和技术爱好者的理想选择。</p><p>以下是 macOS 环境下 Homebrew 的安装教程。本文参考自此文章：<a href="https://zhuanlan.zhihu.com/p/111014448">点我查看原文章</a></p><h1 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h1><p>1. 执行如下命令同意许可协议：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo xcodebuild -license<br></code></pre></td></tr></table></figure><p>需要输入密码（默认不在命令行显示）</p><p>查看许可协议后，输入<code>agree</code>，按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721001448428.png"></p><p>2. 安装Homebrew，执行如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure><p>3. 进入安装界面，输入<strong>1</strong>，通过清华大学下载Homebrew：</p><p><img src="https://source.icode504.com/images/image-20240721001800397.png"></p><p>4. 初次安装的小伙伴输入本机密码（默认不在命令行显示）：</p><p><img src="https://source.icode504.com/images/image-20240721001856160.png"></p><p>5. 此时会有一个检测本机是否安装Homebrew，这里输入<strong>Y</strong>，按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002054581.png"></p><p>6. 等待一段时间后，出现下面的提示后，按一下回车键<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002253336.png"></p><p>7. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240721002415491.png"></p><p>8. 等待一段时间后，Homebrew安装完成，接下来我们需要配置国内软件下载源，这里输入<strong>5</strong>，使用阿里国内镜像源下载软件包，并按一下回车<kbd>Return</kbd>：</p><p><img src="https://source.icode504.com/images/image-20240721002617846.png"></p><p>9. 配置中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240721002728440.png"></p><p>10. 出现下面的提示后，说明Homebrew安装配置成功，重启终端：</p><p><img src="https://source.icode504.com/images/image-20240721002838422.png"></p><h1 id="二、卸载Homebrew（可选）"><a href="#二、卸载Homebrew（可选）" class="headerlink" title="二、卸载Homebrew（可选）"></a>二、卸载Homebrew（可选）</h1><p>卸载Homebrew十分简单，只需要执行如下命令即可：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>macOS</category>
+      
+      <category>软件包管理工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+      <tag>Homebrew</tag>
       
     </tags>
     
@@ -3503,7 +3536,7 @@
     <link href="/posts/107.html"/>
     <url>/posts/107.html</url>
     
-    <content type="html"><![CDATA[<p><a href="https://sdkman.io/">SDKMAN!</a>，全称The Software Development Kit Manager，中文翻译过来就是<strong>软件开发工具包管理器</strong>。以下是官网对这款工具的介绍（个人翻译）：</p><p>认识一下SDKMAN!——你的可靠伙伴，它可以高效管理Unix系统上众多的软件开发工具包。假设您的系统上存在不同版本的软件开发工具包（SDKs），需要以一种无压力的方式在他们之间切换，SDKMAN!以简单易用的命令行界面（CLI）和API能介入上述过程。以前称作GVM，Groovy enVironment Managener（Groovy环境管理器），SDKMAN!从类似工具apt、pip、RVM、rbenv甚至是Git上获取灵感。将其视为您的一个乐于助人的朋友，随时为您准备简化SDK管理。</p><ul><li>源于开发者，为开发人员着想。简化SDK生命周期，不需要再寻找下载源，提取归档或添加修改<code>_HOME</code>和<code>PATH</code>等环境变量。</li><li>一站式直接搞定所有和Java相关工具下载安装。可以安装基于JVM的软件开发工具包，例如：Java、Scala、Kotlin和Groovy、Ant、Gradle、Grails、Maven、SBT、Spark、Spring Boot、Vert.x和其他框架工具也支持。</li><li>轻量级。SDKMAN!使用Rust和bash编写，并且系统上只需要有<code>curl</code>、<code>zip</code>和<code>unzip</code>三个依赖即可。甚至可以和ZSH一起工作。</li><li>多平台。跨各种基于UNIX平台无缝操作，包括<strong>macOS、Linux、Windows下的Linux子系统</strong>（WSL）。</li><li>APIs。通过使用我们的开放的Broker API，可以轻松编写新的客户端。软件提供者可以通过安全的Vendor API来发布和声明自己的软件版本。</li><li>开源。SDKMAN!的研发离不开开源社区成员们的努力。Apache 2.0下的协议。</li></ul><p>接下来就为大家介绍一下SDKMAN!的安装和使用：</p><h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>请确保您的操作系统是Linux&#x2F;macOS&#x2F;WSL，需要安装的小伙伴可以根据自己的需要查看安装教程：</p><table><thead><tr><th align="center">CentOS</th><th align="center">Ubuntu</th><th align="center">Debian</th><th align="center">WSL</th></tr></thead><tbody><tr><td align="center"><a href="./94.html">点我查看</a></td><td align="center"><a href="./51.html">点我查看</a></td><td align="center"><a href="./52.html">点我查看</a></td><td align="center"><a href="./42.html">点我查看</a></td></tr></tbody></table><h1 id="二、安装SDKMAN"><a href="#二、安装SDKMAN" class="headerlink" title="二、安装SDKMAN!"></a>二、安装SDKMAN!</h1><h2 id="方式一：国内用户安装"><a href="#方式一：国内用户安装" class="headerlink" title="方式一：国内用户安装"></a>方式一：国内用户安装</h2><blockquote><p>说明：推荐国内用户使用，我在官方脚本上稍微做了一下改进。</p></blockquote><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=t9w9mb4me9o63of><div class="nav-tabs"><button type="button" class="tab active" data-target="t9w9mb4me9o63of-1">CentOS</button><button type="button" class="tab" data-target="t9w9mb4me9o63of-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="t9w9mb4me9o63of-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="t9w9mb4me9o63of-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行，执行如下命令即可安装SDKMAN!</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -s <span class="hljs-string">&quot;https://gitee.com/iCode504/my-sdkman/raw/master/install.sh&quot;</span> | bash<br></code></pre></td></tr></table></figure><p>3. 安装完成，执行如下命令让SDKMAN!相关命令生效：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.sdkman/bin/sdkman-init.sh&quot;</span><br></code></pre></td></tr></table></figure><p>4. 执行如下命令即可查看SDKMAN!的版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-8a3663e0c689f82dba9e907ea23a1d64.png"></p><h2 id="方式二：正常安装"><a href="#方式二：正常安装" class="headerlink" title="方式二：正常安装"></a>方式二：正常安装</h2><blockquote><p>说明：国内用户不推荐使用，因为需要从Github上下载安装包，Github在国内访问速度较慢，下载可能会失败。</p></blockquote><p>安装SDKMAN!非常简单，只需要在命令行（macOS请打开终端执行命令）界面运行几行代码就OK了。</p><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=txy9d0ime9o63og><div class="nav-tabs"><button type="button" class="tab active" data-target="txy9d0ime9o63og-1">CentOS</button><button type="button" class="tab" data-target="txy9d0ime9o63og-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="txy9d0ime9o63og-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="txy9d0ime9o63og-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行窗口，在命令行中输入如下命令并执行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -s &quot;https://get.sdkman.io&quot; | bash<br></code></pre></td></tr></table></figure><p>因为这款软件是下载源在国外，下载速度较慢，请耐心等待！</p><p>3. 出现下面提示即说明SDKMAN!安装成功：</p><p><img src="https://source.icode504.com/images/image-20231227153819937.png"></p><p>如果安装失败，执行如下命令删除残留文件重新执行上一步命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ./sdkman<br></code></pre></td></tr></table></figure><p>4. 我们在命令行再执行如下命令，方便后续我们使用SDKMAN!相关的命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;<br></code></pre></td></tr></table></figure><p>5. 此时在命令行输入如下命令，就可以看到SDKMAN!的版本信息：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-20231227154230369.png"></p><h1 id="三、卸载SDKMAN-（可选）"><a href="#三、卸载SDKMAN-（可选）" class="headerlink" title="三、卸载SDKMAN!（可选）"></a>三、卸载SDKMAN!（可选）</h1><p>卸载SDKMAN!也非常简单！只需要几步就可以完成：</p><p>1. （可选）如果后续还想使用SDKMAN!，可以对当前<code>./sdkman</code>目录打包成tar文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar zcvf ~/sdkman-backup_$(date +%F-%kh%M).tar.gz -C ~/ .sdkman<br></code></pre></td></tr></table></figure><p>2. 使用<code>rm -rf</code>命令强制删除：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -rf ~/.sdkman<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://sdkman.io/">SDKMAN!</a>，全称The Software Development Kit Manager，中文翻译过来就是<strong>软件开发工具包管理器</strong>。以下是官网对这款工具的介绍（个人翻译）：</p><p>认识一下SDKMAN!——你的可靠伙伴，它可以高效管理Unix系统上众多的软件开发工具包。假设您的系统上存在不同版本的软件开发工具包（SDKs），需要以一种无压力的方式在他们之间切换，SDKMAN!以简单易用的命令行界面（CLI）和API能介入上述过程。以前称作GVM，Groovy enVironment Managener（Groovy环境管理器），SDKMAN!从类似工具apt、pip、RVM、rbenv甚至是Git上获取灵感。将其视为您的一个乐于助人的朋友，随时为您准备简化SDK管理。</p><ul><li>源于开发者，为开发人员着想。简化SDK生命周期，不需要再寻找下载源，提取归档或添加修改<code>_HOME</code>和<code>PATH</code>等环境变量。</li><li>一站式直接搞定所有和Java相关工具下载安装。可以安装基于JVM的软件开发工具包，例如：Java、Scala、Kotlin和Groovy、Ant、Gradle、Grails、Maven、SBT、Spark、Spring Boot、Vert.x和其他框架工具也支持。</li><li>轻量级。SDKMAN!使用Rust和bash编写，并且系统上只需要有<code>curl</code>、<code>zip</code>和<code>unzip</code>三个依赖即可。甚至可以和ZSH一起工作。</li><li>多平台。跨各种基于UNIX平台无缝操作，包括<strong>macOS、Linux、Windows下的Linux子系统</strong>（WSL）。</li><li>APIs。通过使用我们的开放的Broker API，可以轻松编写新的客户端。软件提供者可以通过安全的Vendor API来发布和声明自己的软件版本。</li><li>开源。SDKMAN!的研发离不开开源社区成员们的努力。Apache 2.0下的协议。</li></ul><p>接下来就为大家介绍一下SDKMAN!的安装和使用：</p><h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>请确保您的操作系统是Linux&#x2F;macOS&#x2F;WSL，需要安装的小伙伴可以根据自己的需要查看安装教程：</p><table><thead><tr><th align="center">CentOS</th><th align="center">Ubuntu</th><th align="center">Debian</th><th align="center">WSL</th></tr></thead><tbody><tr><td align="center"><a href="./94.html">点我查看</a></td><td align="center"><a href="./51.html">点我查看</a></td><td align="center"><a href="./52.html">点我查看</a></td><td align="center"><a href="./42.html">点我查看</a></td></tr></tbody></table><h1 id="二、安装SDKMAN"><a href="#二、安装SDKMAN" class="headerlink" title="二、安装SDKMAN!"></a>二、安装SDKMAN!</h1><h2 id="方式一：国内用户安装"><a href="#方式一：国内用户安装" class="headerlink" title="方式一：国内用户安装"></a>方式一：国内用户安装</h2><blockquote><p>说明：推荐国内用户使用，我在官方脚本上稍微做了一下改进。</p></blockquote><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=thjio04meghwr4z><div class="nav-tabs"><button type="button" class="tab active" data-target="thjio04meghwr4z-1">CentOS</button><button type="button" class="tab" data-target="thjio04meghwr4z-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="thjio04meghwr4z-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="thjio04meghwr4z-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行，执行如下命令即可安装SDKMAN!</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -s <span class="hljs-string">&quot;https://gitee.com/iCode504/my-sdkman/raw/master/install.sh&quot;</span> | bash<br></code></pre></td></tr></table></figure><p>3. 安装完成，执行如下命令让SDKMAN!相关命令生效：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.sdkman/bin/sdkman-init.sh&quot;</span><br></code></pre></td></tr></table></figure><p>4. 执行如下命令即可查看SDKMAN!的版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-8a3663e0c689f82dba9e907ea23a1d64.png"></p><h2 id="方式二：正常安装"><a href="#方式二：正常安装" class="headerlink" title="方式二：正常安装"></a>方式二：正常安装</h2><blockquote><p>说明：国内用户不推荐使用，因为需要从Github上下载安装包，Github在国内访问速度较慢，下载可能会失败。</p></blockquote><p>安装SDKMAN!非常简单，只需要在命令行（macOS请打开终端执行命令）界面运行几行代码就OK了。</p><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=t7az1mvmeghwr50><div class="nav-tabs"><button type="button" class="tab active" data-target="t7az1mvmeghwr50-1">CentOS</button><button type="button" class="tab" data-target="t7az1mvmeghwr50-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="t7az1mvmeghwr50-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="t7az1mvmeghwr50-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行窗口，在命令行中输入如下命令并执行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -s &quot;https://get.sdkman.io&quot; | bash<br></code></pre></td></tr></table></figure><p>因为这款软件是下载源在国外，下载速度较慢，请耐心等待！</p><p>3. 出现下面提示即说明SDKMAN!安装成功：</p><p><img src="https://source.icode504.com/images/image-20231227153819937.png"></p><p>如果安装失败，执行如下命令删除残留文件重新执行上一步命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ./sdkman<br></code></pre></td></tr></table></figure><p>4. 我们在命令行再执行如下命令，方便后续我们使用SDKMAN!相关的命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;<br></code></pre></td></tr></table></figure><p>5. 此时在命令行输入如下命令，就可以看到SDKMAN!的版本信息：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-20231227154230369.png"></p><h1 id="三、卸载SDKMAN-（可选）"><a href="#三、卸载SDKMAN-（可选）" class="headerlink" title="三、卸载SDKMAN!（可选）"></a>三、卸载SDKMAN!（可选）</h1><p>卸载SDKMAN!也非常简单！只需要几步就可以完成：</p><p>1. （可选）如果后续还想使用SDKMAN!，可以对当前<code>./sdkman</code>目录打包成tar文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar zcvf ~/sdkman-backup_$(date +%F-%kh%M).tar.gz -C ~/ .sdkman<br></code></pre></td></tr></table></figure><p>2. 使用<code>rm -rf</code>命令强制删除：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -rf ~/.sdkman<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
