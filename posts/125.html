@@ -18,28 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这篇教程旨在为 Windows 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
+    <meta name="description" content="本教程介绍在 Linux 系统上安装和配置 MinIO 的两种方法：普通安装（下载二进制文件运行）和Docker安装（快速容器化部署）。涵盖环境变量配置、启动验证，适用于快速搭建高性能对象存储服务。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js安装、配置和卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/67.html">
+<meta property="og:title" content="MinIO 安装配置教程（Linux 通用版）">
+<meta property="og:url" content="https://www.icode504.com/posts/125.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="这篇教程旨在为 Windows 用户提供 Node.js 的安装指南，涵盖了安装、配置和卸载过程。此外，本文还提供了npm镜像源的修改，方便读者使用国内镜像源快速下载项目所需依赖。">
+<meta property="og:description" content="本教程介绍在 Linux 系统上安装和配置 MinIO 的两种方法：普通安装（下载二进制文件运行）和Docker安装（快速容器化部署）。涵盖环境变量配置、启动验证，适用于快速搭建高性能对象存储服务。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/d88197fbcaf4fd884dda7e0f56b4ba85.png">
-<meta property="article:published_time" content="2025-04-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-13T06:46:33.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/5684283dd1b5cadc44d35fc03032ef14.png">
+<meta property="article:published_time" content="2025-08-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-17T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Node.js">
-<meta property="article:tag" content="npm">
+<meta property="article:tag" content="MinIo">
+<meta property="article:tag" content="分布式存储">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/d88197fbcaf4fd884dda7e0f56b4ba85.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/5684283dd1b5cadc44d35fc03032ef14.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Node.js安装、配置和卸载教程（Windows版） - iCode504个人博客</title>
+  <title>MinIO 安装配置教程（Linux 通用版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/d88197fbcaf4fd884dda7e0f56b4ba85.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/5684283dd1b5cadc44d35fc03032ef14.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Node.js安装、配置和卸载教程（Windows版）</span>
+            <span id="subtitle">MinIO 安装配置教程（Linux 通用版）</span>
           
         </div>
 
@@ -222,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-13 00:00" pubdate>
-          2025年4月13日
+        <time datetime="2025-08-18 00:00" pubdate>
+          2025年8月18日
         </time>
       </span>
     
@@ -308,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(16)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -335,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
         id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         中间件
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
+      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
            role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
         
         
@@ -408,17 +407,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="分布式对象存储"
         id="heading-522d838702736b9613670a5e10d3f331" role="tab" data-toggle="collapse" href="#collapse-522d838702736b9613670a5e10d3f331"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         分布式对象存储
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-522d838702736b9613670a5e10d3f331"
+      <div class="category-collapse collapse show" id="collapse-522d838702736b9613670a5e10d3f331"
            role="tabpanel" aria-labelledby="heading-522d838702736b9613670a5e10d3f331">
         
         
@@ -430,7 +429,7 @@
       
         <a href="/posts/125.html" title="MinIO 安装配置教程（Linux 通用版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">MinIO 安装配置教程（Linux 通用版）</span>
         </a>
       
@@ -943,17 +942,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(35)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -1038,17 +1037,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="前端框架"
         id="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6" role="tab" data-toggle="collapse" href="#collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         前端框架
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
+      <div class="category-collapse collapse " id="collapse-cb6d86f983ccb3fe8a9b89ef3e8671a6"
            role="tabpanel" aria-labelledby="heading-cb6d86f983ccb3fe8a9b89ef3e8671a6">
         
         
@@ -1060,7 +1059,7 @@
       
         <a href="/posts/67.html" title="Node.js安装、配置和卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Node.js安装、配置和卸载教程（Windows版）</span>
         </a>
       
@@ -2214,89 +2213,131 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Node.js安装、配置和卸载教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月13日
-                  
-                
-              </p>
+            <h1 id="seo-header">MinIO 安装配置教程（Linux 通用版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，使 JavaScript 能够在服务器端运行，它提供了一个事件驱动的非阻塞 I&#x2F;O 模型，使得构建高效、可扩展的网络应用变得更加容易。而 npm（Node Package Manager）是 Node.js 的包管理工具，用于安装、分享、管理 JavaScript 代码包，使开发者能够轻松地将自己的代码与他人的代码集成，并且享受到社区共享的各种功能模块。Node.js 和 npm 的结合使得 JavaScript 开发者能够在服务器端和客户端都使用同一种语言，极大地提高了开发效率和跨平台能力。</p>
-<p>以下是Windows环境下Node.js的安装教程：</p>
-<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>推荐安装如下软件（不强制要求）：</p>
+                <p>MinIO 是一个高性能的分布式对象存储系统，简单易用且开源。它兼容亚马逊的 S3 云存储服务，适合存储图片、视频、日志等海量非结构化数据。MinIO 轻量快速，支持私有化部署和弹性扩展，适合企业搭建自己的“云存储”。无论是开发测试还是生产环境，它都能提供稳定、安全的数据存储方案，就像你的私人数据仓库，随存随取，高效可靠。</p>
+<p>以下是 MinIO 在 Linux 环境下的安装教程，两种方式任选其一：</p>
+<h1 id="方式一：正常安装"><a href="#方式一：正常安装" class="headerlink" title="方式一：正常安装"></a>方式一：正常安装</h1><h2 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h2><p>1. MinIO 默认使用 9000 端口，根据自己的操作系统开放端口：</p>
+<ul>
+<li>CentOS：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">firewall-cmd --zone=public --add-port=9000/tcp --permanent<br>firewall-cmd --reload<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu&#x2F;Debian：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ufw allow 9000/tcp<br></code></pre></td></tr></table></figure>
+
+<p>2. MinIO 有 Web 管理界面，也需要使用端口，这里需要开放 9001 端口：</p>
+<ul>
+<li>CentOS：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">firewall-cmd --zone=public --add-port=9001/tcp --permanent<br>firewall-cmd --reload<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu&#x2F;Debian：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ufw allow 9001/tcp<br></code></pre></td></tr></table></figure>
+
+<p>3. 由于 MinIO 管理界面默认需要登录，我们可以通过配置环境变量配置管理账号的用户名和密码。这里我将用户名定义为 <code>admin</code>，密码为 <code>12345678</code>（具体环境请以你们实际情况而定，密码长度至少 8 位，生产环境不能使用过于简单的密码！），这里我将数据写入到 <code>.bashrc</code> 文件中，依次执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export MINIO_ROOT_USER=&quot;admin&quot;&#x27;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export MINIO_ROOT_PASSWORD=&quot;12345678&quot;&#x27;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>说明：如果忘记密码，请使用 cat 命令查看 <code>~/.bashrc</code> 文件即可找回用户名和密码。</p>
+</blockquote>
+<h2 id="二、下载并启动-Minio"><a href="#二、下载并启动-Minio" class="headerlink" title="二、下载并启动 Minio"></a>二、下载并启动 Minio</h2><p>1. 下载 minio，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://dl.minio.org.cn/server/minio/release/linux-amd64/archive/minio.RELEASE.2024-07-10T18-41-49Z<br></code></pre></td></tr></table></figure>
+
+<p>2. 为下载好的文件重命名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mv</span> minio.RELEASE.2024-07-10T18-41-49Z minio<br></code></pre></td></tr></table></figure>
+
+<p>3. 为下载的文件赋予可执行的权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> 744 minio<br></code></pre></td></tr></table></figure>
+
+<p>4. 新建一个文件夹，用于存储 MinIO 中的数据：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /opt/minio/storage1<br></code></pre></td></tr></table></figure>
+
+<p>5. 启动 MinIO，执行如下命令（这里我的主机 IP 地址是 192.168.40.200，具体 IP 地址以你们的为准）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./minio server --console-address 192.168.40.200:9001 /opt/minio/storage1<br></code></pre></td></tr></table></figure>
+
+<p>6. 如果控制台出现了如下信息，就说明 MinIO 成功启动：</p>
+<p><img src="https://source.icode504.com/images/3c39d7b03e28b84ecf899b5efb71caa9.png" srcset="/img/loading.gif" lazyload></p>
+<p>7.  打开浏览器，在上方输入 <code>http://IP地址:9001</code> 即可打开 MinIO 登陆页面，默认情况下登陆账户名和密码是前面我们配置过的：</p>
+<p><img src="https://source.icode504.com/images/67bae766e024bac724fa9f66d685e56e.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 此时 MinIO 就可以正常使用了：</p>
+<p><img src="https://source.icode504.com/images/811a30a508610a4648d0f92ff4cbbb9d.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 如需停止 Minio，只需要到控制台按 <kbd>Ctrl</kbd><kbd>C</kbd>即可停止服务。</p>
+<h1 id="方式二：在Docker上部署"><a href="#方式二：在Docker上部署" class="headerlink" title="方式二：在Docker上部署"></a>方式二：在Docker上部署</h1><h2 id="一、准备操作-1"><a href="#一、准备操作-1" class="headerlink" title="一、准备操作"></a>一、准备操作</h2><p>1. 请确保 Linux 上已经安装了 Docker，需要安装的小伙伴，请根据 Linux 发行版本查看对应的安装教程：</p>
 <table>
 <thead>
 <tr>
-<th>软件</th>
-<th>安装教程</th>
-<th>说明</th>
+<th align="center">CentOS</th>
+<th align="center">Ubuntu&#x2F;Debian</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>NDM（Neat Download Manager）</td>
-<td><a href="./24.html">点我查看</a></td>
-<td>推荐使用NDM（Neat Download Manager）下载文件，可以加快下载速度。</td>
+<td align="center"><a href="./70.html">点我查看</a></td>
+<td align="center"><a href="./75.html">点我查看</a></td>
 </tr>
 </tbody></table>
-<h1 id="二、下载Node-js"><a href="#二、下载Node-js" class="headerlink" title="二、下载Node.js"></a>二、下载Node.js</h1><p>1. 点击右侧链接下载Node.js：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">点我查看</a></p>
-<p>2. 下载页面中有Node.js过去的各个发行版本，这里我选择的是最新的16版本的Node.js，如下图，点击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20240619232411366.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. Windows 64位操作系统的小伙伴推荐下载msi方式的安装包下载（如下图）：</p>
-<p><img src="https://source.icode504.com/images/image-20240619232609935.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、安装Node-js"><a href="#三、安装Node-js" class="headerlink" title="三、安装Node.js"></a>三、安装Node.js</h1><p>1. 双击打开安装包，进入安装界面，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426110553409.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. <strong>勾选</strong>用户许可协议，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426110726211.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>Change</strong>修改安装路径，这里我安装在了D盘（建议安装路径存放在一个你熟悉的位置，并且是英文路径），完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426110747764.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240426111024855.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/image-20240426111136195.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 选择要安装的模块，不熟悉的小伙伴直接按照系统默认选择的模块即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111203354.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 本地模块工具，如果你使用Python或者Visual Studio的构建工具，就将下图内容勾选即可（这里我并没有用到上述内容，我选择<strong>不勾选</strong>），完成后点击Next：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111238393.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 点击<strong>Install</strong>开始安装：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111249199.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111304999.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 点击<strong>Finish</strong>，Node.js安装完成：</p>
-<p><img src="https://source.icode504.com/images/image-20240426111317567.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>进入命令行，分别输入<code>node -v</code>和<code>npm -v</code>，如果能够查看到响应的版本信息就说明Node.js安装成功！</p>
-<p><img src="https://source.icode504.com/images/image-20240426111504600.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、npm更换镜像源"><a href="#四、npm更换镜像源" class="headerlink" title="四、npm更换镜像源"></a>四、npm更换镜像源</h1><p>Node.js中包含一个重要模块：npm，它的作用是帮助我们下载项目中的依赖（你可以理解成下载对应的软件包），但是npm默认的下载地址在国外，如果使用了默认的下载地址，后续在使用npm的过程中下载依赖会非常慢，因此，我们需要将npm默认的下载地址改成国内镜像，这里我使用的是淘宝镜像源。</p>
-<p>1. 执行如下命令查看当前<code>npm</code>的下载源：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config get registry<br></code></pre></td></tr></table></figure>
+<p>2. 上述操作准备完成后，我们需要到 Github 上拉取 Dockerhub 中的镜像，以下是操作教程：<a href="./111.html">点我查看</a></p>
+<h2 id="二、拉取-Minio-镜像"><a href="#二、拉取-Minio-镜像" class="headerlink" title="二、拉取 Minio 镜像"></a>二、拉取 Minio 镜像</h2><p>1. 打开 Dockerhub：<a target="_blank" rel="noopener" href="https://hub.docker.com/">点我查看</a></p>
+<p>2. 在上方搜索框中搜索 minio，然后按一下回车：</p>
+<p><img src="https://source.icode504.com/images/3d8973a3619ea290c0a6a50bd37796f2.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 第一个搜索结果就是 MinIO 的镜像，点击进入：</p>
+<p><img src="https://source.icode504.com/images/979c365719d35b1713cb762ff46967ea.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击 <strong>Tags</strong>，在搜索框中搜索 2024，查询结果是 2024 年发布的相关镜像，找到以<strong>RELEASE-时间</strong>格式的镜像，这里我要拉取的是 <code>RELEASE.2024-12-18T13-15-44Z</code> 版本镜像：</p>
+<p><img src="https://source.icode504.com/images/8462713024692178aad3467e2a1d3498.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 复制 docker pull 命令后面的内容，如下图：</p>
+<p><img src="https://source.icode504.com/images/686ecb12bbb1015a7ada4ed297aa1049.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 打开 Github 我们 fork 的仓库，找到 <code>images.txt</code>，点击进入：</p>
+<p><img src="https://source.icode504.com/images/33a307dea0162fcd9d12ff3364e803d5.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 点击右上角的铅笔按钮开始编辑，将第5步复制的内容粘贴到最后一行，效果图如下，完成后点击 <strong>Commit changes</strong>：</p>
+<p><img src="https://source.icode504.com/images/3c343cca978751ffdbc245c500de92f8.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时会有一个弹窗提示，点击 <strong>Commit Changes</strong>：</p>
+<p><img src="https://source.icode504.com/images/44ea9caa3c851094c2e6279f441ac03f.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 点击上方的 Actions，此时 Github 正在拉取镜像并推送到阿里云本地，预计需要等待几分钟的时间，期间可以通过刷新页面查看状态：</p>
+<p><img src="https://source.icode504.com/images/72ed8b10c6fb5429dbf3c0af2f8437ea.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 点击右侧链接，登录到阿里云容器镜像服务（个人版）控制台界面：<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instance/dashboard">点我查看</a></p>
+<p>10. 点击左侧的<strong>镜像仓库</strong>，此时我们就可以看到 Github 成功将镜像数据推送到了阿里云个人镜像仓库：</p>
+<p><img src="https://source.icode504.com/images/cfae32d193cc18153bceda2f9b241889.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 点击进入 minio 镜像详情页面：</p>
+<p><img src="https://source.icode504.com/images/f71bb527dd9f0d1cf4a1225ffaea6065.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 复制第一行命令到命令行并执行，此时会提示输入密码，这个密码就是阿里云镜像仓库的访问凭证：</p>
+<p><img src="https://source.icode504.com/images/2cac2af529984492dc9c33bbc0b0ebe6.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/8996bae32468cbfd42ace559ef765f6a.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 返回阿里云管理界面，复制如下内容（复制到冒号）到控制台（先不执行）</p>
+<p><img src="https://source.icode504.com/images/4732371d4b02ace884c785c6dba566aa.png" srcset="/img/loading.gif" lazyload></p>
+<p>在命令行的效果图如下：</p>
+<p><img src="https://source.icode504.com/images/282078bd26259e83f8452037190ade10.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. 返回阿里云管理界面，点击左侧<strong>镜像版本</strong>，鼠标点击一下版本即可显示完整的版本信息，复制版本号：</p>
+<p><img src="https://source.icode504.com/images/3877114ad87aff874b9e15fdc40b58bf.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 返回命令行，将上一步版本号信息粘贴到冒号后面，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/5596b89ddbd072f9ece3aa6e4365b572.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 执行上述命令，拉取镜像，此过程需要1~2分钟时间，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/12596bb98bd860e1621dd651dbe5a267.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 如果出现如下提示，说明 MinIO 镜像拉取成功！</p>
+<p><img src="https://source.icode504.com/images/30e3d35c4fd82656f4b5be9771d3f5a6.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="三、启动-MinIO"><a href="#三、启动-MinIO" class="headerlink" title="三、启动 MinIO"></a>三、启动 MinIO</h2><p>1. 使用如下命令查看拉取下来的镜像信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker images<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-20240428091353944.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 将镜像源更改成淘宝镜像源，执行如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config set registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
+<p>2. 这里我们需要留意一下 REPOSITORY 和 TAG，一会会用到：</p>
+<p><img src="https://source.icode504.com/images/bc40eafccf667ad7eda7972f83fda41a.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 新建一个文件夹用于存储 Minio 数据文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /opt/docker/minio/storage<br></code></pre></td></tr></table></figure>
 
-<p>3. 再次执行如下命令，镜像源成功修改为淘宝镜像源：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config get registry<br></code></pre></td></tr></table></figure>
+<p>4. 自行修改如下命令复制如下命令到命令行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run \<br>   -<span class="hljs-built_in">id</span> \<br>   -p 9000:9000 \<br>   -p 9001:9001 \<br>   --name minio \<br>   -v /opt/docker/minio/storage:/data \<br>   -e <span class="hljs-string">&quot;MINIO_ROOT_USER=用户名&quot;</span> \<br>   -e <span class="hljs-string">&quot;MINIO_ROOT_PASSWORD=密码&quot;</span> \<br>   REPOSITORY:TAG server /data --console-address <span class="hljs-string">&quot;:9001&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://source.icode504.com/images/image-20240426111933066.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="五、Node-js的卸载"><a href="#五、Node-js的卸载" class="headerlink" title="五、Node.js的卸载"></a>五、Node.js的卸载</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
-          </div>
-
-<blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p>
-<p>已经安装的小伙伴请继续往下看！</p>
-</blockquote>
-<p>1. 打开Geek Uninstalller，找到Node.js，鼠标右键点击卸载：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105703719.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 选择是，卸载Node.js：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105801702.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 卸载中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105842216.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 卸载完成，此时Geek Uninstaller并没有卸载残留，点击关闭，Geek Uninstaller卸载完毕：</p>
-<p><img src="https://source.icode504.com/images/image-20240426105948110.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里我们需要修改：用户名、密码、REPOSITORY、TAG。用户名和密码自行指定，这里我设置用户名为 <code>admin</code>，密码是 <code>admin123</code>。REPOSITORY 和 TAG 来自第2步使用 <code>docker images</code> 中的相关信息进行替换即可，修改后命令的效果图如下：</p>
+<p><img src="https://source.icode504.com/images/b89932ee6985f5e3c827c63a504cae04.png" srcset="/img/loading.gif" lazyload></p>
+<p>5.  打开浏览器，在上方输入 <code>http://IP地址:19000</code> 即可打开 MinIO 登陆页面，默认情况下用户名和账号是在前面设置的，这里我的用户名是 <code>admin</code>，密码是 <code>admin123</code>：</p>
+<p><img src="https://source.icode504.com/images/66dafc7eed7d67995fb246015a58bd04.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 此时 MinIO 就可以正常使用了：</p>
+<p><img src="https://source.icode504.com/images/bdaadcaa49b115a7249a6ac0422bd52f.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2320,13 +2361,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" class="category-chain-item">前端框架</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="category-chain-item">分布式对象存储</a>
+  
+  
+
   
 
   
@@ -2344,11 +2392,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/MinIo/" class="print-no-link">#MinIo</a>
       
-        <a href="/tags/Node-js/" class="print-no-link">#Node.js</a>
-      
-        <a href="/tags/npm/" class="print-no-link">#npm</a>
+        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/" class="print-no-link">#分布式存储</a>
       
     </div>
   
@@ -2360,8 +2406,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Node.js安装、配置和卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/67.html</div>
+      <div>MinIO 安装配置教程（Linux 通用版）</div>
+      <div>https://www.icode504.com/posts/125.html</div>
     </div>
     <div class="license-meta">
       
@@ -2373,7 +2419,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月13日</div>
+          <div>2025年8月18日</div>
         </div>
       
       
@@ -2405,18 +2451,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/55.html" title="JDK 8安装配置教程（Linux通用版）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JDK 8安装配置教程（Linux通用版）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/68.html" title="MySQL 8.0安装、配置与卸载教程（macOS版）">
-                        <span class="hidden-mobile">MySQL 8.0安装、配置与卸载教程（macOS版）</span>
+                      <a href="/posts/17.html" title="第二章 若依-JFlow流程模型与单节点表单设计">
+                        <span class="hidden-mobile">第二章 若依-JFlow流程模型与单节点表单设计</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
