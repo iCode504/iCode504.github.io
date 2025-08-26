@@ -2177,39 +2177,6 @@
   
   
   <entry>
-    <title>Python3安装、配置与卸载教程（Windows版）</title>
-    <link href="/posts/49.html"/>
-    <url>/posts/49.html</url>
-    
-    <content type="html"><![CDATA[<p>Python 是一种高级编程语言，由 Guido van Rossum 在 1989 年创造，并于 1991 年第一次公开发布。Python 的设计哲学强调代码的可读性和简洁的语法（尤其是使用空格缩进划分代码块），这使得 Python 成为初学者和专家都喜欢的语言。</p><p>以下是 Python 的一些主要特点：</p><ol><li><strong>易于学习</strong>：Python 是一种解释型语言，语法简洁明了，代码结构清晰，易于上手。</li><li><strong>跨平台</strong>：Python 是跨平台的，可以在多种操作系统上运行，包括 Windows、Linux、macOS 等。</li><li><strong>免费和开源</strong>：Python 是开源的，任何人都可以获取源代码并修改。它也有一个庞大的社区和丰富的第三方库，这些库覆盖了各种任务，从 Web 开发到科学计算。</li><li><strong>动态类型</strong>：Python 是动态类型的语言，这意味着你不需要在声明变量时指定其类型，Python 会在运行时确定类型。</li><li><strong>面向对象</strong>：Python 支持面向对象编程，包括类和继承。</li><li><strong>强大的库</strong>：Python 标准库包含了许多常用的功能，如文件处理、网络编程、数据库接口、图形界面开发、科学计算等。此外，还有大量的第三方库，如 NumPy、Pandas、Matplotlib 用于数据处理和可视化，Django、Flask 用于 Web 开发，以及 TensorFlow、PyTorch 用于机器学习。</li><li><strong>可扩展性</strong>：Python 可以调用 C、C++ 等语言的代码，也可以将 Python 代码编译成 C 扩展模块，从而提高执行效率。</li><li><strong>脚本编写</strong>：Python 常被用于编写脚本，自动化日常任务，如文件处理、数据转换等。</li><li><strong>科学计算和数据分析</strong>：Python 在科学计算和数据分析领域非常受欢迎，特别是在数据科学、机器学习和人工智能领域。</li><li><strong>Web 开发</strong>：Python 有多个 Web 框架，如 Django 和 Flask，使得 Python 成为 Web 开发的流行选择。</li></ol><p>目前主要使用的版本是Python 3.x.x版本（Python 2.x.x版本）以下是Windows环境下Python的安装教程：</p><h1 id="一、Python的下载"><a href="#一、Python的下载" class="headerlink" title="一、Python的下载"></a>一、Python的下载</h1><p>1. 打开Python官网下载连接：<a href="https://www.python.org/downloads/windows/">点我查看</a>（加载可能会比较慢，请耐心等待）</p><p>2. 这里我下载的是Python 3.7.9，点击<strong>Windows x86-64-executable installer</strong>下载：</p><p><img src="https://source.icode504.com/images/image-20240226160327855.png"></p><h1 id="二、Python的安装"><a href="#二、Python的安装" class="headerlink" title="二、Python的安装"></a>二、Python的安装</h1><p>1. 双击打开Python安装包：</p><p><img src="https://source.icode504.com/images/image-20240226172043318.png"></p><p>2. 进入安装界面后，将最下方<strong>Add Python 3.7 to PATH</strong>（将Python添加到环境变量），然后点击<strong>Customize installation</strong>（自定义安装）</p><p><img src="https://source.icode504.com/images/image-20240226172222002.png"></p><p>3. 安装额外组件按照系统默认勾选即可，完成后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240226172312844.png"></p><p>4. 点击<strong>Browse</strong>修改安装路径，这里我安装在了D盘，修改完成后，点击<strong>Install</strong>：</p><p><img src="https://source.icode504.com/images/image-20240226172557771.png"></p><p><img src="https://source.icode504.com/images/image-20240226172718016.png"></p><p><img src="https://source.icode504.com/images/image-20240226172808930.png"></p><p>5. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240226172841392.png"></p><p>6. 安装完成，点击<strong>Close</strong>关闭此窗口：</p><p><img src="https://source.icode504.com/images/image-20240226172922054.png"></p><p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并按一下回车，进入命令行，输入<code>python --version</code>，出现如下信息就说明Python已经安装并配置成功了：</p><p><img src="https://source.icode504.com/images/image-20240226110954813.png"></p><h1 id="三、pip更换源"><a href="#三、pip更换源" class="headerlink" title="三、pip更换源"></a>三、pip更换源</h1><p>pip是官方提供的一款Python包下载安装工具，但是它的默认下载源在国外，下载速度比较慢，因此我们需要将下载源更改为国内的镜像源。</p><p>执行如下命令，既可以将下载源更换为国内镜像，这里我使用的是清华大学的镜像源：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip config <span class="hljs-built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/<br></code></pre></td></tr></table></figure><p>（以下是演示内容）配置完成后，这里我想下载一个Python Web框架Django，直接在命令行执行如下命令即可安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install Django<br></code></pre></td></tr></table></figure><p>下载过程中我们可以看到镜像源更换成功！</p><p><img src="https://source.icode504.com/images/image-20240628112818394.png"></p><h1 id="四、Python的卸载（可选）"><a href="#四、Python的卸载（可选）" class="headerlink" title="四、Python的卸载（可选）"></a>四、Python的卸载（可选）</h1><div class="note note-danger">            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><blockquote><p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p><p>已经安装的小伙伴可以接着往下看！</p></blockquote><p>1. 打开Geek Installer，在程序列表中找到Python，鼠标右键，点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240226174232044.png"></p><p>2. 卸载中，请耐心等待。</p><p><img src="https://source.icode504.com/images/image-20240226174249116.png"></p><p>3. 卸载完成，点击Close关闭此窗口：</p><p><img src="https://source.icode504.com/images/image-20240226174758587.png"></p><p>4. 此时Geek会我们检测安装残留，这里我的电脑未检测出卸载残留，只需要点击<strong>关闭</strong>即可，卸载完成：</p><p><img src="https://source.icode504.com/images/image-20240226101538583.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件安装</category>
-      
-      <category>Windows</category>
-      
-      <category>编程语言</category>
-      
-      <category>Python</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Windows</tag>
-      
-      <tag>Python</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>EasyExcel的列操作</title>
     <link href="/posts/62.html"/>
     <url>/posts/62.html</url>
@@ -3194,6 +3161,39 @@
   
   
   <entry>
+    <title>Python3安装、配置与卸载教程（Windows版）</title>
+    <link href="/posts/49.html"/>
+    <url>/posts/49.html</url>
+    
+    <content type="html"><![CDATA[<p>Python 是一种高级编程语言，由 Guido van Rossum 在 1989 年创造，并于 1991 年第一次公开发布。Python 的设计哲学强调代码的可读性和简洁的语法（尤其是使用空格缩进划分代码块），这使得 Python 成为初学者和专家都喜欢的语言。</p><p>以下是 Python 的一些主要特点：</p><ol><li><strong>易于学习</strong>：Python 是一种解释型语言，语法简洁明了，代码结构清晰，易于上手。</li><li><strong>跨平台</strong>：Python 是跨平台的，可以在多种操作系统上运行，包括 Windows、Linux、macOS 等。</li><li><strong>免费和开源</strong>：Python 是开源的，任何人都可以获取源代码并修改。它也有一个庞大的社区和丰富的第三方库，这些库覆盖了各种任务，从 Web 开发到科学计算。</li><li><strong>动态类型</strong>：Python 是动态类型的语言，这意味着你不需要在声明变量时指定其类型，Python 会在运行时确定类型。</li><li><strong>面向对象</strong>：Python 支持面向对象编程，包括类和继承。</li><li><strong>强大的库</strong>：Python 标准库包含了许多常用的功能，如文件处理、网络编程、数据库接口、图形界面开发、科学计算等。此外，还有大量的第三方库，如 NumPy、Pandas、Matplotlib 用于数据处理和可视化，Django、Flask 用于 Web 开发，以及 TensorFlow、PyTorch 用于机器学习。</li><li><strong>可扩展性</strong>：Python 可以调用 C、C++ 等语言的代码，也可以将 Python 代码编译成 C 扩展模块，从而提高执行效率。</li><li><strong>脚本编写</strong>：Python 常被用于编写脚本，自动化日常任务，如文件处理、数据转换等。</li><li><strong>科学计算和数据分析</strong>：Python 在科学计算和数据分析领域非常受欢迎，特别是在数据科学、机器学习和人工智能领域。</li><li><strong>Web 开发</strong>：Python 有多个 Web 框架，如 Django 和 Flask，使得 Python 成为 Web 开发的流行选择。</li></ol><p>目前主要使用的版本是Python 3.x.x版本（Python 2.x.x版本）以下是Windows环境下Python的安装教程：</p><h1 id="一、Python的下载"><a href="#一、Python的下载" class="headerlink" title="一、Python的下载"></a>一、Python的下载</h1><p>1. 打开Python官网下载连接：<a href="https://www.python.org/downloads/windows/">点我查看</a>（加载可能会比较慢，请耐心等待）</p><p>2. 这里我下载的是Python 3.7.9，点击<strong>Windows x86-64-executable installer</strong>下载：</p><p><img src="https://source.icode504.com/images/image-20240226160327855.png"></p><h1 id="二、Python的安装"><a href="#二、Python的安装" class="headerlink" title="二、Python的安装"></a>二、Python的安装</h1><p>1. 双击打开Python安装包：</p><p><img src="https://source.icode504.com/images/image-20240226172043318.png"></p><p>2. 进入安装界面后，将最下方<strong>Add Python 3.7 to PATH</strong>（将Python添加到环境变量），然后点击<strong>Customize installation</strong>（自定义安装）</p><p><img src="https://source.icode504.com/images/image-20240226172222002.png"></p><p>3. 安装额外组件按照系统默认勾选即可，完成后点击<strong>Next</strong>：</p><p><img src="https://source.icode504.com/images/image-20240226172312844.png"></p><p>4. 点击<strong>Browse</strong>修改安装路径，这里我安装在了D盘，修改完成后，点击<strong>Install</strong>：</p><p><img src="https://source.icode504.com/images/image-20240226172557771.png"></p><p><img src="https://source.icode504.com/images/image-20240226172718016.png"></p><p><img src="https://source.icode504.com/images/image-20240226172808930.png"></p><p>5. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240226172841392.png"></p><p>6. 安装完成，点击<strong>Close</strong>关闭此窗口：</p><p><img src="https://source.icode504.com/images/image-20240226172922054.png"></p><p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>并按一下回车，进入命令行，输入<code>python --version</code>，出现如下信息就说明Python已经安装并配置成功了：</p><p><img src="https://source.icode504.com/images/image-20240226110954813.png"></p><h1 id="三、pip更换源"><a href="#三、pip更换源" class="headerlink" title="三、pip更换源"></a>三、pip更换源</h1><p>pip是官方提供的一款Python包下载安装工具，但是它的默认下载源在国外，下载速度比较慢，因此我们需要将下载源更改为国内的镜像源。</p><p>执行如下命令，既可以将下载源更换为国内镜像，这里我使用的是清华大学的镜像源：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip config <span class="hljs-built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/<br></code></pre></td></tr></table></figure><p>（以下是演示内容）配置完成后，这里我想下载一个Python Web框架Django，直接在命令行执行如下命令即可安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install Django<br></code></pre></td></tr></table></figure><p>下载过程中我们可以看到镜像源更换成功！</p><p><img src="https://source.icode504.com/images/image-20240628112818394.png"></p><h1 id="四、Python的卸载（可选）"><a href="#四、Python的卸载（可选）" class="headerlink" title="四、Python的卸载（可选）"></a>四、Python的卸载（可选）</h1><div class="note note-danger">            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>          </div><blockquote><p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="https://www.icode504.com/posts/31.html">点我查看</a></p><p>已经安装的小伙伴可以接着往下看！</p></blockquote><p>1. 打开Geek Installer，在程序列表中找到Python，鼠标右键，点击卸载：</p><p><img src="https://source.icode504.com/images/image-20240226174232044.png"></p><p>2. 卸载中，请耐心等待。</p><p><img src="https://source.icode504.com/images/image-20240226174249116.png"></p><p>3. 卸载完成，点击Close关闭此窗口：</p><p><img src="https://source.icode504.com/images/image-20240226174758587.png"></p><p>4. 此时Geek会我们检测安装残留，这里我的电脑未检测出卸载残留，只需要点击<strong>关闭</strong>即可，卸载完成：</p><p><img src="https://source.icode504.com/images/image-20240226101538583.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>编程语言</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>JDK 8安装配置教程（Linux通用版）</title>
     <link href="/posts/55.html"/>
     <url>/posts/55.html</url>
@@ -3569,7 +3569,7 @@
     <link href="/posts/107.html"/>
     <url>/posts/107.html</url>
     
-    <content type="html"><![CDATA[<p><a href="https://sdkman.io/">SDKMAN!</a>，全称The Software Development Kit Manager，中文翻译过来就是<strong>软件开发工具包管理器</strong>。以下是官网对这款工具的介绍（个人翻译）：</p><p>认识一下SDKMAN!——你的可靠伙伴，它可以高效管理Unix系统上众多的软件开发工具包。假设您的系统上存在不同版本的软件开发工具包（SDKs），需要以一种无压力的方式在他们之间切换，SDKMAN!以简单易用的命令行界面（CLI）和API能介入上述过程。以前称作GVM，Groovy enVironment Managener（Groovy环境管理器），SDKMAN!从类似工具apt、pip、RVM、rbenv甚至是Git上获取灵感。将其视为您的一个乐于助人的朋友，随时为您准备简化SDK管理。</p><ul><li>源于开发者，为开发人员着想。简化SDK生命周期，不需要再寻找下载源，提取归档或添加修改<code>_HOME</code>和<code>PATH</code>等环境变量。</li><li>一站式直接搞定所有和Java相关工具下载安装。可以安装基于JVM的软件开发工具包，例如：Java、Scala、Kotlin和Groovy、Ant、Gradle、Grails、Maven、SBT、Spark、Spring Boot、Vert.x和其他框架工具也支持。</li><li>轻量级。SDKMAN!使用Rust和bash编写，并且系统上只需要有<code>curl</code>、<code>zip</code>和<code>unzip</code>三个依赖即可。甚至可以和ZSH一起工作。</li><li>多平台。跨各种基于UNIX平台无缝操作，包括<strong>macOS、Linux、Windows下的Linux子系统</strong>（WSL）。</li><li>APIs。通过使用我们的开放的Broker API，可以轻松编写新的客户端。软件提供者可以通过安全的Vendor API来发布和声明自己的软件版本。</li><li>开源。SDKMAN!的研发离不开开源社区成员们的努力。Apache 2.0下的协议。</li></ul><p>接下来就为大家介绍一下SDKMAN!的安装和使用：</p><h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>请确保您的操作系统是Linux&#x2F;macOS&#x2F;WSL，需要安装的小伙伴可以根据自己的需要查看安装教程：</p><table><thead><tr><th align="center">CentOS</th><th align="center">Ubuntu</th><th align="center">Debian</th><th align="center">WSL</th></tr></thead><tbody><tr><td align="center"><a href="./94.html">点我查看</a></td><td align="center"><a href="./51.html">点我查看</a></td><td align="center"><a href="./52.html">点我查看</a></td><td align="center"><a href="./42.html">点我查看</a></td></tr></tbody></table><h1 id="二、安装SDKMAN"><a href="#二、安装SDKMAN" class="headerlink" title="二、安装SDKMAN!"></a>二、安装SDKMAN!</h1><h2 id="方式一：国内用户安装"><a href="#方式一：国内用户安装" class="headerlink" title="方式一：国内用户安装"></a>方式一：国内用户安装</h2><blockquote><p>说明：推荐国内用户使用，我在官方脚本上稍微做了一下改进。</p></blockquote><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=t9ko8hrmejn6xoy><div class="nav-tabs"><button type="button" class="tab active" data-target="t9ko8hrmejn6xoy-1">CentOS</button><button type="button" class="tab" data-target="t9ko8hrmejn6xoy-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="t9ko8hrmejn6xoy-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="t9ko8hrmejn6xoy-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行，执行如下命令即可安装SDKMAN!</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -s <span class="hljs-string">&quot;https://gitee.com/iCode504/my-sdkman/raw/master/install.sh&quot;</span> | bash<br></code></pre></td></tr></table></figure><p>3. 安装完成，执行如下命令让SDKMAN!相关命令生效：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.sdkman/bin/sdkman-init.sh&quot;</span><br></code></pre></td></tr></table></figure><p>4. 执行如下命令即可查看SDKMAN!的版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-8a3663e0c689f82dba9e907ea23a1d64.png"></p><h2 id="方式二：正常安装"><a href="#方式二：正常安装" class="headerlink" title="方式二：正常安装"></a>方式二：正常安装</h2><blockquote><p>说明：国内用户不推荐使用，因为需要从Github上下载安装包，Github在国内访问速度较慢，下载可能会失败。</p></blockquote><p>安装SDKMAN!非常简单，只需要在命令行（macOS请打开终端执行命令）界面运行几行代码就OK了。</p><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=tntv2pdmejn6xoy><div class="nav-tabs"><button type="button" class="tab active" data-target="tntv2pdmejn6xoy-1">CentOS</button><button type="button" class="tab" data-target="tntv2pdmejn6xoy-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="tntv2pdmejn6xoy-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="tntv2pdmejn6xoy-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行窗口，在命令行中输入如下命令并执行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -s &quot;https://get.sdkman.io&quot; | bash<br></code></pre></td></tr></table></figure><p>因为这款软件是下载源在国外，下载速度较慢，请耐心等待！</p><p>3. 出现下面提示即说明SDKMAN!安装成功：</p><p><img src="https://source.icode504.com/images/image-20231227153819937.png"></p><p>如果安装失败，执行如下命令删除残留文件重新执行上一步命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ./sdkman<br></code></pre></td></tr></table></figure><p>4. 我们在命令行再执行如下命令，方便后续我们使用SDKMAN!相关的命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;<br></code></pre></td></tr></table></figure><p>5. 此时在命令行输入如下命令，就可以看到SDKMAN!的版本信息：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-20231227154230369.png"></p><h1 id="三、卸载SDKMAN-（可选）"><a href="#三、卸载SDKMAN-（可选）" class="headerlink" title="三、卸载SDKMAN!（可选）"></a>三、卸载SDKMAN!（可选）</h1><p>卸载SDKMAN!也非常简单！只需要几步就可以完成：</p><p>1. （可选）如果后续还想使用SDKMAN!，可以对当前<code>./sdkman</code>目录打包成tar文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar zcvf ~/sdkman-backup_$(date +%F-%kh%M).tar.gz -C ~/ .sdkman<br></code></pre></td></tr></table></figure><p>2. 使用<code>rm -rf</code>命令强制删除：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -rf ~/.sdkman<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://sdkman.io/">SDKMAN!</a>，全称The Software Development Kit Manager，中文翻译过来就是<strong>软件开发工具包管理器</strong>。以下是官网对这款工具的介绍（个人翻译）：</p><p>认识一下SDKMAN!——你的可靠伙伴，它可以高效管理Unix系统上众多的软件开发工具包。假设您的系统上存在不同版本的软件开发工具包（SDKs），需要以一种无压力的方式在他们之间切换，SDKMAN!以简单易用的命令行界面（CLI）和API能介入上述过程。以前称作GVM，Groovy enVironment Managener（Groovy环境管理器），SDKMAN!从类似工具apt、pip、RVM、rbenv甚至是Git上获取灵感。将其视为您的一个乐于助人的朋友，随时为您准备简化SDK管理。</p><ul><li>源于开发者，为开发人员着想。简化SDK生命周期，不需要再寻找下载源，提取归档或添加修改<code>_HOME</code>和<code>PATH</code>等环境变量。</li><li>一站式直接搞定所有和Java相关工具下载安装。可以安装基于JVM的软件开发工具包，例如：Java、Scala、Kotlin和Groovy、Ant、Gradle、Grails、Maven、SBT、Spark、Spring Boot、Vert.x和其他框架工具也支持。</li><li>轻量级。SDKMAN!使用Rust和bash编写，并且系统上只需要有<code>curl</code>、<code>zip</code>和<code>unzip</code>三个依赖即可。甚至可以和ZSH一起工作。</li><li>多平台。跨各种基于UNIX平台无缝操作，包括<strong>macOS、Linux、Windows下的Linux子系统</strong>（WSL）。</li><li>APIs。通过使用我们的开放的Broker API，可以轻松编写新的客户端。软件提供者可以通过安全的Vendor API来发布和声明自己的软件版本。</li><li>开源。SDKMAN!的研发离不开开源社区成员们的努力。Apache 2.0下的协议。</li></ul><p>接下来就为大家介绍一下SDKMAN!的安装和使用：</p><h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>请确保您的操作系统是Linux&#x2F;macOS&#x2F;WSL，需要安装的小伙伴可以根据自己的需要查看安装教程：</p><table><thead><tr><th align="center">CentOS</th><th align="center">Ubuntu</th><th align="center">Debian</th><th align="center">WSL</th></tr></thead><tbody><tr><td align="center"><a href="./94.html">点我查看</a></td><td align="center"><a href="./51.html">点我查看</a></td><td align="center"><a href="./52.html">点我查看</a></td><td align="center"><a href="./42.html">点我查看</a></td></tr></tbody></table><h1 id="二、安装SDKMAN"><a href="#二、安装SDKMAN" class="headerlink" title="二、安装SDKMAN!"></a>二、安装SDKMAN!</h1><h2 id="方式一：国内用户安装"><a href="#方式一：国内用户安装" class="headerlink" title="方式一：国内用户安装"></a>方式一：国内用户安装</h2><blockquote><p>说明：推荐国内用户使用，我在官方脚本上稍微做了一下改进。</p></blockquote><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=tvbd5tjmes5fnaw><div class="nav-tabs"><button type="button" class="tab active" data-target="tvbd5tjmes5fnaw-1">CentOS</button><button type="button" class="tab" data-target="tvbd5tjmes5fnaw-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="tvbd5tjmes5fnaw-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="tvbd5tjmes5fnaw-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行，执行如下命令即可安装SDKMAN!</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -s <span class="hljs-string">&quot;https://gitee.com/iCode504/my-sdkman/raw/master/install.sh&quot;</span> | bash<br></code></pre></td></tr></table></figure><p>3. 安装完成，执行如下命令让SDKMAN!相关命令生效：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.sdkman/bin/sdkman-init.sh&quot;</span><br></code></pre></td></tr></table></figure><p>4. 执行如下命令即可查看SDKMAN!的版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-8a3663e0c689f82dba9e907ea23a1d64.png"></p><h2 id="方式二：正常安装"><a href="#方式二：正常安装" class="headerlink" title="方式二：正常安装"></a>方式二：正常安装</h2><blockquote><p>说明：国内用户不推荐使用，因为需要从Github上下载安装包，Github在国内访问速度较慢，下载可能会失败。</p></blockquote><p>安装SDKMAN!非常简单，只需要在命令行（macOS请打开终端执行命令）界面运行几行代码就OK了。</p><p>1. 请先确保电脑本机上已经安装了<code>curl</code>、<code>zip</code>、<code>unzip</code>：</p><div class="tabs" id=tew2ttgmes5fnax><div class="nav-tabs"><button type="button" class="tab active" data-target="tew2ttgmes5fnax-1">CentOS</button><button type="button" class="tab" data-target="tew2ttgmes5fnax-2">Ubuntu/Debian</button></div><div class="tab-contents"><div class="tab-item-content active" id="tew2ttgmes5fnax-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum -y install curl zip unzip<br></code></pre></td></tr></table></figure></div><div class="tab-item-content" id="tew2ttgmes5fnax-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt -y install curl zip unzip<br></code></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="iconfont icon-arrow-up-bold"></i></button></div></div><p>2. 打开命令行窗口，在命令行中输入如下命令并执行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -s &quot;https://get.sdkman.io&quot; | bash<br></code></pre></td></tr></table></figure><p>因为这款软件是下载源在国外，下载速度较慢，请耐心等待！</p><p>3. 出现下面提示即说明SDKMAN!安装成功：</p><p><img src="https://source.icode504.com/images/image-20231227153819937.png"></p><p>如果安装失败，执行如下命令删除残留文件重新执行上一步命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ./sdkman<br></code></pre></td></tr></table></figure><p>4. 我们在命令行再执行如下命令，方便后续我们使用SDKMAN!相关的命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;<br></code></pre></td></tr></table></figure><p>5. 此时在命令行输入如下命令，就可以看到SDKMAN!的版本信息：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sdk v<br></code></pre></td></tr></table></figure><p><img src="https://source.icode504.com/images/image-20231227154230369.png"></p><h1 id="三、卸载SDKMAN-（可选）"><a href="#三、卸载SDKMAN-（可选）" class="headerlink" title="三、卸载SDKMAN!（可选）"></a>三、卸载SDKMAN!（可选）</h1><p>卸载SDKMAN!也非常简单！只需要几步就可以完成：</p><p>1. （可选）如果后续还想使用SDKMAN!，可以对当前<code>./sdkman</code>目录打包成tar文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar zcvf ~/sdkman-backup_$(date +%F-%kh%M).tar.gz -C ~/ .sdkman<br></code></pre></td></tr></table></figure><p>2. 使用<code>rm -rf</code>命令强制删除：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -rf ~/.sdkman<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
@@ -3736,39 +3736,6 @@
   
   
   <entry>
-    <title>JDK 17安装配置教程（Windows版）</title>
-    <link href="/posts/26.html"/>
-    <url>/posts/26.html</url>
-    
-    <content type="html"><![CDATA[<blockquote><p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p></blockquote><p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p><p>接下来为大家讲解一下JDK 17如何安装与使用。</p><h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">点我查看</a></p><p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是17.0.6版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p><p><img src="https://source.icode504.com/images/image-20240102140251099.png"></p><h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140356853.png"></p><p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p><p><img src="https://source.icode504.com/images/image-20240102140438115.png"></p><p><img src="https://source.icode504.com/images/image-20240102140629136.png"></p><p><img src="https://source.icode504.com/images/image-20240102140706171.png"></p><p>3. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240102140729167.png"></p><p>4. 安装完成，点击<strong>关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140754229.png"></p><blockquote><p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p></blockquote><h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102141010328.png"></p><p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>3. 点击<strong>高级系统设置</strong>：</p><table><thead><tr><th align="center">Windows 11</th><th><img src="https://source.icode504.com/images/image-20240101010932039.png"></th></tr></thead><tbody><tr><td align="center"><strong>Windows 10</strong></td><td><img src="https://source.icode504.com/images/image-20240101011132186.png"></td></tr></tbody></table><p>4. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002218161.png"></p><p>5. 在下方系统变量，点击<strong>新建</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002302057.png"></p><p>6. 配置系统变量，按照图示操作即可：</p><p><img src="https://source.icode504.com/images/image-20240102141211785.png"></p><p>7. 双击Path进入：</p><p><img src="https://source.icode504.com/images/image-20240101002655185.png"></p><p>8. 按照图示操作即可，然后一路点击确定。</p><p><img src="https://source.icode504.com/images/image-20240101002812677.png"></p><p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p><p><img src="https://source.icode504.com/images/image-20240101003131968.png"></p><p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 17安装成功了：</p><p><img src="https://source.icode504.com/images/image-20240102141350623.png"></p><p><img src="https://source.icode504.com/images/image-20240102141433688.png"></p><p><img src="https://source.icode504.com/images/image-20240102141538207.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件安装</category>
-      
-      <category>Windows</category>
-      
-      <category>编程语言</category>
-      
-      <category>Java/JDK</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Java</tag>
-      
-      <tag>Windows</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>访问Github卡顿甚至进不去的解决办法（适用于Windows）</title>
     <link href="/posts/25.html"/>
     <url>/posts/25.html</url>
@@ -3796,6 +3763,39 @@
       <tag>Github</tag>
       
       <tag>Watt Tookit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>JDK 17安装配置教程（Windows版）</title>
+    <link href="/posts/26.html"/>
+    <url>/posts/26.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文下载文件使用的是NDM（Neat Download Manager），如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p></blockquote><p>JDK，全称Java Development Kit，即Java开发工具包，它是整个Java开发的核心，包含了Java运行环境（JVM+Java系统类库）和Java工具。目前JDK 8、11、17、21是长期稳定支持的版本。</p><p>接下来为大家讲解一下JDK 17如何安装与使用。</p><h1 id="一、下载JDK"><a href="#一、下载JDK" class="headerlink" title="一、下载JDK"></a>一、下载JDK</h1><p>1. 打开Oracle JDK官网：<a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">点我查看</a></p><p>2. 在下载页面，选择一个版本的JDK下载，这里我选择的是17.0.6版本的JDK。在下面找到Windows版本，这里我选择的是exe文件下载。</p><p><img src="https://source.icode504.com/images/image-20240102140251099.png"></p><h1 id="二、安装JDK"><a href="#二、安装JDK" class="headerlink" title="二、安装JDK"></a>二、安装JDK</h1><p>1. 双击打开JDK安装包，进入安装界面，点击<strong>下一步</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140356853.png"></p><p>2. 更改JDK的安装路径，这里我安装在了D盘（为了避免后续使用过程中出现各种各样的问题，建议安装路径是全英文的）：</p><p><img src="https://source.icode504.com/images/image-20240102140438115.png"></p><p><img src="https://source.icode504.com/images/image-20240102140629136.png"></p><p><img src="https://source.icode504.com/images/image-20240102140706171.png"></p><p>3. 安装中，请耐心等待：</p><p><img src="https://source.icode504.com/images/image-20240102140729167.png"></p><p>4. 安装完成，点击<strong>关闭</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102140754229.png"></p><blockquote><p>对于首次安装的新手小白，请继续往下看；如果是老手，可以选择性往下看。</p></blockquote><h1 id="三、配置JDK"><a href="#三、配置JDK" class="headerlink" title="三、配置JDK"></a>三、配置JDK</h1><p>1. 找到JDK的安装路径，出现bin、conf等文件夹，点击上方路径，<strong>鼠标右键</strong>点击<strong>复制</strong>：</p><p><img src="https://source.icode504.com/images/image-20240102141010328.png"></p><p>2. 打开文件夹，在左侧此电脑<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p><p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png"></p><p>3. 点击<strong>高级系统设置</strong>：</p><table><thead><tr><th align="center">Windows 11</th><th><img src="https://source.icode504.com/images/image-20240101010932039.png"></th></tr></thead><tbody><tr><td align="center"><strong>Windows 10</strong></td><td><img src="https://source.icode504.com/images/image-20240101011132186.png"></td></tr></tbody></table><p>4. 点击<strong>环境变量</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002218161.png"></p><p>5. 在下方系统变量，点击<strong>新建</strong>：</p><p><img src="https://source.icode504.com/images/image-20240101002302057.png"></p><p>6. 配置系统变量，按照图示操作即可：</p><p><img src="https://source.icode504.com/images/image-20240102141211785.png"></p><p>7. 双击Path进入：</p><p><img src="https://source.icode504.com/images/image-20240101002655185.png"></p><p>8. 按照图示操作即可，然后一路点击确定。</p><p><img src="https://source.icode504.com/images/image-20240101002812677.png"></p><p>9. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击确定，进入命令行：</p><p><img src="https://source.icode504.com/images/image-20240101003131968.png"></p><p>10. 在命令行中，分别输入<code>javac</code>、<code>java</code>、<code>java -version</code>，如果有如下提示就说明JDK 17安装成功了：</p><p><img src="https://source.icode504.com/images/image-20240102141350623.png"></p><p><img src="https://source.icode504.com/images/image-20240102141433688.png"></p><p><img src="https://source.icode504.com/images/image-20240102141538207.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件安装</category>
+      
+      <category>Windows</category>
+      
+      <category>编程语言</category>
+      
+      <category>Java/JDK</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>Windows</tag>
       
     </tags>
     
