@@ -26,8 +26,8 @@
 <meta property="og:description" content="Maven是一款项目管理和构建工具，适用于Java开发。本教程提供Windows版本的Maven安装和配置方法，包括下载和安装Maven，配置环境变量设置。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://source.icode504.com/images/25553bb14efc2f4928920c54d9d3f573.png">
-<meta property="article:published_time" content="2025-08-13T03:38:15.672Z">
-<meta property="article:modified_time" content="2025-04-12T13:35:43.000Z">
+<meta property="article:published_time" content="2025-04-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-26T06:48:23.283Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Maven">
@@ -221,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-13 11:38" pubdate>
-          2025年8月13日
+        <time datetime="2025-04-12 00:00" pubdate>
+          2025年4月12日
         </time>
       </span>
     
@@ -1759,6 +1759,15 @@
     
       
       
+        <a href="/posts/22.html" title="Maven安装与配置教程（Windows版）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Maven安装与配置教程（Windows版）</span>
+        </a>
+      
+    
+      
+      
         <a href="/posts/23.html" title="Gradle安装与配置教程（Windows版）"
            class="list-group-item list-group-item-action
            ">
@@ -1772,15 +1781,6 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">私服仓库 Nexus 安装与配置教程（Windows版）</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/22.html" title="Maven安装与配置教程（Windows版）"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">Maven安装与配置教程（Windows版）</span>
         </a>
       
     
@@ -2218,7 +2218,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年4月12日
+                    本文最后更新于：2025年8月26日
                   
                 
               </p>
@@ -2226,127 +2226,73 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><ol>
-<li><p>检查电脑上是否安装JDK，如果没有安装，请查看JDK安装教程：<a href="./1.html">点我查看</a></p>
-</li>
-<li><p>如果电脑上已经安装JDK，按<kbd>Win</kbd> 和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击确定</p>
-</li>
-</ol>
+                <h1 id="一、安装前检查"><a href="#一、安装前检查" class="headerlink" title="一、安装前检查"></a>一、安装前检查</h1><p>1. 检查电脑上是否安装JDK，如果没有安装，请查看JDK安装教程：<a href="./1.html">点我查看</a></p>
+<p>2. 如果电脑上已经安装JDK，按<kbd>Win</kbd> 和<kbd>R</kbd>键，输入<code>cmd</code>，然后点击确定：</p>
 <p><img src="https://source.icode504.com/images/b716b0c10465827fe9ca93eafc58ad17.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="3">
-<li>输入<code>java -version</code>，点击<code>回车</code>，查看JDK安装信息，如果有下面提示信息，说明JDK安装成功</li>
-</ol>
+<p>3. 输入<code>java -version</code>，点击<code>回车</code>，查看JDK安装信息，如果有下面提示信息，说明 JDK 安装配置成功：</p>
 <p><img src="https://source.icode504.com/images/a51459c85c968f63a5ce92e7d794da2e.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="二、下载Maven"><a href="#二、下载Maven" class="headerlink" title="二、下载Maven"></a>二、下载Maven</h1><p>以下两种方式二选一：</p>
 <p>方式一：网盘下载（强烈推荐，下载速度较快！）</p>
 <p>打开此链接：<a target="_blank" rel="noopener" href="https://icode504.lanzouw.com/b012xidad">点击下载，密码:1024</a>，选择任意一个文件下载即可，这里我选择的是3.6.3版本的：</p>
 <p><img src="https://source.icode504.com/images/4811146fea7f7e60ab942659e741d5a5.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://source.icode504.com/images/8e6d9da608d9b3b33fbebc31300bab6c.png" srcset="/img/loading.gif" lazyload></p>
-<p>方式二：官网下载（不推荐，曾经同事和我吐槽由于官网是国外的，下载速度非常慢）</p>
-<ol>
-<li>点击进入官网下载链接：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/maven/maven-3/">点击进入</a>，会出现如下界面</li>
-</ol>
+<p>方式二：官网下载（不推荐，曾经同事和我吐槽由于官网是国外的，下载速度比较慢）</p>
+<p>1. 点击进入官网下载链接：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/maven/maven-3/">点击进入</a>，会出现如下界面</p>
 <p><img src="https://source.icode504.com/images/d7d87a2d523517dfc327f42cae6ca939.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="2">
-<li>选择一个，点击进入，这里我以3.6.3版本的为例，按下图所示操作即可</li>
-</ol>
+<p>2. 选择一个，点击进入，这里我以3.6.3版本的为例，按下图所示操作即可</p>
 <p><img src="https://source.icode504.com/images/f3a00383bb7b443772a6111cf6a1665c.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
 <p>说明：source目录下的文件是Maven的源码文件，如果有查看的源码的小伙伴，也可以点击进入下载，这里就不过多赘述了。</p>
 </blockquote>
-<ol start="3">
-<li>如果你使用的是Windows，请下载后缀名为<code>.zip</code>的文件；其他操作系统的请下载<code>.tar.gz</code>的版本。</li>
-</ol>
+<p>3. 如果你使用的是Windows，请下载后缀名为<code>.zip</code>的文件；其他操作系统的请下载<code>.tar.gz</code>的版本。</p>
 <p><img src="https://source.icode504.com/images/a14ac41429304d8c8aeec7e378a23841.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、配置Maven"><a href="#三、配置Maven" class="headerlink" title="三、配置Maven"></a>三、配置Maven</h1><ol>
-<li>将下载下来的压缩包<strong>解压到一个你知道的文件夹下</strong>，为了避免后续可能出现问题，解压目录只包含英文字符 的目录，这里我解压到了<code>E:/Environment</code>中</li>
-</ol>
+<h1 id="三、配置Maven"><a href="#三、配置Maven" class="headerlink" title="三、配置Maven"></a>三、配置Maven</h1><p>1. 将下载下来的压缩包<strong>解压到一个你熟悉的文件夹下</strong>，为了避免后续可能出现问题，解压目录只包含英文字符的目录，这里我解压到了 <code>E:/Environment</code> 目录下：</p>
 <p><img src="https://source.icode504.com/images/image-20230508220254005.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="2">
-<li>双击进入<code>apache-maven-3.6.3</code>文件夹中，点击上方路径，鼠标右键点击复制</li>
-</ol>
+<p>2. 双击进入<code>apache-maven-3.6.3</code>文件夹，点击上方路径，鼠标右键点击<strong>复制</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20230508220546223.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="3">
-<li>在文件夹左侧，找到此文件，鼠标右键，点击属性</li>
-</ol>
+<p>3. 在文件夹左侧，找到此文件，鼠标右键点击<strong>属性</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20230508220742398.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="4">
-<li>点击高级系统设置</li>
-</ol>
+<p>4. 点击<strong>高级系统设置</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20230508220833089.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="5">
-<li>点击环境变量</li>
-</ol>
+<p>5. 点击<strong>环境变量</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20230508220912799.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="6">
-<li>新建一个环境变量</li>
-</ol>
+<p>6. 新建一个环境变量：</p>
 <p><img src="https://source.icode504.com/images/image-20230508220944612.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="7">
-<li>变量名填写<code>M2_HOME</code>，变量值将前面复制的内容粘贴进去即可，完成后点击确定。</li>
-</ol>
+<p>7. 变量名填写 <code>M2_HOME</code>，变量值将前面复制的内容粘贴进去即可，完成后点击<strong>确定</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20230508221142253.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="8">
-<li>双击打开Path</li>
-</ol>
+<p>8. 双击打开<strong>Path</strong>：</p>
 <p><img src="https://source.icode504.com/images/image-20230508221248363.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="9">
-<li>按照下图所示操作即可，完成后一路点击确定。</li>
-</ol>
+<p>9. 按照下图所示操作即可，完成后一路点击确定：</p>
 <p><img src="https://source.icode504.com/images/image-20230508221458356.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="10">
-<li><p>验证Maven是否安装成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入cmd，点击进入。</p>
-</li>
-<li><p>在命令提示行中输入<code>mvn -version</code>，如果出现如下提示，说明Maven配置成功！</p>
-</li>
-</ol>
+<p>10. 验证Maven是否安装成功：按<kbd>Win</kbd>和<kbd>R</kbd>键，输入 <code>cmd</code> 并点击<strong>确定</strong>：</p>
+<p>11. 在命令提示行中输入 <code>mvn -version</code> ，如果出现如下提示，说明 Maven 配置成功！</p>
 <p><img src="https://source.icode504.com/images/image-20230508221728184.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="四、下载源配置"><a href="#四、下载源配置" class="headerlink" title="四、下载源配置"></a>四、下载源配置</h1><p>前面我们已经配置好Maven，但是我们在以后导入依赖的时候默认使用的是Maven的中央仓库，而中央仓库是国外网站，下载速度比较慢。因此我们需要将Maven下载源设置成国内镜像仓库，提高导入依赖的速度。以下是下载源配置教程。</p>
-<p>如果你是小白，请一定按照下面的步骤一步一步做:smile::smile::smile:</p>
-<ol>
-<li>打开前面我们安装Maven的位置，双击打开conf文件夹。</li>
-</ol>
+<p>如果你是小白，请一定按照下面的步骤一步一步做！</p>
+<p>1. 打开前面我们安装 Maven 的位置，打开 <strong>conf</strong> 文件夹。</p>
 <p><img src="https://source.icode504.com/images/image-20230509200621227.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="2">
-<li>按照下图所示的操作，使用记事本打开<code>settings.xml</code>文件</li>
-</ol>
-<p><img src="https://source.icode504.com/images/00002.gif" srcset="/img/loading.gif" lazyload alt="00002"></p>
-<ol start="3">
-<li>用记事本打开后，在上方点击<code>查看</code>，然后点击<code>状态栏</code>，此时记事本右下角会出现行数</li>
-</ol>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509204353762.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509204435611.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="4">
-<li>请复制下面的代码</li>
-</ol>
+<p>2. 按照下图所示的操作，使用记事本打开 <strong>settings.xml</strong> 文件</p>
+<p><img src="https://source.icode504.com/images/00002.gif" srcset="/img/loading.gif" lazyload></p>
+<p>3. 用记事本打开后，在上方点击<code>查看</code>，然后点击<code>状态栏</code>，此时记事本右下角会出现行数</p>
+<p><img src="https://source.icode504.com/images/81429377aff80fde834b42902a09a8f6.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/a069e5f079bf0e31e547992b49fee714.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 请复制下面的代码：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>jdk-1.8<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">activation</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">activeByDefault</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">jdk</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">jdk</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">activation</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<ol start="5">
-<li>在记事本第246行末尾换行，将上一步的代码粘贴到第247行中，效果如下图</li>
-</ol>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509204919658.png" srcset="/img/loading.gif" lazyload></p>
-<p>此时我们配好了Maven的全局JDK版本，使用的是JDK 8版本。</p>
-<ol start="6">
-<li>请复制下面的代码</li>
-</ol>
+<p>5. 在记事本第 246 行末尾换行，将上一步的代码粘贴到第247行中，效果如下：</p>
+<p><img src="https://source.icode504.com/images/59d435899e5e706c053b6bcef9308c5a.png" srcset="/img/loading.gif" lazyload></p>
+<p>此时我们配好了 Maven 的全局 JDK 版本，使用的是JDK 8版本。</p>
+<p>6. 请复制下面的代码：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus-aliyun<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus aliyun<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<ol start="7">
-<li>在记事本第158行末尾处换行，粘贴上一步代码，效果如下图：</li>
-</ol>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509205353978.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="8">
-<li>打开Maven的安装目录，在这里新建一个repository文件夹，创建完成后，进入此文件夹，复制上述路径。</li>
-</ol>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509205928445.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509210144270.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="9">
-<li>打开记事本，在第55行创建一个<code>&lt;localRepository&gt;&lt;/localRepository&gt;</code>标签，并在二者中间粘贴上一步的路径，效果如下图所示：</li>
-</ol>
-<p><img src="https://mypicture0706.oss-cn-beijing.aliyuncs.com/image-20230509210555912.png" srcset="/img/loading.gif" lazyload></p>
-<ol start="10">
-<li>上述操作完成，请一定一定一定按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存！！！至此Maven就全部配置完成了。</li>
-</ol>
+<p>7. 在记事本第 158 行末尾处换行，粘贴上一步代码，效果如下图：</p>
+<p><img src="https://source.icode504.com/images/67c8a5d1ebc94e8c770b5c728da660ba.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 打开 Maven 的安装目录，在这里新建一个 repository 文件夹，创建完成后，进入此文件夹，复制上述路径。</p>
+<p><img src="https://source.icode504.com/images/68cafbfe067507d4959d7c65be8dd013.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/ec9b43e8addcf1e38a481676e66a0f9b.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 打开记事本，在第55行创建一个<code>&lt;localRepository&gt;&lt;/localRepository&gt;</code>标签，并在二者中间粘贴上一步的路径，效果如下图所示：</p>
+<p><img src="https://source.icode504.com/images/f801b7bacac2504707440f1c4d3e8916.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 上述操作完成，请一定一定一定按<kbd>Ctrl</kbd>和<kbd>S</kbd>键保存！！！至此Maven就全部配置完成了。</p>
 
                 
               </div>
@@ -2421,7 +2367,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月13日</div>
+          <div>2025年4月12日</div>
         </div>
       
       
@@ -2453,9 +2399,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/7.html" title="入门篇-其之六-Java运算符（中）">
+                      <a href="/posts/21.html" title="Intellij IDEA安装Scala插件并运行Scala程序">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">入门篇-其之六-Java运算符（中）</span>
+                        <span class="hidden-mobile">Intellij IDEA安装Scala插件并运行Scala程序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -2463,8 +2409,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/27.html" title="JDK 21安装配置教程（Windows版）">
-                        <span class="hidden-mobile">JDK 21安装配置教程（Windows版）</span>
+                      <a href="/posts/23.html" title="Gradle安装与配置教程（Windows版）">
+                        <span class="hidden-mobile">Gradle安装与配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
