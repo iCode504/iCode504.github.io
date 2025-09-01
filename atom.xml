@@ -24,13 +24,7 @@
     <updated>2025-08-31T16:00:00.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;NVM (Node Version Manager) 是一个用于管理多个 Node.js 版本的命令行工具。它解决了 Node.js 开发中的一个常见痛点：不同项目可能需要依赖不同版本的 Node.js 及其运行时环境。使用</summary>
-        
-      
+    <summary type="html">本文介绍在Windows系统下安装和配置Node.js版本管理工具NVM的详细步骤，包括下载安装、环境配置以及如何使用NVM管理多个Node.js版本，帮助开发者轻松应对不同项目的版本需求。</summary>
     
     
     
