@@ -18,27 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程介绍了在Windows上安装Consul的步骤，包括下载、启动Consul服务。">
+    <meta name="description" content="本教程详解在Windows系统上下载并安装SQL Server 2022的步骤。完成后，指南将分别介绍如何使用官方工具SQL Server Management Studio (SSMS) 和跨平台客户端DBeaver来连接和访问数据库实例。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Consul安装配置教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/109.html">
+<meta property="og:title" content="SQL Server 2022安装配置教程（WIndows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/127.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程介绍了在Windows上安装Consul的步骤，包括下载、启动Consul服务。">
+<meta property="og:description" content="本教程详解在Windows系统上下载并安装SQL Server 2022的步骤。完成后，指南将分别介绍如何使用官方工具SQL Server Management Studio (SSMS) 和跨平台客户端DBeaver来连接和访问数据库实例。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/72a2d9e6aae503026b7aaa6d96f9f8b7.png">
-<meta property="article:published_time" content="2025-08-13T03:38:15.676Z">
-<meta property="article:modified_time" content="2025-04-13T12:00:09.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/b72473255d4f9e51c57a37a905804a92.png">
+<meta property="article:published_time" content="2025-09-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-07T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Consul">
+<meta property="article:tag" content="SQL Server">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/72a2d9e6aae503026b7aaa6d96f9f8b7.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/b72473255d4f9e51c57a37a905804a92.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Consul安装配置教程（Windows版） - iCode504个人博客</title>
+  <title>SQL Server 2022安装配置教程（WIndows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/72a2d9e6aae503026b7aaa6d96f9f8b7.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/b72473255d4f9e51c57a37a905804a92.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Consul安装配置教程（Windows版）</span>
+            <span id="subtitle">SQL Server 2022安装配置教程（WIndows版）</span>
           
         </div>
 
@@ -221,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-13 11:38" pubdate>
-          2025年8月13日
+        <time datetime="2025-09-08 00:00" pubdate>
+          2025年9月8日
         </time>
       </span>
     
@@ -969,17 +969,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
         id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         中间件
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
+      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
            role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
         
         
@@ -996,17 +996,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="服务注册和配置中心"
         id="heading-1bd6c58ba4fcd3b64f2594c658c7fddc" role="tab" data-toggle="collapse" href="#collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         服务注册和配置中心
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
+      <div class="category-collapse collapse " id="collapse-1bd6c58ba4fcd3b64f2594c658c7fddc"
            role="tabpanel" aria-labelledby="heading-1bd6c58ba4fcd3b64f2594c658c7fddc">
         
         
@@ -1018,7 +1018,7 @@
       
         <a href="/posts/109.html" title="Consul安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Consul安装配置教程（Windows版）</span>
         </a>
       
@@ -1138,17 +1138,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库工具
         <span class="list-group-count">(6)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -1205,7 +1205,7 @@
       
         <a href="/posts/127.html" title="SQL Server 2022安装配置教程（WIndows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">SQL Server 2022安装配置教程（WIndows版）</span>
         </a>
       
@@ -2259,53 +2259,95 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Consul安装配置教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月13日
-                  
-                
-              </p>
+            <h1 id="seo-header">SQL Server 2022安装配置教程（WIndows版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Consul 是一个开源的分布式服务发现和配置管理工具，主要用于支持微服务架构。它提供了服务发现、健康检查、键值存储、分布式锁、以及多数据中心的服务网格功能。通过 Consul，服务可以动态注册和发现彼此，无需手动配置 IP 地址或端口，同时能够自动执行健康检查，确保只将健康的服务实例注册到集群中。此外，Consul 还支持一致性哈希的分布式键值存储，用于配置共享和动态更新，广泛应用于微服务、云原生架构中。</p>
-<p>以下是Windows环境下Consul安装和配置教程。</p>
-<h1 id="一、下载Consul"><a href="#一、下载Consul" class="headerlink" title="一、下载Consul"></a>一、下载Consul</h1><p>1. 点击右侧链接进入官网下载页：<a target="_blank" rel="noopener" href="https://developer.hashicorp.com/consul/downloads">点我查看</a></p>
-<p>2. 选择你要安装的版本，新手小白可以跳过这一步：</p>
-<p><img src="https://source.icode504.com/images/23dc2e97e8517c0899ac02bfd3195710.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 在下方找到Windows操作系统，根据自己的电脑的操作系统位数下载Consul。这里我的电脑是64位的操作系统，点击红色链接下载：</p>
-<details>
-<summary>如何查看自己的电脑是32位还是64位？</summary>
-<br>
-<ul>
-<li>按<kbd>Win</kbd>和<kbd>R</kbd>，输入<code>cmd</code>并按一下回车，进入命令行界面。</li>
-<li>执行如下命令，查看当前操作系统的信息：</li>
-
-</ul>
-
-
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">systeminfo<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/2b462c49d961e5b4aa5d7b8218996b13.png" srcset="/img/loading.gif" lazyload></p>
-</details>
-
-<p><img src="https://source.icode504.com/images/3aac2bbfb580aa063b2e7747ca23e37c.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="二、安装并启动Consul"><a href="#二、安装并启动Consul" class="headerlink" title="二、安装并启动Consul"></a>二、安装并启动Consul</h1><p>1. 将下载好的Consul安装包解压到你熟悉的位置且只包含英文路径，这里我解压到了D盘的Environment目录下：</p>
-<p><img src="https://source.icode504.com/images/45448112151373a7252351b028b018a5.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/7fc316d64b698afa6e6d028af55979d0.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 进入解压后的目录，点击上方路径，输入 <code>cmd</code>并回车，进入命令行界面：</p>
-<p><img src="https://source.icode504.com/images/89028e0b5055bda019a0d3b0ca07d587.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 输入 <code>consul -version</code>，如果可以查看当前Consul版本信息，就说明Consul配置成功：</p>
-<p><img src="https://source.icode504.com/images/ce7e130f51e7e02fb65050fbd6b98c4e.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 通过开发模式启动Consul：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">consul agent <span class="hljs-literal">-dev</span><br></code></pre></td></tr></table></figure>
-
-<p>5. 打开浏览器，在上方搜索框输入 <code>http://localhost:8500</code>即可访问Consul，如果出现如下页面就说明Consul启动成功！</p>
-<p><img src="https://source.icode504.com/images/7daee3a472c39d15f88338bf3d87b89b.png" srcset="/img/loading.gif" lazyload></p>
+                <p>SQL Server 是由微软开发的一款功能强大、广泛使用的关系型数据库管理系统（RDBMS）。它的核心使命是高效、安全地存储、管理和检索数据，服务于从中小型企业到大规模高并发需求的各类应用程序。SQL Server 不仅提供标准的数据操作和事务处理能力，还集成了先进的商业智能工具、数据分析服务以及机器学习功能，帮助企业从数据中获取深层洞察。</p>
+<p>以下是 Windows 环境下 SQL Server 安装配置教程：</p>
+<h1 id="一、下载SQL-Server"><a href="#一、下载SQL-Server" class="headerlink" title="一、下载SQL Server"></a>一、下载SQL Server</h1><p>1. 点击右侧链接进入 SQL Server 官方下载页面：<a href="">点我查看</a></p>
+<p>2. 选择第一个下载：</p>
+<p><img src="https://source.icode504.com/images/6f6b4a3ca8f614caa9f46fee8fd71f02.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="二、安装SQL-Server"><a href="#二、安装SQL-Server" class="headerlink" title="二、安装SQL Server"></a>二、安装SQL Server</h1><p>1. 打开刚刚下载好的安装包，安装类型选择<strong>自定义</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108134919136.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 下载路径推荐选择除C盘以外的其他路径，这里我选择在E盘（下载内容约1.2G）：</p>
+<p><img src="https://source.icode504.com/images/image-20241108135104701.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20241108135324422.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20241108135412108.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 下载中，请耐心等待（预估需要 5 分钟以上）：</p>
+<p><img src="https://source.icode504.com/images/image-20241108135529363.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 下载完成，自动弹出安装界面，点击左侧第二个菜单<strong>安装</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108165354230.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 初次安装的小伙伴，选择第一个<strong>全新 SQL Server 独立安装或向现有安装添加功能</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108165538405.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 版本选择默认的 <strong>Developer</strong> 即可，然后点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108165758886.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 勾选下方的许可条款，然后点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108165843814.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 更新检查：<strong>不勾选</strong>“使用 Microsoft 更新检查更新”，然后点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108165956991.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 安装程序文件配置中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20241108170118340.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. <strong>取消勾选</strong>“适用于 SQL Server 的 Azure”（不使用 Azure 相关服务），然后点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108170317695.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 功能选择：小白只需勾选下图两个功能，<strong>数据库引擎服务</strong>和<strong>机器学习服务和语言扩展</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108170929304.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 选择 SQL Server 实例的安装目录，推荐安装在C盘以外的其他空间，并且路径中只包含英文相关字符。这里我安装在了E盘：</p>
+<p><img src="https://source.icode504.com/images/image-20241108171216768.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20241108171403791.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20241108171524267.png" srcset="/img/loading.gif" lazyload></p>
+<p>13. 实例配置：选择默认配置即可，点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108171645040.png" srcset="/img/loading.gif" lazyload></p>
+<p>14. SQL Server 代理启动方式改为<strong>自动</strong>，完成后点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108171958000.png" srcset="/img/loading.gif" lazyload></p>
+<p>15. 按照下图所示为管理员账户指定密码：</p>
+<p><img src="https://source.icode504.com/images/image-20241108172400333.png" srcset="/img/loading.gif" lazyload></p>
+<p>16. 添加管理员：点击下方的<strong>添加</strong>按钮：</p>
+<p><img src="https://source.icode504.com/images/image-20241108172456317.png" srcset="/img/loading.gif" lazyload></p>
+<p>17. 添加一个名为 <code>system</code> 的用户，完成后点击<strong>确定</strong>：</p>
+<p><img src="https://source.icode504.com/images/d5e10fd952f670decc72dffd5a0990d7.png" srcset="/img/loading.gif" lazyload></p>
+<p>18. 等待Windows系统配置完成后，我们的用户也添加成功，点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/1dea6251df8910e5e8d63750fc424c33.png" srcset="/img/loading.gif" lazyload></p>
+<p>19. 点击<strong>安装</strong>，正式安装SQL Server：</p>
+<p><img src="https://source.icode504.com/images/image-20241108172853379.png" srcset="/img/loading.gif" lazyload></p>
+<p>20. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20241108173034443.png" srcset="/img/loading.gif" lazyload></p>
+<p>21. SQL Server安装完成，点击右下角<strong>关闭</strong>：</p>
+<p><img src="https://source.icode504.com/images/image-20241108173929981.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、通过-SSMS-连接-SQL-Server（可选）"><a href="#四、通过-SSMS-连接-SQL-Server（可选）" class="headerlink" title="四、通过 SSMS 连接 SQL Server（可选）"></a>四、通过 SSMS 连接 SQL Server（可选）</h1><blockquote>
+<p>SQL Server Management Studio（SSMS）是微软官方为SQL Server提供的图形化数据库管理工具，我们可以在该软件中编写SQL来操作并管理数据库中的数据。更多关于SSMS的相关信息请点击右侧链接查看官网文档介绍：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16">点我查看</a></p>
+</blockquote>
+<p>1. 点击右侧链接查看官网下载地址：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16">点我查看</a></p>
+<p>2. 点击下方的下载链接就可以下载：</p>
+<p><img src="https://source.icode504.com/images/image-20241108174303517.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开刚刚下载好的SSMS安装包，选择安装位置，推荐安装在除C盘以外的其他目录下，这里我安装在了D盘：</p>
+<p><img src="https://source.icode504.com/images/image-20241108174514377.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20241108174636617.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/image-20241108174947819.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/image-20241108175005485.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 安装完成，点击<strong>关闭</strong>，此时SQL Server Management Studio安装完成：</p>
+<p><img src="https://source.icode504.com/images/image-20241108220952055.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 按一下<kbd>Win</kbd>键，按照下图找到SSMS并打开：</p>
+<p><img src="https://source.icode504.com/images/e14e937a778b71310899241d5ec784a1.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 打开后就会有一个弹窗，需要连接到 SQL Server，按照下图所示填写必要信息：</p>
+<p><img src="https://source.icode504.com/images/8eeb516048411509155e5e37717d8a16.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/017c21d46d3fe0c4b6e9a5e19482d750.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、通过-DBeaver-连接-SQL-Server"><a href="#五、通过-DBeaver-连接-SQL-Server" class="headerlink" title="五、通过 DBeaver 连接 SQL Server"></a>五、通过 DBeaver 连接 SQL Server</h1><blockquote>
+<p>说明：需要安装 DBeaver 的小伙伴，请点击右侧链接查看教程：<a href="./77.html">点我查看</a></p>
+</blockquote>
+<p>1. 打开 DBeaver，新建一个数据库连接，按照下图所示操作选择 SQL Server：</p>
+<p><img src="https://source.icode504.com/images/image-dd7e6ba7685ea9860a4c0eb6417eea74.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/0c7c01e16261101b4ec87c7d42bb39a8.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 按照下图所示操作配置数据库连接信息：</p>
+<p><img src="https://source.icode504.com/images/f15bff331241f3252f9710aa63d8912d.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击测试连接后，需要下载数据驱动文件，点击下载即可。</p>
+<p>3. 再次点击测试连接，如果出现如下提示就说明可以远程链接 SQL Server 数据库了：</p>
+<p><img src="https://source.icode504.com/images/47ff18203a6e2fe848a7b727eb0eb618.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击完成，接下来就可以使用 DBeaver 编写 SQL 语句了：</p>
+<p><img src="https://source.icode504.com/images/27df978ecc1341f0ae3825250e9fe2b6.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/50719626bbde3dddd0e4efc7f7ecf86a.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2334,15 +2376,8 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" class="category-chain-item">服务注册和配置中心</a>
-  
-  
-
   
 
   
@@ -2362,7 +2397,7 @@
       
         <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Consul/" class="print-no-link">#Consul</a>
+        <a href="/tags/SQL-Server/" class="print-no-link">#SQL Server</a>
       
     </div>
   
@@ -2374,8 +2409,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Consul安装配置教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/109.html</div>
+      <div>SQL Server 2022安装配置教程（WIndows版）</div>
+      <div>https://www.icode504.com/posts/127.html</div>
     </div>
     <div class="license-meta">
       
@@ -2387,7 +2422,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月13日</div>
+          <div>2025年9月8日</div>
         </div>
       
       
@@ -2419,18 +2454,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/76.html" title="Windows通过命令行关闭某个端口">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows通过命令行关闭某个端口</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/7.html" title="入门篇-其之六-Java运算符（中）">
-                        <span class="hidden-mobile">入门篇-其之六-Java运算符（中）</span>
+                      <a href="/posts/126.html" title="Node.js版本管理工具（NVM）安装配置教程（Windows版）">
+                        <span class="hidden-mobile">Node.js版本管理工具（NVM）安装配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
