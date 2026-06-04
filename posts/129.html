@@ -18,28 +18,27 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文详细介绍了在Linux系统下安装和配置Kafka集群的步骤，涵盖环境准备、Zookeeper部署、Kafka配置及启动等内容，适用于搭建基于Zookeeper依赖的Kafka集群环境。">
+    <meta name="description" content="本教程介绍Windows安装配置MongoDB：从官网下载社区版安装包，按向导完成安装并可选择安装Compass图形化工具。通过DBeaver等工具配置连接（默认地址localhost:27017）来查看管理数据库。卸载时通过系统“设置”或“控制面板”找到MongoDB程序移除即可。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）">
-<meta property="og:url" content="https://www.icode504.com/posts/122.html">
+<meta property="og:title" content="MongoDB 安装配置教程（Windows版）">
+<meta property="og:url" content="https://www.icode504.com/posts/129.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本文详细介绍了在Linux系统下安装和配置Kafka集群的步骤，涵盖环境准备、Zookeeper部署、Kafka配置及启动等内容，适用于搭建基于Zookeeper依赖的Kafka集群环境。">
+<meta property="og:description" content="本教程介绍Windows安装配置MongoDB：从官网下载社区版安装包，按向导完成安装并可选择安装Compass图形化工具。通过DBeaver等工具配置连接（默认地址localhost:27017）来查看管理数据库。卸载时通过系统“设置”或“控制面板”找到MongoDB程序移除即可。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/3d762e038526c42748da4aa0ce64f66c.png">
-<meta property="article:published_time" content="2025-05-21T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-06-02T16:00:00.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/99d30769968b67e2cdfed1a5aa5dffa0.png">
+<meta property="article:published_time" content="2026-02-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-03T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Kafka">
-<meta property="article:tag" content="Kafka集群">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="MongoDB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/3d762e038526c42748da4aa0ce64f66c.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/99d30769968b67e2cdfed1a5aa5dffa0.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Kafka集群安装和配置教程（Linux通用版，Kraft模式启动） - iCode504个人博客</title>
+  <title>MongoDB 安装配置教程（Windows版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/3d762e038526c42748da4aa0ce64f66c.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/99d30769968b67e2cdfed1a5aa5dffa0.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</span>
+            <span id="subtitle">MongoDB 安装配置教程（Windows版）</span>
           
         </div>
 
@@ -222,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-22 00:00" pubdate>
-          2025年5月22日
+        <time datetime="2026-02-10 00:00" pubdate>
+          2026年2月10日
         </time>
       </span>
     
@@ -308,17 +307,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Linux
         <span class="list-group-count">(16)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -335,17 +334,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="中间件"
         id="heading-3cbfec336978067fe5295fb69a0ca202" role="tab" data-toggle="collapse" href="#collapse-3cbfec336978067fe5295fb69a0ca202"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         中间件
         <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3cbfec336978067fe5295fb69a0ca202"
+      <div class="category-collapse collapse " id="collapse-3cbfec336978067fe5295fb69a0ca202"
            role="tabpanel" aria-labelledby="heading-3cbfec336978067fe5295fb69a0ca202">
         
         
@@ -445,17 +444,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="消息队列"
         id="heading-8bedb7aae7ae74964d0363a1556c7a59" role="tab" data-toggle="collapse" href="#collapse-8bedb7aae7ae74964d0363a1556c7a59"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         消息队列
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-8bedb7aae7ae74964d0363a1556c7a59"
+      <div class="category-collapse collapse " id="collapse-8bedb7aae7ae74964d0363a1556c7a59"
            role="tabpanel" aria-labelledby="heading-8bedb7aae7ae74964d0363a1556c7a59">
         
         
@@ -467,7 +466,7 @@
       
         <a href="/posts/122.html" title="Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</span>
         </a>
       
@@ -943,17 +942,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Windows
         <span class="list-group-count">(39)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -1139,17 +1138,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         数据库工具
         <span class="list-group-count">(7)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -1206,7 +1205,7 @@
       
         <a href="/posts/129.html" title="MongoDB 安装配置教程（Windows版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">MongoDB 安装配置教程（Windows版）</span>
         </a>
       
@@ -2278,12 +2277,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</h1>
+            <h1 id="seo-header">MongoDB 安装配置教程（Windows版）</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年6月3日
+                    本文最后更新于：2026年6月4日
                   
                 
               </p>
@@ -2291,184 +2290,84 @@
             
               <div class="markdown-body">
                 
-                <p>Kafka 是一个开源的分布式事件流处理平台，由LinkedIn开发并捐赠给Apache基金会。它以高吞吐、低延迟和可扩展性著称，主要用于实时数据管道和流式数据处理。Kafka 的核心设计基于发布-订阅模型，数据以主题（Topic）为单位分类存储，生产者（Producer）将消息发布到主题，消费者（Consumer）订阅并消费这些消息。其持久化日志存储和分区机制保证了数据的可靠性和并行处理能力，适用于日志聚合、指标监控、事件溯源等场景。</p>
-<p>Kafka集群是由多个Broker（服务器节点）组成的分布式系统，通过横向扩展提升整体性能和容错能力。集群依赖ZooKeeper（或KRaft模式）管理元数据、选举控制器（Controller）和协调分区副本。每个主题的分区（Partition）会被复制到多个Broker上形成副本（Replica），其中领导者副本（Leader）处理读写请求，追随者副本（Follower）同步数据，确保数据高可用。集群支持动态扩展节点、自动故障转移（如Leader重选举）和负载均衡，适合大规模、高并发的实时数据处理场景。</p>
-<p>Kafka 2.8.0 以前需要依赖 Zookeeper 启动，本文介绍的是 Linux 环境下 Kafka 集群安装和配置教程。</p>
+                <p>MongoDB 是一款开源、面向文档的 NoSQL 数据库，以 JSON 格式存储数据，结构灵活、无需预先定义表字段，非常适合快速迭代、高并发和非结构化&#x2F;半结构化数据场景。它支持分布式架构、水平扩展、复制集高可用，读写性能优秀，广泛用于 Web 应用、大数据、微服务和现代前后端项目中，是当下最主流的非关系型数据库之一。</p>
+<p>以下是 Windows 环境下安装 MongoDB 教程。</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>本文后续内容使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
+<h1 id="二、下载-MongoDB-安装包"><a href="#二、下载-MongoDB-安装包" class="headerlink" title="二、下载 MongoDB 安装包"></a>二、下载 MongoDB 安装包</h1><p>1. 点击右侧链接进入官网下载页：<a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community">点我查看</a></p>
+<p>2. 这里我下载的是 7.x 版本的安装包，按照下图所示操作：</p>
+<p><img src="https://source.icode504.com/images/2effbf82f44fcc5cb6b2ba2a5f6d1c63.png" srcset="/img/loading.gif" lazyload></p>
+<details>
+<summary>关于其他安装包下载的说明</summary>
+如果上述版本安装包不满足您的要求，可以按照下图所示进行操作：
+
+<p>1. 点击右侧链接，进入官网下载页：<a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community-edition/releases/archive">点我查看</a></p>
 <blockquote>
-<p>说明：在 Kafka 2.8.0 版本以前，需要依赖 Zookeeper 启动，需要的小伙伴点击右侧链接查看安装教程：<a href="./123.html">点我查看</a></p>
+<p>说明：需要保证网络畅通</p>
 </blockquote>
-<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请准备 3 台虚拟机，如需快速克隆并配置虚拟机相关设置，请点击右侧链接查看教程：<a href="./118.html">点我查看</a></p>
+<p>2. 在这个页面中，按<kbd>Ctrl</kbd><kbd>F</kbd>，右上角会弹出搜索框，在上方输入 <code>Windows</code> ，然后点击右侧向上向下箭头，自行查找合适版本下载</p>
+<p><img src="https://source.icode504.com/images/773db79f42549cd04563d56816395585.png" srcset="/img/loading.gif" lazyload></p>
+</details>
+
+<h1 id="三、安装-MongoDB"><a href="#三、安装-MongoDB" class="headerlink" title="三、安装 MongoDB"></a>三、安装 MongoDB</h1><p>1. 双击打开安装包，进入安装界面，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/8a5d345c0a7b3d0f566c5e053014800a.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 勾选许可协议，点击<strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/ae1eb162ff17d3adf4924fb484f887d5.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 安装方式选择 <strong>Custom</strong> (自定义安装)：</p>
+<p><img src="https://source.icode504.com/images/00742f0d23d733fb645e8079f8999268.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 选择安装位置，推荐除C盘以外的其他路径，推荐路径是英文字符，这里我安装在了E盘，配置完成后，点击 <strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/bf275a9839751739e25583c6d0bea5c1.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/1fcde380841001b64275cbd51c19df25.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/c403d711eb09600e5b1334608c7772f4.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 服务配置，不熟悉此处的小伙伴按照默认配置即可（不要随意更改），点击 <strong>Next</strong>：</p>
+<p><img src="https://source.icode504.com/images/3a2c235884afb0d7c0792bb0aecbe129.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 安装 MongoDB 官方图形化界面，<strong>不要勾选</strong>下方的 <strong>Install MongoDB Compass</strong>，点击 <strong>Next</strong>：</p>
 <blockquote>
-<p>说明：这里我的 3 台主机信息如下，具体情况以你们的为准：</p>
-<table>
-<thead>
-<tr>
-<th align="center">主机名称</th>
-<th align="center">IP地址</th>
-<th align="center">操作系统</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">debian100</td>
-<td align="center">192.168.40.100</td>
-<td align="center"><a href="./52.html">Debian</a></td>
-<td align="center">这台主机包含了<a href="./118.html#%E5%85%AD%E3%80%81%E5%A4%9A%E5%8F%B0%E4%B8%BB%E6%9C%BA%E5%90%8C%E6%97%B6%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4">parallel-execute</a>命令，可以在三台主机同时执行一条命令</td>
-</tr>
-<tr>
-<td align="center">debian101</td>
-<td align="center">192.168.40.101</td>
-<td align="center"><a href="./52.html">Debian</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">debian102</td>
-<td align="center">192.168.40.102</td>
-<td align="center"><a href="./52.html">Debian</a></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
+<p>说明：这里一定要<strong>不要勾选</strong>下方的 <strong>Install MongoDB Compass</strong>（官网图形化界面工具），这会导致安装时间大幅增加，并且极容易安装失败，后面专门提供了安装该工具的方式。</p>
 </blockquote>
-<p>2. 本文使用 Electerm 作为远程登录和文件传输工具，需要安装的小伙伴根据自己电脑操作系统查看对应的教程：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Windows</th>
-<th align="center">macOS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="./47.html">点我查看</a></td>
-<td align="center"><a href="./99.html">点我查看</a></td>
-</tr>
-</tbody></table>
-<p>3. 推荐本地安装 NDM（Neat Download Manger），可以加快文件下载速度：<a href="./24.html">点我查看</a></p>
-<h1 id="二、下载-Kafka-安装包"><a href="#二、下载-Kafka-安装包" class="headerlink" title="二、下载 Kafka 安装包"></a>二、下载 Kafka 安装包</h1><p>1. 点击右侧链接进入官网下载页：<a target="_blank" rel="noopener" href="https://kafka.apache.org/downloads">点我查看</a></p>
-<p>2. 这里我们下载的是 Kafka 3.0.0 版本的安装包：</p>
-<p><img src="https://source.icode504.com/images/d0975788a23e64243368daf6978c78a6.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 下载完成后，将文件的后缀名改成 <code>.tgz</code>：</p>
-<p><img src="https://source.icode504.com/images/ccbf0916e6b24ae272e164207b0cfc86.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 使用 Electerm 将安装包远程发送到 debian100 上：</p>
-<p><img src="https://source.icode504.com/images/af36251351193002dd57c7cfa188e08e.gif" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、修改配置文件"><a href="#三、修改配置文件" class="headerlink" title="三、修改配置文件"></a>三、修改配置文件</h1><p>1. 将下载好的安装包解压到 <code>/usr/local</code> 目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf kafka_2.13-3.0.0.tgz -C /usr/local/<br></code></pre></td></tr></table></figure>
-
-<p>2. 解压完成，切换到 <code>/usr/local</code> 目录下，查看当前目录下的文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local<br><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/87a9d5e96b083b7379c470cf4e4186fe.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 这里对 <code>kafka_2.13-3.0.0</code> 文件夹创建一个软连接（类似 Windows 的桌面快捷方式）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s /usr/local/kafka_2.13-3.0.0 /usr/local/kafka<br></code></pre></td></tr></table></figure>
-
-<p>4. 此时再次执行 <code>ls</code> 就可以看到软连接了：</p>
-<p><img src="https://source.icode504.com/images/cccec53eb160c9f9c6654b849e2a61c2.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 进入 Kafka 安装目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br></code></pre></td></tr></table></figure>
-
-<p>6. 在当前目录下创建一个 <code>data</code> 文件夹，用于存储 Kafka 数据：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> data<br></code></pre></td></tr></table></figure>
-
-<p>7. 编辑 <code>config/kraft</code> 目录下的 <code>server.properties</code> 配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim config/kraft/server.properties<br></code></pre></td></tr></table></figure>
-
-<p>8. 在左下角输入 <code>:set nu</code> 并按一下回车，显示行号：</p>
-<p><img src="https://source.icode504.com/images/aeb48fbfb6ae8b7c6afa04a800e89366.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 在左下角输入 <code>/node.id</code> 并按一下回车，跳转到27行，修改 <code>node.id</code> 的值：</p>
+<p><img src="https://source.icode504.com/images/f6afc829a67ed9175655d8ad09608321.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 点击 <strong>Install</strong> 开始安装：</p>
+<p><img src="https://source.icode504.com/images/f8dc7cc996fba0a8342b2fd40ddcf62c.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 安装中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/fa7fa13f5562ae46e4f5fe2c94d49f69.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 安装完成，点击 <strong>Finish</strong>：</p>
+<p><img src="https://source.icode504.com/images/1756776417a01dc70d8e00725e46f3f9.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、使用-MongoDB-官方图形界面连接（可选）"><a href="#四、使用-MongoDB-官方图形界面连接（可选）" class="headerlink" title="四、使用 MongoDB 官方图形界面连接（可选）"></a>四、使用 MongoDB 官方图形界面连接（可选）</h1><p>关于此部分的内容，请点击右侧连接查看：<a href="./128.html">点我查看</a></p>
+<h1 id="五、使用-DBeaver-连接-MongoDB（可选）"><a href="#五、使用-DBeaver-连接-MongoDB（可选）" class="headerlink" title="五、使用 DBeaver 连接 MongoDB（可选）"></a>五、使用 DBeaver 连接 MongoDB（可选）</h1><blockquote>
+<p>说明：需要安装 DBeaver 的小伙伴，点击右侧连接查看：<a href="./77.html">点我查看</a></p>
+</blockquote>
+<p>1. 打开 DBeaver，点击左上角的连接按钮：</p>
+<p><img src="https://source.icode504.com/images/5bf509b1320a32db86955645cd8c4e84.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 找到并选中 MongoDB，点击<strong>下一步</strong>：</p>
+<p><img src="https://source.icode504.com/images/4d2cf11f1c494c36e0d2e001597e86a1.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 在配置连接界面，点击左下方的<strong>测试链接</strong>：</p>
+<p><img src="https://source.icode504.com/images/e2f7137e3afe3ca324e42f2c5ee7a76c.png" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>说明：<code>node.id</code> 是 Kafka 集群中每一个节点的唯一标识，每一个节点对应的值都必须是一个唯一的整数。后续分发过程中还需要对这个 <code>node.id</code> 进一步配置。</p>
+<p>说明：初次使用，这里可能会弹出 MongoDB JDBC 依赖下载页面，只需要点击下载即可。</p>
 </blockquote>
-<p>10. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/process.roles</code> 并按一下回车，跳转到24行，修改 <code>process.roles</code> 的值为 <code>broker,controller</code>：</p>
-<p><img src="https://source.icode504.com/images/f23259aeeb5f7d0c5282e547f0b6a688.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式。配置 Controller 链接信息，在左下角输入 <code>/controller.quorm.voters</code> 并按一下回车，跳转到第30行，修改 <code>controller.quorm.voters</code> 的值为** node.id@IP地址:9093**（主机名:9093也可以，但是前提需要到 <code>/etc/hosts</code> 文件配置），效果图如下：</p>
-<blockquote>
-<p>说明：配置过程中，具体 IP 地址&#x2F;主机名称以你们的为准，这里我的配置仅作参考。</p>
-</blockquote>
-<p><img src="https://source.icode504.com/images/6540509c9a674e24996bca7368b6755b.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/log.dir</code> 并按一下回车，跳转到74行，修改 <code>log.dirs</code> 的值为 <code>/usr/local/kafka/data</code>：</p>
-<p><img src="https://source.icode504.com/images/b3a922b9ac8765b9b4ccc1f876e434ce.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 完成编辑后，按 <kbd>Esc</kbd> 键退出编辑模式，在左下角继续输入 <code>/advertised.listeners</code> 并按一下回车，跳转到50行，修改 <code>advertised.listeners</code> 的值为 <code>PLAINTEXT://主机名:9092</code> 或者 <code>PLAINTEXT://当前主机IP地址:9092</code>，效果图如下：</p>
-<p><img src="https://source.icode504.com/images/7a35abc035653a92389fd2b6cab64b23.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 编辑完成后，按 <kbd>Esc</kbd> 键退出编辑模式，左下角输入 <code>:wq</code> 保存并退出。</p>
-<p>15. 将 Kafka 安装目录分发给另外两台主机 debian101、debian102：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp -r /usr/local/kafka_2.13-3.0.0 root@debian101:/usr/local<br>scp -r /usr/local/kafka_2.13-3.0.0 root@debian102:/usr/local<br></code></pre></td></tr></table></figure>
-
-<p>16. （在 debian100 上执行命令）为 debian101、debian102 配置软连接：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-built_in">ln</span> -sf /usr/local/kafka_2.13-3.0.0 /usr/local/kafka<br></code></pre></td></tr></table></figure>
-
-<p>17. （在 debian101 和 debian102 上依次执行命令）切换到 Kafka 目录下，编辑 <code>config/server.properties</code> 文件，修改里面的 <code>broker.id</code> 值：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br>vim config/kraft/server.properties<br></code></pre></td></tr></table></figure>
+<p>4. 如果出现如下提示，就说明 MongoDB 连接成功，点击<strong>确定</strong>：</p>
+<p><img src="https://source.icode504.com/images/e6e71e98173c7fda7c3981962e345c55.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击<strong>完成</strong>，接下来就可以在 DBeaver 中查看 MongoDB 中的数据了：</p>
+<p><img src="https://source.icode504.com/images/2eba5989bd52a08f5553c0a8290281a1.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/cdef08e0860542b95e30916c56409ca2.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、卸载-MongoDB（可选）"><a href="#六、卸载-MongoDB（可选）" class="headerlink" title="六、卸载 MongoDB（可选）"></a>六、卸载 MongoDB（可选）</h1><div class="note note-danger">
+            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p>
+          </div>
 
 <blockquote>
-<p>这里我为三台节点设置的 <code>node.id</code> 值如下，仅供参考（切记要保证每一台主机的 <code>node.id</code> 是整数且互不相同）：</p>
-<table>
-<thead>
-<tr>
-<th align="center">主机名称</th>
-<th align="center">node.id值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">debian100</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">debian101</td>
-<td align="center">2</td>
-</tr>
-<tr>
-<td align="center">debian102</td>
-<td align="center">3</td>
-</tr>
-</tbody></table>
+<p>注意：本文使用到 Geek Uninstaller 卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="./31.html">点我查看</a></p>
+<p>已经安装的小伙伴可以接着往下看！</p>
 </blockquote>
-<p>18. （在 debian101 和 debian102 上依次执行命令）将配置文件的 <code>advertised.listeners</code> 修改成 <code>PLAINTEXT://主机名:9092</code>（或者<code>PLAINTEXT://当前主机的IP地址:9092</code>），修改后的效果图如下：</p>
-<p><img src="https://source.icode504.com/images/1ee6fd7a190be101296f2a37eba94df7.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://source.icode504.com/images/5bee7c1ddcbbf7d563c3001f34633470.png" srcset="/img/loading.gif" lazyload></p>
-<p>19. （在 debian100 上执行命令）配置 Kafka 环境变量。创建 <code>/etc/profile.d/kafka_env.sh</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile.d/kafka_env.sh<br></code></pre></td></tr></table></figure>
-
-<p>20. 复制如下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">KAFKA_HOME</span><br>export KAFKA_HOME=/usr/local/kafka<br>export PATH=$PATH:$KAFKA_HOME/bin<br></code></pre></td></tr></table></figure>
-
-<p>21. 将上一步复制的内容粘贴到脚本文件中，效果图如下，完成后在左下角输入 <code>:wq</code> 保存并退出：</p>
-<p><img src="https://source.icode504.com/images/79029b88e24cf2b67d2f906b9f93e10a.png" srcset="/img/loading.gif" lazyload></p>
-<p>22. 将环境变量配置文件分发给 debian101 和 debian102：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp /etc/profile.d/kafka_env.sh root@debian101:/etc/profile.d/<br>scp /etc/profile.d/kafka_env.sh root@debian102:/etc/profile.d/<br></code></pre></td></tr></table></figure>
-
-<p>23. 让三台机器配置的 Kafka 环境变量生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-built_in">source</span> /etc/profile.d/kafka_env.sh<br></code></pre></td></tr></table></figure>
-
-
-<h1 id="四、启动-Kafka-集群"><a href="#四、启动-Kafka-集群" class="headerlink" title="四、启动 Kafka 集群"></a>四、启动 Kafka 集群</h1><p>1. （在 debian100 上执行命令）依次开放三台主机的 9092、9093 端口（Kafka 默认端口）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;ufw allow 9092/tcp&quot;</span><br>parallel-execute <span class="hljs-string">&quot;ufw allow 9093/tcp&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>2. 初次启动前，需要初始化集群数据目录，依次执行如下命令，生成存储目录唯一 id：</p>
-<blockquote>
-<p>说明：如果此处已经配置，请跳转到第 4 步。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/kafka<br>bin/kafka-storage.sh random-uuid<br></code></pre></td></tr></table></figure>
-
-<p>这里生成了一个 id，下一步会用到（具体的 id 值以你们的为准）：</p>
-<p><img src="https://source.icode504.com/images/6aa98c6794acbc39582fe5dbd0591120.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 用这个 id 格式化三个 Kafka 节点存储目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-storage.sh format -t 上一步的id值 -c config/kraft/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/ea338ed343b241e11c649042324f6c88.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 使用 <code>parallel-execute</code> 依次启动 Kafka：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-start.sh -daemon config/kraft/server.properties&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>5. 验证 Kafka 是否启动成功：由于 Kafka 是 Java 应用，因此可以使用 jps 命令查看对应的进程：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute jps -l<br></code></pre></td></tr></table></figure>
-
-<p>如果看到了对应的 Kafka 进程，就说明 Kafka 启动成功：</p>
-<p><img src="https://source.icode504.com/images/17a9151086834ae707c78d5b784b851a.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. （可选）停止 Kafka 集群，执行如下命令即可停止 Kafka 集群：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute <span class="hljs-string">&quot;cd /usr/local/kafka &amp;&amp; bin/kafka-server-stop.sh&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>7. 等待一段时间后（kafka 停止进程较慢），再次执行 <code>jps -l</code>，看不到 Kafka 相关进程就说明 Kafka 集群已经停止了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">parallel-execute jps -l<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://source.icode504.com/images/dd5b7eba1b2c016bdc20a391dd1221f3.png" srcset="/img/loading.gif" lazyload></p>
+<p>1. 打开Geek Uninstalller，找到 MongoDB，鼠标右键点击卸载：</p>
+<p><img src="https://source.icode504.com/images/bc48dfb6508b2be2f845e736760ecacc.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 此时会弹出一个弹窗，选择<strong>是</strong>：</p>
+<p><img src="https://source.icode504.com/images/a976fd9e5b3d36f1e103de183dc5d161.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 选择<strong>OK</strong>:</p>
+<p><img src="https://source.icode504.com/images/7c018a796541d37b2fccf72ac672b22c.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 卸载中，请耐心等待：</p>
+<p><img src="https://source.icode504.com/images/cb120d056a48935a4eed496599f1c4ec.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 卸载完成，此时 Geek Uninstaller 会检查是否有卸载残留，如果存在，点击清理即可；如果没有，点击关闭即可。至此，MongoDB 卸载完成：</p>
+<p><img src="https://source.icode504.com/images/e5de15517d75fe48cb71756d5c66c130.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/731c550e2757c98cf050f8c97fab16db.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2492,20 +2391,13 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="category-chain-item">消息队列</a>
-  
-  
-
   
 
   
@@ -2523,11 +2415,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/tags/Kafka/" class="print-no-link">#Kafka</a>
-      
-        <a href="/tags/Kafka%E9%9B%86%E7%BE%A4/" class="print-no-link">#Kafka集群</a>
+        <a href="/tags/MongoDB/" class="print-no-link">#MongoDB</a>
       
     </div>
   
@@ -2539,8 +2429,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Kafka集群安装和配置教程（Linux通用版，Kraft模式启动）</div>
-      <div>https://www.icode504.com/posts/122.html</div>
+      <div>MongoDB 安装配置教程（Windows版）</div>
+      <div>https://www.icode504.com/posts/129.html</div>
     </div>
     <div class="license-meta">
       
@@ -2552,7 +2442,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年5月22日</div>
+          <div>2026年2月10日</div>
         </div>
       
       
@@ -2584,9 +2474,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/124.html" title="Zookeeper 客户端输入中文乱码的解决方案">
+                      <a href="/posts/128.html" title="MongoDB 官方图形化界面工具 MongoDB Compass 安装配置教程（Windows版）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Zookeeper 客户端输入中文乱码的解决方案</span>
+                        <span class="hidden-mobile">MongoDB 官方图形化界面工具 MongoDB Compass 安装配置教程（Windows版）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -2594,8 +2484,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/121.html" title="Erlang 安装配置教程（Windows版）">
-                        <span class="hidden-mobile">Erlang 安装配置教程（Windows版）</span>
+                      <a href="/posts/127.html" title="Goland 安装配置教程（Windows版）">
+                        <span class="hidden-mobile">Goland 安装配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
