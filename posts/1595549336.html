@@ -18,27 +18,28 @@
   <meta name="author" content="iCode504">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
+    <meta name="description" content="本教程将带你基于Linux环境一步步部署企业级镜像仓库Harbor。从官网下载离线安装包，到执行install.sh完成安装与启动。你将学会通过docker login登录、使用docker push&#x2F;pull命令上传和下载镜像，并实操创建私有项目及专属用户，实现镜像的精细化管理，彻底告别镜像混乱。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL 5.7安装、配置与卸载教程（Windows版）">
-<meta property="og:url" content="https://www.icode504.com/posts/112.html">
+<meta property="og:title" content="Docker 私服仓库 Harbor 安装配置教程（Linux 版）">
+<meta property="og:url" content="https://www.icode504.com/posts/1595549336.html">
 <meta property="og:site_name" content="iCode504个人博客">
-<meta property="og:description" content="本教程提供MySQL在Windows上的安装、配置与卸载指南，包括下载、安装、配置环境变量、启动MySQL服务、连接MySQL数据库等步骤，以及如何卸载MySQL。">
+<meta property="og:description" content="本教程将带你基于Linux环境一步步部署企业级镜像仓库Harbor。从官网下载离线安装包，到执行install.sh完成安装与启动。你将学会通过docker login登录、使用docker push&#x2F;pull命令上传和下载镜像，并实操创建私有项目及专属用户，实现镜像的精细化管理，彻底告别镜像混乱。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.icode504.com/images/a6ff26b14f79761bc0c5fb361a796269.png">
-<meta property="article:published_time" content="2025-08-13T03:38:15.672Z">
-<meta property="article:modified_time" content="2025-04-13T12:05:44.000Z">
+<meta property="og:image" content="https://source.icode504.com/images/581081d7cca9945ca2a88da4fab721ee.png">
+<meta property="article:published_time" content="2026-06-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-27T16:00:00.000Z">
 <meta property="article:author" content="iCode504">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Harbor">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://source.icode504.com/images/a6ff26b14f79761bc0c5fb361a796269.png">
+<meta name="twitter:image" content="https://source.icode504.com/images/581081d7cca9945ca2a88da4fab721ee.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>MySQL 5.7安装、配置与卸载教程（Windows版） - iCode504个人博客</title>
+  <title>Docker 私服仓库 Harbor 安装配置教程（Linux 版） - iCode504个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +205,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://source.icode504.com/images/a6ff26b14f79761bc0c5fb361a796269.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://source.icode504.com/images/581081d7cca9945ca2a88da4fab721ee.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">MySQL 5.7安装、配置与卸载教程（Windows版）</span>
+            <span id="subtitle">Docker 私服仓库 Harbor 安装配置教程（Linux 版）</span>
           
         </div>
 
@@ -221,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-13 11:38" pubdate>
-          2025年8月13日
+        <time datetime="2026-06-28 00:00" pubdate>
+          2026年6月28日
         </time>
       </span>
     
@@ -307,17 +308,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Linux"
         id="heading-edc9f0a5a5d57797bf68e37364743831" role="tab" data-toggle="collapse" href="#collapse-edc9f0a5a5d57797bf68e37364743831"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Linux
         <span class="list-group-count">(17)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-edc9f0a5a5d57797bf68e37364743831"
+      <div class="category-collapse collapse show" id="collapse-edc9f0a5a5d57797bf68e37364743831"
            role="tabpanel" aria-labelledby="heading-edc9f0a5a5d57797bf68e37364743831">
         
         
@@ -522,17 +523,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="容器化"
         id="heading-09919c03105ff63440d33b04b664e3ce" role="tab" data-toggle="collapse" href="#collapse-09919c03105ff63440d33b04b664e3ce"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         容器化
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-09919c03105ff63440d33b04b664e3ce"
+      <div class="category-collapse collapse show" id="collapse-09919c03105ff63440d33b04b664e3ce"
            role="tabpanel" aria-labelledby="heading-09919c03105ff63440d33b04b664e3ce">
         
         
@@ -549,17 +550,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Docker"
         id="heading-c5fd214cdd0d2b3b4272e73b022ba5c2" role="tab" data-toggle="collapse" href="#collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         Docker
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
+      <div class="category-collapse collapse show" id="collapse-c5fd214cdd0d2b3b4272e73b022ba5c2"
            role="tabpanel" aria-labelledby="heading-c5fd214cdd0d2b3b4272e73b022ba5c2">
         
         
@@ -589,7 +590,7 @@
       
         <a href="/posts/1595549336.html" title="Docker 私服仓库 Harbor 安装配置教程（Linux 版）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Docker 私服仓库 Harbor 安装配置教程（Linux 版）</span>
         </a>
       
@@ -951,17 +952,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
         id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         Windows
         <span class="list-group-count">(40)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
            role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
         
         
@@ -1184,17 +1185,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库工具"
         id="heading-7299ac7d4ad7db0c4c787251d47b289b" role="tab" data-toggle="collapse" href="#collapse-7299ac7d4ad7db0c4c787251d47b289b"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         数据库工具
         <span class="list-group-count">(7)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
+      <div class="category-collapse collapse " id="collapse-7299ac7d4ad7db0c4c787251d47b289b"
            role="tabpanel" aria-labelledby="heading-7299ac7d4ad7db0c4c787251d47b289b">
         
         
@@ -1215,7 +1216,7 @@
       
         <a href="/posts/112.html" title="MySQL 5.7安装、配置与卸载教程（Windows版）"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">MySQL 5.7安装、配置与卸载教程（Windows版）</span>
         </a>
       
@@ -2323,128 +2324,230 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MySQL 5.7安装、配置与卸载教程（Windows版）</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2025年4月13日
-                  
-                
-              </p>
+            <h1 id="seo-header">Docker 私服仓库 Harbor 安装配置教程（Linux 版）</h1>
             
             
               <div class="markdown-body">
                 
-                <p>MySQL是一个关系型数据库管理系统，目前为Oracle旗下产品，它具有开源、体积小、速度快的优点，许多网站使用的都是MySQL数据库。</p>
-<p>简单而言，MySQL数据库核心功能就是用来存储数据的。</p>
-<p>MySQL数据库分为社区版和商业版，这里介绍的是社区版的安装教程：</p>
-<h1 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a>一、下载MySQL</h1><p>1. 打开MySQL官网下载链接：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/installer/">点我查看</a></p>
-<p>2. 按照下图所示操作选择相应的MySQL版本下载，这里我选择的Windows MySQL 5.7.43版本。</p>
-<p><img src="https://source.icode504.com/images/f87a608c553b65e905edd9499e4bb9d5.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 下载中，请耐心等待。</p>
-<h1 id="二、安装并配置MySQL"><a href="#二、安装并配置MySQL" class="headerlink" title="二、安装并配置MySQL"></a>二、安装并配置MySQL</h1><p>安装MySQL过程中，<strong>请保持网络畅通</strong>！！！</p>
-<p>1. 双击打开下载好的安装器，启动需要一些时间，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/ea36438253e80bc563e8594f74521445.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 如果有如下提示更新窗口，选择No不更新：</p>
-<p><img src="https://source.icode504.com/images/9bd090875adb9482462c514b23530757.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 安装类型选择<strong>Custom</strong>，然后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111156356.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 按照下图所示操作，选择安装<code>MySQL Server 5.7.43 - X64</code>，完成后直接点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/a6190afba6d6e8ad9f971d1f96cad7b8.gif" srcset="/img/loading.gif" lazyload></p>
-<blockquote>
-<p>说明：如何修改路径（小白可以忽略下列内容，直接跳到第5步）</p>
-<p>如果您想修改MySQL的安装路径，如下图，可以点击下方<strong>Advanced Options</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111320444.png" srcset="/img/loading.gif" lazyload></p>
-<p>按照下图所示，选择安装路径，为避免后续过程中出现问题，<strong>安装路径建议只包含英文字符</strong>；下面的是MySQL数据存储路径，如果不懂这方面的内容，建议不要修改这个路径。配置完成后后点击<strong>OK</strong>：</p>
-<p><img src="https://source.icode504.com/images/image-20240220111711714.png" srcset="/img/loading.gif" lazyload></p>
-<p>安装路径和存储路径配置完成后，会弹出一个弹窗，点击<strong>OK</strong>即可：</p>
-<p><img src="https://source.icode504.com/images/26872ea77b79c17ba9720d218b7246d9.png" srcset="/img/loading.gif" lazyload></p>
-<p>此时点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/92bcec1f0b0d294af0fd22ef3a524910.png" srcset="/img/loading.gif" lazyload></p>
-<p>选择<strong>Yes</strong>继续安装：</p>
-<p><img src="https://source.icode504.com/images/752b4f28f4034415a7b637d879a05598.png" srcset="/img/loading.gif" lazyload></p>
-</blockquote>
-<p>5. 点击<strong>Execute</strong>：</p>
-<p><img src="https://source.icode504.com/images/396a7c1c327b276a10d3e97e65392bac.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 安装中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/7c02e7df4977727df874aa8bba76deda.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 出现下图提示<strong>Complete</strong>以后，MySQL安装完成。直接点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/4115e922b7dfe0869df389e5ed9ebf6e.png" srcset="/img/loading.gif" lazyload></p>
-<p>8. 接下来开始配置MySQL，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/0928d235c34af697576778f8d27ba4db.png" srcset="/img/loading.gif" lazyload></p>
-<p>9. 初次安装MySQL的小白请注意，下图的<strong>Port请务必配置成3306</strong>，完成后点击<strong>Next</strong>：</p>
-<blockquote>
-<p>注意：如果您的电脑上已经安装了其他版本的MySQL，并且已经占用了3306端口，您需要将端口号修改为其他值。</p>
-</blockquote>
-<p><img src="https://source.icode504.com/images/175539c8d47f5a74f88d39c26dd44731.png" srcset="/img/loading.gif" lazyload></p>
-<p>10. 设置root账户密码，这里强烈建议<strong>将密码设置成你最熟悉的密码</strong>，否则后续恢复密码比较麻烦。这里我设置成了<code>123456</code>。设置完成后点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/fa7a1ad26250ddd0612602925ac36ff1.png" srcset="/img/loading.gif" lazyload></p>
-<p>11. 在Windows中开启服务，直接点击<strong>Next</strong>即可：</p>
-<p><img src="https://source.icode504.com/images/948e88c0fcf258d870c1fbfaeecc3026.png" srcset="/img/loading.gif" lazyload></p>
-<p>12. 服务器文件权限按照默认配置<strong>选择第一个</strong>即可，点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/fa7fd399d00606ce36f3ebb4e9cf3fa0.png" srcset="/img/loading.gif" lazyload></p>
-<p>13. 点击<strong>Execute</strong>，MySQL安装器就会为我们配置上述内容。配置过程中，请耐心等待：</p>
-<p><img src="https://source.icode504.com/images/c77227fad2d1b7a6bb43b40f67016294.png" srcset="/img/loading.gif" lazyload></p>
-<p>14. 出现下图信息，说明MySQL配置成功，点击<strong>Finish</strong>完成配置：</p>
-<p><img src="https://source.icode504.com/images/e0f7643d31dd59ebe6752b51a8484229.png" srcset="/img/loading.gif" lazyload></p>
-<p>15. 点击<strong>Next</strong>：</p>
-<p><img src="https://source.icode504.com/images/cb9301f85542d4fb7bf6b4a31e7d7917.png" srcset="/img/loading.gif" lazyload></p>
-<p>16. 点击<strong>Finish</strong>，MySQL配置完成。</p>
-<p><img src="https://source.icode504.com/images/59868e65757851c80d0a79a96fa471e0.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="三、配置MySQL环境变量"><a href="#三、配置MySQL环境变量" class="headerlink" title="三、配置MySQL环境变量"></a>三、配置MySQL环境变量</h1><p>1. 初次安装MySQL的小白，找到前面安装的MySQL路径的bin目录，按照下图操作复制路径：</p>
-<blockquote>
-<p>（此条内容小白请忽略）安装在其他位置的小伙伴找到MySQL的安装路径，进入bin文件夹后复制文件路径。</p>
-</blockquote>
-<p><img src="https://source.icode504.com/images/00005.gif" srcset="/img/loading.gif" lazyload></p>
-<p>2. 在左侧<strong>鼠标右键</strong>点击此电脑，点击<strong>属性</strong>：</p>
-<p><img src="https://source.icode504.com/images/Snipaste_2024-01-01_01-07-23.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 点击<strong>高级系统设置</strong>：</p>
+                <p>Harbor 是一个由 VMware 公司发起并开源的企业级容器镜像仓库，后成为 CNCF（云原生计算基金会）的孵化项目。它基于 Docker Distribution 构建，但在其之上扩展了*角色权限管理（RBAC）、镜像复制与同步、漏洞安全扫描、Webhook 以及审计日志等企业级核心功能。它通过提供安全的访问控制和策略，主要解决企业内部对容器镜像的存储、分发和安全治理需求，是私有化部署场景下最主流的镜像仓库选择。</p>
+<p>以下是 Linux 环境下 Harbor 安装配置教程。</p>
+<h1 id="一、准备操作"><a href="#一、准备操作" class="headerlink" title="一、准备操作"></a>一、准备操作</h1><p>1. 请确保 Linux 系统上安装了 Docker，如需安装，请结合自己的操作系统查看 Docker 安装教程：</p>
 <table>
 <thead>
 <tr>
-<th align="center">Windows 11</th>
-<th><img src="https://source.icode504.com/images/image-20240101010932039.png" srcset="/img/loading.gif" lazyload></th>
+<th align="center">CentOS</th>
+<th align="center">Ubuntu&#x2F;Debian</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><strong>Windows 10</strong></td>
-<td><img src="https://source.icode504.com/images/image-20240101011132186.png" srcset="/img/loading.gif" lazyload></td>
+<td align="center"><a href="./70.html">点我查看</a></td>
+<td align="center"><a href="./75.html">点我查看</a></td>
 </tr>
 </tbody></table>
-<p>4. 点击<strong>环境变量</strong>：</p>
-<p><img src="https://source.icode504.com/images/9b32c83db0d6df2c2f698e9d67d0edfd.png" srcset="/img/loading.gif" lazyload></p>
-<p>5. 在下方系统变量找到Path，双击进入：</p>
-<p><img src="https://source.icode504.com/images/image-20230512223639743.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按照下图所示操作，粘贴前面复制的MySQL安装路径，然后一路点击确定即可。</p>
-<p><img src="https://source.icode504.com/images/3e7273345232c91e2f87e0f4c9b3dd53.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>cmd</code>，点击进入，在命令提示行中输入<code>mysql -u root -p</code>，按回车后会提示让你输入密码。这个密码是前面我们安装MySQL的时候设置的密码，输入完成后按回车即可。完成后出现下图界面表示MySQL安装成功！</p>
-<blockquote>
-<p>说明：由于我的电脑上安装了两个MySQL，其中MySQL 5.7使用的端口号是13306，因此在执行命令时需要添加<code>-P 13306</code>选项。如果您的电脑中只安装了一个MySQL，并且使用MySQL默认端口号3306，默认不需要写上述端口号配置项，继续执行<code>mysql -u root -p</code>即可</p>
-</blockquote>
-<p><img src="https://source.icode504.com/images/f641b8555a3a1ca9fc349546467cab9c.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="四、卸载MySQL（可选）"><a href="#四、卸载MySQL（可选）" class="headerlink" title="四、卸载MySQL（可选）"></a>四、卸载MySQL（可选）</h1><div class="note note-danger">
-            <p>这一部分会将软件卸载，请谨慎操作！如果不需要卸载，请直接跳过这一部分的内容！</p><p>以下两种卸载方式任选其一即可。</p>
-          </div>
+<p>如果成功安装 Docker，执行如下命令查看 Docker 版本信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker version<br></code></pre></td></tr></table></figure>
+
+<p>出现如下版本信息，说明 Docker 安装成功：</p>
+<p><img src="https://source.icode504.com/images/4f64123924ad02bdc8d4a2b8872d0beb.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 查看 Linux 本机的 IP 地址（后续会用到）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ip addr<br></code></pre></td></tr></table></figure>
+
+<p>这里我的 IP 地址是 <code>192.168.40.100</code>（具体的 IP 地址以你们执行的 IP 地址为准）：</p>
+<p><img src="https://source.icode504.com/images/811ceed5cf2f3312526bf54cd08a49ca.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 规划使用端口，Harbor 默认配置文件中使用的端口号是 80，这不一定符合我们的使用要求，我们需要提前规划好端口，后续我使用 8088 端口号作为 Harbor 访问端口（具体规划的端口号以你们为准，这里后续会用到）。根据不同的操作系统开放端口号：</p>
+<ul>
+<li>CentOS</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">firewall-cmd --zone=public --add-port=8088/tcp --permanent<br>firewall-cmd --reload<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu&#x2F;Debian</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt install -y ufw<br>ufw enable<br>ufw allow 8088/tcp<br></code></pre></td></tr></table></figure>
+
+<p>4. 根据第2步（IP地址信息）和第3步（规划端口），编辑 <code>/etc/docker/daemon.json</code> 文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim /etc/docker/daemon.json<br></code></pre></td></tr></table></figure>
+
+<p>对这个文件中添加如下配置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">&#123;<br>  &quot;insecure-registries&quot;: [&quot;192.168.40.100:8088&quot;]<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<p>注意：本文使用到Geek Uninstaller卸载软件，如果有需要的小伙伴请点击右侧链接查看安装教程：<a href="./31.html">点我查看</a></p>
-<p>已经安装的小伙伴可以接着往下看！</p>
+<p>说明：如果你已经添加了 <code>insecure-registries</code> 配置，直接将上述 <strong>IP地址:端口号</strong> 追加到 JSON 数组中即可。</p>
 </blockquote>
-<p>1. <strong>鼠标右键</strong>点击下方任务栏的Windows图标，选择<strong>计算机管理</strong>：</p>
-<p><img src="https://source.icode504.com/images/1d6f0f58a6eb948f5c653f82820886de.png" srcset="/img/loading.gif" lazyload></p>
-<p>2. 按照下图所示操作，停止MySQL57对应的服务：</p>
-<p><img src="https://source.icode504.com/images/403f6ef2d08d66a4628f7ac32ccddb1e.png" srcset="/img/loading.gif" lazyload></p>
-<p>3. 打开Geek Installer，在程序列表中找到MySQL相关的内容，鼠标右键，依次点击卸载：</p>
-<p><img src="https://source.icode504.com/images/abd574849eaf97f643736d832b92597a.png" srcset="/img/loading.gif" lazyload></p>
-<p>4. 卸载完成后，Geek Installer会检测卸载残留，如果数据不重要的话，直接清理即可。</p>
-<p><img src="https://source.icode504.com/images/f25121cc3e8eac7f1b6ce87219f4d668.png" srcset="/img/loading.gif" lazyload></p>
-<p>6. 按<kbd>Win</kbd>和<kbd>R</kbd>键，输入<code>regedit</code>，进入注册表编辑器：</p>
-<p><img src="https://source.icode504.com/images/fb1ab9987de7fc28173ed4072df2364c.png" srcset="/img/loading.gif" lazyload></p>
-<p>7. 依次删除下面和MySQL 5.7有关注册表：</p>
-<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL57服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\MySQL服务 目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL服务目录删除<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MySQL服务 目录删除<br></code></pre></td></tr></table></figure>
+<p>实现效果图如下：</p>
+<p><img src="https://source.icode504.com/images/691e6c28d5024b8e80756b44f649bee2.png" srcset="/img/loading.gif" lazyload></p>
+<p>保存后，重启 Docker 服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">systemctl daemon-reload<br>systemctl restart docker<br></code></pre></td></tr></table></figure>
 
-<p>8. 完成后重启电脑，MySQL 5.7卸载完成！</p>
+<p>5. 本文使用 Electerm 作为远程登录和文件传输工具，需要安装的小伙伴根据自己电脑操作系统查看对应的教程（可选）：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="./47.html">点我查看</a></td>
+<td align="center"><a href="./99.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>6. 由于 Harbor 安装包默认在 Github 上，在国内访问 Github 速度较慢。推荐下载安装 Watt Tookit 以实现加速访问：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Windows</th>
+<th align="center">macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="./25.html">点我查看</a></td>
+<td align="center"><a href="./80.html">点我查看</a></td>
+</tr>
+</tbody></table>
+<p>7. 本文后续内容使用NDM（Neat Download Manager）下载文件，可以加快下载速度（推荐）。如需使用此款软件的小伙伴，可以查看这篇教程：<a href="./24.html">下载神器NDM（Neat Download Manager）安装配置教程（适用于Windows和MacOS）</a></p>
+<h1 id="二、下载-Harbor-安装包"><a href="#二、下载-Harbor-安装包" class="headerlink" title="二、下载 Harbor 安装包"></a>二、下载 Harbor 安装包</h1><p>1. 点击右侧链接进入 Harbor 官网下载页面：<a target="_blank" rel="noopener" href="https://github.com/goharbor/harbor/releases">点我查看</a></p>
+<p>2. 这里我下载的是 2.14.4 版本安装包，点击 <code>harbor-offline-installer-2.14.4.tgz</code> 文件下载（离线安装包）：</p>
+<p><img src="https://source.icode504.com/images/23f360b062aba9ccce219adf0f0ae253.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 打开 Electerm，连接到 Linux 服务器，将下载好的安装包传输到 Linux 服务器：</p>
+<p><img src="https://source.icode504.com/images/f41cd00b7131d72226cf54c3f872e5b5.gif" srcset="/img/loading.gif" lazyload></p>
+<h1 id="三、安装-Harbor"><a href="#三、安装-Harbor" class="headerlink" title="三、安装 Harbor"></a>三、安装 Harbor</h1><p>1. 解压安装包，这里我解压到了 <code>/usr/local</code> 目录下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -xzvf harbor-offline-installer-v2.14.4.tgz -C /usr/local<br></code></pre></td></tr></table></figure>
+
+<p>2. 等待一段事件以后，解压完成，切换到 <code>/usr/local/harbor</code> 目录下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd /usr/local/harbor<br></code></pre></td></tr></table></figure>
+
+<p>执行 <code>ls</code> 命令，此时可以查看当前目录下的内容：</p>
+<p><img src="https://source.icode504.com/images/6a2dd4c4bf61e26f723dca8fda597ca7.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 复制原始配置文件 <code>harbor.yml.tmpl</code>，新文件名 <code>harbor.yml</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cp harbor.yml.tmpl harbor.yml<br></code></pre></td></tr></table></figure>
+
+<p>4. 编辑配置文件 <code>harbor.yml</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim harbor.yml<br></code></pre></td></tr></table></figure>
+
+<p>在左下角输入 <code>:set nu</code> 并回车查看行号，按 <kbd>I</kdb> 键进入编辑模式。</p>
+<p>5. 将第5行内容内容改为当前主机 IP 地址（在第一部分的第2步已经查看过），这里我修改为 192.168.40.100（具体 IP 地址以你们为准），修改后效果图如下：</p>
+<p><img src="https://source.icode504.com/images/8be5bcc2878d86aaaba6b87f86541098.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 将第10行的端口号改为 8088（在第一部分第3步已经查看过），修改后的效果图如下：</p>
+<p><img src="https://source.icode504.com/images/2b1c82c66c86131858c77155a28a1e08.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 将第13至18行内容注掉（每行以 <code>#</code> 开头），本教程里面暂不提供HTTPS访问 Harbor 的方式，修改后的效果图如下：</p>
+<p><img src="https://source.icode504.com/images/5b4438e50d1c59831eda26eb61ad1e77.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 完成后，按<kdb>Esc</kdb>键退出编辑模式，在左下角输入 <code>:wq</code> 保存并退出。</p>
+<p>9. 执行如下脚本命令，开始安装 Harbor（预计需要3-8分钟，请耐心等待）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">./install.sh<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/d15917888a5349ee5e45ba81f73a1df9.png" srcset="/img/loading.gif" lazyload></p>
+<p>10. 出现如下提示就说明 Harbor 安装成功：</p>
+<p><img src="https://source.icode504.com/images/23ade21397d2bad3c0f72755d5915cb4.png" srcset="/img/loading.gif" lazyload></p>
+<p>11. 打开浏览器，输入 <strong>IP地址:端口号</strong>（这里我的访问地址是 <code>http://192.168.40.100:8088</code>，具体地址以你们为准），此时就可以访问 Harbor 登录页了：</p>
+<p>用户名默认是 <code>admin</code>，密码默认是 <code>Harbor12345</code>，输入完成后点击<strong>登录</strong>：</p>
+<p><img src="https://source.icode504.com/images/1355c82cdff44593791b0152cbef2547.png" srcset="/img/loading.gif" lazyload></p>
+<p>12. 登录成功，点击右上角用户头像，点击<strong>修改密码</strong>：</p>
+<p><img src="https://source.icode504.com/images/6f69a33e486843aa1ff40c547c1a5fc2.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里密码要求包含字母大小写和数字混合，修改完成后需要重新登录 Harbor，使用新密码登录：</p>
+<p><img src="https://source.icode504.com/images/40d6e22f8c3a3ca14d2c6cd4c7583ff2.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、Harbor-常用操作"><a href="#四、Harbor-常用操作" class="headerlink" title="四、Harbor 常用操作"></a>四、Harbor 常用操作</h1><h2 id="4-1-启动-关闭-Harbor"><a href="#4-1-启动-关闭-Harbor" class="headerlink" title="4.1 启动/关闭 Harbor"></a>4.1 启动/关闭 Harbor</h2><p>1. 切换到 Harbor 安装（解压目录）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd /usr/local/harbor<br></code></pre></td></tr></table></figure>
+
+<p>2. 使用 <code>docker compose</code> 命令启动 Harbor（<code>-d</code> 代表后台启动）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker compose up -d<br></code></pre></td></tr></table></figure>
+
+<p>3. 如需停止 Harbor，执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker compose stop<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-2-创建子用户（可选）"><a href="#4-2-创建子用户（可选）" class="headerlink" title="4.2 创建子用户（可选）"></a>4.2 创建子用户（可选）</h2><p>1. 登录 <code>admin</code> 账号，点击左侧的用户管理，<strong>创建用户</strong>：</p>
+<p><img src="https://source.icode504.com/images/d264ecfa54b755eca6ae65c128e1d9dc.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 这里我创建一个名为 <code>iCode504</code> 账户，用于参与后续项目的镜像的推送和拉取，完成后点击<strong>确定</strong>：</p>
+<blockquote>
+<p>说明：</p>
+<ol>
+<li>自定义用户名，包含英文和数字；</li>
+<li>密码需要包含字母大小写、数字组成。</li>
+</ol>
+</blockquote>
+<p><img src="https://source.icode504.com/images/dd2accf2c2f4aa40e8c9f4fa8752e896.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 创建一个项目，点击左侧的项目，<strong>新建项目</strong>：</p>
+<p><img src="https://source.icode504.com/images/233447c4428b64188c2cc1bcb53ea7e9.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里我命名为 <code>test_project</code>，完成后点击<strong>确定</strong>：</p>
+<blockquote>
+<p>说明：项目名称由小写字符、数字和<code>._-</code>组成且至少1个字符并以字符或者数字开头。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/8549ab5baf042fe0a1002a4d1d1264b4.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 此时列表页新增一条刚刚创建的项目，点击进入：</p>
+<p><img src="https://source.icode504.com/images/68e529b1e74ca012c308f604b50cf53c.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 点击上方<strong>成员</strong>，添加<strong>用户</strong>，按照下图所示操作：</p>
+<p><img src="https://source.icode504.com/images/3afe5f2c95729e3c362f741137fb723f.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://source.icode504.com/images/b4fa8964cf6f64869d8c65871a2af718.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>角色权限说明：</p>
+<table>
+<thead>
+<tr>
+<th align="center">角色</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">项目管理员</td>
+<td align="left">项目的最高权限，除了读写权限，还能添加/删除项目成员、启动漏洞扫描，相当于这个项目的“管理员”。</td>
+</tr>
+<tr>
+<td align="center">维护人员</td>
+<td align="left">拥有“开发者”权限，并额外具备扫描镜像、查看复制任务、删除镜像和Helm Chart等高级管理权限。</td>
+</tr>
+<tr>
+<td align="center">开发者</td>
+<td align="left">项目的读写权限，可以拉取(push)和推送(pull)镜像，是CI/CD流水线常用的角色。</td>
+</tr>
+<tr>
+<td align="center">访客</td>
+<td align="left">项目资源的只读权限，可以拉取(pull)和重新标记(retag)镜像。</td>
+</tr>
+<tr>
+<td align="center">受限访客</td>
+<td align="left">仅能拉取(pull)镜像，不能推送(push)，无法看到项目日志和其他成员。</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>6. 成员新增成功，后续我们将登录该用户拉取/推送镜像：</p>
+<p><img src="https://source.icode504.com/images/773cd560371411365a6f1dc6feb8f3be.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="4-3-拉取-推送镜像"><a href="#4-3-拉取-推送镜像" class="headerlink" title="4.3 拉取/推送镜像"></a>4.3 拉取/推送镜像</h2><blockquote>
+<p>说明：下文中 <code>develop-engine:0.8.0</code> 是我个人使用 Dockerfile 生成的镜像，仅供参考。</p>
+</blockquote>
+<p>1. 查看所有镜像，这里我要推送的是 <code>develop-engine:0.8.0</code> 镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker images<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://source.icode504.com/images/7d905ca1fd83d012325972291fb07865.png" srcset="/img/loading.gif" lazyload></p>
+<p>2. 在命令行中使用 iCode504 用户登录到 Harbor（具体设置的用户名以你们为准）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker login 192.168.40.100:8088<br></code></pre></td></tr></table></figure>
+
+<p>此处需要依次输入用户名和密码（密码不在控制台显示）：</p>
+<p><img src="https://source.icode504.com/images/2bf3c54e408e62d3341fc26172ab6d01.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 进入前面我们创建的 Harbor 项目 test_project，点击<strong>镜像仓库</strong>，然后点击<strong>推送命令</strong>：</p>
+<p><img src="https://source.icode504.com/images/b7663d9cd4559fff992142b3f022072e.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 点击右侧按钮，复制第一个命令（在项目中标记镜像）：</p>
+<p><img src="https://source.icode504.com/images/b004deff68cd52c9b3c5ae303216c190.png" srcset="/img/loading.gif" lazyload></p>
+<p><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd>粘贴到命令行：</p>
+<p><img src="https://source.icode504.com/images/00ab763beb1a54d6b14b3b35be77913f.png" srcset="/img/loading.gif" lazyload></p>
+<p>将红色框中的内容替换为第一步要推送的镜像名称，修改后的效果图如下。没有问题的话直接执行即可：</p>
+<p><img src="https://source.icode504.com/images/92aef2140508d5db3d842dafe3c98ff6.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 再执行一次 <code>docker images</code> 命令，此时目标镜像成功打上标签：</p>
+<p><img src="https://source.icode504.com/images/be381c253b8adbaa4c7f7622b9944859.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 执行 <code>docker push</code> 命令将镜像推送到 Harbor，效果图如下：</p>
+<p><img src="https://source.icode504.com/images/a5cc1d0bc913b67eef132463b3bd5d69.png" srcset="/img/loading.gif" lazyload></p>
+<p>7. 如果出现类似下方的信息，就说明镜像推送成功了：</p>
+<p><img src="https://source.icode504.com/images/e239d07c8cb7f2a29524f70e952f175c.png" srcset="/img/loading.gif" lazyload></p>
+<p>刷新一下 Harbor，此时就可以看到镜像成功推送到了 Harbor：</p>
+<p><img src="https://source.icode504.com/images/350a8c559f972ec58d3ddbbfbb76f0a8.png" srcset="/img/loading.gif" lazyload></p>
+<p>8. 要想拉取这个镜像，也很简单，点击进入刚刚推送的镜像：</p>
+<blockquote>
+<p>说明：这里为了方便演示，我已经将原有的镜像和打标签的相关镜像删除了。</p>
+</blockquote>
+<p><img src="https://source.icode504.com/images/c0021508cd845cbaead8076cdf62a996.png" srcset="/img/loading.gif" lazyload></p>
+<p>9. 点击这里的复制按钮：</p>
+<p><img src="https://source.icode504.com/images/8021455722faf2b9a290dd369bccdcb6.png" srcset="/img/loading.gif" lazyload></p>
+<p>粘贴到命令行并执行，此时镜像成功拉渠道了本地：</p>
+<p><img src="https://source.icode504.com/images/4289952505411ebc59c27b8bfe73ae0a.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -2468,13 +2571,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/" class="category-chain-item">Windows</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/" class="category-chain-item">Linux</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Windows/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="category-chain-item">数据库工具</a>
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/" class="category-chain-item">容器化</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/Linux/%E5%AE%B9%E5%99%A8%E5%8C%96/Docker/" class="category-chain-item">Docker</a>
+  
+  
+
   
 
   
@@ -2492,9 +2602,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
-        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+        <a href="/tags/Docker/" class="print-no-link">#Docker</a>
+      
+        <a href="/tags/Harbor/" class="print-no-link">#Harbor</a>
       
     </div>
   
@@ -2506,8 +2618,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MySQL 5.7安装、配置与卸载教程（Windows版）</div>
-      <div>https://www.icode504.com/posts/112.html</div>
+      <div>Docker 私服仓库 Harbor 安装配置教程（Linux 版）</div>
+      <div>https://www.icode504.com/posts/1595549336.html</div>
     </div>
     <div class="license-meta">
       
@@ -2519,7 +2631,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月13日</div>
+          <div>2026年6月28日</div>
         </div>
       
       
@@ -2551,18 +2663,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/100.html" title="若依关闭登录页面的验证码">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">若依关闭登录页面的验证码</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/90.html" title="Redis学习前言">
-                        <span class="hidden-mobile">Redis学习前言</span>
+                      <a href="/posts/128.html" title="MongoDB 官方图形化界面工具 MongoDB Compass 安装配置教程（Windows版）">
+                        <span class="hidden-mobile">MongoDB 官方图形化界面工具 MongoDB Compass 安装配置教程（Windows版）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
